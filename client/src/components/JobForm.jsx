@@ -84,19 +84,26 @@ function buildCommand(meetUrl) {
 }
 
 export default function JobForm({ job, onSave, onClose }) {
-  const initial = parseCron(job?.schedule ?? '0 9 * * *');
+  const now = new Date();
+  const nowHour = String(now.getHours()).padStart(2, '0');
+  const nowMinute = String(now.getMinutes()).padStart(2, '0');
+  const today = now.getDay(); // 0=Sun, 1=Mon, ...
+
+  const initial = job ? parseCron(job.schedule) : null;
+
+  const defaultSchedule = job?.schedule ?? buildCron(nowHour, nowMinute, [today]);
 
   const [form, setForm] = useState({
-    name:     job?.name     ?? 'Morning Meeting',
+    name:     job?.name     ?? '',
     command:  job?.command  ?? '',
-    schedule: job?.schedule ?? '0 9 * * *',
+    schedule: defaultSchedule,
     enabled:  job ? Boolean(job.enabled) : true,
   });
   const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || '');
-  const [mode, setMode] = useState(initial ? 'manual' : 'cron');
-  const [hour, setHour] = useState(initial?.hour ?? '09');
-  const [minute, setMinute] = useState(initial?.minute ?? '00');
-  const [days, setDays] = useState(initial?.days ?? [1, 2, 3, 4, 5]);
+  const [mode, setMode] = useState(initial ? 'manual' : 'manual');
+  const [hour, setHour] = useState(initial?.hour ?? nowHour);
+  const [minute, setMinute] = useState(initial?.minute ?? nowMinute);
+  const [days, setDays] = useState(initial?.days ?? [today]);
   const [error, setSaving_error] = useState('');
   const [saving, setSaving] = useState(false);
 
