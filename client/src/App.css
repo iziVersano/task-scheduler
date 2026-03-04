@@ -430,3 +430,87 @@ form { padding: 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
   color: #64748b;
   font-size: 0.9rem;
 }
+
+/* ── Schedule Tabs ─────────────────────────────────────────────────────────── */
+.schedule-tabs {
+  display: flex;
+  gap: 0;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #334155;
+}
+.tab-btn {
+  flex: 1;
+  padding: 0.5rem 1rem;
+  background: #1e293b;
+  color: #94a3b8;
+  border: none;
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: all 0.15s;
+}
+.tab-btn:hover { background: #334155; }
+.tab-btn.tab-active {
+  background: #6366f1;
+  color: #fff;
+}
+
+/* ── Manual Schedule ───────────────────────────────────────────────────────── */
+.manual-schedule {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+.time-picker label,
+.day-picker label {
+  display: block;
+  font-size: 0.8rem;
+  color: #94a3b8;
+  margin-bottom: 0.4rem;
+}
+.time-inputs {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+}
+.time-input {
+  width: 60px;
+  text-align: center;
+  padding: 0.5rem;
+  background: #1e293b;
+  border: 1px solid #334155;
+  border-radius: 6px;
+  color: #e2e8f0;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+.time-input:focus {
+  outline: none;
+  border-color: #6366f1;
+}
+.time-sep {
+  font-size: 1.4rem;
+  color: #64748b;
+  font-weight: 700;
+}
+.day-buttons {
+  display: flex;
+  gap: 0.35rem;
+}
+.day-btn {
+  padding: 0.4rem 0.65rem;
+  border-radius: 6px;
+  border: 1px solid #334155;
+  background: #1e293b;
+  color: #94a3b8;
+  cursor: pointer;
+  font-size: 0.8rem;
+  transition: all 0.15s;
+}
+.day-btn:hover { border-color: #6366f1; color: #c7d2fe; }
+.day-btn.day-active {
+  background: #6366f1;
+  border-color: #6366f1;
+  color: #fff;
+}
