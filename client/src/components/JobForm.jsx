@@ -83,6 +83,17 @@ function buildCommand(meetUrl) {
   return `node /home/dci-student/task-scheduler/server/meet-join.js "${clean}"`;
 }
 
+const TASK_NAMES = [
+  'Morning Standup', 'Team Sync', 'Sprint Review', 'Daily Catch-up',
+  'Project Check-in', 'Planning Session', 'Retro Meeting', 'Design Review',
+  'Code Review', 'Brainstorm Session', 'Client Call', 'Weekly Sync',
+  '1-on-1 Meeting', 'Kickoff Meeting', 'Demo Session', 'Strategy Call',
+];
+
+function randomName() {
+  return TASK_NAMES[Math.floor(Math.random() * TASK_NAMES.length)];
+}
+
 export default function JobForm({ job, onSave, onClose }) {
   const now = new Date();
   const nowHour = String(now.getHours()).padStart(2, '0');
@@ -91,19 +102,23 @@ export default function JobForm({ job, onSave, onClose }) {
 
   const initial = job ? parseCron(job.schedule) : null;
 
-  const defaultSchedule = job?.schedule ?? buildCron(nowHour, nowMinute, [today]);
+  // When editing, use current time but keep the job's days
+  const editDays = initial?.days ?? [today];
+  const defaultSchedule = job
+    ? buildCron(nowHour, nowMinute, editDays)
+    : buildCron(nowHour, nowMinute, [today]);
 
   const [form, setForm] = useState({
-    name:     job?.name     ?? '',
+    name:     job?.name     ?? randomName(),
     command:  job?.command  ?? '',
     schedule: defaultSchedule,
     enabled:  job ? Boolean(job.enabled) : true,
   });
-  const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || '');
-  const [mode, setMode] = useState(initial ? 'manual' : 'manual');
-  const [hour, setHour] = useState(initial?.hour ?? nowHour);
-  const [minute, setMinute] = useState(initial?.minute ?? nowMinute);
-  const [days, setDays] = useState(initial?.days ?? [today]);
+  const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || 'https://meet.google.com/kdh-gdjc-rke');
+  const [mode, setMode] = useState('manual');
+  const [hour, setHour] = useState(nowHour);
+  const [minute, setMinute] = useState(nowMinute);
+  const [days, setDays] = useState(editDays);
   const [error, setSaving_error] = useState('');
   const [saving, setSaving] = useState(false);
 

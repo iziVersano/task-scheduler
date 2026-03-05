@@ -21,6 +21,55 @@ function fmt(dateStr) {
   return new Date(dateStr).toLocaleString();
 }
 
+const DAY_NAMES = ['Sun', 'Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat'];
+
+function cronToHuman(cron) {
+  const parts = cron.split(' ');
+  if (parts.length !== 5) return cron;
+  const [minute, hour, , , weekday] = parts;
+
+  // Time formatting
+  let timeStr;
+  if (minute === '*' && hour === '*') return 'Every minute';
+  if (minute.startsWith('*/')) return `Every ${minute.slice(2)} min`;
+  if (hour === '*') return `Every hour at :${minute.padStart(2, '0')}`;
+  const h = parseInt(hour);
+  const m = parseInt(minute);
+  if (isNaN(h) || isNaN(m)) return cron;
+  timeStr = `${String(h).padStart(2, '0')}:${String(m).padStart(2, '0')}`;
+
+  // Days formatting
+  let dayStr;
+  if (weekday === '*') {
+    dayStr = 'Every day';
+  } else {
+    const dayNums = [];
+    for (const part of weekday.split(',')) {
+      if (part.includes('-')) {
+        const [start, end] = part.split('-').map(Number);
+        for (let i = start; i <= end; i++) dayNums.push(i);
+      } else {
+        dayNums.push(parseInt(part));
+      }
+    }
+    if (dayNums.length === 5 && [1,2,3,4,5].every(d => dayNums.includes(d))) {
+      dayStr = 'Weekdays';
+    } else if (dayNums.length === 2 && [0,6].every(d => dayNums.includes(d))) {
+      dayStr = 'Weekends';
+    } else {
+      dayStr = dayNums.map(d => DAY_NAMES[d]).join(', ');
+    }
+  }
+
+  return `${timeStr} · ${dayStr}`;
+}
+
+function extractLink(command) {
+  if (!command) return '';
+  const match = command.match(/https:\/\/meet\.google\.com\/[^\s"']+/);
+  return match ? match[0] : '';
+}
+
 export default function App() {
   const [jobs, setJobs]           = useState([]);
   const [loading, setLoading]     = useState(true);
@@ -126,7 +175,7 @@ export default function App() {
                   <th>Status</th>
                   <th>Name</th>
                   <th>Schedule</th>
-                  <th>Command</th>
+                  <th>Meeting Link</th>
                   <th>Last Run</th>
                   <th>Actions</th>
                 </tr>
@@ -142,10 +191,16 @@ export default function App() {
                     </td>
                     <td className="job-name">{job.name}</td>
                     <td>
-                      <code className="schedule-badge">{job.schedule}</code>
+                      <span className="schedule-badge" title={job.schedule}>{cronToHuman(job.schedule)}</span>
                     </td>
-                    <td className="job-cmd" title={job.command}>
-                      {job.command}
+                    <td className="job-cmd">
+                      {extractLink(job.command) ? (
+                        <a href={extractLink(job.command)} target="_blank" rel="noreferrer" className="meet-link">
+                          {extractLink(job.command).replace('https://meet.google.com/', '')}
+                        </a>
+                      ) : (
+                        <span title={job.command}>{job.command}</span>
+                      )}
                     </td>
                     <td className="last-run" title={fmt(job.last_run_time)}>
                       {timeAgo(job.last_run_time)}

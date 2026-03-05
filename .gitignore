@@ -5,3 +5,4 @@ server/jobs.db
 server/jobs.db-shm
 server/jobs.db-wal
 .env
+server/captions/

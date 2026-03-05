@@ -156,9 +156,83 @@ function waitForDebugPort(maxWait = 15000) {
       throw new Error('Could not find Join button on the Meet page');
     }
 
-    // Wait to confirm we're in the meeting
-    await new Promise((r) => setTimeout(r, 3000));
+    // Wait for the meeting to fully load
+    await new Promise((r) => setTimeout(r, 5000));
     console.log('Successfully joined the meeting');
+
+    // Enable captions
+    try {
+      const captionsOn = await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('button'));
+        for (const btn of btns) {
+          const label = (btn.getAttribute('aria-label') || '').toLowerCase();
+          if (label.includes('caption') && !label.includes('off')) {
+            btn.click();
+            return true;
+          }
+        }
+        return false;
+      });
+
+      if (captionsOn) {
+        console.log('Enabled captions');
+      } else {
+        // Try keyboard shortcut as fallback (Ctrl+Shift+C toggles captions)
+        await page.keyboard.down('Control');
+        await page.keyboard.down('Shift');
+        await page.keyboard.press('KeyC');
+        await page.keyboard.up('Shift');
+        await page.keyboard.up('Control');
+        console.log('Toggled captions via shortcut');
+      }
+      await new Promise((r) => setTimeout(r, 1000));
+    } catch (capErr) {
+      console.log(`Captions failed: ${capErr.message}`);
+    }
+
+    // Open chat and send "good morning"
+    try {
+      // Click the chat button (speech bubble icon)
+      const chatOpened = await page.evaluate(() => {
+        const btns = Array.from(document.querySelectorAll('button'));
+        for (const btn of btns) {
+          const label = (btn.getAttribute('aria-label') || '').toLowerCase();
+          if (label.includes('chat') && !label.includes('close')) {
+            btn.click();
+            return true;
+          }
+        }
+        return false;
+      });
+
+      if (chatOpened) {
+        console.log('Opened chat panel');
+        await new Promise((r) => setTimeout(r, 2000));
+
+        // Type into the chat input
+        const chatInput = await page.$('textarea[aria-label*="message" i], textarea[aria-label*="chat" i], textarea[placeholder*="message" i]');
+        if (chatInput) {
+          await chatInput.click();
+          await chatInput.type('good morning', { delay: 50 });
+          console.log('Typed "good morning" in chat (not sent)');
+        } else {
+          console.log('Could not find chat input');
+        }
+      } else {
+        console.log('Could not find chat button');
+      }
+    } catch (chatErr) {
+      console.log(`Chat message failed: ${chatErr.message}`);
+    }
+
+    // Start caption tracker as a detached background process
+    const captionScript = path.join(__dirname, 'meet-captions.js');
+    const captionProc = spawn('node', [captionScript], {
+      detached: true,
+      stdio: 'ignore',
+    });
+    captionProc.unref();
+    console.log('Started caption tracker (background)');
 
     // Disconnect — Chrome keeps running since it was launched detached
     browser.disconnect();

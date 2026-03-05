@@ -408,6 +408,15 @@ form { padding: 1.5rem; display: flex; flex-direction: column; gap: 1.1rem; }
 .stdout { color: #94a3b8; }
 .stderr { color: #f87171; }
 
+/* ── Meet Link ─────────────────────────────────────────────────────────────── */
+.meet-link {
+  color: #818cf8;
+  text-decoration: none;
+  font-family: 'SFMono-Regular', Consolas, monospace;
+  font-size: 0.85rem;
+}
+.meet-link:hover { color: #a5b4fc; text-decoration: underline; }
+
 /* ── Utilities ────────────────────────────────────────────────────────────── */
 .muted { color: #475569; }
 
