@@ -1,0 +1,329 @@
+{
+  "source": "2026-03-11-am",
+  "generatedAt": "2026-03-12T15:10:15.203Z",
+  "labs": [
+    {
+      "id": "icmp-connectivity-testing-2026-03-11-am",
+      "title": "ICMP connectivity testing",
+      "category": "Networking",
+      "concept": "ICMP connectivity testing",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: ping google.com",
+        "Observe the output and note what information is displayed",
+        "Run: ping -c 4 google.com",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "ping google.com",
+        "ping -c 4 google.com"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "network-interface-configuration-2026-03-11-am",
+      "title": "Network interface configuration",
+      "category": "Networking",
+      "concept": "Network interface configuration",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: ip a",
+        "Observe the output and note what information is displayed",
+        "Run: ip addr show",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "ip a",
+        "ip addr show"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "secure-remote-shell-access-2026-03-11-am",
+      "title": "Secure remote shell access",
+      "category": "Security",
+      "concept": "Secure remote shell access",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Secure remote shell access",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "change-directory-2026-03-11-am",
+      "title": "Change directory",
+      "category": "Linux",
+      "concept": "Change directory",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: cd /path/to/dir",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "cd /path/to/dir"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "display-file-contents-2026-03-11-am",
+      "title": "Display file contents",
+      "category": "Linux",
+      "concept": "Display file contents",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: cat /etc/hosts",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "cat /etc/hosts"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "process-listing-2026-03-11-am",
+      "title": "Process listing",
+      "category": "Linux",
+      "concept": "Process listing",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: ps aux",
+        "Observe the output and note what information is displayed",
+        "Run: ps -ef",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "ps aux",
+        "ps -ef"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "system-resource-monitor-2026-03-11-am",
+      "title": "System resource monitor",
+      "category": "Linux",
+      "concept": "System resource monitor",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: top",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "top"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "package-management-2026-03-11-am",
+      "title": "Package management",
+      "category": "Linux",
+      "concept": "Package management",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: apt update",
+        "Observe the output and note what information is displayed",
+        "Run: apt install package",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "apt update",
+        "apt install package"
+      ],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "packet-tracer-exploration-2026-03-11-am",
+      "title": "Packet tracer Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Packet tracer",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Packet tracer",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "cisco-exploration-2026-03-11-am",
+      "title": "Cisco Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Cisco",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Cisco",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "docker-exploration-2026-03-11-am",
+      "title": "Docker Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Docker",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Docker",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "dhcp-2026-03-11-am",
+      "title": "DHCP Lab",
+      "category": "Networking",
+      "concept": "DHCP - Dynamic Host Configuration Protocol",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: DHCP - Dynamic Host Configuration Protocol",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "dns-2026-03-11-am",
+      "title": "DNS Lab",
+      "category": "Networking",
+      "concept": "DNS - Domain Name System",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: DNS - Domain Name System",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "network-broadcasting-2026-03-11-am",
+      "title": "Network Broadcasting Lab",
+      "category": "Networking",
+      "concept": "Network Broadcasting",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Network Broadcasting",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "network-gateway-2026-03-11-am",
+      "title": "Network Gateway Lab",
+      "category": "Networking",
+      "concept": "Network Gateway",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Network Gateway",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "firewall-2026-03-11-am",
+      "title": "Firewall Lab",
+      "category": "Networking",
+      "concept": "Firewall",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Firewall",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "mac-addressing-2026-03-11-am",
+      "title": "MAC Addressing Lab",
+      "category": "Networking",
+      "concept": "MAC Addressing",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: MAC Addressing",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "ip-addressing-2026-03-11-am",
+      "title": "IP Addressing Lab",
+      "category": "Networking",
+      "concept": "IP Addressing",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: IP Addressing",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    },
+    {
+      "id": "network-simulation-with-packet-tracer-2026-03-11-am",
+      "title": "Network Simulation with Packet Tracer Lab",
+      "category": "Networking",
+      "concept": "Network Simulation with Packet Tracer",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Network Simulation with Packet Tracer",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-am"
+    }
+  ]
+}

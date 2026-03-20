@@ -33,4 +33,19 @@ db.exec(`
   )
 `);
 
+db.exec(`
+  CREATE TABLE IF NOT EXISTS labs (
+    id                TEXT    PRIMARY KEY,
+    title             TEXT    NOT NULL,
+    category          TEXT    NOT NULL,
+    concept           TEXT    NOT NULL DEFAULT '',
+    instructions      TEXT    NOT NULL DEFAULT '[]',
+    commands          TEXT    NOT NULL DEFAULT '[]',
+    source_transcript TEXT    NOT NULL,
+    status            TEXT    NOT NULL DEFAULT 'draft',
+    created_at        TEXT    NOT NULL DEFAULT (datetime('now', 'localtime')),
+    updated_at        TEXT    NOT NULL DEFAULT (datetime('now', 'localtime'))
+  )
+`);
+
 module.exports = db;

@@ -12,23 +12,12 @@ const SCHEDULE_PRESETS = [
   { label: 'Every Sunday midnight', value: '0 0 * * 0' },
 ];
 
-const DAYS = [
-  { label: 'Mon', value: 1 },
-  { label: 'Tue', value: 2 },
-  { label: 'Wed', value: 3 },
-  { label: 'Thu', value: 4 },
-  { label: 'Fri', value: 5 },
-  { label: 'Sat', value: 6 },
-  { label: 'Sun', value: 0 },
-];
-
 // Parse a cron string into manual fields (best effort)
 function parseCron(cron) {
   const parts = cron.split(' ');
   if (parts.length !== 5) return null;
-  const [minute, hour, , , weekday] = parts;
+  const [minute, hour] = parts;
 
-  // Only parse simple patterns like "30 9 * * 1-5" or "0 14 * * 1,3,5"
   if (minute.includes('/') || minute === '*') return null;
   if (hour.includes('/') || hour === '*') return null;
 
@@ -36,38 +25,15 @@ function parseCron(cron) {
   const m = parseInt(minute);
   if (isNaN(h) || isNaN(m)) return null;
 
-  let days = [];
-  if (weekday === '*') {
-    days = [0, 1, 2, 3, 4, 5, 6];
-  } else {
-    // Handle ranges (1-5) and lists (1,3,5)
-    for (const part of weekday.split(',')) {
-      if (part.includes('-')) {
-        const [start, end] = part.split('-').map(Number);
-        for (let i = start; i <= end; i++) days.push(i);
-      } else {
-        days.push(parseInt(part));
-      }
-    }
-  }
-
   return {
     hour: String(h).padStart(2, '0'),
     minute: String(m).padStart(2, '0'),
-    days,
   };
 }
 
-// Build cron string from manual fields
-function buildCron(hour, minute, days) {
-  const sorted = [...days].sort((a, b) => a - b);
-  let dayStr;
-  if (sorted.length === 0 || sorted.length === 7) {
-    dayStr = '*';
-  } else {
-    dayStr = sorted.join(',');
-  }
-  return `${parseInt(minute)} ${parseInt(hour)} * * ${dayStr}`;
+// Build cron string from manual fields (always runs every day)
+function buildCron(hour, minute) {
+  return `${parseInt(minute)} ${parseInt(hour)} * * *`;
 }
 
 // Extract Meet URL from a meet-join.js command
@@ -77,10 +43,30 @@ function extractMeetUrl(command) {
   return match ? match[0] : '';
 }
 
+// Extract plain URL from an open-url.js command
+function extractOpenUrl(command) {
+  if (!command) return '';
+  const match = command.match(/open-url\.js\s+"([^"]+)"/);
+  return match ? match[1] : '';
+}
+
+// Detect job type from saved command
+function detectJobType(command) {
+  if (!command) return 'meet';
+  if (command.includes('meet-join.js')) return 'meet';
+  if (command.includes('open-url.js')) return 'url';
+  return 'meet';
+}
+
 // Build the full command from a Meet URL
-function buildCommand(meetUrl) {
+function buildMeetCommand(meetUrl) {
   const clean = meetUrl.trim().replace(/[?&]authuser=\d+/, '');
-  return `node /home/dci-student/task-scheduler/server/meet-join.js "${clean}"`;
+  return `node /home/dci-student/work/task-scheduler/server/meet-join.js "${clean}"`;
+}
+
+// Build the full command for a plain URL
+function buildUrlCommand(url) {
+  return `node /home/dci-student/work/task-scheduler/server/open-url.js "${url.trim()}"`;
 }
 
 const TASK_NAMES = [
@@ -98,15 +84,15 @@ export default function JobForm({ job, onSave, onClose }) {
   const now = new Date();
   const nowHour = String(now.getHours()).padStart(2, '0');
   const nowMinute = String(now.getMinutes()).padStart(2, '0');
-  const today = now.getDay(); // 0=Sun, 1=Mon, ...
 
   const initial = job ? parseCron(job.schedule) : null;
 
-  // When editing, use current time but keep the job's days
-  const editDays = initial?.days ?? [today];
+  // When editing, preserve the job's existing time; for new jobs use current time
+  const editHour   = initial?.hour   ?? nowHour;
+  const editMinute = initial?.minute ?? nowMinute;
   const defaultSchedule = job
-    ? buildCron(nowHour, nowMinute, editDays)
-    : buildCron(nowHour, nowMinute, [today]);
+    ? (job.schedule)
+    : buildCron(nowHour, nowMinute);
 
   const [form, setForm] = useState({
     name:     job?.name     ?? randomName(),
@@ -114,11 +100,12 @@ export default function JobForm({ job, onSave, onClose }) {
     schedule: defaultSchedule,
     enabled:  job ? Boolean(job.enabled) : true,
   });
+  const [jobType, setJobType] = useState(detectJobType(job?.command));
   const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || 'https://meet.google.com/kdh-gdjc-rke');
+  const [openUrl, setOpenUrl] = useState(extractOpenUrl(job?.command) || '');
   const [mode, setMode] = useState('manual');
-  const [hour, setHour] = useState(nowHour);
-  const [minute, setMinute] = useState(nowMinute);
-  const [days, setDays] = useState(editDays);
+  const [hour, setHour] = useState(editHour);
+  const [minute, setMinute] = useState(editMinute);
   const [error, setSaving_error] = useState('');
   const [saving, setSaving] = useState(false);
 
@@ -127,50 +114,41 @@ export default function JobForm({ job, onSave, onClose }) {
     setForm((f) => ({ ...f, [field]: val }));
   };
 
-  const toggleDay = (dayVal) => {
-    setDays((prev) => {
-      const next = prev.includes(dayVal)
-        ? prev.filter((d) => d !== dayVal)
-        : [...prev, dayVal];
-      setForm((f) => ({ ...f, schedule: buildCron(hour, minute, next) }));
-      return next;
-    });
-  };
-
   const updateTime = (h, m) => {
     setHour(h);
     setMinute(m);
-    setForm((f) => ({ ...f, schedule: buildCron(h, m, days) }));
+    setForm((f) => ({ ...f, schedule: buildCron(h, m) }));
   };
 
   const switchMode = (newMode) => {
     setMode(newMode);
     if (newMode === 'manual') {
-      // Sync manual fields from current cron if possible
       const parsed = parseCron(form.schedule);
       if (parsed) {
         setHour(parsed.hour);
         setMinute(parsed.minute);
-        setDays(parsed.days);
       } else {
-        // Reset to defaults
         setHour('09');
         setMinute('00');
-        setDays([1, 2, 3, 4, 5]);
-        setForm((f) => ({ ...f, schedule: '0 9 * * 1,2,3,4,5' }));
+        setForm((f) => ({ ...f, schedule: '0 9 * * *' }));
       }
     }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    if (!meetLink.includes('meet.google.com/')) {
+    if (jobType === 'meet' && !meetLink.includes('meet.google.com/')) {
       setSaving_error('Please enter a valid Google Meet link');
+      return;
+    }
+    if (jobType === 'url' && !openUrl.startsWith('http')) {
+      setSaving_error('Please enter a valid URL (starting with http)');
       return;
     }
     setSaving_error('');
     setSaving(true);
-    const submitData = { ...form, command: buildCommand(meetLink) };
+    const command = jobType === 'meet' ? buildMeetCommand(meetLink) : buildUrlCommand(openUrl);
+    const submitData = { ...form, command };
     try {
       const url    = job ? `${API}/jobs/${job.id}` : `${API}/jobs`;
       const method = job ? 'PUT' : 'POST';
@@ -211,14 +189,48 @@ export default function JobForm({ job, onSave, onClose }) {
           </div>
 
           <div className="form-group">
-            <label>Google Meet Link</label>
-            <input
-              value={meetLink}
-              onChange={(e) => setMeetLink(e.target.value)}
-              placeholder="https://meet.google.com/abc-defg-hij"
-              required
-            />
+            <label>Type</label>
+            <div className="schedule-tabs">
+              <button
+                type="button"
+                className={`tab-btn ${jobType === 'meet' ? 'tab-active' : ''}`}
+                onClick={() => setJobType('meet')}
+              >
+                Google Meet
+              </button>
+              <button
+                type="button"
+                className={`tab-btn ${jobType === 'url' ? 'tab-active' : ''}`}
+                onClick={() => setJobType('url')}
+              >
+                Open URL
+              </button>
+            </div>
           </div>
+
+          {jobType === 'meet' && (
+            <div className="form-group">
+              <label>Google Meet Link</label>
+              <input
+                value={meetLink}
+                onChange={(e) => setMeetLink(e.target.value)}
+                placeholder="https://meet.google.com/abc-defg-hij"
+                required
+              />
+            </div>
+          )}
+
+          {jobType === 'url' && (
+            <div className="form-group">
+              <label>URL to Open</label>
+              <input
+                value={openUrl}
+                onChange={(e) => setOpenUrl(e.target.value)}
+                placeholder="https://example.com"
+                required
+              />
+            </div>
+          )}
 
           <div className="form-group">
             <label>Schedule</label>
@@ -265,24 +277,8 @@ export default function JobForm({ job, onSave, onClose }) {
                   </div>
                 </div>
 
-                <div className="day-picker">
-                  <label>Days</label>
-                  <div className="day-buttons">
-                    {DAYS.map((d) => (
-                      <button
-                        key={d.value}
-                        type="button"
-                        className={`day-btn ${days.includes(d.value) ? 'day-active' : ''}`}
-                        onClick={() => toggleDay(d.value)}
-                      >
-                        {d.label}
-                      </button>
-                    ))}
-                  </div>
-                </div>
-
                 <small className="hint">
-                  Cron: <code>{form.schedule}</code>
+                  Runs daily at this time. Cron: <code>{form.schedule}</code>
                 </small>
               </div>
             )}

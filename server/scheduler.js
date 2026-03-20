@@ -50,7 +50,7 @@ function scheduleJob(job) {
     if (current && current.enabled) {
       executeJob(current);
     }
-  });
+  }, { timezone: 'Europe/Berlin' });
 
   activeTasks.set(job.id, task);
   console.log(`Scheduled "${job.name}" at cron: ${job.schedule}`);
@@ -72,4 +72,4 @@ function initScheduler() {
   }
 }
 
-module.exports = { scheduleJob, unscheduleJob, initScheduler };
+module.exports = { scheduleJob, unscheduleJob, initScheduler, executeJob };

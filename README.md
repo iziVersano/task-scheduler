@@ -126,6 +126,63 @@ task-scheduler/
 | GET | `/api/jobs/:id/logs` | Get execution logs |
 | GET | `/health` | Server health check |
 
+## Labs Dashboard
+
+The Labs tab lets instructors generate hands-on labs from lecture transcripts (captured from Google Meet captions). Labs are extracted automatically using keyword and command detection.
+
+### Interactive Labs (Docker Sandbox)
+
+One lab — **Network Interface Configuration** — supports live command execution in a sandboxed Docker container.
+
+#### Setup
+
+```bash
+# 1. Install Docker (if not already installed)
+sudo apt install docker.io
+sudo usermod -aG docker $USER
+# Log out and back in for group change to take effect
+
+# 2. Build the sandbox image
+cd server/sandbox
+./build.sh
+cd ../..
+```
+
+#### How it works
+
+- The "Network Interface Configuration" lab card shows a **Run Lab** button
+- Clicking it opens an interactive modal with command blocks for `ip a` and `ip addr show`
+- Each command has **Run** and **Copy** buttons
+- Commands execute inside a short-lived, isolated Docker container:
+  - Alpine Linux with `iproute2`
+  - No network access (`--network none`)
+  - Read-only filesystem
+  - 64MB memory limit, 0.5 CPU
+  - 10 second timeout
+  - Non-root user
+  - Auto-removed after execution
+- Output appears in a terminal-style panel with exit code and duration
+- A visual summary shows interface count, loopback status, and active IPv4 status
+
+#### API Response Shape
+
+```json
+{
+  "stdout": "1: lo: <LOOPBACK,UP,LOWER_UP>...\n2: eth0: ...",
+  "stderr": "",
+  "exitCode": 0,
+  "durationMs": 342,
+  "timedOut": false
+}
+```
+
+#### Architecture Decisions
+
+- **Strict whitelist**: Only exact-match commands from a backend registry can execute. No free-text shell input.
+- **No data model migration**: Executable metadata (`executable`, `allowedCommands`) is added at the API layer by matching lab IDs against the backend registry — no DB schema changes needed.
+- **Container-per-command**: Each Run click creates a fresh container. Simple, stateless, easy to reason about. WebSockets and persistent sessions can be added later.
+- **Graceful degradation**: If Docker isn't installed, the UI shows setup instructions instead of the Run button crashing.
+
 ## Notes
 
 - This app is designed for **local use only** — it executes shell commands, so do not expose it to the internet
