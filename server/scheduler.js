@@ -14,7 +14,16 @@ function executeJob(job) {
 
   console.log(`[${new Date().toLocaleTimeString()}] Running "${job.name}": ${job.command}`);
 
-  exec(job.command, { timeout: 120000, shell: true }, (error, stdout, stderr) => {
+  // Ensure GUI env vars are available so Chrome opens visibly on the desktop
+  const env = {
+    ...process.env,
+    DISPLAY: process.env.DISPLAY || ':0',
+    WAYLAND_DISPLAY: process.env.WAYLAND_DISPLAY || 'wayland-0',
+    XDG_RUNTIME_DIR: process.env.XDG_RUNTIME_DIR || `/run/user/${process.getuid?.() || 1000}`,
+    DBUS_SESSION_BUS_ADDRESS: process.env.DBUS_SESSION_BUS_ADDRESS || `unix:path=/run/user/${process.getuid?.() || 1000}/bus`,
+  };
+
+  exec(job.command, { timeout: 120000, shell: true, env }, (error, stdout, stderr) => {
     const finishedAt = new Date().toISOString();
     const exitCode = error ? (error.code ?? 1) : 0;
 
