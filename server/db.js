@@ -39,12 +39,28 @@ db.exec(`
     title             TEXT    NOT NULL,
     category          TEXT    NOT NULL,
     concept           TEXT    NOT NULL DEFAULT '',
+    description       TEXT    NOT NULL DEFAULT '',
     instructions      TEXT    NOT NULL DEFAULT '[]',
     commands          TEXT    NOT NULL DEFAULT '[]',
     source_transcript TEXT    NOT NULL,
     status            TEXT    NOT NULL DEFAULT 'draft',
     created_at        TEXT    NOT NULL DEFAULT (datetime('now', 'localtime')),
     updated_at        TEXT    NOT NULL DEFAULT (datetime('now', 'localtime'))
+  )
+`);
+
+// Add columns to existing databases that predate these fields
+try { db.exec(`ALTER TABLE labs ADD COLUMN description TEXT NOT NULL DEFAULT ''`); } catch {}
+try { db.exec(`ALTER TABLE labs ADD COLUMN difficulty INTEGER NOT NULL DEFAULT 1`); } catch {}
+try { db.exec(`ALTER TABLE labs ADD COLUMN expectedOutput TEXT NOT NULL DEFAULT ''`); } catch {}
+
+db.exec(`
+  CREATE TABLE IF NOT EXISTS published_articles (
+    id         INTEGER PRIMARY KEY AUTOINCREMENT,
+    filename   TEXT    NOT NULL UNIQUE,
+    title      TEXT    NOT NULL DEFAULT '',
+    posted_at  TEXT    NOT NULL DEFAULT (datetime('now', 'localtime')),
+    post_url   TEXT    NOT NULL DEFAULT ''
   )
 `);
 

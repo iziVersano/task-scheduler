@@ -3,6 +3,13 @@ import './App.css';
 import JobForm from './components/JobForm.jsx';
 import JobLogs from './components/JobLogs.jsx';
 import LabsDashboard from './components/LabsDashboard.jsx';
+import NetworkLabPage from './components/network-lab/NetworkLabPage.jsx';
+import MultiCloudIAM from './components/multi-cloud-iam/MultiCloudIAM.jsx';
+import BrowserAutomation from './components/BrowserAutomation.jsx';
+import AwsStatus from './components/AwsStatus.jsx';
+import DailyRecap from './components/DailyRecap.jsx';
+import Diagrams from './components/Diagrams.jsx';
+import { apiFetch } from './apiClient.js';
 
 const API = '/api';
 
@@ -76,7 +83,7 @@ function extractLink(command) {
   return null;
 }
 
-export default function App() {
+export default function App({ keycloak }) {
   const [view, setView]           = useState('scheduler');
   const [jobs, setJobs]           = useState([]);
   const [loading, setLoading]     = useState(true);
@@ -87,7 +94,7 @@ export default function App() {
 
   const fetchJobs = useCallback(async () => {
     try {
-      const res = await fetch(`${API}/jobs`);
+      const res = await apiFetch(`${API}/jobs`);
       if (!res.ok) throw new Error('Cannot reach server on port 3001');
       setJobs(await res.json());
       setError(null);
@@ -111,23 +118,23 @@ export default function App() {
 
   const handleDelete = async (job) => {
     if (!confirm(`Delete "${job.name}"?`)) return;
-    await fetch(`${API}/jobs/${job.id}`, { method: 'DELETE' });
+    await apiFetch(`${API}/jobs/${job.id}`, { method: 'DELETE' });
     fetchJobs();
   };
 
   const handleDeleteAll = async () => {
     if (!confirm(`Delete all ${jobs.length} jobs?`)) return;
-    await fetch(`${API}/jobs`, { method: 'DELETE' });
+    await apiFetch(`${API}/jobs`, { method: 'DELETE' });
     fetchJobs();
   };
 
   const handleToggle = async (job) => {
-    await fetch(`${API}/jobs/${job.id}/toggle`, { method: 'POST' });
+    await apiFetch(`${API}/jobs/${job.id}/toggle`, { method: 'POST' });
     fetchJobs();
   };
 
   const handleRun = async (job) => {
-    await fetch(`${API}/jobs/${job.id}/run`, { method: 'POST' });
+    await apiFetch(`${API}/jobs/${job.id}/run`, { method: 'POST' });
   };
 
   const enabled = jobs.filter((j) => j.enabled).length;
@@ -142,16 +149,22 @@ export default function App() {
           <div className="nav-tabs">
             <button className={`nav-tab ${view === 'scheduler' ? 'nav-active' : ''}`} onClick={() => setView('scheduler')}>Scheduler</button>
             <button className={`nav-tab ${view === 'labs' ? 'nav-active' : ''}`} onClick={() => setView('labs')}>Labs</button>
+            <button className={`nav-tab ${view === 'network-lab' ? 'nav-active' : ''}`} onClick={() => setView('network-lab')}>Network Lab</button>
+            <button className={`nav-tab ${view === 'iam-lab' ? 'nav-active' : ''}`} onClick={() => setView('iam-lab')}>IAM Lab</button>
+            <button className={`nav-tab ${view === 'browser' ? 'nav-active' : ''}`} onClick={() => setView('browser')}>Browser</button>
+            <button className={`nav-tab ${view === 'aws' ? 'nav-active' : ''}`} onClick={() => setView('aws')}>☁ AWS</button>
+            <button className={`nav-tab ${view === 'recap' ? 'nav-active' : ''}`} onClick={() => setView('recap')}>📖 Recap</button>
+            <button className={`nav-tab ${view === 'diagrams' ? 'nav-active' : ''}`} onClick={() => setView('diagrams')}>🗺 Diagrams</button>
           </div>
         </div>
-        {view === 'scheduler' && (
-          <div style={{ display: 'flex', gap: '0.5rem' }}>
+        <div style={{ display: 'flex', alignItems: 'center', gap: '0.75rem' }}>
+          {view === 'scheduler' && (<>
             <button className="btn btn-primary" onClick={openCreate}>+ New Job</button>
             {jobs.length > 0 && (
               <button className="btn btn-danger" onClick={handleDeleteAll}>Delete All</button>
             )}
-          </div>
-        )}
+          </>)}
+        </div>
       </header>
 
       <main className="main">
@@ -283,6 +296,12 @@ export default function App() {
         </>)}
 
         {view === 'labs' && <LabsDashboard />}
+        {view === 'network-lab' && <NetworkLabPage />}
+        {view === 'iam-lab' && <MultiCloudIAM />}
+        {view === 'browser' && <BrowserAutomation />}
+        {view === 'aws' && <AwsStatus />}
+        {view === 'recap' && <DailyRecap />}
+        {view === 'diagrams' && <Diagrams />}
       </main>
 
       {/* ── Modals ── */}

@@ -1,32 +1,13 @@
 {
-  "source": "2026-03-12-am",
-  "generatedAt": "2026-03-12T18:19:29.860Z",
+  "source": "2026-03-11-pm",
+  "generatedAt": "2026-03-16T11:38:58.616Z",
   "labs": [
     {
-      "id": "icmp-connectivity-testing-2026-03-12-am",
-      "title": "ICMP connectivity testing",
-      "category": "Networking",
-      "concept": "ICMP connectivity testing",
-      "instructions": [
-        "Open a terminal on your Linux machine",
-        "Run: ping google.com",
-        "Observe the output and note what information is displayed",
-        "Run: ping -c 4 google.com",
-        "Observe the output and note what information is displayed",
-        "Compare the results with what was discussed in the lecture",
-        "Take notes on any differences or new observations"
-      ],
-      "commands": [
-        "ping google.com",
-        "ping -c 4 google.com"
-      ],
-      "sourceTranscript": "2026-03-12-am"
-    },
-    {
-      "id": "network-interface-configuration-2026-03-12-am",
+      "id": "network-interface-configuration-2026-03-11-pm",
       "title": "Network interface configuration",
       "category": "Networking",
       "concept": "Network interface configuration",
+      "description": "Display all network interfaces, their IP addresses, MAC addresses, and link state on the local machine.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Run: ip a",
@@ -40,49 +21,56 @@
         "ip a",
         "ip addr show"
       ],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "socket-statistics-2026-03-12-am",
-      "title": "Socket statistics",
-      "category": "Networking",
-      "concept": "Socket statistics",
+      "id": "package-management-2026-03-11-pm",
+      "title": "Package management",
+      "category": "Linux",
+      "concept": "Package management",
+      "description": "Install, update, and remove software packages on Debian/Ubuntu systems.",
       "instructions": [
         "Open a terminal on your Linux machine",
-        "Run: ss -tulpn",
+        "Run: apt update",
         "Observe the output and note what information is displayed",
-        "Run: ss -an",
+        "Run: apt install package",
         "Observe the output and note what information is displayed",
         "Compare the results with what was discussed in the lecture",
         "Take notes on any differences or new observations"
       ],
       "commands": [
-        "ss -tulpn",
-        "ss -an"
+        "apt update",
+        "apt install package"
       ],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "secure-remote-shell-access-2026-03-12-am",
-      "title": "Secure remote shell access",
-      "category": "Security",
-      "concept": "Secure remote shell access",
+      "id": "debian-package-manager-2026-03-11-pm",
+      "title": "Debian package manager",
+      "category": "Linux",
+      "concept": "Debian package manager",
+      "description": "Low-level tool for installing and inspecting .deb packages directly.",
       "instructions": [
         "Open a terminal on your Linux machine",
-        "Research the concept: Secure remote shell access",
-        "Try to find related commands and tools",
-        "Document your findings",
+        "Run: dpkg -l",
+        "Observe the output and note what information is displayed",
+        "Run: dpkg -i package.deb",
+        "Observe the output and note what information is displayed",
         "Compare the results with what was discussed in the lecture",
         "Take notes on any differences or new observations"
       ],
-      "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "commands": [
+        "dpkg -l",
+        "dpkg -i package.deb"
+      ],
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "packet-tracer-exploration-2026-03-12-am",
+      "id": "packet-tracer-exploration-2026-03-11-pm",
       "title": "Packet tracer Exploration",
       "category": "Networking",
       "concept": "Hands-on practice with Packet tracer",
+      "description": "Explore Packet tracer hands-on and understand what it can do in a networking context.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: Hands-on practice with Packet tracer",
@@ -92,13 +80,14 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "cisco-exploration-2026-03-12-am",
+      "id": "cisco-exploration-2026-03-11-pm",
       "title": "Cisco Exploration",
       "category": "Networking",
       "concept": "Hands-on practice with Cisco",
+      "description": "Explore Cisco hands-on and understand what it can do in a networking context.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: Hands-on practice with Cisco",
@@ -108,77 +97,48 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "dhcp-2026-03-12-am",
+      "id": "docker-exploration-2026-03-11-pm",
+      "title": "Docker Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Docker",
+      "description": "Explore Docker hands-on and understand what it can do in a networking context.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Docker",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-11-pm"
+    },
+    {
+      "id": "dhcp-2026-03-11-pm",
       "title": "DHCP Lab",
       "category": "Networking",
-      "concept": "DHCP - Dynamic Host Configuration Protocol",
+      "concept": "DHCP",
+      "description": "DHCP automatically assigns IP addresses to devices on a network — explore how clients request and receive leases.",
       "instructions": [
         "Open a terminal on your Linux machine",
-        "Research the concept: DHCP - Dynamic Host Configuration Protocol",
+        "Research the concept: DHCP",
         "Try to find related commands and tools",
         "Document your findings",
         "Compare the results with what was discussed in the lecture",
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "dns-2026-03-12-am",
-      "title": "DNS Lab",
-      "category": "Networking",
-      "concept": "DNS - Domain Name System",
-      "instructions": [
-        "Open a terminal on your Linux machine",
-        "Research the concept: DNS - Domain Name System",
-        "Try to find related commands and tools",
-        "Document your findings",
-        "Compare the results with what was discussed in the lecture",
-        "Take notes on any differences or new observations"
-      ],
-      "commands": [],
-      "sourceTranscript": "2026-03-12-am"
-    },
-    {
-      "id": "osi-model-2026-03-12-am",
-      "title": "OSI Model Lab",
-      "category": "Networking",
-      "concept": "OSI Model - 7 Layer Network Model",
-      "instructions": [
-        "Open a terminal on your Linux machine",
-        "Research the concept: OSI Model - 7 Layer Network Model",
-        "Try to find related commands and tools",
-        "Document your findings",
-        "Compare the results with what was discussed in the lecture",
-        "Take notes on any differences or new observations"
-      ],
-      "commands": [],
-      "sourceTranscript": "2026-03-12-am"
-    },
-    {
-      "id": "tcp-ip-model-2026-03-12-am",
-      "title": "TCP/IP Model Lab",
-      "category": "Networking",
-      "concept": "TCP/IP Model",
-      "instructions": [
-        "Open a terminal on your Linux machine",
-        "Research the concept: TCP/IP Model",
-        "Try to find related commands and tools",
-        "Document your findings",
-        "Compare the results with what was discussed in the lecture",
-        "Take notes on any differences or new observations"
-      ],
-      "commands": [],
-      "sourceTranscript": "2026-03-12-am"
-    },
-    {
-      "id": "network-broadcasting-2026-03-12-am",
+      "id": "network-broadcasting-2026-03-11-pm",
       "title": "Network Broadcasting Lab",
       "category": "Networking",
       "concept": "Network Broadcasting",
+      "description": "Broadcast messages are sent to all hosts on a subnet simultaneously — explore how broadcast addresses work.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: Network Broadcasting",
@@ -188,29 +148,14 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "network-gateway-2026-03-12-am",
-      "title": "Network Gateway Lab",
-      "category": "Networking",
-      "concept": "Network Gateway",
-      "instructions": [
-        "Open a terminal on your Linux machine",
-        "Research the concept: Network Gateway",
-        "Try to find related commands and tools",
-        "Document your findings",
-        "Compare the results with what was discussed in the lecture",
-        "Take notes on any differences or new observations"
-      ],
-      "commands": [],
-      "sourceTranscript": "2026-03-12-am"
-    },
-    {
-      "id": "mac-addressing-2026-03-12-am",
+      "id": "mac-addressing-2026-03-11-pm",
       "title": "MAC Addressing Lab",
       "category": "Networking",
       "concept": "MAC Addressing",
+      "description": "MAC addresses are hardware identifiers assigned to network interfaces — every device on a LAN has one.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: MAC Addressing",
@@ -220,13 +165,14 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "ip-addressing-2026-03-12-am",
+      "id": "ip-addressing-2026-03-11-pm",
       "title": "IP Addressing Lab",
       "category": "Networking",
       "concept": "IP Addressing",
+      "description": "IP addresses identify devices on a network — explore IPv4 vs IPv6, private ranges, and how addresses are assigned.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: IP Addressing",
@@ -236,13 +182,14 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     },
     {
-      "id": "network-simulation-with-packet-tracer-2026-03-12-am",
+      "id": "network-simulation-with-packet-tracer-2026-03-11-pm",
       "title": "Network Simulation with Packet Tracer Lab",
       "category": "Networking",
       "concept": "Network Simulation with Packet Tracer",
+      "description": "Packet Tracer lets you design and simulate networks visually — practice routing, switching, and protocols in a safe environment.",
       "instructions": [
         "Open a terminal on your Linux machine",
         "Research the concept: Network Simulation with Packet Tracer",
@@ -252,7 +199,7 @@
         "Take notes on any differences or new observations"
       ],
       "commands": [],
-      "sourceTranscript": "2026-03-12-am"
+      "sourceTranscript": "2026-03-11-pm"
     }
   ]
 }

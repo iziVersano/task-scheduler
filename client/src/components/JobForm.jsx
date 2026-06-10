@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { apiFetch } from '../apiClient.js';
 
 const API = '/api';
 
@@ -81,13 +82,14 @@ function randomName() {
 }
 
 export default function JobForm({ job, onSave, onClose }) {
-  const now = new Date();
-  const nowHour = String(now.getHours()).padStart(2, '0');
-  const nowMinute = String(now.getMinutes()).padStart(2, '0');
+  // For new jobs, default to 1 minute in the future so it triggers right away
+  const future = new Date(Date.now() + 60000);
+  const nowHour = String(future.getHours()).padStart(2, '0');
+  const nowMinute = String(future.getMinutes()).padStart(2, '0');
 
   const initial = job ? parseCron(job.schedule) : null;
 
-  // When editing, preserve the job's existing time; for new jobs use current time
+  // When editing, preserve the job's existing time; for new jobs use current time + 1 min
   const editHour   = initial?.hour   ?? nowHour;
   const editMinute = initial?.minute ?? nowMinute;
   const defaultSchedule = job
@@ -101,7 +103,7 @@ export default function JobForm({ job, onSave, onClose }) {
     enabled:  job ? Boolean(job.enabled) : true,
   });
   const [jobType, setJobType] = useState(detectJobType(job?.command));
-  const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || 'https://meet.google.com/kdh-gdjc-rke');
+  const [meetLink, setMeetLink] = useState(extractMeetUrl(job?.command) || 'https://meet.google.com/ifp-izxr-qxo');
   const [openUrl, setOpenUrl] = useState(extractOpenUrl(job?.command) || '');
   const [mode, setMode] = useState('manual');
   const [hour, setHour] = useState(editHour);
@@ -152,9 +154,8 @@ export default function JobForm({ job, onSave, onClose }) {
     try {
       const url    = job ? `${API}/jobs/${job.id}` : `${API}/jobs`;
       const method = job ? 'PUT' : 'POST';
-      const res    = await fetch(url, {
+      const res    = await apiFetch(url, {
         method,
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(submitData),
       });
       const data = await res.json();

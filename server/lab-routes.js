@@ -1,23 +1,56 @@
 const express = require('express');
 const fs = require('fs');
 const path = require('path');
+const { execFile } = require('child_process');
 const router = express.Router();
 const db = require('./db');
 const { analyzeTranscript } = require('./lab-analyzer');
-const { executeInSandbox, isExecutableLab, getLabConfig, getSandboxStatus } = require('./sandbox/executor');
+const { requireAuth } = require('./iam-middleware');
 
 const CAPTIONS_DIR = path.join(__dirname, 'captions');
 const GENERATED_DIR = path.join(__dirname, 'labs', 'generated');
 
-// Ensure output directory exists
 fs.mkdirSync(GENERATED_DIR, { recursive: true });
 
-// ── GET /api/labs/sandbox/status ────────────────────────────────────────────
-// Must be above /labs/:id to avoid matching "sandbox" as an id
-router.get('/labs/sandbox/status', async (_req, res) => {
-  const status = await getSandboxStatus();
-  res.json(status);
-});
+// ── Shared enrichment ────────────────────────────────────────────────────────
+function enrichLab(lab) {
+  return {
+    ...lab,
+    instructions: JSON.parse(lab.instructions),
+    commands: JSON.parse(lab.commands),
+  };
+}
+
+// ── Safe command whitelist for local execution ──────────────────────────────
+const SAFE_COMMANDS = [
+  /^ip\s+(a|addr|addr\s+show|route|route\s+show|route\s+get\s+[\d.]+|link\s+show)$/,
+  /^ifconfig$/,
+  /^ping\s+-c\s+\d+\s+[\w.\-]+$/,
+  /^tracepath\s+-m\s+\d+\s+[\w.\-]+$/,
+  /^traceroute\s+[\w.\-]+$/,
+  /^nslookup\s+[\w.\-]+$/,
+  /^nslookup\s+-type=\w+\s+[\w.\-]+$/,
+  /^dig\s+[\w.\-]+(\s+\w+)?$/,
+  /^ipcalc\s+[\d./]+$/,
+  /^id$/,
+  /^groups$/,
+  /^whoami$/,
+  /^sudo\s+whoami$/,
+  /^cat\s+\/etc\/(group|hosts|hostname|ssh\/sshd_config)(\s*\|\s*grep\s+\w+)?$/,
+  /^sudo\s+apt\s+update$/,
+  /^sudo\s+apt\s+upgrade\s+-y$/,
+  /^apt\s+list\s+--upgradable$/,
+  /^sudo\s+systemctl\s+status\s+\w+$/,
+  /^echo\s+"[^"]*"\s*\|\s*bc$/,
+  /^python3\s+-c\s+"[^"]*"$/,
+  /^ss\s+-\w+$/,
+  /^netstat\s+-\w+$/,
+  /^arp\s+-[an]$/,
+];
+
+function isCommandSafe(cmd) {
+  return SAFE_COMMANDS.some(re => re.test(cmd.trim()));
+}
 
 // ── GET /api/labs/captions ──────────────────────────────────────────────────
 router.get('/labs/captions', (req, res) => {
@@ -38,7 +71,6 @@ router.post('/labs/generate', (req, res) => {
   try {
     let { source, text } = req.body;
 
-    // If source is given, read from captions directory
     if (source && !text) {
       const filePath = path.join(CAPTIONS_DIR, source);
       if (!fs.existsSync(filePath)) {
@@ -52,36 +84,34 @@ router.post('/labs/generate', (req, res) => {
     }
 
     const sourceId = source ? source.replace('.txt', '') : `upload-${Date.now()}`;
+    const result = analyzeTranscript(text, sourceId);
 
-    // Run the 3-pass analyzer
-    const labs = analyzeTranscript(text, sourceId);
-
-    if (labs.length === 0) {
-      return res.json({ labs: [], message: 'No labs could be generated from this transcript' });
+    if (result.labs.length === 0) {
+      return res.json({ summary: result.summary, labs: [], message: 'No labs could be generated from this transcript' });
     }
 
-    // Delete existing labs from same source before inserting
+    // Delete existing labs from same source
     db.prepare('DELETE FROM labs WHERE source_transcript = ?').run(sourceId);
 
-    // Insert labs into database
     const insert = db.prepare(`
-      INSERT INTO labs (id, title, category, concept, instructions, commands, source_transcript)
-      VALUES (?, ?, ?, ?, ?, ?, ?)
+      INSERT INTO labs (id, title, category, concept, description, instructions, commands, source_transcript, difficulty)
+      VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)
     `);
 
-    for (const lab of labs) {
-      // Ensure unique id by appending source if needed
+    for (const lab of result.labs) {
       const labId = `${lab.id}-${sourceId}`;
       insert.run(
         labId,
         lab.title,
         lab.category,
         lab.concept,
+        lab.description || '',
         JSON.stringify(lab.instructions),
         JSON.stringify(lab.commands),
-        lab.sourceTranscript
+        lab.sourceTranscript,
+        lab.difficulty || 1
       );
-      lab.id = labId; // update for response
+      lab.id = labId;
     }
 
     // Save to file
@@ -89,11 +119,13 @@ router.post('/labs/generate', (req, res) => {
     fs.writeFileSync(outputFile, JSON.stringify({
       source: sourceId,
       generatedAt: new Date().toISOString(),
-      labs,
+      summary: result.summary,
+      labs: result.labs,
     }, null, 2));
 
-    res.status(201).json({ labs, file: `labs/generated/${sourceId}.json` });
+    res.status(201).json({ summary: result.summary, labs: result.labs, file: `labs/generated/${sourceId}.json` });
   } catch (err) {
+    console.error('Lab generation error:', err);
     res.status(500).json({ error: err.message });
   }
 });
@@ -112,44 +144,18 @@ router.get('/labs', (req, res) => {
     conditions.push('status = ?');
     params.push(req.query.status);
   }
-  if (conditions.length) {
-    sql += ' WHERE ' + conditions.join(' AND ');
-  }
+  if (conditions.length) sql += ' WHERE ' + conditions.join(' AND ');
   sql += ' ORDER BY created_at DESC';
 
   const labs = db.prepare(sql).all(...params);
-
-  // Parse JSON fields and enrich with executable metadata
-  const parsed = labs.map(lab => {
-    const out = {
-      ...lab,
-      instructions: JSON.parse(lab.instructions),
-      commands: JSON.parse(lab.commands),
-    };
-    const config = getLabConfig(lab.id);
-    if (config) {
-      out.executable = true;
-      out.allowedCommands = config.allowedCommands;
-    }
-    return out;
-  });
-
-  res.json(parsed);
+  res.json(labs.map(enrichLab));
 });
 
 // ── GET /api/labs/:id ───────────────────────────────────────────────────────
 router.get('/labs/:id', (req, res) => {
   const lab = db.prepare('SELECT * FROM labs WHERE id = ?').get(req.params.id);
   if (!lab) return res.status(404).json({ error: 'Lab not found' });
-
-  lab.instructions = JSON.parse(lab.instructions);
-  lab.commands = JSON.parse(lab.commands);
-  const config = getLabConfig(lab.id);
-  if (config) {
-    lab.executable = true;
-    lab.allowedCommands = config.allowedCommands;
-  }
-  res.json(lab);
+  res.json(enrichLab(lab));
 });
 
 // ── PUT /api/labs/:id ───────────────────────────────────────────────────────
@@ -160,27 +166,17 @@ router.put('/labs/:id', (req, res) => {
   const title        = req.body.title?.trim()        || existing.title;
   const category     = req.body.category?.trim()     || existing.category;
   const concept      = req.body.concept?.trim()      || existing.concept;
+  const description  = req.body.description != null ? req.body.description : existing.description;
   const instructions = req.body.instructions         || JSON.parse(existing.instructions);
   const commands     = req.body.commands              || JSON.parse(existing.commands);
   const status       = req.body.status               || existing.status;
 
-  // Validate commands
-  const safePattern = /^[a-zA-Z0-9.\-\s\/:_=]+$/;
-  for (const cmd of commands) {
-    if (!safePattern.test(cmd)) {
-      return res.status(400).json({ error: `Unsafe command: "${cmd}"` });
-    }
-  }
-
   db.prepare(`
-    UPDATE labs SET title = ?, category = ?, concept = ?, instructions = ?, commands = ?,
+    UPDATE labs SET title = ?, category = ?, concept = ?, description = ?, instructions = ?, commands = ?,
     status = ?, updated_at = datetime('now', 'localtime') WHERE id = ?
-  `).run(title, category, concept, JSON.stringify(instructions), JSON.stringify(commands), status, req.params.id);
+  `).run(title, category, concept, description, JSON.stringify(instructions), JSON.stringify(commands), status, req.params.id);
 
-  const lab = db.prepare('SELECT * FROM labs WHERE id = ?').get(req.params.id);
-  lab.instructions = JSON.parse(lab.instructions);
-  lab.commands = JSON.parse(lab.commands);
-  res.json(lab);
+  res.json(enrichLab(db.prepare('SELECT * FROM labs WHERE id = ?').get(req.params.id)));
 });
 
 // ── POST /api/labs/:id/publish ──────────────────────────────────────────────
@@ -192,10 +188,7 @@ router.post('/labs/:id/publish', (req, res) => {
   db.prepare("UPDATE labs SET status = ?, updated_at = datetime('now', 'localtime') WHERE id = ?")
     .run(newStatus, req.params.id);
 
-  const updated = db.prepare('SELECT * FROM labs WHERE id = ?').get(req.params.id);
-  updated.instructions = JSON.parse(updated.instructions);
-  updated.commands = JSON.parse(updated.commands);
-  res.json(updated);
+  res.json(enrichLab(db.prepare('SELECT * FROM labs WHERE id = ?').get(req.params.id)));
 });
 
 // ── DELETE /api/labs/:id ────────────────────────────────────────────────────
@@ -207,22 +200,36 @@ router.delete('/labs/:id', (req, res) => {
   res.json({ success: true });
 });
 
-// ── POST /api/labs/:id/execute ──────────────────────────────────────────────
-router.post('/labs/:id/execute', async (req, res) => {
-  try {
-    const lab = db.prepare('SELECT id FROM labs WHERE id = ?').get(req.params.id);
-    if (!lab) return res.status(404).json({ error: 'Lab not found' });
+// ── POST /api/labs/:id/execute — run command locally (no Docker) ────────────
+router.post('/labs/:id/execute', (req, res) => {
+  const lab = db.prepare('SELECT id FROM labs WHERE id = ?').get(req.params.id);
+  if (!lab) return res.status(404).json({ error: 'Lab not found' });
 
-    const { command } = req.body;
-    if (!command || typeof command !== 'string') {
-      return res.status(400).json({ error: 'command is required' });
+  const { command } = req.body;
+  if (!command || typeof command !== 'string') {
+    return res.status(400).json({ error: 'command is required' });
+  }
+
+  if (!isCommandSafe(command)) {
+    return res.status(403).json({ error: `Command not allowed: "${command}"` });
+  }
+
+  const start = Date.now();
+  execFile('bash', ['-c', command], { timeout: 15000, maxBuffer: 256 * 1024 }, (err, stdout, stderr) => {
+    const durationMs = Date.now() - start;
+
+    if (err && err.killed) {
+      return res.json({ stdout: stdout || '', stderr: 'Command timed out', exitCode: 124, durationMs, timedOut: true });
     }
 
-    const result = await executeInSandbox(req.params.id, command);
-    res.json(result);
-  } catch (err) {
-    res.status(err.status || 500).json({ error: err.message });
-  }
+    res.json({
+      stdout: stdout || '',
+      stderr: stderr || '',
+      exitCode: err ? (err.code || 1) : 0,
+      durationMs,
+      timedOut: false,
+    });
+  });
 });
 
 module.exports = router;

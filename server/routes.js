@@ -3,6 +3,7 @@ const cron = require('node-cron');
 const router = express.Router();
 const db = require('./db');
 const { scheduleJob, unscheduleJob } = require('./scheduler');
+const { requireAuth } = require('./iam-middleware');
 
 // ── GET /api/jobs ─────────────────────────────────────────────────────────────
 router.get('/jobs', (req, res) => {
@@ -56,6 +57,15 @@ router.put('/jobs/:id', (req, res) => {
   if (job.enabled) scheduleJob(job);
 
   res.json(job);
+});
+
+// ── DELETE /api/jobs (all) ────────────────────────────────────────────────────
+router.delete('/jobs', (req, res) => {
+  const allJobs = db.prepare('SELECT id FROM jobs').all();
+  for (const job of allJobs) unscheduleJob(job.id);
+  db.prepare('DELETE FROM job_logs').run();
+  db.prepare('DELETE FROM jobs').run();
+  res.json({ success: true, deleted: allJobs.length });
 });
 
 // ── DELETE /api/jobs/:id ──────────────────────────────────────────────────────

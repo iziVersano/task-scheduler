@@ -1,0 +1,151 @@
+{
+  "source": "2026-03-12-pm",
+  "generatedAt": "2026-03-12T22:23:06.453Z",
+  "labs": [
+    {
+      "id": "icmp-connectivity-testing-2026-03-12-pm",
+      "title": "ICMP connectivity testing",
+      "category": "Networking",
+      "concept": "ICMP connectivity testing",
+      "description": "Test whether a host is reachable over the network and measure round-trip time using ICMP echo requests.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: ping google.com",
+        "Observe the output and note what information is displayed",
+        "Run: ping -c 4 google.com",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "ping google.com",
+        "ping -c 4 google.com"
+      ],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "secure-remote-shell-access-2026-03-12-pm",
+      "title": "Secure remote shell access",
+      "category": "Security",
+      "concept": "Secure remote shell access",
+      "description": "Connect to a remote machine securely over an encrypted channel — the standard way to administer Linux servers.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Secure remote shell access",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "system-resource-monitor-2026-03-12-pm",
+      "title": "System resource monitor",
+      "category": "Linux",
+      "concept": "System resource monitor",
+      "description": "Live view of running processes and system resource usage — CPU, memory, load average.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: top",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "top"
+      ],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "package-management-2026-03-12-pm",
+      "title": "Package management",
+      "category": "Linux",
+      "concept": "Package management",
+      "description": "Install, update, and remove software packages on Debian/Ubuntu systems.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: apt update",
+        "Observe the output and note what information is displayed",
+        "Run: apt install package",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "apt update",
+        "apt install package"
+      ],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "virtualbox-exploration-2026-03-12-pm",
+      "title": "Virtualbox Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Virtualbox",
+      "description": "Explore Virtualbox hands-on and understand what it can do in a networking context.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Virtualbox",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "dhcp-2026-03-12-pm",
+      "title": "DHCP Lab",
+      "category": "Networking",
+      "concept": "DHCP",
+      "description": "DHCP automatically assigns IP addresses to devices on a network — explore how clients request and receive leases.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: DHCP",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "dns-2026-03-12-pm",
+      "title": "DNS Lab",
+      "category": "Networking",
+      "concept": "DNS",
+      "description": "DNS translates human-readable hostnames into IP addresses — practice querying DNS records with nslookup or dig.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: DNS",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-12-pm"
+    },
+    {
+      "id": "ip-addressing-2026-03-12-pm",
+      "title": "IP Addressing Lab",
+      "category": "Networking",
+      "concept": "IP Addressing",
+      "description": "IP addresses identify devices on a network — explore IPv4 vs IPv6, private ranges, and how addresses are assigned.",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: IP Addressing",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-12-pm"
+    }
+  ]
+}

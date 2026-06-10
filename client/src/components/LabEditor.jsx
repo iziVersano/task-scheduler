@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { apiFetch } from '../apiClient.js';
 
 const API = '/api';
 const CATEGORIES = ['Networking', 'Linux', 'Security', 'Cloud', 'Scripting'];
@@ -44,9 +45,8 @@ export default function LabEditor({ lab, onSave, onClose }) {
 
     setSaving(true);
     try {
-      const res = await fetch(`${API}/labs/${encodeURIComponent(lab.id)}`, {
+      const res = await apiFetch(`${API}/labs/${encodeURIComponent(lab.id)}`, {
         method: 'PUT',
-        headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({
           title: title.trim(),
           category,

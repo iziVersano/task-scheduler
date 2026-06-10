@@ -1,0 +1,136 @@
+{
+  "source": "2026-03-16-am",
+  "generatedAt": "2026-03-16T10:09:00.000Z",
+  "labs": [
+    {
+      "id": "ifconfig-network-interfaces-2026-03-16-am",
+      "title": "Network Interface Inspection with ifconfig",
+      "category": "Networking",
+      "concept": "Inspecting network interfaces using ifconfig on a remote Linux VM",
+      "instructions": [
+        "SSH into your Azure VM (VM-Debian-1)",
+        "Run: sudo ifconfig",
+        "Identify the eth0 interface and note the following:",
+        "  - IPv4 address (inet), netmask, and broadcast address",
+        "  - IPv6 address (inet6) and prefix length",
+        "  - MAC address (ether)",
+        "  - MTU value",
+        "  - RX/TX packet counts and byte counts",
+        "Identify the lo (loopback) interface and note:",
+        "  - IPv4 address (127.0.0.1) and netmask (255.0.0.0)",
+        "  - IPv6 address (::1) and prefix length (128)",
+        "  - MTU value (65536)",
+        "Compare the eth0 flags (UP, BROADCAST, RUNNING, MULTICAST) with the lo flags (UP, LOOPBACK, RUNNING)",
+        "Run: ip a — compare the output with ifconfig",
+        "Run: ip -4 addr show eth0 — to see only IPv4 on eth0",
+        "Run: ip -6 addr show eth0 — to see only IPv6 on eth0",
+        "Run: ifconfig eth0 — to see only the eth0 interface",
+        "Note: ifconfig is from net-tools (legacy), ip is from iproute2 (modern)"
+      ],
+      "commands": [
+        "sudo ifconfig",
+        "ip a",
+        "ip -4 addr show eth0",
+        "ip -6 addr show eth0",
+        "ifconfig eth0",
+        "ip link show eth0",
+        "ip route show",
+        "cat /etc/resolv.conf"
+      ],
+      "sourceTranscript": "2026-03-16-am"
+    },
+    {
+      "id": "azure-vm-networking-2026-03-16-am",
+      "title": "Azure VM Network Configuration",
+      "category": "Cloud / Networking",
+      "concept": "Understanding network configuration on an Azure Debian VM",
+      "instructions": [
+        "SSH into your Azure VM",
+        "Run: sudo ifconfig eth0",
+        "Note the private IP (10.0.0.4) — this is the Azure VNet internal address",
+        "Run: ip route show — find the default gateway",
+        "Run: curl ifconfig.me — find your public IP (different from private IP)",
+        "Explain: Why is the private IP (10.0.0.4) different from the public IP?",
+        "Run: cat /etc/resolv.conf — check DNS configuration",
+        "Run: nslookup google.com — test DNS resolution",
+        "Run: traceroute google.com — see the network path (install with: sudo apt install traceroute)",
+        "Note the broadcast address (10.0.0.255) and netmask (255.255.255.0) — this is a /24 subnet"
+      ],
+      "commands": [
+        "sudo ifconfig eth0",
+        "ip route show",
+        "curl ifconfig.me",
+        "cat /etc/resolv.conf",
+        "nslookup google.com",
+        "sudo apt install traceroute -y",
+        "traceroute google.com",
+        "ip neigh show"
+      ],
+      "sourceTranscript": "2026-03-16-am"
+    },
+    {
+      "id": "ifconfig-vs-ip-2026-03-16-am",
+      "title": "ifconfig vs ip Command Comparison",
+      "category": "Networking",
+      "concept": "Comparing legacy net-tools (ifconfig) with modern iproute2 (ip) commands",
+      "instructions": [
+        "SSH into your Azure VM",
+        "Run both commands side by side and compare output:",
+        "  ifconfig           vs   ip a",
+        "  ifconfig eth0      vs   ip addr show eth0",
+        "  ifconfig -a        vs   ip link show",
+        "  route -n           vs   ip route show",
+        "  netstat -tulpn     vs   ss -tulpn",
+        "  arp -a             vs   ip neigh show",
+        "Note which package provides each set:",
+        "  ifconfig, route, netstat, arp → net-tools (legacy, may not be installed)",
+        "  ip, ss → iproute2 (modern, always available)",
+        "If ifconfig is not found, install it: sudo apt install net-tools",
+        "Document 3 differences you notice between the outputs"
+      ],
+      "commands": [
+        "sudo ifconfig",
+        "ip a",
+        "sudo ifconfig eth0",
+        "ip addr show eth0",
+        "route -n",
+        "ip route show",
+        "netstat -tulpn",
+        "ss -tulpn",
+        "arp -a",
+        "ip neigh show",
+        "sudo apt install net-tools -y"
+      ],
+      "sourceTranscript": "2026-03-16-am"
+    },
+    {
+      "id": "rx-tx-packet-analysis-2026-03-16-am",
+      "title": "RX/TX Packet Analysis",
+      "category": "Networking",
+      "concept": "Understanding receive/transmit statistics on network interfaces",
+      "instructions": [
+        "SSH into your Azure VM",
+        "Run: sudo ifconfig eth0",
+        "Find the RX (receive) and TX (transmit) lines:",
+        "  RX packets, bytes, errors, dropped, overruns, frame",
+        "  TX packets, bytes, errors, dropped, overruns, carrier, collisions",
+        "Run: ping -c 100 google.com &",
+        "Wait 10 seconds, then run ifconfig again",
+        "Compare the RX/TX packet counts — they should have increased",
+        "Run: ip -s link show eth0 — another way to see interface statistics",
+        "Run: cat /proc/net/dev — raw kernel interface stats",
+        "Calculate: How many MB were received? (bytes / 1024 / 1024)",
+        "Check for errors: Are there any dropped packets or errors? What would that mean?"
+      ],
+      "commands": [
+        "sudo ifconfig eth0",
+        "ping -c 100 google.com &",
+        "sleep 10 && sudo ifconfig eth0",
+        "ip -s link show eth0",
+        "cat /proc/net/dev",
+        "kill %1"
+      ],
+      "sourceTranscript": "2026-03-16-am"
+    }
+  ]
+}

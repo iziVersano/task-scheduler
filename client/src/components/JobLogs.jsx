@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react';
+import { apiFetch } from '../apiClient.js';
 
 const API = '/api';
 
@@ -19,7 +20,7 @@ export default function JobLogs({ job, onClose }) {
   const [expanded, setExpanded] = useState(null);
 
   useEffect(() => {
-    fetch(`${API}/jobs/${job.id}/logs?limit=50`)
+    apiFetch(`${API}/jobs/${job.id}/logs?limit=50`)
       .then((r) => r.json())
       .then((data) => { setLogs(data); setLoading(false); })
       .catch(() => setLoading(false));

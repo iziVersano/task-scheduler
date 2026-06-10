@@ -1,0 +1,55 @@
+{
+  "source": "2026-03-09",
+  "generatedAt": "2026-03-12T18:19:35.389Z",
+  "labs": [
+    {
+      "id": "bash-shell-scripting-2026-03-09",
+      "title": "Bash shell scripting",
+      "category": "Scripting",
+      "concept": "Bash shell scripting",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Run: bash script.sh",
+        "Observe the output and note what information is displayed",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [
+        "bash script.sh"
+      ],
+      "sourceTranscript": "2026-03-09"
+    },
+    {
+      "id": "docker-exploration-2026-03-09",
+      "title": "Docker Exploration",
+      "category": "Networking",
+      "concept": "Hands-on practice with Docker",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: Hands-on practice with Docker",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-09"
+    },
+    {
+      "id": "ip-addressing-2026-03-09",
+      "title": "IP Addressing Lab",
+      "category": "Networking",
+      "concept": "IP Addressing",
+      "instructions": [
+        "Open a terminal on your Linux machine",
+        "Research the concept: IP Addressing",
+        "Try to find related commands and tools",
+        "Document your findings",
+        "Compare the results with what was discussed in the lecture",
+        "Take notes on any differences or new observations"
+      ],
+      "commands": [],
+      "sourceTranscript": "2026-03-09"
+    }
+  ]
+}

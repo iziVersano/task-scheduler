@@ -3,7 +3,7 @@ const { execFile } = require('child_process');
 // ── Sandbox Configuration ────────────────────────────────────────────────────
 
 const DOCKER_IMAGE = 'lab-sandbox';
-const TIMEOUT_MS = 10_000;   // 10 seconds max per command
+const TIMEOUT_MS = 20_000;   // 20 seconds max per command (tracepath can be slow)
 const MEMORY_LIMIT = '64m';
 const CPU_LIMIT = '0.5';
 
@@ -14,10 +14,24 @@ const CPU_LIMIT = '0.5';
 const EXECUTABLE_LABS = {
   'network-interface-configuration': {
     allowedCommands: ['ip a', 'ip addr show'],
+    summaryType: 'ip-config',
   },
   'icmp-connectivity-testing': {
     allowedCommands: ['ping -c 4 8.8.8.8', 'ping -c 4 google.com'],
-    network: 'bridge',  // needs outbound connectivity
+    network: 'bridge',
+    summaryType: 'ping',
+  },
+  'network-path-tracing': {
+    // matches: "network-path-tracing-*" (traceroute concept)
+    allowedCommands: ['tracepath -m 10 8.8.8.8', 'tracepath -m 10 google.com'],
+    network: 'bridge',
+    summaryType: 'tracepath',
+  },
+  'dns': {
+    // matches: "dns-*" (DNS - Domain Name System labs)
+    allowedCommands: ['nslookup google.com', 'nslookup -type=MX google.com'],
+    network: 'bridge',
+    summaryType: 'dns',
   },
 };
 
@@ -37,12 +51,21 @@ function checkDocker() {
 
 // ── Check if sandbox image exists ────────────────────────────────────────────
 
+let _imageAvailable = null;
+
 function checkImage() {
+  if (_imageAvailable !== null) return Promise.resolve(_imageAvailable);
   return new Promise((resolve) => {
     execFile('docker', ['image', 'inspect', DOCKER_IMAGE], { timeout: 5000 }, (err) => {
-      resolve(!err);
+      _imageAvailable = !err;
+      resolve(_imageAvailable);
     });
   });
+}
+
+// Call after building image to reset the cache
+function resetImageCache() {
+  _imageAvailable = null;
 }
 
 // ── Core execution ───────────────────────────────────────────────────────────
@@ -179,5 +202,6 @@ module.exports = {
   isExecutableLab,
   getLabConfig,
   getSandboxStatus,
+  resetImageCache,
   EXECUTABLE_LABS,
 };
