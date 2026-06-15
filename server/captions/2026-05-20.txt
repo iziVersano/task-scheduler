@@ -1,0 +1,957 @@
+
+[09:04]
+  --- logged in ---
+  --- Meeting ended ---
+
+[09:07]
+  --- logged in ---
+
+[09:09]
+  --- logged in ---
+
+[09:19]
+  --- logged in ---
+
+[09:19]
+  --- logged in ---
+
+[09:24]
+  --- Meeting ended ---
+
+[10:09]
+  --- logged in ---
+
+[10:19]
+  so let's continium with the slides Arrow ask you one to give me your plus one so I can't captor presence Put plus one and don't forget before you live. I know that you here and lover S. Motivation Internet? So? Greta webserversammelt Creed Webseite Centers there Orient the space impossible  Experimentation! Mainz? aber, Die Weite Profit. So das ist bitte auf amateurisch expanischen with the divide Profit. Beat Und? so if the one country 1000 one million in Karls it's profities 5 Millionen Numbers!
+
+[10:27]
+  --- logged in ---
+  so let's continium with the slides Arrow ask you one to give me your plus one so I can't captor presence Put plus one and don't forget before you live. I know that you here and lover S. Motivation Internet? So? Greta webserversammelt Creed Webseite Centers there Orient the space impossible  Experimentation! Mainz? aber, Die Weite Profit. So das ist bitte auf amateurisch expanischen with the divide Profit. Beat Und? so if the one country 1000 one million in Karls it's profities 5 Millionen Numbers!
+
+[10:42]
+  --- logged in ---
+  so let's continium with the slides Arrow ask you one to give me your plus one so I can't captor presence Put plus one and don't forget before you live. I know that you here and lover S. Motivation Internet? So? Greta webserversammelt Creed Webseite Centers there Orient the space impossible  Experimentation! Mainz? aber, Die Weite Profit. So das ist bitte auf amateurisch expanischen with the divide Profit. Beat Und? so if the one country 1000 one million in Karls it's profities 5 Millionen Numbers!
+
+[11:05]
+  3, so, ich Podcast?  Ist kein Dorf important to remember. So? Amazon? Features comparison and in general customer should be your first. so you up Problem mit Dose Models in your first part of the of the learning here buty für diesen now because Plattform  Gerät? Google? oh so, let Soft! Auto? Ist? dies ist da one witches the original Region us is one is the one that everything started from deadline. Many Differenz! clients, from you to be held Outs    Falls? So? Dirties! so dieser Videos dieser kontinental Division soft of the services for five six seven seven continents where we have a let the last one Australian New Zealand wo ich heftiges so muss forty items that there List 3 00, Arabien Chile So gerns of the moment. So? It's not something that is far from one hundred present. It works every your for many many hours. Maybe for your citrel. Not good down, but what is the one Service? Einfach? Automat! So? Der in jedem building. In? europäischen sonoraison rice neverenans Matip. the world is the solution ein weißwörser ich würde Menschen ist ist locations  educations do not compare weed regions
+
+[11:30]
+  So? Der in jedem building. In? europäischen sonoraison rice neverenans Matip. the world is the solution ein weißwörser ich würde Menschen ist ist locations  educations do not compare weed regions so, ich bin Ist Ex. Der? Next customer. next customer will safe time, so this is go Content network many de friend but closed ist you can you Cloud froms Alternative Kontrolliert extra?  so Swan step up the time exponation and instruction country Front in your Architekt? So how to put the cloud in front of London? Preparation! okay, so jetzt Fernsehen Lab creating your first Amazon so jetzt Fernsehen Lab creating your first Amazon In your free account. so learning objectives intenden taudience beginners familiäre TV Videos So? What's sometimesex some time to Startup? Automatik? Immediatina?
+  *** ALERT [izi]: Izi Versano & 1 others: "So?"
+  *** ALERT [versano]: Izi Versano & 1 others: "So?"
+  korrekt der now together Qi and cloud Academy and the good think about clauda Academy that with the firstyle and the one I used many use gold to train myself and lighting that there keeping up the labs up to the up to the good quality because For you will be possible.  It does not work. You can report Programm. so Hero we have some War der Boss here? Differen studentität Regent this falls hier der Decke So ist es. Creed your first Amazon. click the
+
+[12:12]
+  *** ALERT [izi]: Kiro Velkovski: "fall. Okay. So that's it. Let's try to connect. It's delicious initializing, but I will try to connect just just to see with any of this connection. Possibilities. There it is. Who am I? I miss you to user. So this is my external IP address. I can see it here in the networking. There it is. This is the public idea, but I logged inside the machine. just to try from within it from within To connect to see what is the IP address. And yes, please please."
+  fall. Okay. So that's it. Let's try to connect. It's delicious initializing, but I will try to connect just just to see with any of this connection. Possibilities. There it is. Who am I? I miss you to user. So this is my external IP address. I can see it here in the networking. There it is. This is the public idea, but I logged inside the machine. just to try from within it from within To connect to see what is the IP address. And yes, please please.
+  *** ALERT [izi]: Izi Versano & 1 others: "So the machine is, is this the terminal of the EC2?"
+  *** ALERT [versano]: Izi Versano & 1 others: "So the machine is, is this the terminal of the EC2?"
+  Yes. Yes.
+  *** ALERT [izi]: Izi Versano & 1 others: "Okay."
+  *** ALERT [versano]: Izi Versano & 1 others: "Okay."
+  So what we didn't do here, we didn't set it up to automatically, start our web host or something, some application or something we just logged in and now we have one machine where we can play with Linux instead of experimenting on our laptops we can do experience here. Yes, please laundry.
+  Yes. What can you do?
+  Yes, definitely. If you want, you can use console to code to help you. Whatever you created here to generate some code for you that you can reuse in E or if you learn a little bit more. And you start using AWS CLI. Which is good approach. Also CLI launch. Instance. So this is the command line interface for the command AWS how to launch an instance. And this is the same command that we did by clicking with Clickups.
+  Yes, this is the image ID, I have to find the image. I did that they used in that example and I will not be able now to run it on my machine because I'm not connected to that lap environment and run this to show you. But again yes this is an excellent question. We should strive not to use too much console. When you start learning, of course, the console is great. But if you note how to run for example, AWS CLI commands, or maybe another way is cloud formation launch. Instance example. Cloud formation is the declaration type templates, language of AWS. Which you can use. To run instances to start instances to this and that it's in JSON or YAML you can use. So this is the definition of the instance. And
+  Of course formation is everywhere because it's it comes with the environment. Usually people don't use it because when you learn cloud formation, it's only for AWS.
+  You mentioned, if you want to be a little bit ahead of the time, you will learn Terraform. Which can be a little bit more universal.
+  Wow. Instance. Example, for Azure. so, correct, my so, let's see, Terraform Can be used also for Azure. It's not terraform is started like AWS the AWS language, but still you can use it even that Azure has this biceps language similar to to clouds to house formation. Let's ask
+  *** ALERT [izi]: Izi Versano & 1 others: "But aren't we gonna learn it in the future? All this Is part of."
+  *** ALERT [versano]: Izi Versano & 1 others: "But aren't we gonna learn it in the future? All this Is part of."
+  On this terraform. I think it's covered later.
+  *** ALERT [izi]: Izi Versano & 1 others: "Yes. Why. Why going now? It's bit confusing. Now."
+  *** ALERT [versano]: Izi Versano & 1 others: "Yes. Why. Why going now? It's bit confusing. Now."
+  And now if we start to with terraform, it will be hard because you don't see everything visually like we did. Now my idea here was not to talk for an hour and two and not show the console you this will be your home for a long time. Now, you will have to come here and do. And as mentioned, you can also in parallel if you're have this developer Webmind, let's try to generate some console code here just for for start. So, I will go here in ez2 and I will do start recording. Like this, I will find out the launch instance. I will not choose the name or maybe choose my Ec2. It's okay with this Linux. It's okay with. I know I will have to choose to team to team micro Keeper, I'm not creating a new one. I would choose one of these, this one, which I just created, And I think that was all. And look at this preview code. Create security group. Authorized Security Group, Ingress Run Instances. This is the the issue to run instances. So this is the third step, you need three steps before you run an instance with With CLI. Maybe you don't like CLI. Maybe you are good in Java or JavaScript. You can use SDK JavaScript to run an instance. What else? Clouds formation, yammal. If it works. No, it cannot because it uses a but again, it can help you in a switching out of console to CLI. It can help you to use console to code just to get an idea. How to approach for the beginning. Again, if your developer minded or you have a huge developer experience or maybe use some other other infrastructure as a code. Let's see, askable maybe Possible is the automation tool. That is very, very popular and very universal. Maybe that one you can use it for for some Infrastructure is a code. Work. Etc. Etc. So up to you but yes, them main idea should be for you to learn. To UCLA current situation in the cloud for engineers is that. At the end, you will end up using Using a lot of code me myself. I'm not a coder. I'm not a developer but I was forced To learn at least to read. And then do some small changes, maintenance, documentation, etc. But, excellent question, everything that you see, in, in the console, can be done with a code. Why it is better one more thing and I'm cutting here to use code. The commands. Where do they copy the comment? I know I didn't The command is not changing as often as the console is changing. So maybe they will put here in this screen of launch instance, they will change something. It's obvious that the person human always knows how to find its way in small changes. Maybe this color here is not yellow anymore or amber, it will become magenta and isn't it? And your script will not work your word explanation, to your colleagues will not work. But what if you give them a code, Code that you already tested. AWS changed the CLI twice. We have version 1 and verse 2, that's it. In 20 years. and yes, sometimes some small option will change but in general, Breaking changes happen. Only between big jumps between version 1 and Version 2. When you have version 2, the code is expected to to run always. Maybe not the new features, but if the code is three years old, it should run. Today without problems. We cannot say that about the word explanation. Word scripts for humans we just have to move slowly to the CLI not slowly but we should move to the To the CLI. Now, right now we are beginners. But I expect that until the end of the the course, you will cover Terraform and everything. I can double check about therefore, but in the previous decay, had Terraform included in the Cloud. Cloud course. so, Some kind of connection. I'm going back now. It was enough with the lab. I'm not even closing the lab that space spend some few dollars. A few cents, but I should have closed the lab if I wanted to continue with another lap. Yes, this one.
+  It's just
+  I know I checked the members members page and I don't see your names. So I will double check with Matthias to him to give me a right to invite you and give you some material.
+  To work. And I can give you assignments. I can provide you with which labs to run, I can check if you run them successfully. I'm not graining anyone. But labs are something that you do for your own good. You reinforce your learning. Whatever you learn. When you do labs, you just repeat and refresh.
+  There it is. This is the public idea, but I logged inside the machine. just to try from within it from within To connect to see what is the IP address. And yes, please please.
+
+[12:13]
+  Yes. What can you do?
+
+[12:15]
+  instance. And this is the same command that we did by clicking with Clickups.
+  Excellent. If you want to try something on your own, maybe you should create your own free account on AWS. With skill Builder, maybe tomorrow, we can do that also so it helps a lot. Also without waiting for for it, okay. Access from this year. But I will put that today. Or to materials, and I'll ask him to speed up that to have the labs. If not, we continue with the skill, builder and the free account, but we'll make sure that you get also hands on. Next, it says Region AZ and Edge Relationship. I mentioned the user is connecting to our website. so website is here, they connect directly But if we put edge in between, Nearby the user. I should have drawn it nearby. Okay, I have to believe. This. Yes, so again this is the website. And the user is accessing directly and maybe user EU. and website is US is very slow if you put it here in the edge location near the user, the copy of the Content from the website. We get a much, much better better performance. Also the costs, Our lower because everything's happening faster and it's local. We are not diving deep into pricing but even the costs are better when you have I have. Edge network, or cloudfront implemented, because you pay for every request that the S3. If you do not have, Cloud Front. If you have cloud front, you pay for singular requests and all the others are Zero. Next thing, this is the important thing on this light. The division In regions, we have this aces, we have easy instances, we have everything inside the edge locations, just consider them only as a way, how to how to deliver content closer to the user. There is no history here. There is no ez2, there is no rds. Dynamodb. Nothing is here on village again, everything is in the regions, so it's Network versus it was global network. They are separated. Now. Availability zones. We mention them. Already as part of regions. Why would we use more than one? Because we get better SLA, if we have two or more. So we keep we put one instance in one AC and another one. In another, we get better, resilience one zone can fail. Not one zone services in a zone can fail. While services enough for us to break to for our application, not to work. either networking, either storage either, this is something Maintenance systems need updates. So this is the idea also Azure is using this whenever an update is needed, then because we have two availability zones with two copies to instances. First one is up the updated to 1.1. This one is still one point zero and then next steps. Both are updated. So, it's not that we stop everything and update. No, we update one. We update to maybe we have a lower capacity, but it's for short period of time and it's better than Downtime. Services. Stay available because we have more than one redundant. Copy. Also, I mentioned Test 3, that makes multiple copies in the In different results. Similar dynamodb. Whenever you need more and willing to pay more performance for S3 or DYNAMODB, it was automatically copies the data in multiple. Instances in multiple places. So if you have many users, they can be spread now to different copies. And they will each get maximum bandwidth possible. Yes. You pay more but you get automatic elasticity. Now, one of the important things in Any. Any. Application. Any environment. Any infrastructure is the security? Not one of the but it's very, very important. You lose your hardware, you lose your software, you lose your data, you have problems. so, identity and access management is the service of AWS that is used to Help users. Authenticate themselves. Do you remember the time when you have to put in your username your password to check for a message on your mobile phone to provide that number? That's authentication. Just confirming who we are. Just confirming the user. To the system authentication. now, we know that the user is Kirif, that's me or K velkovski, whatever. now, what may I do is the question of how authorization So, this is identity. And this is access. so, the services go identity and access management, In which region that's a restaurant. It's a global service. It doesn't run in any region. If I go here, I have United States Oregon. But if I go now in, I am And I choose now the region. It says Global everything else is grayed out. So I'm is global service identity and access management. We define the roles, we define policies, users groups, root access management, Everything is handled here in I What is on a you a user? That's me. KIRO. Welcome not backup operator, not administrator. Not no human. Or application. But let's talk about humans right now. So, every human Must have it separate. I'm user. Now, we have 16 people, 70 people in the Or 15, whatever in the in the, in the chat in the mid. Everyone should have a separate I'm user. Not students like we have in the labs labs are specific. But everyone. Why do we need that? Because we will have trouble auditing. Who logged in yesterday at 10 o'clock. With the student password, students and password. And everybody is quiet. You deleted everything. Tell me who you are. Nobody will say anything. so, you have to perform additional Spine not spine. But traditional steps to find a cool logged in from where, etc, with I am with identical, I'm users. The user is clearly identified. Yes, these users might work with similar. Jobs. And then we put them in a group. Students administrators print operators backup operators Admin, financial admins. So groups are used to give like, Ah, easier tasks to the admins instead of admin going to every single user and giving them permissions. Or taking the permissions away. if we put all the users in a group, This is a group we can give set of permissions to take it group. so students or admins or have separate different types of if we move someone from the user to this group, they'll get you set affirmations, everything else will be forgot or they can be members of multiple groups, then the then the permissions are Edit. Now. This is very, very powerful tool in AWS similar to groups. Imagine that we have multiple students but one of them is little bit. In front of the students, and whenever we need someone to stop something, start, something to do some administrative tasks. We allow that person. To do that job. But only then not always. student is a student student has limited set of Permissions. Sometimes from time to time roles are temporary. temporary groups or temporary credentials that a person can can assume For example, whenever I just need to delete something, then I assume a role admin and do the deletion. And then I go back to my ordinary Account. Excellent. Excellent set of tools. Excellent concept that is used in some other places, too, but let's remember temporary permissions. That a user. Human or easy to instance can use roles. For temporary set of permissions. We'll see. A little bit about that in the future. This is the fundamentals, the basic, the essentials, Policy set of permissions. So policies can be reused. I give the same set of policy to Suman to Mohammad to Roger, Tom, and One set of policy. If I change the policy, it will be changed to everyone. Or maybe same set of policy to different groups. So, set of remissions. Is a policy in the policy we mentioned. Adi. We'll see them later principlection resource condition and if you allow or did they deny that detection? But again, this is this is just, you know, introduction. That the policies are the permissions. Permissions that we can use to. We have to use. One more thing. If there is no policy. Associated with user user has zero rights. So the default in AWS is 0 rights, the admin must specifically say what the user can do. So if the policy is empty, User is just logged in and without any, any permissions. So user can be a member of a group or a role. Are to the roles and the groups we associate. Permissions. With the policies. And now it sure you should go with interactivity a little bit, but Let's say. I will just try to do this, this on my own. This is to illustrate how the admin. Should think. So it says admin should apply lease privilege. So if the student comes and tells me I need to access to this files. No. I need exactly to know which files. Do you need access to? and then, I will give you access only to those So this is the proper approach, never start with. Everything can be accessed and then lower down. No, the approach should be always. From from 0, to give better. when you say that this company have problem with their data in our AWS and we have AWS data breach, usually, it means that Someone leaked. The passwords. Or maybe the owner of that data, didn't protect it. Well, So far, there is no confirmed problem with the AWS itself. So usually it's a human factor where Maybe the passwords or API keys or something like that is leaked. And then someone managed to get Hold of the date. So again. There is a shared responsibility model of AWS, where AWS is. Responsible for part of the work, your responsible. It's not true, you're responsible for. It is something happens to your data. You will suffer the consequences, your company. So, least privilege. Do not put. Do not give any more permissions that are needed. So minimal permissions, no more than a million premises. Now, another thing. That we have, and we will see. Tomorrow, when we do the, for example, the free free account, when we create the free account, the first thing that you create, when you create an account, you create a root account. So, someone must be a superman of your account. This one reducer is the Superman. So root user needs to be properly. Secured. You shouldn't use it. Almost never. And you should. Work with someone else. Identity, you should create admin or something like that. Do not use Root account. Also it mentions MFA. You should announce you should create multiple factor, authentication on your phone or something like that. And not only for root for everything. Every account that is allowed to log into you into NOS must have MFA. Why it's important if someone manages to get your username. Password and account number, they can log in. And they can do everything because they will be or maybe if root account this is but they can do lots of things. if you have MFA implemented multi-factor application with your phone, or with a special device or I don't know, Then it's an extra layer even that they know these three things, they will every 60 seconds. They will need another set of MFA credentials to login. So that way you protect your account with with MFA not only root account every every user should be protected with MFA. What else is important in the clouds? Ec2. Are not called Amazon virtual machines in Azure. We have azure which our machines are always, no, they needed new name. I don't know why. So they call the virtual machines enables, they call them easy to elastic computer clubs. now, when I clicked on launch, I didn't check. CPU. This one memory. 10 gigabyte storage. Yes for storage. Yes. But memory and CPU was in one T2 Micro and I choose the two micro if they were there. Already set up storage GB, bytes and networking settings. So these things Should be chosen before you decide what to launch. As you're choosing the on-premises machines. with their characteristics similar with EC2 virtual machines, the instance type How many virtual CPUs RAM? Other things. What is AMI, if you ever ever tried to do a backup of your machine, maybe you try to create a virtual machine image. From your laptop. To save it on the USB stick or maybe on US DVD record. And then you can use that image to start. The Easy to Instance When you first install your Linux machine or Windows machine, you need it. The installation disks And you installed everything, you put some software on it. Now, you need a backup, create a Amazon machine. In the Amazon environment. You need Amazon machine image to start easy. To instance, if you remember in the lab I choose Linux. amazon Linux Version 6.1 That Amazon machine images used to start EC2 instance, everything from that. File is copied into the machine and the machine starts. why it is good because if we keep it updated with the newest software that we are using, every time when you install even you run when you launch a new instance, it will be Launched in minutes, not in hours if you reinstall your laptop. Now it will take two hours. But if you have a virtual machine image ready, it takes like one. Hour, maybe not one hour, maybe 15 minutes to start. Now, we are.
+
+[12:16]
+  Which you can use. To run instances to start instances to this and that it's in JSON or YAML you can use. So this is the definition of the instance. And
+  Excellent. If you want to try something on your own, maybe you should create your own free account on AWS. With skill Builder, maybe tomorrow, we can do that also so it helps a lot. Also without waiting for for it, okay. Access from this year. But I will put that today. Or to materials, and I'll ask him to speed up that to have the labs. If not, we continue with the skill, builder and the free account, but we'll make sure that you get also hands on. Next, it says Region AZ and Edge Relationship. I mentioned the user is connecting to our website. so website is here, they connect directly But if we put edge in between, Nearby the user. I should have drawn it nearby. Okay, I have to believe. This. Yes, so again this is the website. And the user is accessing directly and maybe user EU. and website is US is very slow if you put it here in the edge location near the user, the copy of the Content from the website. We get a much, much better better performance. Also the costs, Our lower because everything's happening faster and it's local. We are not diving deep into pricing but even the costs are better when you have I have. Edge network, or cloudfront implemented, because you pay for every request that the S3. If you do not have, Cloud Front. If you have cloud front, you pay for singular requests and all the others are Zero. Next thing, this is the important thing on this light. The division In regions, we have this aces, we have easy instances, we have everything inside the edge locations, just consider them only as a way, how to how to deliver content closer to the user. There is no history here. There is no ez2, there is no rds. Dynamodb. Nothing is here on village again, everything is in the regions, so it's Network versus it was global network. They are separated. Now. Availability zones. We mention them. Already as part of regions. Why would we use more than one? Because we get better SLA, if we have two or more. So we keep we put one instance in one AC and another one. In another, we get better, resilience one zone can fail. Not one zone services in a zone can fail. While services enough for us to break to for our application, not to work. either networking, either storage either, this is something Maintenance systems need updates. So this is the idea also Azure is using this whenever an update is needed, then because we have two availability zones with two copies to instances. First one is up the updated to 1.1. This one is still one point zero and then next steps. Both are updated. So, it's not that we stop everything and update. No, we update one. We update to maybe we have a lower capacity, but it's for short period of time and it's better than Downtime. Services. Stay available because we have more than one redundant. Copy. Also, I mentioned Test 3, that makes multiple copies in the In different results. Similar dynamodb. Whenever you need more and willing to pay more performance for S3 or DYNAMODB, it was automatically copies the data in multiple. Instances in multiple places. So if you have many users, they can be spread now to different copies. And they will each get maximum bandwidth possible. Yes. You pay more but you get automatic elasticity. Now, one of the important things in Any. Any. Application. Any environment. Any infrastructure is the security? Not one of the but it's very, very important. You lose your hardware, you lose your software, you lose your data, you have problems. so, identity and access management is the service of AWS that is used to Help users. Authenticate themselves. Do you remember the time when you have to put in your username your password to check for a message on your mobile phone to provide that number? That's authentication. Just confirming who we are. Just confirming the user. To the system authentication. now, we know that the user is Kirif, that's me or K velkovski, whatever. now, what may I do is the question of how authorization So, this is identity. And this is access. so, the services go identity and access management, In which region that's a restaurant. It's a global service. It doesn't run in any region. If I go here, I have United States Oregon. But if I go now in, I am And I choose now the region. It says Global everything else is grayed out. So I'm is global service identity and access management. We define the roles, we define policies, users groups, root access management, Everything is handled here in I What is on a you a user? That's me. KIRO. Welcome not backup operator, not administrator. Not no human. Or application. But let's talk about humans right now. So, every human Must have it separate. I'm user. Now, we have 16 people, 70 people in the Or 15, whatever in the in the, in the chat in the mid. Everyone should have a separate I'm user. Not students like we have in the labs labs are specific. But everyone. Why do we need that? Because we will have trouble auditing. Who logged in yesterday at 10 o'clock. With the student password, students and password. And everybody is quiet. You deleted everything. Tell me who you are. Nobody will say anything. so, you have to perform additional Spine not spine. But traditional steps to find a cool logged in from where, etc, with I am with identical, I'm users. The user is clearly identified. Yes, these users might work with similar. Jobs. And then we put them in a group. Students administrators print operators backup operators Admin, financial admins. So groups are used to give like, Ah, easier tasks to the admins instead of admin going to every single user and giving them permissions. Or taking the permissions away. if we put all the users in a group, This is a group we can give set of permissions to take it group. so students or admins or have separate different types of if we move someone from the user to this group, they'll get you set affirmations, everything else will be forgot or they can be members of multiple groups, then the then the permissions are Edit. Now. This is very, very powerful tool in AWS similar to groups. Imagine that we have multiple students but one of them is little bit. In front of the students, and whenever we need someone to stop something, start, something to do some administrative tasks. We allow that person. To do that job. But only then not always. student is a student student has limited set of Permissions. Sometimes from time to time roles are temporary. temporary groups or temporary credentials that a person can can assume For example, whenever I just need to delete something, then I assume a role admin and do the deletion. And then I go back to my ordinary Account. Excellent. Excellent set of tools. Excellent concept that is used in some other places, too, but let's remember temporary permissions. That a user. Human or easy to instance can use roles. For temporary set of permissions. We'll see. A little bit about that in the future. This is the fundamentals, the basic, the essentials, Policy set of permissions. So policies can be reused. I give the same set of policy to Suman to Mohammad to Roger, Tom, and One set of policy. If I change the policy, it will be changed to everyone. Or maybe same set of policy to different groups. So, set of remissions. Is a policy in the policy we mentioned. Adi. We'll see them later principlection resource condition and if you allow or did they deny that detection? But again, this is this is just, you know, introduction. That the policies are the permissions. Permissions that we can use to. We have to use. One more thing. If there is no policy. Associated with user user has zero rights. So the default in AWS is 0 rights, the admin must specifically say what the user can do. So if the policy is empty, User is just logged in and without any, any permissions. So user can be a member of a group or a role. Are to the roles and the groups we associate. Permissions. With the policies. And now it sure you should go with interactivity a little bit, but Let's say. I will just try to do this, this on my own. This is to illustrate how the admin. Should think. So it says admin should apply lease privilege. So if the student comes and tells me I need to access to this files. No. I need exactly to know which files. Do you need access to? and then, I will give you access only to those So this is the proper approach, never start with. Everything can be accessed and then lower down. No, the approach should be always. From from 0, to give better. when you say that this company have problem with their data in our AWS and we have AWS data breach, usually, it means that Someone leaked. The passwords. Or maybe the owner of that data, didn't protect it. Well, So far, there is no confirmed problem with the AWS itself. So usually it's a human factor where Maybe the passwords or API keys or something like that is leaked. And then someone managed to get Hold of the date. So again. There is a shared responsibility model of AWS, where AWS is. Responsible for part of the work, your responsible. It's not true, you're responsible for. It is something happens to your data. You will suffer the consequences, your company. So, least privilege. Do not put. Do not give any more permissions that are needed. So minimal permissions, no more than a million premises. Now, another thing. That we have, and we will see. Tomorrow, when we do the, for example, the free free account, when we create the free account, the first thing that you create, when you create an account, you create a root account. So, someone must be a superman of your account. This one reducer is the Superman. So root user needs to be properly. Secured. You shouldn't use it. Almost never. And you should. Work with someone else. Identity, you should create admin or something like that. Do not use Root account. Also it mentions MFA. You should announce you should create multiple factor, authentication on your phone or something like that. And not only for root for everything. Every account that is allowed to log into you into NOS must have MFA. Why it's important if someone manages to get your username. Password and account number, they can log in. And they can do everything because they will be or maybe if root account this is but they can do lots of things. if you have MFA implemented multi-factor application with your phone, or with a special device or I don't know, Then it's an extra layer even that they know these three things, they will every 60 seconds. They will need another set of MFA credentials to login. So that way you protect your account with with MFA not only root account every every user should be protected with MFA. What else is important in the clouds? Ec2. Are not called Amazon virtual machines in Azure. We have azure which our machines are always, no, they needed new name. I don't know why. So they call the virtual machines enables, they call them easy to elastic computer clubs. now, when I clicked on launch, I didn't check. CPU. This one memory. 10 gigabyte storage. Yes for storage. Yes. But memory and CPU was in one T2 Micro and I choose the two micro if they were there. Already set up storage GB, bytes and networking settings. So these things Should be chosen before you decide what to launch. As you're choosing the on-premises machines. with their characteristics similar with EC2 virtual machines, the instance type How many virtual CPUs RAM? Other things. What is AMI, if you ever ever tried to do a backup of your machine, maybe you try to create a virtual machine image. From your laptop. To save it on the USB stick or maybe on US DVD record. And then you can use that image to start. The Easy to Instance When you first install your Linux machine or Windows machine, you need it. The installation disks And you installed everything, you put some software on it. Now, you need a backup, create a Amazon machine. In the Amazon environment. You need Amazon machine image to start easy. To instance, if you remember in the lab I choose Linux. amazon Linux Version 6.1 That Amazon machine images used to start EC2 instance, everything from that. File is copied into the machine and the machine starts. why it is good because if we keep it updated with the newest software that we are using, every time when you install even you run when you launch a new instance, it will be Launched in minutes, not in hours if you reinstall your laptop. Now it will take two hours. But if you have a virtual machine image ready, it takes like one. Hour, maybe not one hour, maybe 15 minutes to start. Now, we are just going through this easy to terminology security groups. We have. A virtual machine, a virtual firewall that can block. Network. Communication with Your ethosis, these are security groups. Key pairs. Are we use it to to log?
+
+[12:17]
+  --- logged in ---
+  Wow. Instance. Example, for Azure. so, correct, my so, let's see, Terraform Can
+  be used also for Azure. It's not terraform is started like AWS the AWS language,
+  but still you can use it even that Azure has this biceps language similar to to
+  clouds to house formation. Let's ask
+  *** ALERT [izi]: Izi Versano & 1 others: "But aren't we gonna learn it in the
+  future? All this Is part of."
+  *** ALERT [versano]: Izi Versano & 1 others: "But aren't we gonna learn it in
+  the future? All this Is part of."
+  On this terraform. I think it's covered later.
+  *** ALERT [izi]: Izi Versano & 1 others: "Yes. Why. Why going now? It's bit
+  confusing. Now."
+  *** ALERT [versano]: Izi Versano & 1 others: "Yes. Why. Why going now? It's bit
+  confusing. Now."
+  And now if we start to with terraform, it will be hard because you don't see
+  everything visually like we did. Now my idea here was not to talk for an hour
+  and two and not show the console you this will be your home for a long time.
+  Now, you will have to come here and do. And as mentioned, you can also in
+  parallel if you're have this developer Webmind, let's try to generate some
+  console code here just for for start. So, I will go here in ez2 and I will do
+  start recording. Like this, I will find out the launch instance. I will not
+  choose the name or maybe choose my Ec2. It's okay with this Linux. It's okay
+  with. I know I will have to choose to team to team micro Keeper, I'm not
+  creating a new one. I would choose one of these, this one, which I just created,
+  And I think that was all. And look at this preview code. Create security group.
+  Authorized Security Group, Ingress Run Instances. This is the the issue to run
+  instances. So this is the third step, you need three steps before you run an
+  instance with With CLI. Maybe you don't like CLI. Maybe you are good in Java or
+  JavaScript. You can use SDK JavaScript to run an instance. What else? Clouds
+  formation, yammal. If it works. No, it cannot because it uses a but again, it
+  can help you in a switching out of console to CLI. It can help you to use
+  console to code just to get an idea. How to approach for the beginning. Again,
+  if your developer minded or you have a huge developer experience or maybe use
+  some other other infrastructure as a code. Let's see, askable maybe Possible is
+  the automation tool. That is very, very popular and very universal. Maybe that
+  one you can use it for for some Infrastructure is a code. Work. Etc. Etc. So up
+  to you but yes, them main idea should be for you to learn. To UCLA current
+  situation in the cloud for engineers is that. At the end, you will end up using
+  Using a lot of code me myself. I'm not a coder. I'm not a developer but I was
+  forced To learn at least to read. And then do some small changes, maintenance,
+  documentation, etc. But, excellent question, everything that you see, in, in the
+  console, can be done with a code. Why it is better one more thing and I'm
+  cutting here to use code. The commands. Where do they copy the comment? I know I
+  didn't The command is not changing as often as the console is changing. So maybe
+  they will put here in this screen of launch instance, they will change
+  something. It's obvious that the person human always knows how to find its way
+  in small changes. Maybe this color here is not yellow anymore or amber, it will
+  become magenta and isn't it? And your script will not work your word
+  explanation, to your colleagues will not work. But what if you give them a code,
+  Code that you already tested. AWS changed the CLI twice. We have version 1 and
+  verse 2, that's it. In 20 years. and yes, sometimes some small option will
+  change but in general, Breaking changes happen. Only between big jumps between
+  version 1 and Version 2. When you have version 2, the code is expected to to run
+  always. Maybe not the new features, but if the code is three years old, it
+  should run. Today without problems. We cannot say that about the word
+  explanation. Word scripts for humans we just have to move slowly to the CLI not
+  slowly but we should move to the To the CLI. Now, right now we are beginners.
+  But I expect that until the end of the the course, you will cover Terraform and
+  everything. I can double check about therefore, but in the previous decay, had
+  Terraform included in the Cloud. Cloud course. so, Some kind of connection. I'm
+  going back now. It was enough with the lab. I'm not even closing the lab that
+  space spend some few dollars. A few cents, but I should have closed the lab if I
+  wanted to continue with another lap. Yes, this one.
+  It's just
+  I know I checked the members members page and I don't see your names. So I will
+  double check with Matthias to him to give me a right to invite you and give you
+  some material.
+  To work. And I can give you assignments. I can provide you with which labs to
+  run, I can check if you run them successfully. I'm not graining anyone. But labs
+  are something that you do for your own good. You reinforce your learning.
+  Whatever you learn. When you do labs, you just repeat and refresh.
+
+[12:18]
+  Excellent. If you want to try something on your own, maybe you should create
+  your own free account on AWS. With skill Builder, maybe tomorrow, we can do that
+  also so it helps a lot. Also without waiting for for it, okay. Access from this
+  year. But I will put that today. Or to materials, and I'll ask him to speed up
+  that to have the labs. If not, we continue with the skill, builder and the free
+  account, but we'll make sure that you get also hands on. Next, it says Region AZ
+  and Edge Relationship. I mentioned the user is connecting to our website. so
+  website is here, they connect directly But if we put edge in between, Nearby the
+  user. I should have drawn it nearby. Okay, I have to believe. This. Yes, so
+  again this is the website. And the user is accessing directly and maybe user EU.
+  and website is US is very slow if you put it here in the edge location near the
+  user, the copy of the Content from the website. We get a much, much better
+  better performance. Also the costs, Our lower because everything's happening
+  faster and it's local. We are not diving deep into pricing but even the costs
+  are better when you have I have. Edge network, or cloudfront implemented,
+  because you pay for every request that the S3. If you do not have, Cloud Front.
+  If you have cloud front, you pay for singular requests and all the others are
+  Zero. Next thing, this is the important thing on this light. The division In
+  regions, we have this aces, we have easy instances, we have everything inside
+  the edge locations, just consider them only as a way, how to how to deliver
+  content closer to the user. There is no history here. There is no ez2, there is
+  no rds. Dynamodb. Nothing is here on village again, everything is in the
+  regions, so it's Network versus it was global network. They are separated. Now.
+  Availability zones. We mention them. Already as part of regions. Why would we
+  use more than one? Because we get better SLA, if we have two or more. So we keep
+  we put one instance in one AC and another one. In another, we get better,
+  resilience one zone can fail. Not one zone services in a zone can fail. While
+  services enough for us to break to for our application, not to work. either
+  networking, either storage either, this is something Maintenance systems need
+  updates. So this is the idea also Azure is using this whenever an update is
+  needed, then because we have two availability zones with two copies to
+  instances. First one is up the updated to 1.1. This one is still one point zero
+  and then next steps. Both are updated. So, it's not that we stop everything and
+  update. No, we update one. We update to maybe we have a lower capacity, but it's
+  for short period of time and it's better than Downtime. Services. Stay available
+  because we have more than one redundant. Copy. Also, I mentioned Test 3, that
+  makes multiple copies in the In different results. Similar dynamodb. Whenever
+  you need more and willing to pay more performance for S3 or DYNAMODB, it was
+  automatically copies the data in multiple. Instances in multiple places. So if
+  you have many users, they can be spread now to different copies. And they will
+  each get maximum bandwidth possible. Yes. You pay more but you get automatic
+  elasticity. Now, one of the important things in Any. Any. Application. Any
+  environment. Any infrastructure is the security? Not one of the but it's very,
+  very important. You lose your hardware, you lose your software, you lose your
+  data, you have problems. so, identity and access management is the service of
+  AWS that is used to Help users. Authenticate themselves. Do you remember the
+  time when you have to put in your username your password to check for a message
+  on your mobile phone to provide that number? That's authentication. Just
+  confirming who we are. Just confirming the user. To the system authentication.
+  now, we know that the user is Kirif, that's me or K velkovski, whatever. now,
+  what may I do is the question of how authorization So, this is identity. And
+  this is access. so, the services go identity and access management, In which
+  region that's a restaurant. It's a global service. It doesn't run in any region.
+  If I go here, I have United States Oregon. But if I go now in, I am And I choose
+  now the region. It says Global everything else is grayed out. So I'm is global
+  service identity and access management. We define the roles, we define policies,
+  users groups, root access management, Everything is handled here in I What is on
+  a you a user? That's me. KIRO. Welcome not backup operator, not administrator.
+  Not no human. Or application. But let's talk about humans right now. So, every
+  human Must have it separate. I'm user. Now, we have 16 people, 70 people in the
+  Or 15, whatever in the in the, in the chat in the mid. Everyone should have a
+  separate I'm user. Not students like we have in the labs labs are specific. But
+  everyone. Why do we need that? Because we will have trouble auditing. Who logged
+  in yesterday at 10 o'clock. With the student password, students and password.
+  And everybody is quiet. You deleted everything. Tell me who you are. Nobody will
+  say anything. so, you have to perform additional Spine not spine. But
+  traditional steps to find a cool logged in from where, etc, with I am with
+  identical, I'm users. The user is clearly identified. Yes, these users might
+  work with similar. Jobs. And then we put them in a group. Students
+  administrators print operators backup operators Admin, financial admins. So
+  groups are used to give like, Ah, easier tasks to the admins instead of admin
+  going to every single user and giving them permissions. Or taking the
+  permissions away. if we put all the users in a group, This is a group we can
+  give set of permissions to take it group. so students or admins or have separate
+  different types of if we move someone from the user to this group, they'll get
+  you set affirmations, everything else will be forgot or they can be members of
+  multiple groups, then the then the permissions are Edit. Now. This is very, very
+  powerful tool in AWS similar to groups. Imagine that we have multiple students
+  but one of them is little bit. In front of the students, and whenever we need
+  someone to stop something, start, something to do some administrative tasks. We
+  allow that person. To do that job. But only then not always. student is a
+  student student has limited set of Permissions. Sometimes from time to time
+  roles are temporary. temporary groups or temporary credentials that a person can
+  can assume For example, whenever I just need to delete something, then I assume
+  a role admin and do the deletion. And then I go back to my ordinary Account.
+  Excellent. Excellent set of tools. Excellent concept that is used in some other
+  places, too, but let's remember temporary permissions. That a user. Human or
+  easy to instance can use roles. For temporary set of permissions. We'll see. A
+  little bit about that in the future. This is the fundamentals, the basic, the
+  essentials, Policy set of permissions. So policies can be reused. I give the
+  same set of policy to Suman to Mohammad to Roger, Tom, and One set of policy. If
+  I change the policy, it will be changed to everyone. Or maybe same set of policy
+  to different groups. So, set of remissions. Is a policy in the policy we
+  mentioned. Adi. We'll see them later principlection resource condition and if
+  you allow or did they deny that detection? But again, this is this is just, you
+  know, introduction. That the policies are the permissions. Permissions that we
+  can use to. We have to use. One more thing. If there is no policy. Associated
+  with user user has zero rights. So the default in AWS is 0 rights, the admin
+  must specifically say what the user can do. So if the policy is empty, User is
+  just logged in and without any, any permissions. So user can be a member of a
+  group or a role. Are to the roles and the groups we associate. Permissions. With
+  the policies. And now it sure you should go with interactivity a little bit, but
+  Let's say. I will just try to do this, this on my own. This is to illustrate how
+  the admin. Should think. So it says admin should apply lease privilege. So if
+  the student comes and tells me I need to access to this files. No. I need
+  exactly to know which files. Do you need access to? and then, I will give you
+  access only to those So this is the proper approach, never start with.
+  Everything can be accessed and then lower down. No, the approach should be
+  always. From from 0, to give better. when you say that this company have problem
+  with their data in our AWS and we have AWS data breach, usually, it means that
+  Someone leaked. The passwords. Or maybe the owner of that data, didn't protect
+  it. Well, So far, there is no confirmed problem with the AWS itself. So usually
+  it's a human factor where Maybe the passwords or API keys or something like that
+  is leaked. And then someone managed to get Hold of the date. So again. There is
+  a shared responsibility model of AWS, where AWS is. Responsible for part of the
+  work, your responsible. It's not true, you're responsible for. It is something
+  happens to your data. You will suffer the consequences, your company. So, least
+  privilege. Do not put. Do not give any more permissions that are needed. So
+  minimal permissions, no more than a million premises. Now, another thing. That
+  we have, and we will see. Tomorrow, when we do the, for example, the free free
+  account, when we create the free account, the first thing that you create, when
+  you create an account, you create a root account. So, someone must be a superman
+  of your account. This one reducer is the Superman. So root user needs to be
+  properly. Secured. You shouldn't use it. Almost never. And you should. Work with
+  someone else. Identity, you should create admin or something like that. Do not
+  use Root account. Also it mentions MFA. You should announce you should create
+  multiple factor, authentication on your phone or something like that. And not
+  only for root for everything. Every account that is allowed to log into you into
+  NOS must have MFA. Why it's important if someone manages to get your username.
+  Password and account number, they can log in. And they can do everything because
+  they will be or maybe if root account this is but they can do lots of things. if
+  you have MFA implemented multi-factor application with your phone, or with a
+  special device or I don't know, Then it's an extra layer even that they know
+  these three things, they will every 60 seconds. They will need another set of
+  MFA credentials to login. So that way you protect your account with with MFA not
+  only root account every every user should be protected with MFA. What else is
+  important in the clouds? Ec2. Are not called Amazon virtual machines in Azure.
+  We have azure which our machines are always, no, they needed new name. I don't
+  know why. So they call the virtual machines enables, they call them easy to
+  elastic computer clubs. now, when I clicked on launch, I didn't check. CPU. This
+  one memory. 10 gigabyte storage. Yes for storage. Yes. But memory and CPU was in
+  one T2 Micro and I choose the two micro if they were there. Already set up
+  storage GB, bytes and networking settings. So these things Should be chosen
+  before you decide what to launch. As you're choosing the on-premises machines.
+  with their characteristics similar with EC2 virtual machines, the instance type
+  How many virtual CPUs RAM? Other things. What is AMI, if you ever ever tried to
+  do a backup of your machine, maybe you try to create a virtual machine image.
+  From your laptop. To save it on the USB stick or maybe on US DVD record. And
+  then you can use that image to start. The Easy to Instance When you first
+  install your Linux machine or Windows machine, you need it. The installation
+  disks And you installed everything, you put some software on it. Now, you need a
+  backup, create a Amazon machine. In the Amazon environment. You need Amazon
+  machine image to start easy. To instance, if you remember in the lab I choose
+  Linux. amazon Linux Version 6.1 That Amazon machine images used to start EC2
+  instance, everything from that. File is copied into the machine and the machine
+  starts. why it is good because if we keep it updated with the newest software
+  that we are using, every time when you install even you run when you launch a
+  new instance, it will be Launched in minutes, not in hours if you reinstall your
+  laptop. Now it will take two hours. But if you have a virtual machine image
+  ready, it takes like one. Hour, maybe not one hour, maybe 15 minutes to start.
+  Now, we are just going through this easy to terminology security groups. We
+  have. A virtual machine, a virtual firewall that can block. Network.
+  Communication with Your ethosis, these are security groups. Key pairs. Are we
+  use it to to log into the EC2 instance? So instead of username password, we use
+  keepers. so we choose the MI we choose size, we set access and we launch, if you
+  remember the lab, We choose. Where's the? There it is. We choose allow ssh, that
+  was the Hidarities. Allow SSH traffic is one of the steps that was about setting
+  access. Maybe we don't need anyone to access some machine. They're
+  possibilities. We don't need But that, that machine should access something
+  outside, then nobody should be allowed inside. So that's a good practice to
+  limit the exposure. so, This is a quick quiz, maybe we should finish here with
+  this quiz. I don't know if it's possible. Now we are not finishing with it
+  because we didn't go through storage. I will move this quiz later but let's go
+  through the storage slides and if you have time we'll do the quiz or not
+  starting the day with the quiz tomorrow. Okay, three storage ideas. We have EBS,
+  Instant Store, and S3. So we are diving deeper into this. But EBS is your USB
+  stick for the cloud? It's so capable. So you must use that USB stick EBS to
+  start an instance. so,
+
+[12:19]
+  It's okay with. I know I will have to choose to team to team micro Keeper, I'm
+  not creating a new one. I would choose one of these, this one, which I just
+  created, And I think that was all. And look at this preview code. Create
+  security group. Authorized Security Group, Ingress Run Instances. This is the
+  the issue to run instances. So this is the third step, you need three steps
+  before you run an instance with With CLI. Maybe you don't like CLI. Maybe you
+  are good in Java or JavaScript. You can use SDK JavaScript to run an instance.
+  What else? Clouds formation, yammal. If it works. No, it cannot because it uses
+  a but again, it can help you in a switching out of console to CLI. It can help
+  you to use console to code just to get an idea. How to approach for the
+  beginning. Again, if your developer minded or you have a huge developer
+  experience or maybe use some other other infrastructure as a code. Let's see,
+  askable maybe Possible is the automation tool. That is very, very popular and
+  very universal. Maybe that one you can use it for for some Infrastructure is a
+  code. Work. Etc. Etc. So up to you but yes, them main idea should be for you to
+  learn. To UCLA current situation in the cloud for engineers is that. At the end,
+  you will end up using Using a lot of code me myself. I'm not a coder. I'm not a
+  developer but I was forced To learn at least to read. And then do some small
+  changes, maintenance, documentation, etc. But, excellent question, everything
+  that you see, in, in the console, can be done with a code. Why it is better one
+  more thing and I'm cutting here to use code. The commands. Where do they copy
+  the comment? I know I didn't The command is not changing as often as the console
+  is changing. So maybe they will put here in this screen of launch instance, they
+  will change something. It's obvious that the person human always knows how to
+  find its way in small changes. Maybe this color here is not yellow anymore or
+  amber, it will become magenta and isn't it? And your script will not work your
+  word explanation, to your colleagues will not work. But what if you give them a
+  code, Code that you already tested. AWS changed the CLI twice. We have version 1
+  and verse 2, that's it. In 20 years. and yes, sometimes some small option will
+  change but in general, Breaking changes happen. Only between big jumps between
+  version 1 and Version 2. When you have version 2, the code is expected to to run
+  always. Maybe not the new features, but if the code is three years old, it
+  should run. Today without problems. We cannot say that about the word
+  explanation. Word scripts for humans we just have to move slowly to the CLI not
+  slowly but we should move to the To the CLI. Now, right now we are beginners.
+  But I expect that until the end of the the course, you will cover Terraform and
+  everything. I can double check about therefore, but in the previous decay, had
+  Terraform included in the Cloud. Cloud course. so, Some kind of connection. I'm
+  going back now. It was enough with the lab. I'm not even closing the lab that
+  space spend some few dollars. A few cents, but I should have closed the lab if I
+  wanted to continue with another lap. Yes, this one.
+  Excellent. If you want to try something on your own, maybe you should create
+  your own free account on AWS. With skill Builder, maybe tomorrow, we can do that
+  also so it helps a lot. Also without waiting for for it, okay. Access from this
+  year. But I will put that today. Or to materials, and I'll ask him to speed up
+  that to have the labs. If not, we continue with the skill, builder and the free
+  account, but we'll make sure that you get also hands on. Next, it says Region AZ
+  and Edge Relationship. I mentioned the user is connecting to our website. so
+  website is here, they connect directly But if we put edge in between, Nearby the
+  user. I should have drawn it nearby. Okay, I have to believe. This. Yes, so
+  again this is the website. And the user is accessing directly and maybe user EU.
+  and website is US is very slow if you put it here in the edge location near the
+  user, the copy of the Content from the website. We get a much, much better
+  better performance. Also the costs, Our lower because everything's happening
+  faster and it's local. We are not diving deep into pricing but even the costs
+  are better when you have I have. Edge network, or cloudfront implemented,
+  because you pay for every request that the S3. If you do not have, Cloud Front.
+  If you have cloud front, you pay for singular requests and all the others are
+  Zero. Next thing, this is the important thing on this light. The division In
+  regions, we have this aces, we have easy instances, we have everything inside
+  the edge locations, just consider them only as a way, how to how to deliver
+  content closer to the user. There is no history here. There is no ez2, there is
+  no rds. Dynamodb. Nothing is here on village again, everything is in the
+  regions, so it's Network versus it was global network. They are separated. Now.
+  Availability zones. We mention them. Already as part of regions. Why would we
+  use more than one? Because we get better SLA, if we have two or more. So we keep
+  we put one instance in one AC and another one. In another, we get better,
+  resilience one zone can fail. Not one zone services in a zone can fail. While
+  services enough for us to break to for our application, not to work. either
+  networking, either storage either, this is something Maintenance systems need
+  updates. So this is the idea also Azure is using this whenever an update is
+  needed, then because we have two availability zones with two copies to
+  instances. First one is up the updated to 1.1. This one is still one point zero
+  and then next steps. Both are updated. So, it's not that we stop everything and
+  update. No, we update one. We update to maybe we have a lower capacity, but it's
+  for short period of time and it's better than Downtime. Services. Stay available
+  because we have more than one redundant. Copy. Also, I mentioned Test 3, that
+  makes multiple copies in the In different results. Similar dynamodb. Whenever
+  you need more and willing to pay more performance for S3 or DYNAMODB, it was
+  automatically copies the data in multiple. Instances in multiple places. So if
+  you have many users, they can be spread now to different copies. And they will
+  each get maximum bandwidth possible. Yes. You pay more but you get automatic
+  elasticity. Now, one of the important things in Any. Any. Application. Any
+  environment. Any infrastructure is the security? Not one of the but it's very,
+  very important. You lose your hardware, you lose your software, you lose your
+  data, you have problems. so, identity and access management is the service of
+  AWS that is used to Help users. Authenticate themselves. Do you remember the
+  time when you have to put in your username your password to check for a message
+  on your mobile phone to provide that number? That's authentication. Just
+  confirming who we are. Just confirming the user. To the system authentication.
+  now, we know that the user is Kirif, that's me or K velkovski, whatever. now,
+  what may I do is the question of how authorization So, this is identity. And
+  this is access. so, the services go identity and access management, In which
+  region that's a restaurant. It's a global service. It doesn't run in any region.
+  If I go here, I have United States Oregon. But if I go now in, I am And I choose
+  now the region. It says Global everything else is grayed out. So I'm is global
+  service identity and access management. We define the roles, we define policies,
+  users groups, root access management, Everything is handled here in I What is on
+  a you a user? That's me. KIRO. Welcome not backup operator, not administrator.
+  Not no human. Or application. But let's talk about humans right now. So, every
+  human Must have it separate. I'm user. Now, we have 16 people, 70 people in the
+  Or 15, whatever in the in the, in the chat in the mid. Everyone should have a
+  separate I'm user. Not students like we have in the labs labs are specific. But
+  everyone. Why do we need that? Because we will have trouble auditing. Who logged
+  in yesterday at 10 o'clock. With the student password, students and password.
+  And everybody is quiet. You deleted everything. Tell me who you are. Nobody will
+  say anything. so, you have to perform additional Spine not spine. But
+  traditional steps to find a cool logged in from where, etc, with I am with
+  identical, I'm users. The user is clearly identified. Yes, these users might
+  work with similar. Jobs. And then we put them in a group. Students
+  administrators print operators backup operators Admin, financial admins. So
+  groups are used to give like, Ah, easier tasks to the admins instead of admin
+  going to every single user and giving them permissions. Or taking the
+  permissions away. if we put all the users in a group, This is a group we can
+  give set of permissions to take it group. so students or admins or have separate
+  different types of if we move someone from the user to this group, they'll get
+  you set affirmations, everything else will be forgot or they can be members of
+  multiple groups, then the then the permissions are Edit. Now. This is very, very
+  powerful tool in AWS similar to groups. Imagine that we have multiple students
+  but one of them is little bit. In front of the students, and whenever we need
+  someone to stop something, start, something to do some administrative tasks. We
+  allow that person. To do that job. But only then not always. student is a
+  student student has limited set of Permissions. Sometimes from time to time
+  roles are temporary. temporary groups or temporary credentials that a person can
+  can assume For example, whenever I just need to delete something, then I assume
+  a role admin and do the deletion. And then I go back to my ordinary Account.
+  Excellent. Excellent set of tools. Excellent concept that is used in some other
+  places, too, but let's remember temporary permissions. That a user. Human or
+  easy to instance can use roles. For temporary set of permissions. We'll see. A
+  little bit about that in the future. This is the fundamentals, the basic, the
+  essentials, Policy set of permissions. So policies can be reused. I give the
+  same set of policy to Suman to Mohammad to Roger, Tom, and One set of policy. If
+  I change the policy, it will be changed to everyone. Or maybe same set of policy
+  to different groups. So, set of remissions. Is a policy in the policy we
+  mentioned. Adi. We'll see them later principlection resource condition and if
+  you allow or did they deny that detection? But again, this is this is just, you
+  know, introduction. That the policies are the permissions. Permissions that we
+  can use to. We have to use. One more thing. If there is no policy. Associated
+  with user user has zero rights. So the default in AWS is 0 rights, the admin
+  must specifically say what the user can do. So if the policy is empty, User is
+  just logged in and without any, any permissions. So user can be a member of a
+  group or a role. Are to the roles and the groups we associate. Permissions. With
+  the policies. And now it sure you should go with interactivity a little bit, but
+  Let's say. I will just try to do this, this on my own. This is to illustrate how
+  the admin. Should think. So it says admin should apply lease privilege. So if
+  the student comes and tells me I need to access to this files. No. I need
+  exactly to know which files. Do you need access to? and then, I will give you
+  access only to those So this is the proper approach, never start with.
+  Everything can be accessed and then lower down. No, the approach should be
+  always. From from 0, to give better. when you say that this company have problem
+  with their data in our AWS and we have AWS data breach, usually, it means that
+  Someone leaked. The passwords. Or maybe the owner of that data, didn't protect
+  it. Well, So far, there is no confirmed problem with the AWS itself. So usually
+  it's a human factor where Maybe the passwords or API keys or something like that
+  is leaked. And then someone managed to get Hold of the date. So again. There is
+  a shared responsibility model of AWS, where AWS is. Responsible for part of the
+  work, your responsible. It's not true, you're responsible for. It is something
+  happens to your data. You will suffer the consequences, your company. So, least
+  privilege. Do not put. Do not give any more permissions that are needed. So
+  minimal permissions, no more than a million premises. Now, another thing. That
+  we have, and we will see. Tomorrow, when we do the, for example, the free free
+  account, when we create the free account, the first thing that you create, when
+  you create an account, you create a root account. So, someone must be a superman
+  of your account. This one reducer is the Superman. So root user needs to be
+  properly. Secured. You shouldn't use it. Almost never. And you should. Work with
+  someone else. Identity, you should create admin or something like that. Do not
+  use Root account. Also it mentions MFA. You should announce you should create
+  multiple factor, authentication on your phone or something like that. And not
+  only for root for everything. Every account that is allowed to log into you into
+  NOS must have MFA. Why it's important if someone manages to get your username.
+  Password and account number, they can log in. And they can do everything because
+  they will be or maybe if root account this is but they can do lots of things. if
+  you have MFA implemented multi-factor application with your phone, or with a
+  special device or I don't know, Then it's an extra layer even that they know
+  these three things, they will every 60 seconds. They will need another set of
+  MFA credentials to login. So that way you protect your account with with MFA not
+  only root account every every user should be protected with MFA. What else is
+  important in the clouds? Ec2. Are not called Amazon virtual machines in Azure.
+  We have azure which our machines are always, no, they needed new name. I don't
+  know why. So they call the virtual machines enables, they call them easy to
+  elastic computer clubs. now, when I clicked on launch, I didn't check. CPU. This
+  one memory. 10 gigabyte storage. Yes for storage. Yes. But memory and CPU was in
+  one T2 Micro and I choose the two micro if they were there. Already set up
+  storage GB, bytes and networking settings. So these things Should be chosen
+  before you decide what to launch. As you're choosing the on-premises machines.
+  with their characteristics similar with EC2 virtual machines, the instance type
+  How many virtual CPUs RAM? Other things. What is AMI, if you ever ever tried to
+  do a backup of your machine, maybe you try to create a virtual machine image.
+  From your laptop. To save it on the USB stick or maybe on US DVD record. And
+  then you can use that image to start. The Easy to Instance When you first
+  install your Linux machine or Windows machine, you need it. The installation
+  disks And you installed everything, you put some software on it. Now, you need a
+  backup, create a Amazon machine. In the Amazon environment. You need Amazon
+  machine image to start easy. To instance, if you remember in the lab I choose
+  Linux. amazon Linux Version 6.1 That Amazon machine images used to start EC2
+  instance, everything from that. File is copied into the machine and the machine
+  starts. why it is good because if we keep it updated with the newest software
+  that we are using, every time when you install even you run when you launch a
+  new instance, it will be Launched in minutes, not in hours if you reinstall your
+  laptop. Now it will take two hours. But if you have a virtual machine image
+  ready, it takes like one. Hour, maybe not one hour, maybe 15 minutes to start.
+  Now, we are just going through this easy to terminology security groups. We
+  have. A virtual machine, a virtual firewall that can block. Network.
+  Communication with Your ethosis, these are security groups. Key pairs. Are we
+  use it to to log into the EC2 instance? So instead of username password, we use
+  keepers. so we choose the MI we choose size, we set access and we launch, if you
+  remember the lab, We choose. Where's the? There it is. We choose allow ssh, that
+  was the Hidarities. Allow SSH traffic is one of the steps that was about setting
+  access. Maybe we don't need anyone to access some machine. They're
+  possibilities. We don't need But that, that machine should access something
+  outside, then nobody should be allowed inside. So that's a good practice to
+  limit the exposure. so, This is a quick quiz, maybe we should finish here with
+  this quiz. I don't know if it's possible. Now we are not finishing with it
+  because we didn't go through storage. I will move this quiz later but let's go
+  through the storage slides and if you have time we'll do the quiz or not
+  starting the day with the quiz tomorrow. Okay, three storage ideas. We have EBS,
+  Instant Store, and S3. So we are diving deeper into this. But EBS is your USB
+  stick for the cloud? It's so capable. So you must use that USB stick EBS to
+  start an instance. So, you put the Ami on it and you start. So, EBS cannot be
+  looked only in one. Other. Situation. But in general, whenever you mention EBS,
+  You think about Ebs? With ez2. So, USB storage external hard disk that you can
+  run your EC2 with. You can have five PBS volumes. You can have one You can
+  dismount. Disconnect one volume and put it inside another easy test. So it's
+  like your external hardest. you can move between each instance, Is the store is
+  the old way. How others did? Storage. Easy to instances, all came with built-in
+  storage. So for people to be able to share that instance, whenever I stopped
+  using EC2 everything was deleted on that this test. Including the drive,
+  including the volume. And the next user gets empty, instant star and runs
+  everything. On a new machine repair, install. White is good because it's local.
+  It's not easy, EBS is network. In the same data center but not on the same
+  motherboard. Instant store is in same motherboard. Finally S3 is something that
+  is part of the AWS philosophy of separating. We have Ec2. Now, we have PC
+  server. And it has everything in it. Processor Story Networking. What if? If we
+  redundantly separate storage. From the compute. We have EC2. Yes. There is some
+  storage building institute, but for its own purposes for calculations. And
+  storage that we need to expose to the world. This one is history. And we'll
+  discuss it later. What object storage means. So guys, we're stopping now. And
+  tomorrow. I will double check if this is okay to extend five minutes for the
+  class because I was Told to have only 15 minutes break between the classes. I
+  don't like it. I have two times, ten minutes, but extend five minutes and we are
+  ending at 12:20. I will double check. Also about the ending time with. Yes, if
+  it's okay. And tomorrow, we are meeting at 9:00 and I will have hopefully have
+  some answers for you regarding the material, the the recording, everything else
+  that is needed. For your, for your better pet. Roller. Thank you very much guys
+  if you didn't put plus one do it right now or going. And tomorrow at 9:00? Yes,
+  please easy.
+  If it works. No, it cannot because it uses a but again, it can help you in a
+  switching out of console to CLI. It can help you to use console to code just to
+  get an idea. How to approach for the beginning. Again, if your developer minded
+  or you have a huge developer experience or maybe use some other other
+  infrastructure as a code. Let's see, askable maybe Possible is the automation
+  tool. That is very, very popular and very universal. Maybe that one you can use
+  it for for some Infrastructure is a code. Work. Etc. Etc. So up to you but yes,
+  them main idea should be for you to learn. To UCLA current situation in the
+  cloud for engineers is that. At the end, you will end up using Using a lot of
+  code me myself. I'm not a coder. I'm not a developer but I was forced To learn
+  at least to read. And then do some small changes, maintenance, documentation,
+  etc. But, excellent question, everything that you see, in, in the console, can
+  be done with a code. Why it is better one more thing and I'm cutting here to use
+  code. The commands. Where do they copy the comment? I know I didn't The command
+  is not changing as often as the console is changing. So maybe they will put here
+  in this screen of launch instance, they will change something. It's obvious that
+  the person human always knows how to find its way in small changes. Maybe this
+  color here is not yellow anymore or amber, it will become magenta and isn't it?
+  And your script will not work your word explanation, to your colleagues will not
+  work. But what if you give them a code, Code that you already tested. AWS
+  changed the CLI twice. We have version 1 and verse 2, that's it. In 20 years.
+  and yes, sometimes some small option will change but in general, Breaking
+  changes happen. Only between big jumps between version 1 and Version 2. When you
+  have version 2, the code is expected to to run always. Maybe not the new
+  features, but if the code is three years old, it should run. Today without
+  problems. We cannot say that about the word explanation. Word scripts for humans
+  we just have to move slowly to the CLI not slowly but we should move to the To
+  the CLI. Now, right now we are beginners. But I expect that until the end of the
+  the course, you will cover Terraform and everything. I can double check about
+  therefore, but in the previous decay, had Terraform included in the Cloud. Cloud
+  course. so, Some kind of connection. I'm going back now. It was enough with the
+  lab. I'm not even closing the lab that space spend some few dollars. A few
+  cents, but I should have closed the lab if I wanted to continue with another
+  lap. Yes, this one.
+
+[12:21]
+  To UCLA current situation in the cloud for engineers is that. At the end, you
+  will end up using Using a lot of code me myself. I'm not a coder. I'm not a
+  developer but I was forced To learn at least to read. And then do some small
+  changes, maintenance, documentation, etc. But, excellent question, everything
+  that you see, in, in the console, can be done with a code. Why it is better one
+  more thing and I'm cutting here to use code. The commands. Where do they copy
+  the comment? I know I didn't The command is not changing as often as the console
+  is changing. So maybe they will put here in this screen of launch instance, they
+  will change something. It's obvious that the person human always knows how to
+  find its way in small changes. Maybe this color here is not yellow anymore or
+  amber, it will become magenta and isn't it? And your script will not work your
+  word explanation, to your colleagues will not work. But what if you give them a
+  code, Code that you already tested. AWS changed the CLI twice. We have version 1
+  and verse 2, that's it. In 20 years. and yes, sometimes some small option will
+  change but in general, Breaking changes happen. Only between big jumps between
+  version 1 and Version 2. When you have version 2, the code is expected to to run
+  always. Maybe not the new features, but if the code is three years old, it
+  should run. Today without problems. We cannot say that about the word
+  explanation. Word scripts for humans we just have to move slowly to the CLI not
+  slowly but we should move to the To the CLI. Now, right now we are beginners.
+  But I expect that until the end of the the course, you will cover Terraform and
+  everything. I can double check about therefore, but in the previous decay, had
+  Terraform included in the Cloud. Cloud course. so, Some kind of connection. I'm
+  going back now. It was enough with the lab. I'm not even closing the lab that
+  space spend some few dollars. A few cents, but I should have closed the lab if I
+  wanted to continue with another lap. Yes, this one.
+
+[12:22]
+  changes. Maybe this color here is not yellow anymore or amber, it will become
+  magenta and isn't it? And your script will not work your word explanation, to
+  your colleagues will not work. But what if you give them a code, Code that you
+  already tested. AWS changed the CLI twice. We have version 1 and verse 2, that's
+  it. In 20 years. and yes, sometimes some small option will change but in
+  general, Breaking changes happen. Only between big jumps between version 1 and
+  Version 2. When you have version 2, the code is expected to to run always. Maybe
+  not the new features, but if the code is three years old, it should run. Today
+  without problems. We cannot say that about the word explanation. Word scripts
+  for humans we just have to move slowly to the CLI not slowly but we should move
+  to the To the CLI. Now, right now we are beginners. But I expect that until the
+  end of the the course, you will cover Terraform and everything. I can double
+  check about therefore, but in the previous decay, had Terraform included in the
+  Cloud. Cloud course. so, Some kind of connection. I'm going back now. It was
+  enough with the lab. I'm not even closing the lab that space spend some few
+  dollars. A few cents, but I should have closed the lab if I wanted to continue
+  with another lap. Yes, this one.
+  *** ALERT [izi]: Izi Versano & 1 others: "Just a quick question. Do we have also
+  afternoon classes or until 12 every day?"
+  *** ALERT [versano]: Izi Versano & 1 others: "Just a quick question. Do we have
+  also afternoon classes or until 12 every day?"
+  I know for me, I am engaged for 9 to 12 for. You will see
+  *** ALERT [izi]: Izi Versano & 1 others: "Okay."
+  *** ALERT [versano]: Izi Versano & 1 others: "Okay."
+  Yesterday, how it was. Did you go to the Individual learning or you can't four
+  hours or eight hours how it was yesterday.
+  *** ALERT [izi]: Izi Versano & 1 others: "Well, yesterday was a different
+  course."
+  *** ALERT [versano]: Izi Versano & 1 others: "Well, yesterday was a different
+  course."
+  Yes, but that course how you can do it.
+  *** ALERT [izi]: Izi Versano & 1 others: "So nine till 12 and then one till you
+  know, three four."
+  *** ALERT [versano]: Izi Versano & 1 others: "So nine till 12 and then one till
+  you know, three four."
+  With the same instructor, everything the same.
+  *** ALERT [izi]: Izi Versano & 1 others: "Seven structure."
+  *** ALERT [versano]: Izi Versano & 1 others: "Seven structure."
+  Okay, let's see at one I will come back. I will double check with Matthias. I
+  know that I was engaged until like three hours, but if it's eight hours, we have
+  lots of things to cover. So it's good with me. See you at one
+
+[12:23]
+  scripts for humans we just have to move slowly to the CLI not slowly but we
+  should move to the To the CLI. Now, right now we are beginners. But I expect
+  that until the end of the the course, you will cover Terraform and everything. I
+  can double check about therefore, but in the previous decay, had Terraform
+  included in the Cloud. Cloud course. so, Some kind of connection. I'm going back
+  now. It was enough with the lab. I'm not even closing the lab that space spend
+  some few dollars. A few cents, but I should have closed the lab if I wanted to
+  continue with another lap. Yes, this one.
+  Okay, so I know that for me, it's until now. And then from one, it's almost So,
+  we'll see. Today is the first day will Hopefully, everything will be normalized
+  until the end of the week, so we'll know exactly how to how it will work. Are.
+  Thank you guys and see you tomorrow. We'll continue with. Oh okay, Another
+  question. Yes please easy.
+  *** ALERT [izi]: Izi Versano & 1 others: "I know. Sorry, I turn it off."
+  *** ALERT [versano]: Izi Versano & 1 others: "I know. Sorry, I turn it off."
+  Okay, and Niyantaben, please.
+  It's just
+  I know I checked the members members page and I don't see your names. So I will
+  double check with Matthias to him to give me a right to invite you and give you
+  some material.
+  To work. And I can give you assignments. I can provide you with which labs to
+  run, I can check if you run them successfully. I'm not graining anyone. But labs
+  are something that you do for your own good. You reinforce your learning.
+  Whatever you learn. When you do labs, you just repeat and refresh.
+  Excellent. If you want to try something on your own, maybe you should create
+  your own free account on AWS. With skill Builder, maybe tomorrow, we can do that
+  also so it helps a lot. Also without waiting for for it, okay. Access from this
+  year. But I will put that today. Or to materials, and I'll ask him to speed up
+  that to have the labs. If not, we continue with the skill, builder and the free
+  account, but we'll make sure that you get also hands on. Next, it says Region AZ
+  and Edge Relationship. I mentioned the user is connecting to our website. so
+  website is here, they connect directly But if we put edge in between, Nearby the
+  user. I should have drawn it nearby. Okay, I have to believe. This. Yes, so
+  again this is the website. And the user is accessing directly and maybe user EU.
+  and website is US is very slow if you put it here in the edge location near the
+  user, the copy of the Content from the website. We get a much, much better
+  better performance. Also the costs, Our lower because everything's happening
+  faster and it's local. We are not diving deep into pricing but even the costs
+  are better when you have I have. Edge network, or cloudfront implemented,
+  because you pay for every request that the S3. If you do not have, Cloud Front.
+  If you have cloud front, you pay for singular requests and all the others are
+  Zero. Next thing, this is the important thing on this light. The division In
+  regions, we have this aces, we have easy instances, we have everything inside
+  the edge locations, just consider them only as a way, how to how to deliver
+  content closer to the user. There is no history here. There is no ez2, there is
+  no rds. Dynamodb. Nothing is here on village again, everything is in the
+  regions, so it's Network versus it was global network. They are separated. Now.
+  Availability zones. We mention them. Already as part of regions. Why would we
+  use more than one? Because we get better SLA, if we have two or more. So we keep
+  we put one instance in one AC and another one. In another, we get better,
+  resilience one zone can fail. Not one zone services in a zone can fail. While
+  services enough for us to break to for our application, not to work. either
+  networking, either storage either, this is something Maintenance systems need
+  updates. So this is the idea also Azure is using this whenever an update is
+  needed, then because we have two availability zones with two copies to
+  instances. First one is up the updated to 1.1. This one is still one point zero
+  and then next steps. Both are updated. So, it's not that we stop everything and
+  update. No, we update one. We update to maybe we have a lower capacity, but it's
+  for short period of time and it's better than Downtime. Services. Stay available
+  because we have more than one redundant. Copy. Also, I mentioned Test 3, that
+  makes multiple copies in the In different results. Similar dynamodb. Whenever
+  you need more and willing to pay more performance for S3 or DYNAMODB, it was
+  automatically copies the data in multiple. Instances in multiple places. So if
+  you have many users, they can be spread now to different copies. And they will
+  each get maximum bandwidth possible. Yes. You pay more but you get automatic
+  elasticity. Now, one of the important things in Any. Any. Application. Any
+  environment. Any infrastructure is the security? Not one of the but it's very,
+  very important. You lose your hardware, you lose your software, you lose your
+  data, you have problems. so, identity and access management is the service of
+  AWS that is used to Help users. Authenticate themselves. Do you remember the
+  time when you have to put in your username your password to check for a message
+  on your mobile phone to provide that number? That's authentication. Just
+  confirming who we are. Just confirming the user. To the system authentication.
+  now, we know that the user is Kirif, that's me or K velkovski, whatever. now,
+  what may I do is the question of how authorization So, this is identity. And
+  this is access. so, the services go identity and access management, In which
+  region that's a restaurant. It's a global service. It doesn't run in any region.
+  If I go here, I have United States Oregon. But if I go now in, I am And I choose
+  now the region. It says Global everything else is grayed out. So I'm is global
+  service identity and access management. We define the roles, we define policies,
+  users groups, root access management, Everything is handled here in I What is on
+  a you a user? That's me. KIRO. Welcome not backup operator, not administrator.
+  Not no human. Or application. But let's talk about humans right now. So, every
+  human Must have it separate. I'm user. Now, we have 16 people, 70 people in the
+  Or 15, whatever in the in the, in the chat in the mid. Everyone should have a
+  separate I'm user. Not students like we have in the labs labs are specific. But
+  everyone. Why do we need that? Because we will have trouble auditing. Who logged
+  in yesterday at 10 o'clock. With the student password, students and password.
+  And everybody is quiet. You deleted everything. Tell me who you are. Nobody will
+  say anything. so, you have to perform additional Spine not spine. But
+  traditional steps to find a cool logged in from where, etc, with I am with
+  identical, I'm users. The user is clearly identified. Yes, these users might
+  work with similar. Jobs. And then we put them in a group. Students
+  administrators print operators backup operators Admin, financial admins. So
+  groups are used to give like, Ah, easier tasks to the admins instead of admin
+  going to every single user and giving them permissions. Or taking the
+  permissions away. if we put all the users in a group, This is a group we can
+  give set of permissions to take it group. so students or admins or have separate
+  different types of if we move someone from the user to this group, they'll get
+  you set affirmations, everything else will be forgot or they can be members of
+  multiple groups, then the then the permissions are Edit. Now. This is very, very
+  powerful tool in AWS similar to groups. Imagine that we have multiple students
+  but one of them is little bit. In front of the students, and whenever we need
+  someone to stop something, start, something to do some administrative tasks. We
+  allow that person. To do that job. But only then not always. student is a
+  student student has limited set of Permissions. Sometimes from time to time
+  roles are temporary. temporary groups or temporary credentials that a person can
+  can assume For example, whenever I just need to delete something, then I assume
+  a role admin and do the deletion. And then I go back to my ordinary Account.
+  Excellent. Excellent set of tools. Excellent concept that is used in some other
+  places, too, but let's remember temporary permissions. That a user. Human or
+  easy to instance can use roles. For temporary set of permissions. We'll see. A
+  little bit about that in the future. This is the fundamentals, the basic, the
+  essentials, Policy set of permissions. So policies can be reused. I give the
+  same set of policy to Suman to Mohammad to Roger, Tom, and One set of policy. If
+  I change the policy, it will be changed to everyone. Or maybe same set of policy
+  to different groups. So, set of remissions. Is a policy in the policy we
+  mentioned. Adi. We'll see them later principlection resource condition and if
+  you allow or did they deny that detection? But again, this is this is just, you
+  know, introduction. That the policies are the permissions. Permissions that we
+  can use to. We have to use. One more thing. If there is no policy. Associated
+  with user user has zero rights. So the default in AWS is 0 rights, the admin
+  must specifically say what the user can do. So if the policy is empty, User is
+  just logged in and without any, any permissions. So user can be a member of a
+  group or a role. Are to the roles and the groups we associate. Permissions. With
+  the policies. And now it sure you should go with interactivity a little bit, but
+  Let's say. I will just try to do this, this on my own. This is to illustrate how
+  the admin. Should think. So it says admin should apply lease privilege. So if
+  the student comes and tells me I need to access to this files. No. I need
+  exactly to know which files. Do you need access to? and then, I will give you
+  access only to those So this is the proper approach, never start with.
+  Everything can be accessed and then lower down. No, the approach should be
+  always. From from 0, to give better. when you say that this company have problem
+  with their data in our AWS and we have AWS data breach, usually, it means that
+  Someone leaked. The passwords. Or maybe the owner of that data, didn't protect
+  it. Well, So far, there is no confirmed problem with the AWS itself. So usually
+  it's a human factor where Maybe the passwords or API keys or something like that
+  is leaked. And then someone managed to get Hold of the date. So again. There is
+  a shared responsibility model of AWS, where AWS is. Responsible for part of the
+  work, your responsible. It's not true, you're responsible for. It is something
+  happens to your data. You will suffer the consequences, your company. So, least
+  privilege. Do not put. Do not give any more permissions that are needed. So
+  minimal permissions, no more than a million premises. Now, another thing. That
+  we have, and we will see. Tomorrow, when we do the, for example, the free free
+  account, when we create the free account, the first thing that you create, when
+  you create an account, you create a root account. So, someone must be a superman
+  of your account. This one reducer is the Superman. So root user needs to be
+  properly. Secured. You shouldn't use it. Almost never. And you should. Work with
+  someone else. Identity, you should create admin or something like that. Do not
+  use Root account. Also it mentions MFA. You should announce you should create
+  multiple factor, authentication on your phone or something like that. And not
+  only for root for everything. Every account that is allowed to log into you into
+  NOS must have MFA. Why it's important if someone manages to get your username.
+  Password and account number, they can log in. And they can do everything because
+  they will be or maybe if root account this is but they can do lots of things. if
+  you have MFA implemented multi-factor application with your phone, or with a
+  special device or I don't know, Then it's an extra layer even that they know
+  these three things, they will every 60 seconds. They will need another set of
+  MFA credentials to login. So that way you protect your account with with MFA not
+  only root account every every user should be protected with MFA. What else is
+  important in the clouds? Ec2. Are not called Amazon virtual machines in Azure.
+  We have azure which our machines are always, no, they needed new name. I don't
+  know why. So they call the virtual machines enables, they call them easy to
+  elastic computer clubs. now, when I clicked on launch, I didn't check. CPU. This
+  one memory. 10 gigabyte storage. Yes for storage. Yes. But memory and CPU was in
+  one T2 Micro and I choose the two micro if they were there. Already set up
+  storage GB, bytes and networking settings. So these things Should be chosen
+  before you decide what to launch. As you're choosing the on-premises machines.
+  with their characteristics similar with EC2 virtual machines, the instance type
+  How many virtual CPUs RAM? Other things. What is AMI, if you ever ever tried to
+  do a backup of your machine, maybe you try to create a virtual machine image.
+  From your laptop. To save it on the USB stick or maybe on US DVD record. And
+  then you can use that image to start. The Easy to Instance When you first
+  install your Linux machine or Windows machine, you need it. The installation
+  disks And you installed everything, you put some software on it. Now, you need a
+  backup, create a Amazon machine. In the Amazon environment. You need Amazon
+  machine image to start easy. To instance, if you remember in the lab I choose
+  Linux. amazon Linux Version 6.1 That Amazon machine images used to start EC2
+  instance, everything from that. File is copied into the machine and the machine
+  starts. why it is good because if we keep it updated with the newest software
+  that we are using, every time when you install even you run when you launch a
+  new instance, it will be Launched in minutes, not in hours if you reinstall your
+  laptop. Now it will take two hours. But if you have a virtual machine image
+  ready, it takes like one. Hour, maybe not one hour, maybe 15 minutes to start.
+  Now, we are just going through this easy to terminology security groups. We
+  have. A virtual machine, a virtual firewall that can block. Network.
+  Communication with Your ethosis, these are security groups. Key pairs. Are we
+  use it to to log into the EC2 instance? So instead of username password, we use
+  keepers. so we choose the MI we choose size, we set access and we launch, if you
+  remember the lab, We choose. Where's the? There it is. We choose allow ssh, that
+  was the Hidarities. Allow SSH traffic is one of the steps that was about setting
+  access. Maybe we don't need anyone to access some machine. They're
+  possibilities. We don't need But that, that machine should access something
+  outside, then nobody should be allowed inside. So that's a good practice to
+  limit the exposure. so, This is a quick quiz, maybe we should finish here with
+  this quiz. I don't know if it's possible. Now we are not finishing with it
+  because we didn't go through storage. I will move this quiz later but let's go
+  through the storage slides and if you have time we'll do the quiz or not
+  starting the day with the quiz tomorrow. Okay, three storage ideas. We have EBS,
+  Instant Store, and S3. So we are diving deeper into this. But EBS is your USB
+  stick for the cloud? It's so capable. So you must use that USB stick EBS to
+  start an instance. So, you put the Ami on it and you start. So, EBS cannot be
+  looked only in one. Other. Situation. But in general, whenever you mention EBS,
+  You think about Ebs? With ez2. So, USB storage external hard disk that you can
+  run your EC2 with. You can have five PBS volumes. You can have one You can
+  dismount. Disconnect one volume and put it inside another easy test. So it's
+  like your external hardest. you can move between each instance, Is the store is
+  the old way. How others did? Storage. Easy to instances, all came with built-in
+  storage. So for people to be able to share that instance, whenever I stopped
+  using EC2 everything was deleted on that this test. Including the drive,
+  including the volume. And the next user gets empty, instant star and runs
+  everything. On a new machine repair, install. White is good because it's local.
+  It's not easy, EBS is network. In the same data center but not on the same
+  motherboard. Instant store is in same motherboard. Finally S3 is something that
+  is part of the AWS philosophy of separating. We have Ec2. Now, we have PC
+  server. And it has everything in it. Processor Story Networking. What if? If we
+  redundantly separate storage. From the compute. We have EC2. Yes. There is some
+  storage building institute, but for its own purposes for calculations. And
+  storage that we need to expose to the world. This one is history. And we'll
+  discuss it later. What object storage means. So guys, we're stopping now. And
+  tomorrow. I will double check if this is okay to extend five minutes for the
+  class because I was Told to have only 15 minutes break between the classes. I
+  don't like it. I have two times, ten minutes, but extend five minutes and we are
+  ending at 12:20. I will double check. Also about the ending time with. Yes, if
+  it's okay. And tomorrow, we are meeting at 9:00 and I will have hopefully have
+  some answers for you regarding the material, the the recording, everything else
+  that is needed. For your, for your better pet. Roller. Thank you very much guys
+  if you didn't put plus one do it right now or going. And tomorrow at 9:00? Yes,
+  please easy.
+  *** ALERT [izi]: Izi Versano & 1 others: "Just a quick question. Do we have also
+  afternoon classes or until 12 every day?"
+  *** ALERT [versano]: Izi Versano & 1 others: "Just a quick question. Do we have
+  also afternoon classes or until 12 every day?"
+  I know for me, I am engaged for 9 to 12 for. You will see
+  *** ALERT [izi]: Izi Versano & 1 others: "Okay."
+  *** ALERT [versano]: Izi Versano & 1 others: "Okay."
+  Yesterday, how it was. Did you go to the Individual learning or you can't four
+  hours or eight hours how it was yesterday.
+  *** ALERT [izi]: Izi Versano & 1 others: "Well, yesterday was a different
+  course."
+  *** ALERT [versano]: Izi Versano & 1 others: "Well, yesterday was a different
+  course."
+  Yes, but that course how you can do it.
+  *** ALERT [izi]: Izi Versano & 1 others: "So nine till 12 and then one till you
+  know, three four."
+  *** ALERT [versano]: Izi Versano & 1 others: "So nine till 12 and then one till
+  you know, three four."
+  With the same instructor, everything the same.
+  *** ALERT [izi]: Izi Versano & 1 others: "Seven structure."
+  *** ALERT [versano]: Izi Versano & 1 others: "Seven structure."
+  Okay, let's see at one I will come back. I will double check with Matthias. I
+  know that I was engaged until like three hours, but if it's eight hours, we have
+  lots of things to cover. So it's good with me. See you at one
+  Okay, so I know that for me, it's until now. And then from one, it's almost So,
+  we'll see. Today is the first day will Hopefully, everything will be normalized
+  until the end of the week, so we'll know exactly how to how it will work. Are.
+  Thank you guys and see you tomorrow. We'll continue with. Oh okay, Another
+  question. Yes please easy.
+  *** ALERT [izi]: Izi Versano & 1 others: "I know. Sorry, I turn it off."
+  *** ALERT [versano]: Izi Versano & 1 others: "I know. Sorry, I turn it off."
+  Okay, and Niyantaben, please.
+
+[12:24]
+  Okay, I started today with explanation that I do not hear and have exact
+  instructions from DCA what to do with the recording with. So when I have that,
+  either in a slack channel or in the classroom or whatever we have available, I
+  will put there and you will get your materials.
+
+[12:29]
+  --- Meeting ended ---

@@ -1,0 +1,5 @@
+
+[08:56]
+  --- Caption tracking started ---
+  *** Poll error: Execution context was destroyed
+  --- Meeting ended ---

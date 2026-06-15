@@ -5,7 +5,9 @@ server/jobs.db
 server/jobs.db-shm
 server/jobs.db-wal
 .env
-server/captions/
 
 # Local Claude Code state
 .claude/
+
+# Captured class slides (local only)
+server/slides/
