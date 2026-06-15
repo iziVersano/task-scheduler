@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { apiFetch } from '../apiClient.js';
 
 const API = '/api';
@@ -60,14 +60,16 @@ function detectJobType(command) {
 }
 
 // Build the full command from a Meet URL
-function buildMeetCommand(meetUrl) {
+function buildMeetCommand(meetUrl, serverDir) {
   const clean = meetUrl.trim().replace(/[?&]authuser=\d+/, '');
-  return `node /home/dci-student/work/task-scheduler/server/meet-join.js "${clean}"`;
+  const script = `${serverDir}/meet-join.js`;
+  return `node "${script}" "${clean}"`;
 }
 
 // Build the full command for a plain URL
-function buildUrlCommand(url) {
-  return `node /home/dci-student/work/task-scheduler/server/open-url.js "${url.trim()}"`;
+function buildUrlCommand(url, serverDir) {
+  const script = `${serverDir}/open-url.js`;
+  return `node "${script}" "${url.trim()}"`;
 }
 
 const TASK_NAMES = [
@@ -108,8 +110,16 @@ export default function JobForm({ job, onSave, onClose }) {
   const [mode, setMode] = useState('manual');
   const [hour, setHour] = useState(editHour);
   const [minute, setMinute] = useState(editMinute);
+  const [serverDir, setServerDir] = useState('');
   const [error, setSaving_error] = useState('');
   const [saving, setSaving] = useState(false);
+
+  useEffect(() => {
+    fetch('/api/config')
+      .then(r => r.json())
+      .then(d => setServerDir(d.serverDir))
+      .catch(() => {});
+  }, []);
 
   const set = (field) => (e) => {
     const val = e.target.type === 'checkbox' ? e.target.checked : e.target.value;
@@ -149,7 +159,7 @@ export default function JobForm({ job, onSave, onClose }) {
     }
     setSaving_error('');
     setSaving(true);
-    const command = jobType === 'meet' ? buildMeetCommand(meetLink) : buildUrlCommand(openUrl);
+    const command = jobType === 'meet' ? buildMeetCommand(meetLink, serverDir) : buildUrlCommand(openUrl, serverDir);
     const submitData = { ...form, command };
     try {
       const url    = job ? `${API}/jobs/${job.id}` : `${API}/jobs`;

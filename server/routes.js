@@ -1,6 +1,11 @@
 const express = require('express');
 const cron = require('node-cron');
+const path = require('path');
 const router = express.Router();
+
+router.get('/config', (_req, res) => {
+  res.json({ serverDir: __dirname.replace(/\\/g, '/') });
+});
 const db = require('./db');
 const { scheduleJob, unscheduleJob } = require('./scheduler');
 const { requireAuth } = require('./iam-middleware');
@@ -96,6 +101,16 @@ router.post('/jobs/:id/toggle', (req, res) => {
   }
 
   res.json(updated);
+});
+
+// ── POST /api/jobs/:id/run ────────────────────────────────────────────────────
+router.post('/jobs/:id/run', (req, res) => {
+  const id = parseInt(req.params.id);
+  const job = db.prepare('SELECT * FROM jobs WHERE id = ?').get(id);
+  if (!job) return res.status(404).json({ error: 'Job not found' });
+  const { executeJob } = require('./scheduler');
+  executeJob(job);
+  res.json({ success: true });
 });
 
 // ── GET /api/jobs/:id/logs ────────────────────────────────────────────────────

@@ -10,8 +10,12 @@ if (!url || (!url.startsWith('http://') && !url.startsWith('https://'))) {
   process.exit(1);
 }
 
-const CHROME_PATH = '/usr/bin/google-chrome';
-const CHROME_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome');
+const CHROME_PATH = os.platform() === 'win32'
+  ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+  : '/usr/bin/google-chrome';
+const CHROME_DATA_DIR = os.platform() === 'win32'
+  ? path.join(process.env.LOCALAPPDATA || os.homedir(), 'Google', 'Chrome', 'User Data')
+  : path.join(os.homedir(), '.config', 'google-chrome');
 const DEBUG_PORT = 9402;
 
 function waitForDebugPort(maxWait = 15000) {

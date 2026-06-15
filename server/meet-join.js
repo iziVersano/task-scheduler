@@ -5,8 +5,13 @@ const os = require('os');
 const http = require('http');
 const fs = require('fs');
 
-const CHROME_PATH = '/usr/bin/google-chrome';
-const USER_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome-meet');
+const CHROME_PATH = os.platform() === 'win32'
+  ? 'C:\\Program Files\\Google\\Chrome\\Application\\chrome.exe'
+  : '/usr/bin/google-chrome';
+const USER_DATA_DIR = os.platform() === 'win32'
+  ? path.join(process.env.LOCALAPPDATA || os.homedir(), 'Google', 'Chrome', 'User Data')
+  : path.join(os.homedir(), '.config', 'google-chrome');
+const PROFILE_DIR = 'Profile 1';
 const DEBUG_PORT = 9399;
 const LOG_FILE = '/tmp/meet-join.log';
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
@@ -63,6 +68,7 @@ function cleanStaleLocks() {
 function launchChromeDetached(url) {
   const args = [
     `--user-data-dir=${USER_DATA_DIR}`,
+    `--profile-directory=${PROFILE_DIR}`,
     `--remote-debugging-port=${DEBUG_PORT}`,
     '--no-first-run',
     '--no-default-browser-check',
@@ -238,9 +244,7 @@ function markSuccessToday() {
     if (page.url().includes('accounts.google.com/signin') ||
         page.url().includes('accounts.google.com/ServiceLogin')) {
       throw new Error(
-        'Not logged in. Run this once to set up:\n' +
-        '  google-chrome --user-data-dir=$HOME/.config/google-chrome-meet\n' +
-        'Log into Google, then close the browser.'
+        'Not logged in to Google in your Chrome profile. Please log into Google in Chrome (Profile 1) and try again.'
       );
     }
 

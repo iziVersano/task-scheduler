@@ -59,7 +59,7 @@ function scheduleJob(job) {
     if (current && current.enabled) {
       executeJob(current);
     }
-  }, { timezone: 'Europe/Berlin' });
+  }, { timezone: Intl.DateTimeFormat().resolvedOptions().timeZone });
 
   activeTasks.set(job.id, task);
   console.log(`Scheduled "${job.name}" at cron: ${job.schedule}`);
