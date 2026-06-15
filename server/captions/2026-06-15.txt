@@ -3831,3 +3831,19 @@
   zero, dot zero. This is my IP and I also told you one thing. Each block, there
   are four blocks in your IPv4, right. Each block is represented using how many
   bits How many bits?
+  32. Why how 32 minus 27 is 2? Power 5 2 power 5 is nothing but 32 iPS Do you
+  guys agree with me? Okay, everybody agrees with me 32 IP address. But now what I
+  do I want to set up different services so I will give one IP address. So when I
+  purchase this or when I create a VPC, I will get 32. IP one, I will give it for
+  EC2 one, I will give it for RDS one for EFS, one for a S3. So I keep assigning
+  But then, I start thinking, one thing. What is it? see, this is These services
+  cannot be publicly accessible, right? For example if you guys have seen
+  yesterday or last week when we created EC2 what happened a public IP address was
+  also assigned a EC2 will have to IPS right public IP. And private IP. Okay? And
+  if these services are randomly set up like this, there is a possibility if my
+  network or firewall allows there is a possibility where I can have connection to
+  the services via Internet. if my firewall allows, there is a possibility where I
+  can allow access to these services, Correct. So this is somehow not that secure
+  enough. Why? Ultimately any company remember this always any company only works
+  because of data. Data is the primary source. Without data, nothing works. Okay,
+  your server your script. They are also called as your
