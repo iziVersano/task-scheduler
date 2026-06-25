@@ -1,0 +1,26 @@
+name: AWS Status
+
+on:
+  workflow_dispatch:
+
+jobs:
+  status:
+    runs-on: ubuntu-latest
+    env:
+      AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
+      AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+      AWS_DEFAULT_REGION: eu-central-1
+    steps:
+      - name: S3 Buckets
+        run: aws s3 ls
+
+      - name: CloudFront Distributions
+        run: |
+          aws cloudfront list-distributions \
+            --query 'DistributionList.Items[*].{ID:Id,Domain:DomainName,Status:Status}' \
+            --output table
+
+      - name: Site file size
+        run: |
+          aws s3 ls s3://dci-class-summaries-eu/index.html \
+            --human-readable
