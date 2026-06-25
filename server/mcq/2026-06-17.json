@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "associate",
+    "question": "A company is running an HPC (High Performance Computing) simulation that requires the lowest possible network latency between 8 EC2 instances and needs them to communicate at 10 Gbps. Which placement group type should they use?",
+    "options": {
+      "A": "Spread Placement Group",
+      "B": "Partition Placement Group",
+      "C": "Cluster Placement Group",
+      "D": "No placement group — use Enhanced Networking instead"
+    },
+    "correct": "C",
+    "explanation": "Cluster Placement Groups pack instances close together within a single Availability Zone, enabling ultra-low latency and high-bandwidth (10 Gbps+) networking between instances — ideal for HPC and tightly-coupled parallel workloads. Spread groups maximise fault tolerance by separating instances. Partition groups are for distributed systems like Hadoop/Kafka. Enhanced Networking helps but is not a substitute for placement group locality."
+  },
+  {
+    "id": 2,
+    "difficulty": "associate",
+    "question": "A company runs a critical application across 6 EC2 instances. They must ensure that a single hardware failure cannot take down more than one instance at a time. Which placement group type meets this requirement?",
+    "options": {
+      "A": "Cluster Placement Group — instances are packed tightly for resilience",
+      "B": "Spread Placement Group — each instance is on distinct underlying hardware",
+      "C": "Partition Placement Group — instances share hardware within a partition",
+      "D": "No placement group — AWS distributes instances automatically"
+    },
+    "correct": "B",
+    "explanation": "Spread Placement Groups place each instance on separate physical hardware (separate rack, power, and network), so a hardware failure can only affect one instance at a time. This is the highest isolation for small critical workloads. Cluster groups are the opposite — they co-locate instances. Partition groups reduce blast radius per partition but instances within a partition can share hardware. AWS auto-placement does not guarantee this level of isolation."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "Which placement group type is most suitable for a large distributed database like Apache Cassandra with 48 nodes, where you want to limit the impact of hardware failures to a subset of nodes?",
+    "options": {
+      "A": "Cluster Placement Group",
+      "B": "Spread Placement Group",
+      "C": "Partition Placement Group",
+      "D": "Regional Placement Group"
+    },
+    "correct": "C",
+    "explanation": "Partition Placement Groups divide instances into logical partitions (up to 7 per AZ), where each partition has its own set of hardware. A failure in one partition does not affect others — perfect for distributed systems (Cassandra, Kafka, HDFS) that replicate data across nodes. Cluster groups offer no fault isolation. Spread groups are limited to 7 instances per AZ — not enough for 48 nodes. 'Regional Placement Group' is not an AWS service."
+  },
+  {
+    "id": 4,
+    "difficulty": "practitioner",
+    "question": "What happens to an EC2 instance's RAM contents when you Stop the instance?",
+    "options": {
+      "A": "RAM contents are preserved on the EBS root volume and restored on next start",
+      "B": "RAM contents are lost — the instance starts fresh on next boot",
+      "C": "RAM contents are stored in S3 and restored automatically",
+      "D": "RAM contents are preserved in Instance Store until the instance restarts"
+    },
+    "correct": "B",
+    "explanation": "Stopping an EC2 instance powers it down completely — RAM (memory) contents are lost. On restart, the OS boots fresh from the EBS root volume. This is why Stop is used for maintenance or cost-saving when state doesn't need to persist in memory. Hibernate is the feature that preserves RAM to disk."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "A developer has an EC2 instance running a complex in-memory calculation that takes 4 hours to reach its current state. They need to stop the instance overnight and resume exactly where they left off in the morning. Which EC2 feature should they use?",
+    "options": {
+      "A": "Stop the instance — RAM is preserved automatically",
+      "B": "Create an AMI snapshot before stopping",
+      "C": "Hibernate the instance — RAM state is saved to the EBS root volume",
+      "D": "Terminate the instance and restore from the last EBS snapshot"
+    },
+    "correct": "C",
+    "explanation": "Hibernate saves the entire RAM contents to the encrypted EBS root volume before powering off. On restart, the OS resumes from exactly where it left off — processes, open files, and in-memory state are all restored. Regular Stop loses RAM. Creating an AMI captures the disk state but not the in-memory calculation state. Terminate is permanent."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "Which of the following is a prerequisite for enabling Hibernate on an EC2 instance?",
+    "options": {
+      "A": "The instance must use Instance Store as the root volume",
+      "B": "The EBS root volume must be encrypted and large enough to hold RAM contents",
+      "C": "The instance must be in a Cluster Placement Group",
+      "D": "Hibernate requires an HPC instance family (such as hpc6a)"
+    },
+    "correct": "B",
+    "explanation": "Hibernate requires: (1) an encrypted EBS root volume — AWS enforces this because RAM may contain sensitive data; (2) the root volume must have enough free space to store the full RAM contents. Instance Store cannot be used (it's ephemeral). Hibernate works with most general-purpose instance types, not just HPC families. Placement groups are unrelated to Hibernate."
+  },
+  {
+    "id": 7,
+    "difficulty": "practitioner",
+    "question": "What is the key difference between Stopping and Terminating an EC2 instance?",
+    "options": {
+      "A": "Stop keeps the EBS volumes; Terminate permanently deletes the instance and (by default) its EBS root volume",
+      "B": "Stop is only available for instances in private subnets",
+      "C": "Terminate preserves the EBS root volume; Stop deletes it",
+      "D": "There is no difference — both actions produce the same result"
+    },
+    "correct": "A",
+    "explanation": "Stop shuts down the instance but preserves the EBS root volume — you can restart it later. Terminate permanently destroys the instance and, by default, deletes the EBS root volume (though this can be changed via the 'DeleteOnTermination' setting). Stop/Start also changes the public IP (unless an Elastic IP is used). Terminate is irreversible."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "A Cluster Placement Group's main trade-off compared to a Spread Placement Group is:",
+    "options": {
+      "A": "Higher cost per instance in exchange for lower latency",
+      "B": "Maximum performance but all instances are in one AZ — a single AZ failure loses all instances",
+      "C": "Instances can span multiple Regions for global low-latency access",
+      "D": "Lower latency within partitions but higher latency between partitions"
+    },
+    "correct": "B",
+    "explanation": "Cluster Placement Groups deliver the highest network performance but place all instances within a single Availability Zone. If that AZ has an outage, all instances in the group are affected simultaneously — so there is zero fault tolerance. This is the key trade-off: maximum speed vs. zero HA. Spread groups sacrifice some performance for isolation across AZs. Placement groups don't span Regions."
+  }
+]

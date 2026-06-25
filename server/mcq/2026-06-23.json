@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "What is the minimum file size that requires the use of S3 Multipart Upload?",
+    "options": {
+      "A": "100 MB",
+      "B": "1 GB",
+      "C": "5 GB",
+      "D": "5 TB"
+    },
+    "correct": "C",
+    "explanation": "S3 single-part uploads are limited to 5 GB. For any object larger than 5 GB you MUST use Multipart Upload. 5 TB is the maximum object size in S3 (the upper limit, not the multipart threshold). 100 MB and 1 GB are within the single-part limit."
+  },
+  {
+    "id": 2,
+    "difficulty": "associate",
+    "question": "A media company uploads raw 4K video files (average 120 GB each) from studios around the world into a single S3 bucket. Uploads frequently fail partway through and the team has to restart from scratch. Which solution resolves this with the least operational overhead?",
+    "options": {
+      "A": "Enable S3 Transfer Acceleration and upload files as a single part",
+      "B": "Split each file into parts and use S3 Multipart Upload with parallel part uploads",
+      "C": "Use AWS Snowball to ship drives to the destination region monthly",
+      "D": "Compress files below 5 GB before uploading to avoid multipart requirements"
+    },
+    "correct": "B",
+    "explanation": "Multipart Upload lets you resume from a failed part rather than restarting the entire upload — only the failed parts need to be re-sent. It also parallelises parts for faster throughput. Transfer Acceleration helps with routing but does not solve restart-from-scratch failures. Snowball adds significant operational overhead and is not near-real-time. Compressing 120 GB 4K video below 5 GB is not feasible."
+  },
+  {
+    "id": 3,
+    "difficulty": "practitioner",
+    "question": "A developer enables static website hosting on an S3 bucket and sets 'index.html' as the index document. When users visit the bucket URL they still receive a 403 Forbidden error. What is the most likely cause?",
+    "options": {
+      "A": "The bucket is in the wrong AWS region for static hosting",
+      "B": "S3 static hosting requires CloudFront — direct bucket URLs are never accessible",
+      "C": "Block Public Access is still enabled on the bucket, overriding the bucket policy",
+      "D": "The index document must be named 'default.html', not 'index.html'"
+    },
+    "correct": "C",
+    "explanation": "Block Public Access is enabled by default and overrides any bucket policy that grants public access. You must explicitly disable it under the Permissions tab before a public bucket policy (allowing s3:GetObject for Principal: \"*\") takes effect. Static hosting works without CloudFront. The index document name is configurable and 'index.html' is the standard default."
+  },
+  {
+    "id": 4,
+    "difficulty": "associate",
+    "question": "A company stores sensitive financial reports and public press releases in the same AWS account. They want to serve the press releases publicly from S3 while ensuring the financial reports are never publicly accessible. What is the correct configuration?",
+    "options": {
+      "A": "Use a single bucket with a bucket policy that grants GetObject only for press-release objects",
+      "B": "Use separate buckets — disable Block Public Access and add a public bucket policy only on the press-releases bucket; leave Block Public Access enabled on the financial bucket",
+      "C": "Enable S3 static hosting on both buckets and use IAM policies to restrict access",
+      "D": "Use S3 Object Lock on the financial reports bucket to prevent public access"
+    },
+    "correct": "B",
+    "explanation": "The safest approach is separate buckets with Block Public Access enabled by default. Only the press-releases bucket has Block Public Access disabled plus a public bucket policy. The financial bucket keeps Block Public Access on, which overrides any accidental policy change. A single bucket with selective policies is risky — a misconfigured wildcard could expose financial data. Object Lock controls deletion/overwrite, not public access."
+  },
+  {
+    "id": 5,
+    "difficulty": "practitioner",
+    "question": "A developer accidentally deletes an important file from a versioning-enabled S3 bucket. What actually happens to the file?",
+    "options": {
+      "A": "The file is permanently deleted and cannot be recovered",
+      "B": "The file is moved to the S3 Recycle Bin automatically",
+      "C": "A delete marker is added; all previous versions of the file still exist",
+      "D": "The latest version is deleted but only if MFA Delete is disabled"
+    },
+    "correct": "C",
+    "explanation": "When versioning is enabled, a 'delete' operation does not remove the object — it inserts a delete marker that hides the object in the default view. All previous versions remain intact and can be restored by removing the delete marker or copying a previous version. To permanently delete, you must explicitly delete each version. MFA Delete is an optional extra layer, not a requirement."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "A company needs to replicate S3 objects from a bucket in eu-central-1 to a bucket in us-east-1 for disaster recovery. Both buckets are in the same AWS account. What prerequisite must be met before replication can be configured?",
+    "options": {
+      "A": "Both buckets must have the same name",
+      "B": "Versioning must be enabled on both the source and destination buckets",
+      "C": "The destination bucket must be in a different AWS account",
+      "D": "Cross-Region Replication requires AWS Direct Connect between regions"
+    },
+    "correct": "B",
+    "explanation": "S3 replication (both CRR and SRR) requires versioning to be enabled on both the source AND destination bucket — this is a hard prerequisite. Bucket names must always be globally unique, so they can never be the same. CRR works within the same account. No Direct Connect is needed — replication uses the AWS backbone network."
+  },
+  {
+    "id": 7,
+    "difficulty": "associate",
+    "question": "A company collects application logs from 15 S3 buckets in eu-west-1 into a single central logging bucket also in eu-west-1 for compliance analysis. Which S3 feature should they use?",
+    "options": {
+      "A": "Cross-Region Replication (CRR)",
+      "B": "S3 Inventory",
+      "C": "Same-Region Replication (SRR)",
+      "D": "S3 Batch Operations"
+    },
+    "correct": "C",
+    "explanation": "Same-Region Replication (SRR) is designed exactly for this use case: aggregating data from multiple source buckets into a single destination bucket within the same region (e.g., log consolidation, prod-to-test sync). CRR copies across regions — not needed here. S3 Inventory lists objects but does not copy them. Batch Operations performs bulk actions on existing objects, not continuous replication."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "What is the maximum size of a single object that can be stored in Amazon S3?",
+    "options": {
+      "A": "5 GB",
+      "B": "100 GB",
+      "C": "1 TB",
+      "D": "5 TB"
+    },
+    "correct": "D",
+    "explanation": "The maximum object size in S3 is 5 TB. However, any object larger than 5 GB must be uploaded using Multipart Upload — you cannot use a single PUT request for objects over 5 GB. The 5 GB figure is the single-part upload limit, not the maximum object size."
+  }
+]

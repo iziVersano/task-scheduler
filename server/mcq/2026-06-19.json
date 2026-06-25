@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "What is the key difference between EBS volumes and EC2 Instance Store?",
+    "options": {
+      "A": "EBS is faster; Instance Store is slower but cheaper",
+      "B": "EBS persists data after instance stop/terminate; Instance Store data is lost when the instance stops",
+      "C": "Instance Store supports snapshots; EBS does not",
+      "D": "EBS is only available for Windows instances"
+    },
+    "correct": "B",
+    "explanation": "EBS (Elastic Block Store) is network-attached persistent storage — data survives instance stops, reboots, and (depending on settings) termination. Instance Store is physically attached to the host server and is ephemeral — its data is lost if the instance is stopped or terminated. Instance Store is typically faster due to local NVMe but offers no durability. Snapshots are an EBS feature."
+  },
+  {
+    "id": 2,
+    "difficulty": "associate",
+    "question": "A database workload requires 64,000 IOPS with consistent sub-millisecond latency. The data set is 8 TB. Which EBS volume type should be used?",
+    "options": {
+      "A": "gp3 — General Purpose SSD",
+      "B": "st1 — Throughput Optimized HDD",
+      "C": "io2 Block Express — Provisioned IOPS SSD",
+      "D": "sc1 — Cold HDD"
+    },
+    "correct": "C",
+    "explanation": "io2 Block Express is purpose-built for I/O-intensive workloads requiring up to 256,000 IOPS, sub-millisecond latency, and high durability (99.999%). gp3 maxes out at 16,000 IOPS — insufficient for 64,000 IOPS. HDD types (st1, sc1) are optimised for throughput on large sequential workloads, not IOPS-intensive databases."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "What is the critical difference between gp2 and gp3 EBS volumes that makes gp3 a common exam answer for cost optimization?",
+    "options": {
+      "A": "gp2 supports Multi-Attach; gp3 does not",
+      "B": "gp3 provides a baseline of 3,000 IOPS regardless of volume size; gp2 IOPS are tied to volume size (3 IOPS/GB)",
+      "C": "gp2 has higher maximum IOPS than gp3",
+      "D": "gp3 requires provisioning IOPS separately at extra cost; gp2 IOPS are always included"
+    },
+    "correct": "B",
+    "explanation": "gp2 IOPS scale with size (3 IOPS per GB), so a small volume gets few IOPS. gp3 decouples IOPS from size — you always get 3,000 IOPS and 125 MiB/s baseline, and can provision up to 16,000 IOPS independently. This makes gp3 cheaper for small-to-medium volumes that need good IOPS, and is why AWS recommends gp3 over gp2 for new workloads."
+  },
+  {
+    "id": 4,
+    "difficulty": "practitioner",
+    "question": "What is IOPS and when does it matter most?",
+    "options": {
+      "A": "Input/Output Per Second — the number of read/write operations a storage device handles per second; critical for databases with many small random reads/writes",
+      "B": "Internet Operations Per Second — how many internet requests an EC2 instance can handle",
+      "C": "Internal Operations Processing Speed — the CPU speed of the EBS service",
+      "D": "IOPS measures only sequential read performance, not writes"
+    },
+    "correct": "A",
+    "explanation": "IOPS (Input/Output Operations Per Second) measures how many read or write operations a storage volume can handle each second. It matters most for databases (like MySQL, PostgreSQL) that do many small, random I/O operations. Throughput (MB/s) matters more for workloads that read/write large files sequentially, like data warehouses or video processing."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "An EC2 instance is launched in us-east-1a. You want to attach an existing EBS volume to it. Where must the EBS volume be located?",
+    "options": {
+      "A": "In the same AWS Region (us-east-1), but any Availability Zone",
+      "B": "In the same Availability Zone (us-east-1a)",
+      "C": "In any Region — EBS volumes are globally available",
+      "D": "In the same VPC as the EC2 instance"
+    },
+    "correct": "B",
+    "explanation": "EBS is a zonal service — a volume exists in a specific Availability Zone and can only be attached to instances in the same AZ. To use an EBS volume in a different AZ, you must first create a snapshot, then create a new volume from that snapshot in the target AZ. This is a common exam trap: 'same Region' is not enough — it must be the same AZ."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "By default, what happens to an EC2 instance's EBS root volume when the instance is terminated?",
+    "options": {
+      "A": "It is automatically converted to a snapshot in S3",
+      "B": "It persists until manually deleted",
+      "C": "It is deleted along with the instance",
+      "D": "It is detached and moved to the default EBS pool"
+    },
+    "correct": "C",
+    "explanation": "By default, the root EBS volume's 'DeleteOnTermination' flag is set to true — the volume is deleted when the instance terminates. This is a common exam point. You can change this to false to preserve the root volume after termination. Additional (non-root) EBS volumes attached to the instance default to false — they persist after termination."
+  },
+  {
+    "id": 7,
+    "difficulty": "practitioner",
+    "question": "Which EBS volume type is best suited for big data workloads that read and write large files sequentially, such as log processing or data warehousing, where cost matters more than low latency?",
+    "options": {
+      "A": "io2 — Provisioned IOPS SSD",
+      "B": "gp3 — General Purpose SSD",
+      "C": "st1 — Throughput Optimized HDD",
+      "D": "sc1 — Cold HDD"
+    },
+    "correct": "C",
+    "explanation": "st1 (Throughput Optimized HDD) is designed for frequently accessed, large sequential workloads like log processing, data warehouses, and ETL jobs. It offers high throughput at a much lower cost than SSDs. io2 and gp3 are SSD-based and optimised for IOPS-intensive workloads. sc1 (Cold HDD) is the cheapest option but for infrequently accessed data."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "A solutions architect needs to move an EBS volume from an EC2 instance in us-east-1a to an instance in us-east-1b. What is the correct process?",
+    "options": {
+      "A": "Detach the volume from the first instance and attach it directly to the second — EBS volumes are Region-scoped",
+      "B": "Create a snapshot of the volume, then create a new volume from the snapshot in us-east-1b",
+      "C": "Use EBS Multi-Attach to attach the volume to both instances simultaneously",
+      "D": "Enable EBS cross-AZ replication in the console settings"
+    },
+    "correct": "B",
+    "explanation": "Because EBS is AZ-specific, you cannot move a volume between AZs directly. The process is: (1) create a snapshot of the volume (snapshots are stored in S3 and are Region-scoped), (2) create a new EBS volume from the snapshot in the target AZ. EBS Multi-Attach allows one volume on multiple instances but only within the same AZ. There is no built-in cross-AZ replication feature."
+  }
+]

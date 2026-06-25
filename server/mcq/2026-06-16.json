@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "What does a VPC subnet's CIDR block determine?",
+    "options": {
+      "A": "The maximum number of EC2 instance types allowed in the subnet",
+      "B": "The range of private IP addresses available to resources in the subnet",
+      "C": "The AWS Availability Zone the subnet is deployed into",
+      "D": "The internet bandwidth cap for instances in the subnet"
+    },
+    "correct": "B",
+    "explanation": "A CIDR block (e.g. 10.0.1.0/24) defines the IP address range for the subnet. Resources launched in that subnet receive IPs from that range. AZ placement is a separate setting. CIDR has nothing to do with instance types or bandwidth."
+  },
+  {
+    "id": 2,
+    "difficulty": "practitioner",
+    "question": "What makes a subnet 'public' in an AWS VPC?",
+    "options": {
+      "A": "It has 'public' in its name tag",
+      "B": "It contains only EC2 instances with Elastic IPs",
+      "C": "Its route table has a route to an Internet Gateway",
+      "D": "It is in the default VPC created by AWS"
+    },
+    "correct": "C",
+    "explanation": "A subnet is public when its associated route table includes a route (0.0.0.0/0) pointing to an Internet Gateway, allowing resources to send and receive internet traffic. The name tag is just a label. Elastic IPs help but the route to the IGW is the defining factor. Default VPCs do have public subnets, but that's because they already have the IGW route configured."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "A company has a private EC2 database server in a private subnet with no direct internet access. Administrators need to SSH into it occasionally for maintenance. What is the most secure way to enable this?",
+    "options": {
+      "A": "Move the database server to a public subnet and assign it an Elastic IP",
+      "B": "Open port 22 on the database server's security group to 0.0.0.0/0",
+      "C": "Deploy a Bastion Host in a public subnet and SSH to the database server from there",
+      "D": "Attach an Internet Gateway directly to the private subnet"
+    },
+    "correct": "C",
+    "explanation": "A Bastion Host (jump box) sits in a public subnet and is the only server exposed to SSH from the internet. Admins SSH to the bastion first, then SSH onward to the private instance. This keeps the database server fully private. Opening port 22 to 0.0.0.0/0 is a critical security risk. Moving the DB to a public subnet defeats the purpose of isolation."
+  },
+  {
+    "id": 4,
+    "difficulty": "associate",
+    "question": "A Security Group rule allows inbound HTTPS (port 443) from 0.0.0.0/0. Which statement is correct about the return traffic?",
+    "options": {
+      "A": "You must add an outbound rule for port 443 to allow return traffic",
+      "B": "Security Groups are stateful — return traffic is automatically allowed",
+      "C": "You must add an outbound rule for ephemeral ports 1024–65535",
+      "D": "Return traffic is blocked unless a Network ACL explicitly allows it"
+    },
+    "correct": "B",
+    "explanation": "Security Groups are stateful: if inbound traffic is allowed, the corresponding outbound return traffic is automatically permitted regardless of outbound rules. You do NOT need to add a matching outbound rule. Network ACLs (not Security Groups) are stateless and do require explicit rules for both directions."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "Which of the following correctly describes Security Groups in AWS?",
+    "options": {
+      "A": "Security Groups operate at the subnet level and filter traffic for all instances in the subnet",
+      "B": "Security Groups operate at the instance level and can only have ALLOW rules",
+      "C": "Security Groups operate at the instance level and can have both ALLOW and DENY rules",
+      "D": "Security Groups are stateless and require explicit rules for both inbound and outbound traffic"
+    },
+    "correct": "B",
+    "explanation": "Security Groups are attached to individual instances (or ENIs) and support only ALLOW rules — you cannot create explicit DENY rules. To block traffic you simply omit the allow rule. Network ACLs operate at the subnet level and do support both ALLOW and DENY rules. Security Groups are stateful (not stateless)."
+  },
+  {
+    "id": 6,
+    "difficulty": "practitioner",
+    "question": "A developer needs to allow SSH access (port 22) to a Bastion Host from the company office only (IP: 203.0.113.50). Which Security Group inbound rule achieves this?",
+    "options": {
+      "A": "Type: SSH, Port: 22, Source: 0.0.0.0/0",
+      "B": "Type: SSH, Port: 22, Source: 203.0.113.50/32",
+      "C": "Type: HTTPS, Port: 443, Source: 203.0.113.50/32",
+      "D": "Type: All Traffic, Port: All, Source: 203.0.113.50/0"
+    },
+    "correct": "B",
+    "explanation": "203.0.113.50/32 is the CIDR notation for a single IP address (/32 = exact match). This restricts SSH access to only that specific office IP. Using 0.0.0.0/0 would allow SSH from anywhere, which is a security risk. HTTPS uses port 443, not 22. /0 after an IP is not valid CIDR."
+  },
+  {
+    "id": 7,
+    "difficulty": "associate",
+    "question": "A company has three-tier architecture: web servers in a public subnet, app servers in a private subnet, and a database in a private subnet. What route table configuration does the private subnet need?",
+    "options": {
+      "A": "A route to an Internet Gateway for all outbound traffic",
+      "B": "A route to a NAT Gateway for outbound internet access; no direct inbound internet route",
+      "C": "No route table — private subnets don't use route tables",
+      "D": "A route to a Virtual Private Gateway to reach the web servers"
+    },
+    "correct": "B",
+    "explanation": "Private subnets use a NAT Gateway (in a public subnet) for outbound-only internet access (e.g. software updates) without allowing any inbound connections from the internet. A route to an Internet Gateway would make the subnet public. All subnets must have a route table. A Virtual Private Gateway is for VPN connections to on-premises networks."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "Which port does HTTPS use, and why would a web-facing EC2 instance need it open in its Security Group?",
+    "options": {
+      "A": "Port 80 — for encrypted web traffic from browsers",
+      "B": "Port 22 — for secure shell access from administrators",
+      "C": "Port 443 — for encrypted web traffic from browsers",
+      "D": "Port 3306 — for database connections from the application tier"
+    },
+    "correct": "C",
+    "explanation": "HTTPS (HTTP Secure) runs on port 443 and encrypts web traffic using TLS. A public web server must allow port 443 inbound so browsers can connect. Port 80 is plain HTTP (unencrypted). Port 22 is SSH. Port 3306 is MySQL — used for internal database connections, not public web traffic."
+  }
+]

@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "What is the durability guarantee of Amazon S3 Standard storage?",
+    "options": {
+      "A": "99.9% (three nines)",
+      "B": "99.99% (four nines)",
+      "C": "99.999999999% (eleven nines)",
+      "D": "100% — S3 never loses data"
+    },
+    "correct": "C",
+    "explanation": "Amazon S3 is designed for 99.999999999% (11 nines) durability. This means if you store 10 million objects, you can expect to lose at most one object every 10,000 years. AWS achieves this by automatically storing data redundantly across multiple devices and Availability Zones within a Region. 100% durability is not guaranteed by any system."
+  },
+  {
+    "id": 2,
+    "difficulty": "practitioner",
+    "question": "A developer tries to create an S3 bucket named 'My-Company-Bucket' in us-east-1. The operation fails. What is the most likely reason?",
+    "options": {
+      "A": "Bucket names cannot contain hyphens",
+      "B": "Bucket names must be lowercase — uppercase letters are not allowed",
+      "C": "S3 buckets cannot be created in us-east-1",
+      "D": "The bucket already exists in another AWS account"
+    },
+    "correct": "B",
+    "explanation": "S3 bucket naming rules require all lowercase letters. 'My-Company-Bucket' contains uppercase letters ('M', 'C', 'B') and would be rejected. Additionally, bucket names must be globally unique across all AWS accounts worldwide. Hyphens are allowed. All Regions including us-east-1 support S3 bucket creation."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "Which statement about S3's global vs. regional architecture is correct?",
+    "options": {
+      "A": "S3 is a global service — buckets are available from any Region without latency differences",
+      "B": "S3 bucket names are global (must be unique worldwide), but bucket data is stored in the specific Region you choose",
+      "C": "S3 buckets are Region-specific and cannot be accessed from other Regions",
+      "D": "S3 is a global service — you cannot choose which Region stores your data"
+    },
+    "correct": "B",
+    "explanation": "This is a common exam trap. The S3 namespace is global — bucket names must be unique across all AWS accounts in all Regions. However, the data itself is stored in the Region you select at bucket creation. It does not automatically replicate to other Regions (you'd need Cross-Region Replication for that). You must choose a Region to control data residency for compliance."
+  },
+  {
+    "id": 4,
+    "difficulty": "practitioner",
+    "question": "What is the fundamental difference between S3 object storage and EBS block storage?",
+    "options": {
+      "A": "S3 is faster than EBS for all workload types",
+      "B": "S3 stores data as objects (files + metadata) accessible via HTTP/HTTPS; EBS stores raw blocks and must be attached to an EC2 instance",
+      "C": "EBS is unlimited in capacity; S3 has a 5 TB per-bucket limit",
+      "D": "S3 requires an EC2 instance to access data; EBS can be accessed directly"
+    },
+    "correct": "B",
+    "explanation": "S3 is object storage — data is stored as objects (files) with metadata, accessed via REST API over HTTP/HTTPS from anywhere without a server. EBS is block storage — raw disk blocks that must be attached to an EC2 instance and formatted with a filesystem before use. EBS has much lower latency (milliseconds) making it suitable for databases and OS volumes. S3 has higher latency (tens of milliseconds) but unlimited scalability."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "A company needs to delete an S3 bucket that contains 50,000 objects. What must they do first?",
+    "options": {
+      "A": "Nothing — AWS will automatically delete all objects when you delete the bucket",
+      "B": "Move all objects to Glacier before deletion",
+      "C": "Empty the bucket (delete all objects and versions) before deleting it",
+      "D": "Disable versioning on the bucket, which removes all objects automatically"
+    },
+    "correct": "C",
+    "explanation": "S3 will not allow you to delete a non-empty bucket. You must first empty it — delete all objects, and if versioning is enabled, all versions and delete markers too. AWS does not automatically delete contents when you delete a bucket. This is a safety mechanism to prevent accidental data loss. AWS provides S3 Batch Operations or the 'Empty bucket' console option to help with large buckets."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "A company wants to ensure all data in their S3 bucket is encrypted at rest without managing encryption keys themselves. Which option requires the least operational overhead?",
+    "options": {
+      "A": "SSE-C — Server-Side Encryption with Customer-Provided Keys",
+      "B": "Client-Side Encryption before uploading",
+      "C": "SSE-S3 — Server-Side Encryption with Amazon S3-Managed Keys",
+      "D": "SSE-KMS — Server-Side Encryption with AWS KMS Keys"
+    },
+    "correct": "C",
+    "explanation": "SSE-S3 uses AES-256 encryption managed entirely by AWS with no key management required — lowest operational overhead and enabled by default on all new S3 buckets. SSE-KMS adds audit logging and key control via AWS KMS but requires key management. SSE-C requires the customer to provide and manage the encryption key with every request. Client-side encryption requires encryption/decryption logic in your application."
+  },
+  {
+    "id": 7,
+    "difficulty": "practitioner",
+    "question": "What is an S3 object key?",
+    "options": {
+      "A": "The encryption key used to protect the object",
+      "B": "The unique identifier (full path) of the object within the bucket, e.g. 'images/2024/photo.jpg'",
+      "C": "The IAM access key required to upload objects",
+      "D": "The hash value AWS uses to verify object integrity"
+    },
+    "correct": "B",
+    "explanation": "The object key is the unique name (path) of the object within its bucket — for example 'reports/q4/summary.pdf'. S3 has no real directory hierarchy; the key is just a string, but the slashes create a visual folder structure in the console. The full S3 URL is: s3://<bucket-name>/<key>. The key is not an encryption key or access credential."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "A team stores data in S3 and uses S3 Versioning. They delete an object using a simple DELETE request (without specifying a version ID). What is the result?",
+    "options": {
+      "A": "All versions of the object are permanently deleted",
+      "B": "The latest version is permanently deleted; older versions remain",
+      "C": "A delete marker is added; all versions of the object are preserved and can be restored",
+      "D": "The object is moved to S3 Glacier automatically"
+    },
+    "correct": "C",
+    "explanation": "With versioning enabled, a DELETE without a version ID inserts a delete marker — a special object that hides all versions from the default GET. No data is actually deleted. To restore: remove the delete marker. To permanently delete a specific version: DELETE with the version ID. This protects against accidental deletion, which is one of the primary use cases for S3 Versioning."
+  }
+]

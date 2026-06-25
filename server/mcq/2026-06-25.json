@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "A company wants to automatically move S3 objects to a cheaper storage class after 30 days of inactivity, and delete them after 365 days. Which S3 feature should they use?",
+    "options": {
+      "A": "S3 Versioning",
+      "B": "S3 Lifecycle Rules",
+      "C": "S3 Transfer Acceleration",
+      "D": "S3 Replication"
+    },
+    "correct": "B",
+    "explanation": "S3 Lifecycle Rules automate transitioning objects between storage classes and deleting them based on age. Versioning tracks object versions but does not automate transitions. Transfer Acceleration speeds up uploads. Replication copies objects across buckets or regions."
+  },
+  {
+    "id": 2,
+    "difficulty": "associate",
+    "question": "A developer tries to set a lifecycle rule to transition objects from S3 Standard to Standard-IA after 20 days. What will happen?",
+    "options": {
+      "A": "The rule is created and objects transition on day 20",
+      "B": "AWS rejects the rule because the minimum is 30 days",
+      "C": "The rule is created but AWS still charges for 30 days of Standard storage",
+      "D": "Objects transition on day 20 but with a penalty fee"
+    },
+    "correct": "C",
+    "explanation": "AWS allows setting fewer than 30 days but will still charge for 30 days of Standard storage regardless — the minimum billing period for Standard-IA is 30 days. The rule is not rejected outright; it is accepted but billing is enforced at 30 days minimum."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "A company is configuring a lifecycle rule and selects One Zone-IA as an intermediate storage class. They notice that Glacier Instant Retrieval is greyed out as the next transition option. Why?",
+    "options": {
+      "A": "Glacier Instant Retrieval requires at least 180 days minimum before transitioning",
+      "B": "Glacier Instant Retrieval is only available in us-east-1",
+      "C": "One Zone-IA stores data in a single AZ, making Glacier Instant Retrieval incompatible since it stores data redundantly across AZs",
+      "D": "You must enable versioning before transitioning to Glacier Instant Retrieval"
+    },
+    "correct": "C",
+    "explanation": "Glacier Instant Retrieval stores data redundantly across multiple AZs. Once you have transitioned to One Zone-IA (data in a single AZ), you cannot transition to Glacier Instant Retrieval because the redundancy model is incompatible — your data is already restricted to one zone. Only Glacier Flexible Retrieval and Glacier Deep Archive remain available."
+  },
+  {
+    "id": 4,
+    "difficulty": "practitioner",
+    "question": "Which S3 storage class is the cheapest and is designed for data that needs to be retained for 7–10 years with retrieval times of 12–48 hours?",
+    "options": {
+      "A": "S3 Standard-IA",
+      "B": "S3 One Zone-IA",
+      "C": "S3 Glacier Flexible Retrieval",
+      "D": "S3 Glacier Deep Archive"
+    },
+    "correct": "D",
+    "explanation": "Glacier Deep Archive is the cheapest S3 storage class, designed for long-term archival (7–10 years). It offers Standard retrieval in 12 hours and Bulk retrieval in 48 hours. Glacier Flexible Retrieval is faster (minutes to hours) but more expensive. Standard-IA and One Zone-IA are for infrequent but faster access."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "A media company has a global team uploading large video files (10–50 GB each) to an S3 bucket in eu-central-1 (Frankfurt). Teams in Japan and Brazil report very slow upload speeds. What is the most cost-effective solution?",
+    "options": {
+      "A": "Create a separate S3 bucket in each region and use Cross-Region Replication",
+      "B": "Enable S3 Transfer Acceleration on the Frankfurt bucket",
+      "C": "Enable S3 Intelligent-Tiering on the bucket",
+      "D": "Increase the bucket's storage capacity"
+    },
+    "correct": "B",
+    "explanation": "S3 Transfer Acceleration routes uploads through the nearest AWS Edge Location, then over AWS's private network to the destination bucket — claiming up to 300% faster speeds for distant users. Creating separate buckets per region solves the problem but is far more complex and costly to manage. Intelligent-Tiering and storage capacity are unrelated to upload speed."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "A developer enables S3 Transfer Acceleration on their bucket. What changes after enabling it?",
+    "options": {
+      "A": "Objects are automatically replicated to edge locations for faster downloads",
+      "B": "An accelerated endpoint URL is created; uploads route through AWS Edge Locations instead of the public Internet",
+      "C": "Download speeds improve by up to 300%",
+      "D": "The bucket's storage class is automatically upgraded to Standard"
+    },
+    "correct": "B",
+    "explanation": "Transfer Acceleration creates a new accelerated endpoint URL. When uploads use this endpoint, data enters the nearest AWS Edge Location and travels over AWS's private network to the bucket — bypassing unpredictable public Internet routing. It is specifically for upload speeds, not downloads. It does not replicate objects or change storage classes."
+  },
+  {
+    "id": 7,
+    "difficulty": "practitioner",
+    "question": "A company enables S3 Server Access Logging on their bucket and configures the logs to be saved in the same bucket. What is the likely consequence?",
+    "options": {
+      "A": "Logs are encrypted automatically to prevent unauthorised access",
+      "B": "An infinite recursive logging loop occurs, generating massive numbers of log entries and dramatically increasing storage costs",
+      "C": "AWS automatically disables logging after 24 hours to prevent overload",
+      "D": "The bucket becomes read-only to protect the log files"
+    },
+    "correct": "B",
+    "explanation": "Storing logs in the monitored bucket creates an infinite loop: a PutObject action generates a log, writing the log is itself a PutObject, which generates another log, and so on indefinitely. This produces hundreds of thousands of log entries and explodes storage costs. Logs must always be stored in a separate destination bucket."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "A security team wants to audit all API actions performed on an S3 bucket over the last 90 days, including who accessed which objects and when. Which combination of AWS features should they use?",
+    "options": {
+      "A": "Enable S3 Versioning and use S3 Inventory",
+      "B": "Enable S3 Server Access Logging with a separate target bucket, then query logs using Amazon Athena",
+      "C": "Enable S3 Transfer Acceleration and review the CloudFront access logs",
+      "D": "Enable Cross-Region Replication and compare both buckets"
+    },
+    "correct": "B",
+    "explanation": "S3 Server Access Logging captures every API action (PutObject, GetObject, DeleteObject, etc.) including requester identity, timestamp, and response status. Logs are stored in a separate target bucket to avoid recursive loops. Amazon Athena can run standard SQL queries over the log files to identify access patterns and detect anomalies. Versioning, Transfer Acceleration, and Replication do not provide audit logs."
+  }
+]
