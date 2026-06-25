@@ -69,6 +69,96 @@ function safeNodeId(name) {
   return name.replace(/[^A-Za-z0-9]/g, '');
 }
 
+// ── CIDR / subnetting diagram ────────────────────────────────────────────────
+// Today's class covered subnets and IP-range calculation. When the transcript
+// mentions CIDR blocks (e.g. 10.0.0.0/16, /24, /30) we render a teaching diagram
+// that shows how a VPC block splits into subnets, with computed host counts.
+
+// 2^(32-prefix) total addresses; AWS reserves 5 per subnet → usable = total - 5.
+function cidrInfo(prefix) {
+  const total = Math.pow(2, 32 - prefix);
+  const usable = prefix <= 30 ? Math.max(total - 5, 0) : 0; // AWS reserves 5
+  return { total, usable };
+}
+
+// Pull real CIDR mentions out of the transcript. Handles "10.0.0.0/16" and the
+// spoken/transcribed "slash 24" / "/ 24" / bare "/24" prefixes.
+function extractCidrs(text) {
+  const full = new Set();
+  const prefixes = new Set();
+
+  // Full a.b.c.d/nn
+  for (const m of text.matchAll(/\b(\d{1,3}(?:\.\d{1,3}){3})\s*\/\s*(\d{1,2})\b/g)) {
+    const p = Number(m[2]);
+    if (p >= 0 && p <= 32) full.add(`${m[1]}/${p}`);
+  }
+  // Bare or spoken prefixes: "/16", "slash 24"
+  for (const m of text.matchAll(/(?:\/\s*|slash\s+)(\d{1,2})\b/gi)) {
+    const p = Number(m[1]);
+    if (p >= 8 && p <= 32) prefixes.add(p);
+  }
+  return { full: [...full], prefixes: [...prefixes].sort((a, b) => a - b) };
+}
+
+function buildCidrMermaid(text) {
+  const { full, prefixes } = extractCidrs(text);
+  if (!full.length && !prefixes.length) return null;
+
+  const lines = ['flowchart TD'];
+  lines.push('  classDef vpc fill:#1e3a5f,stroke:#3b82f6,color:#fff;');
+  lines.push('  classDef pub fill:#14532d,stroke:#22c55e,color:#fff;');
+  lines.push('  classDef priv fill:#3b1e54,stroke:#a855f7,color:#fff;');
+  lines.push('  classDef calc fill:#422006,stroke:#f59e0b,color:#fff;');
+
+  // Pick a base VPC block: prefer a /16 that was actually mentioned, else default.
+  const vpc = full.find(c => c.endsWith('/16')) || '10.0.0.0/16';
+  const vInfo = cidrInfo(Number(vpc.split('/')[1]));
+  lines.push(`  VPC["VPC ${vpc}<br/>${vInfo.total.toLocaleString()} IPs"]`);
+  lines.push('  class VPC vpc;');
+
+  // Subnets: use mentioned /24-ish blocks, otherwise illustrate public/private.
+  const subnetBlocks = full.filter(c => {
+    const p = Number(c.split('/')[1]);
+    return p >= 17 && p <= 28;
+  });
+
+  if (subnetBlocks.length) {
+    subnetBlocks.slice(0, 6).forEach((c, i) => {
+      const info = cidrInfo(Number(c.split('/')[1]));
+      const id = `SUB${i}`;
+      const kind = i % 2 === 0 ? 'pub' : 'priv';
+      const label = `${i % 2 === 0 ? 'Public' : 'Private'} Subnet<br/>${c}<br/>${info.usable} usable`;
+      lines.push(`  ${id}["${label}"]`);
+      lines.push(`  VPC --> ${id}`);
+      lines.push(`  class ${id} ${kind};`);
+    });
+  } else {
+    const sub = cidrInfo(24);
+    lines.push(`  SUB0["Public Subnet<br/>10.0.1.0/24<br/>${sub.usable} usable"]`);
+    lines.push(`  SUB1["Private Subnet<br/>10.0.2.0/24<br/>${sub.usable} usable"]`);
+    lines.push('  VPC --> SUB0');
+    lines.push('  VPC --> SUB1');
+    lines.push('  class SUB0 pub;');
+    lines.push('  class SUB1 priv;');
+  }
+
+  // Prefix cheat-sheet for the prefixes mentioned in class.
+  const cheats = (prefixes.length ? prefixes : [16, 24, 28, 30])
+    .filter(p => p >= 16)
+    .slice(0, 6)
+    .map(p => {
+      const info = cidrInfo(p);
+      return `/${p} → ${info.total.toLocaleString()} IPs (${info.usable} usable)`;
+    });
+  if (cheats.length) {
+    lines.push(`  CALC["Prefix → hosts<br/>${cheats.join('<br/>')}"]`);
+    lines.push('  VPC -.-> CALC');
+    lines.push('  class CALC calc;');
+  }
+
+  return lines.join('\n');
+}
+
 function buildMermaid(text, dateLabel) {
   const hits = TOPICS
     .map(t => ({ ...t, count: (text.match(t.rx) || []).length }))
@@ -122,32 +212,80 @@ function summary(text, hits) {
   return { totalTopics: hits.length, top };
 }
 
-// ── GET /api/diagrams/today ─────────────────────────────────────────────────
-router.get('/diagrams/today', (req, res) => {
-  const files = recentCaptionFiles(2);
-  if (!files.length) {
-    return res.json({ diagram: 'flowchart TD\n  empty["No caption files found"]', summary: null });
+// List all transcript dates that exist, newest first.
+function allCaptionDates() {
+  if (!fs.existsSync(CAPTIONS_DIR)) return [];
+  return fs.readdirSync(CAPTIONS_DIR)
+    .filter(f => /^\d{4}-\d{2}-\d{2}\.txt$/.test(f))
+    .map(f => path.basename(f, '.txt'))
+    .sort()
+    .reverse();
+}
+
+// Build a diagram payload for one specific date. When `withContext` is true,
+// the previous day is mixed in (today weighted 3×) — matching the original
+// "today" behaviour so the latest class dominates.
+function diagramForDate(dateLabel, { withContext = true } = {}) {
+  const file = path.join(CAPTIONS_DIR, `${dateLabel}.txt`);
+  if (!fs.existsSync(file)) return null;
+
+  const todayText = fs.readFileSync(file, 'utf8');
+  const sources = [`${dateLabel}.txt`];
+
+  let text = todayText;
+  if (withContext) {
+    // Find the chronologically previous transcript for light context.
+    const dates = allCaptionDates();
+    const idx = dates.indexOf(dateLabel);
+    const prev = idx >= 0 && idx + 1 < dates.length ? dates[idx + 1] : null;
+    const olderText = prev ? fs.readFileSync(path.join(CAPTIONS_DIR, `${prev}.txt`), 'utf8') : '';
+    if (prev) sources.push(`${prev}.txt`);
+    text = [todayText, todayText, todayText, olderText].join('\n');
   }
 
-  // Weight today (first file) 3x so today's class dominates the diagram.
-  const todayText = fs.readFileSync(files[0], 'utf8');
-  const olderText = files.slice(1).map(f => fs.readFileSync(f, 'utf8')).join('\n');
-  const text = [todayText, todayText, todayText, olderText].join('\n');
-
-  const dateLabel = path.basename(files[0], '.txt');
   const diagram = buildMermaid(text, dateLabel);
-
+  const cidrDiagram = buildCidrMermaid(text); // null when no subnet/CIDR content
   const hits = TOPICS
     .map(t => ({ ...t, count: (text.match(t.rx) || []).length }))
     .filter(t => t.count > 0)
     .sort((a, b) => b.count - a.count);
 
-  res.json({
-    date: dateLabel,
-    sources: files.map(f => path.basename(f)),
-    diagram,
-    summary: summary(text, hits),
-  });
+  return { date: dateLabel, sources, diagram, cidrDiagram, summary: summary(text, hits) };
+}
+
+// ── GET /api/diagrams/days ──────────────────────────────────────────────────
+// Lists every transcript day with its detected topic count (for the grid).
+router.get('/diagrams/days', (_req, res) => {
+  const dates = allCaptionDates();
+  const out = dates.map(d => {
+    const text = fs.readFileSync(path.join(CAPTIONS_DIR, `${d}.txt`), 'utf8');
+    const hits = TOPICS.filter(t => (text.match(t.rx) || []).length > 0);
+    const topTopic = TOPICS
+      .map(t => ({ name: t.name, count: (text.match(t.rx) || []).length }))
+      .filter(t => t.count > 0)
+      .sort((a, b) => b.count - a.count)[0];
+    return { date: d, topics: hits.length, top: topTopic?.name || null };
+  }).filter(d => d.topics > 0);
+  res.json(out);
+});
+
+// ── GET /api/diagrams/day/:date ─────────────────────────────────────────────
+router.get('/diagrams/day/:date', (req, res) => {
+  const { date } = req.params;
+  if (!/^\d{4}-\d{2}-\d{2}$/.test(date)) return res.status(400).json({ error: 'Bad date' });
+  // Per-day view: just that day's transcript, no cross-day weighting.
+  const payload = diagramForDate(date, { withContext: false });
+  if (!payload) return res.status(404).json({ error: 'No transcript for that date' });
+  res.json(payload);
+});
+
+// ── GET /api/diagrams/today ─────────────────────────────────────────────────
+router.get('/diagrams/today', (_req, res) => {
+  const dates = allCaptionDates();
+  if (!dates.length) {
+    return res.json({ diagram: 'flowchart TD\n  empty["No caption files found"]', summary: null });
+  }
+  res.json(diagramForDate(dates[0], { withContext: true }));
 });
 
 module.exports = router;

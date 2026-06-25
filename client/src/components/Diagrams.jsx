@@ -13,13 +13,24 @@ export default function Diagrams() {
   const [error, setError] = useState(null);
   const [loading, setLoading] = useState(false);
   const [showSource, setShowSource] = useState(false);
+  const [days, setDays] = useState([]);
+  const [activeDate, setActiveDate] = useState(null); // null = "today" (weighted)
   const diagramRef = useRef(null);
+  const cidrRef = useRef(null);
 
-  const load = useCallback(async () => {
+  const loadDays = useCallback(async () => {
+    try {
+      const res = await apiFetch('/api/diagrams/days');
+      if (res.ok) setDays(await res.json());
+    } catch { /* ignore */ }
+  }, []);
+
+  const load = useCallback(async (date) => {
     setLoading(true);
     setError(null);
     try {
-      const res = await apiFetch('/api/diagrams/today');
+      const url = date ? `/api/diagrams/day/${date}` : '/api/diagrams/today';
+      const res = await apiFetch(url);
       if (!res.ok) throw new Error(`HTTP ${res.status}`);
       const json = await res.json();
       setData(json);
@@ -29,7 +40,8 @@ export default function Diagrams() {
     setLoading(false);
   }, []);
 
-  useEffect(() => { load(); }, [load]);
+  useEffect(() => { loadDays(); }, [loadDays]);
+  useEffect(() => { load(activeDate); }, [activeDate, load]);
 
   useEffect(() => {
     if (!data?.diagram || !diagramRef.current) return;
@@ -42,6 +54,20 @@ export default function Diagrams() {
       .catch((e) => {
         if (!cancelled) setError(`Mermaid render error: ${e.message}`);
       });
+    return () => { cancelled = true; };
+  }, [data]);
+
+  // Render the CIDR / subnet diagram when the day's transcript has IP content.
+  useEffect(() => {
+    if (!cidrRef.current) return;
+    if (!data?.cidrDiagram) { cidrRef.current.innerHTML = ''; return; }
+    let cancelled = false;
+    const id = `cidr-${Date.now()}`;
+    mermaid.render(id, data.cidrDiagram)
+      .then(({ svg }) => {
+        if (!cancelled && cidrRef.current) cidrRef.current.innerHTML = svg;
+      })
+      .catch(() => { /* keep main diagram even if this fails */ });
     return () => { cancelled = true; };
   }, [data]);
 
@@ -60,10 +86,52 @@ export default function Diagrams() {
         </div>
       </div>
 
+      {/* Day grid — browse each class day's diagram */}
+      {days.length > 0 && (
+        <div className="table-card" style={{ padding: '1rem 1.5rem', marginBottom: '1rem' }}>
+          <div style={{ fontSize: '0.75rem', color: '#94a3b8', textTransform: 'uppercase', marginBottom: 10 }}>
+            Diagrams by day
+          </div>
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fill, minmax(140px, 1fr))', gap: '0.6rem' }}>
+            <button
+              onClick={() => setActiveDate(null)}
+              style={{
+                textAlign: 'left', padding: '0.6rem 0.8rem', borderRadius: 8, cursor: 'pointer',
+                background: activeDate === null ? '#1d4ed8' : '#1e293b',
+                border: `1px solid ${activeDate === null ? '#3b82f6' : '#334155'}`,
+                color: '#e2e8f0',
+              }}
+            >
+              <div style={{ fontWeight: 600, fontSize: '0.85rem' }}>⭐ Today</div>
+              <div style={{ fontSize: '0.7rem', color: '#94a3b8' }}>weighted w/ prev day</div>
+            </button>
+            {days.map(d => (
+              <button
+                key={d.date}
+                onClick={() => setActiveDate(d.date)}
+                style={{
+                  textAlign: 'left', padding: '0.6rem 0.8rem', borderRadius: 8, cursor: 'pointer',
+                  background: activeDate === d.date ? '#1d4ed8' : '#1e293b',
+                  border: `1px solid ${activeDate === d.date ? '#3b82f6' : '#334155'}`,
+                  color: '#e2e8f0',
+                }}
+              >
+                <div style={{ fontWeight: 600, fontSize: '0.85rem' }}>{d.date}</div>
+                <div style={{ fontSize: '0.7rem', color: '#94a3b8' }}>
+                  {d.topics} topics{d.top ? ` · ${d.top}` : ''}
+                </div>
+              </button>
+            ))}
+          </div>
+        </div>
+      )}
+
       <div className="table-card" style={{ padding: '1rem 1.5rem', marginBottom: '1rem' }}>
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', marginBottom: '0.75rem' }}>
           <div>
-            <div style={{ fontWeight: 600, color: '#f1f5f9' }}>Today's topic map</div>
+            <div style={{ fontWeight: 600, color: '#f1f5f9' }}>
+              {activeDate ? `Topic map — ${activeDate}` : "Today's topic map"}
+            </div>
             <div style={{ fontSize: '0.8rem', color: '#94a3b8', marginTop: 2 }}>
               {data?.sources?.length
                 ? `Generated from ${data.sources.join(' + ')} (today weighted 3×)`
@@ -74,7 +142,7 @@ export default function Diagrams() {
             <button className="btn-sm" onClick={() => setShowSource(s => !s)}>
               {showSource ? 'Hide source' : 'Show source'}
             </button>
-            <button className="btn-sm btn-ok" onClick={load} disabled={loading}>
+            <button className="btn-sm btn-ok" onClick={() => { loadDays(); load(activeDate); }} disabled={loading}>
               {loading ? '…' : 'Refresh'}
             </button>
           </div>
@@ -116,6 +184,24 @@ export default function Diagrams() {
           </pre>
         )}
       </div>
+
+      {/* Subnet / CIDR teaching diagram — only when the day covered IP addressing */}
+      {data?.cidrDiagram && (
+        <div className="table-card" style={{ padding: '1rem 1.5rem', marginBottom: '1rem' }}>
+          <div style={{ fontWeight: 600, color: '#f1f5f9' }}>Subnets & IP addressing (CIDR)</div>
+          <div style={{ fontSize: '0.8rem', color: '#94a3b8', margin: '2px 0 0.75rem' }}>
+            How the VPC block splits into subnets, with usable-host counts (AWS reserves 5 per subnet).
+          </div>
+          <div
+            ref={cidrRef}
+            style={{
+              background: '#0f172a', border: '1px solid #334155', borderRadius: 8,
+              padding: '1rem', minHeight: 200, overflowX: 'auto',
+              display: 'flex', justifyContent: 'center',
+            }}
+          />
+        </div>
+      )}
 
       {top.length > 0 && (
         <div className="table-card" style={{ padding: '1rem 1.5rem' }}>

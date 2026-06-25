@@ -10,7 +10,7 @@ const CHROME_PATH = '/usr/bin/google-chrome';
 const CHROME_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome-aws');
 const DEBUG_PORT = 9410;
 const LOG_FILE = '/tmp/qa-platform.log';
-const URL = 'https://platform.qa.com/';
+const URL = 'https://platform.qa.com/programs/d8feaf4d-3cae-468a-ae9b-3c4f5ea2a428/';
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
 
 const EMAIL = process.env.QA_PLATFORM_EMAIL;

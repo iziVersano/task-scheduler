@@ -9,6 +9,7 @@ import BrowserAutomation from './components/BrowserAutomation.jsx';
 import AwsStatus from './components/AwsStatus.jsx';
 import DailyRecap from './components/DailyRecap.jsx';
 import Diagrams from './components/Diagrams.jsx';
+import Slides from './components/Slides.jsx';
 import { apiFetch } from './apiClient.js';
 
 const API = '/api';
@@ -245,6 +246,7 @@ export default function App({ keycloak }) {
               <button className={`nav-tab ${view === 'aws' ? 'nav-tab--active' : ''}`} onClick={() => setView('aws')}>☁ AWS</button>
               <button className={`nav-tab ${view === 'recap' ? 'nav-tab--active' : ''}`} onClick={() => setView('recap')}>📖 Recap</button>
               <button className={`nav-tab ${view === 'diagrams' ? 'nav-tab--active' : ''}`} onClick={() => setView('diagrams')}>🗺 Diagrams</button>
+              <button className={`nav-tab ${view === 'slides' ? 'nav-tab--active' : ''}`} onClick={() => setView('slides')}>🖼 Slides</button>
             </nav>
           </div>
 
@@ -348,6 +350,7 @@ export default function App({ keycloak }) {
         {view === 'aws' && <AwsStatus />}
         {view === 'recap' && <DailyRecap />}
         {view === 'diagrams' && <Diagrams />}
+        {view === 'slides' && <Slides />}
       </main>
 
       {showForm && (

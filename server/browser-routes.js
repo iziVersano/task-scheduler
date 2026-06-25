@@ -86,7 +86,7 @@ const SCRIPTS = {
   },
   'qa-platform': {
     name: 'QA Platform',
-    description: 'Opens platform.qa.com (Learn. To Change.) with auto-login',
+    description: 'Opens your QA program page (signs in if needed)',
     script: path.join(__dirname, 'qa-platform.js'),
     logFile: '/tmp/qa-platform.log',
     icon: '🟦',

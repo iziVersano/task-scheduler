@@ -3805,7 +3805,12 @@
   address. It keeps doubling every time. Any doubts. Is this clear to everyone?
   Let's take a quick break and after your break, if you have any doubts, we will
   clarify that doubt and then we will proceed. Is that clear? Take a break. Enjoy
-  and see you all in 15 to 20 minutes. Bye.
+  and see you all in 15 to 20 minutes. Bye. Is back shall be proceed. Everyone.
+  Okay. So we spoke about what an IP address is, how to create submit subnet masks
+  and what is we VPC? Basically? It's nothing but number of IP range and we also
+  covered your private and public IP address any questions so far. okay, if you
+  are given an IP address like this, I'll write the IP address. Tell me what kind
+  of an IP address is that. 10 Dot 5. What kind of an IP address is this?
   Is this clear? Any doubt. The first type is 000, The last type is 255.255 dot
   255 to 255. Okay, now we know one thing whenever I see IP address, most of the
   time, it will not be IP address. There will also be something called a subnet
@@ -3831,6 +3836,170 @@
   zero, dot zero. This is my IP and I also told you one thing. Each block, there
   are four blocks in your IPv4, right. Each block is represented using how many
   bits How many bits?
+
+[10:52]
+  told you there is something called as a range for public IP and private, Public
+  ip. Okay, we'll keep public ips aside. We will now first, talk about private
+  type. Ultimately, I am using VPC to create what a private cloud that means. I
+  need to talk about private IP more. so your Ian, A In Internet assigned numbers
+  authority. So this is nothing but Internet assigned. Numbers author, it's an
+  authority. It's a you. What? You can call it as it's an organization, which
+  gives you your IP addresses. Okay, this IP organization has specified that all
+  your private. IPS will be something like this. See. Your private IP range.
+  10.0.0.0. Till. The last range. So basically, we need the last range in this 10
+  series. The last changes. 10 Dot 255. Dot 255. Dot 255. Okay, this is first one.
+  Second one. 172. Dot 16. Dot zero, dot zero. Okay, 16.0.0, till you have 172.
+  Dot. 31. 255. Dot 255. And the last range of IP is 192. dot 168, dot zero dot
+  zero to you have 192 168 dot 255. Dot 255. So, whenever you create your EC2
+  instance, please observe your private IP of your EC2. It will always be in this
+  range only. All your private IP addresses. Whether it is for your EC2, or
+  whether it is for your database, anywhere you use your private IP, it has to be
+  in this range. Let me rewrite it here again. So it is 10 Dot. Zero dot one
+  second. Ten Dot 0.0.0. To. 10 Dot C. So, 255 dot To 55, dot to 55. This is your
+  first one. Okay. Next IP, addresses 172 dot? 16 Dot 0.02. You have 172 Dot? 31.
+  Dot. 255.255. Next one is. 192. Dot. 168. Dot 0.0. To. 192. .168 dot 255 to 55.
+  So there are three ranges. So, all your private IP. This is private IP. Please.
+  Keep this in mind. Very, very important wherever you see private IP, it has to
+  start with 10 or 172 or 192. There is no other value. understood, if you see
+  something like 246. Dot 0 dot. One. Dot 10. It is clear. This is public IP
+  because see here, it is starting with 246. So it is not at all a private IP. Is
+  this clear? So private IP only starts with 10 172 and 192 rest of the IP
+  addresses on the Internet are public. Is that clear? and remember, guys,
+  whenever we need extremely big network, Extremely big private network? You would
+  go for this range, why? You see here? Very simple? Just by looking at this, we
+  can understand this range, you're changing three blocks. So, it is nothing but
+  24, bits, two Power, 24 options, you have. Is this clear two power 24, Can
+  anybody calculate what is the value of 2, power 24?
+  Public. Why?
+  The last changes. 10 Dot 255. Dot 255. Dot 255. Okay, this is first one. Second
+  one. 172. Dot 16. Dot zero, dot zero. Okay, 16.0.0, till you have 172. Dot. 31.
+  255. Dot 255. And the last range of IP is 192. dot 168, dot zero dot zero to you
+  have 192 168 dot 255. Dot 255. So, whenever you create your EC2 instance, please
+  observe your private IP of your EC2. It will always be in this range only. All
+  your private IP addresses. Whether it is for your EC2, or whether it is for your
+  database, anywhere you use your private IP, it has to be in this range. Let me
+  rewrite it here again. So it is 10 Dot. Zero dot one second. Ten Dot 0.0.0. To.
+  10 Dot C. So, 255 dot To 55, dot to 55. This is your first one. Okay. Next IP,
+  addresses 172 dot? 16 Dot 0.02. You have 172 Dot? 31. Dot. 255.255. Next one is.
+  192. Dot. 168. Dot 0.0. To. 192. .168 dot 255 to 55. So there are three ranges.
+  So, all your private IP. This is private IP. Please. Keep this in mind. Very,
+  very important wherever you see private IP, it has to start with 10 or 172 or
+  192. There is no other value. understood, if you see something like 246. Dot 0
+  dot. One. Dot 10. It is clear. This is public IP because see here, it is
+  starting with 246. So it is not at all a private IP. Is this clear? So private
+  IP only starts with 10 172 and 192 rest of the IP addresses on the Internet are
+  public. Is that clear? and remember, guys, whenever we need extremely big
+  network, Extremely big private network? You would go for this range, why? You
+  see here? Very simple? Just by looking at this, we can understand this range,
+  you're changing three blocks. So, it is nothing but 24, bits, two Power, 24
+  options, you have. Is this clear two power 24, Can anybody calculate what is the
+  value of 2, power 24?
+  Perfect, it doesn't start with 10 172 or 192 because of which, we can clearly
+  say it is a public IP address. And this IP address anyone can access it if your
+  firewall rules. I love them. Is this clear? Any doubt. No doubt shall be
+  proceed. Okay. Now gently, What happens? In a VPC. Let me remove this. Okay, if
+  you have a VPC A VPC should have both part, right? For example, I told you VPC
+  is mostly created to have your own set of IP address. And we can use that IP
+  address to set up our infrastructure. So, So this is my VPC. Okay. So here, I
+  will set up my infrastructure for example. Your? Ec2. You have Rds. You have
+  your. And you have S3. No, just see this. EFS stands for Elastic File System
+  again, a service where data is stored. Okay, now if you see this EC2 is what EC2
+  is your server? RDS S3 and EFS. These are the services where I store my data.
+  Correct. And what is VPC? VPC is nothing. But you are purchasing or you are
+  hiring certain range of IP addresses for your requirement. Is that clear? And if
+  this VPC has an eye is like this for example, 10 dot 0, dot 0, dot, zero slash
+  twenty. Seven. Can anyone tell me how many IP address? If I get, I will get if I
+  have slash 27.
+
+[10:53]
+  dot 168, dot zero dot zero to you have 192 168 dot 255. Dot 255. So, whenever
+  you create your EC2 instance, please observe your private IP of your EC2. It
+  will always be in this range only. All your private IP addresses. Whether it is
+  for your EC2, or whether it is for your database, anywhere you use your private
+  IP, it has to be in this range. Let me rewrite it here again. So it is 10 Dot.
+  Zero dot one second. Ten Dot 0.0.0. To. 10 Dot C. So, 255 dot To 55, dot to 55.
+  This is your first one. Okay. Next IP, addresses 172 dot? 16 Dot 0.02. You have
+  172 Dot? 31. Dot. 255.255. Next one is. 192. Dot. 168. Dot 0.0. To. 192. .168
+  dot 255 to 55. So there are three ranges. So, all your private IP. This is
+  private IP. Please. Keep this in mind. Very, very important wherever you see
+  private IP, it has to start with 10 or 172 or 192. There is no other value.
+  understood, if you see something like 246. Dot 0 dot. One. Dot 10. It is clear.
+  This is public IP because see here, it is starting with 246. So it is not at all
+  a private IP. Is this clear? So private IP only starts with 10 172 and 192 rest
+  of the IP addresses on the Internet are public. Is that clear? and remember,
+  guys, whenever we need extremely big network, Extremely big private network? You
+  would go for this range, why? You see here? Very simple? Just by looking at
+  this, we can understand this range, you're changing three blocks. So, it is
+  nothing but 24, bits, two Power, 24 options, you have. Is this clear two power
+  24, Can anybody calculate what is the value of 2, power 24?
+
+[10:54]
+  To. 10 Dot C. So, 255 dot To 55, dot to 55. This is your first one. Okay. Next
+  IP, addresses 172 dot? 16 Dot 0.02. You have 172 Dot? 31. Dot. 255.255. Next one
+  is. 192. Dot. 168. Dot 0.0. To. 192. .168 dot 255 to 55. So there are three
+  ranges. So, all your private IP. This is private IP. Please. Keep this in mind.
+  Very, very important wherever you see private IP, it has to start with 10 or 172
+  or 192. There is no other value. understood, if you see something like 246. Dot
+  0 dot. One. Dot 10. It is clear. This is public IP because see here, it is
+  starting with 246. So it is not at all a private IP. Is this clear? So private
+  IP only starts with 10 172 and 192 rest of the IP addresses on the Internet are
+  public. Is that clear? and remember, guys, whenever we need extremely big
+  network, Extremely big private network? You would go for this range, why? You
+  see here? Very simple? Just by looking at this, we can understand this range,
+  you're changing three blocks. So, it is nothing but 24, bits, two Power, 24
+  options, you have. Is this clear two power 24, Can anybody calculate what is the
+  value of 2, power 24?
+  32. Why how 32 minus 27 is 2? Power 5 2 power 5 is nothing but 32 iPS Do you
+  guys agree with me? Okay, everybody agrees with me 32 IP address. But now what I
+  do I want to set up different services so I will give one IP address. So when I
+  purchase this or when I create a VPC, I will get 32. IP one, I will give it for
+  EC2 one, I will give it for RDS one for EFS, one for a S3. So I keep assigning
+
+[10:55]
+  192. .168 dot 255 to 55. So there are three ranges. So, all your private IP.
+  This is private IP. Please. Keep this in mind. Very, very important wherever you
+  see private IP, it has to start with 10 or 172 or 192. There is no other value.
+  understood, if you see something like 246. Dot 0 dot. One. Dot 10. It is clear.
+  This is public IP because see here, it is starting with 246. So it is not at all
+  a private IP. Is this clear? So private IP only starts with 10 172 and 192 rest
+  of the IP addresses on the Internet are public. Is that clear? and remember,
+  guys, whenever we need extremely big network, Extremely big private network? You
+  would go for this range, why? You see here? Very simple? Just by looking at
+  this, we can understand this range, you're changing three blocks. So, it is
+  nothing but 24, bits, two Power, 24 options, you have. Is this clear two power
+  24, Can anybody calculate what is the value of 2, power 24?
+
+[10:56]
+  and remember, guys, whenever we need extremely big network, Extremely big
+  private network? You would go for this range, why? You see here? Very simple?
+  Just by looking at this, we can understand this range, you're changing three
+  blocks. So, it is nothing but 24, bits, two Power, 24 options, you have. Is this
+  clear two power 24, Can anybody calculate what is the value of 2, power 24?
+
+[10:58]
+  Now, very simple. You always have to remember this. ADI, 16 is always 64k 65k
+  65,536 Okay, two power 16 hours, always 65,536. Now, if you see this third IP
+  range, what is happening in the third IP range? Look at this. Here. 192 168 192
+  168. You're keeping it as it is. What is changing? What is changing here? The
+  only thing that is changing is the last two blocks. And we know each block is
+  represented using, how many bits 8 bits, 8 plus 8. So 16 bits your you can
+  change. So, 2 Power 16 is what 65,536 IP address. So, if you want around 65k IP
+  address, you are going to have to power 6, which is nothing. But you can take up
+  this particular Network. Understood. Is this clear? Okay. Okay, so this is a
+  very huge network. This is a moderate network, depending on how much you want,
+  see guys. Two power means it keeps doubling. Okay, so to power, 8 is 256 2 Power
+  9. Is 512. 2 power 10 is 1 0, 2 4. 2 Power. 10 itself is 1024. Once you go to 2
+  per 24 located, it's going to 16 million. Is this clear? And two power 16. Is
+  65k IP address. It keeps doubling every time. Any doubts. Is this clear to
+  everyone? Let's take a quick break and after your break, if you have any doubts,
+  we will clarify that doubt and then we will proceed. Is that clear? Take a
+  break. Enjoy and see you all in 15 to 20 minutes. Bye. Is back shall be proceed.
+  Everyone. Okay. So we spoke about what an IP address is, how to create submit
+  subnet masks and what is we VPC? Basically? It's nothing but number of IP range
+  and we also covered your private and public IP address any questions so far.
+  okay, if you are given an IP address like this, I'll write the IP address. Tell
+  me what kind of an IP address is that. 10 Dot 5. What kind of an IP address is
+  this?
   32. Why how 32 minus 27 is 2? Power 5 2 power 5 is nothing but 32 iPS Do you
   guys agree with me? Okay, everybody agrees with me 32 IP address. But now what I
   do I want to set up different services so I will give one IP address. So when I
@@ -3846,4 +4015,304 @@
   can allow access to these services, Correct. So this is somehow not that secure
   enough. Why? Ultimately any company remember this always any company only works
   because of data. Data is the primary source. Without data, nothing works. Okay,
-  your server your script. They are also called as your
+  your server your script. They are also called as your script. I mean, basically
+  data only Your program, your code everything. Now, if you see, I cannot place
+  everything randomly like this inside VPC. This is not a good solution. This is
+  not a good way of structuring your architecture. Is this clear? So, this is when
+  we think about creating inside VPC, a public network, and a private network. So
+  now what I do Okay, I have a VPC inside this VPC. I will start creating a
+  portion for my public network a portion for my private network. Why? If I place
+  randomly everything in the VPC, that means everybody from the Internet. If my
+  firewall allows, then everybody can access. And obviously we need one more
+  thing. What is it? Internal requirement Internal networking is very, very
+  important aspect for me. Okay, so subnet is a smaller network. Remember, very
+  important term. What is a subnet? Subnet is a smaller network created from VPC.
+  So here you have a huge VPC. And here you have Subnet 1 here, you have Subnet 2
+  So now you see if this VPC has total 64 IP address. If it is 64 IP address, can
+  you tell me? What is the subnet mask? The VPC has totally 64 IP. What is the
+  subnet mask? Slash 26. Does everyone agree with slash 26? yes, so 64 means what
+  2 Power 6. So 32 minus something should give me 2 power 6. What is that?
+  Something? That is nothing but 24. So now I can consider since this is a private
+  network private network. IP addresses can start with 192.168, so imagine 192 dot
+  dot 168, dot zero dot zero, slash 20. 6, Is this clear? Any doubts. So this is
+  my VPC IP with the cider. Now you see here, 26. Sorry 64 IP addresses are there.
+  I can keep creating any number of subnets. Subnet means what I told you subnet
+  is a smaller part created from your VPC. So now I have 64 from 64. I will take 8
+  IP addresses and I will create my first subnet. I will take 16 IP addresses and
+  I will create my other subnet. How many are remaining? 64, minus 8, minus 16.
+  How many IP addresses are remaining? 64 IP addresses are there in your VPC out
+  of 64. I am taking 8 and I'm giving for first subnet. Okay? And from the
+  remaining, I am taking 16 and giving for the second subnet, how many IP
+  addresses are remaining here. Is it 40? Do you guys agree with me that there are
+  40. IP addresses remaining. Okay, let us keep this. Handy. Okay. Now you see You
+  might ask. Why am I giving this 8 here and 16? There it is. Company requirement.
+  Now you see? I will change the diagram, a bit. Now what I say, I call this
+  subnet. Basically, submits are created to. Separate Your Resources to Bifurcate
+  Your Resources. Why should I buy forget my resources because my data is my
+  highest prominence here. So, data should not keep it publicly accessible. So
+  what I do, I create two subnets I create for subnet called as Public subnet and
+  I will create the second subnet calling it as private subnet. So, private subnet
+  means only within the network, you can access this. Anybody from outside has no
+  access to the private subnet only for company. Internal usage. So I told you I
+  have 16 IP address assigned here. Now you see here I told you 16. So the first
+  public IP address has 8, and the private IP address is 16 out of 16. I will give
+  One to first ideas, I will give second to the second radius. I will give to
+  Three is three buckets. Two for two EFS. and next, you also have easy to some
+  internal Processing ec2s. You have which, for example, let's say credit card,
+  processing credit card processing like whenever you go to per online, purchasing
+  you definitely give your card details debit card or credit card. A either of
+  them you are giving it, your credit card is given. So this card details
+  whichever server is processing that details should not be publicly accessible by
+  someone else. so now what I do, I place the DC to instance also in the private
+  subnet Is that clear? And so see you might ask. I have 16, I have only allotted
+  one, two, three, four, five, six, seven, eight. What about the eight remaining?
+  Keep it, you might use it in the future, always, you need to have extra IP
+  addresses in hand. You should not consume or use all the IP addresses. There
+  will be definitely extra requirement at some point of time. why, for example,
+  Let us consider because of some natural calamity. This EC2 instance is not
+  working. So that means what you need to set up another EC2 instance. So what you
+  do by the time you terminate, this and restart, what you do is immediately you
+  take up whatever spare IP address is there you allotted to the current EC2 So
+  always extra IP, addresses has to be there. Okay, what is there in public
+  subnet? Then public subnet. Generally has your server It generally has all the
+  servers for example. What is a server mean here? Or What does your instance mean
+  here? Here, if you see any time you access www.amazon.com zolando.com, Or
+  sheen.com any website you access there is a first home page, right? that home
+  page, everyone should be able to access Have you guys ever wondered without
+  logging in to Amazon without creating your profile on Zolando on Puma on Nike,
+  you can still go and scroll through the website. Have you guys noticed this?
+  Without creating your own profile, you can go and watch all the contents on the
+  website. You can go and watch all the products on the website. Why? Because that
+  server is a public server. So all the products, all the details that are shown
+  on the public server. It is in the public subnet, anybody can access that
+  website is this clear, for example, now, See. One moment. Okay, no. More dot D.
+  Do you see this? And I haven't locked into this website. How am I able to access
+  this? How can I go and check? The contents. Because this website or this home
+  page is getting processed in your public subnet. And here you have said a
+  security group where you are doing this 0.0.0.0 / 0, Is this clear? We spoke
+  about security groups, right on Friday. So, when we spoke about security groups,
+  what did I tell you are? Have you have to give an IP address who can access your
+  instance? Now you see, there is an easy to instance running in your public
+  subnet because it's a public subnet, it has Internet access, There is easy to
+  instance, running in your public subnet, which has a security group. With this
+  particular rule, What is this rule mean? Anybody from anywhere can access the
+  website? I am sitting in India. I am accessing a Deutsch website. How I am
+  accessing a website, that is only predominantly used in Germany. Is this clear?
+  Without even creating your profile you can access almost all e-commerce website.
+  because it is in public subnet and it has a security group which allows
+  everybody to access that particular server And that is how you do your
+  publicity. Imagine if it is a website where they expect you to create a profile
+  all the time, would you go and create a profile without knowing, What is there
+  in the website? Definitely know. I would not create for example. Now I go to
+  ladies and I will see some shoes. Let's say, Okay, some sneakers, something like
+  that. Okay. So there are some shoes here. Okay? Now I see that just by looking
+  at this show, okay? I'm like I am fond of these shoes. Now, I want to purchase
+  the show then what I do only after seeing the product. Only after, you know, if
+  this is a legit website, only, then you create your profile. First, the company
+  has to attract the customers for, which they have to make their website publicly
+  accessible. How would they make it? They would only make it by putting their
+  Server in Your Public Subnet. If you have your public subnet here in this
+  public, subnet, you are giving easy or creating an instance which is hosting a
+  website where anybody from Internet can access Any doubts. Yes, easy.
+
+[10:59]
+  Network. Understood. Is this clear? Okay. Okay, so this is a very huge network.
+  This is a moderate network, depending on how much you want, see guys. Two power
+  means it keeps doubling. Okay, so to power, 8 is 256 2 Power 9. Is 512. 2 power
+  10 is 1 0, 2 4. 2 Power. 10 itself is 1024. Once you go to 2 per 24 located,
+  it's going to 16 million. Is this clear? And two power 16. Is 65k IP address. It
+  keeps doubling every time. Any doubts. Is this clear to everyone? Let's take a
+  quick break and after your break, if you have any doubts, we will clarify that
+  doubt and then we will proceed. Is that clear? Take a break. Enjoy and see you
+  all in 15 to 20 minutes. Bye. Is back shall be proceed. Everyone. Okay. So we
+  spoke about what an IP address is, how to create submit subnet masks and what is
+  we VPC? Basically? It's nothing but number of IP range and we also covered your
+  private and public IP address any questions so far. okay, if you are given an IP
+  address like this, I'll write the IP address. Tell me what kind of an IP address
+  is that. 10 Dot 5. What kind of an IP address is this?
+
+[11:00]
+  clarify that doubt and then we will proceed. Is that clear? Take a break. Enjoy
+  and see you all in 15 to 20 minutes. Bye. Is back shall be proceed. Everyone.
+  Okay. So we spoke about what an IP address is, how to create submit subnet masks
+  and what is we VPC? Basically? It's nothing but number of IP range and we also
+  covered your private and public IP address any questions so far. okay, if you
+  are given an IP address like this, I'll write the IP address. Tell me what kind
+  of an IP address is that. 10 Dot 5. What kind of an IP address is this?
+
+[11:01]
+  Is back shall be proceed. Everyone. Okay. So we spoke about what an IP address
+  is, how to create submit subnet masks and what is we VPC? Basically? It's
+  nothing but number of IP range and we also covered your private and public IP
+  address any questions so far. okay, if you are given an IP address like this,
+  I'll write the IP address. Tell me what kind of an IP address is that. 10 Dot 5.
+  What kind of an IP address is this?
+
+[11:08]
+  Inside the company in, put it, in the private subnet, it's internal usage.
+  Why would you want to make it publicly accessible? Put it in the private subnet?
+  And one more thing. See here. There is a very important thing that we need to
+  know about public subnet and private subnet. What is it? Public Subnet, Private
+  Subnet. public Subnet If you have your EC2 here and if there is some beautiful
+  person here who's trying to access the server, Okay, this person can only access
+  if there is something a new service called as Internet Gateway. There has to be
+  a new service called as I G W. What is this igw? This igw is nothing but
+  Internet Gateway. Is that clear? Let me rewrite again. The name itself is clear
+  Internet Gateway. Why is this used then? It's a gateway to access Internet. So
+  anybody from the Internet, if they want to access your server you need Internet.
+  Gateway from your internal network. If you want to access Internet, or you want
+  to send message outside your network, You need Internet, Gateway Internet,
+  Gateway. This particular service connects your internal services with the
+  Internet outside. So if you want the connection from here to here, it is only
+  possible with the help of Internet Gateway. Is this clear? So now, if a person
+  from outside from Internet wants to access the EC2, what happens, he will send a
+  request. And the request is immediately captured by Internet Gateway. So this
+  will be the first point of contact. So now, what let's let's say this person is
+  sending a request toe 192 dot 168.
+
+[11:15]
+  Why would you want to make it publicly accessible? Put it in the private subnet?
+  And one more thing. See here. There is a very important thing that we need to
+  know about public subnet and private subnet. What is it? Public Subnet, Private
+  Subnet. public Subnet If you have your EC2 here and if there is some beautiful
+  person here who's trying to access the server, Okay, this person can only access
+  if there is something a new service called as Internet Gateway. There has to be
+  a new service called as I G W. What is this igw? This igw is nothing but
+  Internet Gateway. Is that clear? Let me rewrite again. The name itself is clear
+  Internet Gateway. Why is this used then? It's a gateway to access Internet. So
+  anybody from the Internet, if they want to access your server you need Internet.
+  Gateway from your internal network. If you want to access Internet, or you want
+  to send message outside your network, You need Internet, Gateway Internet,
+  Gateway. This particular service connects your internal services with the
+  Internet outside. So if you want the connection from here to here, it is only
+  possible with the help of Internet Gateway. Is this clear? So now, if a person
+  from outside from Internet wants to access the EC2, what happens, he will send a
+  request and the request is immediately captured by Internet Gateway. So this
+  will be the first point of contact. So now, what, let's say this person is
+  sending a request to Tour 192 dot 168, dot zero dot one. Okay, and this is the
+  private IP. Let us say, there is also a public IP. The public IP is 2.3.4.5,
+  Anything other than 192 10 and 172, we know it's a public IP. So now your user
+  is using this IP address to send a request. So it comes to Internet. Gateway
+  Internet, Gateway, what does it do? Then you have something one more special
+  service that is nothing but you are a route table. What is it? It is called as a
+  root table. Every subnet will have a root table. What is it? It is nothing but a
+  root table. So basically root tables are used for what? So, now the request is
+  come to Internet. Gateway Internet. Gateway already has access to both the root
+  tables. Internet Gateway, already knows about both the root tables. So it checks
+  this 2.3.4.5. So immediately checking this IP address, it knows it has to send
+  to public subnet root table. Only it should not send it to private root table,
+  okay? So I will remove this. Okay, it's a public IP. So what happens now
+  Internet, gateway, Since the request to your public, subnet root table inside
+  this public, subnet, there can be so many other services, for example. Now, you
+  see there, let's say there are three easy to instances Okay, and this ec2 has
+  the ip2.3.4.5. Okay, this is easy to have an IP 1.2.3.4. And this is James Bond,
+  IP So7.7.7.7. Okay. Now what happens this is root table. Root table means it has
+  information about all the services within that particular subnet. Is that clear?
+  It has information about all the services in that subnet and the request is
+  coming for this particular ip2.3.4.5. So once the request comes to root table,
+  root table helps you to Transport the request to the respective instance. So now
+  it checks. Oh there are three instances. The request is coming to 2.3.4 dot 5,
+  which is this one. So request from now, from the user, goes to Internet gateway,
+  then goes to root table and then goes to its respective. EC2 instance is this
+  clear? Yes, Suman.
+
+[11:16]
+  Yes. Every subnet needs to have a route table. Why is it? Why without root
+  table, what happens? So now, if let's say if without root, if I don't have a
+  root table and you have certain components here already. Yes, EC2 sqs.
+  Kindnesses. Some other subnets are some services are here. How do we know how
+  many services are there inside, private subnet? How do we connect to it? We have
+  to reach this whether it is a local network or a private network or a public
+  network. Somehow I have to reach this RDS. Correct. That means there should be
+  someone who is keeping track of the service along with its IP address. So that
+  service and IP address combination is kept track by your root table. Is this
+  clear? Root table keeps track of. All these services with its IP address and
+  root table decides how the traffic has to be transferred. Because now the
+  traffic is coming to the this particular destination 2.3.4.5 right now, you can
+  tell, Oh, this has to go to this root table. And from here, out of so many easy
+  to instances, you basically go to this specific, easy to only It is exactly like
+  your GPS for your internal BPC. It will tell how to it, basically, it helps your
+  traffic to navigate to the exact destination. The destination is here, it'll do
+  your route table will tell Go to this go via this network and reach the
+  destination. Is this clear? Now, one more important thing, if I have something
+  in private subnet, one more important thing for your exam. This is public. This
+  is a route table. Internet Gateway. Okay, so if you have something in your
+  private one important thing, your public subnet can only access Internet.
+  Gateway your Internet. Gateway can only be accessed by public subnet. Private
+  subnet. Can it access Internet gateway? No, here. There is no Internet access.
+  You cannot send message from private subnet to Internet or vice versa. This is
+  not possible. And that is why I am calling it as private subnet. It should not
+  be accessible to Internet nor it can access any Internet features. Is this
+  clear? That's the main thing about your private subnet. Okay, so if they ask in
+  your cloud practitioner, if you have a private subnet, can it access Internet,
+  answer is no. It cannot access Internet. You might ask. If I have an EC2
+  instance and at some point of time, it needs Internet access. What should I do?
+  We will find that solution tomorrow. That is when we will be doing bastion host,
+  and net gateway. Clear. Yes, Gilles.
+  Subnet.
+  No from private, no pinging. No chatting. No sending message. No downloading
+  nothing.
+
+[11:17]
+  Okay, there is an alternate way which we will learn tomorrow.
+  Here, clear from private subnet you cannot send you cannot receive message.
+  There is no Internet access. And if there is some beautiful person here and he
+  wants to access the CC to Kenny access this. No and first of all he has no idea
+  whether the CC to exists or not. Why? Because this is private simple. Keep that
+  in mind. If it is private subnet. Any service in the private, subnet is not
+  visible to the person outside the VPC. Is this clear? Any service you put it in
+  private subnet. It is not visible to anybody outside. Your
+
+[11:21]
+  Everyone. Okay. So we spoke about what an IP address is, how to create submit
+  subnet masks and what is we VPC? Basically? It's nothing but number of IP range
+  and we also covered your private and public IP address any questions so far.
+  okay, if you are given an IP address like this, I'll write the IP address. Tell
+  me what kind of an IP address is that. 10 Dot 5. What kind of an IP address is
+  this?
+  There is no Internet access. And if there is some beautiful person here and he
+  wants to access the CC to Kenny access this. No and first of all he has no idea
+  whether the CC to exists or not. Why? Because this is private simple. Keep that
+  in mind. If it is private subnet. Any service in the private, subnet is not
+  visible to the person outside the VPC. Is this clear? Any service you put it in
+  private subnet. It is not visible to anybody. Outside your VPC. Now, there might
+  be another question. What is the question? Now, let us say. Okay, there is one
+  EC2 in. Public. Subnet. And one EC2 In private subnet. Can they do communicate
+  with each other? Answer is Yes, they can communicate with each other. Why?
+  Because you are in the same VPC. Are you going outside VPC to Internet? No. I am
+  not leaving the network, I am doing internal connection, This is where we talk
+  about. Someone asked about what if you have a company specific website you do
+  this, basically. this is within your network, you're creating a communication
+  and remember if you have services here for example, Gently What happens? You
+  keep your database I told you already. Yes. S3. You create a connection from
+  here from here, because you have a route table So basically, what happens if my
+  EC2 wants to send a request, the EC2 first will send the message via route table
+  to this route table and it will go to S3. See, are we leaving this beautiful
+  vpc? Boundary here? No way. We are going out of this vpc boundary This VPC
+  boundary is maintained. I am not leaving my network. Is this clear? This is the
+  main advantage for me. Any doubt. So, we know, we know, couple of things now,
+  what is it VPC is your private network where you will have IP address with the
+  mask mask will tell me how many IPS I can use for my VPC. Mask or cider mask
+  will tell me how many number of IP addresses are assigned to my VPC. Next, if
+  your VPC Needs a private part to store your data. What can I do? I can divide
+  this VPC. Remember guys, you can divide this VPC and create what I can create a
+  subnets. Why do people create subnets Easy to maintain easy to handle your
+  security group aspect? I mean, you're basically network aspect you. Easy to
+  handle, all your security, encryption your connection aspect, everything you can
+  do it permission. All that you can do if you have a small network. Okay, so no
+  matter what I do, if it is a VPC definitely, there will be two parts. One part
+  will be public. One part will be private. If I create everything private then
+  that means their BPC is only an internal requirement. Imagine there can also be
+  a situation, what is it? There can also be a situation where both of them are
+  private subnet. Private, Subnet, One private subnet, a private subnet, B, it can
+  be. So is there any new need for Internet Gateway? And absolutely, no. Because
+  private subnet, you will not be accessing Internet. There is a VPC. You might
+  ask. Where should, where do we use this? Is there any use case? Yes. Internal
+  use case. For your company who is about to create a basic product. So, they are
+  about to create a new product, they are still in the development phase. During
+  the time you don't need public. Public is when only you launch it, if it is in
+  the development phase, there is no need for public subnet. Is this clear? So
+  what I do I create two private subnet. I keep half of the services here already.
+  Yes I keep other half here for example you see EC2 here and sqs here and now you
+  can create a connection Is this clear? This is an internal requirement. Can
+  anybody from outside access?

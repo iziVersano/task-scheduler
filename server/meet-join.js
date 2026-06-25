@@ -16,6 +16,11 @@ const DEBUG_PORT = 9399;
 const LOG_FILE = '/tmp/meet-join.log';
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
 
+// How long to keep waiting in the "host hasn't admitted you / meeting hasn't
+// started yet" lobby before giving up. Covers a late or postponed meeting.
+// Override with MEET_WAIT_MINUTES env var.
+const WAIT_ROOM_MINUTES = Number(process.env.MEET_WAIT_MINUTES) || 20;
+
 // Load graphical-session env vars (DISPLAY, WAYLAND_DISPLAY, XDG_RUNTIME_DIR,
 // etc.) from a snapshot file so Chrome can open a window even when the scheduler
 // process was started outside an interactive desktop session (e.g. via systemd
@@ -597,13 +602,81 @@ function markSuccessToday() {
           });
         }, postJoinDismiss);
       }
-      log('Successfully joined the meeting');
-      markSuccessToday();
+      log('Clicked join — checking whether we are admitted or in a waiting room...');
     }
 
-    // Wait for in-meeting toolbar to fully render before muting
+    // ── Waiting-room handler ──────────────────────────────────────────────────
+    // After "Ask to join", Google may park us on a lobby screen:
+    //   "Please wait until a meeting host brings you into the call"
+    //   "Asking to be let in..."  /  "You'll join the call when someone lets you in"
+    // This is exactly what a LATE or POSTPONED meeting looks like — the host
+    // hasn't started or admitted us yet. Poll until the in-meeting toolbar (the
+    // Leave / End-call button) appears, or give up after WAIT_ROOM_MINUTES.
+    async function inMeetingToolbarVisible() {
+      return page.evaluate(() => {
+        const sel = '[aria-label*="Leave" i],[aria-label*="Verlassen" i],[aria-label*="End call" i],[aria-label*="Anruf beenden" i]';
+        const el = document.querySelector(sel);
+        return !!(el && el.offsetParent !== null);
+      }).catch(() => false);
+    }
+    async function lobbyText() {
+      return page.evaluate(() => {
+        const body = (document.body.innerText || '').toLowerCase();
+        const patterns = [
+          'wait until a meeting host', 'brings you into the call',
+          'asking to be let in', "you'll join the call when",
+          'someone lets you in', 'warten, bis dich ein moderator',
+          'um beitritt bitten', 'bitte warte',
+        ];
+        return patterns.find(p => body.includes(p)) || '';
+      }).catch(() => '');
+    }
+
     log('Waiting for in-meeting toolbar...');
-    await page.waitForSelector('[aria-label*="Leave" i], [aria-label*="Verlassen" i], [aria-label*="End call" i]', { timeout: 15000 }).catch(() => {});
+    if (!(await inMeetingToolbarVisible())) {
+      const lobby = await lobbyText();
+      if (lobby) {
+        log(`In waiting room ("${lobby}"). Host may be late — polling up to ${WAIT_ROOM_MINUTES} min...`);
+      } else {
+        log('Toolbar not up yet — waiting briefly for the meeting to load...');
+      }
+
+      const deadline = Date.now() + WAIT_ROOM_MINUTES * 60_000;
+      let admitted = false;
+      let lastLog = 0;
+      while (Date.now() < deadline) {
+        if (await inMeetingToolbarVisible()) { admitted = true; break; }
+
+        // If the lobby is asking us to (re)request entry, click the button.
+        await page.evaluate(() => {
+          const btn = Array.from(document.querySelectorAll('button'))
+            .find(b => /ask to join|join now|rejoin|erneut beitreten|um beitritt bitten/i
+              .test((b.innerText || '').trim()) && b.offsetParent !== null);
+          if (btn) btn.click();
+        }).catch(() => {});
+
+        // Heartbeat to the log every ~60s so we can see it's still waiting.
+        if (Date.now() - lastLog > 60_000) {
+          const mins = Math.round((deadline - Date.now()) / 60_000);
+          log(`Still waiting for host... (~${mins} min left)`);
+          lastLog = Date.now();
+          await page.screenshot({ path: '/tmp/meet-waiting.png' }).catch(() => {});
+        }
+        await new Promise(r => setTimeout(r, 5000));
+      }
+
+      if (!admitted) {
+        log(`Host never admitted us within ${WAIT_ROOM_MINUTES} min — meeting likely late or postponed.`);
+        log('Leaving the tab open in the lobby so you can be admitted manually. Not marking success.');
+        await page.screenshot({ path: '/tmp/meet-waiting.png' }).catch(() => {});
+        browser.disconnect();
+        process.exit(2);
+      }
+      log('Host admitted us — now in the meeting.');
+    }
+
+    // Confirmed in the meeting — only now count it as a success.
+    if (!alreadyInMeeting) markSuccessToday();
     await new Promise(r => setTimeout(r, 3000));
 
     // Retry mic/cam/captions up to 3 times until they confirm
