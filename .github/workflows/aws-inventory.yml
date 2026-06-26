@@ -2,6 +2,8 @@ name: AWS Inventory
 
 on:
   workflow_dispatch:
+  schedule:
+    - cron: '*/30 * * * *'
 
 jobs:
   inventory:
