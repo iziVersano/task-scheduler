@@ -8,21 +8,93 @@ on:
 jobs:
   deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      models: read
+
     steps:
       - uses: actions/checkout@v4
 
+      - name: Check today's captions exist
+        id: check
+        run: |
+          TODAY=$(TZ=Europe/Berlin date +%Y-%m-%d)
+          CAPTIONS="server/captions/${TODAY}.txt"
+          echo "today=$TODAY" >> $GITHUB_OUTPUT
+          echo "captions=$CAPTIONS" >> $GITHUB_OUTPUT
+          if [ -f "$CAPTIONS" ] && [ -s "$CAPTIONS" ]; then
+            echo "has_captions=true" >> $GITHUB_OUTPUT
+            LINES=$(wc -l < "$CAPTIONS")
+            echo "✅ Found $CAPTIONS ($LINES lines)"
+          else
+            echo "has_captions=false" >> $GITHUB_OUTPUT
+            echo "⏭️ No captions for $TODAY — skipping"
+          fi
+
+      - name: Generate summary from captions via GitHub Models
+        if: steps.check.outputs.has_captions == 'true'
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TODAY: ${{ steps.check.outputs.today }}
+          CAPTIONS_FILE: ${{ steps.check.outputs.captions }}
+        run: |
+          CAPTIONS=$(cat "$CAPTIONS_FILE")
+          SUMMARY_FILE="server/live-summary/${TODAY}.md"
+
+          # Build prompt
+          PROMPT="You are a concise AWS class note-taker. Based on the following class transcript captions, write a structured markdown summary of the AWS topics covered today ($TODAY).
+
+          Rules:
+          - Use ## headings for each topic
+          - Under each topic: bullet points for key concepts, a markdown table if comparing things, and a mermaid diagram if it helps visualise
+          - Add a real-world company blockquote example for each topic (> 🏢 Real world: ...)
+          - Keep it focused — no filler, no intro/outro sentences
+          - Do NOT wrap in a code block — output raw markdown only
+
+          Captions:
+          ${CAPTIONS}"
+
+          # Call GitHub Models API (gpt-4o)
+          RESPONSE=$(curl -s -X POST \
+            -H "Authorization: Bearer $GITHUB_TOKEN" \
+            -H "Content-Type: application/json" \
+            "https://models.inference.ai.azure.com/chat/completions" \
+            -d "$(jq -n \
+              --arg model "gpt-4o" \
+              --arg content "$PROMPT" \
+              '{model: $model, messages: [{role: "user", content: $content}], max_tokens: 4000}'
+            )")
+
+          # Extract content
+          SUMMARY=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
+
+          if [ -z "$SUMMARY" ]; then
+            echo "❌ GitHub Models returned empty response"
+            echo "Response: $RESPONSE"
+            exit 1
+          fi
+
+          # Write summary file with timestamp header
+          echo "<!-- updated: $(date -u +%Y-%m-%dT%H:%M:%S.000Z) -->" > "$SUMMARY_FILE"
+          echo "$SUMMARY" >> "$SUMMARY_FILE"
+          echo "✅ Summary written to $SUMMARY_FILE"
+
       - uses: actions/setup-node@v4
+        if: steps.check.outputs.has_captions == 'true'
         with:
           node-version: 20
 
       - name: Install dependencies
+        if: steps.check.outputs.has_captions == 'true'
         run: npm install
         working-directory: ./server
 
       - name: Build static site
+        if: steps.check.outputs.has_captions == 'true'
         run: node server/build-site.js
 
       - name: Deploy to S3
+        if: steps.check.outputs.has_captions == 'true'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -30,8 +102,10 @@ jobs:
         run: |
           aws s3 cp dist/index.html s3://dci-class-summaries-eu/index.html \
             --content-type "text/html"
+          echo "✅ Deployed summary for ${{ steps.check.outputs.today }}"
 
       - name: Invalidate CloudFront cache
+        if: steps.check.outputs.has_captions == 'true'
         env:
           AWS_ACCESS_KEY_ID: ${{ secrets.AWS_ACCESS_KEY_ID }}
           AWS_SECRET_ACCESS_KEY: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
@@ -40,3 +114,12 @@ jobs:
           aws cloudfront create-invalidation \
             --distribution-id E1I564SWI1OAU9 \
             --paths "/*"
+
+      - name: Commit updated summary
+        if: steps.check.outputs.has_captions == 'true'
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add server/live-summary/${{ steps.check.outputs.today }}.md
+          git diff --staged --quiet || git commit -m "Auto-update summary for ${{ steps.check.outputs.today }}"
+          git push
