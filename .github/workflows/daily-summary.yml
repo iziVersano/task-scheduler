@@ -2,7 +2,7 @@ name: Daily Summary Deploy
 
 on:
   schedule:
-    - cron: '0 10 * * 1-5'  # 12:00 Berlin time (UTC+2) = 10:00 UTC, weekdays only
+    - cron: '5 10 * * 1-5'  # 12:05 Berlin time (UTC+2) = 10:05 UTC, weekdays only
   workflow_dispatch:
 
 jobs:
