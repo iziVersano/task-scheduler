@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "Which S3 characteristic remains constant across ALL seven storage classes?",
+    "options": {
+      "A": "Availability",
+      "B": "Durability",
+      "C": "Retrieval time",
+      "D": "Storage cost"
+    },
+    "correct": "B",
+    "explanation": "Durability (11 nines — 99.999999999%) is identical across all seven S3 storage classes. What varies between classes is availability (how fast you can access data) and cost. Durability means your data will not be lost or corrupted regardless of which class it is stored in."
+  },
+  {
+    "id": 2,
+    "difficulty": "practitioner",
+    "question": "What does S3 durability of 99.999999999% (11 nines) mean in practical terms?",
+    "options": {
+      "A": "Your data is available 99.999999999% of the time",
+      "B": "If you stored data for 10,000 years, there is a chance you might lose one single file",
+      "C": "S3 replicates your data to 11 different regions",
+      "D": "Your bucket can store up to 11 billion objects"
+    },
+    "correct": "B",
+    "explanation": "11 nines durability means the probability of data loss is so astronomically low that even over 10,000 years of storing data, you might lose one file — and even that is not 100% certain. It is not about availability or replication count. Durability = data integrity and no data loss."
+  },
+  {
+    "id": 3,
+    "difficulty": "associate",
+    "question": "A company has log files that are accessed frequently for the first 30 days, then rarely accessed but must be retrieved within milliseconds when needed, and can be deleted after 1 year. Which storage class should they transition to after 30 days?",
+    "options": {
+      "A": "S3 Glacier Flexible Retrieval",
+      "B": "S3 Glacier Instant Retrieval",
+      "C": "S3 One Zone-IA",
+      "D": "S3 Glacier Deep Archive"
+    },
+    "correct": "B",
+    "explanation": "Glacier Instant Retrieval provides millisecond access (same as Standard) at archive pricing — perfect for data that is rarely accessed but needs immediate retrieval when requested. Glacier Flexible Retrieval takes 5 min to 12 hours. Glacier Deep Archive takes 12–48 hours. One Zone-IA does not provide millisecond archival pricing."
+  },
+  {
+    "id": 4,
+    "difficulty": "associate",
+    "question": "What is the correct order of S3 storage classes from LOWEST to HIGHEST cost?",
+    "options": {
+      "A": "Standard < Standard-IA < One Zone-IA < Glacier IR < Glacier FR < Glacier Deep Archive",
+      "B": "Glacier Deep Archive < Glacier FR < Glacier IR < One Zone-IA < Standard-IA < Standard",
+      "C": "One Zone-IA < Standard-IA < Glacier IR < Standard < Glacier FR < Glacier Deep Archive",
+      "D": "Glacier Deep Archive < One Zone-IA < Glacier FR < Glacier IR < Standard-IA < Standard"
+    },
+    "correct": "B",
+    "explanation": "Cost decreases as availability decreases: Standard (most expensive, most available) → Standard-IA → One Zone-IA → Glacier Instant Retrieval → Glacier Flexible Retrieval → Glacier Deep Archive (cheapest, slowest). Cost is directly tied to how fast the class can serve your data."
+  },
+  {
+    "id": 5,
+    "difficulty": "practitioner",
+    "question": "A developer stores test data in S3 One Zone-IA. The availability zone hosting that bucket is destroyed. What happens to the data?",
+    "options": {
+      "A": "AWS automatically restores the data from another AZ within minutes",
+      "B": "The data is permanently lost",
+      "C": "The data is moved to Standard class automatically",
+      "D": "The data is available from a backup region"
+    },
+    "correct": "B",
+    "explanation": "One Zone-IA stores data in a SINGLE availability zone only. If that AZ is destroyed, the data is permanently lost. This is why One Zone-IA should only be used for data that can be regenerated or recreated. It offers 99.5% availability (lower than other classes) because of this single-AZ limitation, but is 20% cheaper than Standard-IA."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "A company wants to store data but doesn't know which files will be frequently accessed and which won't. They want to minimise cost without managing lifecycle rules manually. Which storage class should they use?",
+    "options": {
+      "A": "S3 Standard with manual lifecycle rules",
+      "B": "S3 Standard-IA for all data",
+      "C": "S3 Intelligent Tiering",
+      "D": "S3 Glacier Flexible Retrieval"
+    },
+    "correct": "C",
+    "explanation": "S3 Intelligent Tiering is designed exactly for unknown or unpredictable access patterns. Its AI monitors each object and automatically moves it between tiers (Standard → IA → Glacier) based on access frequency. You pay a small monitoring fee per object but no retrieval fees, and no lifecycle rules are needed. Standard-IA charges retrieval fees and has minimum storage duration."
+  },
+  {
+    "id": 7,
+    "difficulty": "associate",
+    "question": "What is unique about S3 Intelligent Tiering's pricing compared to all other S3 storage classes?",
+    "options": {
+      "A": "It is always the cheapest class regardless of access frequency",
+      "B": "You do not pay for data retrieval/access — only storage and a monitoring fee",
+      "C": "It has no minimum storage duration requirement",
+      "D": "It replicates data across all AWS regions automatically"
+    },
+    "correct": "B",
+    "explanation": "Intelligent Tiering charges for storage and a per-object monitoring fee, but crucially charges NO retrieval fee when data is accessed — even if it has been moved to Glacier tier. All other classes charge retrieval/access fees. The trade-off is the monitoring fee per object, which makes it less cost-effective for very small objects."
+  },
+  {
+    "id": 8,
+    "difficulty": "associate",
+    "question": "A media company needs to store compliance archives for exactly 7 years. The data will almost never be accessed, and when retrieved, a 48-hour wait is acceptable. Which storage class minimises cost?",
+    "options": {
+      "A": "S3 Glacier Instant Retrieval",
+      "B": "S3 Standard-IA",
+      "C": "S3 Glacier Flexible Retrieval",
+      "D": "S3 Glacier Deep Archive"
+    },
+    "correct": "D",
+    "explanation": "Glacier Deep Archive is the cheapest S3 storage class, designed specifically for data retained 7–10 years that is rarely if ever accessed. It offers bulk retrieval in 48 hours and standard retrieval in 12 hours. The 180-day minimum storage duration is met since the data is kept 7 years. Glacier Flexible Retrieval is faster but more expensive. Standard-IA is significantly more expensive for long-term archival."
+  }
+]
