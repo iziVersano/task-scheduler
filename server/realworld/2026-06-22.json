@@ -1,0 +1,26 @@
+{
+  "company": "Airbnb",
+  "industry": "Travel / Marketplace",
+  "headline": "How Airbnb uses S3 as the backbone of its entire listing platform",
+  "why": "Airbnb has 150 million+ photos of 7 million properties. Storing, serving, and versioning all of this on traditional servers would be cost-prohibitive and operationally nightmarish. S3 was the obvious choice.",
+  "topics": [
+    {
+      "topic": "Object Storage (why S3)",
+      "usage": "Each listing photo is an object with a unique key (e.g. listings/12345/photo-1.jpg). No filesystem, no hierarchy — just bucket + key. Airbnb can store 150M photos without managing a single disk."
+    },
+    {
+      "topic": "Bucket Naming + Regions",
+      "usage": "Airbnb created region-specific buckets: airbnb-photos-us-east-1, airbnb-photos-eu-west-1. Users in Europe load photos from the EU bucket — lower latency, GDPR compliance."
+    },
+    {
+      "topic": "Versioning",
+      "usage": "Hosts can update listing photos. Airbnb keeps previous versions in S3 Versioning — if a host accidentally deletes a photo, support can restore it. Also used for A/B testing different photo crops."
+    },
+    {
+      "topic": "Block Public Access + Encryption",
+      "usage": "Raw uploaded photos go to a private bucket (Block Public Access ON). Airbnb's processing pipeline resizes them, watermarks them, then copies approved photos to the public CDN bucket. Encryption at rest (SSE-S3) on both."
+    }
+  ],
+  "diagram": "graph TD\n    Host([🏠 Host uploads photo]) --> Private[Private S3 Bucket\\nBlock Public Access ON\\nSSE-S3 encrypted]\n    Private --> Pipeline[Processing Pipeline\\nResize + Watermark]\n    Pipeline --> Public[Public CDN Bucket\\nCloudFront distribution]\n    Public --> User([👤 Guest views listing])\n    Private --> Versions[Versioning enabled\\nRestore deleted photos]\n    style Host fill:#1e293b,color:#94a3b8\n    style User fill:#1e293b,color:#94a3b8\n    style Private fill:#450a0a,color:#fca5a5\n    style Pipeline fill:#7c3aed,color:#fff\n    style Public fill:#1e3a5f,color:#dbeafe\n    style Versions fill:#1a3320,color:#86efac",
+  "takeaway": "Airbnb's S3 design separates raw uploads (private) from public-facing assets, uses versioning for recoverability, and uses regional buckets for compliance + latency. Each S3 feature we studied has a direct purpose here."
+}

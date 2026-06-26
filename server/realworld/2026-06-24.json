@@ -1,0 +1,26 @@
+{
+  "company": "Shopify",
+  "industry": "E-commerce Platform",
+  "headline": "How Shopify chooses between RDS, Aurora, DynamoDB, and ElastiCache for 2 million stores",
+  "why": "Shopify powers 2 million online stores — from a one-person shop to Kylie Cosmetics. Each store has different data: product catalogs, orders, sessions, analytics. One database type cannot serve all needs efficiently.",
+  "topics": [
+    {
+      "topic": "Why Databases (not files)",
+      "usage": "Shopify stores orders in RDS PostgreSQL — not flat files. When a merchant filters orders by date + status + customer, the DB executes one SQL query in milliseconds. A file scan would take minutes."
+    },
+    {
+      "topic": "RDS (Relational)",
+      "usage": "Merchant data, product catalogs, orders, and inventory all live in RDS Aurora (MySQL-compatible). Structured, relational — products have foreign keys to variants, variants to inventory, inventory to warehouses."
+    },
+    {
+      "topic": "DynamoDB (NoSQL)",
+      "usage": "Shopify's cart and session data lives in DynamoDB — millions of concurrent shopping carts, each a JSON document. Schema-free: one cart has 2 items, another has 200 with custom attributes. DynamoDB handles both at millisecond latency."
+    },
+    {
+      "topic": "ElastiCache (In-memory)",
+      "usage": "Product page data is cached in ElastiCache Redis. When 50,000 people view the same product during a flash sale, 49,999 requests hit Redis (microseconds) — only 1 in 1,000 goes to RDS. DB stays alive during traffic spikes."
+    }
+  ],
+  "diagram": "graph TD\n    User([🛒 Shopper]) --> CF[CloudFront CDN]\n    CF --> Cache[ElastiCache Redis\\nProduct pages\\nMicrosecond reads]\n    Cache -->|Cache miss| RDS[RDS Aurora\\nProducts, Orders\\nInventory]\n    User --> Cart[Shopping Cart\\nDynamoDB\\nMillisecond, schema-free]\n    Merchant([🏪 Merchant]) --> RDS\n    RDS --> Analytics[Redshift\\nSales analytics\\nHistorical data]\n    style User fill:#1e293b,color:#94a3b8\n    style Merchant fill:#1e293b,color:#94a3b8\n    style Cache fill:#7c3aed,color:#fff\n    style Cart fill:#1e3a5f,color:#dbeafe\n    style RDS fill:#1a3320,color:#86efac\n    style Analytics fill:#450a0a,color:#fca5a5",
+  "takeaway": "Shopify doesn't use one database — they use the right database for each data type. Relational for structured merchant data, NoSQL for flexible cart data, in-memory for performance. This is the real-world answer to 'when do you use what.'"
+}

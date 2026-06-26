@@ -1,0 +1,26 @@
+{
+  "company": "Netflix",
+  "industry": "Video Streaming",
+  "headline": "How Netflix uses VPC, Bastion Hosts & Security Groups to protect its streaming infrastructure",
+  "why": "Netflix runs thousands of EC2 instances across multiple VPCs. Direct public access to internal servers would be a massive security risk — a breach could expose subscriber data or take down streaming for millions.",
+  "topics": [
+    {
+      "topic": "VPC + CIDR",
+      "usage": "Each Netflix service (billing, recommendations, encoding) lives in its own VPC with a private CIDR range (e.g. 10.0.0.0/16). Services only talk to each other through controlled peering — not the public internet."
+    },
+    {
+      "topic": "Bastion Host",
+      "usage": "Engineers who need to SSH into internal EC2 nodes (for debugging or deployments) go through a single hardened Bastion Host. The bastion is the only machine with a public IP — everything else is private."
+    },
+    {
+      "topic": "Security Groups",
+      "usage": "Each layer has its own Security Group: the bastion allows SSH only from the Netflix corporate IP range; the app servers allow traffic only from the load balancer SG; the DB servers allow traffic only from the app server SG."
+    },
+    {
+      "topic": "Internet Gateway",
+      "usage": "The public subnet (where the load balancer lives) is attached to an Internet Gateway. Private subnets (app + DB) have no direct internet route — they exit through a NAT Gateway for outbound-only traffic like OS updates."
+    }
+  ],
+  "diagram": "graph TD\n    Internet([🌐 Internet]) --> IGW[Internet Gateway]\n    IGW --> LB[Load Balancer\\nPublic Subnet\\nSG: 443 open]\n    LB --> APP[App Servers\\nPrivate Subnet\\nSG: from LB only]\n    APP --> DB[RDS / DynamoDB\\nPrivate Subnet\\nSG: from App only]\n    Engineer([👨‍💻 Engineer]) -->|SSH| Bastion[Bastion Host\\nPublic Subnet\\nSG: SSH from corp IP only]\n    Bastion -->|SSH| APP\n    style Internet fill:#1e293b,color:#94a3b8\n    style Engineer fill:#1e293b,color:#94a3b8\n    style Bastion fill:#7c3aed,color:#fff\n    style LB fill:#1e3a5f,color:#dbeafe\n    style APP fill:#1a3320,color:#86efac\n    style DB fill:#450a0a,color:#fca5a5",
+  "takeaway": "Netflix's VPC design means a compromised app server cannot reach the database directly, cannot SSH into other machines, and cannot be accessed from the internet — the blast radius of any breach is contained to one Security Group boundary."
+}

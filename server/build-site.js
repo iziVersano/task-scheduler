@@ -3,10 +3,11 @@
 const fs = require('fs');
 const path = require('path');
 
-const SUMMARY_DIR = path.join(__dirname, 'live-summary');
-const MCQ_DIR     = path.join(__dirname, 'mcq');
-const DIST_DIR    = path.join(__dirname, '..', 'dist');
-const TEMPLATE    = path.join(__dirname, 'site-template.html');
+const SUMMARY_DIR   = path.join(__dirname, 'live-summary');
+const MCQ_DIR       = path.join(__dirname, 'mcq');
+const REALWORLD_DIR = path.join(__dirname, 'realworld');
+const DIST_DIR      = path.join(__dirname, '..', 'dist');
+const TEMPLATE      = path.join(__dirname, 'site-template.html');
 
 fs.mkdirSync(DIST_DIR, { recursive: true });
 
@@ -15,7 +16,9 @@ function readEntry(filePath, date) {
   const text = raw.replace(/^<!-- updated: [^>]+ -->\n/, '').trim();
   const mcqFile = path.join(MCQ_DIR, `${date}.json`);
   const mcqs = fs.existsSync(mcqFile) ? JSON.parse(fs.readFileSync(mcqFile, 'utf8')) : [];
-  return { date, text, mcqs };
+  const rwFile = path.join(REALWORLD_DIR, `${date}.json`);
+  const realworld = fs.existsSync(rwFile) ? JSON.parse(fs.readFileSync(rwFile, 'utf8')) : null;
+  return { date, text, mcqs, realworld };
 }
 
 const today = new Date().toISOString().slice(0, 10);

@@ -106,6 +106,20 @@
   .explanation { display: none; margin-top: 10px; background: #0f172a; border: 1px solid #1e3a5f; border-radius: 6px; padding: 0.6rem 0.85rem; font-size: 0.82rem; color: #94a3b8; line-height: 1.6; }
   .explanation strong { color: #7dd3fc; }
 
+  /* ── Real World tab ── */
+  .rw-hero { background: linear-gradient(135deg, #1a1035 0%, #0f172a 100%); border: 1px solid #4a1d96; border-radius: 12px; padding: 1.25rem 1.5rem; margin-bottom: 1.5rem; }
+  .rw-company { font-size: 1.3rem; font-weight: 700; color: #e9d5ff; margin-bottom: 2px; }
+  .rw-industry { font-size: 0.78rem; color: #7c3aed; text-transform: uppercase; letter-spacing: 0.08em; font-weight: 600; margin-bottom: 0.6rem; }
+  .rw-headline { font-size: 0.92rem; color: #c4b5fd; line-height: 1.55; }
+  .rw-why { background: #0f172a; border-left: 3px solid #7c3aed; border-radius: 0 8px 8px 0; padding: 0.6rem 0.9rem; margin-bottom: 1.5rem; font-size: 0.85rem; color: #94a3b8; line-height: 1.6; }
+  .rw-topics { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 1.5rem; }
+  .rw-topic { background: #0b1120; border: 1px solid #1e293b; border-radius: 8px; padding: 0.85rem 1rem; }
+  .rw-topic-name { font-size: 0.78rem; font-weight: 700; color: #7dd3fc; text-transform: uppercase; letter-spacing: 0.06em; margin-bottom: 0.3rem; }
+  .rw-topic-usage { font-size: 0.85rem; color: #cbd5e1; line-height: 1.55; }
+  .rw-diagram-label { font-size: 0.78rem; color: #475569; text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 0.5rem; font-weight: 600; }
+  .rw-takeaway { background: #052e16; border: 1px solid #16a34a44; border-radius: 8px; padding: 0.85rem 1rem; margin-top: 1.25rem; font-size: 0.88rem; color: #86efac; line-height: 1.6; }
+  .rw-takeaway::before { content: '💡 Key takeaway: '; font-weight: 700; }
+
   /* ── Mobile ── */
   .mobile-header { display: none; }
   .mobile-nav-bar { display: none; }
@@ -290,8 +304,12 @@ function renderDay(day, activeTab) {
   var tabMCQ = document.createElement('button');
   tabMCQ.className = 'tab-btn' + (activeTab === 'mcq' ? ' active' : '');
   tabMCQ.textContent = '📝 Practice MCQs (' + (day.mcqs ? day.mcqs.length : 0) + ')';
+  var tabRW = document.createElement('button');
+  tabRW.className = 'tab-btn' + (activeTab === 'realworld' ? ' active' : '');
+  tabRW.textContent = '🏢 Real Life Example';
   tabs.appendChild(tabSummary);
   if (day.mcqs && day.mcqs.length) tabs.appendChild(tabMCQ);
+  if (day.realworld) tabs.appendChild(tabRW);
   main.appendChild(tabs);
 
   // Summary panel
@@ -320,19 +338,82 @@ function renderDay(day, activeTab) {
     main.appendChild(panelMCQ);
   }
 
+  // Real World panel
+  var panelRW = document.createElement('div');
+  panelRW.className = 'tab-panel' + (activeTab === 'realworld' ? ' active' : '');
+  if (day.realworld) {
+    panelRW.appendChild(buildRealWorld(day.realworld));
+    main.appendChild(panelRW);
+  }
+
   // Tab switching
-  tabSummary.addEventListener('click', function() {
-    tabSummary.classList.add('active'); tabMCQ.classList.remove('active');
-    panelSummary.classList.add('active'); panelMCQ.classList.remove('active');
+  function setTab(active) {
+    [tabSummary, tabMCQ, tabRW].forEach(function(t) { t.classList.remove('active'); });
+    [panelSummary, panelMCQ, panelRW].forEach(function(p) { p.classList.remove('active'); });
+    active.tab.classList.add('active');
+    active.panel.classList.add('active');
+    if (active.panel === panelRW) {
+      mermaid.run({ nodes: panelRW.querySelectorAll('.mermaid') }).then(function() {
+        panelRW.querySelectorAll('.mermaid-wrap').forEach(function(wrap) {
+          wrap.addEventListener('click', function() {
+            var svg = wrap.querySelector('svg');
+            if (svg) openDiagram(svg);
+          });
+        });
+      });
+    }
     window.scrollTo(0, 0);
-  });
-  tabMCQ.addEventListener('click', function() {
-    tabMCQ.classList.add('active'); tabSummary.classList.remove('active');
-    panelMCQ.classList.add('active'); panelSummary.classList.remove('active');
-    window.scrollTo(0, 0);
-  });
+  }
+  tabSummary.addEventListener('click', function() { setTab({ tab: tabSummary, panel: panelSummary }); });
+  tabMCQ.addEventListener('click',     function() { setTab({ tab: tabMCQ,     panel: panelMCQ     }); });
+  tabRW.addEventListener('click',      function() { setTab({ tab: tabRW,      panel: panelRW      }); });
 
   window.scrollTo(0, 0);
+}
+
+function buildRealWorld(rw) {
+  var wrap = document.createElement('div');
+
+  var hero = document.createElement('div');
+  hero.className = 'rw-hero';
+  hero.innerHTML = '<div class="rw-company">🏢 ' + escHtml(rw.company) + '</div>' +
+    '<div class="rw-industry">' + escHtml(rw.industry) + '</div>' +
+    '<div class="rw-headline">' + escHtml(rw.headline) + '</div>';
+  wrap.appendChild(hero);
+
+  var why = document.createElement('div');
+  why.className = 'rw-why';
+  why.textContent = rw.why;
+  wrap.appendChild(why);
+
+  var topicList = document.createElement('div');
+  topicList.className = 'rw-topics';
+  rw.topics.forEach(function(t) {
+    var card = document.createElement('div');
+    card.className = 'rw-topic';
+    card.innerHTML = '<div class="rw-topic-name">' + escHtml(t.topic) + '</div>' +
+      '<div class="rw-topic-usage">' + escHtml(t.usage) + '</div>';
+    topicList.appendChild(card);
+  });
+  wrap.appendChild(topicList);
+
+  if (rw.diagram) {
+    var dlabel = document.createElement('div');
+    dlabel.className = 'rw-diagram-label';
+    dlabel.textContent = 'Architecture Diagram';
+    wrap.appendChild(dlabel);
+    var dWrap = document.createElement('div');
+    dWrap.className = 'mermaid-wrap';
+    dWrap.innerHTML = '<div class="mermaid">' + escHtml(rw.diagram) + '</div><span class="zoom-hint">🔍 click to zoom</span>';
+    wrap.appendChild(dWrap);
+  }
+
+  var takeaway = document.createElement('div');
+  takeaway.className = 'rw-takeaway';
+  takeaway.textContent = rw.takeaway;
+  wrap.appendChild(takeaway);
+
+  return wrap;
 }
 
 function buildMCQ(questions) {

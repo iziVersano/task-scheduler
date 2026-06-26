@@ -1,0 +1,22 @@
+{
+  "company": "Spotify",
+  "industry": "Music Streaming",
+  "headline": "How Spotify uses S3 Lifecycle Rules, Transfer Acceleration, and Server Access Logging",
+  "why": "Spotify stores 100+ million tracks and podcast episodes in S3. Without lifecycle automation, the storage bill would be enormous. Without access logging, they couldn't prove GDPR compliance or debug CDN issues.",
+  "topics": [
+    {
+      "topic": "S3 Lifecycle Rules",
+      "usage": "New podcast episodes go to S3 Standard. After 30 days, Lifecycle moves them to Standard-IA (most episodes get 80% of their plays in the first week). After 1 year, they move to Glacier. Old episodes from 2015 cost Spotify almost nothing to store."
+    },
+    {
+      "topic": "Transfer Acceleration",
+      "usage": "Artists upload new tracks from anywhere in the world via Spotify for Artists. Transfer Acceleration routes uploads from São Paulo, Seoul, or Lagos through the nearest AWS edge to the master bucket in eu-west-1 — uploads complete in seconds not minutes."
+    },
+    {
+      "topic": "Server Access Logging",
+      "usage": "Spotify logs every S3 access to a separate audit bucket. The logs show which IP downloaded which track at what time. Required for music licensing compliance — Spotify must be able to prove to record labels how many times a track was served."
+    }
+  ],
+  "diagram": "graph LR\n    Artist([🎤 Artist Upload]) -->|Transfer Accel| Edge[AWS Edge Location]\n    Edge --> Master[S3 Master Bucket\\neu-west-1]\n    Master --> Log[Access Log Bucket\\nGDPR + Licensing audit]\n    Master -->|Day 0–30| Standard[Standard\\nNew releases]\n    Standard -->|Day 30| IA[Standard-IA\\nOlder episodes]\n    IA -->|Day 365| Glacier[Glacier\\n2015 podcasts]\n    style Artist fill:#1e293b,color:#94a3b8\n    style Edge fill:#7c3aed,color:#fff\n    style Log fill:#450a0a,color:#fca5a5\n    style Standard fill:#1e3a5f,color:#dbeafe\n    style IA fill:#1a3320,color:#86efac\n    style Glacier fill:#1a3320,color:#86efac",
+  "takeaway": "Spotify's S3 setup is a textbook lifecycle pipeline: hot new content in Standard, older content auto-tiered to cheaper classes, every access logged for legal compliance. Three features, one bucket, massive cost savings."
+}

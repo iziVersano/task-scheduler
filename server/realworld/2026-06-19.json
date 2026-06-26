@@ -1,0 +1,26 @@
+{
+  "company": "Uber",
+  "industry": "Ride-sharing / Real-time Mapping",
+  "headline": "How Uber uses EBS volume types to power real-time maps and trip data",
+  "why": "Uber's map matching engine processes millions of GPS pings per second. The difference between gp2, io2, and st1 EBS volumes translates directly into whether a driver gets matched to a rider in 1 second or 10 seconds.",
+  "topics": [
+    {
+      "topic": "io2 Block Express (High IOPS)",
+      "usage": "Uber's PostgreSQL databases for active trips run on io2 volumes with 64,000 IOPS. Every GPS ping from every driver triggers a DB write. Low latency here = faster matching = happier riders."
+    },
+    {
+      "topic": "gp3 (General Purpose)",
+      "usage": "Driver profile data, trip history, and user accounts use gp3 — good performance at reasonable cost. These don't need 64k IOPS, but they need consistent response times."
+    },
+    {
+      "topic": "st1 (Throughput Optimised HDD)",
+      "usage": "Uber stores months of raw GPS telemetry logs on st1 volumes — cheap HDD storage optimised for sequential reads. Used by the data team for route optimisation ML training, not real-time queries."
+    },
+    {
+      "topic": "Instance Store",
+      "usage": "Uber's real-time geospatial index (the grid that snaps GPS coordinates to road segments) lives in Instance Store — NVMe SSDs directly on the host. Rebuilt on restart from S3. Fastest possible read, zero persistence needed."
+    }
+  ],
+  "diagram": "graph LR\n    GPS([📍 Driver GPS Ping]) --> Match[Map Matching Engine\\nInstance Store NVMe\\nFastest reads]\n    Match --> DB[Active Trips DB\\nio2 — 64k IOPS\\nLow latency writes]\n    DB --> Profile[Driver Profiles\\ngp3 — balanced\\ncost + performance]\n    DB --> Archive[Raw GPS Logs\\nst1 HDD\\nCheap sequential]\n    Archive --> ML[ML Training\\nRoute Optimisation]\n    style GPS fill:#1e293b,color:#94a3b8\n    style Match fill:#7c3aed,color:#fff\n    style DB fill:#450a0a,color:#fca5a5\n    style Profile fill:#1e3a5f,color:#dbeafe\n    style Archive fill:#1a3320,color:#86efac\n    style ML fill:#1a3320,color:#86efac",
+  "takeaway": "Uber uses 4 different storage types on the same workload — not because it's complex, but because each layer has different latency and cost requirements. Picking the right EBS type per workload saves millions and keeps the app fast."
+}

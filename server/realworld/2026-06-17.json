@@ -1,0 +1,26 @@
+{
+  "company": "Amazon (AWS itself)",
+  "industry": "Cloud / E-commerce",
+  "headline": "How Amazon places EC2 instances for its own Black Friday infrastructure",
+  "why": "On Black Friday, Amazon.com handles millions of orders per second. A single server failure at peak load would cost millions in lost sales. EC2 Placement Groups and instance lifecycle management are critical tools.",
+  "topics": [
+    {
+      "topic": "Cluster Placement Group",
+      "usage": "Amazon's real-time inventory and pricing engines use Cluster Placement Groups — all instances in the same rack, ultra-low latency between nodes. Prices update across all servers in under 1ms."
+    },
+    {
+      "topic": "Spread Placement Group",
+      "usage": "The checkout and payment services use Spread Placement Groups — each instance on a different physical rack. If one rack loses power, only 1 out of 7 checkout servers goes down. Orders keep flowing."
+    },
+    {
+      "topic": "Instance Lifecycle (Stop/Hibernate)",
+      "usage": "During off-peak hours (2am–6am), Amazon stops non-critical batch processing instances (analytics, recommendation model training). This saves cost. They restart automatically before peak traffic begins."
+    },
+    {
+      "topic": "Instance Termination",
+      "usage": "Spot Instances run background ML training jobs. When AWS reclaims a Spot instance with a 2-minute warning, Amazon's system checkpoints the training job and relaunches it on a new instance — stateless by design."
+    }
+  ],
+  "diagram": "graph TD\n    subgraph CPG[\"Cluster Placement Group — Low Latency\"]\n        I1[Inventory Server 1] --- I2[Inventory Server 2]\n        I2 --- I3[Inventory Server 3]\n    end\n    subgraph SPG[\"Spread Placement Group — High Availability\"]\n        R1[Rack 1: Checkout A]\n        R2[Rack 2: Checkout B]\n        R3[Rack 3: Checkout C]\n    end\n    User([🛒 Customer]) --> R1\n    User --> R2\n    User --> R3\n    R1 --> CPG\n    style CPG fill:#1e3a5f,color:#dbeafe\n    style SPG fill:#1a3320,color:#86efac\n    style User fill:#1e293b,color:#94a3b8",
+  "takeaway": "Cluster = speed (low latency between nodes). Spread = resilience (no single point of failure). Amazon uses both simultaneously — the right placement group for the right job."
+}

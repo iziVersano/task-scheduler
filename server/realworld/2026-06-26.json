@@ -1,0 +1,30 @@
+{
+  "company": "Netflix",
+  "industry": "Video Streaming",
+  "headline": "How Netflix uses all 7 S3 storage classes to store its entire content library",
+  "why": "Netflix has 36,000+ titles. A trending show today might be forgotten in 2 years. Storing everything in Standard would cost tens of millions extra per year. Netflix maps every title to the right storage class based on viewing patterns.",
+  "topics": [
+    {
+      "topic": "Hot tier — S3 Standard",
+      "usage": "Currently trending shows (Stranger Things S5, new releases) — accessed millions of times per day. Stored in Standard for instant delivery to CDN."
+    },
+    {
+      "topic": "Warm tier — Standard-IA",
+      "usage": "Shows from 2–3 years ago with moderate viewership. Still available on the platform, accessed weekly. Standard-IA saves ~40% on storage vs Standard."
+    },
+    {
+      "topic": "Cold tier — Glacier Flexible Retrieval",
+      "usage": "Content licensed but rarely watched — old documentaries, regional content with low global demand. Netflix can restore in 3–5 hours if a title suddenly goes viral (e.g. a featured news story)."
+    },
+    {
+      "topic": "Deep Archive — Glacier Deep Archive",
+      "usage": "Original camera footage, uncut masters, content whose license expired. Must be kept for legal/archival reasons. May never be accessed again. Costs pennies per GB per month."
+    },
+    {
+      "topic": "Intelligent Tiering",
+      "usage": "New international content with unknown demand (Korean, Turkish, Nigerian shows). Netflix doesn't know if it will trend globally or stay niche — Intelligent Tiering lets AWS figure it out automatically."
+    }
+  ],
+  "diagram": "graph TD\n    subgraph HOT[\"🔥 Hot — Standard\"]\n        T1[Trending Shows\\nMillions of daily plays]\n    end\n    subgraph WARM[\"🌤️ Warm — Standard-IA\"]\n        T2[2–3 Year Old Content\\nWeekly plays]\n    end\n    subgraph COLD[\"❄️ Cold — Glacier FR\"]\n        T3[Rarely Watched\\nRestore in hours]\n    end\n    subgraph ARCHIVE[\"🗄️ Archive — Deep Archive\"]\n        T4[Raw Masters / Expired\\n12–48hr restore]\n    end\n    subgraph AI[\"🤖 Unknown — Intelligent Tiering\"]\n        T5[New International\\nAI decides tier]\n    end\n    CDN[CloudFront CDN] --> HOT\n    CDN -->|on demand| WARM\n    WARM -->|lifecycle| COLD\n    COLD -->|lifecycle| ARCHIVE\n    style HOT fill:#7c2d12,color:#fed7aa\n    style WARM fill:#1e3a5f,color:#dbeafe\n    style COLD fill:#1a3320,color:#86efac\n    style ARCHIVE fill:#1e293b,color:#94a3b8\n    style AI fill:#4a1d96,color:#e9d5ff",
+  "takeaway": "Netflix doesn't pick one storage class — they use all seven, mapped to actual viewing data. The result: the same 11-nines durability for every title, but drastically different costs depending on how hot the content is. This is S3 storage classes in production."
+}

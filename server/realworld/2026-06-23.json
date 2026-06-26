@@ -1,0 +1,26 @@
+{
+  "company": "Dropbox",
+  "industry": "File Storage / SaaS",
+  "headline": "How Dropbox uses S3 Transfer Acceleration, Multipart Upload, and Cross-Region Replication",
+  "why": "Dropbox users in Tokyo, São Paulo, and Berlin all upload files to the same platform. Without Transfer Acceleration and smart upload strategies, a 2GB file upload from Japan to a US bucket would be painfully slow.",
+  "topics": [
+    {
+      "topic": "Multipart Upload",
+      "usage": "Any Dropbox file over 100MB is split into parts and uploaded in parallel. A 4GB video upload splits into 80× 50MB parts — if part 47 fails, only that part retries. The file appears in the user's Dropbox as soon as the last part completes."
+    },
+    {
+      "topic": "S3 Transfer Acceleration",
+      "usage": "Dropbox enables Transfer Acceleration on its upload buckets. A user in Tokyo uploads to the nearest AWS edge location (Tokyo), which routes through AWS's private backbone to the US-East-1 bucket — up to 60% faster than uploading directly."
+    },
+    {
+      "topic": "Cross-Region Replication",
+      "usage": "Dropbox Business customers' files are replicated from US-East-1 to EU-West-1 automatically via CRR. Ensures business continuity if an AWS region goes down, and satisfies GDPR data residency for European enterprise clients."
+    },
+    {
+      "topic": "S3 Inventory + Lifecycle",
+      "usage": "Dropbox runs S3 Inventory reports nightly to find files not accessed in 90+ days, then Lifecycle rules move them to Standard-IA. Files not accessed for 1 year move to Glacier. Users don't notice — they just pay less."
+    }
+  ],
+  "diagram": "sequenceDiagram\n    participant User as 👤 User (Tokyo)\n    participant Edge as AWS Edge (Tokyo)\n    participant Backbone as AWS Backbone\n    participant S3 as S3 Bucket (US-East-1)\n    participant EU as S3 Replica (EU-West-1)\n    User->>Edge: Upload part 1..N (Transfer Accel)\n    Edge->>Backbone: Fast private network\n    Backbone->>S3: Assemble multipart\n    S3->>EU: Cross-Region Replication\n    Note over S3,EU: Auto-replicated for DR + GDPR",
+  "takeaway": "Dropbox's upload pipeline uses three S3 features simultaneously: Multipart for reliability, Transfer Acceleration for speed, and Cross-Region Replication for compliance. Each feature solves a different problem for the same file."
+}
