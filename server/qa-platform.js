@@ -7,14 +7,21 @@ const fs = require('fs');
 require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const CHROME_PATH = '/usr/bin/google-chrome';
-const CHROME_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome-aws');
-const DEBUG_PORT = 9410;
+const CHROME_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome-qa');
+const DEBUG_PORT = 9412;
 const LOG_FILE = '/tmp/qa-platform.log';
 const URL = 'https://platform.qa.com/programs/d8feaf4d-3cae-468a-ae9b-3c4f5ea2a428/';
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
 
 const EMAIL = process.env.QA_PLATFORM_EMAIL;
 const PASSWORD = process.env.QA_PLATFORM_PASSWORD;
+
+// Optional lab path from the dropdown, e.g.
+// "/lab/introduction-virtual-private-cloud-vpc/". When set we open that lab and
+// then chain into the AWS Console (student) login for its live sandbox.
+const labArg = (process.argv.find(a => a.startsWith('--topic=')) || '').split('=').slice(1).join('=') || '';
+const WATCH_MS = 10 * 60 * 1000; // wait up to 10 min for you to open a lab
+const QA_PROGRAM = 'd8feaf4d-3cae-468a-ae9b-3c4f5ea2a428';
 
 function log(msg) {
   const line = `[${new Date().toLocaleTimeString('de-DE')}] ${msg}`;
@@ -123,6 +130,124 @@ async function typeIfFound(page, selectors, value, timeout = 8000) {
   return null;
 }
 
+// When a lab is chosen from the dropdown: open it, click "Continue lab" to reach
+// the session page, then hand off to aws-console.js (student) which scrapes the
+// live sandbox credentials and signs into the AWS Console.
+// Fresh short-lived connection to the QA Chrome debug port. Returns a browser
+// handle or null. Using fresh connections each poll keeps us resilient to the
+// port hiccuping and never holds an exclusive handle that disturbs the user.
+async function connectQa() {
+  try {
+    return await puppeteer.connect({
+      browserURL: `http://127.0.0.1:${DEBUG_PORT}`,
+      defaultViewport: null,
+    });
+  } catch { return null; }
+}
+
+// Inspect the QA browser:
+//   • session page with a 12-digit Account ID  → return { lab } (ready!)
+//   • lab overview page with a "Continue lab"   → click it, return 'advancing'
+//   • neither                                   → return null (keep waiting)
+async function inspectQa(browser) {
+  const pages = await browser.pages();
+
+  // Dismiss Ela AI popup if open — it blocks the lab buttons
+  for (const p of pages) {
+    await p.evaluate(() => {
+      const btn = [...document.querySelectorAll('button, [role="button"]')]
+        .find(b => /^(close|✕|×)$/i.test((b.innerText || b.getAttribute('aria-label') || '').trim()));
+      if (btn) btn.click();
+    }).catch(() => {});
+  }
+
+  const sp = pages.find(p => /session-page/.test(p.url()));
+  if (sp) {
+    // Click the Open button if it's ready — this opens AWS Console via federated login
+    const openClicked = await sp.evaluate(() => {
+      const btn = [...document.querySelectorAll('button, a')]
+        .find(b => /^open$/i.test((b.innerText || '').trim()));
+      if (btn && !btn.disabled) { btn.click(); return true; }
+      return false;
+    }).catch(() => false);
+    if (openClicked) return 'opened';
+
+    // Fallback: check credentials are present (lab still loading)
+    const ok = await sp.evaluate(() => /Account ID\s*\n+\s*\d{12}/i.test(document.body.innerText))
+      .catch(() => false);
+    if (ok) {
+      const m = sp.url().match(/\/lab\/([^/]+)\//);
+      return { lab: m ? `/lab/${m[1]}/` : '/lab/' };
+    }
+  }
+
+  // Only click Continue/Start/Resume/Launch on a specific lab page — NOT on
+  // assignment or program overview pages (which show Resume for video courses).
+  const labPage = pages.find(p => /platform\.qa\.com\/lab\//.test(p.url()));
+  if (labPage) {
+    const clicked = await labPage.evaluate(() => {
+      const btn = [...document.querySelectorAll('button, a')]
+        .find(b => /^(continue lab|start lab|resume|launch lab|open)$/i.test((b.innerText || '').trim()));
+      if (btn) { btn.click(); return true; }
+      return false;
+    }).catch(() => false);
+    if (clicked) return 'advancing';
+  }
+
+  return null;
+}
+
+// Wait-and-watch flow: after QA is open, let the user click whichever lab they
+// want. We poll until a lab session page with live credentials appears, then
+// hand off to aws-console.js (student) to scrape + sign into AWS. Resilient to
+// the debug port dropping (reconnects each poll).
+async function watchAndChain(browser) {
+  // Release the handle so the user's clicks aren't disturbed.
+  try { browser.disconnect(); } catch {}
+
+  log('Pick a lab in the QA window. I will sign into AWS once its credentials appear...');
+  const deadline = Date.now() + WATCH_MS;
+  let lastTick = 0;
+
+  while (Date.now() < deadline) {
+    const b = await connectQa();
+    let res = null;
+    if (b) {
+      try { res = await inspectQa(b); } catch {}
+      try { b.disconnect(); } catch {}
+
+      if (res === 'advancing') {
+        log('On lab overview — clicked "Continue lab", waiting for the session page...');
+        await new Promise(r => setTimeout(r, 5000));
+        continue;
+      }
+      if (res === 'opened') {
+        log('Clicked Open button — AWS Console opening via QA federated login.');
+        process.exit(0);
+      }
+      if (res && res.lab) {
+        log(`Lab session ready (${res.lab}) — clicking Open button...`);
+        const awsScript = path.join(__dirname, 'aws-console.js');
+        const child = spawn('node', [awsScript, '--account=student', `--topic=${res.lab}`], {
+          detached: true, stdio: 'ignore', env: { ...process.env },
+        });
+        child.unref();
+        log('--- QA Platform + AWS Console chain complete ---');
+        process.exit(0);
+      }
+    }
+
+    if (Date.now() - lastTick > 30000) {
+      log(b
+        ? `Waiting for you to open a lab... (${Math.round((deadline - Date.now())/60000)} min left)`
+        : 'QA window not reachable — is it still open?');
+      lastTick = Date.now();
+    }
+    await new Promise(r => setTimeout(r, 3000));
+  }
+  log('No lab opened within the wait window — leaving QA open, not opening AWS.');
+}
+
 (async () => {
   log('Opening QA Platform');
   log(`URL: ${URL}`);
@@ -168,12 +293,13 @@ async function typeIfFound(page, selectors, value, timeout = 8000) {
     await new Promise(r => setTimeout(r, 5000));
 
     // Already signed in? Platform redirects authed users away from /login/.
-    if (!/\/login\/?$/i.test(page.url()) &&
+    if (!/\/login/i.test(page.url()) &&
         !/login\.platform\.qa\.com/i.test(page.url()) &&
         /platform\.qa\.com/i.test(page.url())) {
       log(`Looks already signed in — at ${page.url()}`);
       const dismissed = await clickByText(page, /^(remind me later|skip|close|maybe later)$/i, 3000);
       if (dismissed) log('Dismissed welcome modal.');
+      await watchAndChain(browser);
       browser.disconnect();
       process.exit(0);
     }
@@ -273,6 +399,8 @@ async function typeIfFound(page, selectors, value, timeout = 8000) {
     log(`Final URL: ${page.url()}`);
     const dismissed = await clickByText(page, /^(remind me later|skip|close|maybe later)$/i, 4000);
     if (dismissed) log('Dismissed welcome modal.');
+
+    await watchAndChain(browser);
 
     browser.disconnect();
   } catch (err) {
