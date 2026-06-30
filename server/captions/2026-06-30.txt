@@ -1,0 +1,2259 @@
+
+[09:00]
+  --- logged in ---
+
+[09:00]
+  --- logged in ---
+
+[09:03]
+  So I'll tell you all the necessary things about that particular lab.
+
+[09:07]
+  your QA platform and I will explain how generally your network works. Okay? So
+  I'll tell you all the necessary things about that particular lab. And I want you
+  guys to try the lab today in the afternoon. give you the theoretical background
+  of what is give needed in the assignment on There's one lab that is Code Red,
+  Lab pertaining to Bastion host. So I would Even after the explanation, if you
+  find the lab to be a bit difficult, then we will do the hands on tomorrow. Is
+  that clear? So, before we go on to that lab, there are certain prerequisites.
+  That is nothing between to know about what a bastion is and what is a security
+  group? What is Knackle, what is the difference between security group and
+  natural? And very important, we also need to know about your SSH connections.
+  How TCP works you how your SSH connection work. So we will go through that and
+  then in the afternoon you can try to do that particular lab. Most of you have
+  already done it well in good and those who are finding difficult, I want you
+  guys to go through the lab once again. And today, I will be uploading one more
+  slide deck on your classroom. That is putting into your IAM Okay. So that's the
+  task for your afternoon session. Any questions, anything that you would like to
+  ask before we start? Let me also quickly, open the attendance, guys. Give me a
+  second. Okay, so some of Europe absent, I did Rohan. Take attendance yesterday.
+  Now, you guys anywhere aware of that.
+  We don't know.
+  You do not. Okay. No worries. I will just talk to him. Give me a second. Let me
+  quickly go through the attendance now. for today's session and then we can start
+  Can you guys see my screen? Everyone. Okay. So, we now have been learning about
+  S34 over one week. So most of you know all the basics and how it works. Now let
+  us talk about advanced feature. Advanced feature and one such advanced feature
+  is about the payment. What is it? so now, When a company people come and ask you
+  about. Let me also start the recording, guys. Okay, the recording has begun. So
+  imagine a company. People will come. And ask you, how is S3, charged? Can anyone
+  tell me how is S3, charged? So now you are B you're using this S3 service. Let's
+  say, How are you being charged? What are the aspects on which your cost depends?
+
+[09:09]
+  H.
+  On the storage, okay? What else?
+  Sorry. A Retrieval Time Retrieval Time. Okay, Basically you're talking about
+  different classes, right?
+  As a retrieval time. For archive retrieval time for archive story.
+  Yes.
+  Okay, there are how many classes in total?
+  Seven.
+  Seven classes in total. Okay, so you're telling classes also matter. Okay.
+  Anything else
+  We have storage cost on the retrieval cost.
+  Yes, so the retrieval cost is called as what it is called, as a network cost.
+  Very, very important. so,
+
+[09:12]
+  Yes, so the retrieval cost is called as what it is called, as a network cost.
+  Very, very important. So anytime you are using a bucket, if it is a general
+  bucket. The owners are responsible for storage And the owners are also
+  responsible for the network whenever we transfer data from one place to another
+  place. So, let me show you an image pertaining to this. Give me a second. Okay,
+  so look at this image. So, what is happening here in the image? There are two
+  persons. One is the owner and the second one is the requester requested is
+  nothing, but you can also call it as a customer. Who is accessing? Okay, so now
+  you look at this. The owner is responsible for the storage cost. Whatever you
+  put in the bucket, the owner is responsible and the owner is also responsible
+  for the network utilization. Very, very important. So what's the problem here?
+  The problem here is. The owner is supposed to pay more cost. Owner is having
+  higher cost here. Extremely high cost. The cost barred by the owner is high.
+  What about the requester? The requester, he's just using it. That's it. Okay.
+  Now how can I upgrade this? See Network cost Basically the owner doesn't need to
+  bear this right. Call storage cost is still fine. You're storing your data here
+  that is still fine but network cost, you don't need the owner to pay it. Why?
+  Because I don't know where my customers are. They might be placed in any
+  different locations inside this continent. Okay, the network utilized by each
+  customer, whenever they make a request, that will be different. Okay. So why
+  would the owner want to pay for the network cost? Now I want to upgrade this
+  system. So this is when we have a specific terminology and that is called as a
+  requester phase. Request pace. See. Who's the requester? This person is the
+  requester. So, the network cost should now be taken care by the requester. Is.
+  Yes, so the retrieval cost is called as what it is called, as a network cost.
+  Very, very important. So anytime you are using a bucket, if it is a general
+  bucket. The owners are responsible for storage And the owners are also
+  responsible for the network whenever we transfer data from one place to another
+  place. So, let me show you an image pertaining to this. Give me a second. Okay,
+  so look at this image. So, what is happening here in the image? There are two
+  persons. One is the owner and the second one is the requester requested is
+  nothing, but you can also call it as a customer. Who is accessing? Okay, so now
+  you look at this. The owner is responsible for the storage cost. Whatever you
+  put in the bucket, the owner is responsible and the owner is also responsible
+  for the network utilization. Very, very important. So what's the problem here?
+  The problem here is. The owner is supposed to pay more cost. Owner is having
+  higher cost here. Extremely high cost. The cost barred by the owner is high.
+  What about the requester? The requester, he's just using it. That's it. Okay.
+  Now how can I upgrade this? See Network cost Basically the owner doesn't need to
+  bear this right. Call storage cost is still fine. You're storing your data here
+  that is still fine but network cost, you don't need the owner to pay it. Why?
+  Because I don't know where my customers are. They might be placed in any
+  different locations inside this continent. Okay, the network utilized by each
+  customer, whenever they make a request, that will be different. Okay. So why
+  would the owner want to pay for the network cost? Now I want to upgrade this
+  system. So this is when we have a specific terminology and that is called as a
+  requester phase. Request pace. See. Who's the requester? This person is the
+  requester. So, the network cost should now be taken care by the requester. Is
+  this clear? For example, let me show you. My screen is frozen. Okay, I know that
+  none of you guys are able to hear me. Is it fine now? I just turned off my
+  camera so it should work fine now, right? Okay, so we were talking about
+  requested pace. So what is this requested pace? Now this network cost. Why would
+  your owner bear this network cost? Because I don't know where the customers are
+  and you are not even sure how frequently the customers are making a request.
+  When that is the case. I don't want the owner to take care of this particular
+  network charges. So that is when we come up with a new terminology that is a
+  requester pace. Look at this. Let me change the diagram. See this diagram? See
+  the change. What's happening here? Look at the standard bucket. Setting in the
+  standard bucket setting, what is happening? The storage cost and the network
+  cost is under the control of the owner. okay, but now what we are doing See,
+  this general bucket or standard bucket here, the owner is getting higher cost.
+  For example, imagine you have a company and your hosting couple of data on the
+  S3, in that case, what is the problem you are expected to pay more money. Now,
+  what I do, I want to change the setting. So now what I do by default this is the
+  case. The change setting is the network cost. Should now be barred by the
+  requester. So you see here, network cost is given to the requester. Is this
+  clear? So the bucket owner still pays for the storage cost, you have to
+  understand this when we say requester pace, That means requested is only paying
+  for one part. What is that part? He is paying only for the networking part,
+  which is nothing but a data transfer part. Why? Because you don't know how far
+  the customer is, you don't know how long the network that the customer will be
+  taking, you're not sure at what time, the customer wants to make the request.
+  When that is the case, the network cost is given to your customer. The bucket
+  owner still pays for the storage cost. But what is the advantage here? The the
+  network cost what currently was bared by the owner that is reduced. Now, this
+  part is now given to the requester. Where do we see? Such kind of Usage.
+  Imagine. You are doing this. Download premium downloads. They charge you for
+  premium downloads. Have you guys seen this? Imagine you want to go and download
+  some video on some kind of streaming websites. The charge you for your download
+  why? They're not charging for charging you for storage, they're charging you for
+  the network cost. But anyone, who's taking up this premium package from your
+  Streaming companies. So you are expected to pay for the networking cost.
+  Understood. Any doubts. So, this is also called as a dto service. What is it?
+  Data transfer out. your transferring the data out of your AWS, your
+  transferring, the data to your Customer outside. AWS Network. And why are we
+  doing this? You don't know how far the customer is here. We have a specific
+  network for that. It can be any kind of network. With mostly, it will be public
+  network because you're making a request on a public network. So, because of
+  which the download will be on a public network. So now you see you might ask How
+  is this user authenticated? Definitely He needs to have a login ID and password
+  to that website. He definitely needs to have an authentication. Later on what it
+  was. What does he do? He will send a request for premium downloads. He upgrades
+  the subscription or he would download a specific video. One video would charge
+  the particular cost so that particular video will be downloaded onto the
+  customer. Say he would make a request what kind of request some premium video
+  request premium video download Premium video, download. Okay, so you make a
+  request and you download that video for each video download you're paying some
+  cost, let's say some $10 cost. For each. Video. So first you might ask, How do
+  you know this user is? An authenticated, What authorized authenticated user
+  First, He has to log into the website where you have this premium video
+  facility. The moment he logs into the website. That is clear. This is a
+  authenticated user. okay, generally Have you has anyone used research Scholar?
+  Research scholar. This is a website online where you can go and download some
+  standard IEEE papers. Or some standard published papers. If you have seen this,
+  not every IEEE paper or published paper are available for free. Some of the
+  published papers, it can be related to any topic physics, chemistry biology
+  computer science. It can or AI it can be related to any topic people all across
+  the globe. They are publishing papers. All standard papers are under the control
+  of this research color. So what do they do? If they want to give you a specific
+  premium access, they will ask you to charge for each. For example. Now let's say
+  I want to download a physics paper. They will charge you some five euros. I want
+  to download some AI paper. They will charge you some 25 euros. See? Each file
+  has its own specific charges. Is this clear? Or in another case imagine you are
+  working or you are a student at a research university? There are student
+  research university. It can be any university, you Munich to you Berlin. Or
+  Silent University, Any university you're working, which is a mostly, a research
+  university. Why am I specifying research university? They have lots and lots of
+  data set. They have extremely large amount of data set. They will give this data
+  set for the students for experimental purpose. But when they are giving the data
+  for the students, it is on requesters pay mode. they would store this large
+  amount of data, where in the S3 bucket, So as and when the user downloads this
+  he will pay a certain amount of fee. Is this clear? Basically, they don't want
+  to make this data as an open source. They don't want everyone to use it. Only
+  those students who are actually currently working on that particular field. They
+  can make a request for this data set and they can pay for it. Any doubts.
+
+[09:22]
+  Do you mean users are students?
+
+[09:24]
+  Its users can be students, user can be any customer, customer, as an imagined.
+  Now, you have, let's say, Andre has a streaming website, he has all premium
+  videos of different languages. For example, he has some Indian movies, like,
+  Hindi movies, Okay, he has some Chinese movies. He also has some Turkish movies.
+  Okay, and these movies, you don't generally find it on Netflix, or Amazon Prime.
+  These are some exclusive movies. Okay, specific language movies. Now what he can
+  do, there are different users who wants to watch this? So he can put some
+  charges depending on the category for Hindi category. He can put a charge of
+  some, let's say, 10 euros. So, every time the person makes a premium request, so
+  it whenever this person makes a download, there is a requester pay on the
+  network charge, which which is around 10 euros for Hindi. Movies for Chinese
+  movies, he can charge around 8 euros, For Turkish movie, he can charge around 15
+  euros. Some exclusive content, which cannot be made public. And which is not
+  easily available anywhere on Internet or in any public storage services during
+  that time. What we can do we can go for this requesters pay. And what is the
+  advantage? I am see. Requester pay. Not everybody gets access anonymous. Access
+  is denied. Just because there is a user. Let's say there is one user here.
+  Doesn't mean he can make a request, he first have to log into your website, then
+  he has to pay this amount only after paying the amount he can access the
+  content. Is this clear?
+  And every requester should be registered in AWS system. Yeah.
+  Yes, yes.
+  Like, I am user.
+  Usually generally, it will be iam.
+  Authentication. Yes.
+  In each, I AM user can have their own automation and create should, every I AM
+  user should enter their own bank cards data. Yeah,
+  Credentials. Yes. Exactly, exactly.
+  Like our subscription to use.
+
+[09:26]
+  It's like a subscription, exactly. Like Netflix Netflix is a complete different
+  platform but what is happening here, here it is only for AWS services. The
+  requester has to have an AWS account he needs to log into the website, he needs
+  to log into the If let's say your hosting a website on AWS he needs to log into
+  the website he needs to get some temporary credentials on the AWS only then he
+  will be able to access your S3 bucket where you have all the different data. But
+  not just that. Whenever he accesses these data, he has to pay payment is very,
+  very important. He will pay for what network charges, all networking cost has to
+  be paid. Is this clear? Any doubt. So, remember, another question will come in
+  your exam, what is it? How can I reduce? The networking cost on S3. The question
+  is very simple, a company is hosting some data on the S3 bucket. Listen to the
+  Question. Clearly, a company is hosting some data on S3 and company is urging to
+  reduce the network cost. What is the best procedure? Simple, go for requesters
+  pay option. When you go for requesters pay what happens? Anyways, the company
+  has said they want to reduce the networking cost. Now the networking cost is
+  gone to the customer Bucket on owner. Only pays for the storage, every time you
+  upload new content to the bucket, you are only paying for that. and what is the
+  requested paying the person, downloading the data pays for the download and also
+  for the network basically whenever you download whatever the charges they have,
+  Levied on a particular data, you will also pay that and also you will pay for
+  the network. Yes, easy.
+  So, you can just put the cost on the, on the request on the client is not going
+  to. It's not going to stay with you.
+
+[09:27]
+  No, it this is simple. You are not going for all kinds of clients. This doesn't
+  work in every situation. Not for all situation. For example, if you go and try
+  to utilize this on Netflix, people would unsubscribe Netflix. This is not for
+  Netflix. But when do we use this this time using only for research kind of data
+  when you have confidential data? When you have published papers, which you don't
+  want to make it publicly available on Internet. only during that time only when
+  you want to do research, Or as Suman said, You want to rent a movie. Some
+  premium movies are there. If you guys have seen, let me just try to show you if
+  I can one moment. I'd like to show you something. Can you guys see my prime? Aw,
+  Amazon Prime. Okay, if you guys see here, I have my account. I already have a
+  subscription. Do you see this beautiful store here in spite of me having
+  subscription? Why is there the store? What is the store? I'll scroll down. Look
+  at this. There are exclusive movies which are not made publicly or basically
+  they have not made open for all the subscribers. Look at this. Michael this
+  movie. If I want to watch, I need to do is here available to rent. Basically, if
+  I pay some amount, they will make this movie available for me, for a short
+  period of time. Probably 48 hours or 72 hours. I need to check that. Understood.
+  So here, look at this, euphoria something. I I need to pay a rent and if I go
+  into movies, there are some movies that are free. I don't need to pay. There are
+  so many movies that are free. Look at this. Do you see here one important thing?
+  There is this Lock option or Rent option. Do you see this? These movies you're
+  being charged. Look at these movies. There is no this particular icon. I don't
+  need to shop these movies are free. Why are they free? I already have a
+  subscription under subscription. Certain movies are already free but apart from
+  that there are certain premium videos. Which is not available for all
+  subscriptions. If I want to watch this recently, newly released movie, I need to
+  pay some amount. Understood inspired. Look at this inspired of having
+  subscription. I need to pay money for certain movies. Why? Because those movies
+  are extremely recent movies. Is this clear? That is how your prime will make
+  more money? Because subscription is very cheap somewhere around. You'll be
+  paying some 10 euros or something per month. But one movie itself will they will
+  charge like five to six euros per movie. Look at the subscription subscription
+  is 10 euros per month for the entire account. So many movies are free, but one
+  single movie itself, they will cost like five to six euros. So that's how they
+  make more money by having this premium contents. Is this clear premium contents?
+  See we also see this on your Amazon prime, and we often see this on your Google
+  Scholar papers. Or there are certain research websites whenever you want to
+  access certain papers and research websites, you need to pay money for one time
+  access if you want to download the month paper for yourself, then the payment
+  will be more if you want to just go do this, a read access They will give you
+  read permission for, let's say like 48 hours for next 48 hours. You can read
+  this paper, then the charge will be different. It is completely dependent on the
+  company. They can do this kind of charges depending on whatever content they
+  have. Is this clear any doubt? Understood. Very important. If imagine you have a
+  government webs, there's a government website and they do this satellite images.
+  Satellite images. Let's say. Adi, they have captured a lot of images. Do you
+  think they will make this images public? If they make this image this public,
+  then all the other countries would use them, right? so government publishes or
+  your research works or your let's say seismographic records like Earth earth,
+  waves or earth to detect earthquake. So these kind of records are always
+  charged. They will not give you for free. Understood. They will do this.
+  Requester pay. Your, your DNA sequence genome data sets. Your bacteria related
+  data sets. We see this often where we see this often in government. We see this
+  in your premium videos. Premium videos. We also see this in medical field. Okay.
+  Requested pay is seen in most of these. Fields, is this clear? Any doubt about
+  requested pay? Okay. There is an option on your S3 to enable this requested pay.
+  I think there is one small lesson about requested pay on your QA. I will assign
+  that for your I'll be session. You just need to know the theory of this. There
+  will, if they ask a question, the question will be something like this. A
+  company is storing a large amount of data in S3 and they want to reduce the
+  networking cost. Or they would say they the owner doesn't want to pay the
+  download cost. Download cost is nothing but network cost either, they would say
+  network cost or download cost. what would, what should we use during that time,
+  you have to Enable the Requesters Pay option. Is this clear? Any doubts. So,
+  let's go on to the next topic. Next topic is pretty important. What is it?
+  Patch. Does anyone know what is batch process? Give me a small example of a
+  batch process. Where do you see it? In case, you know what a batch processes.
+  Please tell me. Where do we see this?
+
+[09:33]
+  guys to try the lab today in the afternoon. give you the theoretical background
+  of what is give needed in the assignment on There's one lab that is Code Red,
+  Lab pertaining to Bastion host. So I would Even after the explanation, if you
+  find the lab to be a bit difficult, then we will do the hands on tomorrow. Is
+  that clear? So, before we go on to that lab, there are certain prerequisites.
+  That is nothing between to know about what a bastion is and what is a security
+  group? What is Knackle, what is the difference between security group and
+  natural? And very important, we also need to know about your SSH connections.
+  How TCP works you how your SSH connection work. So we will go through that and
+  then in the afternoon you can try to do that particular lab. Most of you have
+  already done it well in good and those who are finding difficult, I want you
+  guys to go through the lab once again. And today, I will be uploading one more
+  slide deck on your classroom. That is putting into your IAM Okay. So that's the
+  task for your afternoon session. Any questions, anything that you would like to
+  ask before we start? Let me also quickly, open the attendance, guys. Give me a
+  second. Okay, so some of Europe absent, I did Rohan. Take attendance yesterday.
+  Now, you guys anywhere aware of that.
+
+[09:34]
+  For example, if we are requesting a transaction like a bank transaction. So
+  there are batch processes. Like If you request you know, money from the bank,
+  they will directly send a request to the bank then they are automatically
+  authorized and they give you a notification, then they automatically send it to
+  the, you know, where where you have to send that money. So this is kind of, kind
+  of a batch process that executed at once, when you are just doing the one click,
+  Okay. So that's the task for your afternoon session. Any questions, anything
+  that you would like to ask before we start? Let me also quickly, open the
+  attendance, guys. Give me a second. Okay, so some of Europe absent, I did Rohan.
+  Take attendance yesterday. Now, you guys anywhere aware of that.
+
+[09:35]
+  Yeah.
+  So you are telling series of actions are done when we do one click, right? Okay.
+  So that's not a batch process, okay? It does anyone know what is a batch
+  process? What you said is, it's a synchronous process. So if you click one thing
+  or all other simultaneous process gets triggered one after another, they're all
+  linked. Okay, but what is a batch process, any idea? Not in terms of S3, just a
+  batch process.
+  Maybe the system update like the.
+  Okay. System update is a batch process. Any idea why we call it as
+  Why? Jobs.
+  automated jobs, which
+  Could be triggered.
+  What does job mean? Okay. Triggered. Okay. Can you be more specific?
+  Now, you guys anywhere aware of that.
+
+[09:36]
+  Like maybe for to run or to fulfill one. I don't know one task I mean yeah I
+  mean range them into jobs or something kind of
+  Okay, so some at least you have a basic knowledge. It is something related to
+  job. Now you tell me, let me just reduce half the word here batch. When I say
+  batch, what does it mean? I'm not talking in terms of any process or anything in
+  English batch. Your your class is one batch. Is it a group of students?
+  There's a group here.
+  Can you guys see my screen? Everyone. Okay. So, we now have been learning about
+  S34 over one week. So most of you know all the basics and how it works. Now let
+  us talk about advanced feature. Advanced feature and one such advanced feature
+  is about the payment. What is it? so now, When a company people come and ask you
+  about. Let me also start the recording, guys. Okay, the recording has begun. So
+  imagine a company. People will come. And ask you, how is S3, charged? Can anyone
+  tell me how is S3, charged? So now you are B you're using this S3 service. Let's
+  say, How are you being charged? What are the aspects on which your cost depends?
+  H.
+  On the storage, okay? What else?
+  As a retrieval time. For archive retrieval time for archive story.
+  Sorry. A Retrieval Time Retrieval Time. Okay, Basically you're talking about
+  different classes, right?
+  Yes.
+  Okay, there are how many classes in total?
+  Seven.
+  Seven classes in total. Okay, so you're telling classes also matter. Okay.
+  Anything else
+  We have storage cost on the retrieval cost.
+  Yes, so the retrieval cost is called as what it is called, as a network cost.
+  Very, very important. So anytime you are using a bucket, if it is a general
+  bucket. The owners are responsible for storage And the owners are also
+  responsible for the network whenever we transfer data from one place to another
+  place. So, let me show you an image pertaining to this. Give me a second. Okay,
+  so look at this image. So, what is happening here in the image? There are two
+  persons. One is the owner and the second one is the requester requested is
+  nothing, but you can also call it as a customer. Who is accessing? Okay, so now
+  you look at this. The owner is responsible for the storage cost. Whatever you
+  put in the bucket, the owner is responsible and the owner is also responsible
+  for the network utilization. Very, very important. So what's the problem here?
+  The problem here is. The owner is supposed to pay more cost. Owner is having
+  higher cost here. Extremely high cost. The cost barred by the owner is high.
+  What about the requester? The requester, he's just using it. That's it. Okay.
+  Now how can I upgrade this? See Network cost Basically the owner doesn't need to
+  bear this right. Call storage cost is still fine. You're storing your data here
+  that is still fine but network cost, you don't need the owner to pay it. Why?
+  Because I don't know where my customers are. They might be placed in any
+  different locations inside this continent. Okay, the network utilized by each
+  customer, whenever they make a request, that will be different. Okay. So why
+  would the owner want to pay for the network cost? Now I want to upgrade this
+  system. So this is when we have a specific terminology and that is called as a
+  requester phase. Request pace. See. Who's the requester? This person is the
+  requester. So, the network cost should now be taken care by the requester. Is
+  this clear? For example, let me show you. My screen is frozen. Okay, I know that
+  none of you guys are able to hear me. Is it fine now? I just turned off my
+  camera so it should work fine now, right? Okay, so we were talking about
+  requested pace. So what is this requested pace? Now this network cost. Why would
+  your owner bear this network cost? Because I don't know where the customers are
+  and you are not even sure how frequently the customers are making a request.
+  When that is the case. I don't want the owner to take care of this particular
+  network charges. So that is when we come up with a new terminology that is a
+  requester pace. Look at this. Let me change the diagram. See this diagram? See
+  the change. What's happening here? Look at the standard bucket. Setting in the
+  standard bucket setting, what is happening? The storage cost and the network
+  cost is under the control of the owner. okay, but now what we are doing See,
+  this general bucket or standard bucket here, the owner is getting higher cost.
+  For example, imagine you have a company and your hosting couple of data on the
+  S3, in that case, what is the problem you are expected to pay more money. Now,
+  what I do, I want to change the setting. So now what I do by default this is the
+  case. The change setting is the network cost. Should now be barred by the
+  requester. So you see here, network cost is given to the requester. Is this
+  clear? So the bucket owner still pays for the storage cost, you have to
+  understand this when we say requester pace, That means requested is only paying
+  for one part. What is that part? He is paying only for the networking part,
+  which is nothing but a data transfer part. Why? Because you don't know how far
+  the customer is, you don't know how long the network that the customer will be
+  taking, you're not sure at what time, the customer wants to make the request.
+  When that is the case, the network cost is given to your customer. The bucket
+  owner still pays for the storage cost. But what is the advantage here? The the
+  network cost what currently was bared by the owner that is reduced. Now, this
+  part is now given to the requester. Where do we see? Such kind of Usage.
+  Imagine. You are doing this. Download premium downloads. They charge you for
+  premium downloads. Have you guys seen this? Imagine you want to go and download
+  some video on some kind of streaming websites. The charge you for your download
+  why? They're not charging for charging you for storage, they're charging you for
+  the network cost. But anyone, who's taking up this premium package from your
+  Streaming companies. So you are expected to pay for the networking cost.
+  Understood. Any doubts. So, this is also called as a dto service. What is it?
+  Data transfer out. your transferring the data out of your AWS, your
+  transferring, the data to your Customer outside. AWS Network. And why are we
+  doing this? You don't know how far the customer is here. We have a specific
+  network for that. It can be any kind of network. With mostly, it will be public
+  network because you're making a request on a public network. So, because of
+  which the download will be on a public network. So now you see you might ask How
+  is this user authenticated? Definitely He needs to have a login ID and password
+  to that website. He definitely needs to have an authentication. Later on what it
+  was. What does he do? He will send a request for premium downloads. He upgrades
+  the subscription or he would download a specific video. One video would charge
+  the particular cost so that particular video will be downloaded onto the
+  customer. Say he would make a request what kind of request some premium video
+  request premium video download Premium video, download. Okay, so you make a
+  request and you download that video for each video download you're paying some
+  cost, let's say some $10 cost. For each. Video. So first you might ask, How do
+  you know this user is? An authenticated, What authorized authenticated user
+  First, He has to log into the website where you have this premium video
+  facility. The moment he logs into the website. That is clear. This is a
+  authenticated user. okay, generally Have you has anyone used research Scholar?
+  Research scholar. This is a website online where you can go and download some
+  standard IEEE papers. Or some standard published papers. If you have seen this,
+  not every IEEE paper or published paper are available for free. Some of the
+  published papers, it can be related to any topic physics, chemistry biology
+  computer science. It can or AI it can be related to any topic people all across
+  the globe. They are publishing papers. All standard papers are under the control
+  of this research color. So what do they do? If they want to give you a specific
+  premium access, they will ask you to charge for each. For example. Now let's say
+  I want to download a physics paper. They will charge you some five euros. I want
+  to download some AI paper. They will charge you some 25 euros. See? Each file
+  has its own specific charges. Is this clear? Or in another case imagine you are
+  working or you are a student at a research university? There are student
+  research university. It can be any university, you Munich to you Berlin. Or
+  Silent University, Any university you're working, which is a mostly, a research
+  university. Why am I specifying research university? They have lots and lots of
+  data set. They have extremely large amount of data set. They will give this data
+  set for the students for experimental purpose. But when they are giving the data
+  for the students, it is on requesters pay mode. they would store this large
+  amount of data, where in the S3 bucket, So as and when the user downloads this
+  he will pay a certain amount of fee. Is this clear? Basically, they don't want
+  to make this data as an open source. They don't want everyone to use it. Only
+  those students who are actually currently working on that particular field. They
+  can make a request for this data set and they can pay for it. Any doubts.
+  Do you mean users are students?
+  Its users can be students, user can be any customer, customer, as an imagined.
+  Now, you have, let's say, Andre has a streaming website, he has all premium
+  videos of different languages. For example, he has some Indian movies, like,
+  Hindi movies, Okay, he has some Chinese movies. He also has some Turkish movies.
+  Okay, and these movies, you don't generally find it on Netflix, or Amazon Prime.
+  These are some exclusive movies. Okay, specific language movies. Now what he can
+  do, there are different users who wants to watch this? So he can put some
+  charges depending on the category for Hindi category. He can put a charge of
+  some, let's say, 10 euros. So, every time the person makes a premium request, so
+  it whenever this person makes a download, there is a requester pay on the
+  network charge, which which is around 10 euros for Hindi. Movies for Chinese
+  movies, he can charge around 8 euros, For Turkish movie, he can charge around 15
+  euros. Some exclusive content, which cannot be made public. And which is not
+  easily available anywhere on Internet or in any public storage services during
+  that time. What we can do we can go for this requesters pay. And what is the
+  advantage? I am see. Requester pay. Not everybody gets access anonymous. Access
+  is denied. Just because there is a user. Let's say there is one user here.
+  Doesn't mean he can make a request, he first have to log into your website, then
+  he has to pay this amount only after paying the amount he can access the
+  content. Is this clear?
+  And every requester should be registered in AWS system. Yeah.
+  Yes, yes.
+  Like, I am user.
+  Usually generally, it will be iam.
+  In each, I AM user can have their own automation and create should, every I AM
+  Authentication. Yes.
+  user should enter their own bank cards data. Yeah,
+  Credentials. Yes. Exactly, exactly.
+  Like our subscription to use.
+  It's like a subscription, exactly. Like Netflix Netflix is a complete different
+  platform but what is happening here, here it is only for AWS services. The
+  requester has to have an AWS account he needs to log into the website, he needs
+  to log into the If let's say your hosting a website on AWS he needs to log into
+  the website he needs to get some temporary credentials on the AWS only then he
+  will be able to access your S3 bucket where you have all the different data. But
+  not just that. Whenever he accesses these data, he has to pay payment is very,
+  very important. He will pay for what network charges, all networking cost has to
+  be paid. Is this clear? Any doubt. So, remember, another question will come in
+  your exam, what is it? How can I reduce? The networking cost on S3. The question
+  is very simple, a company is hosting some data on the S3 bucket. Listen to the
+  Question. Clearly, a company is hosting some data on S3 and company is urging to
+  reduce the network cost. What is the best procedure? Simple, go for requesters
+  pay option. When you go for requesters pay what happens? Anyways, the company
+  has said they want to reduce the networking cost. Now the networking cost is
+  gone to the customer Bucket on owner. Only pays for the storage, every time you
+  upload new content to the bucket, you are only paying for that. and what is the
+  requested paying the person, downloading the data pays for the download and also
+  for the network basically whenever you download whatever the charges they have,
+  Levied on a particular data, you will also pay that and also you will pay for
+  the network. Yes, easy.
+  So, you can just put the cost on the, on the request on the client is not going
+  to. It's not going to stay with you.
+  No, it this is simple. You are not going for all kinds of clients. This doesn't
+  work in every situation. Not for all situation. For example, if you go and try
+  to utilize this on Netflix, people would unsubscribe Netflix. This is not for
+  Netflix. But when do we use this this time using only for research kind of data
+  when you have confidential data? When you have published papers, which you don't
+  want to make it publicly available on Internet. only during that time only when
+  you want to do research, Or as Suman said, You want to rent a movie. Some
+  premium movies are there. If you guys have seen, let me just try to show you if
+  I can one moment. I'd like to show you something. Can you guys see my prime? Aw,
+  Amazon Prime. Okay, if you guys see here, I have my account. I already have a
+  subscription. Do you see this beautiful store here in spite of me having
+  subscription? Why is there the store? What is the store? I'll scroll down. Look
+  at this. There are exclusive movies which are not made publicly or basically
+  they have not made open for all the subscribers. Look at this. Michael this
+  movie. If I want to watch, I need to do is here available to rent. Basically, if
+  I pay some amount, they will make this movie available for me, for a short
+  period of time. Probably 48 hours or 72 hours. I need to check that. Understood.
+  So here, look at this, euphoria something. I I need to pay a rent and if I go
+  into movies, there are some movies that are free. I don't need to pay. There are
+  so many movies that are free. Look at this. Do you see here one important thing?
+  There is this Lock option or Rent option. Do you see this? These movies you're
+  being charged. Look at these movies. There is no this particular icon. I don't
+  need to shop these movies are free. Why are they free? I already have a
+  subscription under subscription. Certain movies are already free but apart from
+  that there are certain premium videos. Which is not available for all
+  subscriptions. If I want to watch this recently, newly released movie, I need to
+  pay some amount. Understood inspired. Look at this inspired of having
+  subscription. I need to pay money for certain movies. Why? Because those movies
+  are extremely recent movies. Is this clear? That is how your prime will make
+  more money? Because subscription is very cheap somewhere around. You'll be
+  paying some 10 euros or something per month. But one movie itself will they will
+  charge like five to six euros per movie. Look at the subscription subscription
+  is 10 euros per month for the entire account. So many movies are free, but one
+  single movie itself, they will cost like five to six euros. So that's how they
+  make more money by having this premium contents. Is this clear premium contents?
+  See we also see this on your Amazon prime, and we often see this on your Google
+  Scholar papers. Or there are certain research websites whenever you want to
+  access certain papers and research websites, you need to pay money for one time
+  access if you want to download the month paper for yourself, then the payment
+  will be more if you want to just go do this, a read access They will give you
+  read permission for, let's say like 48 hours for next 48 hours. You can read
+  this paper, then the charge will be different. It is completely dependent on the
+  company. They can do this kind of charges depending on whatever content they
+  have. Is this clear any doubt? Understood. Very important. If imagine you have a
+  government webs, there's a government website and they do this satellite images.
+  Satellite images. Let's say. Adi, they have captured a lot of images. Do you
+  think they will make this images public? If they make this image this public,
+  then all the other countries would use them, right? so government publishes or
+  your research works or your let's say seismographic records like Earth earth,
+  waves or earth to detect earthquake. So these kind of records are always
+  charged. They will not give you for free. Understood. They will do this.
+  Requester pay. Your, your DNA sequence genome data sets. Your bacteria related
+  data sets. We see this often where we see this often in government. We see this
+  in your premium videos. Premium videos. We also see this in medical field. Okay.
+  Requested pay is seen in most of these. Fields, is this clear? Any doubt about
+  requested pay? Okay. There is an option on your S3 to enable this requested pay.
+  I think there is one small lesson about requested pay on your QA. I will assign
+  that for your I'll be session. You just need to know the theory of this. There
+  will, if they ask a question, the question will be something like this. A
+  company is storing a large amount of data in S3 and they want to reduce the
+  networking cost. Or they would say they the owner doesn't want to pay the
+  download cost. Download cost is nothing but network cost either, they would say
+  network cost or download cost. what would, what should we use during that time,
+  you have to Enable the Requesters Pay option. Is this clear? Any doubts. So,
+  let's go on to the next topic. Next topic is pretty important. What is it?
+  Patch. Does anyone know what is batch process? Give me a small example of a
+  batch process. Where do you see it? In case, you know what a batch processes.
+  Please tell me. Where do we see this?
+  For example, if we are requesting a transaction like a bank transaction. So
+  there are batch processes. Like If you request you know, money from the bank,
+  they will directly send a request to the bank then they are automatically
+  authorized and they give you a notification, then they automatically send it to
+  the, you know, where where you have to send that money. So this is kind of, kind
+  of a batch process that executed at once, when you are just doing the one click,
+  So you are telling series of actions are done when we do one click, right? Okay.
+  Yeah.
+  So that's not a batch process, okay? It does anyone know what is a batch
+  process? What you said is, it's a synchronous process. So if you click one thing
+  or all other simultaneous process gets triggered one after another, they're all
+  linked. Okay, but what is a batch process, any idea? Not in terms of S3, just a
+  batch process.
+  Maybe the system update like the.
+  Okay. System update is a batch process. Any idea why we call it as
+  automated jobs, which
+  Why? Jobs.
+  Could be triggered.
+  What does job mean? Okay. Triggered. Okay. Can you be more specific?
+  Like maybe for to run or to fulfill one. I don't know one task I mean yeah I
+  mean range them into jobs or something kind of
+  Okay, so some at least you have a basic knowledge. It is something related to
+  job. Now you tell me, let me just reduce half the word here batch. When I say
+  batch, what does it mean? I'm not talking in terms of any process or anything in
+  English batch. Your your class is one batch. Is it a group of students?
+  There's a group here.
+
+[09:37]
+  Yeah, it's a group of students, right? Group of student. So now, it is very
+  clear. Batch means something that you are executing multiple times. It's a group
+  of similar tasks. Group of Similar Tasks. So now we have the same batch process
+  in your S3. What is it called? As S3. But process Okay, now you see here. Why
+  when do we use this S3 batch process? Very simple. Consider you have a bucket.
+  there is a bucket and inside this bucket, there are couple of datas How many
+  data's are there? There are around. 10,000 dead files. How many 10,000 files are
+  there inside this bucket? That's a huge number. Okay, now I have a request.
+  Let's say not the request is coming from your company and the company says, Go
+  to your S3 bucket. And for all the 10,000 files that you have here include a
+  tag. Can anyone tell me what is a tag? Tag. We did this assigning tax?
+  Okay, value there.
+  Key value pair. Okay, why is it used?
+  For RN.
+  For Arn.
+  IDE. And
+  No.
+  Everyone. Okay. So, we now have been learning about S34 over one week. So most
+  of you know all the basics and how it works. Now let us talk about advanced
+  feature. Advanced feature and one such advanced feature is about the payment.
+  What is it? so now, When a company people come and ask you about. Let me also
+  start the recording, guys. Okay, the recording has begun. So imagine a company.
+  People will come. And ask you, how is S3, charged? Can anyone tell me how is S3,
+  charged? So now you are B you're using this S3 service. Let's say, How are you
+  being charged? What are the aspects on which your cost depends?
+
+[09:38]
+  A way to a way to find. I mean, it for when we are searching for something that
+  I can be useful. Identification. Yeah, this is to what
+  Identification, Perfect. Identifying Purpose. So now what is happening you are
+  working in Devops Department or your working in Cloud department and your
+  company. People will tell you, go to this particular S3 bucket and take all the
+  10,000 files and put a tag saying department equal to AWS. You just need to
+  write one line. Do you see here? What is it? One simple line of tag you need to
+  attach for 10,000 files. Do you think is is it a wise to go through each file
+  and add a tag? Would you go and open each file and put this line?
+  Don't have to go to.
+  What are the aspects on which your cost depends?
+
+[09:39]
+  I don't have to go through it. Why? Very simple. Don't you think this is a
+  repeated task? If you can do it for one file, that means you can do for all the
+  10,000 files. Why would you want to repeat yourself?
+  Can automate it.
+  so, In. Yes. What is the automation technique? The automation technique is
+  nothing but batch process. Simple.
+  That's also somehow related to, to the batch script that we sometime using, or
+  that we are using to feel free sometimes.
+  responsible for storage And the owners are also responsible for the network
+  whenever we transfer data from one place to another place. So, let me show you
+  an image pertaining to this. Give me a second. Okay, so look at this image. So,
+  what is happening here in the image? There are two persons. One is the owner and
+  the second one is the requester requested is nothing, but you can also call it
+  as a customer. Who is accessing? Okay, so now you look at this. The owner is
+  responsible for the storage cost. Whatever you put in the bucket, the owner is
+  responsible and the owner is also responsible for the network utilization. Very,
+  very important. So what's the problem here? The problem here is. The owner is
+  supposed to pay more cost. Owner is having higher cost here. Extremely high
+  cost. The cost barred by the owner is high. What about the requester? The
+  requester, he's just using it. That's it. Okay. Now how can I upgrade this? See
+  Network cost Basically the owner doesn't need to bear this right. Call storage
+  cost is still fine. You're storing your data here that is still fine but network
+  cost, you don't need the owner to pay it. Why? Because I don't know where my
+  customers are. They might be placed in any different locations inside this
+  continent. Okay, the network utilized by each customer, whenever they make a
+  request, that will be different. Okay. So why would the owner want to pay for
+  the network cost? Now I want to upgrade this system. So this is when we have a
+  specific terminology and that is called as a requester phase. Request pace. See.
+  Who's the requester? This person is the requester. So, the network cost should
+  now be taken care by the requester. Is this clear? For example, let me show you.
+  My screen is frozen. Okay, I know that none of you guys are able to hear me. Is
+  it fine now? I just turned off my camera so it should work fine now, right?
+  Okay, so we were talking about requested pace. So what is this requested pace?
+  Now this network cost. Why would your owner bear this network cost? Because I
+  don't know where the customers are and you are not even sure how frequently the
+  customers are making a request. When that is the case. I don't want the owner to
+  take care of this particular network charges. So that is when we come up with a
+  new terminology that is a requester pace. Look at this. Let me change the
+  diagram. See this diagram? See the change. What's happening here? Look at the
+  standard bucket. Setting in the standard bucket setting, what is happening? The
+  storage cost and the network cost is under the control of the owner. okay, but
+  now what we are doing See, this general bucket or standard bucket here, the
+  owner is getting higher cost. For example, imagine you have a company and your
+  hosting couple of data on the S3, in that case, what is the problem you are
+  expected to pay more money. Now, what I do, I want to change the setting. So now
+  what I do by default this is the case. The change setting is the network cost.
+  Should now be barred by the requester. So you see here, network cost is given to
+  the requester. Is this clear? So the bucket owner still pays for the storage
+  cost, you have to understand this when we say requester pace, That means
+  requested is only paying for one part. What is that part? He is paying only for
+  the networking part, which is nothing but a data transfer part. Why? Because you
+  don't know how far the customer is, you don't know how long the network that the
+  customer will be taking, you're not sure at what time, the customer wants to
+  make the request. When that is the case, the network cost is given to your
+  customer. The bucket owner still pays for the storage cost. But what is the
+  advantage here? The the network cost what currently was bared by the owner that
+  is reduced. Now, this part is now given to the requester. Where do we see? Such
+  kind of Usage. Imagine. You are doing this. Download premium downloads. They
+  charge you for premium downloads. Have you guys seen this? Imagine you want to
+  go and download some video on some kind of streaming websites. The charge you
+  for your download why? They're not charging for charging you for storage,
+  they're charging you for the network cost. But anyone, who's taking up this
+  premium package from your Streaming companies. So you are expected to pay for
+  the networking cost. Understood. Any doubts. So, this is also called as a dto
+  service. What is it? Data transfer out. your transferring the data out of your
+  AWS, your transferring, the data to your Customer outside. AWS Network. And why
+  are we doing this? You don't know how far the customer is here. We have a
+  specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+  Do you mean users are students?
+  Its users can be students, user can be any customer, customer, as an imagined.
+  Now, you have, let's say, Andre has a streaming website, he has all premium
+  videos of different languages. For example, he has some Indian movies, like,
+  Hindi movies, Okay, he has some Chinese movies. He also has some Turkish movies.
+  Okay, and these movies, you don't generally find it on Netflix, or Amazon Prime.
+  These are some exclusive movies. Okay, specific language movies. Now what he can
+  do, there are different users who wants to watch this? So he can put some
+  charges depending on the category for Hindi category. He can put a charge of
+  some, let's say, 10 euros. So, every time the person makes a premium request, so
+  it whenever this person makes a download, there is a requester pay on the
+  network charge, which which is around 10 euros for Hindi. Movies for Chinese
+  movies, he can charge around 8 euros, For Turkish movie, he can charge around 15
+  euros. Some exclusive content, which cannot be made public. And which is not
+  easily available anywhere on Internet or in any public storage services during
+  that time. What we can do we can go for this requesters pay. And what is the
+  advantage? I am see. Requester pay. Not everybody gets access anonymous. Access
+  is denied. Just because there is a user. Let's say there is one user here.
+  Doesn't mean he can make a request, he first have to log into your website, then
+  he has to pay this amount only after paying the amount he can access the
+  content. Is this clear?
+  And every requester should be registered in AWS system. Yeah.
+  Yes, yes.
+  Like, I am user.
+  Usually generally, it will be iam.
+  In each, I AM user can have their own automation and create should, every I AM
+  Authentication. Yes.
+  user should enter their own bank cards data. Yeah,
+  Credentials. Yes. Exactly, exactly.
+  Like our subscription to use.
+  It's like a subscription, exactly. Like Netflix Netflix is a complete different
+  platform but what is happening here, here it is only for AWS services. The
+  requester has to have an AWS account he needs to log into the website, he needs
+  to log into the If let's say your hosting a website on AWS he needs to log into
+  the website he needs to get some temporary credentials on the AWS only then he
+  will be able to access your S3 bucket where you have all the different data. But
+  not just that. Whenever he accesses these data, he has to pay payment is very,
+  very important. He will pay for what network charges, all networking cost has to
+  be paid. Is this clear? Any doubt. So, remember, another question will come in
+  your exam, what is it? How can I reduce? The networking cost on S3. The question
+  is very simple, a company is hosting some data on the S3 bucket. Listen to the
+  Question. Clearly, a company is hosting some data on S3 and company is urging to
+  reduce the network cost. What is the best procedure? Simple, go for requesters
+  pay option. When you go for requesters pay what happens? Anyways, the company
+  has said they want to reduce the networking cost. Now the networking cost is
+  gone to the customer Bucket on owner. Only pays for the storage, every time you
+  upload new content to the bucket, you are only paying for that. and what is the
+  requested paying the person, downloading the data pays for the download and also
+  for the network basically whenever you download whatever the charges they have,
+  Levied on a particular data, you will also pay that and also you will pay for
+  the network. Yes, easy.
+  So, you can just put the cost on the, on the request on the client is not going
+  Yes.
+  to. It's not going to stay with you.
+  No, it this is simple. You are not going for all kinds of clients. This doesn't
+  work in every situation. Not for all situation. For example, if you go and try
+  to utilize this on Netflix, people would unsubscribe Netflix. This is not for
+  Netflix. But when do we use this this time using only for research kind of data
+  when you have confidential data? When you have published papers, which you don't
+  want to make it publicly available on Internet. only during that time only when
+  you want to do research, Or as Suman said, You want to rent a movie. Some
+  premium movies are there. If you guys have seen, let me just try to show you if
+  I can one moment. I'd like to show you something. Can you guys see my prime? Aw,
+  Amazon Prime. Okay, if you guys see here, I have my account. I already have a
+  subscription. Do you see this beautiful store here in spite of me having
+  subscription? Why is there the store? What is the store? I'll scroll down. Look
+  at this. There are exclusive movies which are not made publicly or basically
+  they have not made open for all the subscribers. Look at this. Michael this
+  movie. If I want to watch, I need to do is here available to rent. Basically, if
+  I pay some amount, they will make this movie available for me, for a short
+  period of time. Probably 48 hours or 72 hours. I need to check that. Understood.
+  So here, look at this, euphoria something. I I need to pay a rent and if I go
+  into movies, there are some movies that are free. I don't need to pay. There are
+  so many movies that are free. Look at this. Do you see here one important thing?
+  There is this Lock option or Rent option. Do you see this? These movies you're
+  being charged. Look at these movies. There is no this particular icon. I don't
+  need to shop these movies are free. Why are they free? I already have a
+  subscription under subscription. Certain movies are already free but apart from
+  that there are certain premium videos. Which is not available for all
+  subscriptions. If I want to watch this recently, newly released movie, I need to
+  pay some amount. Understood inspired. Look at this inspired of having
+  subscription. I need to pay money for certain movies. Why? Because those movies
+  are extremely recent movies. Is this clear? That is how your prime will make
+  more money? Because subscription is very cheap somewhere around. You'll be
+  paying some 10 euros or something per month. But one movie itself will they will
+  charge like five to six euros per movie. Look at the subscription subscription
+  is 10 euros per month for the entire account. So many movies are free, but one
+  single movie itself, they will cost like five to six euros. So that's how they
+  make more money by having this premium contents. Is this clear premium contents?
+  See we also see this on your Amazon prime, and we often see this on your Google
+  Scholar papers. Or there are certain research websites whenever you want to
+  access certain papers and research websites, you need to pay money for one time
+  access if you want to download the month paper for yourself, then the payment
+  will be more if you want to just go do this, a read access They will give you
+  read permission for, let's say like 48 hours for next 48 hours. You can read
+  this paper, then the charge will be different. It is completely dependent on the
+  company. They can do this kind of charges depending on whatever content they
+  have. Is this clear any doubt? Understood. Very important. If imagine you have a
+  government webs, there's a government website and they do this satellite images.
+  Satellite images. Let's say. Adi, they have captured a lot of images. Do you
+  think they will make this images public? If they make this image this public,
+  then all the other countries would use them, right? so government publishes or
+  your research works or your let's say seismographic records like Earth earth,
+  waves or earth to detect earthquake. So these kind of records are always
+  charged. They will not give you for free. Understood. They will do this.
+  Requester pay. Your, your DNA sequence genome data sets. Your bacteria related
+  data sets. We see this often where we see this often in government. We see this
+  in your premium videos. Premium videos. We also see this in medical field. Okay.
+  Requested pay is seen in most of these. Fields, is this clear? Any doubt about
+  requested pay? Okay. There is an option on your S3 to enable this requested pay.
+  I think there is one small lesson about requested pay on your QA. I will assign
+  that for your I'll be session. You just need to know the theory of this. There
+  will, if they ask a question, the question will be something like this. A
+  company is storing a large amount of data in S3 and they want to reduce the
+  networking cost. Or they would say they the owner doesn't want to pay the
+  download cost. Download cost is nothing but network cost either, they would say
+  network cost or download cost. what would, what should we use during that time,
+  you have to Enable the Requesters Pay option. Is this clear? Any doubts. So,
+  let's go on to the next topic. Next topic is pretty important. What is it?
+  Patch. Does anyone know what is batch process? Give me a small example of a
+  batch process. Where do you see it? In case, you know what a batch processes.
+  Please tell me. Where do we see this?
+  For example, if we are requesting a transaction like a bank transaction. So
+  there are batch processes. Like If you request you know, money from the bank,
+  they will directly send a request to the bank then they are automatically
+  authorized and they give you a notification, then they automatically send it to
+  the, you know, where where you have to send that money. So this is kind of, kind
+  of a batch process that executed at once, when you are just doing the one click,
+  So you are telling series of actions are done when we do one click, right? Okay.
+  Yeah.
+  So that's not a batch process, okay? It does anyone know what is a batch
+  process? What you said is, it's a synchronous process. So if you click one thing
+  or all other simultaneous process gets triggered one after another, they're all
+  linked. Okay, but what is a batch process, any idea? Not in terms of S3, just a
+  batch process.
+  Maybe the system update like the.
+  Okay. System update is a batch process. Any idea why we call it as
+  automated jobs, which
+  Why? Jobs.
+  Could be triggered.
+  What does job mean? Okay. Triggered. Okay. Can you be more specific?
+  Like maybe for to run or to fulfill one. I don't know one task I mean yeah I
+  mean range them into jobs or something kind of
+  Okay, so some at least you have a basic knowledge. It is something related to
+  job. Now you tell me, let me just reduce half the word here batch. When I say
+  batch, what does it mean? I'm not talking in terms of any process or anything in
+  English batch. Your your class is one batch. Is it a group of students?
+  There's a group here.
+  Yeah, it's a group of students, right? Group of student. So now, it is very
+  clear. Batch means something that you are executing multiple times. It's a group
+  of similar tasks. Group of Similar Tasks. So now we have the same batch process
+  in your S3. What is it called? As S3. But process Okay, now you see here. Why
+  when do we use this S3 batch process? Very simple. Consider you have a bucket.
+  there is a bucket and inside this bucket, there are couple of datas How many
+  data's are there? There are around. 10,000 dead files. How many 10,000 files are
+  there inside this bucket? That's a huge number. Okay, now I have a request.
+  Let's say not the request is coming from your company and the company says, Go
+  to your S3 bucket. And for all the 10,000 files that you have here include a
+  tag. Can anyone tell me what is a tag? Tag. We did this assigning tax?
+  Okay, value there.
+  Key value pair. Okay, why is it used?
+  For RN.
+  For Arn.
+  IDE. And
+  No.
+  A way to a way to find. I mean, it for when we are searching for something that
+  I can be useful. Identification. Yeah, this is to what
+  Identification, Perfect. Identifying Purpose. So now what is happening you are
+  working in Devops Department or your working in Cloud department and your
+  company. People will tell you, go to this particular S3 bucket and take all the
+  10,000 files and put a tag saying department equal to AWS. You just need to
+  write one line. Do you see here? What is it? One simple line of tag you need to
+  attach for 10,000 files. Do you think is is it a wise to go through each file
+  and add a tag? Would you go and open each file and put this line?
+  Don't have to go to.
+  I don't have to go through it. Why? Very simple. Don't you think this is a
+  repeated task? If you can do it for one file, that means you can do for all the
+  10,000 files. Why would you want to repeat yourself?
+  Can automate it.
+  so, In. Yes. What is the automation technique? The automation technique is
+  nothing but batch process. Simple.
+  That's also somehow related to, to the batch script that we sometime using, or
+  that we are using to feel free sometimes.
+
+[09:40]
+  Exactly. Exactly. What is a bad script. You might have heard of this term bad
+  script in Linux scripting. What is bad script when you want to execute similar?
+  Task on multiple files that is when I call it as bad script. For example, now
+  you see, I'll tell you batch process where all we see it. You have a website.
+  Let's say Zolando website, most of you might have heard of this is Orlando
+  website. Okay, and there are 500 people who has subscribed for. I would just
+  write subscribed for the new Slater. Newsletter. What does newsletter mean?
+  Whenever there is a offer going on on this website, they would send that
+  notification to your email. That is what we call it as newsletter. Now, let's
+  say Zolando is having some summer sale, 50% off on couple of products and they
+  want to give this part advertisement or send this newsletter to all 500. Do you
+  think they will go and take each one's email address and send this no
+  newsletter? No, why would you want to do that? Instead, what would they do? They
+  would write all the subscribers email address in your batch script. All
+  subscriber. See basically what I want to do, I want to send this message to all
+  500 users saying there is a 50% sale on Solando Simple. I will try it a bad
+  script with all 500 email address and attach include this by newsletter along
+  with some message and just click once, I will just execute this bad script once.
+  Once you execute it, what is happening in the bag? Back end, Look at this. The
+  company. Will trigger batch script ones. Bad script is triggered ones in the
+  backend. There notification is sent to all the subscribers. This year, one
+  trigger. But in the back end, it is doing all the required job. What kind of a
+  job? Same similar jobs. Exactly similar jobs. Understood. Any doubts. This is
+  called as a batch process. What is a batch process similar kind of task that you
+  want to execute in? You can do it individually. But what is the problem?
+  Individual task will always consume a lot of time. Second thing you need manual
+  intervention. You need a person who can do to do this. See I can also send an
+  individual offer letter mean offer newsletter to each. Customer. But what is the
+  problem? Why would I want a manual intervention Here? You want some user here to
+  take care of all of this? So, to avoid manual intervention to avoid errors, and
+  to reduce the latency. I will convert it into a batch script. Okay, now you see
+  here. Just to show you. One simple example about script. Do you see my downloads
+  folder here? There are so many things in my downloads folder. Okay? Just, I will
+  not delete anything just for you guys to observe. Do you see here? I can select.
+  I am pressing Ctrl, and I'm selecting all of them. There is an option for me to
+  delete here. The moment I delete what happens. All the files will be deleted.
+  Correct! Have you guys ever wondered? How is it getting deleted? It is using
+  batch process. I can also delete each one file individually but instead what I
+  did, I selected all of them and I clicked one button. So in the background, it
+  is using batch process to delete all the files, all the selected files. Is this
+  clear? Any doubts. So, from now on words, where anytime you go and delete
+  multiple files on your system, understand it is running a batch process in the
+  backend. Okay, so Mini mentioned about system update. So system update, we spoke
+  about system update as well, right? So what is system update? In your system, in
+  your laptop. There are so many back backend programs. That are running or we
+  also call it as processes. For example, you have system calls You have cross
+  processes. You have kernel. All of them, needs to be updated. You need to update
+  with the new. Version. So that is nothing but what again, you are running a
+  batch process in the backend. You need to update system, call you need to update
+  process, you need to update kernel. So batch process is customized in such a way
+  that it will take the system call and it will update the system call. However it
+  needs, it will take the process individually, it will take up each. A process in
+  your system and it will update. But ultimately, what you're doing? You are doing
+  this update. Task on all the aspect of your system. So it is nothing but batch
+  process. Anything that you are applying for more than one, that means, it is a
+  batch process. Okay, executing similar task on large scale that to parallel
+  operation, very, very important. What is it called? As parallel. I told you the
+  every time I do batch operation what happens. I am avoiding manual intervention.
+  I'm making sure there is no user here. Next thing. What I'm doing. I'm reducing
+  the latency. Why? I told you Imagine I want to, I have 10,000 files. And I want
+  to attach tags. I can do this. If I want to attach tags for 10,000 files
+  individually, it will take four days for me. If I run a bad script probably
+  within like two or three minutes, it will be done two or three minutes how? How
+  because everything is getting run, Parallely. Is this clear? You might ask. How
+  is it running? Parallely. Simple. Who is taking care of S3.
+  utilization. Very, very important. So what's the problem here? The problem here
+  is. The owner is supposed to pay more cost. Owner is having higher cost here.
+  Extremely high cost. The cost barred by the owner is high. What about the
+  requester? The requester, he's just using it. That's it. Okay. Now how can I
+  upgrade this? See Network cost Basically the owner doesn't need to bear this
+  right. Call storage cost is still fine. You're storing your data here that is
+  still fine but network cost, you don't need the owner to pay it. Why? Because I
+  don't know where my customers are. They might be placed in any different
+  locations inside this continent. Okay, the network utilized by each customer,
+  whenever they make a request, that will be different. Okay. So why would the
+  owner want to pay for the network cost? Now I want to upgrade this system. So
+  this is when we have a specific terminology and that is called as a requester
+  phase. Request pace. See. Who's the requester? This person is the requester. So,
+  the network cost should now be taken care by the requester. Is this clear? For
+  example, let me show you. My screen is frozen. Okay, I know that none of you
+  guys are able to hear me. Is it fine now? I just turned off my camera so it
+  should work fine now, right? Okay, so we were talking about requested pace. So
+  what is this requested pace? Now this network cost. Why would your owner bear
+  this network cost? Because I don't know where the customers are and you are not
+  even sure how frequently the customers are making a request. When that is the
+  case. I don't want the owner to take care of this particular network charges. So
+  that is when we come up with a new terminology that is a requester pace. Look at
+  this. Let me change the diagram. See this diagram? See the change. What's
+  happening here? Look at the standard bucket. Setting in the standard bucket
+  setting, what is happening? The storage cost and the network cost is under the
+  control of the owner. okay, but now what we are doing See, this general bucket
+  or standard bucket here, the owner is getting higher cost. For example, imagine
+  you have a company and your hosting couple of data on the S3, in that case, what
+  is the problem you are expected to pay more money. Now, what I do, I want to
+  change the setting. So now what I do by default this is the case. The change
+  setting is the network cost. Should now be barred by the requester. So you see
+  here, network cost is given to the requester. Is this clear? So the bucket owner
+  still pays for the storage cost, you have to understand this when we say
+  requester pace, That means requested is only paying for one part. What is that
+  part? He is paying only for the networking part, which is nothing but a data
+  transfer part. Why? Because you don't know how far the customer is, you don't
+  know how long the network that the customer will be taking, you're not sure at
+  what time, the customer wants to make the request. When that is the case, the
+  network cost is given to your customer. The bucket owner still pays for the
+  storage cost. But what is the advantage here? The the network cost what
+  currently was bared by the owner that is reduced. Now, this part is now given to
+  the requester. Where do we see? Such kind of Usage. Imagine. You are doing this.
+  Download premium downloads. They charge you for premium downloads. Have you guys
+  seen this? Imagine you want to go and download some video on some kind of
+  streaming websites. The charge you for your download why? They're not charging
+  for charging you for storage, they're charging you for the network cost. But
+  anyone, who's taking up this premium package from your Streaming companies. So
+  you are expected to pay for the networking cost. Understood. Any doubts. So,
+  this is also called as a dto service. What is it? Data transfer out. your
+  transferring the data out of your AWS, your transferring, the data to your
+  Customer outside. AWS Network. And why are we doing this? You don't know how far
+  the customer is here. We have a specific network for that. It can be any kind of
+  network. With mostly, it will be public network because you're making a request
+  on a public network. So, because of which the download will be on a public
+  network. So now you see you might ask How is this user authenticated? Definitely
+  He needs to have a login ID and password to that website. He definitely needs to
+  have an authentication. Later on what it was. What does he do? He will send a
+  request for premium downloads. He upgrades the subscription or he would download
+  a specific video. One video would charge the particular cost so that particular
+  video will be downloaded onto the customer. Say he would make a request what
+  kind of request some premium video request premium video download Premium video,
+  download. Okay, so you make a request and you download that video for each video
+  download you're paying some cost, let's say some $10 cost. For each. Video. So
+  first you might ask, How do you know this user is? An authenticated, What
+  authorized authenticated user First, He has to log into the website where you
+  have this premium video facility. The moment he logs into the website. That is
+  clear. This is a authenticated user. okay, generally Have you has anyone used
+  research Scholar? Research scholar. This is a website online where you can go
+  and download some standard IEEE papers. Or some standard published papers. If
+  you have seen this, not every IEEE paper or published paper are available for
+  free. Some of the published papers, it can be related to any topic physics,
+  chemistry biology computer science. It can or AI it can be related to any topic
+  people all across the globe. They are publishing papers. All standard papers are
+  under the control of this research color. So what do they do? If they want to
+  give you a specific premium access, they will ask you to charge for each. For
+  example. Now let's say I want to download a physics paper. They will charge you
+  some five euros. I want to download some AI paper. They will charge you some 25
+  euros. See? Each file has its own specific charges. Is this clear? Or in another
+  case imagine you are working or you are a student at a research university?
+  There are student research university. It can be any university, you Munich to
+  you Berlin. Or Silent University, Any university you're working, which is a
+  mostly, a research university. Why am I specifying research university? They
+  have lots and lots of data set. They have extremely large amount of data set.
+  They will give this data set for the students for experimental purpose. But when
+  they are giving the data for the students, it is on requesters pay mode. they
+  would store this large amount of data, where in the S3 bucket, So as and when
+  the user downloads this he will pay a certain amount of fee. Is this clear?
+  Basically, they don't want to make this data as an open source. They don't want
+  everyone to use it. Only those students who are actually currently working on
+  that particular field. They can make a request for this data set and they can
+  pay for it. Any doubts.
+
+[09:41]
+  will be different. Okay. So why would the owner want to pay for the network
+  cost? Now I want to upgrade this system. So this is when we have a specific
+  terminology and that is called as a requester phase. Request pace. See. Who's
+  the requester? This person is the requester. So, the network cost should now be
+  taken care by the requester. Is this clear? For example, let me show you. My
+  screen is frozen. Okay, I know that none of you guys are able to hear me. Is it
+  fine now? I just turned off my camera so it should work fine now, right? Okay,
+  so we were talking about requested pace. So what is this requested pace? Now
+  this network cost. Why would your owner bear this network cost? Because I don't
+  know where the customers are and you are not even sure how frequently the
+  customers are making a request. When that is the case. I don't want the owner to
+  take care of this particular network charges. So that is when we come up with a
+  new terminology that is a requester pace. Look at this. Let me change the
+  diagram. See this diagram? See the change. What's happening here? Look at the
+  standard bucket. Setting in the standard bucket setting, what is happening? The
+  storage cost and the network cost is under the control of the owner. okay, but
+  now what we are doing See, this general bucket or standard bucket here, the
+  owner is getting higher cost. For example, imagine you have a company and your
+  hosting couple of data on the S3, in that case, what is the problem you are
+  expected to pay more money. Now, what I do, I want to change the setting. So now
+  what I do by default this is the case. The change setting is the network cost.
+  Should now be barred by the requester. So you see here, network cost is given to
+  the requester. Is this clear? So the bucket owner still pays for the storage
+  cost, you have to understand this when we say requester pace, That means
+  requested is only paying for one part. What is that part? He is paying only for
+  the networking part, which is nothing but a data transfer part. Why? Because you
+  don't know how far the customer is, you don't know how long the network that the
+  customer will be taking, you're not sure at what time, the customer wants to
+  make the request. When that is the case, the network cost is given to your
+  customer. The bucket owner still pays for the storage cost. But what is the
+  advantage here? The the network cost what currently was bared by the owner that
+  is reduced. Now, this part is now given to the requester. Where do we see? Such
+  kind of Usage. Imagine. You are doing this. Download premium downloads. They
+  charge you for premium downloads. Have you guys seen this? Imagine you want to
+  go and download some video on some kind of streaming websites. The charge you
+  for your download why? They're not charging for charging you for storage,
+  they're charging you for the network cost. But anyone, who's taking up this
+  premium package from your Streaming companies. So you are expected to pay for
+  the networking cost. Understood. Any doubts. So, this is also called as a dto
+  service. What is it? Data transfer out. your transferring the data out of your
+  AWS, your transferring, the data to your Customer outside. AWS Network. And why
+  are we doing this? You don't know how far the customer is here. We have a
+  specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:42]
+  My screen is frozen. Okay, I know that none of you guys are able to hear me. Is
+  it fine now? I just turned off my camera so it should work fine now, right?
+  Okay, so we were talking about requested pace. So what is this requested pace?
+  Now this network cost. Why would your owner bear this network cost? Because I
+  don't know where the customers are and you are not even sure how frequently the
+  customers are making a request. When that is the case. I don't want the owner to
+  take care of this particular network charges. So that is when we come up with a
+  new terminology that is a requester pace. Look at this. Let me change the
+  diagram. See this diagram? See the change. What's happening here? Look at the
+  standard bucket. Setting in the standard bucket setting, what is happening? The
+  storage cost and the network cost is under the control of the owner. okay, but
+  now what we are doing See, this general bucket or standard bucket here, the
+  owner is getting higher cost. For example, imagine you have a company and your
+  hosting couple of data on the S3, in that case, what is the problem you are
+  expected to pay more money. Now, what I do, I want to change the setting. So now
+  what I do by default this is the case. The change setting is the network cost.
+  Should now be barred by the requester. So you see here, network cost is given to
+  the requester. Is this clear? So the bucket owner still pays for the storage
+  cost, you have to understand this when we say requester pace, That means
+  requested is only paying for one part. What is that part? He is paying only for
+  the networking part, which is nothing but a data transfer part. Why? Because you
+  don't know how far the customer is, you don't know how long the network that the
+  customer will be taking, you're not sure at what time, the customer wants to
+  make the request. When that is the case, the network cost is given to your
+  customer. The bucket owner still pays for the storage cost. But what is the
+  advantage here? The the network cost what currently was bared by the owner that
+  is reduced. Now, this part is now given to the requester. Where do we see? Such
+  kind of Usage. Imagine. You are doing this. Download premium downloads. They
+  charge you for premium downloads. Have you guys seen this? Imagine you want to
+  go and download some video on some kind of streaming websites. The charge you
+  for your download why? They're not charging for charging you for storage,
+  they're charging you for the network cost. But anyone, who's taking up this
+  premium package from your Streaming companies. So you are expected to pay for
+  the networking cost. Understood. Any doubts. So, this is also called as a dto
+  service. What is it? Data transfer out. your transferring the data out of your
+  AWS, your transferring, the data to your Customer outside. AWS Network. And why
+  are we doing this? You don't know how far the customer is here. We have a
+  specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:43]
+  don't know where the customers are and you are not even sure how frequently the
+  customers are making a request. When that is the case. I don't want the owner to
+  take care of this particular network charges. So that is when we come up with a
+  new terminology that is a requester pace. Look at this. Let me change the
+  diagram. See this diagram? See the change. What's happening here? Look at the
+  standard bucket. Setting in the standard bucket setting, what is happening? The
+  storage cost and the network cost is under the control of the owner. okay, but
+  now what we are doing See, this general bucket or standard bucket here, the
+  owner is getting higher cost. For example, imagine you have a company and your
+  hosting couple of data on the S3, in that case, what is the problem you are
+  expected to pay more money. Now, what I do, I want to change the setting. So now
+  what I do by default this is the case. The change setting is the network cost.
+  Should now be barred by the requester. So you see here, network cost is given to
+  the requester. Is this clear? So the bucket owner still pays for the storage
+  cost, you have to understand this when we say requester pace, That means
+  requested is only paying for one part. What is that part? He is paying only for
+  the networking part, which is nothing but a data transfer part. Why? Because you
+  don't know how far the customer is, you don't know how long the network that the
+  customer will be taking, you're not sure at what time, the customer wants to
+  make the request. When that is the case, the network cost is given to your
+  customer. The bucket owner still pays for the storage cost. But what is the
+  advantage here? The the network cost what currently was bared by the owner that
+  is reduced. Now, this part is now given to the requester. Where do we see? Such
+  kind of Usage. Imagine. You are doing this. Download premium downloads. They
+  charge you for premium downloads. Have you guys seen this? Imagine you want to
+  go and download some video on some kind of streaming websites. The charge you
+  for your download why? They're not charging for charging you for storage,
+  they're charging you for the network cost. But anyone, who's taking up this
+  premium package from your Streaming companies. So you are expected to pay for
+  the networking cost. Understood. Any doubts. So, this is also called as a dto
+  service. What is it? Data transfer out. your transferring the data out of your
+  AWS, your transferring, the data to your Customer outside. AWS Network. And why
+  are we doing this? You don't know how far the customer is here. We have a
+  specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:44]
+  the network cost is under the control of the owner. okay, but now what we are
+  doing See, this general bucket or standard bucket here, the owner is getting
+  higher cost. For example, imagine you have a company and your hosting couple of
+  data on the S3, in that case, what is the problem you are expected to pay more
+  money. Now, what I do, I want to change the setting. So now what I do by default
+  this is the case. The change setting is the network cost. Should now be barred
+  by the requester. So you see here, network cost is given to the requester. Is
+  this clear? So the bucket owner still pays for the storage cost, you have to
+  understand this when we say requester pace, That means requested is only paying
+  for one part. What is that part? He is paying only for the networking part,
+  which is nothing but a data transfer part. Why? Because you don't know how far
+  the customer is, you don't know how long the network that the customer will be
+  taking, you're not sure at what time, the customer wants to make the request.
+  When that is the case, the network cost is given to your customer. The bucket
+  owner still pays for the storage cost. But what is the advantage here? The the
+  network cost what currently was bared by the owner that is reduced. Now, this
+  part is now given to the requester. Where do we see? Such kind of Usage.
+  Imagine. You are doing this. Download premium downloads. They charge you for
+  premium downloads. Have you guys seen this? Imagine you want to go and download
+  some video on some kind of streaming websites. The charge you for your download
+  why? They're not charging for charging you for storage, they're charging you for
+  the network cost. But anyone, who's taking up this premium package from your
+  Streaming companies. So you are expected to pay for the networking cost.
+  Understood. Any doubts. So, this is also called as a dto service. What is it?
+  Data transfer out. your transferring the data out of your AWS, your
+  transferring, the data to your Customer outside. AWS Network. And why are we
+  doing this? You don't know how far the customer is here. We have a specific
+  network for that. It can be any kind of network. With mostly, it will be public
+  network because you're making a request on a public network. So, because of
+  which the download will be on a public network. So now you see you might ask How
+  is this user authenticated? Definitely He needs to have a login ID and password
+  to that website. He definitely needs to have an authentication. Later on what it
+  was. What does he do? He will send a request for premium downloads. He upgrades
+  the subscription or he would download a specific video. One video would charge
+  the particular cost so that particular video will be downloaded onto the
+  customer. Say he would make a request what kind of request some premium video
+  request premium video download Premium video, download. Okay, so you make a
+  request and you download that video for each video download you're paying some
+  cost, let's say some $10 cost. For each. Video. So first you might ask, How do
+  you know this user is? An authenticated, What authorized authenticated user
+  First, He has to log into the website where you have this premium video
+  facility. The moment he logs into the website. That is clear. This is a
+  authenticated user. okay, generally Have you has anyone used research Scholar?
+  Research scholar. This is a website online where you can go and download some
+  standard IEEE papers. Or some standard published papers. If you have seen this,
+  not every IEEE paper or published paper are available for free. Some of the
+  published papers, it can be related to any topic physics, chemistry biology
+  computer science. It can or AI it can be related to any topic people all across
+  the globe. They are publishing papers. All standard papers are under the control
+  of this research color. So what do they do? If they want to give you a specific
+  premium access, they will ask you to charge for each. For example. Now let's say
+  I want to download a physics paper. They will charge you some five euros. I want
+  to download some AI paper. They will charge you some 25 euros. See? Each file
+  has its own specific charges. Is this clear? Or in another case imagine you are
+  working or you are a student at a research university? There are student
+  research university. It can be any university, you Munich to you Berlin. Or
+  Silent University, Any university you're working, which is a mostly, a research
+  university. Why am I specifying research university? They have lots and lots of
+  data set. They have extremely large amount of data set. They will give this data
+  set for the students for experimental purpose. But when they are giving the data
+  for the students, it is on requesters pay mode. they would store this large
+  amount of data, where in the S3 bucket, So as and when the user downloads this
+  he will pay a certain amount of fee. Is this clear? Basically, they don't want
+  to make this data as an open source. They don't want everyone to use it. Only
+  those students who are actually currently working on that particular field. They
+  can make a request for this data set and they can pay for it. Any doubts.
+
+[09:45]
+  understand this when we say requester pace, That means requested is only paying
+  for one part. What is that part? He is paying only for the networking part,
+  which is nothing but a data transfer part. Why? Because you don't know how far
+  the customer is, you don't know how long the network that the customer will be
+  taking, you're not sure at what time, the customer wants to make the request.
+  When that is the case, the network cost is given to your customer. The bucket
+  owner still pays for the storage cost. But what is the advantage here? The the
+  network cost what currently was bared by the owner that is reduced. Now, this
+  part is now given to the requester. Where do we see? Such kind of Usage.
+  Imagine. You are doing this. Download premium downloads. They charge you for
+  premium downloads. Have you guys seen this? Imagine you want to go and download
+  some video on some kind of streaming websites. The charge you for your download
+  why? They're not charging for charging you for storage, they're charging you for
+  the network cost. But anyone, who's taking up this premium package from your
+  Streaming companies. So you are expected to pay for the networking cost.
+  Understood. Any doubts. So, this is also called as a dto service. What is it?
+  Data transfer out. your transferring the data out of your AWS, your
+  transferring, the data to your Customer outside. AWS Network. And why are we
+  doing this? You don't know how far the customer is here. We have a specific
+  network for that. It can be any kind of network. With mostly, it will be public
+  network because you're making a request on a public network. So, because of
+  which the download will be on a public network. So now you see you might ask How
+  is this user authenticated? Definitely He needs to have a login ID and password
+  to that website. He definitely needs to have an authentication. Later on what it
+  was. What does he do? He will send a request for premium downloads. He upgrades
+  the subscription or he would download a specific video. One video would charge
+  the particular cost so that particular video will be downloaded onto the
+  customer. Say he would make a request what kind of request some premium video
+  request premium video download Premium video, download. Okay, so you make a
+  request and you download that video for each video download you're paying some
+  cost, let's say some $10 cost. For each. Video. So first you might ask, How do
+  you know this user is? An authenticated, What authorized authenticated user
+  First, He has to log into the website where you have this premium video
+  facility. The moment he logs into the website. That is clear. This is a
+  authenticated user. okay, generally Have you has anyone used research Scholar?
+  Research scholar. This is a website online where you can go and download some
+  standard IEEE papers. Or some standard published papers. If you have seen this,
+  not every IEEE paper or published paper are available for free. Some of the
+  published papers, it can be related to any topic physics, chemistry biology
+  computer science. It can or AI it can be related to any topic people all across
+  the globe. They are publishing papers. All standard papers are under the control
+  of this research color. So what do they do? If they want to give you a specific
+  premium access, they will ask you to charge for each. For example. Now let's say
+  I want to download a physics paper. They will charge you some five euros. I want
+  to download some AI paper. They will charge you some 25 euros. See? Each file
+  has its own specific charges. Is this clear? Or in another case imagine you are
+  working or you are a student at a research university? There are student
+  research university. It can be any university, you Munich to you Berlin. Or
+  Silent University, Any university you're working, which is a mostly, a research
+  university. Why am I specifying research university? They have lots and lots of
+  data set. They have extremely large amount of data set. They will give this data
+  set for the students for experimental purpose. But when they are giving the data
+  for the students, it is on requesters pay mode. they would store this large
+  amount of data, where in the S3 bucket, So as and when the user downloads this
+  he will pay a certain amount of fee. Is this clear? Basically, they don't want
+  to make this data as an open source. They don't want everyone to use it. Only
+  those students who are actually currently working on that particular field. They
+  can make a request for this data set and they can pay for it. Any doubts.
+
+[09:46]
+  V. We are.
+  Who is managing S3.
+  oh,
+  Aws. Yes.
+  Otherwise.
+  Hey Blues.
+  They charge you for premium downloads. Have you guys seen this? Imagine you want
+  to go and download some video on some kind of streaming websites. The charge you
+  for your download why? They're not charging for charging you for storage,
+  they're charging you for the network cost. But anyone, who's taking up this
+  premium package from your Streaming companies. So you are expected to pay for
+  the networking cost. Understood. Any doubts. So, this is also called as a dto
+  service. What is it? Data transfer out. your transferring the data out of your
+  AWS, your transferring, the data to your Customer outside. AWS Network. And why
+  are we doing this? You don't know how far the customer is here. We have a
+  specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:47]
+  Yes, AWS is managing S3 because AWS will give you unlimited storage on S3.
+  Correct. AWS will help you to change the class. What is the class who created
+  this classes? Are we creating the classes? There are seven tiers. Who created
+  these tiers? AWS created those tiers. Correct. You can customize it, you can
+  customize it. But the features are already there in S3, which is already
+  maintained by AWS. So when I say batch, process can run Parallely to do the
+  similar task. Who's taking care of it. AWS is taken care of it. Is this clear?
+  Any doubt. Okay, so where all do we see this? Let me again, tell you about S3
+  batch operation. Or batch process. Okay. Very, very important. S3 batch
+  operation is a managed feature. You will tell on which particular object or on
+  which particular prefix you want to execute a particular task. You will say that
+  is why we say it as managed feature. You have to manage the feature. You have to
+  tell where it needs to get executed. Generally, it is doing Large scale parallel
+  operations. Large scale parallel operations. Generally, we see this on S3 with
+  millions or thousands or millions of objects. Is this clear?
+  a specific network for that. It can be any kind of network. With mostly, it will
+  be public network because you're making a request on a public network. So,
+  because of which the download will be on a public network. So now you see you
+  might ask How is this user authenticated? Definitely He needs to have a login ID
+  and password to that website. He definitely needs to have an authentication.
+  Later on what it was. What does he do? He will send a request for premium
+  downloads. He upgrades the subscription or he would download a specific video.
+  One video would charge the particular cost so that particular video will be
+  downloaded onto the customer. Say he would make a request what kind of request
+  some premium video request premium video download Premium video, download. Okay,
+  so you make a request and you download that video for each video download you're
+  paying some cost, let's say some $10 cost. For each. Video. So first you might
+  ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:48]
+  Sharanya, the monthly usage report is also a batch process, right in RVs and
+  Rws.
+  Okay, so you make a request and you download that video for each video download
+  you're paying some cost, let's say some $10 cost. For each. Video. So first you
+  might ask, How do you know this user is? An authenticated, What authorized
+  authenticated user First, He has to log into the website where you have this
+  premium video facility. The moment he logs into the website. That is clear. This
+  is a authenticated user. okay, generally Have you has anyone used research
+  Scholar? Research scholar. This is a website online where you can go and
+  download some standard IEEE papers. Or some standard published papers. If you
+  have seen this, not every IEEE paper or published paper are available for free.
+  Some of the published papers, it can be related to any topic physics, chemistry
+  biology computer science. It can or AI it can be related to any topic people all
+  across the globe. They are publishing papers. All standard papers are under the
+  control of this research color. So what do they do? If they want to give you a
+  specific premium access, they will ask you to charge for each. For example. Now
+  let's say I want to download a physics paper. They will charge you some five
+  euros. I want to download some AI paper. They will charge you some 25 euros.
+  See? Each file has its own specific charges. Is this clear? Or in another case
+  imagine you are working or you are a student at a research university? There are
+  student research university. It can be any university, you Munich to you Berlin.
+  Or Silent University, Any university you're working, which is a mostly, a
+  research university. Why am I specifying research university? They have lots and
+  lots of data set. They have extremely large amount of data set. They will give
+  this data set for the students for experimental purpose. But when they are
+  giving the data for the students, it is on requesters pay mode. they would store
+  this large amount of data, where in the S3 bucket, So as and when the user
+  downloads this he will pay a certain amount of fee. Is this clear? Basically,
+  they don't want to make this data as an open source. They don't want everyone to
+  use it. Only those students who are actually currently working on that
+  particular field. They can make a request for this data set and they can pay for
+  it. Any doubts.
+
+[09:49]
+  IEEE paper or published paper are available for free. Some of the published
+  papers, it can be related to any topic physics, chemistry biology computer
+  science. It can or AI it can be related to any topic people all across the
+  globe. They are publishing papers. All standard papers are under the control of
+  this research color. So what do they do? If they want to give you a specific
+  premium access, they will ask you to charge for each. For example. Now let's say
+  I want to download a physics paper. They will charge you some five euros. I want
+  to download some AI paper. They will charge you some 25 euros. See? Each file
+  has its own specific charges. Is this clear? Or in another case imagine you are
+  working or you are a student at a research university? There are student
+  research university. It can be any university, you Munich to you Berlin. Or
+  Silent University, Any university you're working, which is a mostly, a research
+  university. Why am I specifying research university? They have lots and lots of
+  data set. They have extremely large amount of data set. They will give this data
+  set for the students for experimental purpose. But when they are giving the data
+  for the students, it is on requesters pay mode. they would store this large
+  amount of data, where in the S3 bucket, So as and when the user downloads this
+  he will pay a certain amount of fee. Is this clear? Basically, they don't want
+  to make this data as an open source. They don't want everyone to use it. Only
+  those students who are actually currently working on that particular field. They
+  can make a request for this data set and they can pay for it. Any doubts.
+
+[09:50]
+  Monthly you say? Yes, yes. It's a bad process. It is generating a monthly report
+  for each of our account. How is it a generating when it's day? See for every one
+  of our account, the report is getting generated. Do you think it goes? It There
+  is a separate process for each of our account. No, there is a badge process that
+  is run. That is getting run inside your data center of your AWS, which sees for
+  each account, how much consumption is done. And it is generating a report for
+  each one of our consumption. Okay, and one more thing. Imagine. I have an S3
+  bucket, I want to create another copy. Of S3. Copious S3 copy. Let's say And
+  here there are 10,000 files. Now you see here. What am I doing? I am copying
+  these 10,000 files from one S3 to another S3. I can do it individually. I can
+  take one file from here and put it here, then, I can take the second file. Then,
+  I can take the third file, but it will consume a lot of time. It will also
+  consume processing capability. It will also need a human intervention. Instead,
+  what I do, I set up a batch process. So when you do copy, what is happening? You
+  are invoking a batch process which does similar task on each of the file. What
+  is each of the file out of 10,000 file? It takes up the first file and copies
+  here. It takes a second file and copies here. Do you see a repeated task? Okay,
+  whenever there is a repeated task that needs to be done on your S3, just simply
+  say, batch process. Understood. Any doubts, you can write a bad script. You can
+  upload the bad script into your S3 as well. Is this clear? Okay, but remember
+  there is a small charge that gets implied on the batch operation. What is it
+  batch? Operation is free when you are running it for, I think it is costing
+  somewhere around one dollar per million objects. One dollar per million objects.
+  This is clear.
+  you Berlin. Or Silent University, Any university you're working, which is a
+  mostly, a research university. Why am I specifying research university? They
+  have lots and lots of data set. They have extremely large amount of data set.
+  They will give this data set for the students for experimental purpose. But when
+  they are giving the data for the students, it is on requesters pay mode. they
+  would store this large amount of data, where in the S3 bucket, So as and when
+  the user downloads this he will pay a certain amount of fee. Is this clear?
+  Basically, they don't want to make this data as an open source. They don't want
+  everyone to use it. Only those students who are actually currently working on
+  that particular field. They can make a request for this data set and they can
+  pay for it. Any doubts.
+
+[09:51]
+  Any doubts.
+
+[09:52]
+  So, every time the person makes a premium request, so it whenever this person
+  makes a download, there is a requester pay on the network charge, which which is
+  around 10 euros for Hindi. Movies for Chinese movies, he can charge around 8
+  euros, For Turkish movie, he can charge around 15 euros. Some exclusive content,
+  which cannot be made public. And which is not easily available anywhere on
+  Internet or in any public storage services during that time. What we can do we
+  can go for this requesters pay. And what is the advantage? I am see. Requester
+  pay. Not everybody gets access anonymous. Access is denied. Just because there
+  is a user. Let's say there is one user here. Doesn't mean he can make a request,
+  he first have to log into your website, then he has to pay this amount only
+  after paying the amount he can access the content. Is this clear?
+  And every requester should be registered in AWS system. Yeah.
+  Yes, yes.
+  Like, I am user.
+  Usually generally, it will be iam.
+  In each, I AM user can have their own automation and create should, every I AM
+  Authentication. Yes.
+  user should enter their own bank cards data. Yeah,
+  Credentials. Yes. Exactly, exactly.
+  Like our subscription to use.
+  It's like a subscription, exactly. Like Netflix Netflix is a complete different
+  platform but what is happening here, here it is only for AWS services. The
+  requester has to have an AWS account he needs to log into the website, he needs
+  to log into the If let's say your hosting a website on AWS he needs to log into
+  the website he needs to get some temporary credentials on the AWS only then he
+  will be able to access your S3 bucket where you have all the different data. But
+  not just that. Whenever he accesses these data, he has to pay payment is very,
+  very important. He will pay for what network charges, all networking cost has to
+  be paid. Is this clear? Any doubt. So, remember, another question will come in
+  your exam, what is it? How can I reduce? The networking cost on S3. The question
+  is very simple, a company is hosting some data on the S3 bucket. Listen to the
+  Question. Clearly, a company is hosting some data on S3 and company is urging to
+  reduce the network cost. What is the best procedure? Simple, go for requesters
+  pay option. When you go for requesters pay what happens? Anyways, the company
+  has said they want to reduce the networking cost. Now the networking cost is
+  gone to the customer Bucket on owner. Only pays for the storage, every time you
+  upload new content to the bucket, you are only paying for that. and what is the
+  requested paying the person, downloading the data pays for the download and also
+  for the network basically whenever you download whatever the charges they have,
+  Levied on a particular data, you will also pay that and also you will pay for
+  the network. Yes, easy.
+  So, you can just put the cost on the, on the request on the client is not going
+  Yes.
+  to. It's not going to stay with you.
+  No, it this is simple. You are not going for all kinds of clients. This doesn't
+  work in every situation. Not for all situation. For example, if you go and try
+  to utilize this on Netflix, people would unsubscribe Netflix. This is not for
+  Netflix. But when do we use this this time using only for research kind of data
+  when you have confidential data? When you have published papers, which you don't
+  want to make it publicly available on Internet. only during that time only when
+  you want to do research, Or as Suman said, You want to rent a movie. Some
+  premium movies are there. If you guys have seen, let me just try to show you if
+  I can one moment. I'd like to show you something. Can you guys see my prime? Aw,
+  Amazon Prime. Okay, if you guys see here, I have my account. I already have a
+  subscription. Do you see this beautiful store here in spite of me having
+  subscription? Why is there the store? What is the store? I'll scroll down. Look
+  at this. There are exclusive movies which are not made publicly or basically
+  they have not made open for all the subscribers. Look at this. Michael this
+  movie. If I want to watch, I need to do is here available to rent. Basically, if
+  I pay some amount, they will make this movie available for me, for a short
+  period of time. Probably 48 hours or 72 hours. I need to check that. Understood.
+  So here, look at this, euphoria something. I I need to pay a rent and if I go
+  into movies, there are some movies that are free. I don't need to pay. There are
+  so many movies that are free. Look at this. Do you see here one important thing?
+  There is this Lock option or Rent option. Do you see this? These movies you're
+  being charged. Look at these movies. There is no this particular icon. I don't
+  need to shop these movies are free. Why are they free? I already have a
+  subscription under subscription. Certain movies are already free but apart from
+  that there are certain premium videos. Which is not available for all
+  subscriptions. If I want to watch this recently, newly released movie, I need to
+  pay some amount. Understood inspired. Look at this inspired of having
+  subscription. I need to pay money for certain movies. Why? Because those movies
+  are extremely recent movies. Is this clear? That is how your prime will make
+  more money? Because subscription is very cheap somewhere around. You'll be
+  paying some 10 euros or something per month. But one movie itself will they will
+  charge like five to six euros per movie. Look at the subscription subscription
+  is 10 euros per month for the entire account. So many movies are free, but one
+  single movie itself, they will cost like five to six euros. So that's how they
+  make more money by having this premium contents. Is this clear premium contents?
+  See we also see this on your Amazon prime, and we often see this on your Google
+  Scholar papers. Or there are certain research websites whenever you want to
+  access certain papers and research websites, you need to pay money for one time
+  access if you want to download the month paper for yourself, then the payment
+  will be more if you want to just go do this, a read access They will give you
+  read permission for, let's say like 48 hours for next 48 hours. You can read
+  this paper, then the charge will be different. It is completely dependent on the
+  company. They can do this kind of charges depending on whatever content they
+  have. Is this clear any doubt? Understood. Very important. If imagine you have a
+  government webs, there's a government website and they do this satellite images.
+  Satellite images. Let's say. Adi, they have captured a lot of images. Do you
+  think they will make this images public? If they make this image this public,
+  then all the other countries would use them, right? so government publishes or
+  your research works or your let's say seismographic records like Earth earth,
+  waves or earth to detect earthquake. So these kind of records are always
+  charged. They will not give you for free. Understood. They will do this.
+  Requester pay. Your, your DNA sequence genome data sets. Your bacteria related
+  data sets. We see this often where we see this often in government. We see this
+  in your premium videos. Premium videos. We also see this in medical field. Okay.
+  Requested pay is seen in most of these. Fields, is this clear? Any doubt about
+  requested pay? Okay. There is an option on your S3 to enable this requested pay.
+  I think there is one small lesson about requested pay on your QA. I will assign
+  that for your I'll be session. You just need to know the theory of this. There
+  will, if they ask a question, the question will be something like this. A
+  company is storing a large amount of data in S3 and they want to reduce the
+  networking cost. Or they would say they the owner doesn't want to pay the
+  download cost. Download cost is nothing but network cost either, they would say
+  network cost or download cost. what would, what should we use during that time,
+  you have to Enable the Requesters Pay option. Is this clear? Any doubts. So,
+  let's go on to the next topic. Next topic is pretty important. What is it?
+  Patch. Does anyone know what is batch process? Give me a small example of a
+  batch process. Where do you see it? In case, you know what a batch processes.
+  Please tell me. Where do we see this?
+  For example, if we are requesting a transaction like a bank transaction. So
+  there are batch processes. Like If you request you know, money from the bank,
+  they will directly send a request to the bank then they are automatically
+  authorized and they give you a notification, then they automatically send it to
+  the, you know, where where you have to send that money. So this is kind of, kind
+  of a batch process that executed at once, when you are just doing the one click,
+  So you are telling series of actions are done when we do one click, right? Okay.
+  Yeah.
+  So that's not a batch process, okay? It does anyone know what is a batch
+  process? What you said is, it's a synchronous process. So if you click one thing
+  or all other simultaneous process gets triggered one after another, they're all
+  linked. Okay, but what is a batch process, any idea? Not in terms of S3, just a
+  batch process.
+  Maybe the system update like the.
+  Okay. System update is a batch process. Any idea why we call it as
+  automated jobs, which
+  Why? Jobs.
+  Could be triggered.
+  What does job mean? Okay. Triggered. Okay. Can you be more specific?
+  Like maybe for to run or to fulfill one. I don't know one task I mean yeah I
+  mean range them into jobs or something kind of
+  Okay, so some at least you have a basic knowledge. It is something related to
+  job. Now you tell me, let me just reduce half the word here batch. When I say
+  batch, what does it mean? I'm not talking in terms of any process or anything in
+  English batch. Your your class is one batch. Is it a group of students?
+  There's a group here.
+  Yeah, it's a group of students, right? Group of student. So now, it is very
+  clear. Batch means something that you are executing multiple times. It's a group
+  of similar tasks. Group of Similar Tasks. So now we have the same batch process
+  in your S3. What is it called? As S3. But process Okay, now you see here. Why
+  when do we use this S3 batch process? Very simple. Consider you have a bucket.
+  there is a bucket and inside this bucket, there are couple of datas How many
+  data's are there? There are around. 10,000 dead files. How many 10,000 files are
+  there inside this bucket? That's a huge number. Okay, now I have a request.
+  Let's say not the request is coming from your company and the company says, Go
+  to your S3 bucket. And for all the 10,000 files that you have here include a
+  tag. Can anyone tell me what is a tag? Tag. We did this assigning tax?
+  Okay, value there.
+  Key value pair. Okay, why is it used?
+  For RN.
+  For Arn.
+  IDE. And
+  No.
+  A way to a way to find. I mean, it for when we are searching for something that
+  I can be useful. Identification. Yeah, this is to what
+  Identification, Perfect. Identifying Purpose. So now what is happening you are
+  working in Devops Department or your working in Cloud department and your
+  company. People will tell you, go to this particular S3 bucket and take all the
+  10,000 files and put a tag saying department equal to AWS. You just need to
+  write one line. Do you see here? What is it? One simple line of tag you need to
+  attach for 10,000 files. Do you think is is it a wise to go through each file
+  and add a tag? Would you go and open each file and put this line?
+  Don't have to go to.
+  I don't have to go through it. Why? Very simple. Don't you think this is a
+  repeated task? If you can do it for one file, that means you can do for all the
+  10,000 files. Why would you want to repeat yourself?
+  Can automate it.
+  so, In. Yes. What is the automation technique? The automation technique is
+  nothing but batch process. Simple.
+  That's also somehow related to, to the batch script that we sometime using, or
+  that we are using to feel free sometimes.
+  Exactly. Exactly. What is a bad script. You might have heard of this term bad
+  script in Linux scripting. What is bad script when you want to execute similar?
+  Task on multiple files that is when I call it as bad script. For example, now
+  you see, I'll tell you batch process where all we see it. You have a website.
+  Let's say Zolando website, most of you might have heard of this is Orlando
+  website. Okay, and there are 500 people who has subscribed for. I would just
+  write subscribed for the new Slater. Newsletter. What does newsletter mean?
+  Whenever there is a offer going on on this website, they would send that
+  notification to your email. That is what we call it as newsletter. Now, let's
+  say Zolando is having some summer sale, 50% off on couple of products and they
+  want to give this part advertisement or send this newsletter to all 500. Do you
+  think they will go and take each one's email address and send this no
+  newsletter? No, why would you want to do that? Instead, what would they do? They
+  would write all the subscribers email address in your batch script. All
+  subscriber. See basically what I want to do, I want to send this message to all
+  500 users saying there is a 50% sale on Solando Simple. I will try it a bad
+  script with all 500 email address and attach include this by newsletter along
+  with some message and just click once, I will just execute this bad script once.
+  Once you execute it, what is happening in the bag? Back end, Look at this. The
+  company. Will trigger batch script ones. Bad script is triggered ones in the
+  backend. There notification is sent to all the subscribers. This year, one
+  trigger. But in the back end, it is doing all the required job. What kind of a
+  job? Same similar jobs. Exactly similar jobs. Understood. Any doubts. This is
+  called as a batch process. What is a batch process similar kind of task that you
+  want to execute in? You can do it individually. But what is the problem?
+  Individual task will always consume a lot of time. Second thing you need manual
+  intervention. You need a person who can do to do this. See I can also send an
+  individual offer letter mean offer newsletter to each. Customer. But what is the
+  problem? Why would I want a manual intervention Here? You want some user here to
+  take care of all of this? So, to avoid manual intervention to avoid errors, and
+  to reduce the latency. I will convert it into a batch script. Okay, now you see
+  here. Just to show you. One simple example about script. Do you see my downloads
+  folder here? There are so many things in my downloads folder. Okay? Just, I will
+  not delete anything just for you guys to observe. Do you see here? I can select.
+  I am pressing Ctrl, and I'm selecting all of them. There is an option for me to
+  delete here. The moment I delete what happens. All the files will be deleted.
+  Correct! Have you guys ever wondered? How is it getting deleted? It is using
+  batch process. I can also delete each one file individually but instead what I
+  did, I selected all of them and I clicked one button. So in the background, it
+  is using batch process to delete all the files, all the selected files. Is this
+  clear? Any doubts. So, from now on words, where anytime you go and delete
+  multiple files on your system, understand it is running a batch process in the
+  backend. Okay, so Mini mentioned about system update. So system update, we spoke
+  about system update as well, right? So what is system update? In your system, in
+  your laptop. There are so many back backend programs. That are running or we
+  also call it as processes. For example, you have system calls You have cross
+  processes. You have kernel. All of them, needs to be updated. You need to update
+  with the new. Version. So that is nothing but what again, you are running a
+  batch process in the backend. You need to update system, call you need to update
+  process, you need to update kernel. So batch process is customized in such a way
+  that it will take the system call and it will update the system call. However it
+  needs, it will take the process individually, it will take up each. A process in
+  your system and it will update. But ultimately, what you're doing? You are doing
+  this update. Task on all the aspect of your system. So it is nothing but batch
+  process. Anything that you are applying for more than one, that means, it is a
+  batch process. Okay, executing similar task on large scale that to parallel
+  operation, very, very important. What is it called? As parallel. I told you the
+  every time I do batch operation what happens. I am avoiding manual intervention.
+  I'm making sure there is no user here. Next thing. What I'm doing. I'm reducing
+  the latency. Why? I told you Imagine I want to, I have 10,000 files. And I want
+  to attach tags. I can do this. If I want to attach tags for 10,000 files
+  individually, it will take four days for me. If I run a bad script probably
+  within like two or three minutes, it will be done two or three minutes how? How
+  because everything is getting run, Parallely. Is this clear? You might ask. How
+  is it running? Parallely. Simple. Who is taking care of S3.
+  V. We are.
+  Who is managing S3.
+  oh,
+  Aws. Yes.
+  Otherwise.
+  Hey Blues.
+  Yes, AWS is managing S3 because AWS will give you unlimited storage on S3.
+  Correct. AWS will help you to change the class. What is the class who created
+  this classes? Are we creating the classes? There are seven tiers. Who created
+  these tiers? AWS created those tiers. Correct. You can customize it, you can
+  customize it. But the features are already there in S3, which is already
+  maintained by AWS. So when I say batch, process can run Parallely to do the
+  similar task. Who's taking care of it. AWS is taken care of it. Is this clear?
+  Any doubt. Okay, so where all do we see this? Let me again, tell you about S3
+  batch operation. Or batch process. Okay. Very, very important. S3 batch
+  operation is a managed feature. You will tell on which particular object or on
+  which particular prefix you want to execute a particular task. You will say that
+  is why we say it as managed feature. You have to manage the feature. You have to
+  tell where it needs to get executed. Generally, it is doing Large scale parallel
+  operations. Large scale parallel operations. Generally, we see this on S3 with
+  millions or thousands or millions of objects. Is this clear?
+  Sharanya, the monthly usage report is also a batch process, right in RVs and
+  Rws.
+
+[09:53]
+  this amount only after paying the amount he can access the content. Is this
+  clear?
+
+[09:54]
+  Monthly you say? Yes, yes. It's a bad process. It is generating a monthly report
+  for each of our account. How is it a generating when it's day? See for every one
+  of our account, the report is getting generated. Do you think it goes? It There
+  is a separate process for each of our account. No, there is a badge process that
+  is run. That is getting run inside your data center of your AWS, which sees for
+  each account, how much consumption is done. And it is generating a report for
+  each one of our consumption. Okay, and one more thing. Imagine. I have an S3
+  bucket, I want to create another copy. Of S3. Copious S3 copy. Let's say And
+  here there are 10,000 files. Now you see here. What am I doing? I am copying
+  these 10,000 files from one S3 to another S3. I can do it individually. I can
+  take one file from here and put it here, then, I can take the second file. Then,
+  I can take the third file, but it will consume a lot of time. It will also
+  consume processing capability. It will also need a human intervention. Instead,
+  what I do, I set up a batch process. So when you do copy, what is happening? You
+  are invoking a batch process which does similar task on each of the file. What
+  is each of the file out of 10,000 file? It takes up the first file and copies
+  here. It takes a second file and copies here. Do you see a repeated task? Okay,
+  whenever there is a repeated task that needs to be done on your S3, just simply
+  say, batch process. Understood. Any doubts, you can write a bad script. You can
+  upload the bad script into your S3 as well. Is this clear? Okay, but remember
+  there is a small charge that gets implied on the batch operation. What is it
+  batch? Operation is free when you are running it for, I think it is costing
+  somewhere around one dollar per million objects. One dollar per million objects.
+  This is clear. So if you want to run a particular, I mean task on a million
+  object, they would charge you around one dollar after million objects. Let's say
+  now you you have somewhere around one point two, five million objects Okay after
+  1.2 c initially, I told you one dollar per million objects but you have 1.25 but
+  what is happening for the first, 1 million dollar. Sorry for the first one
+  million. I'm taking one dollar as the charge but what about 0.25? After 1
+  million onwards. Each job is charged point two five dollars. You don't need to
+  remember these costs and just giving you a rough idea here. This costs are never
+  asked in the exam. The prices are never asked in the exam, you just need to know
+  how the pricing works. Here in jaw a bad chops. You need to know what is a bad
+  job and how it works, if you know that it's more than sufficient, okay? But I'm
+  just telling you if you have let's say Two million 2.5 million objects. Object
+  for first one million, I am charging $1, this is for every account but after
+  that onwards, you are charging point to five dollar per object. After 1 million
+  onwards, you will be charged 0.25 per object. This is just for your
+  understanding in case you go to a company and they want to run such kind of bad
+  jobs and have extremely large amount of data. So, you just need to keep this in
+  mind. Okay. So if you want to run a batch job, there are a few things. What is
+  it? You need to have a script. Or we also call it as a manifest. So what do we
+  have in this script? In this script? You will tell on which object. On which
+  object. Object List. Basically, I would say not single one, on which object list
+  you want to run the task next, What is the task? What task do you want to
+  execute? Probably the task can be deletion task. The task can be copying task or
+  adding the tags, deleting the tags. Changing the class there can be different
+  tasks that you want to execute. So you will specify what task you want. And then
+  you would also need to give a list of objects on which this task will be
+  executed. Is this clear? Any doubt. No doubt.
+  needs to log into the If let's say your hosting a website on AWS he needs to log
+  into the website he needs to get some temporary credentials on the AWS only then
+  he will be able to access your S3 bucket where you have all the different data.
+  But not just that. Whenever he accesses these data, he has to pay payment is
+  very, very important. He will pay for what network charges, all networking cost
+  has to be paid. Is this clear? Any doubt. So, remember, another question will
+  come in your exam, what is it? How can I reduce? The networking cost on S3. The
+  question is very simple, a company is hosting some data on the S3 bucket. Listen
+  to the Question. Clearly, a company is hosting some data on S3 and company is
+  urging to reduce the network cost. What is the best procedure? Simple, go for
+  requesters pay option. When you go for requesters pay what happens? Anyways, the
+  company has said they want to reduce the networking cost. Now the networking
+  cost is gone to the customer Bucket on owner. Only pays for the storage, every
+  time you upload new content to the bucket, you are only paying for that. and
+  what is the requested paying the person, downloading the data pays for the
+  download and also for the network basically whenever you download whatever the
+  charges they have, Levied on a particular data, you will also pay that and also
+  you will pay for the network. Yes, easy.
+  So, you can just put the cost on the, on the request on the client is not going
+  Yes.
+  to. It's not going to stay with you.
+  No, it this is simple. You are not going for all kinds of clients. This doesn't
+  work in every situation. Not for all situation. For example, if you go and try
+  to utilize this on Netflix, people would unsubscribe Netflix. This is not for
+  Netflix. But when do we use this this time using only for research kind of data
+  when you have confidential data? When you have published papers, which you don't
+  want to make it publicly available on Internet. only during that time only when
+  you want to do research, Or as Suman said, You want to rent a movie. Some
+  premium movies are there. If you guys have seen, let me just try to show you if
+  I can one moment. I'd like to show you something. Can you guys see my prime? Aw,
+  Amazon Prime. Okay, if you guys see here, I have my account. I already have a
+  subscription. Do you see this beautiful store here in spite of me having
+  subscription? Why is there the store? What is the store? I'll scroll down. Look
+  at this. There are exclusive movies which are not made publicly or basically
+  they have not made open for all the subscribers. Look at this. Michael this
+  movie. If I want to watch, I need to do is here available to rent. Basically, if
+  I pay some amount, they will make this movie available for me, for a short
+  period of time. Probably 48 hours or 72 hours. I need to check that. Understood.
+  So here, look at this, euphoria something. I I need to pay a rent and if I go
+  into movies, there are some movies that are free. I don't need to pay. There are
+  so many movies that are free. Look at this. Do you see here one important thing?
+  There is this Lock option or Rent option. Do you see this? These movies you're
+  being charged. Look at these movies. There is no this particular icon. I don't
+  need to shop these movies are free. Why are they free? I already have a
+  subscription under subscription. Certain movies are already free but apart from
+  that there are certain premium videos. Which is not available for all
+  subscriptions. If I want to watch this recently, newly released movie, I need to
+  pay some amount. Understood inspired. Look at this inspired of having
+  subscription. I need to pay money for certain movies. Why? Because those movies
+  are extremely recent movies. Is this clear? That is how your prime will make
+  more money? Because subscription is very cheap somewhere around. You'll be
+  paying some 10 euros or something per month. But one movie itself will they will
+  charge like five to six euros per movie. Look at the subscription subscription
+  is 10 euros per month for the entire account. So many movies are free, but one
+  single movie itself, they will cost like five to six euros. So that's how they
+  make more money by having this premium contents. Is this clear premium contents?
+  See we also see this on your Amazon prime, and we often see this on your Google
+  Scholar papers. Or there are certain research websites whenever you want to
+  access certain papers and research websites, you need to pay money for one time
+  access if you want to download the month paper for yourself, then the payment
+  will be more if you want to just go do this, a read access They will give you
+  read permission for, let's say like 48 hours for next 48 hours. You can read
+  this paper, then the charge will be different. It is completely dependent on the
+  company. They can do this kind of charges depending on whatever content they
+  have. Is this clear any doubt? Understood. Very important. If imagine you have a
+  government webs, there's a government website and they do this satellite images.
+  Satellite images. Let's say. Adi, they have captured a lot of images. Do you
+  think they will make this images public? If they make this image this public,
+  then all the other countries would use them, right? so government publishes or
+  your research works or your let's say seismographic records like Earth earth,
+  waves or earth to detect earthquake. So these kind of records are always
+  charged. They will not give you for free. Understood. They will do this.
+  Requester pay. Your, your DNA sequence genome data sets. Your bacteria related
+  data sets. We see this often where we see this often in government. We see this
+  in your premium videos. Premium videos. We also see this in medical field. Okay.
+  Requested pay is seen in most of these. Fields, is this clear? Any doubt about
+  requested pay? Okay. There is an option on your S3 to enable this requested pay.
+  I think there is one small lesson about requested pay on your QA. I will assign
+  that for your I'll be session. You just need to know the theory of this. There
+  will, if they ask a question, the question will be something like this. A
+  company is storing a large amount of data in S3 and they want to reduce the
+  networking cost. Or they would say they the owner doesn't want to pay the
+  download cost. Download cost is nothing but network cost either, they would say
+  network cost or download cost. what would, what should we use during that time,
+  you have to Enable the Requesters Pay option. Is this clear? Any doubts. So,
+  let's go on to the next topic. Next topic is pretty important. What is it?
+  Patch. Does anyone know what is batch process? Give me a small example of a
+  batch process. Where do you see it? In case, you know what a batch processes.
+  Please tell me. Where do we see this?
+  For example, if we are requesting a transaction like a bank transaction. So
+  there are batch processes. Like If you request you know, money from the bank,
+  they will directly send a request to the bank then they are automatically
+  authorized and they give you a notification, then they automatically send it to
+  the, you know, where where you have to send that money. So this is kind of, kind
+  of a batch process that executed at once, when you are just doing the one click,
+  So you are telling series of actions are done when we do one click, right? Okay.
+  Yeah.
+  So that's not a batch process, okay? It does anyone know what is a batch
+  process? What you said is, it's a synchronous process. So if you click one thing
+  or all other simultaneous process gets triggered one after another, they're all
+  linked. Okay, but what is a batch process, any idea? Not in terms of S3, just a
+  batch process.
+  Maybe the system update like the.
+  Okay. System update is a batch process. Any idea why we call it as
+  automated jobs, which
+  Why? Jobs.
+  Could be triggered.
+  What does job mean? Okay. Triggered. Okay. Can you be more specific?
+  Like maybe for to run or to fulfill one. I don't know one task I mean yeah I
+  mean range them into jobs or something kind of
+  Okay, so some at least you have a basic knowledge. It is something related to
+  job. Now you tell me, let me just reduce half the word here batch. When I say
+  batch, what does it mean? I'm not talking in terms of any process or anything in
+  English batch. Your your class is one batch. Is it a group of students?
+  There's a group here.
+  Yeah, it's a group of students, right? Group of student. So now, it is very
+  clear. Batch means something that you are executing multiple times. It's a group
+  of similar tasks. Group of Similar Tasks. So now we have the same batch process
+  in your S3. What is it called? As S3. But process Okay, now you see here. Why
+  when do we use this S3 batch process? Very simple. Consider you have a bucket.
+  there is a bucket and inside this bucket, there are couple of datas How many
+  data's are there? There are around. 10,000 dead files. How many 10,000 files are
+  there inside this bucket? That's a huge number. Okay, now I have a request.
+  Let's say not the request is coming from your company and the company says, Go
+  to your S3 bucket. And for all the 10,000 files that you have here include a
+  tag. Can anyone tell me what is a tag? Tag. We did this assigning tax?
+  Okay, value there.
+  Key value pair. Okay, why is it used?
+  For RN.
+  For Arn.
+  IDE. And
+  No.
+  A way to a way to find. I mean, it for when we are searching for something that
+  I can be useful. Identification. Yeah, this is to what
+  Identification, Perfect. Identifying Purpose. So now what is happening you are
+  working in Devops Department or your working in Cloud department and your
+  company. People will tell you, go to this particular S3 bucket and take all the
+  10,000 files and put a tag saying department equal to AWS. You just need to
+  write one line. Do you see here? What is it? One simple line of tag you need to
+  attach for 10,000 files. Do you think is is it a wise to go through each file
+  and add a tag? Would you go and open each file and put this line?
+  Don't have to go to.
+  I don't have to go through it. Why? Very simple. Don't you think this is a
+  repeated task? If you can do it for one file, that means you can do for all the
+  10,000 files. Why would you want to repeat yourself?
+  Can automate it.
+  so, In. Yes. What is the automation technique? The automation technique is
+  nothing but batch process. Simple.
+  That's also somehow related to, to the batch script that we sometime using, or
+  that we are using to feel free sometimes.
+  Exactly. Exactly. What is a bad script. You might have heard of this term bad
+  script in Linux scripting. What is bad script when you want to execute similar?
+  Task on multiple files that is when I call it as bad script. For example, now
+  you see, I'll tell you batch process where all we see it. You have a website.
+  Let's say Zolando website, most of you might have heard of this is Orlando
+  website. Okay, and there are 500 people who has subscribed for. I would just
+  write subscribed for the new Slater. Newsletter. What does newsletter mean?
+  Whenever there is a offer going on on this website, they would send that
+  notification to your email. That is what we call it as newsletter. Now, let's
+  say Zolando is having some summer sale, 50% off on couple of products and they
+  want to give this part advertisement or send this newsletter to all 500. Do you
+  think they will go and take each one's email address and send this no
+  newsletter? No, why would you want to do that? Instead, what would they do? They
+  would write all the subscribers email address in your batch script. All
+  subscriber. See basically what I want to do, I want to send this message to all
+  500 users saying there is a 50% sale on Solando Simple. I will try it a bad
+  script with all 500 email address and attach include this by newsletter along
+  with some message and just click once, I will just execute this bad script once.
+  Once you execute it, what is happening in the bag? Back end, Look at this. The
+  company. Will trigger batch script ones. Bad script is triggered ones in the
+  backend. There notification is sent to all the subscribers. This year, one
+  trigger. But in the back end, it is doing all the required job. What kind of a
+  job? Same similar jobs. Exactly similar jobs. Understood. Any doubts. This is
+  called as a batch process. What is a batch process similar kind of task that you
+  want to execute in? You can do it individually. But what is the problem?
+  Individual task will always consume a lot of time. Second thing you need manual
+  intervention. You need a person who can do to do this. See I can also send an
+  individual offer letter mean offer newsletter to each. Customer. But what is the
+  problem? Why would I want a manual intervention Here? You want some user here to
+  take care of all of this? So, to avoid manual intervention to avoid errors, and
+  to reduce the latency. I will convert it into a batch script. Okay, now you see
+  here. Just to show you. One simple example about script. Do you see my downloads
+  folder here? There are so many things in my downloads folder. Okay? Just, I will
+  not delete anything just for you guys to observe. Do you see here? I can select.
+  I am pressing Ctrl, and I'm selecting all of them. There is an option for me to
+  delete here. The moment I delete what happens. All the files will be deleted.
+  Correct! Have you guys ever wondered? How is it getting deleted? It is using
+  batch process. I can also delete each one file individually but instead what I
+  did, I selected all of them and I clicked one button. So in the background, it
+  is using batch process to delete all the files, all the selected files. Is this
+  clear? Any doubts. So, from now on words, where anytime you go and delete
+  multiple files on your system, understand it is running a batch process in the
+  backend. Okay, so Mini mentioned about system update. So system update, we spoke
+  about system update as well, right? So what is system update? In your system, in
+  your laptop. There are so many back backend programs. That are running or we
+  also call it as processes. For example, you have system calls You have cross
+  processes. You have kernel. All of them, needs to be updated. You need to update
+  with the new. Version. So that is nothing but what again, you are running a
+  batch process in the backend. You need to update system, call you need to update
+  process, you need to update kernel. So batch process is customized in such a way
+  that it will take the system call and it will update the system call. However it
+  needs, it will take the process individually, it will take up each. A process in
+  your system and it will update. But ultimately, what you're doing? You are doing
+  this update. Task on all the aspect of your system. So it is nothing but batch
+  process. Anything that you are applying for more than one, that means, it is a
+  batch process. Okay, executing similar task on large scale that to parallel
+  operation, very, very important. What is it called? As parallel. I told you the
+  every time I do batch operation what happens. I am avoiding manual intervention.
+  I'm making sure there is no user here. Next thing. What I'm doing. I'm reducing
+  the latency. Why? I told you Imagine I want to, I have 10,000 files. And I want
+  to attach tags. I can do this. If I want to attach tags for 10,000 files
+  individually, it will take four days for me. If I run a bad script probably
+  within like two or three minutes, it will be done two or three minutes how? How
+  because everything is getting run, Parallely. Is this clear? You might ask. How
+  is it running? Parallely. Simple. Who is taking care of S3.
+  V. We are.
+  Who is managing S3.
+  oh,
+  Aws. Yes.
+  Otherwise.
+  Hey Blues.
+  Yes, AWS is managing S3 because AWS will give you unlimited storage on S3.
+  Correct. AWS will help you to change the class. What is the class who created
+  this classes? Are we creating the classes? There are seven tiers. Who created
+  these tiers? AWS created those tiers. Correct. You can customize it, you can
+  customize it. But the features are already there in S3, which is already
+  maintained by AWS. So when I say batch, process can run Parallely to do the
+  similar task. Who's taking care of it. AWS is taken care of it. Is this clear?
+  Any doubt. Okay, so where all do we see this? Let me again, tell you about S3
+  batch operation. Or batch process. Okay. Very, very important. S3 batch
+  operation is a managed feature. You will tell on which particular object or on
+  which particular prefix you want to execute a particular task. You will say that
+  is why we say it as managed feature. You have to manage the feature. You have to
+  tell where it needs to get executed. Generally, it is doing Large scale parallel
+  operations. Large scale parallel operations. Generally, we see this on S3 with
+  millions or thousands or millions of objects. Is this clear?
+  Sharanya, the monthly usage report is also a batch process, right in RVs and
+  Rws.
