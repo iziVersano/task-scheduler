@@ -42,6 +42,26 @@ jobs:
           PROMPT_FILE=$(mktemp)
           PAYLOAD_FILE=$(mktemp)
           RESPONSE_FILE=$(mktemp)
+          DEDUPED_FILE=$(mktemp)
+
+          # Live caption capture re-appends overlapping text when it reconnects,
+          # producing long runs of duplicated paragraphs. Collapse consecutive
+          # duplicate lines before sending to the model — this alone tends to
+          # shrink transcripts by more than half on days with reconnects.
+          awk '!seen[$0]++ || $0 ~ /^\s*$|^\[/' "$CAPTIONS_FILE" > "$DEDUPED_FILE"
+
+          # GitHub Models' free gpt-4o tier caps requests at 8000 tokens total
+          # (prompt + instructions + output). Budget ~20000 chars (~5000 tokens)
+          # for captions, keeping the END of the transcript (most recent content)
+          # since the class builds on earlier topics and later material is what's
+          # least likely to already be covered in a previous summary.
+          MAX_CHARS=20000
+          CAPTION_CHARS=$(wc -c < "$DEDUPED_FILE")
+          if [ "$CAPTION_CHARS" -gt "$MAX_CHARS" ]; then
+            echo "⚠️ Captions are ${CAPTION_CHARS} chars after dedup — truncating to last ${MAX_CHARS} chars"
+            tail -c "$MAX_CHARS" "$DEDUPED_FILE" > "${DEDUPED_FILE}.trunc"
+            mv "${DEDUPED_FILE}.trunc" "$DEDUPED_FILE"
+          fi
 
           # Build prompt into a file — captions can be too large for a shell arg/env var
           {
@@ -55,7 +75,7 @@ jobs:
             echo "- Do NOT wrap in a code block — output raw markdown only"
             echo ""
             echo "Captions:"
-            cat "$CAPTIONS_FILE"
+            cat "$DEDUPED_FILE"
           } > "$PROMPT_FILE"
 
           # Build the JSON payload from the file (--rawfile avoids ARG_MAX / large env var limits)
