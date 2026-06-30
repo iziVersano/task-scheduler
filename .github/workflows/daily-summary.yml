@@ -38,39 +38,46 @@ jobs:
           TODAY: ${{ steps.check.outputs.today }}
           CAPTIONS_FILE: ${{ steps.check.outputs.captions }}
         run: |
-          CAPTIONS=$(cat "$CAPTIONS_FILE")
           SUMMARY_FILE="server/live-summary/${TODAY}.md"
+          PROMPT_FILE=$(mktemp)
+          PAYLOAD_FILE=$(mktemp)
+          RESPONSE_FILE=$(mktemp)
 
-          # Build prompt
-          PROMPT="You are a concise AWS class note-taker. Based on the following class transcript captions, write a structured markdown summary of the AWS topics covered today ($TODAY).
+          # Build prompt into a file — captions can be too large for a shell arg/env var
+          {
+            echo "You are a concise AWS class note-taker. Based on the following class transcript captions, write a structured markdown summary of the AWS topics covered today (${TODAY})."
+            echo ""
+            echo "Rules:"
+            echo "- Use ## headings for each topic"
+            echo "- Under each topic: bullet points for key concepts, a markdown table if comparing things, and a mermaid diagram if it helps visualise"
+            echo "- Add a real-world company blockquote example for each topic (> 🏢 Real world: ...)"
+            echo "- Keep it focused — no filler, no intro/outro sentences"
+            echo "- Do NOT wrap in a code block — output raw markdown only"
+            echo ""
+            echo "Captions:"
+            cat "$CAPTIONS_FILE"
+          } > "$PROMPT_FILE"
 
-          Rules:
-          - Use ## headings for each topic
-          - Under each topic: bullet points for key concepts, a markdown table if comparing things, and a mermaid diagram if it helps visualise
-          - Add a real-world company blockquote example for each topic (> 🏢 Real world: ...)
-          - Keep it focused — no filler, no intro/outro sentences
-          - Do NOT wrap in a code block — output raw markdown only
-
-          Captions:
-          ${CAPTIONS}"
+          # Build the JSON payload from the file (--rawfile avoids ARG_MAX / large env var limits)
+          jq -n \
+            --arg model "gpt-4o" \
+            --rawfile content "$PROMPT_FILE" \
+            --argjson max_tokens 4000 \
+            '{model: $model, messages: [{role: "user", content: $content}], max_tokens: $max_tokens}' \
+            > "$PAYLOAD_FILE"
 
           # Call GitHub Models API (gpt-4o)
-          RESPONSE=$(curl -s -X POST \
+          HTTP_CODE=$(curl -s -o "$RESPONSE_FILE" -w "%{http_code}" -X POST \
             -H "Authorization: Bearer $GITHUB_TOKEN" \
             -H "Content-Type: application/json" \
             "https://models.inference.ai.azure.com/chat/completions" \
-            -d "$(jq -n \
-              --arg model "gpt-4o" \
-              --arg content "$PROMPT" \
-              '{model: $model, messages: [{role: "user", content: $content}], max_tokens: 4000}'
-            )")
+            --data-binary @"$PAYLOAD_FILE")
 
-          # Extract content
-          SUMMARY=$(echo "$RESPONSE" | jq -r '.choices[0].message.content // empty')
+          SUMMARY=$(jq -r '.choices[0].message.content // empty' "$RESPONSE_FILE")
 
           if [ -z "$SUMMARY" ]; then
-            echo "❌ GitHub Models returned empty response"
-            echo "Response: $RESPONSE"
+            echo "❌ GitHub Models returned empty response (HTTP $HTTP_CODE)"
+            cat "$RESPONSE_FILE"
             exit 1
           fi
 
