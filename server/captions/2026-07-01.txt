@@ -1,0 +1,487 @@
+
+[09:02]
+  --- logged in ---
+
+[09:33]
+  Please raise your hand if you know the answer. Yes, Khadim. Option.
+
+[09:34]
+  Option.
+  B. Okay. Okay, Andrea also says Option B. You Julian also says Option B. Is
+  there anyone who chooses any other option apart from this? Does anyone know what
+  is a multi-tier application mean?
+
+[09:35]
+  Which has many options of payment. like, Standard premium or enterprise social
+  things.
+  And you mean the payment Gateway? That's related to subscription.
+  No. No.
+  I mean, no. I mean I mean subscriptions. Yeah. Is it's somehow related to
+  subscriptions here. Military tier. Okay.
+
+[09:36]
+  is it is it like the the tears are the different layers of the application like
+  let's say, You have the front end and the back end and the database. And
+  Perfect. Very good. Mostly it is going to be frontend backend. Sometimes, you
+  will also have an intermediate tier here for processing. For processing. You
+  will also have an intermediate here. What is your front end?
+  Server.
+  Web Server.
+  What we see? Yeah.
+  To give you.
+  Web server basically front end. Basically, what is front end. A person is here
+  Web server basically front end. Basically what is front end. A person is here
+
+[09:37]
+  and if there is a customer customer can only access front, end customer is
+  completely forbidden accessing any processing layer or the backend. Customer
+  cannot access or he will not be given permission to any of the other parts
+  except for the front end. Only he gets access to frontend. What does front end
+  mean? Basically is able to see some UI user interface. Some website user
+  interface is provided to the front end, Where do we host the website user
+  interface, Another server right? So generally front end is nothing but a compute
+  service. Is this clear? Front end is generally a compute service. Okay. What is
+  backend then? Processing Layer. We will skip the processing layer. I'll come to
+  processing layer. Next what is backend perfect database. Where I store my data
+  is nothing but my backend, it need not be database somewhere. Basically the data
+  storage, it can either be S3, it can be EFS. Or you can also have EBS volumes
+  here. Or it can be database, are RDS dynamodb.
+
+[09:39]
+  and if there is a customer customer can only access front, end customer is
+  completely forbidden accessing any processing layer or the backend. Customer
+  cannot access or he will not be given permission to any of the other parts
+  except for the front end. Only he gets access to frontend. What does front end
+  mean? Basically is able to see some UI user interface. Some website user
+  interface is provided to the front end, Where do we host the website user
+  interface, Another server right? So generally front end is nothing but a compute
+  service. Is this clear? Front end is generally a compute service. Okay. What is
+  backend then? Processing Layer. We will skip the processing layer. I'll come to
+  processing layer. Next what is backend perfect database. Where I store my data
+  is nothing but my backend, it need not be database somewhere. Basically the data
+  storage, it can either be S3, it can be EFS. Or you can also have EBS volumes
+  here. Or it can be database RDS dynamodb. There are so many different storage
+  that you can put it in your back end and not just that you also need this
+  payment gateway, right? For processing your credit card details debit card
+  details. How do you process it? You need a payment gateway for processing. You
+  definitely need another computer service as well in the backend. So back end can
+  have any kind of service generally? It need not be only database, it can have
+  any service including your compute. Is this clear but generally in your front
+  end there is no data related services. For example, S3 database your EFS. None
+  of the data related or data storage services. Are there in the front end. Why?
+  Because ultimately, any website is working only because of the data. So, they
+  don't want to compromise the security of this data, they want to protect it. So
+  is the reason they would put everything in the backend. Okay. And what is this
+  intermediate? yes, Andri
+  Where is the backend usually hosted in Priv?
+  Where is the backend usually hosted in private or in public subnet? Backend.
+  Definitely in private subnet, not in public.
+  The.
+  So, you have a private subnet and in the private subnet, the whole backend the
+  whole database, anything pertaining to the data is hosted in the private subnet.
+  Why? If I host it in the public subnet then any person on the Internet will
+  definitely get access to it? So, I will host it in the private subnet. yes,
+  Mohammad
+
+[09:50]
+  And in the lab of yesterday, they They host the website in the private subnet.
+  They host the website in the private subnet. What kind of website was that?
+  Use. The.
+  You mean the easy to instance?
+  Yes. I would say it's still a problem if you why? Why is it still a problem?
+  Okay, first of all, where is the database getting hosted? We will talk about
+  database, how it is working when we go to AWS to but general thing, I'll tell
+  you if I want to host a database, I have to host it within an easy to instance.
+  Correct. Okay, if you have Guy, if you guys have already learned about postgres,
+  how did
+  Okay, there wasn't. Do you see here? Okay, if you want second, let me just
+  scroll down.
+  They have written for a production. I don't know.
+  Okay, if you see here. Now, this is backend, correct. Let me change the color.
+  So do you see? This is backend and in the backend I have also included an EC2
+  instance. Why, for processing purpose? imagine I I yes, Mohammad
+  it's But how customer will access the private summit if they have only access
+  for the public subnet?
+  Yes, what they do is they will host one more easy to hear the cc2 will connect
+  from public subnet to private subnet. Why within VPC local communication is
+  possible. Your first easy to instance in the public subnet will act like a jump
+  box. It need not be questioned. Bastion only allows for 22 Here. I am allowing
+  443. Okay, what does it do? Whatever incoming request, you get here you process
+  initial processing, for example, like authentication. You do a basic
+  authentication or authorization for the user if his login credentials passwords
+  are correct then from here you will get give access to the private subnet. You
+  will send the request from public subnet to the private subnet. Yes, Gilles
+  Yes, yes, I know, we discussed about nickel and security groups. Yesterday just
+  Exactly.
+  want to know something just want to. I know. I mean the good practices like you
+  just show we have a public issue and in background we have our databases but in
+  you learn postgres postgres was installed on your local laptop. Correct. So
+  database postgres will not independently work. It needs a compute service for
+  your database to run. Correct. Now you see here for my database to run? I need
+  EC2 if I place my EC2 in the public subnet definitely I will get a public IP.
+  This is the main drawback here. Why do I want a public IP? I don't want a public
+  IP even though you have an Apple security group, whatever it is, if you get a
+  want to know something just want to. I know? I mean, the good practices like you
+  public IP access, there are so many hackers. So many algorithms through, which
+  you can use this public IP in order to correct the EC2. This is the problem.
+  in, but why is it possible things we have seen and we looked or we started
+  I don't want to disclose my public IP. That is the reason what I do, I will not
+  host anything in the public anything pertaining to my database or to my storage
+  or to my data is always done in the back end here which is nothing but in your
+  private subnet. So here is all your data. Data can be hosted on any service you
+  want. I don't care, but anything pertaining to the data will always be in the
+  private.
+  just show, we have a public issue and in background, we have our databases, but
+  Okay, so it can be pertaining to your product related data, customer related
+  data transaction information, order information processing information. Anything
+  And not just that, I will also have couple of easy twos here. Why?
+  yesterday those knuckle and security group if I
+  Imagine you have given your credit card debit card details. How is it
+  processing? See I definitely will not process your credit card debit card in the
+  front end
+  in the public. If I process your credit card debit card in the public, anybody
+  who has access to public subnet will definitely get information about all your
+  credit card debit card. Why would I host it in here? So there are certain EC2
+  instances there are certain compute. For example, you can also host couple of
+  lambda functions, Lambda is also compute. You can also host couple of ECs
+  elastic, container service. You can also host elastic,
+  in, but why is it possible things we have seen? And we looked or we started
+  Kubernetes service. All of them can be hosted in private. It depends. What is
+  the job that you want to execute? There are certain jobs where you can also have
+  certain ECs here. Certainly KSU both are possible. Understood. It depends on
+  your requirement. Now, if I go back to my questions, We just wanted to
+  understand about front end and backend, right? So here I just mentioned about
+  your sorry. Front end, front end is nothing but your website where the user
+  initially accesses the website. Then you have a processing layer then you have
+  your backend. Now we know about the whole backend, What is this processing
+  layer? This is nothing but API. API Application Programming Interface Through a
+  particular URL. You are viewing a different databases through a particular URL.
+  You are accessing your payment gateway. Correct through a particular URL, you
+  are going for the shopping cart. So every URL that you provide, it is giving you
+  a different page on the website. How is it? That is nothing but it's a
+  processing layer. That's nothing but through your API. Okay.
+  and even, even if you go to the backend or front and implementing and
+  implementing the layout, you can't put your code or your service and The control
+  like database. it's
+  The code, you mean?
+  Yes, there is our different security layer even in the backend on front end.
+  Yes. Yes, first of all, how do I connect to the CC to, to connect to the CC? To
+  definitely I need an API. Sometimes you can directly use API to connect or
+  sometimes you can do this. Forwarding, What is it? If there is one easy to hear
+  first, you will connect to this EC2 and from the CC to you can forward it here.
+  This is one way or sometimes. What you can do, sometimes wire directly through
+  your API, you can connect to this ecito. But when you're connecting through API
+  again you need to give username and password.
+  Yeah.
+  Yes, and even in the backend, there are different security layers. You just
+  don't place your database right in the backend. No. Before you go into the
+  database. There is one more layer of security. What is it? So you have your
+  database. Not everybody will get access to the database. If you guys have
+  already worked with your postgres, you will understand. Postgres is covered in
+  your SIS admin block. Okay, so if you have worked with Postgres, you will
+  understand which is nothing but a database. So here is my database just because
+  you get access to the backend doesn't mean you directly need to go into your
+  database. No. Before I have to go to the database, I have to give my username. I
+  have to authenticate myself. I need to give you the name for my password only
+  after authentication I go I can go to the database so that means there will be
+  any C2 first. Which will do all the processing. And then only after everything
+  is authorized, you get access to the database Okay. so now we know multi tier So
+  now if you're creating a very simple application for yourself, there will be
+  only two tears. What is it front-end and backend, sometimes what you can do if
+  it is a static website you can just have one tier where you have front and back
+  and everything in one layer. But the security will be extremely low, then. Okay.
+  Yes. Mohammad
+  We have EC2 in the private subject. It's for processing or executing why we do.
+  We need this API for processing Now, we have two process.
+  So, if we have but most we don't need this Apk.
+  And own. What you if you have.
+  Yes, this a Passion House EC2 and the public subnet. We don't need this API.
+
+[09:51]
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong."
+  APIs are completely different than Western host, APIs are for what protocol APIs
+  or for specifically HTTPS protocol, which is 443 bastion, host, is for port 22.
+  There are two different, protocols Protocols are different. Okay, so this is
+  completely about Web hosting. We don't need web hosting, we just want to know
+  what is multi-tier application. Okay, as far as we know here, a company needs to
+  deploy a multi-tier application where the database must be entirely isolated
+  from the Internet. That means what it has to go into. Private subnet. Okay,
+  while the Web, servers must accept public traffic, clearly. It's mentioning that
+  means the web server will be in. Public. Okay. How should the subnets be
+  configured? Now they are asking about How do you configure your subnet? They
+  take deploy. Both the tiers in a single subnet with a public IP associated. To
+  all instance, If I give a public IP that means what, basically they are telling
+  to create a public subnet, what is the point? They're asking to keep the
+  database isolated from the Internet. Option B is incorrect. Look at option. C
+  deploy both. Their Tiers in private subnet and map an Internet gateway, directly
+  to the Web server. If you are having a private subnet, there is no connection to
+  an Internet gateway. Is this clear? You cannot connect to Internet. Gateway. To
+  your private subnet. So option C is incorrect. Look at option diploid. Database
+  in public subnet, I will not read further this statement. Half the statement
+  itself is wrong. Why would I place the database in the public? Subnet. Look at
+  here. They are telling isolated from the Internet. So look at option B. What
+  does option B says? Option B is telling deploy, the Web server in a public
+  subnet. Okay. With our route to Internet Gateway. And the database in a private
+  subnet with no root to Internet gateway. Is this clear option? B is correct any
+  doubt. Any questions? No questions. No doubts. Shall we go on to the next one?
+  Okay, here's your second question. Most of you are choosing Option. C is there
+  anyone. Who chooses other option? So what's the question? The question is
+  telling which of the following statements is true regarding AWS VPC, IP
+  addressing and cider blocks. Okay. AWS allows you to modify, the primary cider
+  block of the VPC after creating without deleting the VPC. Do you think this is
+  correct? After creating the VPC, will the AWS provide me access to change the
+  cider. Can I change the cider block? Without the tampering, with the VPC, I want
+  to change the cider block. Is it possible? Can anyone just?
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt."
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions?"
+
+[09:52]
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one?"
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one? Okay, here's your second question."
+
+[09:53]
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one? Okay, here's your second question. Most of you are
+  choosing Option. C is there anyone. Who chooses other option?"
+
+[09:54]
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one? Okay, here's your second question. Most of you are
+  choosing Option. C is there anyone. Who chooses other option? So what's the
+  question? The question is telling which of the following statements is true
+  regarding AWS VPC, IP addressing and cider blocks. Okay. AWS allows you to
+  modify, the primary cider block of the VPC after creating without deleting the
+  VPC. Do you think this is correct? After creating the VPC, will the AWS provide
+  me access to change the cider. Can I change the cider block?"
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one? Okay, here's your second question. Most of you are
+  choosing Option. C is there anyone. Who chooses other option? So what's the
+  question? The question is telling which of the following statements is true
+  regarding AWS VPC, IP addressing and cider blocks. Okay. AWS allows you to
+  modify, the primary cider block of the VPC after creating without deleting the
+  VPC. Do you think this is correct? After creating the VPC, will the AWS provide
+  me access to change the cider. Can I change the cider block? Without the
+  tampering, with the VPC, I want to change the cider block. Is it possible?"
+  *** ALERT [https]: Sharanya Prasad: "APIs are completely different than Western
+  host, APIs are for what protocol APIs or for specifically HTTPS protocol, which
+  is 443 bastion, host, is for port 22. There are two different, protocols
+  Protocols are different. Okay, so this is completely about Web hosting. We don't
+  need web hosting, we just want to know what is multi-tier application. Okay, as
+  far as we know here, a company needs to deploy a multi-tier application where
+  the database must be entirely isolated from the Internet. That means what it has
+  to go into. Private subnet. Okay, while the Web, servers must accept public
+  traffic, clearly. It's mentioning that means the web server will be in. Public.
+  Okay. How should the subnets be configured? Now they are asking about How do you
+  configure your subnet? They take deploy. Both the tiers in a single subnet with
+  a public IP associated. To all instance, If I give a public IP that means what,
+  basically they are telling to create a public subnet, what is the point? They're
+  asking to keep the database isolated from the Internet. Option B is incorrect.
+  Look at option. C deploy both. Their Tiers in private subnet and map an Internet
+  gateway, directly to the Web server. If you are having a private subnet, there
+  is no connection to an Internet gateway. Is this clear? You cannot connect to
+  Internet. Gateway. To your private subnet. So option C is incorrect. Look at
+  option diploid. Database in public subnet, I will not read further this
+  statement. Half the statement itself is wrong. Why would I place the database in
+  the public? Subnet. Look at here. They are telling isolated from the Internet.
+  So look at option B. What does option B says? Option B is telling deploy, the
+  Web server in a public subnet. Okay. With our route to Internet Gateway. And the
+  database in a private subnet with no root to Internet gateway. Is this clear
+  option? B is correct any doubt. Any questions? No questions. No doubts. Shall we
+  go on to the next one? Okay, here's your second question. Most of you are
+  choosing Option. C is there anyone. Who chooses other option? So what's the
+  question? The question is telling which of the following statements is true
+  regarding AWS VPC, IP addressing and cider blocks. Okay. AWS allows you to
+  modify, the primary cider block of the VPC after creating without deleting the
+  VPC. Do you think this is correct? After creating the VPC, will the AWS provide
+  me access to change the cider. Can I change the cider block? Without the
+  tampering, with the VPC, I want to change the cider block. Is it possible? Can
+  anyone just?"
