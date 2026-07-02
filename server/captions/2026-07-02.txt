@@ -1,0 +1,56 @@
+
+[09:06]
+  --- logged in ---
+
+[09:50]
+  revising all the services because from Monday onwards, we will be going to
+  Terraform Okay, what's the plan for today? The plan for today and tomorrow is,
+  we will be Okay. And what is Terraform Terraform is infrastructure as code and
+  is one of the most important service for us Clear. and we will be having a
+  certifications on Terraform, so,
+
+[09:51]
+  revising all the services because from Monday onwards, we will be going to
+  Terraform Okay, what's the plan for today? The plan for today and tomorrow is,
+  we will be Okay. And what is Terraform Terraform is infrastructure as code and
+  is one of the most important service for us Clear. and we will be having a
+  certifications on Terraform, So in order for us to go to TERRAFORM basics of the
+  services are needed, for example, like VPC EC2, EBS and your subnets. And S3.
+  Okay. That's the reason why in Module 1 in AWS one, we are covering the
+  foundational services along with your infrastructure. Is that clear? Any
+  questions so far? okay then, so today we will Yes.
+  The first module is going to be finished till Monday.
+  No, no. You still have four more weeks so in total the first, okay, let me share
+  my screen. I just have one screen guys today, so you should bear with me. Where
+  is it?
+  When this?
+  Performance also included in this first material.
+  Exactly. Yeah. So terraform is also included in your first module Okay. Can you
+  guys see my screen? Correct. So First module. AWS. One is for how long it is for
+  10 weeks. Okay, and by this Friday, we will be completed with six weeks. Okay?
+  So two weeks in your May and four weeks in June. So in total, it is six weeks
+  that we have completed so far and from Sixth of July, Okay, from 6th of July.
+  For the next four weeks. We will be working on Terraform. Is that clear? Okay,
+  remember guys. The terraform module is mostly hands-on. And that when I say
+  hands-on, how are we doing it? Everybody is going to use vs code. You will get
+  familiarized on how to use your it. Is code ID and then you will write the code
+  and it is an HCl language. Okay. And the more and more, you practice hands-on,
+  it is better for you to prepare for your exam. because the entire exam, Whatever
+  questions you get, it is mostly on what code you execute and what intermediate
+  answers you get. Okay, so again, your terraform is for, I think it's how you
+  have 60 questions. so, Remember in AWS when you do your certifications in AWS,
+  let's say you have done solutions, architect associate. The validation of the
+  certificate is for three years. Okay? If you take the certification so it is
+  valid up to three years, why? Because every year there are new services that are
+  getting launched. So is the reason there's a validation. But what about
+  terraform Terraform is even bad. The certification is valid only for two years.
+  So if you take the certificate in 2026, it is valid till 2028. Only after that,
+  you need to retake the certification. Why? What is the need? Everything? We will
+  learn when we go to Terraform module on Monday. Clear. Remember, on Monday, when
+  we start the module, I want all of you to have your laptop and you need to have
+  your DS code. Those who don't have vs code installed. I will send a couple of
+  videos with to you on your slack channel. On the installation of your VS code in
+  your system. Is that clear? Okay, why are we doing this terraform again? if you
+  guys see your AWS course, there is one week, sorry, not one week, one month,
+  Which is nothing but four weeks, dedicated for project. How are you creating
+  this project, you're going to set up some services on the cloud using Terraform?
