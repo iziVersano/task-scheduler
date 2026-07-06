@@ -10,8 +10,8 @@ const CHROME_PATH = os.platform() === 'win32'
   : '/usr/bin/google-chrome';
 const USER_DATA_DIR = os.platform() === 'win32'
   ? path.join(process.env.LOCALAPPDATA || os.homedir(), 'Google', 'Chrome', 'User Data')
-  : path.join(os.homedir(), '.config', 'google-chrome');
-const PROFILE_DIR = 'Profile 1';
+  : path.join(os.homedir(), '.config', 'google-chrome-meet');
+const PROFILE_DIR = 'Default';
 const DEBUG_PORT = 9399;
 const LOG_FILE = '/tmp/meet-join.log';
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
@@ -41,6 +41,8 @@ function loadDesktopEnv() {
 const DESKTOP_ENV = loadDesktopEnv();
 
 const meetUrl = process.argv[2];
+// --force bypasses the same-day skip (used by manual "Run now" clicks).
+const FORCE_JOIN = process.argv.includes('--force');
 if (!meetUrl || !meetUrl.includes('meet.google.com')) {
   console.error('Usage: node meet-join.js <google-meet-url>');
   process.exit(1);
@@ -66,6 +68,26 @@ function cleanStaleLocks() {
         }
       }
     } catch {}
+  }
+}
+
+// Force-remove the profile locks and kill any Chrome still holding THIS profile.
+// Used when the debug port won't come up — usually because a previous Meet
+// Chrome on the same --user-data-dir didn't exit cleanly and is blocking a new
+// instance from binding the debug port.
+function killChromeOnProfile() {
+  const { execSync } = require('child_process');
+  try {
+    // Match the main browser process for our dedicated meet profile only.
+    execSync(
+      `pkill -f "user-data-dir=${USER_DATA_DIR}" 2>/dev/null || true`,
+      { stdio: 'ignore' }
+    );
+    log('Killed lingering Chrome on the meet profile');
+  } catch {}
+  // Remove all singleton locks unconditionally now that the process is gone.
+  for (const name of ['SingletonLock', 'SingletonSocket', 'SingletonCookie']) {
+    try { fs.unlinkSync(path.join(USER_DATA_DIR, name)); } catch {}
   }
 }
 
@@ -125,31 +147,45 @@ function waitForDebugPort(maxWait = 30000) {
   });
 }
 
-// Skip this run if a previous run **today** already succeeded. We track this
-// in a tiny stamp file (date string), written after a confirmed join, so we
-// can't be fooled by accumulated log history.
+// Skip this run only if **this same meeting** was already joined today. The
+// stamp stores `YYYY-MM-DD <meetingId>` so a *different* meeting still opens and
+// gets the full standard settings (mic muted, camera off, captions on, +1).
+// This way every meeting that opens keeps the original meeting's settings,
+// while we still avoid re-joining the exact same room we're already in.
 const SUCCESS_STAMP = '/tmp/meet-join.last-success';
 
-function alreadyJoinedToday() {
+// Normalise a Meet URL to its room code, e.g. "abc-defg-hij".
+function meetId(url) {
+  const m = (url || '').match(/meet\.google\.com\/([a-z]{3}-[a-z]{4}-[a-z]{3})/i);
+  return m ? m[1].toLowerCase() : (url || '').trim();
+}
+
+function alreadyJoinedToday(url) {
   try {
     const stamp = fs.readFileSync(SUCCESS_STAMP, 'utf8').trim();
     const today = new Date().toISOString().slice(0, 10);
-    return stamp === today;
+    const [stampDate, stampId] = stamp.split(/\s+/);
+    if (stampDate !== today) return false;
+    // Old stamps stored only a date (no meeting id) — treat those as "joined
+    // today" for safety so we don't re-open a meeting on upgrade.
+    if (!stampId) return true;
+    // Skip only when it's the same meeting room.
+    return stampId === meetId(url);
   } catch {
     return false;
   }
 }
 
-function markSuccessToday() {
+function markSuccessToday(url) {
   const today = new Date().toISOString().slice(0, 10);
-  try { fs.writeFileSync(SUCCESS_STAMP, today); } catch {}
+  try { fs.writeFileSync(SUCCESS_STAMP, `${today} ${meetId(url)}`); } catch {}
 }
 
 (async () => {
   let browser;
   try {
-    if (alreadyJoinedToday()) {
-      log(`--- meet-join SKIPPED: already joined today (see prior log) ---`);
+    if (!FORCE_JOIN && alreadyJoinedToday(meetUrl)) {
+      log(`--- meet-join SKIPPED: already joined THIS meeting (${meetId(meetUrl)}) today (use Run to force) ---`);
       process.exit(0);
     }
 
@@ -176,28 +212,59 @@ function markSuccessToday() {
       log('Launched Meet Chrome with debug port');
     }
 
-    await waitForDebugPort();
+    // Wait for the debug port. If it never comes up, a stale Chrome on this
+    // profile is usually blocking it — kill it, clear locks, and relaunch once.
+    try {
+      await waitForDebugPort();
+    } catch (e) {
+      log(`Debug port not ready (${e.message}) — clearing profile and retrying...`);
+      killChromeOnProfile();
+      await new Promise(r => setTimeout(r, 2000));
+      launchChromeDetached(cleanUrl);
+      log('Relaunched Meet Chrome after clearing profile');
+      await waitForDebugPort();
+    }
     log('Chrome debug port ready');
 
-    browser = await puppeteer.connect({
-      browserURL: `http://127.0.0.1:${DEBUG_PORT}`,
-      defaultViewport: null,
-      protocolTimeout: 120000,
-    });
-
-    // Open YouTube music in a new tab alongside Meet
-    const YOUTUBE_URL = 'https://www.youtube.com/watch?v=h6zdVaAe0OE&list=RDMMhFYKPE68PgE&index=9';
-    try {
-      const ytPage = await browser.newPage();
-      await ytPage.goto(YOUTUBE_URL, { waitUntil: 'domcontentloaded', timeout: 15000 });
-      log(`Opened YouTube tab: ${ytPage.url()}`);
-    } catch (ytErr) {
-      log(`YouTube tab failed (non-fatal): ${ytErr.message}`);
+    // Connect to Chrome and immediately do a real CDP call (browser.pages()) to
+    // prove the DevTools protocol actually works. A reused Chrome can answer the
+    // /json/version HTTP probe while being wedged — the first real command then
+    // hangs (Network.enable timed out), which used to time out the whole job.
+    // If that health check fails, the reused instance is dead: kill it, relaunch
+    // fresh, and reconnect once.
+    const PROTOCOL_TIMEOUT = 30000; // well under the 120s job exec budget
+    async function connectAndProbe() {
+      const b = await puppeteer.connect({
+        browserURL: `http://127.0.0.1:${DEBUG_PORT}`,
+        defaultViewport: null,
+        protocolTimeout: PROTOCOL_TIMEOUT,
+      });
+      const pages = await b.pages(); // first real CDP call — proves the protocol is alive
+      return { b, pages };
     }
+
+    let pages;
+    try {
+      ({ b: browser, pages } = await connectAndProbe());
+    } catch (e) {
+      log(`Reused Chrome is unresponsive (${e.message}) — killing and relaunching fresh...`);
+      try { if (browser) browser.disconnect(); } catch {}
+      killChromeOnProfile();
+      await new Promise(r => setTimeout(r, 2000));
+      cleanStaleLocks();
+      launchChromeDetached(cleanUrl);
+      await waitForDebugPort();
+      log('Relaunched Meet Chrome after unresponsive reuse');
+      ({ b: browser, pages } = await connectAndProbe());
+    }
+
+    // The YouTube music tab is a nice-to-have. It used to be opened here, BEFORE
+    // the Meet join — but on a busy reused Chrome its newPage()/goto is the first
+    // heavy CDP op and would stall, blocking the actual join. It's now opened
+    // after we're in the meeting (see below), so it can never delay joining.
 
     // If Chrome was already running, open the Meet URL in a new tab
     // If freshly launched, Chrome already has it — find the existing tab
-    const pages = await browser.pages();
     let page = pages.find(p => p.url().includes('meet.google.com'));
 
     if (!page) {
@@ -398,13 +465,38 @@ function markSuccessToday() {
       log(`Captions: ${result}`);
 
       // 4. Fallback: Meet's built-in keyboard shortcut "c" toggles captions.
-      // Only press if everything above failed.
+      // Press only if everything above failed. Click the meeting area first so
+      // keyboard focus is in the call (not on a button/menu), or "c" is ignored.
       if (result === 'not-found') {
         try {
           await page.bringToFront();
+          // Move focus into the meeting canvas before the shortcut.
+          await page.evaluate(() => {
+            const main = document.querySelector('[data-allocation-index], [jsname], main, body');
+            if (main && main.focus) main.focus();
+          });
+          await page.mouse.click(640, 360).catch(() => {});
+          await new Promise(r => setTimeout(r, 300));
           await page.keyboard.press('c');
           log('Captions: pressed shortcut "c" as fallback');
-          return 'shortcut-c';
+          await new Promise(r => setTimeout(r, 1500));
+
+          // Verify: did a captions container appear / button flip to "on"?
+          const on = await page.evaluate(() => {
+            const btns = Array.from(document.querySelectorAll('button'));
+            const onBtn = btns.find(b => (b.innerHTML || '').includes('closed_caption') &&
+              !(b.innerHTML || '').includes('closed_caption_off'));
+            const region = document.querySelector('[aria-label*="aption" i][role="region"], [class*="caption" i]');
+            return !!onBtn || !!region;
+          }).catch(() => false);
+
+          if (!on) {
+            // Try once more — some layouts need a second press after the menu closes.
+            await page.keyboard.press('c');
+            await new Promise(r => setTimeout(r, 1000));
+          }
+          log(`Captions: shortcut result — ${on ? 'on' : 'pressed (unverified)'}`);
+          return on ? 'shortcut-on' : 'shortcut-c';
         } catch (e) {
           log(`Captions shortcut failed: ${e.message}`);
         }
@@ -476,7 +568,7 @@ function markSuccessToday() {
     if (alreadyInMeeting) {
       // Already in the call — just mute and enable captions
       log('Already in meeting, muting and enabling captions...');
-      markSuccessToday();
+      markSuccessToday(meetUrl);
       log(`Mic: ${await muteMic()}`);
       await new Promise(r => setTimeout(r, 300));
       log(`Camera: ${await muteCamera()}`);
@@ -676,7 +768,7 @@ function markSuccessToday() {
     }
 
     // Confirmed in the meeting — only now count it as a success.
-    if (!alreadyInMeeting) markSuccessToday();
+    if (!alreadyInMeeting) markSuccessToday(meetUrl);
     await new Promise(r => setTimeout(r, 3000));
 
     // Retry mic/cam/captions up to 3 times until they confirm
@@ -741,6 +833,23 @@ function markSuccessToday() {
       log('Killed existing caption tracker');
     } catch {}
     await new Promise(r => setTimeout(r, 500));
+
+    // Now that we're safely in the meeting, open the YouTube music tab as a
+    // best-effort extra. Bounded so it can never delay completion even if the
+    // reused Chrome is busy.
+    const YOUTUBE_URL = 'https://www.youtube.com/watch?v=h6zdVaAe0OE&list=RDMMhFYKPE68PgE&index=9';
+    try {
+      await Promise.race([
+        (async () => {
+          const ytPage = await browser.newPage();
+          await ytPage.goto(YOUTUBE_URL, { waitUntil: 'domcontentloaded', timeout: 12000 });
+          log(`Opened YouTube tab: ${ytPage.url()}`);
+        })(),
+        new Promise((_, rej) => setTimeout(() => rej(new Error('timeout')), 15000)),
+      ]);
+    } catch (ytErr) {
+      log(`YouTube tab skipped (non-fatal): ${ytErr.message}`);
+    }
 
     // Start caption tracker with same env (needs DISPLAY for Chrome connection)
     const captionScript = path.join(__dirname, 'meet-captions.js');
