@@ -1,0 +1,567 @@
+
+[09:20]
+  --- logged in ---
+  Okay. What is cloud agnostic? Mean, it is independent of any cloud provider.
+  Okay, and the third one, I remember you can use it both. On cloud provider on
+  any cloud provider. Or. On premise as well. What is on premise mean? Imagine
+  that you are having your data center in your on-premise service. For example,
+  Bosch has there on premise to cut data center, right? And now you want to set up
+  the entire data center in Stuttgart, on Premise Data Center for that. Also you
+  can use Terraform So terraform can work both on cloud provider and also on
+  premise. Okay. And how do we write? We will write a script for sure. Script is
+  written. And what kind of a script it is a human readable script. Is this clear?
+  And now let us talk about, these are the features of terraform. Now, let me talk
+  about the advantages. Of terraform. The advantages of terraform is exactly same
+  as the advantage of your infrastructure as code. What are the advantages? You
+  can reuse first thing. Reusability. That's the main thing when we talk about it,
+  right? Nobody wants to write the code from scratch. Okay, nobody wants to write
+  the code by going into Google Search or though you take the help from AI. Nobody
+  wants to write anything from scratch. We want to use the existing code as much
+  as possible. So reusability may not be in the same company may not be in the
+  same location. Now I, as I mentioned, Deloitte Bosch Microsoft. There are the
+  these are the companies where they have branches throughout the group, right? So
+  they will be sharing the code across the globe. For example, if they're
+  launching a new product in EU in Europe, they would next launch the same product
+  in probably in Asia. Correct. So that means do you think they would start
+  everything from scratch in Asia? No. They would talk to their branch or they
+  would talk to the colleagues that are there in EU and reuse the code from there.
+  So they've definitely they will be having a repository to store all the quotes.
+  So that means sharing is possible through repose. What is the best software that
+  we can use for repost get? Software right. That's one of the best version
+  controlling software that we can use. Any questions any doubt so far? No doubts.
+  Shall I proceed? Okay. Next, third point, versioning. What is versioning? Bosch
+  might have launched a product 10 years ago. now, they want to launch a similar
+  product, but with a new version, So they would not use, they would not start the
+  code from scratch. They would go back to the old previous version, they would
+  use the same version and modify they would tweak. So worshiping is possible. Is
+  this clear? You can have multiple versions of the same code, you can reuse the
+  code, you can share the code. Sharing Need Not Mean Within the same building or
+  within the same network, you can also share it. You can also put the code in the
+  GITHUB and share with those departments that are in different continents. if you
+  having a multiple branches of your company, then sharing of the code plays a
+  vital role, Any doubts. Select Proceed. Yes, if you acknowledge, then I'll be
+  able to proceed. so now, So far I've been mentioning Terraform. Comes under I a
+  C. So, when you are mentioning this in your resume remember guys. Software or
+  technology. Is your IAC. So I hope I've already shown you my resume and in my
+  resume. I've mentioned that. The technology is that you are aware of and the
+  software that you've worked on IAC, is the technology. It is the concept. So
+  what does it mean? It's nothing but infrastructure as code. And what are the
+  tools under this technology that you've used? Right now in AWS one module, I am
+  teaching you terraform tool, but when I go to Aws2 module, I will be teaching
+  you AWS cloud, formation tool. So basically, you will be learning two tools
+  under Infrastructure as code. Which adds a high weightage to your resume. Is
+  that clear? Now, we know terraform is your infrastructure as code, who is giving
+  this tool. Who is responsible for this tool. The tool is from Hashi Cart. Okay.
+  Has she got company? They are the ones that they are providing this open source
+  tool. So what is the exam that you're taking? exam that you are taking is
+  TERRAFORM Associate exam. Or certification, basically. Four weeks of training is
+  more than sufficient in order to take up your terraform associate certification.
+  Is that clear? If you're following all the hands on that I'm doing in the class
+  on day to day basis, you will be thorough with the whole Requirement for your
+  exam. Clear, and I mentioned that the whole terraform is nothing but you're
+  writing a code. Which language are we using? Are we using Python C? Sharp c++
+  java. There are so many languages which language are we using? We are using a
+  specific language called as HCl language. Make a note of whatever I'm writing
+  here. what does HCl stands for HCl stands for hash okay, one second Has, she
+  got? Configuration. Language. Okay. see, this is one of the one, I As per my
+  experience, over the past couple of patches, most of my students have done this
+  mistake. What is it? They would ask you in the exam. Remember, guys, for your
+  entire course, for one year course, you'll be taking three exams, right? AWS.
+  Cloud practitioner AWS solutions, architect associate. And the next one is
+  Terraform associate. Okay, among these three exams Terraform exam is one of the
+  easiest one. Easy. For your AWS cloud practitioner, I would say this is
+  moderate. okay solutions, architect is Card. As a new need, a lot of practice,
+  you need a lot of understanding about individual services before you take up the
+  solutions architect. So no matter which exam you're taking, you need to have at
+  least practiced 200 mcqs on each exam. Only if you have done 150 to 200 mcqs
+  then you are, I would assure you that you'll be able to pass the exam. Okay,
+  Terraform is one of the easiest exam. Fine. So In the past exams, there was a
+  question. Terraform uses the language called as head, C and language. What is
+  the full form of HCl? The full form of hcls. Has she Corp configuration
+  language? My students had written, it is hashicar language. Head stands for
+  Hashi. Stay stands for car and L stands for language, which is incorrect. Is
+  this clear? Head stands for hashikon c stands for Configuration. Look at this.
+  Is this clear? HCl the full form of hcls. Has she Corp configuration language?
+  Why? Because they give you all these as an option in your exam. And when you
+  look at the option, you feel all of them are correct. Only if you're thorough
+  and only if you know them properly then you then only will be able to answer it.
+  Okay, it is nothing. But has you called configuration language? okay, next You
+  might ask, How does this hashic configuration language? Look like is it like
+  Python Is it like JavaScript? No, hashical configuration language is similar to
+  Jason. So now next question to you guys, when I say Jason, what is the format?
+
+[09:43]
+  Key value.
+  Perfect. The format is key value. so, whenever I write the code, the code, Will
+  be in the key value format. so, if you guys are familiar with policies, All of
+  your familiar with policies, right? Policies. Also, nothing but Jason.
+  Similarly, your hashicorp is also nothing, but your key value pair, then you
+  might ask, I can use JSON, only why? I'll be calling it as hashiquot language,
+  Instead of JSON Simple hashic or language has their own keywords. You have your
+  own keywords keywords player, vital role, right? When I talk about Python, we
+  have keywords like print, we have keywords like 4 While there are different
+  keywords. When I talk about C language, you have printf. Scanf. So these are the
+  different keywords, the keywords vary from language to language. So in how she
+  core language there are specific keywords but the format how we write, the code
+  looks some more similar to your Jason. Is this clear? Any doubt. So for us to
+  write the code, we need the basics of AWS basics of your networking basics of
+  your compute, basics of your storage. That is why we have covered your EC2, your
+  VPC, subnets Internet gateway. Your security groups. Local etc. We have covered
+  your S3. We have covered your EPS. Correct. So, whatever, basic that we need for
+  terraform has already been covered in your AWS one. Is this clear? Any doubts.
+  Any questions so far? No questions. Okay. And remember guys, Terraform also have
+  their own cloud called Cholesterol from Cloud. So if you are having some
+  infrastructure not infrastructure, basically, if you're having some code you can
+  also store it in Terraform cloud. Okay. Now remember, what are the advantages of
+  terraform the major advantages? I see. if you are going for your interview and
+  in your resume, if you've mentioned both terraform, And cloud formation AWS
+  cloud formation, they will definitely ask you one question. Which one they will
+  ask you a question. Something like, Which one do you think is more advantages?
+  Or what is the difference between terraform and cloud formation? the major
+  difference is, Get the name. The name. When I specify cloud formation, I just
+  did not mention it. As cloudformation. I specified a place cloud formation, that
+  means it is only. An Infrastructure as Code for your AWS Cloud. Provider Your
+  cloud formation cannot work on any other cloud providers. So if you see that you
+  are familiar with cloud formation in your resume, then the companies who are
+  working only on AWS, they will be benefited with this cloud formation. Is this
+  clear? Only those companies who are working on AWS, but when I say terraform, no
+  matter which cloud provided the company is using if you specify terraform it is
+  beneficial to them, no matter, which cloud they are using Is this clear? And not
+  just that, there is a massive community support. There are so many modules that
+  have been uploaded on day to day basis. On the terraform, people are uploading
+  new codes, you can reuse those quotes. There are built-ins, there are plugins
+  that are modules. About all of this. We will learn slowly eventually as and how
+  we proceed, we will be learning about each of these topic, but we just need to
+  know as of now that Terraform has a lot of Community support. It has a lot of
+  open source code. It helps in reusability of the code. You don't need to write
+  everything from scratch. Okay, not just that, the major advantage of terraform
+  is state maintenance. What a state maintenance. How does it work? All of that.
+  We will slowly understand but as of now, you understand the term called as State
+  management. Terraform keeps a track of what is happening in the cloud and it
+  also keeps a track of what is happening in the code. See it manages two things.
+  Takes care of whatever you have in the code and it also takes care of what is
+  there in the cloud? So that is why we call it as state management. It creates a
+  file state file. And in that file it manages your real world infrastructure,
+  along with the compatibility of your code. Your code compatibility with the real
+  world, infrastructure is maintained in a file format. And this file, we call it
+  as state file. What does this mean? How does it look? I know whatever term that
+  I'm using right now might look like Chinese for you. That's totally fine. But at
+  least know these terms Just keep in the back of your head that these terms are
+  there with respect to terraform why. As in when we do different examples
+  hands-on you'll slowly start analyzing or understanding. What does it mean? Is
+  that clear? Any doubts. Any questions so far? No question. I hope everybody has
+  understood the basics of terraform why we are learning Terraform, right. So
+  shall we proceed? Installing Terraform now To share my Google Chrome and I want
+  all of you to open your Google Chrome. so go to your chrome and search for that
+  are for Download. Remember guys. I said that Terraform is an infrastructure is
+  good. Your next question should have been do we need to remember everything? The
+  answer is not really why. Because we have a very good documentation. Okay, no
+  matter in which company you go, no matter how expert the person is with respect
+  to terraform he doesn't buy heart. Anything regarding terraform why there is a
+  good documentation, which we will be using So often we will be going to the
+  documentation. Copying the code from there and implementing our file. So we will
+  modify the code. However, we want Okay, but the base code is copied directly
+  from the documentation. Any doubts. Okay, did you guys search for? Terraform, do
+  you see this installed terraform option? If you see this, let me click on this.
+  Do you see this? Is everyone in the same page as I am? Does anyone want me to
+  share the link with you here in the chat? No. Remember guys, this installation
+  is the primary step. I want all of you to install Terraform along with me
+  because we will not be going back to the step again and again. Okay, we will
+  install today. And right after the break, we will start with creating our first
+  code. Is that clear? now, you see Terraform can be installed on any system here.
+  Do you see on the left hand side? You have Mac OS, Windows Linux. Freebest Open
+  BST, Solaris. There are so many operating systems which you can use. But we are
+  going to use your windows. Go to the windows. If you select Windows here. See
+  here. Do you see this window section? There are so many architectures. Correct.
+  But which architecture are we choosing? We are choosing AMD 64-bit architecture.
+  So all the Lenovo system is in the AMD 64-bit architecture Guys, give me a
+  second. Are you see this? AMD 64 architecture. If you see this, AMD, 64
+  architecture there is an option, right beside it called, It's download, please,
+  download it. I already have installed Terraform, but download this. yes,
+  Mohammad
+  Work with the Linux operating system, I will choose AMD for Linux.
+  It's okay.
+  Yes, go. Oh yeah, you're using Linux then go for AMD 64 For Linux. Do you see
+  here which operating system is it Ubuntu?
+  Yes. Yes.
+
+[09:44]
+  Okay, then you do you see that there are different operating systems like Fedora
+  Homebrew, Cento as select Ubuntu and under Ubuntu, choose your AMD 64 bit. Okay.
+  So now here on the right hand side, you should be able to see your download. Do
+  you see your download 1.15? Point Seven. The version. So now what I want you
+  guys to do is go to your downloads. Let me share my screen. Cure is my
+  Downloads. Okay, let me maximize the screen of it. okay, now if you see the very
+  first Zip folder. Do you guys see this folder? And remember, guys, please note
+  the version right below it. The version is one point one five point seven
+  version is that the same version that you have downloaded. Check right. Okay.
+  Why? How does it matter? It doesn't matter much because the terraform that I
+  have probably it is 1.13 or 1.11, the older version of terraform, It doesn't
+  matter much. But what is happening here is as and when you go for the newer
+  version of Terraform, It is more compatible to the new services that is launched
+  in day various cloud provider for example like AWS in Azure I mentioned right in
+  AWS every six months once or sometimes three months once they're coming up with
+  new services. So they're also upgrading the terraform version. Why the Terraform
+  should also be compatible with your new AWS service? Okay, so now let us make
+  sure that we have the most recent one fine. Now, since this is a zip folder,
+  right, click and extract all okay, there is an option to choose Extract All Ahm.
+
+[09:46]
+  Okay, then you do you see that there are different operating systems like Fedora
+  Homebrew, Cento as select Ubuntu and under Ubuntu, choose your AMD 64 bit. Okay.
+  So now here on the right hand side, you should be able to see your download. Do
+  you see your download 1.15? Point Seven. The version. So now what I want you
+  guys to do is go to your downloads. Let me share my screen. Cure is my
+  Downloads. Okay, let me maximize the screen of it. okay, now if you see the very
+  first Zip folder. Do you guys see this folder? And remember, guys, please note
+  the version right below it. The version is one point one five point seven
+  version is that the same version that you have downloaded. Check right. Okay.
+  Why? How does it matter? It doesn't matter much because the terraform that I
+  have probably it is 1.13 or 1.11, the older version of terraform, It doesn't
+  matter much. But what is happening here is as and when you go for the newer
+  version of Terraform, It is more compatible to the new services that is launched
+  in day various cloud provider for example like AWS in Azure I mentioned right in
+  AWS every six months once or sometimes three months once they're coming up with
+  new services. So they're also upgrading the terraform version. Why the Terraform
+  should also be compatible with your new AWS service? Okay, so now let us make
+  sure that we have the most recent one fine. Now, since this is a zip folder,
+  right, click and extract all okay, there is an option to choose Extract All
+  Adi's extract, all you will see. Don't press anything. Do you see here? Inside
+  the downloads folder itself, you will be able to extract it.
+
+[09:47]
+  I think the most of us use Linux.
+  Hello.
+
+[09:50]
+  Okay, and the third one, I remember you can use it both. On cloud provider on
+  any cloud provider. Or. On premise as well. What is on premise mean? Imagine
+  that you are having your data center in your on-premise service. For example,
+  Bosch has there on premise to cut data center, right? And now you want to set up
+  the entire data center in Stuttgart, on Premise Data Center for that. Also you
+  can use Terraform So terraform can work both on cloud provider and also on
+  premise. Okay. And how do we write? We will write a script for sure. Script is
+  written. And what kind of a script it is a human readable script. Is this clear?
+  And now let us talk about, these are the features of terraform. Now, let me talk
+  about the advantages. Of terraform. The advantages of terraform is exactly same
+  as the advantage of your infrastructure as code. What are the advantages? You
+  can reuse first thing. Reusability. That's the main thing when we talk about it,
+  right? Nobody wants to write the code from scratch. Okay, nobody wants to write
+  the code by going into Google Search or though you take the help from AI. Nobody
+  wants to write anything from scratch. We want to use the existing code as much
+  as possible. So reusability may not be in the same company may not be in the
+  same location. Now I, as I mentioned, Deloitte Bosch Microsoft. There are the
+  these are the companies where they have branches throughout the group, right? So
+  they will be sharing the code across the globe. For example, if they're
+  launching a new product in EU in Europe, they would next launch the same product
+  in probably in Asia. Correct. So that means do you think they would start
+  everything from scratch in Asia? No. They would talk to their branch or they
+  would talk to the colleagues that are there in EU and reuse the code from there.
+  So they've definitely they will be having a repository to store all the quotes.
+  So that means sharing is possible through repose. What is the best software that
+  we can use for repost get? Software right. That's one of the best version
+  controlling software that we can use. Any questions any doubt so far? No doubts.
+  Shall I proceed? Okay. Next, third point, versioning. What is versioning? Bosch
+  might have launched a product 10 years ago. now, they want to launch a similar
+  product, but with a new version, So they would not use, they would not start the
+  code from scratch. They would go back to the old previous version, they would
+  use the same version and modify they would tweak. So worshiping is possible. Is
+  this clear? You can have multiple versions of the same code, you can reuse the
+  code, you can share the code. Sharing Need Not Mean Within the same building or
+  within the same network, you can also share it. You can also put the code in the
+  GITHUB and share with those departments that are in different continents. if you
+  having a multiple branches of your company, then sharing of the code plays a
+  vital role, Any doubts. Select Proceed. Yes, if you acknowledge, then I'll be
+  able to proceed. so now, So far I've been mentioning Terraform. Comes under I a
+  C. So, when you are mentioning this in your resume remember guys. Software or
+  technology. Is your IAC. So I hope I've already shown you my resume and in my
+  resume. I've mentioned that. The technology is that you are aware of and the
+  software that you've worked on IAC, is the technology. It is the concept. So
+  what does it mean? It's nothing but infrastructure as code. And what are the
+  tools under this technology that you've used? Right now in AWS one module, I am
+  teaching you terraform tool, but when I go to Aws2 module, I will be teaching
+  you AWS cloud, formation tool. So basically, you will be learning two tools
+  under Infrastructure as code. Which adds a high weightage to your resume. Is
+  that clear? Now, we know terraform is your infrastructure as code, who is giving
+  this tool. Who is responsible for this tool. The tool is from Hashi Cart. Okay.
+  Has she got company? They are the ones that they are providing this open source
+  tool. So what is the exam that you're taking? exam that you are taking is
+  TERRAFORM Associate exam. Or certification, basically. Four weeks of training is
+  more than sufficient in order to take up your terraform associate certification.
+  Is that clear? If you're following all the hands on that I'm doing in the class
+  on day to day basis, you will be thorough with the whole Requirement for your
+  exam. Clear, and I mentioned that the whole terraform is nothing but you're
+  writing a code. Which language are we using? Are we using Python C? Sharp c++
+  java. There are so many languages which language are we using? We are using a
+  specific language called as HCl language. Make a note of whatever I'm writing
+  here. what does HCl stands for HCl stands for hash okay, one second Has, she
+  got? Configuration. Language. Okay. see, this is one of the one, I As per my
+  experience, over the past couple of patches, most of my students have done this
+  mistake. What is it? They would ask you in the exam. Remember, guys, for your
+  entire course, for one year course, you'll be taking three exams, right? AWS.
+  Cloud practitioner AWS solutions, architect associate. And the next one is
+  Terraform associate. Okay, among these three exams Terraform exam is one of the
+  easiest one. Easy. For your AWS cloud practitioner, I would say this is
+  moderate. okay solutions, architect is Card. As a new need, a lot of practice,
+  you need a lot of understanding about individual services before you take up the
+  solutions architect. So no matter which exam you're taking, you need to have at
+  least practiced 200 mcqs on each exam. Only if you have done 150 to 200 mcqs
+  then you are, I would assure you that you'll be able to pass the exam. Okay,
+  Terraform is one of the easiest exam. Fine. So In the past exams, there was a
+  question. Terraform uses the language called as head, C and language. What is
+  the full form of HCl? The full form of hcls. Has she Corp configuration
+  language? My students had written, it is hashicar language. Head stands for
+  Hashi. Stay stands for car and L stands for language, which is incorrect. Is
+  this clear? Head stands for hashikon c stands for Configuration. Look at this.
+  Is this clear? HCl the full form of hcls. Has she Corp configuration language?
+  Why? Because they give you all these as an option in your exam. And when you
+  look at the option, you feel all of them are correct. Only if you're thorough
+  and only if you know them properly then you then only will be able to answer it.
+  Okay, it is nothing. But has you called configuration language? okay, next You
+  might ask, How does this hashic configuration language? Look like is it like
+  Python Is it like JavaScript? No, hashical configuration language is similar to
+  Jason. So now next question to you guys, when I say Jason, what is the format?
+  I'm back. There was an issue with the Internet. Okay, are you guys able to hear
+  me? Yes. Okay, give me a second. Let me start my second screen. Okay, can you
+  guys see my screen now? So, here is your zip folder and when you right click on
+  this folder, You get this extract all option, right? But do not extract it on
+  your Downloads folder. There is an option called as Browse Folder here, click on
+  Browse when you click on Browse, Go to your C drive. Okay. Yes, Jahed.
+
+[09:51]
+  Script is written. And what kind of a script it is a human readable script. Is
+  this clear? And now let us talk about, these are the features of terraform. Now,
+  let me talk about the advantages. Of terraform. The advantages of terraform is
+  exactly same as the advantage of your infrastructure as code. What are the
+  advantages? You can reuse first thing. Reusability. That's the main thing when
+  we talk about it, right? Nobody wants to write the code from scratch. Okay,
+  nobody wants to write the code by going into Google Search or though you take
+  the help from AI. Nobody wants to write anything from scratch. We want to use
+  the existing code as much as possible. So reusability may not be in the same
+  company may not be in the same location. Now I, as I mentioned, Deloitte Bosch
+  Microsoft. There are the these are the companies where they have branches
+  throughout the group, right? So they will be sharing the code across the globe.
+  For example, if they're launching a new product in EU in Europe, they would next
+  launch the same product in probably in Asia. Correct. So that means do you think
+  they would start everything from scratch in Asia? No. They would talk to their
+  branch or they would talk to the colleagues that are there in EU and reuse the
+  code from there. So they've definitely they will be having a repository to store
+  all the quotes. So that means sharing is possible through repose. What is the
+  best software that we can use for repost get? Software right. That's one of the
+  best version controlling software that we can use. Any questions any doubt so
+  far? No doubts. Shall I proceed? Okay. Next, third point, versioning. What is
+  versioning? Bosch might have launched a product 10 years ago. now, they want to
+  launch a similar product, but with a new version, So they would not use, they
+  would not start the code from scratch. They would go back to the old previous
+  version, they would use the same version and modify they would tweak. So
+  worshiping is possible. Is this clear? You can have multiple versions of the
+  same code, you can reuse the code, you can share the code. Sharing Need Not Mean
+  Within the same building or within the same network, you can also share it. You
+  can also put the code in the GITHUB and share with those departments that are in
+  different continents. if you having a multiple branches of your company, then
+  sharing of the code plays a vital role, Any doubts. Select Proceed. Yes, if you
+  acknowledge, then I'll be able to proceed. so now, So far I've been mentioning
+  Terraform. Comes under I a C. So, when you are mentioning this in your resume
+  remember guys. Software or technology. Is your IAC. So I hope I've already shown
+  you my resume and in my resume. I've mentioned that. The technology is that you
+  are aware of and the software that you've worked on IAC, is the technology. It
+  is the concept. So what does it mean? It's nothing but infrastructure as code.
+  And what are the tools under this technology that you've used? Right now in AWS
+  one module, I am teaching you terraform tool, but when I go to Aws2 module, I
+  will be teaching you AWS cloud, formation tool. So basically, you will be
+  learning two tools under Infrastructure as code. Which adds a high weightage to
+  your resume. Is that clear? Now, we know terraform is your infrastructure as
+  code, who is giving this tool. Who is responsible for this tool. The tool is
+  from Hashi Cart. Okay. Has she got company? They are the ones that they are
+  providing this open source tool. So what is the exam that you're taking? exam
+  that you are taking is TERRAFORM Associate exam. Or certification, basically.
+  Four weeks of training is more than sufficient in order to take up your
+  terraform associate certification. Is that clear? If you're following all the
+  hands on that I'm doing in the class on day to day basis, you will be thorough
+  with the whole Requirement for your exam. Clear, and I mentioned that the whole
+  terraform is nothing but you're writing a code. Which language are we using? Are
+  we using Python C? Sharp c++ java. There are so many languages which language
+  are we using? We are using a specific language called as HCl language. Make a
+  note of whatever I'm writing here. what does HCl stands for HCl stands for hash
+  okay, one second Has, she got? Configuration. Language. Okay. see, this is one
+  of the one, I As per my experience, over the past couple of patches, most of my
+  students have done this mistake. What is it? They would ask you in the exam.
+  Remember, guys, for your entire course, for one year course, you'll be taking
+  three exams, right? AWS. Cloud practitioner AWS solutions, architect associate.
+  And the next one is Terraform associate. Okay, among these three exams Terraform
+  exam is one of the easiest one. Easy. For your AWS cloud practitioner, I would
+  say this is moderate. okay solutions, architect is Card. As a new need, a lot of
+  practice, you need a lot of understanding about individual services before you
+  take up the solutions architect. So no matter which exam you're taking, you need
+  to have at least practiced 200 mcqs on each exam. Only if you have done 150 to
+  200 mcqs then you are, I would assure you that you'll be able to pass the exam.
+  Okay, Terraform is one of the easiest exam. Fine. So In the past exams, there
+  was a question. Terraform uses the language called as head, C and language. What
+  is the full form of HCl? The full form of hcls. Has she Corp configuration
+  language? My students had written, it is hashicar language. Head stands for
+  Hashi. Stay stands for car and L stands for language, which is incorrect. Is
+  this clear? Head stands for hashikon c stands for Configuration. Look at this.
+  Is this clear? HCl the full form of hcls. Has she Corp configuration language?
+  Why? Because they give you all these as an option in your exam. And when you
+  look at the option, you feel all of them are correct. Only if you're thorough
+  and only if you know them properly then you then only will be able to answer it.
+  Okay, it is nothing. But has you called configuration language? okay, next You
+  might ask, How does this hashic configuration language? Look like is it like
+  Python Is it like JavaScript? No, hashical configuration language is similar to
+  Jason. So now next question to you guys, when I say Jason, what is the format?
+
+[09:52]
+  What's up? You're working on Ubuntu.
+  of us, we don't
+  use the existing code as much as possible. So reusability may not be in the same
+  company may not be in the same location. Now I, as I mentioned, Deloitte Bosch
+  Microsoft. There are the these are the companies where they have branches
+  throughout the group, right? So they will be sharing the code across the globe.
+  For example, if they're launching a new product in EU in Europe, they would next
+  launch the same product in probably in Asia. Correct. So that means do you think
+  they would start everything from scratch in Asia? No. They would talk to their
+  branch or they would talk to the colleagues that are there in EU and reuse the
+  code from there. So they've definitely they will be having a repository to store
+  all the quotes. So that means sharing is possible through repose. What is the
+  best software that we can use for repost get? Software right. That's one of the
+  best version controlling software that we can use. Any questions any doubt so
+  far? No doubts. Shall I proceed? Okay. Next, third point, versioning. What is
+  versioning? Bosch might have launched a product 10 years ago. now, they want to
+  launch a similar product, but with a new version, So they would not use, they
+  would not start the code from scratch. They would go back to the old previous
+  version, they would use the same version and modify they would tweak. So
+  worshiping is possible. Is this clear? You can have multiple versions of the
+  same code, you can reuse the code, you can share the code. Sharing Need Not Mean
+  Within the same building or within the same network, you can also share it. You
+  can also put the code in the GITHUB and share with those departments that are in
+  different continents. if you having a multiple branches of your company, then
+  sharing of the code plays a vital role, Any doubts. Select Proceed. Yes, if you
+  acknowledge, then I'll be able to proceed. so now, So far I've been mentioning
+  Terraform. Comes under I a C. So, when you are mentioning this in your resume
+  remember guys. Software or technology. Is your IAC. So I hope I've already shown
+  you my resume and in my resume. I've mentioned that. The technology is that you
+  are aware of and the software that you've worked on IAC, is the technology. It
+  is the concept. So what does it mean? It's nothing but infrastructure as code.
+  And what are the tools under this technology that you've used? Right now in AWS
+  one module, I am teaching you terraform tool, but when I go to Aws2 module, I
+  will be teaching you AWS cloud, formation tool. So basically, you will be
+  learning two tools under Infrastructure as code. Which adds a high weightage to
+  your resume. Is that clear? Now, we know terraform is your infrastructure as
+  code, who is giving this tool. Who is responsible for this tool. The tool is
+  from Hashi Cart. Okay. Has she got company? They are the ones that they are
+  providing this open source tool. So what is the exam that you're taking? exam
+  that you are taking is TERRAFORM Associate exam. Or certification, basically.
+  Four weeks of training is more than sufficient in order to take up your
+  terraform associate certification. Is that clear? If you're following all the
+  hands on that I'm doing in the class on day to day basis, you will be thorough
+  with the whole Requirement for your exam. Clear, and I mentioned that the whole
+  terraform is nothing but you're writing a code. Which language are we using? Are
+  we using Python C? Sharp c++ java. There are so many languages which language
+  are we using? We are using a specific language called as HCl language. Make a
+  note of whatever I'm writing here. what does HCl stands for HCl stands for hash
+  okay, one second Has, she got? Configuration. Language. Okay. see, this is one
+  of the one, I As per my experience, over the past couple of patches, most of my
+  students have done this mistake. What is it? They would ask you in the exam.
+  Remember, guys, for your entire course, for one year course, you'll be taking
+  three exams, right? AWS. Cloud practitioner AWS solutions, architect associate.
+  And the next one is Terraform associate. Okay, among these three exams Terraform
+  exam is one of the easiest one. Easy. For your AWS cloud practitioner, I would
+  say this is moderate. okay solutions, architect is Card. As a new need, a lot of
+  practice, you need a lot of understanding about individual services before you
+  take up the solutions architect. So no matter which exam you're taking, you need
+  to have at least practiced 200 mcqs on each exam. Only if you have done 150 to
+  200 mcqs then you are, I would assure you that you'll be able to pass the exam.
+  Okay, Terraform is one of the easiest exam. Fine. So In the past exams, there
+  was a question. Terraform uses the language called as head, C and language. What
+  is the full form of HCl? The full form of hcls. Has she Corp configuration
+  language? My students had written, it is hashicar language. Head stands for
+  Hashi. Stay stands for car and L stands for language, which is incorrect. Is
+  this clear? Head stands for hashikon c stands for Configuration. Look at this.
+  Is this clear? HCl the full form of hcls. Has she Corp configuration language?
+  Why? Because they give you all these as an option in your exam. And when you
+  look at the option, you feel all of them are correct. Only if you're thorough
+  and only if you know them properly then you then only will be able to answer it.
+  Okay, it is nothing. But has you called configuration language? okay, next You
+  might ask, How does this hashic configuration language? Look like is it like
+  Python Is it like JavaScript? No, hashical configuration language is similar to
+  Jason. So now next question to you guys, when I say Jason, what is the format?
+  Yeah, most of us.
+  Okay, so the step still is the same. Okay, the extraction and setting up is
+  still the same, whether it is on Ubuntu or on Windows. Okay, but the only thing
+  that you need to take care is well downloading your zip folder. I hope you have
+  downloaded the right, one for Ubuntu version again. In Ubuntu, AMD 64 version,
+  you will be downloading clear. Okay. Now you see when you try to install here,
+  go to your C drive and in the C drive. Second. There is already a folder for me.
+  Do you see any specific folders here in the C drive called as Terraform in your
+  case?
+
+[09:53]
+  What is the best software that we can use for repost get? Software right. That's
+  one of the best version controlling software that we can use. Any questions any
+  doubt so far? No doubts. Shall I proceed? Okay. Next, third point, versioning.
+  What is versioning? Bosch might have launched a product 10 years ago. now, they
+  want to launch a similar product, but with a new version, So they would not use,
+  they would not start the code from scratch. They would go back to the old
+  previous version, they would use the same version and modify they would tweak.
+  So worshiping is possible. Is this clear? You can have multiple versions of the
+  same code, you can reuse the code, you can share the code. Sharing Need Not Mean
+  Within the same building or within the same network, you can also share it. You
+  can also put the code in the GITHUB and share with those departments that are in
+  different continents. if you having a multiple branches of your company, then
+  sharing of the code plays a vital role, Any doubts. Select Proceed. Yes, if you
+  acknowledge, then I'll be able to proceed. so now, So far I've been mentioning
+  Terraform. Comes under I a C. So, when you are mentioning this in your resume
+  remember guys. Software or technology. Is your IAC. So I hope I've already shown
+  you my resume and in my resume. I've mentioned that. The technology is that you
+  are aware of and the software that you've worked on IAC, is the technology. It
+  is the concept. So what does it mean? It's nothing but infrastructure as code.
+  And what are the tools under this technology that you've used? Right now in AWS
+  one module, I am teaching you terraform tool, but when I go to Aws2 module, I
+  will be teaching you AWS cloud, formation tool. So basically, you will be
+  learning two tools under Infrastructure as code. Which adds a high weightage to
+  your resume. Is that clear? Now, we know terraform is your infrastructure as
+  code, who is giving this tool. Who is responsible for this tool. The tool is
+  from Hashi Cart. Okay. Has she got company? They are the ones that they are
+  providing this open source tool. So what is the exam that you're taking? exam
+  that you are taking is TERRAFORM Associate exam. Or certification, basically.
+  Four weeks of training is more than sufficient in order to take up your
+  terraform associate certification. Is that clear? If you're following all the
+  hands on that I'm doing in the class on day to day basis, you will be thorough
+  with the whole Requirement for your exam. Clear, and I mentioned that the whole
+  terraform is nothing but you're writing a code. Which language are we using? Are
+  we using Python C? Sharp c++ java. There are so many languages which language
+  are we using? We are using a specific language called as HCl language. Make a
+  note of whatever I'm writing here. what does HCl stands for HCl stands for hash
+  okay, one second Has, she got? Configuration. Language. Okay. see, this is one
+  of the one, I As per my experience, over the past couple of patches, most of my
+  students have done this mistake. What is it? They would ask you in the exam.
+  Remember, guys, for your entire course, for one year course, you'll be taking
+  three exams, right? AWS. Cloud practitioner AWS solutions, architect associate.
+  And the next one is Terraform associate. Okay, among these three exams Terraform
+  exam is one of the easiest one. Easy. For your AWS cloud practitioner, I would
+  say this is moderate. okay solutions, architect is Card. As a new need, a lot of
+  practice, you need a lot of understanding about individual services before you
+  take up the solutions architect. So no matter which exam you're taking, you need
+  to have at least practiced 200 mcqs on each exam. Only if you have done 150 to
+  200 mcqs then you are, I would assure you that you'll be able to pass the exam.
+  Okay, Terraform is one of the easiest exam. Fine. So In the past exams, there
+  was a question. Terraform uses the language called as head, C and language. What
+  is the full form of HCl? The full form of hcls. Has she Corp configuration
+  language? My students had written, it is hashicar language. Head stands for
+  Hashi. Stay stands for car and L stands for language, which is incorrect. Is
+  this clear? Head stands for hashikon c stands for Configuration. Look at this.
+  Is this clear? HCl the full form of hcls. Has she Corp configuration language?
+  Why? Because they give you all these as an option in your exam. And when you
+  look at the option, you feel all of them are correct. Only if you're thorough
+  and only if you know them properly then you then only will be able to answer it.
+  Okay, it is nothing. But has you called configuration language? okay, next You
+  might ask, How does this hashic configuration language? Look like is it like
+  Python Is it like JavaScript? No, hashical configuration language is similar to
+  Jason. So now next question to you guys, when I say Jason, what is the format?
+  No.
+  Does everyone know?
+
+[09:54]
+  Quickly check. Give me a second. Okay. Now Before I extract, let's see if I can
+  directly click this and install it right now, we have downloaded the zip folder.
+  I will
