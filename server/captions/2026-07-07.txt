@@ -1,0 +1,564 @@
+
+[08:35]
+  --- Meeting ended ---
+
+[09:03]
+  --- logged in ---
+
+[09:06]
+  Describe. Infrastructure with code. Repeatable.
+  Yes.
+
+[09:07]
+  Repeatable. Perfect. Very, very good reputable. Second thing.
+  One, once you describe in the quote and many time, you can repeat everywhere.
+  Sharing is possible through repose.
+  Very good. Very good. I can share the code. So, basically, what I do since this
+  is infrastructure as code, the whole infrastructure is written in the code
+  format, I store the code in a particular repository and I can give access to
+  anyone across the globe to that particular repository. So as in sharing is
+  possible, Clear, what else? Reputable for sure. Yes.
+  Skill.
+  Scalable.
+  Of our running.
+  Suman. Scaling. Suman, you mentioned scaling. How
+  So you can easily like add the lines rather than doing it manually.
+
+[09:08]
+  So basically we don't say it as scaling, I say less manual error. Because
+  scaling is also possible when you do it manually on the console, but what is
+  actually affecting here, the major part here is your errors. Are going to be
+  very less if you are using code rather than manual intervention. Clear. Roger.
+  I said, vaginal
+
+[09:09]
+  Versioning, very good. So if I have a particular version, I can reuse the old
+  version and I can add new contents to the existing versions as well. So
+  versioning is also possible. Right? So almost all of you have said all the
+  points. So these are the basic advantages. Why company would always expect. The
+  employer should know your infrastructure as good. Is this clear? Any doubt.
+  Okay. Now. Is there any disadvantage? Is there any disadvantage of Iac?
+  So, we should.
+  Highlight.
+  okay, one after another Yes Neander
+  High latency more error.
+  B.
+  Ben used to get very less error. So if you are getting more error, then people
+  would not use this. Okay, that's not the point. Someone else Mohammad was that
+  you.
+
+[09:11]
+  I thought the disadvantages of terraform, not the IC. I I see
+  Okay, what is the disadvantage of Terraform?
+  There's a patient know how to write the code.
+  Isn't it the same for your infrastructure as code? Whichever tool you use? You
+  need to know the coding language. This is the main disadvantage. Correct.
+  Whether are you using Ansible Puppet? Chef Tera form. There are a couple more
+  pulling me. There are so many tools available as you're infrastructure. Has
+  gone. But, what is happening? Look at this, the total thing here, depends on the
+  core writing, right? So you need to know the language. Without knowing the
+  language, you will not be able to write anything. Clear, let me start the
+  recording. Yesterday's recording has been uploaded to your drive. Okay, could so
+  now the, we also got to know the disadvantage of your infrastructure as code.
+  Basically, we need to know the coding language. Correct. okay, and when we talk
+  about the Iac tools, What are the tools? There are so many tools like Terraform.
+  And civil. Chef. Puppet. Let me. Etc, there are so many tools. Okay. But and
+  also your club formation. Why are we skipping cloudformation AWS cloudformation?
+  Various tools are there. Now, out of so many different roles. The next question
+  that arises is, Why are we learning terraform? What are the advantages of
+  terraform? Advantages of terraform.
+
+[09:12]
+  Terraform is open source.
+  Open search and get perfect. What does open source mean? Yesterday, I ask this
+  question as well.
+  We can use everywhere for Oracle as you WS GCP alibaba.
+
+[09:18]
+  Sorry. Sorry. It is free open source. Means it is free. Yesterday, you guys
+  installed, right? Did you pay anything for installation? No, none of you fire
+  paid anything. We just went into the system and we were able to directly
+  download it. We didn't pay anything. Correct. And what is? And what else? Apart
+  from that, we can also create our own modules. When we come to the modules part,
+  I will teach you what our modules and why we need to use them. So the advantage
+  is you can also create your own module and you can Upload your own module. Is
+  this clear? So that's why we call it as open source. And what is the other
+  advantage of using terraform?
+  Cloud. Agnostic.
+  Very, very good. Very important terminology. Cloud, agnostic. What does it mean?
+  It's kind of work with multiple cloud platforms.
+  Perfect. You can use terraform in order to Work with any cloud provider, for
+  example, AWS. You can work with Azure. You can work with GCP Oracle. Okay,
+  alibaba for VMware, anything and not just that Terraform is one tool. Very, very
+  important role which can work on two platforms. One is it can work on cloud
+  platform and the second one is it can work on premise. So, if you have any data
+  center, on premise then to set up the data center you can use Terraform There
+  are so many advantages. Is that clear? So now I will be sharing this in your
+  Select Channel. The one that we just So yesterday. Yes, I can't. So you should
+  be able to access it on your slack, right? So now we know, and we have brushed
+  all the points pertaining to your terraform. Now, let us go back to our code and
+  let us complete the code. Clear. So Can you guys see my screen? Did everyone
+  open your VS code? Please open your VS code. We will continue writing the code.
+  Okay. Now here I have a few questions. Adiens First before we proceed, the first
+  question is here. I have a file called as main.tf, What does Dot TF stand for
+  Perfect. Anything with an extension dot terraform.df is nothing but it's an
+  indication. It's a terraform file. Clear. Okay, Next thing. What is this
+  provider block? Why do I need a provider block? This block. Why is it needed?
+  What does it specify?
+  The the cloud to provide that RVs or Asia. And the reason.
+  Azure. Okay, very good. So next question, I have, can your Terraform work
+  without provider block. So now you guys are telling it will not work without
+  provider block, but After one week, I will give you a couple of examples
+  hands-on, then you can also execute without the provider block. Clear. How what
+  where, when we will do a good example? Okay. It is not mandatory that you need
+  to have a provider block, but it is recommended Okay, so I always say this
+  mandatory and recommended they are two different parts. It is not. Mandatory to
+  have a provider block, even without a provider block. It will work. How we'll do
+  it next week, okay? We will store all the access key somewhere else. The region
+  part will be included in the resource and the provider block. Anyways, you have
+  here resource here. So, here itself is telling AWS history. So it's an
+  indication that you're working on AWS Cloud, but it is recommended always to
+  have this provider block because whenever you share this code with any other
+  person across different regions, So for them to understand the script easily,
+  they would need the provider block. It's clear. Any doubts. What is this
+  resource block? What does this resource block indicate? Milan. Can you tell me
+  why is this resource Block needed? Yes.
+  It's the bucket, the bucket name to reach the bucket at AWS.
+  Okay, so here basically, the Resources S3 bucket, okay, but in general
+  resources, nothing but which service you want to set up?
+
+[09:19]
+  Would be. exactly, so basically, when I specify resource, it is nothing but
+  It could, it could be also like easy to or something else.
+
+[09:20]
+  Would be. Exactly, so basically when I specify resource it is nothing but the
+  service that you want to deploy on the cloud. Okay, so I've tried after this, I
+  will also be creating two other individual services. Is that clear? So during
+  that time, I will show you how this resource block will be helpful. So now if
+  you see who can explain The very first line of the city source book. This
+  firstly, the one that I'm highlighting, Meaning, can you try this? What is each
+  component in this line depict?
+  And the question to explain what's meaning of the first line. Yeah, the resource
+  is the yeah the local file resource.
+  Okay, it's a keyword basically.
+  Yeah.
+  Okay, it's a keyword. What is this? AWS S3 bucket. What is this?
+  Ahm.
+  Ad.
+  Iator reference.
+  iator reference, I think
+  Anyone else? What is this? AWS S3 bucket. Tell. What is this? Yes, Niyanta.
+  resource type which resource, which service,
+
+[09:22]
+  So now from this, I can easily identify that it is a S3 bucket that you want to
+  set up. Clear. Then who can tell me what is this example? Here, the third
+  component, in this line is telling some example. What is that? Yes, Milan
+  I'm not sure I thought but I don't know. Maybe it's, is it the name?
+  Right.
+  No, it's not the name.
+  The name.
+  I think the reference.
+  It is the name. Basically it's a logical name, okay, we all be called the C, You
+  can either call it as a logical name or you can call it as logical ID. Okay. Why
+  is it used? It is used for reference purpose. Clear. So you are basically giving
+  a logical name or logical ID for your S3 bucket. Remember, it is not the name.
+  Why? You just don't say. It is a name because S3, bucket name, I am mentioning
+  here in line number 8. If you check my line number eight line, number eight is
+  actually specifying the name of the bucket. So this is not the name of the
+  service. This is a logical idea. Used for reference purpose, only. Is this
+  clear? So when you see the third component, generally we have this for all the
+  resource blocks. Okay. It is a it is a mandatory part of your resource block,
+  why? Because any time your referencing this, what is reference mean, how to use
+  it? All that we will be talking in the later classes. But as of now, we want to
+  know When we talk about this. Logical id. They basically give a Logical name or
+  logical ID only for reference purpose within this code. Clear, this logical name
+  or logical ID is nowhere. Used outside this code as in you will know where see
+  this example on AWS cloud. Nowhere in the AWS cloud will be able to see this.
+  Nowhere in the S3 bucket will be able to see this. This is only the name or the
+  logical name. Given to your S3, service, only within this code. Is this clear?
+  So next we have bucket, so bucket is nothing but the S3 bucket name which we
+  know it has to be globally unique. Clear. So it has to be globally unique. So
+  did everyone create this? Have you given a unique name to your bucket? Everyone.
+  Yes. Okay, did you guys include tax? It does not recommended to have tax, but it
+  is totally up to your requirement in the company. Some companies would use stats
+  for identification. So if that's the requirement, then you would use this block
+  in your code. Is that clear? Any other questions? No, no questions. Shall we try
+  to execute this code? Everyone. Okay, so, now how do we execute first of all,
+  everything? I know, one thing that everything needs to be executed in the
+  terminal, Where is my terminal? I don't see my terminal, so let us create a
+  terminal. How to create, Do you see here? In my case? Since I have zoomed, my
+  screen. I'm not able to say it. When you go to this, right next to run, There is
+  an option called a terminal okay, do you see here If I click on this, there is
+  an option called a terminal and what I do, I click on New Terminal Eventually,
+  I'll also be teaching you how to work with vs code. Okay, so the moment you open
+  your terminal, you should be able to see the prompt. Do you see this prompt?
+  This specific line in your terminal. What is this line? Okay. It is called as a
+  prompt. We are o n p t. Please remember this term? So basically what is this
+  prompt identifying or what is this prompt? Focusing on. Look at this, this is
+  actually focusing on the path. So, in Terminal in Linux, I've already explained
+  the major difference between Linux and Windows system is what in Linux. You
+  don't have any user interface, everything has to be executed in the form of code
+  Right. But in Windows, you have a user interface, you have icons where you click
+  on the icons in order to interact, What is happening when you talk about the
+  Linux terminal, generally means it's a Linux environment. Okay. You have a path
+  here and you will be executing various commands in the specific path. So now,
+  let us go back and check. What is the problem here? Now, when I see the path to
+  see my butt, Don't do anything in your case, I will just execute a couple of
+  things here. Okay, so now if you see my butt, I have main Dot TF file here.
+  Where is my Main.tf? My main Dot TF file is within day. One folder and that is
+  within your terraform exam content folder. Correct. But where is my prompt
+  pointing to? My prompt is pointing to terraform exam content which is the
+  outermost folder here. So that means, in order for me to execute this main.tf, I
+  need to go into the Devon folder. So what I can do, I can execute a command
+  Linux command called as C D command. Does anyone know what the CD stands for?
+
+[09:27]
+  Change directory.
+  Perfect. Change the directory. I basically want to change the Folder. Correct.
+  You want to change the folder. So currently it is in terraform exam content. Let
+  us change the folder. How to change the folder? I will come here. Okay, so you
+  can also do one thing. Does anyone know what does LS stand for? Testing correct.
+  So now if I do LS, it will show me. What are the folders inside this terraform
+  exam content? Okay, in this case, it has to show day one folder. Okay. Do you
+  see this day? When folder? Correct. You can also execute this. now, what I do, I
+  do see one And now I'm within A1, do you see the change in the prompt very
+  important earlier? It was terraform exam content. Now, within terraform exam
+  content, You are inside day 1, Do you see this? Did everyone change the folder?
+  Is there anyone who's having an issue to change the folder? No. Shall I proceed?
+  now, you see Here. I want all of you to execute. LS, just to make sure that you
+  have your main.tf. Do you see this Main.tf? Yes. Okay, now that means we are in
+  the right directory. We can continue Okay. So what is the very first command?
+  Please make a note of all the commands that I'm going to execute today and the
+  very first command that we will be, executing is terraform in it. I n, i b.
+
+[09:29]
+  or maybe Terraform help that can we
+
+[09:30]
+  We talk about Terraform help leader. So the first one is Terraform In it. Okay,
+  so what does terraform in it to do in it stands for initialization? What is in
+  it in? It stands for initialization, what happens in the So right now, if you
+  see, I have a first block called as provide a block. Correct in the provider
+  block. I am trying to connect to my AWS cloud along with a lot of credential
+  details. so basically, what happens now you see Your AWS is here. Your? Your
+  laptop is here. Okay, so basically what you need to do, you need to connect from
+  your laptop to your cloud with some credentials. Correct. Using some
+  credentials. I need to connect from my laptop to the cloud who is helping for
+  this. Terraform is helping. How is Terraform helping How does terraform notes
+  are AWS Cloud? Because I have written the cloud details. In the provider block,
+  who is creating this connection from your system to the cloud, you're in it. In
+  it command is actually doing this connection. Is that clear? That is what we
+  call it as initialization. Any doubt. So now see, whenever I execute any
+  commands, I want you guys to closely observe how you are particular folder
+  changes. Okay here, if you see in you have just day one main dot TF right now, I
+  will be executing terraform in it upon executing, this terraform in that
+  command. You need to observe the change in the existing folder clear. Let's go.
+  And so now, I need to create a connection from my laptop to your cloud. So that
+  the first command What era form? Make a note of this command in it. What does
+  this do? This terraform in, it takes your credential details, which you have
+  written in the provider block and using this credential details, it tries to
+  connect your system. Basically it authorizes your Identity. okay, so you have
+  this identity authorize So basically it has to accept whether this excess K and
+  secret access key is a valid one or not. Who's going to do that in it? And what
+  else does it going to do? It also makes sure which is your cloud provider and it
+  tries to connect to this cloud provider using these credentials, Clear. So now
+  See, I will execute this code, I want all of you to observe one thing. The
+  moment I execute, I want you to see the change in this folder. It will take some
+  time for execution, but I want you to see the change.
+
+[09:42]
+  Editorial, really slow.
+  Sure. Sharanya maybe has Internet problem.
+  A everyday the same issue. Funny. And look her computer is dying. You know, the
+  editor is No Internet. And the editor is the performances.
+  Yes, you
+
+[09:48]
+  It's clear. Any doubts. What is this resource block? What does this resource
+  block indicate? Milan. Can you tell me why is this resource Block needed? Yes.
+  It's the bucket, the bucket name to reach the bucket at AWS.
+  Okay, so here basically, the Resources S3 bucket, okay, but in general
+  resources, nothing but which service you want to set up?
+  It could, it could be also like easy to or something else.
+  Would be. Exactly, so basically when I specify resource it is nothing but the
+  service that you want to deploy on the cloud. Okay, so I've tried after this, I
+  will also be creating two other individual services. Is that clear? So during
+  that time, I will show you how this resource block will be helpful. So now if
+  you see who can explain The very first line of the city source book. This
+  firstly, the one that I'm highlighting, Meaning, can you try this? What is each
+  component in this line depict?
+  And the question to explain what's meaning of the first line. Yeah, the resource
+  is the yeah the local file resource.
+  Okay, it's a keyword basically.
+  Yeah.
+  Okay, it's a keyword. What is this? AWS S3 bucket. What is this?
+  iator reference, I think
+  Anyone else? What is this? AWS S3 bucket. Tell. What is this? Yes, Niyanta.
+  resource type which resource, which service,
+  So now from this, I can easily identify that it is a S3 bucket that you want to
+  set up. Clear. Then who can tell me what is this example? Here, the third
+  component, in this line is telling some example. What is that? Yes, Milan
+  I'm not sure I thought but I don't know. Maybe it's, is it the name?
+  Right.
+  No, it's not the name.
+  The name.
+  I think the reference.
+  It is the name. Basically it's a logical name, okay, we all be called the C, You
+  can either call it as a logical name or you can call it as logical ID. Okay. Why
+  is it used? It is used for reference purpose. Clear. So you are basically giving
+  a logical name or logical ID for your S3 bucket. Remember, it is not the name.
+  Why? You just don't say. It is a name because S3, bucket name, I am mentioning
+  here in line number 8. If you check my line number eight line, number eight is
+  actually specifying the name of the bucket. So this is not the name of the
+  service. This is a logical idea. Used for reference purpose, only. Is this
+  clear? So when you see the third component, generally we have this for all the
+  resource blocks. Okay. It is a it is a mandatory part of your resource block,
+  why? Because any time your referencing this, what is reference mean, how to use
+  it? All that we will be talking in the later classes. But as of now, we want to
+  know When we talk about this. Logical id. They basically give a Logical name or
+  logical ID only for reference purpose within this code. Clear, this logical name
+  or logical ID is nowhere. Used outside this code as in you will know where see
+  this example on AWS cloud. Nowhere in the AWS cloud will be able to see this.
+  Nowhere in the S3 bucket will be able to see this. This is only the name or the
+  logical name. Given to your S3, service, only within this code. Is this clear?
+  So next we have bucket, so bucket is nothing but the S3 bucket name which we
+  know it has to be globally unique. Clear. So it has to be globally unique. So
+  did everyone create this? Have you given a unique name to your bucket? Everyone.
+  Yes. Okay, did you guys include tax? It does not recommended to have tax, but it
+  is totally up to your requirement in the company. Some companies would use stats
+  for identification. So if that's the requirement, then you would use this block
+  in your code. Is that clear? Any other questions? No, no questions. Shall we try
+  to execute this code? Everyone. Okay, so, now how do we execute first of all,
+  everything? I know, one thing that everything needs to be executed in the
+  terminal, Where is my terminal? I don't see my terminal, so let us create a
+  terminal. How to create, Do you see here? In my case? Since I have zoomed, my
+  screen. I'm not able to say it. When you go to this, right next to run, There is
+  an option called a terminal okay, do you see here If I click on this, there is
+  an option called a terminal and what I do, I click on New Terminal Eventually,
+  I'll also be teaching you how to work with vs code. Okay, so the moment you open
+  your terminal, you should be able to see the prompt. Do you see this prompt?
+  This specific line in your terminal. What is this line? Okay. It is called as a
+  prompt. We are o n p t. Please remember this term? So basically what is this
+  prompt identifying or what is this prompt? Focusing on. Look at this, this is
+  actually focusing on the path. So, in Terminal in Linux, I've already explained
+  the major difference between Linux and Windows system is what in Linux. You
+  don't have any user interface, everything has to be executed in the form of code
+  Right. But in Windows, you have a user interface, you have icons where you click
+  on the icons in order to interact, What is happening when you talk about the
+  Linux terminal, generally means it's a Linux environment. Okay. You have a path
+  here and you will be executing various commands in the specific path. So now,
+  let us go back and check. What is the problem here? Now, when I see the path to
+  see my butt, Don't do anything in your case, I will just execute a couple of
+  things here. Okay, so now if you see my butt, I have main Dot TF file here.
+  Where is my Main.tf? My main Dot TF file is within day. One folder and that is
+  within your terraform exam content folder. Correct. But where is my prompt
+  pointing to? My prompt is pointing to terraform exam content which is the
+  outermost folder here. So that means, in order for me to execute this main.tf, I
+  need to go into the Devon folder. So what I can do, I can execute a command
+  Linux command called as C D command. Does anyone know what the CD stands for?
+  Change directory.
+  Perfect. Change the directory. I basically want to change the Folder. Correct.
+  You want to change the folder. So currently it is in terraform exam content. Let
+  us change the folder. How to change the folder? I will come here. Okay, so you
+  can also do one thing. Does anyone know what does LS stand for? Testing correct.
+  So now if I do LS, it will show me. What are the folders inside this terraform
+  exam content? Okay, in this case, it has to show day one folder. Okay. Do you
+  see this day? When folder? Correct. You can also execute this. now, what I do, I
+  do see one And now I'm within A1, do you see the change in the prompt very
+  important earlier? It was terraform exam content. Now, within terraform exam
+  content, You are inside day 1, Do you see this? Did everyone change the folder?
+  Is there anyone who's having an issue to change the folder? No. Shall I proceed?
+  now, you see Here. I want all of you to execute. LS, just to make sure that you
+  have your main.tf. Do you see this Main.tf? Yes. Okay, now that means we are in
+  the right directory. We can continue Okay. So what is the very first command?
+  Please make a note of all the commands that I'm going to execute today and the
+  very first command that we will be, executing is terraform in it. I n, i b.
+  or maybe Terraform help that can we
+  We talk about Terraform help leader. So the first one is Terraform In it. Okay,
+  so what does terraform in it to do in it stands for initialization? What is in
+  it in? It stands for initialization, what happens in the So right now, if you
+  see, I have a first block called as provide a block. Correct in the provider
+  block. I am trying to connect to my AWS cloud along with a lot of credential
+  details. so basically, what happens now you see Your AWS is here. Your? Your
+  laptop is here. Okay, so basically what you need to do, you need to connect from
+  your laptop to your cloud with some credentials. Correct. Using some
+  credentials. I need to connect from my laptop to the cloud who is helping for
+  this. Terraform is helping. How is Terraform helping How does terraform notes
+  are AWS Cloud? Because I have written the cloud details. In the provider block,
+  who is creating this connection from your system to the cloud, you're in it. In
+  it command is actually doing this connection. Is that clear? That is what we
+  call it as initialization. Any doubt. So now see, whenever I execute any
+  commands, I want you guys to closely observe how you are particular folder
+  changes. Okay here, if you see in you have just day one main dot TF right now, I
+  will be executing terraform in it upon executing, this terraform in that
+  command. You need to observe the change in the existing folder clear. Let's go.
+  And so now, I need to create a connection from my laptop to your cloud. So that
+  the first command What era form? Make a note of this command in it. What does
+  this do? This terraform in, it takes your credential details, which you have
+  written in the provider block and using this credential details, it tries to
+  connect your system. Basically it authorizes your Identity. okay, so you have
+  this identity authorize So basically it has to accept whether this excess K and
+  secret access key is a valid one or not. Who's going to do that in it? And what
+  else does it going to do? It also makes sure which is your cloud provider and it
+  tries to connect to this cloud provider using these credentials, Clear. So now
+  See, I will execute this code, I want all of you to observe one thing. The
+  moment I execute, I want you to see the change in this folder. It will take some
+  time for execution, but I want you to see the change.
+  Editorial, really slow.
+  Sure. Sharanya maybe has Internet problem.
+  A everyday the same issue. Funny. And look her computer is dying. You know, the
+  editor is No Internet. And the editor is the performances.
+  Yes, you
+  I'm sorry because these auto people are digging all around my house and my
+  Internet is really bad. Okay, so let's continue. Let me share my window. One
+  moment. Can you see my screen? Yes. Okay, so where baby, we did this terraform
+  initialization did
+
+[09:49]
+  I'm sorry because these auto people are digging all around my house and my
+  Internet is really bad. Okay, so let's continue. Let me share my window. One
+  moment. Can you see my screen? Yes. Okay, so where baby, we did this terraform
+  initialization, did it work for you? So in my case, it failed because it
+  exceeded waiting period. Do you see here? there was an Internet issue because of
+  which it, Stopped working. So now let us continue again.
+  Okay, so I've tried after this, I will also be creating two other individual
+  services. Is that clear? So during that time, I will show you how this resource
+  block will be helpful. So now if you see who can explain The very first line of
+  the city source book. This firstly, the one that I'm highlighting, Meaning, can
+  you try this? What is each component in this line depict?
+  And the question to explain what's meaning of the first line. Yeah, the resource
+  is the yeah the local file resource.
+  Okay, it's a keyword basically.
+  Yeah.
+  Okay, it's a keyword. What is this? AWS S3 bucket. What is this?
+  iator reference, I think
+  Anyone else? What is this? AWS S3 bucket. Tell. What is this? Yes, Niyanta.
+  resource type which resource, which service,
+  So now from this, I can easily identify that it is a S3 bucket that you want to
+  set up. Clear. Then who can tell me what is this example? Here, the third
+  component, in this line is telling some example. What is that? Yes, Milan
+  I'm not sure I thought but I don't know. Maybe it's, is it the name?
+  Right.
+  No, it's not the name.
+  The name.
+  I think the reference.
+  It is the name. Basically it's a logical name, okay, we all be called the C, You
+  can either call it as a logical name or you can call it as logical ID. Okay. Why
+  is it used? It is used for reference purpose. Clear. So you are basically giving
+  a logical name or logical ID for your S3 bucket. Remember, it is not the name.
+  Why? You just don't say. It is a name because S3, bucket name, I am mentioning
+  here in line number 8. If you check my line number eight line, number eight is
+  actually specifying the name of the bucket. So this is not the name of the
+  service. This is a logical idea. Used for reference purpose, only. Is this
+  clear? So when you see the third component, generally we have this for all the
+  resource blocks. Okay. It is a it is a mandatory part of your resource block,
+  why? Because any time your referencing this, what is reference mean, how to use
+  it? All that we will be talking in the later classes. But as of now, we want to
+  know When we talk about this. Logical id. They basically give a Logical name or
+  logical ID only for reference purpose within this code. Clear, this logical name
+  or logical ID is nowhere. Used outside this code as in you will know where see
+  this example on AWS cloud. Nowhere in the AWS cloud will be able to see this.
+  Nowhere in the S3 bucket will be able to see this. This is only the name or the
+  logical name. Given to your S3, service, only within this code. Is this clear?
+  So next we have bucket, so bucket is nothing but the S3 bucket name which we
+  know it has to be globally unique. Clear. So it has to be globally unique. So
+  did everyone create this? Have you given a unique name to your bucket? Everyone.
+  Yes. Okay, did you guys include tax? It does not recommended to have tax, but it
+  is totally up to your requirement in the company. Some companies would use stats
+  for identification. So if that's the requirement, then you would use this block
+  in your code. Is that clear? Any other questions? No, no questions. Shall we try
+  to execute this code? Everyone. Okay, so, now how do we execute first of all,
+  everything? I know, one thing that everything needs to be executed in the
+  terminal, Where is my terminal? I don't see my terminal, so let us create a
+  terminal. How to create, Do you see here? In my case? Since I have zoomed, my
+  screen. I'm not able to say it. When you go to this, right next to run, There is
+  an option called a terminal okay, do you see here If I click on this, there is
+  an option called a terminal and what I do, I click on New Terminal Eventually,
+  I'll also be teaching you how to work with vs code. Okay, so the moment you open
+  your terminal, you should be able to see the prompt. Do you see this prompt?
+  This specific line in your terminal. What is this line? Okay. It is called as a
+  prompt. We are o n p t. Please remember this term? So basically what is this
+  prompt identifying or what is this prompt? Focusing on. Look at this, this is
+  actually focusing on the path. So, in Terminal in Linux, I've already explained
+  the major difference between Linux and Windows system is what in Linux. You
+  don't have any user interface, everything has to be executed in the form of code
+  Right. But in Windows, you have a user interface, you have icons where you click
+  on the icons in order to interact, What is happening when you talk about the
+  Linux terminal, generally means it's a Linux environment. Okay. You have a path
+  here and you will be executing various commands in the specific path. So now,
+  let us go back and check. What is the problem here? Now, when I see the path to
+  see my butt, Don't do anything in your case, I will just execute a couple of
+  things here. Okay, so now if you see my butt, I have main Dot TF file here.
+  Where is my Main.tf? My main Dot TF file is within day. One folder and that is
+  within your terraform exam content folder. Correct. But where is my prompt
+  pointing to? My prompt is pointing to terraform exam content which is the
+  outermost folder here. So that means, in order for me to execute this main.tf, I
+  need to go into the Devon folder. So what I can do, I can execute a command
+  Linux command called as C D command. Does anyone know what the CD stands for?
+  Change directory.
+  Perfect. Change the directory. I basically want to change the Folder. Correct.
+  You want to change the folder. So currently it is in terraform exam content. Let
+  us change the folder. How to change the folder? I will come here. Okay, so you
+  can also do one thing. Does anyone know what does LS stand for? Testing correct.
+  So now if I do LS, it will show me. What are the folders inside this terraform
+  exam content? Okay, in this case, it has to show day one folder. Okay. Do you
+  see this day? When folder? Correct. You can also execute this. now, what I do, I
+  do see one And now I'm within A1, do you see the change in the prompt very
+  important earlier? It was terraform exam content. Now, within terraform exam
+  content, You are inside day 1, Do you see this? Did everyone change the folder?
+  Is there anyone who's having an issue to change the folder? No. Shall I proceed?
+  now, you see Here. I want all of you to execute. LS, just to make sure that you
+  have your main.tf. Do you see this Main.tf? Yes. Okay, now that means we are in
+  the right directory. We can continue Okay. So what is the very first command?
+  Please make a note of all the commands that I'm going to execute today and the
+  very first command that we will be, executing is terraform in it. I n, i b.
+  or maybe Terraform help that can we
+  We talk about Terraform help leader. So the first one is Terraform In it. Okay,
+  so what does terraform in it to do in it stands for initialization? What is in
+  it in? It stands for initialization, what happens in the So right now, if you
+  see, I have a first block called as provide a block. Correct in the provider
+  block. I am trying to connect to my AWS cloud along with a lot of credential
+  details. so basically, what happens now you see Your AWS is here. Your? Your
+  laptop is here. Okay, so basically what you need to do, you need to connect from
+  your laptop to your cloud with some credentials. Correct. Using some
+  credentials. I need to connect from my laptop to the cloud who is helping for
+  this. Terraform is helping. How is Terraform helping How does terraform notes
+  are AWS Cloud? Because I have written the cloud details. In the provider block,
+  who is creating this connection from your system to the cloud, you're in it. In
+  it command is actually doing this connection. Is that clear? That is what we
+  call it as initialization. Any doubt. So now see, whenever I execute any
+  commands, I want you guys to closely observe how you are particular folder
+  changes. Okay here, if you see in you have just day one main dot TF right now, I
+  will be executing terraform in it upon executing, this terraform in that
+  command. You need to observe the change in the existing folder clear. Let's go.
+  And so now, I need to create a connection from my laptop to your cloud. So that
+  the first command What era form? Make a note of this command in it. What does
+  this do? This terraform in, it takes your credential details, which you have
+  written in the provider block and using this credential details, it tries to
+  connect your system. Basically it authorizes your Identity. okay, so you have
+  this identity authorize So basically it has to accept whether this excess K and
+  secret access key is a valid one or not. Who's going to do that in it? And what
+  else does it going to do? It also makes sure which is your cloud provider and it
+  tries to connect to this cloud provider using these credentials, Clear. So now
+  See, I will execute this code, I want all of you to observe one thing. The
+  moment I execute, I want you to see the change in this folder. It will take some
+  time for execution, but I want you to see the change.
+  Editorial, really slow.
+  Sure. Sharanya maybe has Internet problem.
+  A everyday the same issue. Funny. And look her computer is dying. You know, the
+  editor is No Internet. And the editor is the performances.
+  Yes, you
+  I'm sorry because these auto people are digging all around my house and my
+  Internet is really bad. Okay, so let's continue. Let me share my window. One
+  moment. Can you see my screen? Yes. Okay, so where baby, we did this terraform
+  initialization, did it work for you? So in my case, it failed because it
+  exceeded waiting period. Do you see here? there was an Internet issue because of
+  which it, Stopped working. So now let us continue again. I will execute the same
+  terraform in it once again. Okay. in your case, where you guys able to AD
+  successfully. Yes. Everyone and not just that where you guys able to see some
+  extra files here in this day, one folder. So what are those files? Those files
+  are very, very important for us because you will get one or the other question.
+  Based on that, fine. Clear. So let's wait. Gently on my laptop, it takes around
+  30 seconds to one minute to install.
