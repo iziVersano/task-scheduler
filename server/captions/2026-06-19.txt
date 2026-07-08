@@ -1,0 +1,850 @@
+
+[09:44]
+  --- logged in ---
+  So, do you see here? Where is it? There is a provision. Type only in provision
+  io1 and io2 you can do multi attach. Okay. In instant store. No, multia attach.
+  Nothing. Okay, and when you start and stop your instance, Suman mentioned here
+  in the chat. EBS will not be affected ABS is a individual independent external
+  storage service. Is this clear? It's an independent external storage service
+  which has no effect on your instant state. You start you stop. You hibernate you
+  do whatever you want with your EC2. It is least bothered. Understood.
+
+[09:45]
+  Any other point? Yes.
+  Very good. Yeah, very good encryption. You can also do it on instant store
+  automatically. It will be enabled for instance tour. But for
+
+[09:46]
+  Very good. Yeah, very good encryption. You can also do it on instant store
+  automatically. It will be enabled for instance tour, but for your EBS, snapshot
+  is possible. I can take backup. Backup is possible. Very, very good. Backup is
+  possible. Can I do backup on instant store? Don't say no, you can do backup, but
+  what is it but what is it? See here, you
+
+[09:47]
+  The backup is called a snapshot in EBS, you call it a snapshot in ABS in instant
+  store. What do you do? You take a backup when you're easy to is still active,
+  you take the backup when you're easy to still running and you store it as a file
+  in your S3. Very, very important point. What would they say? They say that if
+  you are using instant store, For your storage requirement, whenever you want
+  high performance, most of the time, people use instant Store for high
+  performance. Okay. During the time, what they do is as a backup, they frequently
+  do this automatic backup from instant store to S3. They just create a file there
+  and they completely keep copying the contents from instant store to your file in
+  S3 on like, let's say, every every minute or every second Is this clear? Why? If
+  your instance don't stops at least you have a backup. Understood. Backup is also
+  possible encryption. It depends whether you want to encrypt your EBS. It is up
+  to you whether you want but instant stories automatically encrypted, it is an
+  already imbibed within your EC2 so it is automatically encrypted. Understood.
+  Very, very good. So almost all of, you know, all the points about instance store
+  and EBS, whatever we did yesterday. Correct. Now I have next few questions about
+  your EBS. Because we have spoken about different types of EBS. Correct. So now
+  we need to know what are each use cases. So first, before you answer this, you
+  should know what is throughput. You should know what is iops, only? Then you'll
+  be able to answer. Difference between throughput reference between Iops. Those
+  who give me an answer first, I want you to explain the difference between
+  throughput and iops.
+
+[09:48]
+  Which one we need?
+  Through. Iops. Okay, can you explain what is Iops? What is it? Input output per
+  second. What does it mean input output per second?
+
+[09:49]
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million?
+
+[09:51]
+  --- logged in ---
+
+[09:52]
+  So, do you see here? Where is it? There is a provision. Type only in provision
+  io1 and io2 you can do multi attach. Okay. In instant store. No, multia attach.
+  Nothing. Okay, and when you start and stop your instance, Suman mentioned here
+  in the chat. EBS will not be affected ABS is a individual independent external
+  storage service. Is this clear? It's an independent external storage service
+  which has no effect on your instant state. You start you stop. You hibernate you
+  do whatever you want with your EC2. It is least bothered. Understood.
+  Any other point? Yes.
+  Very good. Yeah, very good encryption. You can also do it on instant store
+  automatically. It will be enabled for instance tour, but for your EBS, snapshot
+  is possible. I can take backup. Backup is possible. Very, very good. Backup is
+  possible. Can I do backup on instant store? Don't say no, you can do backup, but
+  what is it but what is it? See here, you
+  The backup is called a snapshot in EBS, you call it a snapshot in ABS in instant
+  store. What do you do? You take a backup when you're easy to is still active,
+  you take the backup when you're easy to still running and you store it as a file
+  in your S3. Very, very important point. What would they say? They say that if
+  you are using instant store, For your storage requirement, whenever you want
+  high performance, most of the time, people use instant Store for high
+  performance. Okay. During the time, what they do is as a backup, they frequently
+  do this automatic backup from instant store to S3. They just create a file there
+  and they completely keep copying the contents from instant store to your file in
+  S3 on like, let's say, every every minute or every second Is this clear? Why? If
+  your instance don't stops at least you have a backup. Understood. Backup is also
+  possible encryption. It depends whether you want to encrypt your EBS. It is up
+  to you whether you want but instant stories automatically encrypted, it is an
+  already imbibed within your EC2 so it is automatically encrypted. Understood.
+  Very, very good. So almost all of, you know, all the points about instance store
+  and EBS, whatever we did yesterday. Correct. Now I have next few questions about
+  your EBS. Because we have spoken about different types of EBS. Correct. So now
+  we need to know what are each use cases. So first, before you answer this, you
+  should know what is throughput. You should know what is iops, only? Then you'll
+  be able to answer. Difference between throughput reference between Iops. Those
+  who give me an answer first, I want you to explain the difference between
+  throughput and iops.
+  Which one we need?
+  Through. Iops. Okay, can you explain what is Iops? What is it? Input output per
+  second. What does it mean input output per second?
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million?
+
+[09:54]
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million request at a time? See all are 1 million requests
+  are increasing. So many requests are coming. This is when we say extremely high
+  iops, What is the question? The question is saying that. They are worried about
+  throughput. Then iops, they are released bothered about iops. They are not
+  telling how many input output requests is processed what is throughput?
+  Amount. Logs. No. What what do you mean by?
+  Volume. Exactly. Now, you see, see there's a huge difference between throughput
+  and iops. I want all of you to listen to this. What is it? There is an EBS
+  block. And I am getting one request. I'm not getting a request. I'm trying to
+  upload. EBs, is what it's a storage space. And I am sending one request where I
+  want to store 100 TB of data. Only one single request with 100 TB of data. Okay,
+  and next, I will show you one more example. Take another example. okay, there is
+  another example where you have EBS and this ABS is taking some One thousand
+  requests thousand request with each request being one KB in size. This is iops
+  see input output operations per second. I have thousand input requests but look
+  at the request. Size x, extremely small request, size 1, kb request size and
+  then I have this beautiful one request which is consuming, 100 tb of data. One
+  single request. So what is this? This is throughput. How much bandwidth do you
+  have? How much Data. Can I send?
+  Perfect. Very good. Yes, simple. So what are you going to look whenever they ask
+  about more data and less input? Because do you guys know what is the input
+  output for ST1 and SC1? What is the IOP range? Sc 1, you'll get around 250 iups
+  in st1. You will get around 500 iops in rest of the one Io2 and for Io2, you can
+  go up till 256,000 Iops. Thousand iops. 256k iops. Here, I am just talking about
+  500 there, I'm talking about 256,000 iobs and in gp3, you can go up till 16000
+  iops. So they're not talking about iops. They are talking about throughput. So
+  here option A and option B is clearly gone. I have option C and option D.
+
+[09:54]
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million request at a time? See all are 1 million requests
+  are increasing. So many requests are coming. This is when we say extremely high
+  iops, What is the question? The question is saying that. They are worried about
+  throughput. Then iops, they are released bothered about iops. They are not
+  telling how many input output requests is processed what is throughput?
+  Amount. Logs. No. What what do you mean by?
+  Volume. Exactly. Now, you see, see there's a huge difference between throughput
+  and iops. I want all of you to listen to this. What is it? There is an EBS
+  block. And I am getting one request. I'm not getting a request. I'm trying to
+  upload. EBs, is what it's a storage space. And I am sending one request where I
+  want to store 100 TB of data. Only one single request with 100 TB of data. Okay,
+  and next, I will show you one more example. Take another example. okay, there is
+  another example where you have EBS and this ABS is taking some One thousand
+  requests thousand request with each request being one KB in size. This is iops
+  see input output operations per second. I have thousand input requests but look
+  at the request. Size x, extremely small request, size 1, kb request size and
+  then I have this beautiful one request which is consuming, 100 tb of data. One
+  single request. So what is this? This is throughput. How much bandwidth do you
+  have? How much Data. Can I send?
+  Perfect. Very good. Yes, simple. So what are you going to look whenever they ask
+  about more data and less input? Because do you guys know what is the input
+  output for ST1 and SC1? What is the IOP range? Sc 1, you'll get around 250 iups
+  in st1. You will get around 500 iops in rest of the one Io2 and for Io2, you can
+  go up till 256,000 Iops. Thousand iops. 256k iops. Here, I am just talking about
+  500 there, I'm talking about 256,000 iobs and in gp3, you can go up till 16000
+  iops. So they're not talking about iops. They are talking about throughput. So
+  here option A and option B is clearly gone. I have option C and option D.
+
+[09:55]
+  Yes, yes. Payload size. Okay. And here your EBS should have that capacity. So if
+  you are getting a large amount of data, for example, 10tb of data, I'm getting
+  let's say your EBS should have a proper port and it, your EBS should have a
+  proper capability of accepting such a huge payload. And who can accept this?
+  Only your HDD type of instance, type, sorry. EBS volume can only accept such
+  huge payloads or huge input data. This is what we call it as throughput. Is this
+  clear and under that, do you see a C1 and SC 2 and SC 1? We know it can go, I
+  think up till 100 TB And this can go up till 256 TB. The TB is more in ST1. That
+  is why the correct answer is option C? Is this clear? They will ask you
+  questions like this in your exam. And especially see such kind of question. You
+  will not see in your cloud practitioner, Let me be frank, okay. In your cloud
+  practitioner, They are least bothered about these types. They will ask you
+  questions like instant store versus EBS volume. The question will be there based
+  on this, very generic base, basic questions, foundational level but In depth
+  about your EBS, like variants of your instance type. This is a favorite question
+  for your AWS solutions. Architect associate. Is this clear? Any doubt. No doubt.
+  I hope I have already mentioned this your you have your cloud practitioner which
+  is a foundational level based on this foundational level you have your solutions
+  architect associate and that based on your Solutions architect associate you
+  have your solutions architect professional. Is this clear? So all of them
+  somehow need your basic cloud practitioner which we are covering and along with
+  that. I am also teaching you Solutions. Architect is this clear but solutions
+  Architect professional is not included in your course so you can take it right
+  after your DCI. Understood. If you're thorough with solutions, architect
+  associate and cloud practitioner, this will be somewhat easy. You again need to
+  spend time, but yeah, you'll, it'll be somebody easy for you to take it. Any
+  doubts. No, doubts shall be proceed.
+
+[09:55]
+  Yes, yes. Payload size. Okay. And here your EBS should have that capacity. So if
+  you are getting a large amount of data, for example, 10tb of data, I'm getting
+  let's say your EBS should have a proper port and it, your EBS should have a
+  proper capability of accepting such a huge payload. And who can accept this?
+  Only your HDD type of instance, type, sorry. EBS volume can only accept such
+  huge payloads or huge input data. This is what we call it as throughput. Is this
+  clear and under that, do you see a C1 and SC 2 and SC 1? We know it can go, I
+  think up till 100 TB And this can go up till 256 TB. The TB is more in ST1. That
+  is why the correct answer is option C? Is this clear? They will ask you
+  questions like this in your exam. And especially see such kind of question. You
+  will not see in your cloud practitioner, Let me be frank, okay. In your cloud
+  practitioner, They are least bothered about these types. They will ask you
+  questions like instant store versus EBS volume. The question will be there based
+  on this, very generic base, basic questions, foundational level but In depth
+  about your EBS, like variants of your instance type. This is a favorite question
+  for your AWS solutions. Architect associate. Is this clear? Any doubt. No doubt.
+  I hope I have already mentioned this your you have your cloud practitioner which
+  is a foundational level based on this foundational level you have your solutions
+  architect associate and that based on your Solutions architect associate you
+  have your solutions architect professional. Is this clear? So all of them
+  somehow need your basic cloud practitioner which we are covering and along with
+  that. I am also teaching you Solutions. Architect is this clear but solutions
+  Architect professional is not included in your course so you can take it right
+  after your DCI. Understood. If you're thorough with solutions, architect
+  associate and cloud practitioner, this will be somewhat easy. You again need to
+  spend time, but yeah, you'll, it'll be somebody easy for you to take it. Any
+  doubts. No, doubts shall be proceed.
+  Yes, archived data.
+  Yes, archived data.
+
+[09:56]
+  Archived data here, throughput. We when do we use this? Throughput optimized. We
+  generally use this throughput optimized whenever we have. What warehouses big
+  data? Do you see here data? Warehousing big data. Log processing, continuously
+  or getting a huge amount of log. At the end of the day, you're consuming some
+  5tb of log from a company. Okay. 5 kb. Huge size of data. The throughput is
+  more. Okay, during that time, you would go for throughput optimized. Understood.
+  Okay, next question. They're asking you the difference between Gp2 and Gp3. So,
+  all of you are telling option B. So what is it, what is the key advantage of
+  choosing gp3? EBS volume over GP to EBS volume, okay, gp3 Sorry, Gp2 versus gp3.
+  One thing I have told whenever you see these numbers, you should be able to
+  understand the version. So, GP2 is obviously earlier version. Okay. Now we have
+  what jp3? Which is the more advanced version so which means gp3 should have more
+  capability. General knowledge. Okay, so any versions you see, That is how most
+  of the time they give a higher versions for the new release. So whenever you see
+  such versions in any questions, okay, the recent version means more feature.
+  Older version means less feature. Okay, what is it? They are telling a gp3 is a
+  HDD based volume type. No, can anyone tell me under which volume type does these
+  two come? Which volume type. Very good, general purpose. This is general
+  purpose. Volume type. So option is clearly wrong because they are telling it's
+  an HDD based No. Okay, gp3 can be attached to multiple instances simultaneously,
+  while GP2 cannot. Is this correct? Which instance? Type sorry. Which storage EBS
+  block type. Can you do your multi? Attach?
+
+[09:56]
+  Archived data here, throughput. We when do we use this? Throughput optimized. We
+  generally use this throughput optimized whenever we have. What warehouses big
+  data? Do you see here data? Warehousing big data. Log processing, continuously
+  or getting a huge amount of log. At the end of the day, you're consuming some
+  5tb of log from a company. Okay. 5 kb. Huge size of data. The throughput is
+  more. Okay, during that time, you would go for throughput optimized. Understood.
+  Okay, next question. They're asking you the difference between Gp2 and Gp3. So,
+  all of you are telling option B. So what is it, what is the key advantage of
+  choosing gp3? EBS volume over GP to EBS volume, okay, gp3 Sorry, Gp2 versus gp3.
+  One thing I have told whenever you see these numbers, you should be able to
+  understand the version. So, GP2 is obviously earlier version. Okay. Now we have
+  what jp3? Which is the more advanced version so which means gp3 should have more
+  capability. General knowledge. Okay, so any versions you see, That is how most
+  of the time they give a higher versions for the new release. So whenever you see
+  such versions in any questions, okay, the recent version means more feature.
+  Older version means less feature. Okay, what is it? They are telling a gp3 is a
+  HDD based volume type. No, can anyone tell me under which volume type does these
+  two come? Which volume type. Very good, general purpose. This is general
+  purpose. Volume type. So option is clearly wrong because they are telling it's
+  an HDD based No. Okay, gp3 can be attached to multiple instances simultaneously,
+  while GP2 cannot. Is this correct? Which instance? Type sorry. Which storage EBS
+  block type. Can you do your multi? Attach?
+
+[09:59]
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? It is a regional
+  journal or global service, what kind of a service is EB.
+
+[09:59]
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? It is a regional
+  journal or global service, what kind of a service is EB.
+
+[10:00]
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? it is a regional
+  journal or global service, what kind of a service is EBS,
+
+[10:00]
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? it is a regional
+  journal or global service, what kind of a service is EBS,
+
+[10:01]
+  Zonal Service, Perfect, very important point that we need to know about EPS is
+  what it is always associated with your availability zone. You fix your EBS to an
+  availability zone. If I want to copy, what should I do? I take a snapshot and
+  restore it in a different AZ. Is this clear? Any doubts. Any questions? So that
+  means attaching or see. Or automatic that to automatically. Replicate. No
+  chance. There is nothing called as automatic replication for EBS. It is always
+  you have to tell where you want to replicate in which availability zone. You
+  want to replicate, how will AWS know which availability zone. You want to make a
+  copy of the same EBS. Is this clear? So what is the correct answer? The correct
+  answer is gp3 allows you to scale iops and throughput independently of your
+  volume size. So I told you Gp2. Gp2, where is it? Gp2 here you can go from go up
+  till 16. Okay, I ups. Okay, for gp3, you can go up till 64k Iops. Is this clear?
+  Any doubt. The IOPS can increase automatically. And I also mentioned in GP2, you
+  can go up till I think 128 Mbps. Each of your. ADI, be at maximum of 128 Mbps,
+  but when you go to gp3, you can have up till 256 Mbps. Understood. Any doubts
+  any questions? Okay. Yes, Julian.
+
+[10:02]
+  Zonal Service, Perfect, very important point that we need to know about EPS is
+  what it is always associated with your availability zone. You fix your EBS to an
+  availability zone. If I want to copy, what should I do? I take a snapshot and
+  restore it in a different AZ. Is this clear? Any doubts. Any questions? So that
+  means attaching or see. Or automatic that to automatically. Replicate. No
+  chance. There is nothing called as automatic replication for EBS. It is always
+  you have to tell where you want to replicate in which availability zone. You
+  want to replicate, how will AWS know which availability zone. You want to make a
+  copy of the same EBS. Is this clear? So what is the correct answer? The correct
+  answer is gp3 allows you to scale iops and throughput independently of your
+  volume size. So I told you Gp2. Gp2, where is it? Gp2 here you can go from go up
+  till 16. Okay, I ups. Okay, for gp3, you can go up till 64k Iops. Is this clear?
+  Any doubt. The IOPS can increase automatically. And I also mentioned in GP2, you
+  can go up till I think 128 Mbps. Each of your. ADI, be at maximum of 128 Mbps,
+  but when you go to gp3, you can have up till 256 Mbps. Understood. Any doubts
+  any questions? Okay. Yes, Julian.
+
+[10:03]
+  Gp2 is cheaper, obviously. So, it doesn't depend on the capacity, wise, both,
+  when you say the same capacity for GP2 and gp3, the price caused will be the
+  same. So, if you have a lower capacity, the recommendation from the support team
+  will be that you have to choose GP2. Okay, why would you want to go for an
+  higher version? Because here in IRE version the number of inputs, the IOPS and
+  the storage will always be more so you can expand at any point of time. So if
+  they are giving you expansion probability, that means in terms of cost,
+  obviously gp3 will be more than gp2. If they are giving you a provision to
+  expand or scale in terms of iops or throughput, that means they are also
+  charging more for it. So always go for the Cheaper one. If that is the case you
+  want. Is it clear? Look at the number of iops.
+
+[10:03]
+  Gp2 is cheaper, obviously. So, it doesn't depend on the capacity, wise, both,
+  when you say the same capacity for GP2 and gp3, the price caused will be the
+  same. So, if you have a lower capacity, the recommendation from the support team
+  will be that you have to choose GP2. Okay, why would you want to go for an
+  higher version? Because here in IRE version the number of inputs, the IOPS and
+  the storage will always be more so you can expand at any point of time. So if
+  they are giving you expansion probability, that means in terms of cost,
+  obviously gp3 will be more than gp2. If they are giving you a provision to
+  expand or scale in terms of iops or throughput, that means they are also
+  charging more for it. So always go for the Cheaper one. If that is the case you
+  want. Is it clear? Look at the number of iops.
+
+[10:04]
+  Yes, my name. C and D. C will give you maximum of 64k iops. They will give you
+  maximum of 256k Iops. Okay.
+
+[10:04]
+  Yes, my name. C and D. C will give you maximum of 64k iops. They will give you
+  maximum of 256k Iops. Okay.
+
+[10:11]
+  256 K.
+  It's a nice way to ask. I have a doubt and you make me only answer the question.
+  Nice. So what is it? You need a EBS volume that guarantees sustained.
+  Performance up to 256k Iops for critical High performance database application,
+  see Whenever there is a database application. Never go. For instance store, is
+  this clear? Why? This Is a Metal. If there is a hardware issue of your instance,
+  the instant store will be terminated. So what I'm doing, If it is a database,
+  the best option is go to your EBS volume. Which volume type should you choose?
+  Clearly 256, your gp3 will not give you 256 HDD st1, maximum 500? Okay, my I
+  want 256 K. This will give you 64 In the correct answer is c. Is this clear? Any
+  doubt.
+  Yes. Yes. Yeah. But
+
+[10:11]
+  256 K.
+  It's a nice way to ask. I have a doubt and you make me only answer the question.
+  Nice. So what is it? You need a EBS volume that guarantees sustained.
+  Performance up to 256k Iops for critical High performance database application,
+  see Whenever there is a database application. Never go. For instance store, is
+  this clear? Why? This Is a Metal. If there is a hardware issue of your instance,
+  the instant store will be terminated. So what I'm doing, If it is a database,
+  the best option is go to your EBS volume. Which volume type should you choose?
+  Clearly 256, your gp3 will not give you 256 HDD st1, maximum 500? Okay, my I
+  want 256 K. This will give you 64 In the correct answer is c. Is this clear? Any
+  doubt.
+  Yes. Yes. Yeah. But
+  See. This is this is for your solutions. Architect, most of the time in the
+  Solutions. Architect when it comes to EBS volume types. Because EVs volume types
+  is very important. It's a storage space. And the same thing also works with your
+  S3 as well. When it comes to S3, we have multiple storage classes. So you need
+  to know the storage classes different classes and in which purpose you would use
+  each class. Okay, so here you need to understand about the iops and throughput.
+  Clear? And under your EC2, also you have purchased options, right? In purchase
+  options, you don't have a specific value but there are conditions. Like reserved
+  conditions spot condition non-demand capacity reservation. So depending or
+  savings plan depending on the condition, you would choose a particular option.
+  The condition for EBS volume types is this iops and throughput. This is the only
+  condition based on which they have segregated into three types. Is this clear?
+  No. Read the question again. There is one statement called as by default.
+  Yesterday, I told you one important thing. What is it? When you are deleting
+  EC2, then it gives you two options. And one is by default selected. And another
+  one is you have to change it. The new option it will convert into snapshot,
+  okay? Anything, it will go to Glacier for archive. Okay, now, let's see. By
+  default? What happens to your EBS root volume of EC2 instance? When an instant
+  is terminated, See, there is a term that they have asked at the beginning by
+  default always go through this term. Most of the time when we just look at EC2
+  and EBS, we are so sure they're telling if we delete C2, what will happen? I
+  will say option. B, it is kept available in the detached state, but no, Why
+  while explaining this yesterday, I told you easy to get two options. What is it?
+  Easy to get two options when it is deleting first. Option is a default option.
+  The default option says, Delete EBS along with EC2. So when we delete EC2, or
+  when I terminate EC2 you get two options, delete EBS, this is a default option.
+  Custom option is detach, EBS. This is a custom option. And generally, we choose
+  this custom option to keep our EBS, active and separated from your EC2. But what
+  is the default one? The default one is deleted BS. Is this clear? It is
+  automatically deleted. The default behavior upon your instance. Termination is
+  Delete EPS, or they use this term. There is another API request term. It is
+  See. This is this is for your solutions. Architect, most of the time in the
+  Solutions. Architect when it comes to EBS volume types. Because EVs volume types
+  is very important. It's a storage space. And the same thing also works with your
+  S3 as well. When it comes to S3, we have multiple storage classes. So you need
+  to know the storage classes different classes and in which purpose you would use
+  each class. Okay, so here you need to understand about the iops and throughput.
+  Clear? And under your EC2, also you have purchased options, right? In purchase
+  options, you don't have a specific value but there are conditions. Like reserved
+  conditions spot condition non-demand capacity reservation. So depending or
+  savings plan depending on the condition, you would choose a particular option.
+  The condition for EBS volume types is this iops and throughput. This is the only
+  condition based on which they have segregated into three types. Is this clear?
+  No. Read the question again. There is one statement called as by default.
+  Yesterday, I told you one important thing. What is it? When you are deleting
+  EC2, then it gives you two options. And one is by default selected. And another
+  one is you have to change it. The new option it will convert into snapshot,
+  okay? Anything, it will go to Glacier for archive. Okay, now, let's see. By
+  default? What happens to your EBS root volume of EC2 instance? When an instant
+  is terminated, See, there is a term that they have asked at the beginning by
+  default always go through this term. Most of the time when we just look at EC2
+  and EBS, we are so sure they're telling if we delete C2, what will happen? I
+  will say option. B, it is kept available in the detached state, but no, Why
+  while explaining this yesterday, I told you easy to get two options. What is it?
+  Easy to get two options when it is deleting first. Option is a default option.
+  The default option says, Delete EBS along with EC2. So when we delete EC2, or
+  when I terminate EC2 you get two options, delete EBS, this is a default option.
+  Custom option is detach, EBS. This is a custom option. And generally, we choose
+  this custom option to keep our EBS, active and separated from your EC2. But what
+  is the default one? The default one is deleted BS. Is this clear? It is
+  automatically deleted. The default behavior upon your instance. Termination is
+  Delete EPS, or they use this term. There is another API request term. It is
+
+[10:21]
+  --- logged in ---
+
+[10:22]
+  So, do you see here? Where is it? There is a provision. Type only in provision
+  io1 and io2 you can do multi attach. Okay. In instant store. No, multia attach.
+  Nothing. Okay, and when you start and stop your instance, Suman mentioned here
+  in the chat. EBS will not be affected ABS is a individual independent external
+  storage service. Is this clear? It's an independent external storage service
+  which has no effect on your instant state. You start you stop. You hibernate you
+  do whatever you want with your EC2. It is least bothered. Understood.
+  Any other point? Yes.
+  Very good. Yeah, very good encryption. You can also do it on instant store
+  automatically. It will be enabled for instance tour, but for your EBS, snapshot
+  is possible. I can take backup. Backup is possible. Very, very good. Backup is
+  possible. Can I do backup on instant store? Don't say no, you can do backup, but
+  what is it but what is it? See here, you
+  The backup is called a snapshot in EBS, you call it a snapshot in ABS in instant
+  store. What do you do? You take a backup when you're easy to is still active,
+  you take the backup when you're easy to still running and you store it as a file
+  in your S3. Very, very important point. What would they say? They say that if
+  you are using instant store, For your storage requirement, whenever you want
+  high performance, most of the time, people use instant Store for high
+  performance. Okay. During the time, what they do is as a backup, they frequently
+  do this automatic backup from instant store to S3. They just create a file there
+  and they completely keep copying the contents from instant store to your file in
+  S3 on like, let's say, every every minute or every second Is this clear? Why? If
+  your instance don't stops at least you have a backup. Understood. Backup is also
+  possible encryption. It depends whether you want to encrypt your EBS. It is up
+  to you whether you want but instant stories automatically encrypted, it is an
+  already imbibed within your EC2 so it is automatically encrypted. Understood.
+  Very, very good. So almost all of, you know, all the points about instance store
+  and EBS, whatever we did yesterday. Correct. Now I have next few questions about
+  your EBS. Because we have spoken about different types of EBS. Correct. So now
+  we need to know what are each use cases. So first, before you answer this, you
+  should know what is throughput. You should know what is iops, only? Then you'll
+  be able to answer. Difference between throughput reference between Iops. Those
+  who give me an answer first, I want you to explain the difference between
+  throughput and iops.
+  Which one we need?
+  Through. Iops. Okay, can you explain what is Iops? What is it? Input output per
+  second. What does it mean input output per second?
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million request at a time? See all are 1 million requests
+  are increasing. So many requests are coming. This is when we say extremely high
+  iops, What is the question? The question is saying that. They are worried about
+  throughput. Then iops, they are released bothered about iops. They are not
+  telling how many input output requests is processed what is throughput?
+  Amount. Logs. No. What what do you mean by?
+  Volume. Exactly. Now, you see, see there's a huge difference between throughput
+  and iops. I want all of you to listen to this. What is it? There is an EBS
+  block. And I am getting one request. I'm not getting a request. I'm trying to
+  upload. EBs, is what it's a storage space. And I am sending one request where I
+  want to store 100 TB of data. Only one single request with 100 TB of data. Okay,
+  and next, I will show you one more example. Take another example. okay, there is
+  another example where you have EBS and this ABS is taking some One thousand
+  requests thousand request with each request being one KB in size. This is iops
+  see input output operations per second. I have thousand input requests but look
+  at the request. Size x, extremely small request, size 1, kb request size and
+  then I have this beautiful one request which is consuming, 100 tb of data. One
+  single request. So what is this? This is throughput. How much bandwidth do you
+  have? How much Data. Can I send?
+  Perfect. Very good. Yes, simple. So what are you going to look whenever they ask
+  about more data and less input? Because do you guys know what is the input
+  output for ST1 and SC1? What is the IOP range? Sc 1, you'll get around 250 iups
+  in st1. You will get around 500 iops in rest of the one Io2 and for Io2, you can
+  go up till 256,000 Iops. Thousand iops. 256k iops. Here, I am just talking about
+  500 there, I'm talking about 256,000 iobs and in gp3, you can go up till 16000
+  iops. So they're not talking about iops. They are talking about throughput. So
+  here option A and option B is clearly gone. I have option C and option D.
+  Yes, yes. Payload size. Okay. And here your EBS should have that capacity. So if
+  you are getting a large amount of data, for example, 10tb of data, I'm getting
+  let's say your EBS should have a proper port and it, your EBS should have a
+  proper capability of accepting such a huge payload. And who can accept this?
+  Only your HDD type of instance, type, sorry. EBS volume can only accept such
+  huge payloads or huge input data. This is what we call it as throughput. Is this
+  clear and under that, do you see a C1 and SC 2 and SC 1? We know it can go, I
+  think up till 100 TB And this can go up till 256 TB. The TB is more in ST1. That
+  is why the correct answer is option C? Is this clear? They will ask you
+  questions like this in your exam. And especially see such kind of question. You
+  will not see in your cloud practitioner, Let me be frank, okay. In your cloud
+  practitioner, They are least bothered about these types. They will ask you
+  questions like instant store versus EBS volume. The question will be there based
+  on this, very generic base, basic questions, foundational level but In depth
+  about your EBS, like variants of your instance type. This is a favorite question
+  for your AWS solutions. Architect associate. Is this clear? Any doubt. No doubt.
+  I hope I have already mentioned this your you have your cloud practitioner which
+  is a foundational level based on this foundational level you have your solutions
+  architect associate and that based on your Solutions architect associate you
+  have your solutions architect professional. Is this clear? So all of them
+  somehow need your basic cloud practitioner which we are covering and along with
+  that. I am also teaching you Solutions. Architect is this clear but solutions
+  Architect professional is not included in your course so you can take it right
+  after your DCI. Understood. If you're thorough with solutions, architect
+  associate and cloud practitioner, this will be somewhat easy. You again need to
+  spend time, but yeah, you'll, it'll be somebody easy for you to take it. Any
+  doubts. No, doubts shall be proceed.
+  Yes, archived data.
+  Archived data here, throughput. We when do we use this? Throughput optimized. We
+  generally use this throughput optimized whenever we have. What warehouses big
+  data? Do you see here data? Warehousing big data. Log processing, continuously
+  or getting a huge amount of log. At the end of the day, you're consuming some
+  5tb of log from a company. Okay. 5 kb. Huge size of data. The throughput is
+  more. Okay, during that time, you would go for throughput optimized. Understood.
+  Okay, next question. They're asking you the difference between Gp2 and Gp3. So,
+  all of you are telling option B. So what is it, what is the key advantage of
+  choosing gp3? EBS volume over GP to EBS volume, okay, gp3 Sorry, Gp2 versus gp3.
+  One thing I have told whenever you see these numbers, you should be able to
+  understand the version. So, GP2 is obviously earlier version. Okay. Now we have
+  what jp3? Which is the more advanced version so which means gp3 should have more
+  capability. General knowledge. Okay, so any versions you see, That is how most
+  of the time they give a higher versions for the new release. So whenever you see
+  such versions in any questions, okay, the recent version means more feature.
+  Older version means less feature. Okay, what is it? They are telling a gp3 is a
+  HDD based volume type. No, can anyone tell me under which volume type does these
+  two come? Which volume type. Very good, general purpose. This is general
+  purpose. Volume type. So option is clearly wrong because they are telling it's
+  an HDD based No. Okay, gp3 can be attached to multiple instances simultaneously,
+  while GP2 cannot. Is this correct? Which instance? Type sorry. Which storage EBS
+  block type. Can you do your multi? Attach?
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? it is a regional
+  journal or global service, what kind of a service is EBS,
+  Zonal Service, Perfect, very important point that we need to know about EPS is
+  what it is always associated with your availability zone. You fix your EBS to an
+  availability zone. If I want to copy, what should I do? I take a snapshot and
+  restore it in a different AZ. Is this clear? Any doubts. Any questions? So that
+  means attaching or see. Or automatic that to automatically. Replicate. No
+  chance. There is nothing called as automatic replication for EBS. It is always
+  you have to tell where you want to replicate in which availability zone. You
+  want to replicate, how will AWS know which availability zone. You want to make a
+  copy of the same EBS. Is this clear? So what is the correct answer? The correct
+  answer is gp3 allows you to scale iops and throughput independently of your
+  volume size. So I told you Gp2. Gp2, where is it? Gp2 here you can go from go up
+  till 16. Okay, I ups. Okay, for gp3, you can go up till 64k Iops. Is this clear?
+  Any doubt. The IOPS can increase automatically. And I also mentioned in GP2, you
+  can go up till I think 128 Mbps. Each of your. ADI, be at maximum of 128 Mbps,
+  but when you go to gp3, you can have up till 256 Mbps. Understood. Any doubts
+  any questions? Okay. Yes, Julian.
+  Gp2 is cheaper, obviously. So, it doesn't depend on the capacity, wise, both,
+  when you say the same capacity for GP2 and gp3, the price caused will be the
+  same. So, if you have a lower capacity, the recommendation from the support team
+  will be that you have to choose GP2. Okay, why would you want to go for an
+  higher version? Because here in IRE version the number of inputs, the IOPS and
+  the storage will always be more so you can expand at any point of time. So if
+  they are giving you expansion probability, that means in terms of cost,
+  obviously gp3 will be more than gp2. If they are giving you a provision to
+  expand or scale in terms of iops or throughput, that means they are also
+  charging more for it. So always go for the Cheaper one. If that is the case you
+  want. Is it clear? Look at the number of iops.
+  Yes, my name. C and D. C will give you maximum of 64k iops. They will give you
+  maximum of 256k Iops. Okay.
+  256 K.
+  It's a nice way to ask. I have a doubt and you make me only answer the question.
+  Nice. So what is it? You need a EBS volume that guarantees sustained.
+  Performance up to 256k Iops for critical High performance database application,
+  see Whenever there is a database application. Never go. For instance store, is
+  this clear? Why? This Is a Metal. If there is a hardware issue of your instance,
+  the instant store will be terminated. So what I'm doing, If it is a database,
+  the best option is go to your EBS volume. Which volume type should you choose?
+  Clearly 256, your gp3 will not give you 256 HDD st1, maximum 500? Okay, my I
+  want 256 K. This will give you 64 In the correct answer is c. Is this clear? Any
+  doubt.
+  Yes. Yes. Yeah. But
+  See. This is this is for your solutions. Architect, most of the time in the
+  Solutions. Architect when it comes to EBS volume types. Because EVs volume types
+  is very important. It's a storage space. And the same thing also works with your
+  S3 as well. When it comes to S3, we have multiple storage classes. So you need
+  to know the storage classes different classes and in which purpose you would use
+  each class. Okay, so here you need to understand about the iops and throughput.
+  Clear? And under your EC2, also you have purchased options, right? In purchase
+  options, you don't have a specific value but there are conditions. Like reserved
+  conditions spot condition non-demand capacity reservation. So depending or
+  savings plan depending on the condition, you would choose a particular option.
+  The condition for EBS volume types is this iops and throughput. This is the only
+  condition based on which they have segregated into three types. Is this clear?
+  No. Read the question again. There is one statement called as by default.
+  Yesterday, I told you one important thing. What is it? When you are deleting
+  EC2, then it gives you two options. And one is by default selected. And another
+  one is you have to change it. The new option it will convert into snapshot,
+  okay? Anything, it will go to Glacier for archive. Okay, now, let's see. By
+  default? What happens to your EBS root volume of EC2 instance? When an instant
+  is terminated, See, there is a term that they have asked at the beginning by
+  default always go through this term. Most of the time when we just look at EC2
+  and EBS, we are so sure they're telling if we delete C2, what will happen? I
+  will say option. B, it is kept available in the detached state, but no, Why
+  while explaining this yesterday, I told you easy to get two options. What is it?
+  Easy to get two options when it is deleting first. Option is a default option.
+  The default option says, Delete EBS along with EC2. So when we delete EC2, or
+  when I terminate EC2 you get two options, delete EBS, this is a default option.
+  Custom option is detach, EBS. This is a custom option. And generally, we choose
+  this custom option to keep our EBS, active and separated from your EC2. But what
+  is the default one? The default one is deleted BS. Is this clear? It is
+  automatically deleted. The default behavior upon your instance. Termination is
+  Delete EPS, or they use this term. There is another API request term. It is
+
+[11:32]
+  --- logged in ---
+  So, do you see here? Where is it? There is a provision. Type only in provision
+  io1 and io2 you can do multi attach. Okay. In instant store. No, multia attach.
+  Nothing. Okay, and when you start and stop your instance, Suman mentioned here
+  in the chat. EBS will not be affected ABS is a individual independent external
+  storage service. Is this clear? It's an independent external storage service
+  which has no effect on your instant state. You start you stop. You hibernate you
+  do whatever you want with your EC2. It is least bothered. Understood.
+  Any other point? Yes.
+  Very good. Yeah, very good encryption. You can also do it on instant store
+  automatically. It will be enabled for instance tour, but for your EBS, snapshot
+  is possible. I can take backup. Backup is possible. Very, very good. Backup is
+  possible. Can I do backup on instant store? Don't say no, you can do backup, but
+  what is it but what is it? See here, you
+  The backup is called a snapshot in EBS, you call it a snapshot in ABS in instant
+  store. What do you do? You take a backup when you're easy to is still active,
+  you take the backup when you're easy to still running and you store it as a file
+  in your S3. Very, very important point. What would they say? They say that if
+  you are using instant store, For your storage requirement, whenever you want
+  high performance, most of the time, people use instant Store for high
+  performance. Okay. During the time, what they do is as a backup, they frequently
+  do this automatic backup from instant store to S3. They just create a file there
+  and they completely keep copying the contents from instant store to your file in
+  S3 on like, let's say, every every minute or every second Is this clear? Why? If
+  your instance don't stops at least you have a backup. Understood. Backup is also
+  possible encryption. It depends whether you want to encrypt your EBS. It is up
+  to you whether you want but instant stories automatically encrypted, it is an
+  already imbibed within your EC2 so it is automatically encrypted. Understood.
+  Very, very good. So almost all of, you know, all the points about instance store
+  and EBS, whatever we did yesterday. Correct. Now I have next few questions about
+  your EBS. Because we have spoken about different types of EBS. Correct. So now
+  we need to know what are each use cases. So first, before you answer this, you
+  should know what is throughput. You should know what is iops, only? Then you'll
+  be able to answer. Difference between throughput reference between Iops. Those
+  who give me an answer first, I want you to explain the difference between
+  throughput and iops.
+  Which one we need?
+  Through. Iops. Okay, can you explain what is Iops? What is it? Input output per
+  second. What does it mean input output per second?
+  Request, How many requests can I send? Very, very good. So if I have a service
+  for example, like EBS, See how many requests can this accept? This is my EBS.
+  Can this accept one million request at a time? See all are 1 million requests
+  are increasing. So many requests are coming. This is when we say extremely high
+  iops, What is the question? The question is saying that. They are worried about
+  throughput. Then iops, they are released bothered about iops. They are not
+  telling how many input output requests is processed what is throughput?
+  Amount. Logs. No. What what do you mean by?
+  Volume. Exactly. Now, you see, see there's a huge difference between throughput
+  and iops. I want all of you to listen to this. What is it? There is an EBS
+  block. And I am getting one request. I'm not getting a request. I'm trying to
+  upload. EBs, is what it's a storage space. And I am sending one request where I
+  want to store 100 TB of data. Only one single request with 100 TB of data. Okay,
+  and next, I will show you one more example. Take another example. okay, there is
+  another example where you have EBS and this ABS is taking some One thousand
+  requests thousand request with each request being one KB in size. This is iops
+  see input output operations per second. I have thousand input requests but look
+  at the request. Size x, extremely small request, size 1, kb request size and
+  then I have this beautiful one request which is consuming, 100 tb of data. One
+  single request. So what is this? This is throughput. How much bandwidth do you
+  have? How much Data. Can I send?
+  Perfect. Very good. Yes, simple. So what are you going to look whenever they ask
+  about more data and less input? Because do you guys know what is the input
+  output for ST1 and SC1? What is the IOP range? Sc 1, you'll get around 250 iups
+  in st1. You will get around 500 iops in rest of the one Io2 and for Io2, you can
+  go up till 256,000 Iops. Thousand iops. 256k iops. Here, I am just talking about
+  500 there, I'm talking about 256,000 iobs and in gp3, you can go up till 16000
+  iops. So they're not talking about iops. They are talking about throughput. So
+  here option A and option B is clearly gone. I have option C and option D.
+  Yes, yes. Payload size. Okay. And here your EBS should have that capacity. So if
+  you are getting a large amount of data, for example, 10tb of data, I'm getting
+  let's say your EBS should have a proper port and it, your EBS should have a
+  proper capability of accepting such a huge payload. And who can accept this?
+  Only your HDD type of instance, type, sorry. EBS volume can only accept such
+  huge payloads or huge input data. This is what we call it as throughput. Is this
+  clear and under that, do you see a C1 and SC 2 and SC 1? We know it can go, I
+  think up till 100 TB And this can go up till 256 TB. The TB is more in ST1. That
+  is why the correct answer is option C? Is this clear? They will ask you
+  questions like this in your exam. And especially see such kind of question. You
+  will not see in your cloud practitioner, Let me be frank, okay. In your cloud
+  practitioner, They are least bothered about these types. They will ask you
+  questions like instant store versus EBS volume. The question will be there based
+  on this, very generic base, basic questions, foundational level but In depth
+  about your EBS, like variants of your instance type. This is a favorite question
+  for your AWS solutions. Architect associate. Is this clear? Any doubt. No doubt.
+  I hope I have already mentioned this your you have your cloud practitioner which
+  is a foundational level based on this foundational level you have your solutions
+  architect associate and that based on your Solutions architect associate you
+  have your solutions architect professional. Is this clear? So all of them
+  somehow need your basic cloud practitioner which we are covering and along with
+  that. I am also teaching you Solutions. Architect is this clear but solutions
+  Architect professional is not included in your course so you can take it right
+  after your DCI. Understood. If you're thorough with solutions, architect
+  associate and cloud practitioner, this will be somewhat easy. You again need to
+  spend time, but yeah, you'll, it'll be somebody easy for you to take it. Any
+  doubts. No, doubts shall be proceed.
+  Yes, archived data.
+  Archived data here, throughput. We when do we use this? Throughput optimized. We
+  generally use this throughput optimized whenever we have. What warehouses big
+  data? Do you see here data? Warehousing big data. Log processing, continuously
+  or getting a huge amount of log. At the end of the day, you're consuming some
+  5tb of log from a company. Okay. 5 kb. Huge size of data. The throughput is
+  more. Okay, during that time, you would go for throughput optimized. Understood.
+  Okay, next question. They're asking you the difference between Gp2 and Gp3. So,
+  all of you are telling option B. So what is it, what is the key advantage of
+  choosing gp3? EBS volume over GP to EBS volume, okay, gp3 Sorry, Gp2 versus gp3.
+  One thing I have told whenever you see these numbers, you should be able to
+  understand the version. So, GP2 is obviously earlier version. Okay. Now we have
+  what jp3? Which is the more advanced version so which means gp3 should have more
+  capability. General knowledge. Okay, so any versions you see, That is how most
+  of the time they give a higher versions for the new release. So whenever you see
+  such versions in any questions, okay, the recent version means more feature.
+  Older version means less feature. Okay, what is it? They are telling a gp3 is a
+  HDD based volume type. No, can anyone tell me under which volume type does these
+  two come? Which volume type. Very good, general purpose. This is general
+  purpose. Volume type. So option is clearly wrong because they are telling it's
+  an HDD based No. Okay, gp3 can be attached to multiple instances simultaneously,
+  while GP2 cannot. Is this correct? Which instance? Type sorry. Which storage EBS
+  block type. Can you do your multi? Attach?
+  Provisioned. So this is Not correct. Again. Next one. Gp3 volumes automatically,
+  replicate across multiple availability zone. Is it correct? Can I? Keep EBS in
+  multiple availability zones. What kind of a service is EBS? it is a regional
+  journal or global service, what kind of a service is EBS,
+  Zonal Service, Perfect, very important point that we need to know about EPS is
+  what it is always associated with your availability zone. You fix your EBS to an
+  availability zone. If I want to copy, what should I do? I take a snapshot and
+  restore it in a different AZ. Is this clear? Any doubts. Any questions? So that
+  means attaching or see. Or automatic that to automatically. Replicate. No
+  chance. There is nothing called as automatic replication for EBS. It is always
+  you have to tell where you want to replicate in which availability zone. You
+  want to replicate, how will AWS know which availability zone. You want to make a
+  copy of the same EBS. Is this clear? So what is the correct answer? The correct
+  answer is gp3 allows you to scale iops and throughput independently of your
+  volume size. So I told you Gp2. Gp2, where is it? Gp2 here you can go from go up
+  till 16. Okay, I ups. Okay, for gp3, you can go up till 64k Iops. Is this clear?
+  Any doubt. The IOPS can increase automatically. And I also mentioned in GP2, you
+  can go up till I think 128 Mbps. Each of your. ADI, be at maximum of 128 Mbps,
+  but when you go to gp3, you can have up till 256 Mbps. Understood. Any doubts
+  any questions? Okay. Yes, Julian.
+  Gp2 is cheaper, obviously. So, it doesn't depend on the capacity, wise, both,
+  when you say the same capacity for GP2 and gp3, the price caused will be the
+  same. So, if you have a lower capacity, the recommendation from the support team
+  will be that you have to choose GP2. Okay, why would you want to go for an
+  higher version? Because here in IRE version the number of inputs, the IOPS and
+  the storage will always be more so you can expand at any point of time. So if
+  they are giving you expansion probability, that means in terms of cost,
+  obviously gp3 will be more than gp2. If they are giving you a provision to
+  expand or scale in terms of iops or throughput, that means they are also
+  charging more for it. So always go for the Cheaper one. If that is the case you
+  want. Is it clear? Look at the number of iops.
+  Yes, my name. C and D. C will give you maximum of 64k iops. They will give you
+  maximum of 256k Iops. Okay.
+  256 K.
+  It's a nice way to ask. I have a doubt and you make me only answer the question.
+  Nice. So what is it? You need a EBS volume that guarantees sustained.
+  Performance up to 256k Iops for critical High performance database application,
+  see Whenever there is a database application. Never go. For instance store, is
+  this clear? Why? This Is a Metal. If there is a hardware issue of your instance,
+  the instant store will be terminated. So what I'm doing, If it is a database,
+  the best option is go to your EBS volume. Which volume type should you choose?
+  Clearly 256, your gp3 will not give you 256 HDD st1, maximum 500? Okay, my I
+  want 256 K. This will give you 64 In the correct answer is c. Is this clear? Any
+  doubt.
+  Yes. Yes. Yeah. But
+  See. This is this is for your solutions. Architect, most of the time in the
+  Solutions. Architect when it comes to EBS volume types. Because EVs volume types
+  is very important. It's a storage space. And the same thing also works with your
+  S3 as well. When it comes to S3, we have multiple storage classes. So you need
+  to know the storage classes different classes and in which purpose you would use
+  each class. Okay, so here you need to understand about the iops and throughput.
+  Clear? And under your EC2, also you have purchased options, right? In purchase
+  options, you don't have a specific value but there are conditions. Like reserved
+  conditions spot condition non-demand capacity reservation. So depending or
+  savings plan depending on the condition, you would choose a particular option.
+  The condition for EBS volume types is this iops and throughput. This is the only
+  condition based on which they have segregated into three types. Is this clear?
+  No. Read the question again. There is one statement called as by default.
+  Yesterday, I told you one important thing. What is it? When you are deleting
+  EC2, then it gives you two options. And one is by default selected. And another
+  one is you have to change it. The new option it will convert into snapshot,
+  okay? Anything, it will go to Glacier for archive. Okay, now, let's see. By
+  default? What happens to your EBS root volume of EC2 instance? When an instant
+  is terminated, See, there is a term that they have asked at the beginning by
+  default always go through this term. Most of the time when we just look at EC2
+  and EBS, we are so sure they're telling if we delete C2, what will happen? I
+  will say option. B, it is kept available in the detached state, but no, Why
+  while explaining this yesterday, I told you easy to get two options. What is it?
+  Easy to get two options when it is deleting first. Option is a default option.
+  The default option says, Delete EBS along with EC2. So when we delete EC2, or
+  when I terminate EC2 you get two options, delete EBS, this is a default option.
+  Custom option is detach, EBS. This is a custom option. And generally, we choose
+  this custom option to keep our EBS, active and separated from your EC2. But what
+  is the default one? The default one is deleted BS. Is this clear? It is
+  automatically deleted. The default behavior upon your instance. Termination is
+  Delete EPS, or they use this term. There is another API request term. It is

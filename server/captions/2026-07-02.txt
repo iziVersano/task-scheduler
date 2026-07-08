@@ -54,3 +54,1782 @@
   guys see your AWS course, there is one week, sorry, not one week, one month,
   Which is nothing but four weeks, dedicated for project. How are you creating
   this project, you're going to set up some services on the cloud using Terraform?
+  And remember, once you set up this project, this terraform code can also be
+  published in your GitHub. You can also publish this as a project in your GitHub.
+  Okay. Yes. Mohammad
+
+[09:55]
+  Will with us in the project. Period, you or
+  I will be assigned to a new class, right after AWS two and the project phase for
+  four weeks will be taken care by Rohan. Okay, in case you need anything, I'm
+  there available on slack so you can send me messages on slack, I'll be able to
+  help you out, clear? Yes. Suman
+  So, the entire module is for one month.
+  You mean the project phase?
+  No, the terraform.
+
+[09:56]
+  Ah, Terraform is for 4 weeks, exactly. It's for one month, but in between, if
+  you go and check your July month, you have summer vacation, I think it starts
+  from 25th to July, right? It starts from 25th July till I think 11th of August.
+  I'm not so sure. I think it's still 11th of August, you have vacation. So after
+  that again, for one more week we will continue. Is that clear? So you get three
+  weeks in July and one week in August to complete your terraform. So my plan is
+  to finish the entire terraform in three weeks because it needs only 15 to 16
+  classes to complete the concepts and the whole one week in August will only be
+  for your exam preparations. We will do as much as hands-on. Possible, and we
+  will do a lots of mcqs because that will prepare you for your exam. Is that
+  clear?
+  You see? Yes.
+  Just one more question. Sure. So basically when you say exam, do you I mean
+  recommend should we give it like after the session or should we do it together
+  with the AWS and the end?
+
+[09:57]
+  No, I would recommend to give this right after your AWS one. Why because after
+  AWS too, let me tell you this AWS one, You have terraform. and after aws2, You
+  have two things. One is cloud practitioner which is optional and solutions.
+  Architect associate. Remember in these two certificate you are cloud.
+  Practitioner is an optional Exam If you want, you can take it. But what is the
+  point here, right? After AWS too, you will be preparing yourself for solutions.
+  Architect Meanwhile, you will also go into your project face right away. So you
+  will have no time to take a new exam there. Anyways, we will be preparing
+  ourself for one whole week for the exam purpose itself. So I have asked Matias
+  to give you guys voucher just before you guys go on your summer vacations, so
+  you can book the slot anytime that is feasible for you. okay, so that you can
+  take up the terraform exam in the month of August, My recommendation is to take
+  the exam, right? After you're done with this module. Because you are, it is
+  fresh. The concept is still in your head. It will be easy for you guys to take
+  it. If you go to AWS to most of the concept pertained into our terraform will be
+  gone and it will be a bit of chaos for you guys to revisit the same topic again
+  and again. Is that clear? Any questions? What does Cka?
+
+[09:58]
+  So it is about the Kubernetes thing. I mean, because you see, this is also the
+  certification, which I was planning and I think it's a lot for not think about
+  I,
+  that's, Kubernet is present come under AWS go over. That is comes and this is
+  admin. So whoever is handling, this has had been module, they will be
+  responsible for
+
+[09:59]
+  Okay, perfect.
+  your coconut certificate. I'm only responded. Three of them. Okay? So pertaining
+  to anything relay apart from these three, like Linux certification or your EK
+  certification, or your coupon. Notice certification or DOCKER certification.
+  Whatever certification that DCI has promised. You can talk about that in your
+  SIS admin course, whoever is responsible, they will be able to give you more
+  information on that. Clear. Okay, any other questions? Yes, easy.
+  so, just about the times for after the terraform
+  Mm-hmm.
+  Yes, exactly.
+  We started the AWS too, right? Right after the terraform. And this is on the
+  month of the rest of the months of August.
+  Yes, I think from third week of August, we will be starting with Aws2 and that
+  is again for 10 weeks.
+  Another 10 weeks, okay?
+
+[10:00]
+  So what are you? It is again for 10 weeks. If you just give you a brief
+  understanding about AWS too, it is also for 10 weeks. What are we going to do
+  here? This entire 10 weeks. We will learn all the AT once services. I will not
+  be teaching anything related to your basics, like your vpcs3, or your subnets,
+  nothing no basics. So, basics are completely not in AWS one. That's the reason
+  why I have kept today and tomorrow, for us to, just go through it. Just brush up
+  those topics because these topics are again, important in your AWS too. And
+  right, after AWS too, you will be taking two exams where? All the services from
+  AWS One and two are important. Clear.
+  And is it? So it's going to be until October or
+  let's, Let me if you guys want, I can also give you the exact timeline. Give me
+  a
+  yes, this
+
+[10:01]
+  second. That would get, right. Let me Share the timeline with you. Give me a
+  second. Can you see this course planning? So, you are classes. Aws. Sorry, 25p.
+  So if you see, currently, we are doing AWS one here. Okay. So I will scroll down
+  and you'll see you have two weeks of holiday and from 11th of August. You see
+  this from 11th of August, is it 11th? No from 10th of August. Till 14th of
+  August will be your last week of terraform and after that from 17th of August I
+  will be starting with AWS too, Module 2. Okay, again it will go for 10 weeks,
+  one. two, three, four, it keeps on going till when is the last Okay, the last is
+  October 23rd. Clear. So you can see this 23rd of October is the last day of your
+  AWS module 2, and right after that, you will go into project phase, which is
+  handled by Rohan. So, I will be with you guys till 20th of October. Here, you
+  can see here. Understood. So it depends those who have already covered. All the
+  four modules will go into project phase and those who are not covered with the
+  sysadmin. Half the class will go into this assignment. You will bye for Kate
+  here after 23rd of October. It depends what modules you are about to pick. Is
+  that clear? Any questions? yes, Roger
+
+[10:06]
+  Will be having the exam before the project or after the project.
+  We will give you the vouchers, it is up to you whether you want to take it.
+  Usually what we do is we ask you guys to take it during the project phase.
+  Sorry. Yeah, we have to give Buddhism Cloud partitioner on Solution architect
+  boot in this previous.
+  Okay, during the project phase we ask, you get to take it because you see here
+  23rd of October. Probably one week before somewhere in the second week of
+  October, you will get your vouchers. Vouchers will be given to you in the second
+  week of October. And you have time like around five weeks to select a particular
+  date for your exam and you can take your exam during the project phase.
+  Understood. Any questions? Feel free to. Yes. It totally. It is totally up to
+  you whether you want to give it or not, but the whole point here is solutions.
+  Architect is a mandatory exam. Okay. so, once again, Solutions, Architect
+  associate is a mandatory exam. Compulsory Exam. But what about cloud
+  practitioner this is optional. It's totally up to you. Remember guys, cloud
+  practitioner is a foundational exam, how does it work? Go in terms of AWS
+  certifications, you have cloud practitioner the first basics of foundation and
+  Surrounding this, you will have your Solutions, Architect Associate. And after
+  this comes as your solutions, architect professional. Okay. Since architect
+  professional. Their basics, which is cloud practitioner. You still need to know
+  the basics of cloud practitioner. Is that clear? Any doubt. Any questions?
+  Content. What is the difference between the normal social architect and
+  professional one?
+  Professional one. You will be learning about the services even in detail. For
+  example, when I talk about instance type, I just mentioned the couple of
+  instance, type, likely to micro the divide. The instance type based on your
+  number of virtual CPUs based on your RAM based on the processing capacity. I
+  said, But how why all those details? Why are there different classifications
+  like Day Two Micro T3 Micro very intricate details about the service? You will
+  be learning that in The professional thing. Remember you can skip the cloud
+  practitioner and directly go to Solutions, architect associate. But in order to
+  take up solutions, architect professional. There is a mandatory need for
+  solutions. Architect associate, if you have passed associate exam, then it
+  highly helps you guys to take up the professional. Okay. But in terms of AWS
+  exam, there is no mandatory thing but in terms of the concept you need to know
+  solutions, architect associate to take up solutions. Architect professional.
+  Understood. Any doubts any questions? Is this clear to everyone? Okay. And
+
+[10:07]
+  As available, I mean, it's availability.
+  Yes. Oh yeah, all the exams in AWS are mostly valid for three years.
+  Okay. So, if you ask me, whether are you supposed to take up cloud practitioner
+  My suggestion is Take it, why not? Anyways, DCA is giving you the voucher. It is
+  a foundational level certification. Remember if you do a cloud practitioner
+  exam, Doesn't mean you will get a job. Okay. But we put this in your resume, for
+  sure. A resume, you will include your cloud practitioner certificate, but this
+  will not gain a chop. This is just like telling that you have basic knowledge
+  about Cloud. It will not give you extra information. It will not tell you in
+  which field of the cloud that you are expert in. For example, there are
+  expertise in your networking. There is expertise in data. There is expertise in
+  architecting, correct cloud. Practitioner, will just give you information about
+  or introduction about various services. It doesn't go into the detail of the
+  service. Clear. Yes. Is if any question.
+
+[10:08]
+  Cost your main cost.
+  I also if you answered it, but I just wanted to ask What is what is it? Because
+  it doesn't mean nothing to me Cloud partitioner. Now, what is it? What is cloud
+  practitioner? I don't understand what it is.
+  Yeah. So so I still didn't find the DCI repo, because in the previous course, we
+  had like the the instructor. He he made a repo and we all cloned it and then
+  whatever, he whatever, he pushed every day, we just pulled it. And we got the
+  Club. That's what I'm explaining right now. Cloud practitioner is a foundational
+  exam where you will learn the basics. For example, they will ask Give me out of
+  the four options, which is like, for example, let me mention the options sqs.
+  Dynamodb. SNS. S3. They'll give options like this and they will ask you to
+  choose. Unlimited storage service. So you will be choosing S3, right? Just the
+  basics. There is nothing like scenario. They will not give you use cases. They
+  will not ask you real time or real world use cases. Okay, here in cloud
+  practitioner, it is mostly like one word answer. For example, yes, or no? okay,
+  for example, they would say is easy to, and IaaS, what would you say? Do you
+  consider easy to as an IaaS true or false?
+
+[10:09]
+  True.
+  Infrastructure infrastructure. As
+  What is a? What does this mean?
+  Software service.
+  A service. Now, no software is a different thing. We also have SaaS.
+  Yeah, service. I mean services.
+
+[10:11]
+  Which time is best for cloud or practitioner exam?
+
+[10:12]
+  Okay, so now if you see, do you think whether it is true or false? The answer is
+  true. So, here when you go to cloud practitioner, the questions are very simple.
+  One line questions, one word answer, Clear. There's nothing elaborated. No use
+  cases. No real-time examples. Understood. So, but if you take cloud practitioner
+  exam, my recommendation is to take cloud practitioner though. It is useless
+  useless as in If you are finding trying to find a job in your AWS field, Then I
+  would say Cloud practitioner is useless, okay? Because it's just trying to say
+  that you know, alphabets in cloud. Just the basics names of the services that
+  will not gain, you any expert knowledge, but when you go to Solutions architect
+  you will be talking about the interaction. How will your easy to connect to S3?
+  S3. Or how is your VPC connecting to S3? There are something called as
+  endpoints. Do you see we both mostly talk about interaction between two
+  services. Because architecting means you need to have multiple components in the
+  service. There needs to be interaction between different services. And that is
+  what we will be learning in solutions. Architect Associate. And once you do the
+  certificate, this will add a lot of weightage to your resume. And my suggestion
+  is take a cloud practitioner as well. Well, it is one extra plus point to your
+  resume. You can just show in your resume that you have two certifications in
+  AWS. Clear. Anyway said DCI is going to give you vouchers though, it's an
+  optional certificate. I would recommend you guys to take it up. Is that clear?
+  Yes, Niyanta. Plus advanced services. So your vouchers for cloud practitioner
+  will not be given to you right after AWS one. Both the vouchers for your cloud
+  practitioner. And for solutions, architect will be given during aws2 module only
+  For the terraform. How many certificates do we have?
+
+[10:13]
+  After AWS one module. Remember at the end of AWS, one module you will only get
+  vouchers for terraform. That our farm associate certification.
+  Only one.
+  Which is only valid for two years. Any questions? No questions. Is everything
+  resolved. Yes, Khadim. Only one. Only one. And remember, guys. Just saying that
+  you have solutions. Architect associate is not sufficient. If you say along with
+  solutions architecture associate, you have there are form it increases more
+  credibility for your resume. This increases your knowledge about AWS or the
+  cloud. There are four plays a vital vital role. It is basically telling you're
+  not using console but you are setting up everything on the cloud with the help
+  of code. So from Monday on words, we will start writing quotes. Understood. So
+  if you guys are already familiar with Kit, is everyone familiar with Github. And
+  that's the reason why I asked you guys to have two different repositories one
+  repository for DCI one repository for your personal. okay, I will share a couple
+  of links on YouTube that will teach you the whole get Or basically version
+  controlling system, okay? So you can go through those videos and you'll be able
+  to set up your account on it and create your repositories and push the code. And
+  remember, when I say that? I, I think I already asked you this at the very
+  beginning of the course. That since you already have a DCI Gmail, create a GIT
+  account using DCI email address and create one GIT account using your personal
+  email address. Why? Because whenever I teach you terraform code, Terraform we
+  will be writing quotes on terraform what you can do, you can keep pushing all
+  those code into your get DCI. You'll also learn how to use GitHub. You'll also
+  learn the different commands and you can store all the code in the GIT DCA.
+  Okay. Anyways, your personal git account is only used for your projects.
+  Generally, we don't write testing quotes or learning materials in your GitHub.
+  Okay, your personal GitHub. Should always look very, very professional. Not to
+  dump any test quotes or learning materials in your github. Okay. Yes. Easy.
+
+[10:15]
+  What?
+  the latest every day is this.
+  mean, the
+  Yeah. Yes.
+
+[10:16]
+  Have you gone and checked the slack channel? Which is pinned. There are so many
+  links that are pinned in your slack channel in your material.
+  Yeah, that's I was looking for. I was looking for a link for a repo, but I
+  couldn't find
+  It's pinned. It is an option called as pinned messages or pins in your slack
+  channel. If you go and click that, you'll be able to see all the links and one
+  of the link is for your GitHub there. You'll see all materials.
+  We, we channel.
+  Your materials and cloud aws-1 materials.
+  Exercises. And yes.
+  Okay. Okay, so here, here you say there's a lot of pins with with the yeah, with
+  a github.
+  Yeah. Okay.
+  Yeah, I see it now. Yeah, get up. Okay, thank you so see something. Let's see
+  this admin. Yeah, that's the only replay.
+
+[10:17]
+  this admin is the organization name and inside this is admin organization, you
+  will see a repo called as AWS restructured I think or New course and said that
+  you will have first module which is AWS one and under that you have all the 10
+  week contents,
+  And this is where we're gonna push the terraform to all. So, or
+  That is the account maintained by me, that is the DCI account, so you will use
+  your own account. You will create your own account using DCA Gmail and then you
+  will put everything that you want in your personal account, not in this one.
+  Okay. Okay.
+  Got it.
+  Any other questions? No questions, shall we proceed with our mcqs? Okay, let me
+  share my screen. Give me a second. See this question, right? So here's your
+  time. Go through the questions properly those who know the answer. Please raise
+  your hand. And I want you to give me justification as well.
+
+[10:24]
+  so, Remember in AWS when you do your certifications in AWS, let's say you have
+  done solutions, architect associate. The validation of the certificate is for
+  three years. Okay? If you take the certification so it is valid up to three
+  years, why? Because every year there are new services that are getting launched.
+  So is the reason there's a validation. But what about terraform Terraform is
+  even bad. The certification is valid only for two years. So if you take the
+  certificate in 2026, it is valid till 2028. Only after that, you need to retake
+  the certification. Why? What is the need? Everything? We will learn when we go
+  to Terraform module on Monday. Clear. Remember, on Monday, when we start the
+  module, I want all of you to have your laptop and you need to have your DS code.
+  Those who don't have vs code installed. I will send a couple of videos with to
+  you on your slack channel. On the installation of your VS code in your system.
+  Is that clear? Okay, why are we doing this terraform again? if you guys see your
+  AWS course, there is one week, sorry, not one week, one month, Which is nothing
+  but four weeks, dedicated for project. How are you creating this project, you're
+  going to set up some services on the cloud using Terraform? And remember, once
+  you set up this project, this terraform code can also be published in your
+  GitHub. You can also publish this as a project in your GitHub. Okay. Yes.
+  Mohammad
+  Will with us in the project. Period, you or
+  I will be assigned to a new class, right after AWS two and the project phase for
+  four weeks will be taken care by Rohan. Okay, in case you need anything, I'm
+  there available on slack so you can send me messages on slack, I'll be able to
+  help you out, clear? Yes. Suman
+  So, the entire module is for one month.
+  You mean the project phase?
+  No, the terraform.
+  Ah, Terraform is for 4 weeks, exactly. It's for one month, but in between, if
+  you go and check your July month, you have summer vacation, I think it starts
+  from 25th to July, right? It starts from 25th July till I think 11th of August.
+  I'm not so sure. I think it's still 11th of August, you have vacation. So after
+  that again, for one more week we will continue. Is that clear? So you get three
+  weeks in July and one week in August to complete your terraform. So my plan is
+  to finish the entire terraform in three weeks because it needs only 15 to 16
+  classes to complete the concepts and the whole one week in August will only be
+  for your exam preparations. We will do as much as hands-on. Possible, and we
+  will do a lots of mcqs because that will prepare you for your exam. Is that
+  clear?
+  Just one more question. Sure. So basically when you say exam, do you I mean
+  You see? Yes.
+  recommend should we give it like after the session or should we do it together
+  with the AWS and the end?
+  No, I would recommend to give this right after your AWS one. Why because after
+  AWS too, let me tell you this AWS one, You have terraform. and after aws2, You
+  have two things. One is cloud practitioner which is optional and solutions.
+  Architect associate. Remember in these two certificate you are cloud.
+  Practitioner is an optional Exam If you want, you can take it. But what is the
+  point here, right? After AWS too, you will be preparing yourself for solutions.
+  Architect Meanwhile, you will also go into your project face right away. So you
+  will have no time to take a new exam there. Anyways, we will be preparing
+  ourself for one whole week for the exam purpose itself. So I have asked Matias
+  to give you guys voucher just before you guys go on your summer vacations, so
+  you can book the slot anytime that is feasible for you. okay, so that you can
+  take up the terraform exam in the month of August, My recommendation is to take
+  the exam, right? After you're done with this module. Because you are, it is
+  fresh. The concept is still in your head. It will be easy for you guys to take
+  it. If you go to AWS to most of the concept pertained into our terraform will be
+  gone and it will be a bit of chaos for you guys to revisit the same topic again
+  and again. Is that clear? Any questions? What does Cka?
+  So it is about the Kubernetes thing. I mean, because you see, this is also the
+  certification, which I was planning and I think it's a lot for not think about
+  that's, Kubernet is present come under AWS go over. That is comes and this is
+  admin. So whoever is handling, this has had been module, they will be
+  responsible for
+  Okay, perfect.
+  your coconut certificate. I'm only responded. Three of them. Okay? So pertaining
+  to anything relay apart from these three, like Linux certification or your EK
+  certification, or your coupon. Notice certification or DOCKER certification.
+  Whatever certification that DCI has promised. You can talk about that in your
+  SIS admin course, whoever is responsible, they will be able to give you more
+  information on that. Clear. Okay, any other questions? Yes, easy.
+  so, just about the times for after the terraform
+  Yes, exactly.
+  We started the AWS too, right? Right after the terraform. And this is on the
+  month of the rest of the months of August.
+  Yes, I think from third week of August, we will be starting with Aws2 and that
+  is again for 10 weeks.
+  Another 10 weeks, okay?
+  So what are you? It is again for 10 weeks. If you just give you a brief
+  understanding about AWS too, it is also for 10 weeks. What are we going to do
+  here? This entire 10 weeks. We will learn all the AT once services. I will not
+  be teaching anything related to your basics, like your vpcs3, or your subnets,
+  nothing no basics. So, basics are completely not in AWS one. That's the reason
+  why I have kept today and tomorrow, for us to, just go through it. Just brush up
+  those topics because these topics are again, important in your AWS too. And
+  right, after AWS too, you will be taking two exams where? All the services from
+  AWS One and two are important. Clear.
+  And is it? So it's going to be until October or
+  let's, Let me if you guys want, I can also give you the exact timeline. Give me
+  a
+  yes, this
+  second. That would get, right. Let me Share the timeline with you. Give me a
+  second. Can you see this course planning? So, you are classes. Aws. Sorry, 25p.
+  So if you see, currently, we are doing AWS one here. Okay. So I will scroll down
+  and you'll see you have two weeks of holiday and from 11th of August. You see
+  this from 11th of August, is it 11th? No from 10th of August. Till 14th of
+  August will be your last week of terraform and after that from 17th of August I
+  will be starting with AWS too, Module 2. Okay, again it will go for 10 weeks,
+  one. two, three, four, it keeps on going till when is the last Okay, the last is
+  October 23rd. Clear. So you can see this 23rd of October is the last day of your
+  AWS module 2, and right after that, you will go into project phase, which is
+  handled by Rohan. So, I will be with you guys till 20th of October. Here, you
+  can see here. Understood. So it depends those who have already covered. All the
+  four modules will go into project phase and those who are not covered with the
+  sysadmin. Half the class will go into this assignment. You will bye for Kate
+  here after 23rd of October. It depends what modules you are about to pick. Is
+  that clear? Any questions? yes, Roger
+  Will be having the exam before the project or after the project.
+  We will give you the vouchers, it is up to you whether you want to take it.
+  Usually what we do is we ask you guys to take it during the project phase.
+  Sorry. Yeah, we have to give Buddhism Cloud partitioner on Solution architect
+  boot in this previous.
+  Okay, during the project phase we ask, you get to take it because you see here
+  23rd of October. Probably one week before somewhere in the second week of
+  October, you will get your vouchers. Vouchers will be given to you in the second
+  week of October. And you have time like around five weeks to select a particular
+  date for your exam and you can take your exam during the project phase.
+  Understood. Any questions? Feel free to. Yes. It totally. It is totally up to
+  you whether you want to give it or not, but the whole point here is solutions.
+  Architect is a mandatory exam. Okay. so, once again, Solutions, Architect
+  associate is a mandatory exam. Compulsory Exam. But what about cloud
+  practitioner this is optional. It's totally up to you. Remember guys, cloud
+  practitioner is a foundational exam, how does it work? Go in terms of AWS
+  certifications, you have cloud practitioner the first basics of foundation and
+  Surrounding this, you will have your Solutions, Architect Associate. And after
+  this comes as your solutions, architect professional. Okay. Since architect
+  professional. Their basics, which is cloud practitioner. You still need to know
+  the basics of cloud practitioner. Is that clear? Any doubt. Any questions?
+  Content. What is the difference between the normal social architect and
+  professional one?
+  Professional one. You will be learning about the services even in detail. For
+  example, when I talk about instance type, I just mentioned the couple of
+  instance, type, likely to micro the divide. The instance type based on your
+  number of virtual CPUs based on your RAM based on the processing capacity. I
+  said, But how why all those details? Why are there different classifications
+  like Day Two Micro T3 Micro very intricate details about the service? You will
+  be learning that in The professional thing. Remember you can skip the cloud
+  practitioner and directly go to Solutions, architect associate. But in order to
+  take up solutions, architect professional. There is a mandatory need for
+  solutions. Architect associate, if you have passed associate exam, then it
+  highly helps you guys to take up the professional. Okay. But in terms of AWS
+  exam, there is no mandatory thing but in terms of the concept you need to know
+  solutions, architect associate to take up solutions. Architect professional.
+  Understood. Any doubts any questions? Is this clear to everyone? Okay. And
+  As available, I mean, it's availability.
+  Yes. Oh yeah, all the exams in AWS are mostly valid for three years.
+  Okay. So, if you ask me, whether are you supposed to take up cloud practitioner
+  My suggestion is Take it, why not? Anyways, DCA is giving you the voucher. It is
+  a foundational level certification. Remember if you do a cloud practitioner
+  exam, Doesn't mean you will get a job. Okay. But we put this in your resume, for
+  sure. A resume, you will include your cloud practitioner certificate, but this
+  will not gain a chop. This is just like telling that you have basic knowledge
+  about Cloud. It will not give you extra information. It will not tell you in
+  which field of the cloud that you are expert in. For example, there are
+  expertise in your networking. There is expertise in data. There is expertise in
+  architecting, correct cloud. Practitioner, will just give you information about
+  or introduction about various services. It doesn't go into the detail of the
+  service. Clear. Yes. Is if any question.
+  I also if you answered it, but I just wanted to ask What is what is it? Because
+  Cost your main cost.
+  it doesn't mean nothing to me Cloud partitioner. Now, what is it? What is cloud
+  practitioner? I don't understand what it is.
+  Club. That's what I'm explaining right now. Cloud practitioner is a foundational
+  exam where you will learn the basics. For example, they will ask Give me out of
+  the four options, which is like, for example, let me mention the options sqs.
+  Yeah. So so I still didn't find the DCI repo, because in the previous course, we
+  had like the the instructor. He he made a repo and we all cloned it and then
+  whatever, he whatever, he pushed every day, we just pulled it. And we got the
+  Dynamodb. SNS. S3. They'll give options like this and they will ask you to
+  choose. Unlimited storage service. So you will be choosing S3, right? Just the
+  basics. There is nothing like scenario. They will not give you use cases. They
+  will not ask you real time or real world use cases. Okay, here in cloud
+  practitioner, it is mostly like one word answer. For example, yes, or no? okay,
+  for example, they would say is easy to, and IaaS, what would you say? Do you
+  consider easy to as an IaaS true or false?
+  True.
+  Infrastructure infrastructure. As
+  What is a? What does this mean?
+  Software service.
+  A service. Now, no software is a different thing. We also have SaaS.
+  Yeah, service. I mean services.
+  Which time is best for cloud or practitioner exam?
+  Okay, so now if you see, do you think whether it is true or false? The answer is
+  true. So, here when you go to cloud practitioner, the questions are very simple.
+  One line questions, one word answer, Clear. There's nothing elaborated. No use
+  cases. No real-time examples. Understood. So, but if you take cloud practitioner
+  exam, my recommendation is to take cloud practitioner though. It is useless
+  useless as in If you are finding trying to find a job in your AWS field, Then I
+  would say Cloud practitioner is useless, okay? Because it's just trying to say
+  that you know, alphabets in cloud. Just the basics names of the services that
+  will not gain, you any expert knowledge, but when you go to Solutions architect
+  you will be talking about the interaction. How will your easy to connect to S3?
+  S3. Or how is your VPC connecting to S3? There are something called as
+  endpoints. Do you see we both mostly talk about interaction between two
+  services. Because architecting means you need to have multiple components in the
+  service. There needs to be interaction between different services. And that is
+  what we will be learning in solutions. Architect Associate. And once you do the
+  certificate, this will add a lot of weightage to your resume. And my suggestion
+  is take a cloud practitioner as well. Well, it is one extra plus point to your
+  resume. You can just show in your resume that you have two certifications in
+  AWS. Clear. Anyway said DCI is going to give you vouchers though, it's an
+  optional certificate. I would recommend you guys to take it up. Is that clear?
+  Yes, Niyanta. Plus advanced services. So your vouchers for cloud practitioner
+  will not be given to you right after AWS one. Both the vouchers for your cloud
+  practitioner. And for solutions, architect will be given during aws2 module only
+  For the terraform. How many certificates do we have?
+  After AWS one module. Remember at the end of AWS, one module you will only get
+  vouchers for terraform. That our farm associate certification.
+  Only one.
+  Which is only valid for two years. Any questions? No questions. Is everything
+  resolved. Yes, Khadim. Only one. Only one. And remember, guys. Just saying that
+  you have solutions. Architect associate is not sufficient. If you say along with
+  solutions architecture associate, you have there are form it increases more
+  credibility for your resume. This increases your knowledge about AWS or the
+  cloud. There are four plays a vital vital role. It is basically telling you're
+  not using console but you are setting up everything on the cloud with the help
+  of code. So from Monday on words, we will start writing quotes. Understood. So
+  if you guys are already familiar with Kit, is everyone familiar with Github. And
+  that's the reason why I asked you guys to have two different repositories one
+  repository for DCI one repository for your personal. okay, I will share a couple
+  of links on YouTube that will teach you the whole get Or basically version
+  controlling system, okay? So you can go through those videos and you'll be able
+  to set up your account on it and create your repositories and push the code. And
+  remember, when I say that? I, I think I already asked you this at the very
+  beginning of the course. That since you already have a DCI Gmail, create a GIT
+  account using DCI email address and create one GIT account using your personal
+  email address. Why? Because whenever I teach you terraform code, Terraform we
+  will be writing quotes on terraform what you can do, you can keep pushing all
+  those code into your get DCI. You'll also learn how to use GitHub. You'll also
+  learn the different commands and you can store all the code in the GIT DCA.
+  Okay. Anyways, your personal git account is only used for your projects.
+  Generally, we don't write testing quotes or learning materials in your GitHub.
+  Okay, your personal GitHub. Should always look very, very professional. Not to
+  dump any test quotes or learning materials in your github. Okay. Yes. Easy.
+  What?
+  the latest every day is this.
+  mean, the
+  Yeah. Yes.
+  Have you gone and checked the slack channel? Which is pinned. There are so many
+  links that are pinned in your slack channel in your material.
+  Yeah, that's I was looking for. I was looking for a link for a repo, but I
+  couldn't find
+  It's pinned. It is an option called as pinned messages or pins in your slack
+  channel. If you go and click that, you'll be able to see all the links and one
+  of the link is for your GitHub there. You'll see all materials.
+  We, we channel.
+  Your materials and cloud aws-1 materials.
+  Exercises. And yes.
+  Okay. Okay, so here, here you say there's a lot of pins with with the yeah, with
+  a github.
+  Yeah, I see it now. Yeah, get up. Okay, thank you so see something. Let's see
+  Yeah. Okay.
+  this admin. Yeah, that's the only replay.
+  this admin is the organization name and inside this is admin organization, you
+  will see a repo called as AWS restructured I think or New course and said that
+  you will have first module which is AWS one and under that you have all the 10
+  week contents,
+  And this is where we're gonna push the terraform to all. So, or
+  That is the account maintained by me, that is the DCI account, so you will use
+  your own account. You will create your own account using DCA Gmail and then you
+  will put everything that you want in your personal account, not in this one.
+  Okay. Okay.
+  Got it.
+  Any other questions? No questions, shall we proceed with our mcqs? Okay, let me
+  share my screen. Give me a second. See this question, right? So here's your
+  time. Go through the questions properly those who know the answer. Please raise
+  your hand. And I want you to give me justification as well.
+  Restaurant to remind you to record session.
+  Okay, let me start the recording. Perfect. Thank you. Okay, the recording has
+  begun. By the way, do you guys go and revisit the recording at any point? Yes.
+  Yes, Suman.
+  Okay. Um, I think for the Just guessing right? Not sure and red person. So, for
+  the occasional one, it is
+  Problem.
+  given that it will be always the final week of month. So I think for that would
+  be the on demand. But regarding the payroll one, which is 24/7. I would say Go
+  for the cheapest one, which is like sport sport. Sport One World.
+  Spot instances, okay. So she says, what is the option? So you say option a
+  correct? suman says Option A
+  Yeah.
+  Okay. What about others?
+  Thank you.
+  You think?
+  Or B.
+  b, Who says be
+  M&M.
+  My name says, be any justification for B. Meaning, what's the justification?
+
+[10:30]
+  weeks. We will learn all the AT once services. I will not be teaching anything
+  related to your basics, like your vpcs3, or your subnets, nothing no basics. So,
+  basics are completely not in AWS one. That's the reason why I have kept today
+  and tomorrow, for us to, just go through it. Just brush up those topics because
+  these topics are again, important in your AWS too. And right, after AWS too, you
+  will be taking two exams where? All the services from AWS One and two are
+  important. Clear.
+  And is it? So it's going to be until October or
+  let's, Let me if you guys want, I can also give you the exact timeline. Give me
+  a
+  yes, this
+  second. That would get, right. Let me Share the timeline with you. Give me a
+  second. Can you see this course planning? So, you are classes. Aws. Sorry, 25p.
+  So if you see, currently, we are doing AWS one here. Okay. So I will scroll down
+  and you'll see you have two weeks of holiday and from 11th of August. You see
+  this from 11th of August, is it 11th? No from 10th of August. Till 14th of
+  August will be your last week of terraform and after that from 17th of August I
+  will be starting with AWS too, Module 2. Okay, again it will go for 10 weeks,
+  one. two, three, four, it keeps on going till when is the last Okay, the last is
+  October 23rd. Clear. So you can see this 23rd of October is the last day of your
+  AWS module 2, and right after that, you will go into project phase, which is
+  handled by Rohan. So, I will be with you guys till 20th of October. Here, you
+  can see here. Understood. So it depends those who have already covered. All the
+  four modules will go into project phase and those who are not covered with the
+  sysadmin. Half the class will go into this assignment. You will bye for Kate
+  here after 23rd of October. It depends what modules you are about to pick. Is
+  that clear? Any questions? yes, Roger
+  Will be having the exam before the project or after the project.
+  We will give you the vouchers, it is up to you whether you want to take it.
+  Usually what we do is we ask you guys to take it during the project phase.
+  Sorry. Yeah, we have to give Buddhism Cloud partitioner on Solution architect
+  boot in this previous.
+  Okay, during the project phase we ask, you get to take it because you see here
+  23rd of October. Probably one week before somewhere in the second week of
+  October, you will get your vouchers. Vouchers will be given to you in the second
+  week of October. And you have time like around five weeks to select a particular
+  date for your exam and you can take your exam during the project phase.
+  Understood. Any questions? Feel free to. Yes. It totally. It is totally up to
+  you whether you want to give it or not, but the whole point here is solutions.
+  Architect is a mandatory exam. Okay. so, once again, Solutions, Architect
+  associate is a mandatory exam. Compulsory Exam. But what about cloud
+  practitioner this is optional. It's totally up to you. Remember guys, cloud
+  practitioner is a foundational exam, how does it work? Go in terms of AWS
+  certifications, you have cloud practitioner the first basics of foundation and
+  Surrounding this, you will have your Solutions, Architect Associate. And after
+  this comes as your solutions, architect professional. Okay. Since architect
+  professional. Their basics, which is cloud practitioner. You still need to know
+  the basics of cloud practitioner. Is that clear? Any doubt. Any questions?
+  Content. What is the difference between the normal social architect and
+  professional one?
+  Professional one. You will be learning about the services even in detail. For
+  example, when I talk about instance type, I just mentioned the couple of
+  instance, type, likely to micro the divide. The instance type based on your
+  number of virtual CPUs based on your RAM based on the processing capacity. I
+  said, But how why all those details? Why are there different classifications
+  like Day Two Micro T3 Micro very intricate details about the service? You will
+  be learning that in The professional thing. Remember you can skip the cloud
+  practitioner and directly go to Solutions, architect associate. But in order to
+  take up solutions, architect professional. There is a mandatory need for
+  solutions. Architect associate, if you have passed associate exam, then it
+  highly helps you guys to take up the professional. Okay. But in terms of AWS
+  exam, there is no mandatory thing but in terms of the concept you need to know
+  solutions, architect associate to take up solutions. Architect professional.
+  Understood. Any doubts any questions? Is this clear to everyone? Okay. And
+  As available, I mean, it's availability.
+  Yes. Oh yeah, all the exams in AWS are mostly valid for three years.
+  Okay. So, if you ask me, whether are you supposed to take up cloud practitioner
+  My suggestion is Take it, why not? Anyways, DCA is giving you the voucher. It is
+  a foundational level certification. Remember if you do a cloud practitioner
+  exam, Doesn't mean you will get a job. Okay. But we put this in your resume, for
+  sure. A resume, you will include your cloud practitioner certificate, but this
+  will not gain a chop. This is just like telling that you have basic knowledge
+  about Cloud. It will not give you extra information. It will not tell you in
+  which field of the cloud that you are expert in. For example, there are
+  expertise in your networking. There is expertise in data. There is expertise in
+  architecting, correct cloud. Practitioner, will just give you information about
+  or introduction about various services. It doesn't go into the detail of the
+  service. Clear. Yes. Is if any question.
+  I also if you answered it, but I just wanted to ask What is what is it? Because
+  Cost your main cost.
+  it doesn't mean nothing to me Cloud partitioner. Now, what is it? What is cloud
+  practitioner? I don't understand what it is.
+  Club. That's what I'm explaining right now. Cloud practitioner is a foundational
+  exam where you will learn the basics. For example, they will ask Give me out of
+  the four options, which is like, for example, let me mention the options sqs.
+  Yeah. So so I still didn't find the DCI repo, because in the previous course, we
+  had like the the instructor. He he made a repo and we all cloned it and then
+  whatever, he whatever, he pushed every day, we just pulled it. And we got the
+  Dynamodb. SNS. S3. They'll give options like this and they will ask you to
+  choose. Unlimited storage service. So you will be choosing S3, right? Just the
+  basics. There is nothing like scenario. They will not give you use cases. They
+  will not ask you real time or real world use cases. Okay, here in cloud
+  practitioner, it is mostly like one word answer. For example, yes, or no? okay,
+  for example, they would say is easy to, and IaaS, what would you say? Do you
+  consider easy to as an IaaS true or false?
+  True.
+  Infrastructure infrastructure. As
+  What is a? What does this mean?
+  Software service.
+  A service. Now, no software is a different thing. We also have SaaS.
+  Yeah, service. I mean services.
+  Which time is best for cloud or practitioner exam?
+  Okay, so now if you see, do you think whether it is true or false? The answer is
+  true. So, here when you go to cloud practitioner, the questions are very simple.
+  One line questions, one word answer, Clear. There's nothing elaborated. No use
+  cases. No real-time examples. Understood. So, but if you take cloud practitioner
+  exam, my recommendation is to take cloud practitioner though. It is useless
+  useless as in If you are finding trying to find a job in your AWS field, Then I
+  would say Cloud practitioner is useless, okay? Because it's just trying to say
+  that you know, alphabets in cloud. Just the basics names of the services that
+  will not gain, you any expert knowledge, but when you go to Solutions architect
+  you will be talking about the interaction. How will your easy to connect to S3?
+  S3. Or how is your VPC connecting to S3? There are something called as
+  endpoints. Do you see we both mostly talk about interaction between two
+  services. Because architecting means you need to have multiple components in the
+  service. There needs to be interaction between different services. And that is
+  what we will be learning in solutions. Architect Associate. And once you do the
+  certificate, this will add a lot of weightage to your resume. And my suggestion
+  is take a cloud practitioner as well. Well, it is one extra plus point to your
+  resume. You can just show in your resume that you have two certifications in
+  AWS. Clear. Anyway said DCI is going to give you vouchers though, it's an
+  optional certificate. I would recommend you guys to take it up. Is that clear?
+  Yes, Niyanta. Plus advanced services. So your vouchers for cloud practitioner
+  will not be given to you right after AWS one. Both the vouchers for your cloud
+  practitioner. And for solutions, architect will be given during aws2 module only
+  For the terraform. How many certificates do we have?
+  After AWS one module. Remember at the end of AWS, one module you will only get
+  vouchers for terraform. That our farm associate certification.
+  Only one.
+  Which is only valid for two years. Any questions? No questions. Is everything
+  resolved. Yes, Khadim. Only one. Only one. And remember, guys. Just saying that
+  you have solutions. Architect associate is not sufficient. If you say along with
+  solutions architecture associate, you have there are form it increases more
+  credibility for your resume. This increases your knowledge about AWS or the
+  cloud. There are four plays a vital vital role. It is basically telling you're
+  not using console but you are setting up everything on the cloud with the help
+  of code. So from Monday on words, we will start writing quotes. Understood. So
+  if you guys are already familiar with Kit, is everyone familiar with Github. And
+  that's the reason why I asked you guys to have two different repositories one
+  repository for DCI one repository for your personal. okay, I will share a couple
+  of links on YouTube that will teach you the whole get Or basically version
+  controlling system, okay? So you can go through those videos and you'll be able
+  to set up your account on it and create your repositories and push the code. And
+  remember, when I say that? I, I think I already asked you this at the very
+  beginning of the course. That since you already have a DCI Gmail, create a GIT
+  account using DCI email address and create one GIT account using your personal
+  email address. Why? Because whenever I teach you terraform code, Terraform we
+  will be writing quotes on terraform what you can do, you can keep pushing all
+  those code into your get DCI. You'll also learn how to use GitHub. You'll also
+  learn the different commands and you can store all the code in the GIT DCA.
+  Okay. Anyways, your personal git account is only used for your projects.
+  Generally, we don't write testing quotes or learning materials in your GitHub.
+  Okay, your personal GitHub. Should always look very, very professional. Not to
+  dump any test quotes or learning materials in your github. Okay. Yes. Easy.
+  What?
+  the latest every day is this.
+  mean, the
+  Yeah. Yes.
+  Have you gone and checked the slack channel? Which is pinned. There are so many
+  links that are pinned in your slack channel in your material.
+  Yeah, that's I was looking for. I was looking for a link for a repo, but I
+  couldn't find
+  It's pinned. It is an option called as pinned messages or pins in your slack
+  channel. If you go and click that, you'll be able to see all the links and one
+  of the link is for your GitHub there. You'll see all materials.
+  We, we channel.
+  Your materials and cloud aws-1 materials.
+  Exercises. And yes.
+  Okay. Okay, so here, here you say there's a lot of pins with with the yeah, with
+  a github.
+  Yeah, I see it now. Yeah, get up. Okay, thank you so see something. Let's see
+  Yeah. Okay.
+  this admin. Yeah, that's the only replay.
+  this admin is the organization name and inside this is admin organization, you
+  will see a repo called as AWS restructured I think or New course and said that
+  you will have first module which is AWS one and under that you have all the 10
+  week contents,
+  And this is where we're gonna push the terraform to all. So, or
+  That is the account maintained by me, that is the DCI account, so you will use
+  your own account. You will create your own account using DCA Gmail and then you
+  will put everything that you want in your personal account, not in this one.
+  Okay. Okay.
+  Got it.
+  Any other questions? No questions, shall we proceed with our mcqs? Okay, let me
+  share my screen. Give me a second. See this question, right? So here's your
+  time. Go through the questions properly those who know the answer. Please raise
+  your hand. And I want you to give me justification as well.
+  Restaurant to remind you to record session.
+  Okay, let me start the recording. Perfect. Thank you. Okay, the recording has
+  begun. By the way, do you guys go and revisit the recording at any point? Yes.
+  Yes, Suman.
+  Okay. Um, I think for the Just guessing right? Not sure and red person. So, for
+  the occasional one, it is
+  Problem.
+  given that it will be always the final week of month. So I think for that would
+  be the on demand. But regarding the payroll one, which is 24/7. I would say Go
+  for the cheapest one, which is like sport sport. Sport One World.
+  Spot instances, okay. So she says, what is the option? So you say option a
+  correct? suman says Option A
+  Yeah.
+  Okay. What about others?
+  Thank you.
+  You think?
+  Or B.
+  b, Who says be
+  M&M.
+  My name says, be any justification for B. Meaning, what's the justification?
+  And the operation should be. Highly. Predictable. Therefore Things that acid.
+  So anyway, when you say predictable, does it mean something very specific?
+  It's high availability or
+  Yes, my name so you say because it is predictable. Baseline resource
+  utilization, you say, Savings plan is the best one, correct.
+  Oh, what about Khadim?
+  I think option B is the correct because for If you use sport instances here for
+  the baseline, if I think it is not suitable. because here is clearly mentioned
+  the
+  It's not suitable.
+  For the baseline. Yeah, here.
+  Basically utilization. What about others?
+  It is. Yeah. Wonderful for the last one we have to use spot emissions because
+  Okay, yeah. Yes. Suman.
+  I think there's a drawback of the spot in stance because it is taken back when
+  there is a Better bet. This is what I remember. So I think we shouldn't be
+  taking that. So I would go back to the
+  Okay. You want to go back to B? Okay. Yes, we shall
+  Bees. Right? Because it is true easy to incent. They have to run 24 by 7, right?
+  So they have to run continuously. So it's better to to take, you know, savings
+  plan. So they have a bigger discount as well as whenever they have a month and
+  spike like that so they can use on demand instance to handle that situation.
+  So most of you have said the correct answer. First thing who can tell me, what
+  is the drawback of spot? Instance, drawback, I'm not telling the advantage
+  drawback.
+  We may lose.
+  Yeah. What is the problem problem?
+  That's when for those selected spot in the senses. but,
+  Oh, so if I take,
+  If someone offers,
+  Yeah, yes. What happens? Correct.
+  if someone offers, you know, a better price, they will take this but in
+  instances from us on assigned to another person,
+  So basically it will be interrupted. Correct.
+  Yeah.
+  The service will be interrupted at any point of time.
+  It is only be.
+  so, Basically what is pot. Instance, pot instance will give you around 90% of
+  discount very true, but what is the major problem? It is going to be
+  interrupted. And look at the question. Is there anywhere in the question that
+  they are mentioning that the workload can be interrupted? Is there anywhere in
+  the question? About this term interruption? No. No. Where in the question, they
+  have, mentioned interruption. So, and what have they mentioned? A company runs a
+  core payroll application. It's a core application. The whole companies work or
+  the product itself is a fair roll application. It is not a bad job. Instead of
+  payroll, if they had said Batch Job application, then you could have used this
+  part instance. Bad job means repeated, task, probably. You could have used Spot
+  instance but here it is. Core pair all application. That means I cannot stop the
+  instance at any point of time. Is this clear? so anywhere I see spot instance, I
+  will just clearly reject those options, which is option A So now let's see, use
+  on demand, instance, for the entire workload to avoid capacity. Interruptions.
+  Okay, I will avoid capacity interruptions if I use on demand, but what is the
+  requirement most cost-effective? Do you see this term here cost effective? So,
+  if I choose on demand all the time, it is not cost effective. Purchase dedicated
+  host super expensive. Why would I go for dedicated host? The entire hardware is
+  given to you which means super costly. What is the best option here? Savings
+  plan. You would go for savings plan for the baseline, that means for the entire
+  month. And whenever there is spike, During that time, you will go for your, on
+  demand, on demand. Is that clear? Is that clear? So the correct option here is
+  option B.
+  You mean we choose the seven plan not on demand, because it's cheaper.
+  Yes, savings plan. What do we know? It gives you around. 60% not 60. I would say
+  65 to 70 percent discount. Is that clear? You all of you knows this savings plan
+  will give you 65 to 70%. Discount compared to your on-demand. Is this clear to
+  everyone?
+  Sharanya? What I forget about that on demand instances. Can you give us example?
+  Yes, you want what?
+  On Demand instances.
+  You want example when to use on demand?
+  Okay, first of all, when I say savings plan or when I say, let's say savings
+  plan. Or your reserved instance. What are they doing? When I do the savings plan
+  or reserved instance, I am fixing the number of ec2s. For example, let's say I
+  need three 32 easy to instances for three years. Just an example, okay. For
+  three years, I need 32 easy to instance, but at some point of time, let's say
+  you are having a website and during Christmas. The number of request for your
+  website is extremely high and 32 instances, not sufficient for you. During that
+  time when you know that the incoming,
+
+[10:36]
+  like Day Two Micro T3 Micro very intricate details about the service? You will
+  be learning that in The professional thing. Remember you can skip the cloud
+  practitioner and directly go to Solutions, architect associate. But in order to
+  take up solutions, architect professional. There is a mandatory need for
+  solutions. Architect associate, if you have passed associate exam, then it
+  highly helps you guys to take up the professional. Okay. But in terms of AWS
+  exam, there is no mandatory thing but in terms of the concept you need to know
+  solutions, architect associate to take up solutions. Architect professional.
+  Understood. Any doubts any questions? Is this clear to everyone? Okay. And
+  As available, I mean, it's availability.
+  Yes. Oh yeah, all the exams in AWS are mostly valid for three years.
+  Okay. So, if you ask me, whether are you supposed to take up cloud practitioner
+  My suggestion is Take it, why not? Anyways, DCA is giving you the voucher. It is
+  a foundational level certification. Remember if you do a cloud practitioner
+  exam, Doesn't mean you will get a job. Okay. But we put this in your resume, for
+  sure. A resume, you will include your cloud practitioner certificate, but this
+  will not gain a chop. This is just like telling that you have basic knowledge
+  about Cloud. It will not give you extra information. It will not tell you in
+  which field of the cloud that you are expert in. For example, there are
+  expertise in your networking. There is expertise in data. There is expertise in
+  architecting, correct cloud. Practitioner, will just give you information about
+  or introduction about various services. It doesn't go into the detail of the
+  service. Clear. Yes. Is if any question.
+  I also if you answered it, but I just wanted to ask What is what is it? Because
+  Cost your main cost.
+  it doesn't mean nothing to me Cloud partitioner. Now, what is it? What is cloud
+  practitioner? I don't understand what it is.
+  Club. That's what I'm explaining right now. Cloud practitioner is a foundational
+  exam where you will learn the basics. For example, they will ask Give me out of
+  the four options, which is like, for example, let me mention the options sqs.
+  Dynamodb. SNS. S3. They'll give options like this and they will ask you to
+  choose. Unlimited storage service. So you will be choosing S3, right? Just the
+  basics. There is nothing like scenario. They will not give you use cases. They
+  will not ask you real time or real world use cases. Okay, here in cloud
+  practitioner, it is mostly like one word answer. For example, yes, or no? okay,
+  for example, they would say is easy to, and IaaS, what would you say? Do you
+  consider easy to as an IaaS true or false?
+  True.
+  Infrastructure infrastructure. As
+  What is a? What does this mean?
+  Software service.
+  A service. Now, no software is a different thing. We also have SaaS.
+  Yeah, service. I mean services.
+  Which time is best for cloud or practitioner exam?
+  Okay, so now if you see, do you think whether it is true or false? The answer is
+  true. So, here when you go to cloud practitioner, the questions are very simple.
+  One line questions, one word answer, Clear. There's nothing elaborated. No use
+  cases. No real-time examples. Understood. So, but if you take cloud practitioner
+  exam, my recommendation is to take cloud practitioner though. It is useless
+  useless as in If you are finding trying to find a job in your AWS field, Then I
+  would say Cloud practitioner is useless, okay? Because it's just trying to say
+  that you know, alphabets in cloud. Just the basics names of the services that
+  will not gain, you any expert knowledge, but when you go to Solutions architect
+  you will be talking about the interaction. How will your easy to connect to S3?
+  S3. Or how is your VPC connecting to S3? There are something called as
+  endpoints. Do you see we both mostly talk about interaction between two
+  services. Because architecting means you need to have multiple components in the
+  service. There needs to be interaction between different services. And that is
+  what we will be learning in solutions. Architect Associate. And once you do the
+  certificate, this will add a lot of weightage to your resume. And my suggestion
+  is take a cloud practitioner as well. Well, it is one extra plus point to your
+  resume. You can just show in your resume that you have two certifications in
+  AWS. Clear. Anyway said DCI is going to give you vouchers though, it's an
+  optional certificate. I would recommend you guys to take it up. Is that clear?
+  Yes, Niyanta. Plus advanced services. So your vouchers for cloud practitioner
+  will not be given to you right after AWS one. Both the vouchers for your cloud
+  practitioner. And for solutions, architect will be given during aws2 module only
+  For the terraform. How many certificates do we have?
+  After AWS one module. Remember at the end of AWS, one module you will only get
+  vouchers for terraform. That our farm associate certification.
+  Only one.
+  Which is only valid for two years. Any questions? No questions. Is everything
+  resolved. Yes, Khadim. Only one. Only one. And remember, guys. Just saying that
+  you have solutions. Architect associate is not sufficient. If you say along with
+  solutions architecture associate, you have there are form it increases more
+  credibility for your resume. This increases your knowledge about AWS or the
+  cloud. There are four plays a vital vital role. It is basically telling you're
+  not using console but you are setting up everything on the cloud with the help
+  of code. So from Monday on words, we will start writing quotes. Understood. So
+  if you guys are already familiar with Kit, is everyone familiar with Github. And
+  that's the reason why I asked you guys to have two different repositories one
+  repository for DCI one repository for your personal. okay, I will share a couple
+  of links on YouTube that will teach you the whole get Or basically version
+  controlling system, okay? So you can go through those videos and you'll be able
+  to set up your account on it and create your repositories and push the code. And
+  remember, when I say that? I, I think I already asked you this at the very
+  beginning of the course. That since you already have a DCI Gmail, create a GIT
+  account using DCI email address and create one GIT account using your personal
+  email address. Why? Because whenever I teach you terraform code, Terraform we
+  will be writing quotes on terraform what you can do, you can keep pushing all
+  those code into your get DCI. You'll also learn how to use GitHub. You'll also
+  learn the different commands and you can store all the code in the GIT DCA.
+  Okay. Anyways, your personal git account is only used for your projects.
+  Generally, we don't write testing quotes or learning materials in your GitHub.
+  Okay, your personal GitHub. Should always look very, very professional. Not to
+  dump any test quotes or learning materials in your github. Okay. Yes. Easy.
+  Yeah. So so I still didn't find the DCI repo, because in the previous course, we
+  had like the the instructor. He he made a repo and we all cloned it and then
+  whatever, he whatever, he pushed every day, we just pulled it. And we got the
+  What?
+  the latest every day is this.
+  mean, the
+  Yeah. Yes.
+  Have you gone and checked the slack channel? Which is pinned. There are so many
+  links that are pinned in your slack channel in your material.
+  Yeah, that's I was looking for. I was looking for a link for a repo, but I
+  couldn't find
+  It's pinned. It is an option called as pinned messages or pins in your slack
+  channel. If you go and click that, you'll be able to see all the links and one
+  of the link is for your GitHub there. You'll see all materials.
+  We, we channel.
+  Your materials and cloud aws-1 materials.
+  Exercises. And yes.
+  Okay. Okay, so here, here you say there's a lot of pins with with the yeah, with
+  a github.
+  Yeah, I see it now. Yeah, get up. Okay, thank you so see something. Let's see
+  Yeah. Okay.
+  this admin. Yeah, that's the only replay.
+  this admin is the organization name and inside this is admin organization, you
+  will see a repo called as AWS restructured I think or New course and said that
+  you will have first module which is AWS one and under that you have all the 10
+  week contents,
+  And this is where we're gonna push the terraform to all. So, or
+  That is the account maintained by me, that is the DCI account, so you will use
+  your own account. You will create your own account using DCA Gmail and then you
+  will put everything that you want in your personal account, not in this one.
+  Okay. Okay.
+  Got it.
+  Any other questions? No questions, shall we proceed with our mcqs? Okay, let me
+  share my screen. Give me a second. See this question, right? So here's your
+  time. Go through the questions properly those who know the answer. Please raise
+  your hand. And I want you to give me justification as well.
+  Restaurant to remind you to record session.
+  Okay, let me start the recording. Perfect. Thank you. Okay, the recording has
+  begun. By the way, do you guys go and revisit the recording at any point? Yes.
+  Yes, Suman.
+  Okay. Um, I think for the Just guessing right? Not sure and red person. So, for
+  the occasional one, it is
+  Problem.
+  given that it will be always the final week of month. So I think for that would
+  be the on demand. But regarding the payroll one, which is 24/7. I would say Go
+  for the cheapest one, which is like sport sport. Sport One World.
+  Spot instances, okay. So she says, what is the option? So you say option a
+  correct? suman says Option A
+  Yeah.
+  Okay. What about others?
+  Thank you.
+  You think?
+  Or B.
+  b, Who says be
+  M&M.
+  My name says, be any justification for B. Meaning, what's the justification?
+  And the operation should be. Highly. Predictable. Therefore Things that acid.
+  So anyway, when you say predictable, does it mean something very specific?
+  It's high availability or
+  Yes, my name so you say because it is predictable. Baseline resource
+  utilization, you say, Savings plan is the best one, correct.
+  Oh, what about Khadim?
+  I think option B is the correct because for If you use sport instances here for
+  the baseline, if I think it is not suitable. because here is clearly mentioned
+  the
+  It's not suitable.
+  For the baseline. Yeah, here.
+  Basically utilization. What about others?
+  It is. Yeah. Wonderful for the last one we have to use spot emissions because
+  Okay, yeah. Yes. Suman.
+  I think there's a drawback of the spot in stance because it is taken back when
+  there is a Better bet. This is what I remember. So I think we shouldn't be
+  taking that. So I would go back to the
+  Okay. You want to go back to B? Okay. Yes, we shall
+  Bees. Right? Because it is true easy to incent. They have to run 24 by 7, right?
+  So they have to run continuously. So it's better to to take, you know, savings
+  plan. So they have a bigger discount as well as whenever they have a month and
+  spike like that so they can use on demand instance to handle that situation.
+  So most of you have said the correct answer. First thing who can tell me, what
+  is the drawback of spot? Instance, drawback, I'm not telling the advantage
+  drawback.
+  We may lose.
+  Yeah. What is the problem problem?
+  That's when for those selected spot in the senses. but,
+  Oh, so if I take,
+  If someone offers,
+  Yeah, yes. What happens? Correct.
+  if someone offers, you know, a better price, they will take this but in
+  instances from us on assigned to another person,
+  So basically it will be interrupted. Correct.
+  Yeah.
+  The service will be interrupted at any point of time.
+  It is only be.
+  so, Basically what is pot. Instance, pot instance will give you around 90% of
+  discount very true, but what is the major problem? It is going to be
+  interrupted. And look at the question. Is there anywhere in the question that
+  they are mentioning that the workload can be interrupted? Is there anywhere in
+  the question? About this term interruption? No. No. Where in the question, they
+  have, mentioned interruption. So, and what have they mentioned? A company runs a
+  core payroll application. It's a core application. The whole companies work or
+  the product itself is a fair roll application. It is not a bad job. Instead of
+  payroll, if they had said Batch Job application, then you could have used this
+  part instance. Bad job means repeated, task, probably. You could have used Spot
+  instance but here it is. Core pair all application. That means I cannot stop the
+  instance at any point of time. Is this clear? so anywhere I see spot instance, I
+  will just clearly reject those options, which is option A So now let's see, use
+  on demand, instance, for the entire workload to avoid capacity. Interruptions.
+  Okay, I will avoid capacity interruptions if I use on demand, but what is the
+  requirement most cost-effective? Do you see this term here cost effective? So,
+  if I choose on demand all the time, it is not cost effective. Purchase dedicated
+  host super expensive. Why would I go for dedicated host? The entire hardware is
+  given to you which means super costly. What is the best option here? Savings
+  plan. You would go for savings plan for the baseline, that means for the entire
+  month. And whenever there is spike, During that time, you will go for your, on
+  demand, on demand. Is that clear? Is that clear? So the correct option here is
+  option B.
+  You mean we choose the seven plan not on demand, because it's cheaper.
+  Yes, savings plan. What do we know? It gives you around. 60% not 60. I would say
+  65 to 70 percent discount. Is that clear? You all of you knows this savings plan
+  will give you 65 to 70%. Discount compared to your on-demand. Is this clear to
+  everyone?
+  Sharanya? What I forget about that on demand instances. Can you give us example?
+  Yes, you want what?
+  On Demand instances.
+  You want example when to use on demand?
+  Okay, first of all, when I say savings plan or when I say, let's say savings
+  plan. Or your reserved instance. What are they doing? When I do the savings plan
+  or reserved instance, I am fixing the number of ec2s. For example, let's say I
+  need three 32 easy to instances for three years. Just an example, okay. For
+  three years, I need 32 easy to instance, but at some point of time, let's say
+  you are having a website and during Christmas. The number of request for your
+  website is extremely high and 32 instances, not sufficient for you. During that
+  time, when, you know, that, the incoming request cannot be predicted and the
+  incoming request cannot be suffered within the Reserved instance limit only
+  during that time, you would go for on demand. so basically what happens if a
+  company is hosting a website during their offer period during some festivals
+  Okay, or during summer break, or during your Christmas time Easter time, they
+  would always go for on-demand option. So now if you see 32 instances are here
+  that that we have chosen is most it mostly comes under reserved instance, rest
+  whatever you keep adding for example let's say except 32 I have chosen extra ATC
+  to instance, this extra a Tc2 will come under on demand. Is that clear?
+  Yes, thank you.
+  I don't know for how long we use and pay as we Use them. Yes on demand. I don't
+  know exactly. Now you see? I am taking this, a extra eight easy to instances.
+  This what I said it is only during festivals during offers during your summer
+  period or during your Christmas. What happens during this time During this time.
+  You don't know how many customers will be accessing your website. You don't know
+  whether they're accessing in the morning time after noon or at midnight. I
+  cannot predict anything here. Probably all of a sudden there is 1 million
+  requests coming to your website. and at midnight, nobody is accessing your
+  website, there can be a fluctuation There can be huge. Fluctuation During that
+  time, we always go for on-demand. Whenever there is a fluctuation and the
+  incoming traffic cannot be predicted. It is always on demand. Is this clear? Any
+  questions so far? No questions. Shall we go on to the next one? Yes, Andrei.
+  How it will? We work in practice? So We will rent. usually, where we are using
+  One server. Yeah. Which one
+  One server. Whatever.
+  The most saving plan. Within saving plan. We use one server. Yeah, easy to
+  install.
+  Arabic Incident in Savings Plan. Is it going to be a single server or a single
+  easy to instance? No, you can ask them. For example, I can go to AWS support
+  team and I can tell them that. I want to savings plan with 70 easy to instances.
+  The number of EC2 instance, depends on your requirement for your company. It can
+  be any number, it doesn't matter.
+  Know, it's like it's like a Kubernetes. Yeah the more a lot, we have the more
+  The number of parts, exactly.
+  instances media
+  Exactly in Kubernetes you have the number of parts. So you set the number of
+  pots depending on the incoming request. So whenever the incoming requests
+  increases, you scale the number of parts, correct? The same thing you do here.
+  Instead of scaling. What I do here in savings plan. Already 17 instances are
+  reserved, okay? Or you have already chosen the 70 easy to instances rest. If you
+  want extra 16 Easy to instances. This extra 16 EC2 will come under on demand
+  This is this rule we should to set up set up in somehow in our scripts. Yeah,
+  somewhere in other words,
+  You know, this is not setting up on scripts, this is talking to the support
+  team. Why?
+  it's
+  Why are we talking?
+  Manually.
+  No yeah it is manual only so you have to go and talk to your support team. If
+  there is AWS support you have to go and tell AWS support and you have to choose
+  the savings plan. Why? Because they are the ones who are giving you offers There
+  is something called as up front cost. Does anyone know what is an upfront cost?
+  I've already explained it to you up front cost. On up front payment. What does
+  it mean? Yes, Khadim.
+  but,
+  The many that people. Yeah.
+  Pay in advance, exactly.
+  In advance.
+  So basically it is like now you see you, you want 70 easy to instances. So if
+  you go to savings, if you go to your support team and you say that you will be
+  doing up front payment of let's say 10,000 euros. Probably they might give you
+  more discount. Next. What does that? What happens? Khadim is there. He also
+  wants 70 Easy to instance and he will say He will only pay 500 euros up front
+  cost. He will get less discount. There is someone else for example Sharanya and
+  Sharanya will pay the whole payment like 25,000 euros for the entire three
+  years. I will get maximum discount of around 70%. The more advanced payment that
+  you do it is better for the AWS people because they already have the cost or
+  they already have the payment with them. So it totally depends on your whether
+  you want to use the 70 easy, to instance, for the whole time or not. Who will do
+  this upfront cost at the beginning those company who are firm in knowing that
+  all the instances will be used. Always only, they will do this up front payment
+  and they will get maximum discount. For example, like Deloitte or your boss,
+  what do they do? They know that they are very big companies.
+
+[10:37]
+  So basically it is like now you see you, you want 70 easy to instances. So if
+  you go to savings, if you go to your support team and you say that you will be
+  doing up front payment of let's say 10,000 euros. Probably they might give you
+  more discount. Next. What does that? What happens? Khadim is there. He also
+  wants 70 Easy to instance and he will say He will only pay 500 euros up front
+  cost. He will get less discount. There is someone else for example Sharanya and
+  Sharanya will pay the whole payment like 25,000 euros for the entire three
+  years. I will get maximum discount of around 70%. The more advanced payment that
+  you do it is better for the AWS people because they already have the cost or
+  they already have the payment with them. So it totally depends on your whether
+  you want to use the 70 easy, to instance, for the whole time or not. Who will do
+  this upfront cost at the beginning those company who are firm in knowing that
+  all the instances will be used. Always only, they will do this up front payment
+  and they will get maximum discount. For example, like Deloitte or your boss,
+  what do they do? They know that they are very big companies and you generally,
+  they go for this. Reserved plan or savings plan. For example, let's say they
+  want 105 EC to instances They already know yesterday. I also taught you about
+  what organizations?
+  Okay. So, if you ask me, whether are you supposed to take up cloud practitioner
+  My suggestion is Take it, why not? Anyways, DCA is giving you the voucher. It is
+  a foundational level certification. Remember if you do a cloud practitioner
+  exam, Doesn't mean you will get a job. Okay. But we put this in your resume, for
+  sure. A resume, you will include your cloud practitioner certificate, but this
+  will not gain a chop. This is just like telling that you have basic knowledge
+  about Cloud. It will not give you extra information. It will not tell you in
+  which field of the cloud that you are expert in. For example, there are
+  expertise in your networking. There is expertise in data. There is expertise in
+  architecting, correct cloud. Practitioner, will just give you information about
+  or introduction about various services. It doesn't go into the detail of the
+  service. Clear. Yes. Is if any question.
+  I also if you answered it, but I just wanted to ask What is what is it? Because
+  Cost your main cost.
+  it doesn't mean nothing to me Cloud partitioner. Now, what is it? What is cloud
+  practitioner? I don't understand what it is.
+  Club. That's what I'm explaining right now. Cloud practitioner is a foundational
+  exam where you will learn the basics. For example, they will ask Give me out of
+  the four options, which is like, for example, let me mention the options sqs.
+  Yeah. So so I still didn't find the DCI repo, because in the previous course, we
+  had like the the instructor. He he made a repo and we all cloned it and then
+  whatever, he whatever, he pushed every day, we just pulled it. And we got the
+  Dynamodb. SNS. S3. They'll give options like this and they will ask you to
+  choose. Unlimited storage service. So you will be choosing S3, right? Just the
+  basics. There is nothing like scenario. They will not give you use cases. They
+  will not ask you real time or real world use cases. Okay, here in cloud
+  practitioner, it is mostly like one word answer. For example, yes, or no? okay,
+  for example, they would say is easy to, and IaaS, what would you say? Do you
+  consider easy to as an IaaS true or false?
+  True.
+  Infrastructure infrastructure. As
+  What is a? What does this mean?
+  Software service.
+  A service. Now, no software is a different thing. We also have SaaS.
+  Yeah, service. I mean services.
+  Which time is best for cloud or practitioner exam?
+  Okay, so now if you see, do you think whether it is true or false? The answer is
+  true. So, here when you go to cloud practitioner, the questions are very simple.
+  One line questions, one word answer, Clear. There's nothing elaborated. No use
+  cases. No real-time examples. Understood. So, but if you take cloud practitioner
+  exam, my recommendation is to take cloud practitioner though. It is useless
+  useless as in If you are finding trying to find a job in your AWS field, Then I
+  would say Cloud practitioner is useless, okay? Because it's just trying to say
+  that you know, alphabets in cloud. Just the basics names of the services that
+  will not gain, you any expert knowledge, but when you go to Solutions architect
+  you will be talking about the interaction. How will your easy to connect to S3?
+  S3. Or how is your VPC connecting to S3? There are something called as
+  endpoints. Do you see we both mostly talk about interaction between two
+  services. Because architecting means you need to have multiple components in the
+  service. There needs to be interaction between different services. And that is
+  what we will be learning in solutions. Architect Associate. And once you do the
+  certificate, this will add a lot of weightage to your resume. And my suggestion
+  is take a cloud practitioner as well. Well, it is one extra plus point to your
+  resume. You can just show in your resume that you have two certifications in
+  AWS. Clear. Anyway said DCI is going to give you vouchers though, it's an
+  optional certificate. I would recommend you guys to take it up. Is that clear?
+  Yes, Niyanta. Plus advanced services. So your vouchers for cloud practitioner
+  will not be given to you right after AWS one. Both the vouchers for your cloud
+  practitioner. And for solutions, architect will be given during aws2 module only
+  For the terraform. How many certificates do we have?
+  After AWS one module. Remember at the end of AWS, one module you will only get
+  vouchers for terraform. That our farm associate certification.
+  Only one.
+  Which is only valid for two years. Any questions? No questions. Is everything
+  resolved. Yes, Khadim. Only one. Only one. And remember, guys. Just saying that
+  you have solutions. Architect associate is not sufficient. If you say along with
+  solutions architecture associate, you have there are form it increases more
+  credibility for your resume. This increases your knowledge about AWS or the
+  cloud. There are four plays a vital vital role. It is basically telling you're
+  not using console but you are setting up everything on the cloud with the help
+  of code. So from Monday on words, we will start writing quotes. Understood. So
+  if you guys are already familiar with Kit, is everyone familiar with Github. And
+  that's the reason why I asked you guys to have two different repositories one
+  repository for DCI one repository for your personal. okay, I will share a couple
+  of links on YouTube that will teach you the whole get Or basically version
+  controlling system, okay? So you can go through those videos and you'll be able
+  to set up your account on it and create your repositories and push the code. And
+  remember, when I say that? I, I think I already asked you this at the very
+  beginning of the course. That since you already have a DCI Gmail, create a GIT
+  account using DCI email address and create one GIT account using your personal
+  email address. Why? Because whenever I teach you terraform code, Terraform we
+  will be writing quotes on terraform what you can do, you can keep pushing all
+  those code into your get DCI. You'll also learn how to use GitHub. You'll also
+  learn the different commands and you can store all the code in the GIT DCA.
+  Okay. Anyways, your personal git account is only used for your projects.
+  Generally, we don't write testing quotes or learning materials in your GitHub.
+  Okay, your personal GitHub. Should always look very, very professional. Not to
+  dump any test quotes or learning materials in your github. Okay. Yes. Easy.
+  What?
+  the latest every day is this.
+  mean, the
+  Yeah. Yes.
+  Have you gone and checked the slack channel? Which is pinned. There are so many
+  links that are pinned in your slack channel in your material.
+  Yeah, that's I was looking for. I was looking for a link for a repo, but I
+  couldn't find
+  It's pinned. It is an option called as pinned messages or pins in your slack
+  channel. If you go and click that, you'll be able to see all the links and one
+  of the link is for your GitHub there. You'll see all materials.
+  We, we channel.
+  Your materials and cloud aws-1 materials.
+  Exercises. And yes.
+  Okay. Okay, so here, here you say there's a lot of pins with with the yeah, with
+  a github.
+  Yeah, I see it now. Yeah, get up. Okay, thank you so see something. Let's see
+  Yeah. Okay.
+  this admin. Yeah, that's the only replay.
+  this admin is the organization name and inside this is admin organization, you
+  will see a repo called as AWS restructured I think or New course and said that
+  you will have first module which is AWS one and under that you have all the 10
+  week contents,
+  And this is where we're gonna push the terraform to all. So, or
+  That is the account maintained by me, that is the DCI account, so you will use
+  your own account. You will create your own account using DCA Gmail and then you
+  will put everything that you want in your personal account, not in this one.
+  Okay. Okay.
+  Got it.
+  Any other questions? No questions, shall we proceed with our mcqs? Okay, let me
+  share my screen. Give me a second. See this question, right? So here's your
+  time. Go through the questions properly those who know the answer. Please raise
+  your hand. And I want you to give me justification as well.
+  Restaurant to remind you to record session.
+  Okay, let me start the recording. Perfect. Thank you. Okay, the recording has
+  begun. By the way, do you guys go and revisit the recording at any point? Yes.
+  Yes, Suman.
+  Okay. Um, I think for the Just guessing right? Not sure and red person. So, for
+  the occasional one, it is
+  Problem.
+  given that it will be always the final week of month. So I think for that would
+  be the on demand. But regarding the payroll one, which is 24/7. I would say Go
+  for the cheapest one, which is like sport sport. Sport One World.
+  Spot instances, okay. So she says, what is the option? So you say option a
+  correct? suman says Option A
+  Yeah.
+  Okay. What about others?
+  Thank you.
+  You think?
+  Or B.
+  b, Who says be
+  M&M.
+  My name says, be any justification for B. Meaning, what's the justification?
+  And the operation should be. Highly. Predictable. Therefore Things that acid.
+  So anyway, when you say predictable, does it mean something very specific?
+  It's high availability or
+  Yes, my name so you say because it is predictable. Baseline resource
+  utilization, you say, Savings plan is the best one, correct.
+  Oh, what about Khadim?
+  I think option B is the correct because for If you use sport instances here for
+  the baseline, if I think it is not suitable. because here is clearly mentioned
+  the
+  It's not suitable.
+  For the baseline. Yeah, here.
+  Basically utilization. What about others?
+  It is. Yeah. Wonderful for the last one we have to use spot emissions because
+  Okay, yeah. Yes. Suman.
+  I think there's a drawback of the spot in stance because it is taken back when
+  there is a Better bet. This is what I remember. So I think we shouldn't be
+  taking that. So I would go back to the
+  Okay. You want to go back to B? Okay. Yes, we shall
+  Bees. Right? Because it is true easy to incent. They have to run 24 by 7, right?
+  So they have to run continuously. So it's better to to take, you know, savings
+  plan. So they have a bigger discount as well as whenever they have a month and
+  spike like that so they can use on demand instance to handle that situation.
+  So most of you have said the correct answer. First thing who can tell me, what
+  is the drawback of spot? Instance, drawback, I'm not telling the advantage
+  drawback.
+  We may lose.
+  Yeah. What is the problem problem?
+  That's when for those selected spot in the senses. but,
+  Oh, so if I take,
+  If someone offers,
+  Yeah, yes. What happens? Correct.
+  if someone offers, you know, a better price, they will take this but in
+  instances from us on assigned to another person,
+  So basically it will be interrupted. Correct.
+  Yeah.
+  The service will be interrupted at any point of time.
+  It is only be.
+  so, Basically what is pot. Instance, pot instance will give you around 90% of
+  discount very true, but what is the major problem? It is going to be
+  interrupted. And look at the question. Is there anywhere in the question that
+  they are mentioning that the workload can be interrupted? Is there anywhere in
+  the question? About this term interruption? No. No. Where in the question, they
+  have, mentioned interruption. So, and what have they mentioned? A company runs a
+  core payroll application. It's a core application. The whole companies work or
+  the product itself is a fair roll application. It is not a bad job. Instead of
+  payroll, if they had said Batch Job application, then you could have used this
+  part instance. Bad job means repeated, task, probably. You could have used Spot
+  instance but here it is. Core pair all application. That means I cannot stop the
+  instance at any point of time. Is this clear? so anywhere I see spot instance, I
+  will just clearly reject those options, which is option A So now let's see, use
+  on demand, instance, for the entire workload to avoid capacity. Interruptions.
+  Okay, I will avoid capacity interruptions if I use on demand, but what is the
+  requirement most cost-effective? Do you see this term here cost effective? So,
+  if I choose on demand all the time, it is not cost effective. Purchase dedicated
+  host super expensive. Why would I go for dedicated host? The entire hardware is
+  given to you which means super costly. What is the best option here? Savings
+  plan. You would go for savings plan for the baseline, that means for the entire
+  month. And whenever there is spike, During that time, you will go for your, on
+  demand, on demand. Is that clear? Is that clear? So the correct option here is
+  option B.
+  You mean we choose the seven plan not on demand, because it's cheaper.
+  Yes, savings plan. What do we know? It gives you around. 60% not 60. I would say
+  65 to 70 percent discount. Is that clear? You all of you knows this savings plan
+  will give you 65 to 70%. Discount compared to your on-demand. Is this clear to
+  everyone?
+  Sharanya? What I forget about that on demand instances. Can you give us example?
+  Yes, you want what?
+  On Demand instances.
+  You want example when to use on demand?
+  Okay, first of all, when I say savings plan or when I say, let's say savings
+  plan. Or your reserved instance. What are they doing? When I do the savings plan
+  or reserved instance, I am fixing the number of ec2s. For example, let's say I
+  need three 32 easy to instances for three years. Just an example, okay. For
+  three years, I need 32 easy to instance, but at some point of time, let's say
+  you are having a website and during Christmas. The number of request for your
+  website is extremely high and 32 instances, not sufficient for you. During that
+  time, when, you know, that, the incoming request cannot be predicted and the
+  incoming request cannot be suffered within the Reserved instance limit only
+  during that time, you would go for on demand. so basically what happens if a
+  company is hosting a website during their offer period during some festivals
+  Okay, or during summer break, or during your Christmas time Easter time, they
+  would always go for on-demand option. So now if you see 32 instances are here
+  that that we have chosen is most it mostly comes under reserved instance, rest
+  whatever you keep adding for example let's say except 32 I have chosen extra ATC
+  to instance, this extra a Tc2 will come under on demand. Is that clear?
+  Yes, thank you.
+  I don't know for how long we use and pay as we Use them. Yes on demand. I don't
+  know exactly. Now you see? I am taking this, a extra eight easy to instances.
+  This what I said it is only during festivals during offers during your summer
+  period or during your Christmas. What happens during this time During this time.
+  You don't know how many customers will be accessing your website. You don't know
+  whether they're accessing in the morning time after noon or at midnight. I
+  cannot predict anything here. Probably all of a sudden there is 1 million
+  requests coming to your website. and at midnight, nobody is accessing your
+  website, there can be a fluctuation There can be huge. Fluctuation During that
+  time, we always go for on-demand. Whenever there is a fluctuation and the
+  incoming traffic cannot be predicted. It is always on demand. Is this clear? Any
+  questions so far? No questions. Shall we go on to the next one? Yes, Andrei.
+  How it will? We work in practice? So We will rent. usually, where we are using
+  One server. Yeah. Which one
+  One server. Whatever.
+  The most saving plan. Within saving plan. We use one server. Yeah, easy to
+  install.
+  Arabic Incident in Savings Plan. Is it going to be a single server or a single
+  easy to instance? No, you can ask them. For example, I can go to AWS support
+  team and I can tell them that. I want to savings plan with 70 easy to instances.
+  The number of EC2 instance, depends on your requirement for your company. It can
+  be any number, it doesn't matter.
+  Know, it's like it's like a Kubernetes. Yeah the more a lot, we have the more
+  The number of parts, exactly.
+  instances media
+  Exactly in Kubernetes you have the number of parts. So you set the number of
+  pots depending on the incoming request. So whenever the incoming requests
+  increases, you scale the number of parts, correct? The same thing you do here.
+  Instead of scaling. What I do here in savings plan. Already 17 instances are
+  reserved, okay? Or you have already chosen the 70 easy to instances rest. If you
+  want extra 16 Easy to instances. This extra 16 EC2 will come under on demand
+  This is this rule we should to set up set up in somehow in our scripts. Yeah,
+  somewhere in other words,
+  You know, this is not setting up on scripts, this is talking to the support
+  team. Why?
+  it's
+  Why are we talking?
+  Manually.
+  No yeah it is manual only so you have to go and talk to your support team. If
+  there is AWS support you have to go and tell AWS support and you have to choose
+  the savings plan. Why? Because they are the ones who are giving you offers There
+  is something called as up front cost. Does anyone know what is an upfront cost?
+  I've already explained it to you up front cost. On up front payment. What does
+  it mean? Yes, Khadim.
+  but,
+  The many that people. Yeah.
+  Pay in advance, exactly.
+  In advance.
+  So basically it is like now you see you, you want 70 easy to instances. So if
+  you go to savings, if you go to your support team and you say that you will be
+  doing up front payment of let's say 10,000 euros. Probably they might give you
+  more discount. Next. What does that? What happens? Khadim is there. He also
+  wants 70 Easy to instance and he will say He will only pay 500 euros up front
+  cost. He will get less discount. There is someone else for example Sharanya and
+  Sharanya will pay the whole payment like 25,000 euros for the entire three
+  years. I will get maximum discount of around 70%. The more advanced payment that
+  you do it is better for the AWS people because they already have the cost or
+  they already have the payment with them. So it totally depends on your whether
+  you want to use the 70 easy, to instance, for the whole time or not. Who will do
+  this upfront cost at the beginning those company who are firm in knowing that
+  all the instances will be used. Always only, they will do this up front payment
+  and they will get maximum discount. For example, like Deloitte or your boss,
+  what do they do? They know that they are very big companies and you generally,
+  they go for this. Reserved plan or savings plan. For example, let's say they
+  want 105 EC to instances They already know yesterday. I also taught you about
+  what organizations AWA organizations. so here, if they will generally choose
+  this 105 easy to instance, under reserved instance and
+
+[11:24]
+  --- Meeting ended ---
+
+[11:47]
+  --- logged in ---
+
+[11:48]
+  So most of you are choosing Option, C. Look at the question. What happens when a
+  EC2 spot instance is interrupted? Spot instance is interrupted. This time, I
+  mentioned the moment, your bidding, someone else bits more than you, what
+  happens? Your instance will be terminated for you from you within two minutes.
+  That you will get a notice period of only two minutes within which your instance
+  will be interrupted. Is this clear? Any doubt that is why people going to spot
+  instance, they think multiple times it is not just about the cost. Cost
+  Obviously it is cheap, okay but reliability that matters a lot, right?
+  Reliability plays a vital role. Why you host in your website in this part
+  instance and immediately, someone bits more than you, what happens? The instance
+  will be taken back from you and it will be given to someone else. Correct,
+  whatever work that you were running in. That instance, it has to be interrupted.
+  It will be terminated. Imagine you have a spot instance and multiple people. You
+  are hosting a website in Smart. Instance, Let us consider like that. You have a
+  website here. And multiple people are connecting. They are actually sprawling.
+  Imagine that you Zolando. Zolando company is using spot instance, okay? You are
+  going to their website, you're scrolling because they have some offer and
+  immediately Sharanya comes into picture and she bits more. So, let's say, I a
+  bit like 50 euro per hour what happens? This part instance is given to me, What
+  is that it, No, The user who was actually accessing. This pot instance will
+  start getting this 404 error. Server not found. Have you guys ever seen this 404
+  error server? Not found server not sometimes you get this 403 server, not
+  reachable. See anything in 400 quotes. Anything in 400 ports. That means your
+  server. You're not able to access your website, anything in 400? There are
+  different values for each food, okay? But just a simple thing that you can
+  understand is anything, in your 400 sport is basically nothing, but you are not
+  able to access it. Okay, but here. See immediately they will get a 404 saying
+  Server, not found 403 server, not reachable why. Because now, this Part instance
+  is given to someone else. Understood. Okay, let's go on to the next one. So most
+  of you are choosing Option. A, what is the full form of AMI?
+
+[11:54]
+  Emerson machine image.
+  What is this useful for? What is this do? What is it?
+  name of instance, for example, Linux Windows
+  No.
+  It's a template for our EC2 instance.
+  Per second, it's a template. When I say template, what does it have?
+  Printing system. Configuration of softness.
+  So far. Very, very good it. When I say template, it has operating system, it has
+  software. It has files, it has applications, Let's app. It has everything that
+  you want. Can I use the same ami every time? Yes. Use it repeatedly. Use the
+  same here. My what's the problem? if you guys remember, I had given you a very
+  good example that Imagine. there is a company like Xiaomi or HP laptop or your
+  Lenovo do you think the configure every laptop individually Do you think they
+  keep updating every laptop? For example, imagine before giving you your laptop
+  they launched. I mean they installed Google Chrome, They installed files and
+  folder manager or operating system like Windows 11 individually for every
+  laptop. No, it is something called as bulk production. They want to do this bulk
+  production, they will not be upgrading or updating individual systems. It's
+  something like Imagine you are buying a Samsung phone. Okay, you're buying some
+  Samsung phone. Need Not Be Samsung iPhone, Let us take iPhone, which is very
+  famous. You are buying an iPhone, and when you purchase the iPhone, or any
+  phone, for the very first time, what happens? You see? So many softwares are
+  there. Correct. And the most of the time, what happens? Whether you buy iPhone,
+  14, iPhone 15 iPhone 16 doesn't matter which series you're buying. You see
+  common set of software in all the series. Have you guys observed it? You see
+  Instagram, you see camera, you see Google Chrome, you see, gallery photos.
+  ICloud. Whatsapp. There is a set of application which is common no matter with
+  series of phone that you are using. Right, who installed it? Company installed.
+  Okay. Does that mean that they're installing in each phone individually? No. If
+  that was the case, then your iPhone would have been like thousand five hundred
+  euros or two thousand euros. You could have been somewhere, 10,000 euros. If
+  they had to manufacture specific phone individually, then the cost of the four
+  would have been super high. instead, what they do, they create a template And
+  even now you can go to iPhone, I showroom and you can also buy a phone which is
+  probably iPhone 13. How are they launching the old model? Phones as well?
+  Simple. They have a template. That the same template will be used in 16. Same
+  template is used in 15. 14. 13. What is different? Probably your camera quality
+  is different. Your touchscreen quality is different. The shape of your phone is
+  different, the number of cameras are different. Basically, they are changing the
+  physical appearance of your phone, not your processing thing. Sometimes they
+  would also include or they would upgrade the processor. Also. Okay. So most of
+  the time, like not, I wouldn't, I wouldn't say in every release. There is an
+  upgrade in the processor but at least every alternate release the processor
+  upgrade will be there. But the set of application is still constant. Set of
+  applications are still constant. Is this clear? So a company needs the same easy
+  to instance, configuration repeatedly. Basically, it is like telling a company
+  wants to purchase or launch or manufacture thousand Lenovo laptops. What is the
+  best way? Create a template reuse it. What is the template among all the five?
+  So all the four ami is the template. Is this clear? So, the correct option is
+  AMI any doubts. See while doing our mcqs. We are also going through all the
+  concepts pertaining to EC2 is this clear? Yes, easy.
+
+[11:56]
+  I just don't understand. So the template is being copied to multiple instances.
+  Perfect.
+  For example. What are the instances? I said, for example, a company wants
+  company wants to
+  And then what are they? Yeah. What are the instances actually?
+  That.
+
+[11:57]
+  For example. What are the instances I said, for example, a company wants company
+  wants to
+  M.
+  launch or let us say, we spoke about reserved instances and savings plan, Right?
+  So let's say a reserved instance, and a company wants some 30 easy to instances
+  to launch their website. 30, Same or similar easy to instances with all the
+  common programs. Do you think
+  launch or let us say, we spoke about reserved instances and savings plan, Right?
+  So let's say a reserved instance, and a company wants some 30 easy to instances
+  to launch their website. 30, Same, or similar easy to instances with all the
+  common programs. Do you
+  where,
+  think you will keep launching each easy to instance individually? No, I will
+  take money. Am I in this? Am I operating? System is fixed? Software is fixed.
+  Files are fixed. I'll take this AMI and I will start launching instance, one
+  instance, 2 instance, 3. And instead of 30
+  The question is, Where do you launch? It where is it? Where is it being running?
+  When we launched in a particular availability zone, see AMI is a template that
+  is fixed to one AZ, one availability zone. Okay, I can use this template from
+  one availability zone and I can launch instances in the same easy.
+  Is this clear? Yes, perfect.
+
+[11:58]
+  Hmm, okay, so it's like multiple ec2s in the same areas of
+  Okay. So the IP is fixed IP that is given to your very where are you giving it?
+  It is given to your account. You can use this IP anytime you can. Basically,
+  anytime you want, you can assign this IP to your EC2 instance. Is this clear?
+  Our DCA provide complete free Mcq practice questions. No, there is nothing
+  called whatever I'm doing in the class. That is what is
+
+[11:59]
+  There is one template. Consider it like this. There is one template in Germany,
+  and the same template is used to launch lots of laptops, only within Germany.
+  You might ask What if I want to launch the same instance in India. Simple copy.
+  This. Ami Now, EMI is in, let's say, one availability is on EU central one. one
+  it now I want to launch an instance in EU Central 1B. I want to launch an EU
+  central one. Be, How can I launch? I already have an AMI. I will make a copy of
+  this, so am I copy? I'll take the CMI and I will launch easy to instance in.
+  Central 1B availability zone. So your copying your AMI from one AC to another AC
+  Any notes. What is elastic IP.
+  Not change when instant stop.
+  Terminated and stopped both.
+  Stop.
+
+[12:00]
+  Okay. So the IP is fixed IP that is given to your very where are you giving it?
+  It is given to your account. You can use this IP anytime you can. Basically,
+  anytime you want, you can assign this IP to your EC2 instance. Is this clear?
+  Our DCA provide complete free Mcq practice questions. No, there is nothing
+  called whatever I'm doing in the class that is What is your practice thing. And
+  on your QA platform There is one I think one practice test pertaining to your
+  solutions architect and one practice test pertaining to your cloud practitioner
+  and also regarding the terraform, We will only be able to do that practice test
+  at the end of the module. Okay, DCA is not giving you any practice tests. So,
+  that is why we are covering when whenever possible. I am covering the
+  Okay. So the IP is fixed IP that is given to your very where are you giving it?
+  It is given to your account. You can use this IP anytime you can. Basically,
+  anytime you want, you can assign this IP to your EC2 instance. Is this clear?
+  Our DCA provide complete free Mcq practice questions. No, there is nothing
+  called whatever I'm doing in the class that is What is your practice thing. And
+  on your QA platform There is one I think one practice test pertaining to your
+  solutions architect and one practice test pertaining to your cloud practitioner
+  and also regarding the terraform, We will only be able to do that practice test
+  at the end of the module. Okay, DCA is not giving you any practice tests. So,
+  that is why we are covering when whenever possible. I'm covering the Mcqs the
+  more and more mcqs we do in the class. It is better for you to understand the
+  topics and also practice for your exam. Here. Okay, before we end just tell me
+  what is Ebs, snapshot?
+  Spec up.
+  Backup of what?
+  From the data.
+  Data of what EBS?
+  Makeup of VBS.
+  oh, Where do you store it?
+  Yeah.
+  S3 bucket.
+  Super.
+
+[12:02]
+  Super S3 is the service where I will be storing my backup. So when I create a
+  snapshot, how do I restore it? Snapshot is a backup. I will store it in. Yes.
+  Another EPS.
+  Perfect. So what I do, I go to another easy. Remember restoring will not be
+  gently if you want. You can also do it in the same easy or you can also do it in
+  a different age. Now, let us consider in a different days. Okay, let's say this
+  is easy one. Now, I will go to a different is easy to. I will restore for me to
+  restore, I will create one, EBS volume here. And inside this, I will study store
+  all the data. Is this clear? This is called as restoring restoring is happening
+  from S3 into another availability zone, any doubts. No doubts. Okay. If there
+  are no doubts, tomorrow we will do some exercises or mcqs on EBS, some exercises
+  on placement group Mcqs and some next questions on S3. So this is the topic for
+  tomorrow. Any questions pertaining to these? You can send me the questions
+  tonight so that I can also be prepared for you guys, okay? Tomorrow, we will be
+  doing S3, EBS and placement groups so that we will be done with the whole basic
+  services. So, from Monday onwards, we can start with Terraform Is this clear?
+  Any doubts. No doubts, right? okay, then So I've already stopped the recording.
+  We'll end the session for today yet. Someone
+  I have a question regarding the terraform, do you know, do you have a syllabus
+  or something?
+  Terraform.
+  What to cover? Yeah.
+  Yeah, I will try I think I've already shared the learning modules. Have you guys
+  gone through? First of all, who has seen the git rep of
+  Are you?
+  If you consistency repository properly, there is something called as learning
+  goals. The.
+
+[12:03]
+  *** ALERT [izi]: Sharanya Prasad: "If you consistency repository properly, there
+  is something called as learning goals. The very first line in your readme file
+  is the learning goals where in your AWS one module in AWS one module from Week 6
+  to Week 10 We are I think sorry from week 7 to Week 10 we are dedicated for
+  terraform where you have the whole curriculum of terraform. Please go to the git
+  repo and check. Is that clear? If not, I will also share the link with you on
+  the slack. You can also go through the learning goals there. Okay, those who
+  hasn't created. Yeah. Easy as anyways. Shared the link here. Perfect! Thank you.
+  Izi. Yes Mohammad."
+  If you consistency repository properly, there is something called as learning
+  goals. The very first line in your readme file is the learning goals where in
+  your AWS one module in AWS one module from Week 6 to Week 10 We are I think
+  sorry from week 7 to Week 10 we are dedicated for terraform where you have the
+  whole curriculum of terraform. Please go to the git repo and check. Is that
+  clear? If not, I will also share the link with you on the slack. You can also go
+  through the learning goals there. Okay, those who hasn't created. Yeah. Easy as
+  anyways. Shared the link here. Perfect! Thank you. Izi. Yes Mohammad.
+  I want to ask on which time we will start tomorrow.
+
+[12:05]
+  Tomorrow again, it's after 9:30 only, I have a meeting. The reason why we have,
+  I have a meeting is because DCI is planning to make me. And I there's an exam
+  called as authorized AWS Instructor AI. Okay, we'll get a badge. From AWS. As an
+  authorized instructor. Okay, for that. We are prep. I'm preparing myself and I'm
+  having continuous calls with the AWS team on how to take up this exam. There is
+  actually a four month course that a teacher has to take this course. Okay, so if
+  I take this, if I get this patch, I can start my own course. Basically, it is
+  like I'm a certified solutions architect Teacher my AWS, okay. So I am planning
+  to take this course so it will the course will go for like four months four to
+  eight months or something like that. So we are on daily calls about that is that
+  clear? So we have one call tomorrow. That's the reason the class will start
+  late. Anyways, tomorrow also we will be having revision session so I will share
+  some mcqs with you before I come to the class. So in case if you guys get up
+  early at nine o'clock 9 to 9:30 Please take time to go through your NC kids.
+  Okay. If not no problem, enjoy your extra half in our sleep and as usual we will
+  start at 9:45.
+  Oh, Sharanya.
+  Yes.
+  the Mcq via this link, we can see only 10 Mcq and when I click Next Question,
+  then Comcast You know, exam topics.
+  ah,
+  Where in Exam Topics, Okay? I will tell you how to use exam topics because exam
+
+[12:06]
+  topics place. It's a, It's a tricky website actually. After 10 questions, you'll
+  not be able to go press, you will not be able to proceed after 10 questions.
+  Have you guys seen this? First 10 questions, you can easily actually access, but
+  after 10 questions, you'll not be able to go further. I will show you to you
+  tomorrow. How to access that exam topics. Okay. And also I will share your
+  couple of YouTube Videos, Practice Test, YouTube videos. There are some Online
+  materials which were active last year. I'm not sure if they still have it active
+  because some of the practice tests, they expect you to subscribe, you need to
+  pay some amount I will find out free tests that are there on YouTube, where they
+  also explain the question, and also the options. Okay, you can go through those
+  practice tests a lot, it would be more helpful for you. Okay.
+  So inform, you have today, language course, in his IOP. Yes.
+
+[12:07]
+  You have a language course today. Who has language course, how many of you have
+  language course? Guys just inform me before you go to your language course
+  because I don't want randomly to mark you guys absent. Okay, so one of you, one
+  of you from your class, take the names of all the students who are going to the
+  language class and send it to me on Snap. Is that clear? Take an initiative,
+  collect all the names and send the names of the students who are going to learn
+  language class. And from what period, to which period, what is the time slot?
+  Will not be there in the Okay. And what do you have today and tomorrow you are
+  completing all the QA platform. Remember guys, QA platform. Sometimes your job
+  center, your officer will be seeing your QL apps. Okay, so my recommendation,
+  finish it as much as possible. I've seen most of you have completed, for
+  example, Minim Niyanta.
+  You have a language course today. Who has language course, how many of you have
+  language course? Guys just inform me before you go to your language course
+  because I don't want randomly to mark you guys absent. Okay, so one of you, one
+  of you from your class, take the names of all the students who are going to the
+  language class and send it to me on Snap. Is that clear? Take an initiative,
+  collect all the names and send the names of the students who are going to learn
+  language class. And from what period, to which period, what is the time slot?
+  Will not be there in the Okay. And what do you have today and tomorrow you are
+  completing all the QA platform. Remember guys, QA platform. Sometimes your job
+  center, your officer will be seeing your QL apps. Okay, so my recommendation,
+  finish it as much as possible. I've seen most of you have completed, for
+  example, Mini Niyanta. Go through the contents that are there in QA. Is this
+  clear? From you mean the labs from KIRO. Okay, I can try.
+
+[12:08]
+  A sharanya. Can you please delete the other one in QA from KIRO. Yeah.
+  Okay, I can.
+  Thanks.
+
+[16:21]
+  --- Meeting ended ---
