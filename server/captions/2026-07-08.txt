@@ -1489,3 +1489,1917 @@
   Then how did the EC2 instance get created? Where was this created? Where did we
   create?
   Default.
+
+[09:45]
+  Any doubts. Is this clear to everyone? Shall I proceed? So what is the second
+  command? Okay, before I go to the second command, tell me whether is this
+  terraform in it a mandatory command or not. Can I skip terraform in it?
+  Meditating. No.
+  Mandatory. Exactly. So terraform in it is a mandatory command. It is a mandated.
+  Why without me executing terraform in it you will not be able to give
+  information to your terraform about the provider, right? So somehow I have to
+  tell which provider you want to use, that is only possible with the help of
+  terraform in it. Clear, I cannot skip this in it. okay, remember, Terraform in
+  it is executed in the every folder where you are having your code, That
+  particular folder should have your plugin only. Then you'll be able to execute
+  the code. It is not like you execute terraform in it once in a day and you can
+  keep creating templates. No. If the init has this dot terraform folder in the
+  current working directory, then you don't need to execute the init. This dot,
+  terraform folder should be there in your present, working directory, PWD. but as
+  into working directory or current working directory, Clear, okay, so next is
+  what your terraform plan. Right. There for plan. What is the need of terraform
+  plan? What do you get as an output when you execute this command?
+  Execution plan. Very important. So when I say terraform plan, next question,
+  will it actually create a service on your cloud? Does it does Terraform plan
+  command execute a service on the cloud? Think and tell me. No.
+  No.
+  Is there anyone who says yes.
+  No, it just shows. The difference between
+  The plan.
+  Between cloud and computer or local.
+  So basic it's it's not the difference. Basically, what it does is when you go to
+  There's another step when we try to update the existing infrastructure during
+  that time, it will tell what is the difference between the service on the cloud
+  and the code that you have written But generally, what does your terraform plan?
+  Do it tells you how your service is going to get created? What are the values
+  for different feature or different characters? Of that particular service.
+  Clear. It will not create any service. Very, very important thing. Will not.
+  Create any service. Basically, it will not create update or delete. It doesn't
+  do anything. This is only for the developer.
+  Isn't it?
+  To know.
+  Mad.
+  Yes. Yes, a basic GIT status. If you have seen GIT status, what does GIT status
+  do, get status will tell. Like What are the files that have not been uploaded or
+  what are the new files? Correct here in Terraform plan. It doesn't tell you
+  about new files or new features. It tells for example, if I want to set up S3,
+  what are all the features pertaining to S3 like Access Control List? Your IAM
+  permission bucket, policies tags everything. Clear. So it is only used for the
+  developers to know. The. Features of the service. For example, if you're setting
+  up the service, how does the output look like that details? You'll get to know
+  when you run the terraform plan, but remember it will not create modify or
+  delete any service. It is just the plan, given for the developer to know how it
+  is going to be executed. Please keep this in mind. Okay, next question. Is it a
+  mandatory command? It is. An optional. Command. It's an optional command. Can
+  you skip it for sure. You don't need to run Tarot terraform plan all the time.
+  When do you run Terraform plan? You generally run terraform plan when you have a
+  lot of architecture or basically a lot of service that you want to deploy. and
+  not just that when you have a set of services, which there are already deployed
+  and you want to do small updates, To the existing architecture. During that
+  time, we run this terraform plan to give us more details. But what is going to
+  change how it is going to be implemented? Clear. So only during modification
+  only during updates. The developers generally run this terraform plan, Clear.
+  Okay, or when you have a lot of service that needs to be deployed. For example,
+  when you're setting up an architecture which has around 15 to 20 services
+  getting the time, you want to know how the services are linked, how is it going
+  to get created every details? You can get to know but terraform plan. And
+  remember today, we will do multi-resource. the task for today or the concept
+  that we will be covering today is Multi resource. Template. Okay, multi resource
+  template will be creating where we will create a VPC and we will create subnets
+  and all the services within the subnet, etc, etc. So when I do this
+  multi-resource, we can get to know when I run terraform plan. How are these
+  resources connected? How are these resources? Linked every details. I will be
+  able to know. Fine. Okay next. What is the next command?
+  Data from a play.
+  Apply. What is this do?
+  Is create.
+  It creates the service, okay? It creates Updates. The service. Correct. It
+  creates updates the service, anything else?
+  Execute.
+  Execution. Okay. It basically creates or it exits? Yes. What else?
+  It shows you. Chose the plan and asked you for confirmation. To execute.
+  Okay, very good. Very good plan is showed first. and then, Asks, for
+  confirmation. What else? Very important point, you guys are missing. How does
+  your current working directory change? yes, Mohammad Perfect. Very, very
+  important file. What is the file called as it is called as tera form? But TF
+  state file What is the terraform dft of state? What does it have? What did you
+  see in the TF state file? Yesterday, we opened and we checked something right?
+  What is there? So, basically status of the resources, you'll be able to find,
+  for example, if the resources running, or if the resource is terminated, if the
+  TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+
+[09:46]
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  I got this.
+  Internet.
+  That particular folder should have your plugin only. Then you'll be able to
+  execute the code. It is not like you execute terraform in it once in a day and
+  you can keep creating templates. No. If the init has this dot terraform folder
+  in the current working directory, then you don't need to execute the init. This
+  dot, terraform folder should be there in your present, working directory, PWD.
+  but as into working directory or current working directory, Clear, okay, so next
+  is what your terraform plan. Right. There for plan. What is the need of
+  terraform plan? What do you get as an output when you execute this command?
+  Execution plan. Very important. So when I say terraform plan, next question,
+  will it actually create a service on your cloud? Does it does Terraform plan
+  command execute a service on the cloud? Think and tell me. No.
+  No.
+  Is there anyone who says yes.
+  No, it just shows. The difference between
+  The plan.
+  Between cloud and computer or local.
+  So basic it's it's not the difference. Basically, what it does is when you go to
+  There's another step when we try to update the existing infrastructure during
+  that time, it will tell what is the difference between the service on the cloud
+  and the code that you have written But generally, what does your terraform plan?
+  Do it tells you how your service is going to get created? What are the values
+  for different feature or different characters? Of that particular service.
+  Clear. It will not create any service. Very, very important thing. Will not.
+  Create any service. Basically, it will not create update or delete. It doesn't
+  do anything. This is only for the developer.
+  Isn't it?
+  To know.
+  Mad.
+  Yes. Yes, a basic GIT status. If you have seen GIT status, what does GIT status
+  do, get status will tell. Like What are the files that have not been uploaded or
+  what are the new files? Correct here in Terraform plan. It doesn't tell you
+  about new files or new features. It tells for example, if I want to set up S3,
+  what are all the features pertaining to S3 like Access Control List? Your IAM
+  permission bucket, policies tags everything. Clear. So it is only used for the
+  developers to know. The. Features of the service. For example, if you're setting
+  up the service, how does the output look like that details? You'll get to know
+  when you run the terraform plan, but remember it will not create modify or
+  delete any service. It is just the plan, given for the developer to know how it
+  is going to be executed. Please keep this in mind. Okay, next question. Is it a
+  mandatory command? It is. An optional. Command. It's an optional command. Can
+  you skip it for sure. You don't need to run Tarot terraform plan all the time.
+  When do you run Terraform plan? You generally run terraform plan when you have a
+  lot of architecture or basically a lot of service that you want to deploy. and
+  not just that when you have a set of services, which there are already deployed
+  and you want to do small updates, To the existing architecture. During that
+  time, we run this terraform plan to give us more details. But what is going to
+  change how it is going to be implemented? Clear. So only during modification
+  only during updates. The developers generally run this terraform plan, Clear.
+  Okay, or when you have a lot of service that needs to be deployed. For example,
+  when you're setting up an architecture which has around 15 to 20 services
+  getting the time, you want to know how the services are linked, how is it going
+  to get created every details? You can get to know but terraform plan. And
+  remember today, we will do multi-resource. the task for today or the concept
+  that we will be covering today is Multi resource. Template. Okay, multi resource
+  template will be creating where we will create a VPC and we will create subnets
+  and all the services within the subnet, etc, etc. So when I do this
+  multi-resource, we can get to know when I run terraform plan. How are these
+  resources connected? How are these resources? Linked every details. I will be
+  able to know. Fine. Okay next. What is the next command?
+  Data from a play.
+  Apply. What is this do?
+  Is create.
+  It creates the service, okay? It creates Updates. The service. Correct. It
+  creates updates the service, anything else?
+  Execute.
+  Execution. Okay. It basically creates or it exits? Yes. What else?
+  It shows you. Chose the plan and asked you for confirmation. To execute.
+  Okay, very good. Very good plan is showed first. and then, Asks, for
+  confirmation. What else? Very important point, you guys are missing. How does
+  your current working directory change? yes, Mohammad Perfect. Very, very
+  important file. What is the file called as it is called as tera form? But TF
+  state file What is the terraform dft of state? What does it have? What did you
+  see in the TF state file? Yesterday, we opened and we checked something right?
+  What is there? So, basically status of the resources, you'll be able to find,
+  for example, if the resources running, or if the resource is terminated, if the
+  TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+
+[09:47]
+  Yes, leave it off.
+  Very important. So when I say terraform plan, next question, will it actually
+  create a service on your cloud? Does it does Terraform plan command execute a
+  service on the cloud? Think and tell me. No.
+  No.
+  Is there anyone who says yes.
+  No, it just shows. The difference between
+  The plan.
+  Between cloud and computer or local.
+  So basic it's it's not the difference. Basically, what it does is when you go to
+  There's another step when we try to update the existing infrastructure during
+  that time, it will tell what is the difference between the service on the cloud
+  and the code that you have written But generally, what does your terraform plan?
+  Do it tells you how your service is going to get created? What are the values
+  for different feature or different characters? Of that particular service.
+  Clear. It will not create any service. Very, very important thing. Will not.
+  Create any service. Basically, it will not create update or delete. It doesn't
+  do anything. This is only for the developer.
+  Isn't it?
+  To know.
+  Mad.
+  Yes. Yes, a basic GIT status. If you have seen GIT status, what does GIT status
+  do, get status will tell. Like What are the files that have not been uploaded or
+  what are the new files? Correct here in Terraform plan. It doesn't tell you
+  about new files or new features. It tells for example, if I want to set up S3,
+  what are all the features pertaining to S3 like Access Control List? Your IAM
+  permission bucket, policies tags everything. Clear. So it is only used for the
+  developers to know. The. Features of the service. For example, if you're setting
+  up the service, how does the output look like that details? You'll get to know
+  when you run the terraform plan, but remember it will not create modify or
+  delete any service. It is just the plan, given for the developer to know how it
+  is going to be executed. Please keep this in mind. Okay, next question. Is it a
+  mandatory command? It is. An optional. Command. It's an optional command. Can
+  you skip it for sure. You don't need to run Tarot terraform plan all the time.
+  When do you run Terraform plan? You generally run terraform plan when you have a
+  lot of architecture or basically a lot of service that you want to deploy. and
+  not just that when you have a set of services, which there are already deployed
+  and you want to do small updates, To the existing architecture. During that
+  time, we run this terraform plan to give us more details. But what is going to
+  change how it is going to be implemented? Clear. So only during modification
+  only during updates. The developers generally run this terraform plan, Clear.
+  Okay, or when you have a lot of service that needs to be deployed. For example,
+  when you're setting up an architecture which has around 15 to 20 services
+  getting the time, you want to know how the services are linked, how is it going
+  to get created every details? You can get to know but terraform plan. And
+  remember today, we will do multi-resource. the task for today or the concept
+  that we will be covering today is Multi resource. Template. Okay, multi resource
+  template will be creating where we will create a VPC and we will create subnets
+  and all the services within the subnet, etc, etc. So when I do this
+  multi-resource, we can get to know when I run terraform plan. How are these
+  resources connected? How are these resources? Linked every details. I will be
+  able to know. Fine. Okay next. What is the next command?
+  Data from a play.
+  Apply. What is this do?
+  Is create.
+  It creates the service, okay? It creates Updates. The service. Correct. It
+  creates updates the service, anything else?
+  Execute.
+  Execution. Okay. It basically creates or it exits? Yes. What else?
+  It shows you. Chose the plan and asked you for confirmation. To execute.
+  Okay, very good. Very good plan is showed first. and then, Asks, for
+  confirmation. What else? Very important point, you guys are missing. How does
+  your current working directory change? yes, Mohammad Perfect. Very, very
+  important file. What is the file called as it is called as tera form? But TF
+  state file What is the terraform dft of state? What does it have? What did you
+  see in the TF state file? Yesterday, we opened and we checked something right?
+  What is there? So, basically status of the resources, you'll be able to find,
+  for example, if the resources running, or if the resource is terminated, if the
+  TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+  Yes, leave it off.
+  Okay, I see so many of you guys are speaking one moment. Hmm. Now, can anyone
+  speak?
+  Hello.
+  Hello, hello.
+  Don't you hear us?
+  Okay, I think I'm Everybody speaking now, cool.
+  Everybody speaking.
+  Okay. so, For a VPC. What is needed? A cider block is needed. Correct? Next. I
+  need to create what. A subnet. What is a subnet? Khadim, What Is a Subnet?
+
+[09:49]
+  features. It tells for example, if I want to set up S3, what are all the
+  features pertaining to S3 like Access Control List? Your IAM permission bucket,
+  policies tags everything. Clear. So it is only used for the developers to know.
+  The. Features of the service. For example, if you're setting up the service, how
+  does the output look like that details? You'll get to know when you run the
+  terraform plan, but remember it will not create modify or delete any service. It
+  is just the plan, given for the developer to know how it is going to be
+  executed. Please keep this in mind. Okay, next question. Is it a mandatory
+  command? It is. An optional. Command. It's an optional command. Can you skip it
+  for sure. You don't need to run Tarot terraform plan all the time. When do you
+  run Terraform plan? You generally run terraform plan when you have a lot of
+  architecture or basically a lot of service that you want to deploy. and not just
+  that when you have a set of services, which there are already deployed and you
+  want to do small updates, To the existing architecture. During that time, we run
+  this terraform plan to give us more details. But what is going to change how it
+  is going to be implemented? Clear. So only during modification only during
+  updates. The developers generally run this terraform plan, Clear. Okay, or when
+  you have a lot of service that needs to be deployed. For example, when you're
+  setting up an architecture which has around 15 to 20 services getting the time,
+  you want to know how the services are linked, how is it going to get created
+  every details? You can get to know but terraform plan. And remember today, we
+  will do multi-resource. the task for today or the concept that we will be
+  covering today is Multi resource. Template. Okay, multi resource template will
+  be creating where we will create a VPC and we will create subnets and all the
+  services within the subnet, etc, etc. So when I do this multi-resource, we can
+  get to know when I run terraform plan. How are these resources connected? How
+  are these resources? Linked every details. I will be able to know. Fine. Okay
+  next. What is the next command?
+  Data from a play.
+  Apply. What is this do?
+  Is create.
+  It creates the service, okay? It creates Updates. The service. Correct. It
+  creates updates the service, anything else?
+  Execute.
+  Execution. Okay. It basically creates or it exits? Yes. What else?
+  It shows you. Chose the plan and asked you for confirmation. To execute.
+  Okay, very good. Very good plan is showed first. and then, Asks, for
+  confirmation. What else? Very important point, you guys are missing. How does
+  your current working directory change? yes, Mohammad Perfect. Very, very
+  important file. What is the file called as it is called as tera form? But TF
+  state file What is the terraform dft of state? What does it have? What did you
+  see in the TF state file? Yesterday, we opened and we checked something right?
+  What is there? So, basically status of the resources, you'll be able to find,
+  for example, if the resources running, or if the resource is terminated, if the
+  TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+  Yes, leave it off.
+  Okay, I see so many of you guys are speaking one moment. Hmm. Now, can anyone
+  speak?
+  Hello.
+  Hello, hello.
+  Don't you hear us?
+  Okay, I think I'm Everybody speaking now, cool.
+  Everybody speaking.
+  Okay. so, For a VPC. What is needed? A cider block is needed. Correct? Next. I
+  need to create what. A subnet. What is a subnet? Khadim, What Is a Subnet?
+  Subnative.
+  Why can't I hear? Let me rejoin, guys. Give me a second.
+  Okay, I'm back. So let me share my screen. Now it should be good. Let's see. I
+  had to quickly go and check on YouTube. What was the problem? if I was able to
+  hear some YouTube videos, Okay, I'm back. so, We were talking about your VPC,
+  right? So today we'll be creating a custom VPC Okay. And next inside the VPC, I
+  will be creating my subnet. The subnet need a cider block.
+
+[09:50]
+  It is. An optional. Command. It's an optional command. Can you skip it for sure.
+  You don't need to run Tarot terraform plan all the time. When do you run
+  Terraform plan? You generally run terraform plan when you have a lot of
+  architecture or basically a lot of service that you want to deploy. and not just
+  that when you have a set of services, which there are already deployed and you
+  want to do small updates, To the existing architecture. During that time, we run
+  this terraform plan to give us more details. But what is going to change how it
+  is going to be implemented? Clear. So only during modification only during
+  updates. The developers generally run this terraform plan, Clear. Okay, or when
+  you have a lot of service that needs to be deployed. For example, when you're
+  setting up an architecture which has around 15 to 20 services getting the time,
+  you want to know how the services are linked, how is it going to get created
+  every details? You can get to know but terraform plan. And remember today, we
+  will do multi-resource. the task for today or the concept that we will be
+  covering today is Multi resource. Template. Okay, multi resource template will
+  be creating where we will create a VPC and we will create subnets and all the
+  services within the subnet, etc, etc. So when I do this multi-resource, we can
+  get to know when I run terraform plan. How are these resources connected? How
+  are these resources? Linked every details. I will be able to know. Fine. Okay
+  next. What is the next command?
+  Yes.
+
+[09:51]
+  Perfect. I can hear you guys. I'm so happy. Good. Yes. Even your subnet requires
+  a cider. Okay, so let us say it is a public subnet. If it is a public subnet,
+  what all do you need?
+  Gateway.
+  getting the time, you want to know how the services are linked, how is it going
+  to get created every details? You can get to know but terraform plan. And
+  remember today, we will do multi-resource. the task for today or the concept
+  that we will be covering today is Multi resource. Template. Okay, multi resource
+  template will be creating where we will create a VPC and we will create subnets
+  and all the services within the subnet, etc, etc. So when I do this
+  multi-resource, we can get to know when I run terraform plan. How are these
+  resources connected? How are these resources? Linked every details. I will be
+  able to know. Fine. Okay next. What is the next command?
+  Internet Gateway, right. So you need an Internet gateway. So let us draw an
+  Internet gateway here. So I need an Internet gateway. What else? Just Internet
+  Gateway. I told I want a public subnet. It's right, public subnet.
+  Republic IP.
+  Public ip. Okay, public ip is given for what? It is given for the instance that
+  you create within this cider. You don't give public IP directly to the cider. Or
+  to the subnet.
+  The route.
+  Router.
+  Table.
+  Routing.
+  Okay, very good. Very good. So, basically, I need a root table. Very nice.
+
+[09:52]
+  Okay. And what else do you need? Route table is given. Remember guys route table
+  is given for all the subnet? It's not only for the public subnet. even if you
+  have a private subnet, root table is given What else? Very important. Public
+  subnet. Sorry.
+  And it's here.
+  Is create.
+  It creates the service, okay? It creates Updates. The service. Correct. It
+  creates updates the service, anything else?
+  Execute.
+  Execution. Okay. It basically creates or it exits? Yes. What else?
+  It shows you. Chose the plan and asked you for confirmation. To execute.
+  Okay, very good. Very good plan is showed first. and then, Asks, for
+  confirmation. What else? Very important point, you guys are missing. How does
+  your current working directory change? yes, Mohammad Perfect. Very, very
+  important file. What is the file called as it is called as tera form? But TF
+  state file What is the terraform dft of state? What does it have? What did you
+  see in the TF state file? Yesterday, we opened and we checked something right?
+  What is there? So, basically status of the resources, you'll be able to find,
+  for example, if the resources running, or if the resource is terminated, if the
+  TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+  Yes, leave it off.
+  Okay, I see so many of you guys are speaking one moment. Hmm. Now, can anyone
+  speak?
+  Hello.
+  Hello, hello.
+  Don't you hear us?
+  Okay, I think I'm Everybody speaking now, cool.
+  Everybody speaking.
+  Okay. so, For a VPC. What is needed? A cider block is needed. Correct? Next. I
+  need to create what. A subnet. What is a subnet? Khadim, What Is a Subnet?
+  Subnative.
+  Why can't I hear? Let me rejoin, guys. Give me a second.
+  Okay, I'm back. So let me share my screen. Now it should be good. Let's see. I
+  had to quickly go and check on YouTube. What was the problem? if I was able to
+  hear some YouTube videos, Okay, I'm back. so, We were talking about your VPC,
+  right? So today we'll be creating a custom VPC Okay. And next inside the VPC, I
+  will be creating my subnet. The subnet need a cider block.
+  Yes.
+  Perfect. I can hear you guys. I'm so happy. Good. Yes. Even your subnet requires
+  a cider. Okay, so let us say it is a public subnet. If it is a public subnet,
+  what all do you need?
+  Gateway.
+  Internet Gateway, right. So you need an Internet gateway. So let us draw an
+  Internet gateway here. So I need an Internet gateway. What else? Just Internet
+  Gateway. I told I want a public subnet. It's right, public subnet.
+  Republic IP.
+  Public ip. Okay, public ip is given for what? It is given for the instance that
+  you create within this cider. You don't give public IP directly to the cider. Or
+  to the subnet.
+  The route.
+  Router.
+  Table.
+  Okay, very good. Very good. So, basically, I need a root table. Very nice.
+  Routing.
+  Okay. And what else do you need? Route table is given. Remember guys route table
+  is given for all the subnet? It's not only for the public subnet. even if you
+  have a private subnet, root table is given What else? Very important. Public
+  subnet. Sorry.
+  And it's here.
+  Knuckle knuckle is what? What is knuckle? Who can tell what is knuckle?
+  Virtual firewall.
+  For.
+  For the subnet. Now I don't want a firewall. I want to make my subnet public. In
+  order to make the subnet public, what is needed. What is needed?
+  Not get away.
+
+[09:53]
+  Nat Gateway. When would you use an At Gateway? Nat Gateway is used. Only when
+  your private subnet wants to talk to the Internet.
+  Alright.
+  I have the. Destination, 0 0 ends up.
+  How does your current working directory change? yes, Mohammad Perfect. Very,
+  very important file. What is the file called as it is called as tera form? But
+  TF state file What is the terraform dft of state? What does it have? What did
+  you see in the TF state file? Yesterday, we opened and we checked something
+  right? What is there? So, basically status of the resources, you'll be able to
+  find, for example, if the resources running, or if the resource is terminated,
+  if the TF state has a
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+  Yes, leave it off.
+  Okay, I see so many of you guys are speaking one moment. Hmm. Now, can anyone
+  speak?
+  Hello.
+  Hello, hello.
+  Don't you hear us?
+  Okay, I think I'm Everybody speaking now, cool.
+  Everybody speaking.
+  Okay. so, For a VPC. What is needed? A cider block is needed. Correct? Next. I
+  need to create what. A subnet. What is a subnet? Khadim, What Is a Subnet?
+  Subnative.
+  Why can't I hear? Let me rejoin, guys. Give me a second.
+  Okay, I'm back. So let me share my screen. Now it should be good. Let's see. I
+  had to quickly go and check on YouTube. What was the problem? if I was able to
+  hear some YouTube videos, Okay, I'm back. so, We were talking about your VPC,
+  right? So today we'll be creating a custom VPC Okay. And next inside the VPC, I
+  will be creating my subnet. The subnet need a cider block.
+  Yes.
+  Perfect. I can hear you guys. I'm so happy. Good. Yes. Even your subnet requires
+  a cider. Okay, so let us say it is a public subnet. If it is a public subnet,
+  what all do you need?
+  Gateway.
+  Internet Gateway, right. So you need an Internet gateway. So let us draw an
+  Internet gateway here. So I need an Internet gateway. What else? Just Internet
+  Gateway. I told I want a public subnet. It's right, public subnet.
+  Republic IP.
+  Public ip. Okay, public ip is given for what? It is given for the instance that
+  you create within this cider. You don't give public IP directly to the cider. Or
+  to the subnet.
+  The route.
+  Router.
+  Table.
+  Okay, very good. Very good. So, basically, I need a root table. Very nice.
+  Routing.
+  Okay. And what else do you need? Route table is given. Remember guys route table
+  is given for all the subnet? It's not only for the public subnet. even if you
+  have a private subnet, root table is given What else? Very important. Public
+  subnet. Sorry.
+  And it's here.
+  Knuckle knuckle is what? What is knuckle? Who can tell what is knuckle?
+  Virtual firewall.
+  For.
+  For the subnet. Now I don't want a firewall. I want to make my subnet public. In
+  order to make the subnet public, what is needed. What is needed?
+  Not get away.
+  Nat Gateway. When would you use an At Gateway? Nat Gateway is used. Only when
+  your private subnet wants to talk to the Internet.
+  Alright.
+  I have the. Destination, 0 0 ends up.
+  Yes, so does. That means what? That means what from public subnet I need to
+  create a route to Internet Gateway. Is this correct? Yes, or no. Is this clear
+  to everyone? So that means what I need to have a root in my root table, which
+  says, there should be a root in, the root table. See Let me write the route. We
+  can write a root in the root table which says If you want to go and talk to the
+  Internet gateway, the path should be via. Sorry if you want to communicate with
+  the Internet, then the part should go by your Internet gateway. This is how it
+  should be. Is this clear? Any doubt. Any questions? Yes.
+
+[09:54]
+  Will I just want to say that to have data form? But
+  resources equal to empty list, that means there are no services that you're set
+  The F state of the execute.
+  up. Okay, who creates this terraform.tfstate? Terraform tool itself creates this
+  file? It's a file. It is not a directory. Remember,
+  I know the state of resource of
+  It is what it is a file. Why? Because when we proceed to new topics in the
+  It's empty or with stocks.
+  upcoming weeks, we see that there are so many other documented Documents not
+  documents, what folders that are created. Okay. Why are these folder created?
+  Because we execute different commands. Clear. But right now when I just run
+  terraform apply, I see that terraform.tf state. A file gets created which holds
+  the status of your resource, all the state of the resource. If you have 10
+  resources, it holds all the state of each resource in the day of state file.
+  Clear. Generally what we have along with this. You also sometimes get the backup
+  Backup TF state file also gets created. Is this clear any doubt? No doubt, no
+  questions. Okay. Next, what is the last command?
+  Destroy.
+  Destroy terraform. Destroy. What does it do?
+  Service.
+  Okay, delete. So terminates. The service that we need the service. And what,
+  what else? When I did terraform destroy, what all did you see?
+  The chick results in the TF state will be empty.
+  Very good, very good. It Affects. The day of state, correct? whenever you
+  terminate a service immediately, your state file gets affected, Is this clear?
+  What else? Again, in the background plan is showed and confirmation is accepted.
+  And expect. For the confirmation. Is this clear? Any doubts. So that means we
+  know one thing. What is it? When I do apply. And when I do destroy, Both in the
+  background is running Terraform plan. Okay. And along with that, it expects for
+  confirmation. Is this clear? Any doubts so far. Any questions so far? Shall I
+  proceed with today's code? Yes. Now, before I proceed with today's quote, I'll
+  just copy whatever is written here and send it to you guys on the select
+  channel. Okay, it's there in the slack so it should be able to access it, right?
+  But now, After this. What do I want and close this? I want all of you to go to
+  your Google. All of you. Because now we want to see. How does TERRAFORM
+  certification work? What is the certification? What are the things that we need
+  to cover? What is the syllabus for your exam? None of us know the syllabus,
+  right? We stayed away started with the concept that I Started from this week,
+  right? But now we need to know what is the syllabus? So Go to your, Let me just
+  zoom in, okay, and type there are form exam preparation. I want all of you to do
+  this. Search for terraform exam, preparation. Okay, did you guys search this?
+  And look at the first one, it says some talk something about learning path.
+  Click on this. Do you see this? Page, everyone. Does anyone want me to send this
+  link on the chat? Do you want me to share the link? Okay, niyant. See What are
+  the Prerequisites? Basic terminal skill, you should be able to know how the
+  commands get executed on your Linux terminal, CMD, or your PowerShell, All your
+  terminal on your VS code, Okay? And basic understanding of On-premise and Cloud
+  architecture. We've already gone through this at the first day of your AWS
+  Module 1. Right. What is on premise, What is Cloud. Okay. And after that, Look
+  at this study for the exam and you have a lot of exam, contents, blah, blah.
+  There are so many things here. We will come to this later. But on the left hand
+  side, Do you see something called as Exam Content Zero Zero for the second tab.
+  Click on the second tab. I Want all Open this tab. This is very important. Did
+  you guys open this? This is the syllabus. For your exam. Okay, what is the
+  syllabus? Let's see. You see here, something called as exam, content list,
+  Right? So let me scroll down a bit. See in total. Let us go through each one of
+  them later but just here, there is option. One here. Okay, the first one is
+  here. I'll quickly scroll down and let's see. Totally how many topics are there.
+  I think there are in total 10 topics. No, 8 topics are there. Okay? earlier when
+  I did a 0 0 3, The number of topics where 9, okay? When I did last year. Because
+  I had to renew my certificate and I've already told your terraform exam is only
+  for two years. You need to renew your certificate every two years ones. So when
+  I took this exam last year, we had only nine topics. Now, there are eight Does
+  that mean they have reduced the syllabus? No, definitely not. So what they've
+  done is they have clubbed the topic into the other headings. Okay? So now we
+  know in total, there are eight major topics under which there are subtopics as
+  well. For example, let's go to the very first topic. So, the moment we see the
+  very first topic, it should be clear to you. We have covered the very first
+  topic, see here, the very first topic talks about infrastructure as code with
+  terraform yesterday and day before yesterday we talked about what is IAC
+  advantages of IAC and what is the advantage of terraform blah, blah. Also, why
+  is it called as agnostic cloud agnostic? Platform. Right. Okay, my request for
+  you is every day, when I cover each and every topic there are official
+  documentations given here, your responsibility is to go through the official
+  documentation device. Is that clear? The more your familiar with this
+  documentation, the more you are getting prepared for the exam. Any doubt. Any
+  questions? No questions. Please give me a second. Yes. Jahed
+  A question is in the exam on it is multiple choice.
+  Yes, it is. Multiple choice questions. Only you have yes or no questions. You
+  have multiple choice questions, it will be generally, 65 questions. Sometimes it
+  will be 60 or sometimes it will be 65 questions. Okay.
+  How many questions?
+  okay, just completely Yes, Khadim.
+  how many question if we get to then we could post the example and then
+  You mean how many questions are needed to pass?
+  I mean.
+  remember guys, both in your AWS and terraform there is nothing called as
+  negative marking Okay, so my suggestion is follow or give all the answers, we'll
+  talk about how AWS exams can is conducted, okay, in AWS exam, you will have
+  around 65 questions. Okay, and out of 65 questions. 15 Questions are out of
+  syllabus 65. Out of syllabus. You are responsibility is to attend all the 65 Y
+  because there is nothing called as negative marking. Clear, guys, give me a
+  second. Okay, I'm back. So, see it out of 65 questions. 15 are out of syllabus.
+  When you read the question, you might feel. Oh, this is somewhat similar to what
+  I've read, but sometimes what happens if they use the same services, like S3,
+  database, your SMS, sqs kindnesses, then the name of the service is very similar
+  to whatever we have learned. But Most of the time, what happens? The questions
+  doesn't belong to solutions, architect, it might belong to data network. It
+  might belong to this admin. There are, I hope you guys know there are in total
+  14, AWS certifications. Okay? In all the 14 certification, you'll be learning
+  the similar services but they're working is different. The features that you
+  learn about individual service is completely different. When you read these 15
+  questions, you might feel. The questions are very relevant to your Saa but they
+  are out of syllabus. Are they marked in the exam? No they are shuffled. You see
+  in general 65 questions, you don't know which are those 15 questions that are
+  out of syllabus? What is your job? Your job is to just answer all the 65 Is that
+  clear? And when they are marking the, when they are connecting your question
+  paper. They would keep this 60, 15 questions aside. Is that clear? Okay. so,
+  when we talk about the exam, yes, someone
+  So you renew the terraform certificate. What it takes to renew?
+  Nothing you go and choose another exam. See, basically, they give a deadline?
+  Okay, I think I did it last year during February, I think. Okay, so, 2017, Feb
+  2027 Feb will be my last date for the terraform, right? When the exam expires on
+  my certificate expires. I need to book another I need to take a voucher from DCI
+  book, another slot and I need to take the exam. But for you guys vouchers will
+  not be provided by DCI DCI. Only provides the first voucher after two years.
+  It's your responsibility to take the other exam. I think the cost is somewhere
+  around 70 dollars. For example. Clear. You just go once the once the
+  certification is about to expire, you go, you book another exam slot and you
+  take the exam. Simple that is how you keep, renewing your certifications. Any
+  doubts. So now why did we open this? For those who think waters the syllabus for
+  the exam? How much we have covered? What is there in the exam? How are the
+  questions going to be asked? Everything you find it here? This is the official
+  documentation. Is this clear? So you can go through this each end every day. So
+  generally what I do, I don't follow the 90%, I follow this exact syllabus as in
+  the same order but sometimes what I do, I change the order when it comes to
+  probably six or seventh module. I changed the order. Okay? But don't worry, we
+  will. Anyways, be covering all the concepts from this nothing is left out. Why
+  you will get questions from each and everything? That is there in the syllabus.
+  if your taro with all the eight modules along with the documentation, you're
+  going to pass the exam, Remember you need to have thorough hands-on experience?
+  When we go to the end, for example, there is a topic called as HCP. Hashicot
+  cloud provider. I told you Terraform itself is having a cloud provider. Okay,
+  when we talk about hashicorp cloud provider, we will not be able to run. Every
+  will not be able to do everything hands on one or two things will be able to do
+  it. For example, you can see they, The topic itself is describe the terraform
+  collaboration. This is mostly what a theoretical concept. Okay, so here also
+  describe how to organize and use HCP terraform workspaces and projects. So some
+  of them are theoretical concepts and configure, okay? Configure and use probably
+  this we can do it hands on but apart from that rest, anything related to HCP
+  will be a theoretical concept. Okay. Why is it a theoretical concept simple? We
+  have free access head. CP how she called cloud provider? Exactly like your AWS
+  provider in your AWS provider. You have free tier In hashicorb? Do we have free
+  tier? No we will be able to see few certain features, but will not be able to do
+  everything on your hashicorp cloud. Clear. So this is your syllabus. You are
+  responsibility is to go through the documentation. So today, what is your ILP
+  task? This is your ILP task. First topic is this clear? You are responsibility
+  is to go through the documentation. And there are certain tutorials as well, to
+  be understand the basic concepts. Any doubts. No doubts, right? Okay, let us
+  proceed. So what do we, how do we proceed, open? Your VS code. Remember, guys,
+  please keep this hashicorp or your terraform website, bookmark. This website,
+  This is where you get all the contents and there is tutorial for every concept
+  that we are going to learn Okay, in case you miss any day of the lecture, don't
+  worry. Anyways, you have your recording. If not, please go to this tutorials and
+  you'll be able to find everything here. Is that clear? Okay, now let us open our
+  VS code. Give me a second. Let me share another window. I want all of you to
+  open your VS code. Okay, let me mine. One moment. Oh, okay. Can you see my
+  screen? Everyone. Yes. Okay, so what I'll do is I'll close all the Tabs that are
+  open on VS code. So, I want to tell you what we are going to do today. I already
+  mentioned will be creating something called as multi-resource architecture,
+  right? So what does multi resource? What are the resource that we are going to
+  create everything? Let's first talk talk about that. Moment closer. Clear the
+  Terminal. Okay, so As I mentioned. We will start with multi resource. Multi
+  resource. But when we did yesterday, What did we do? I set up my EC2 instance.
+  And when I asked you guys, What is required for an easy to instance? Some of you
+  told VPC is required, right? But my question did we create VPC yesterday? No.
+  Then how did the EC2 instance get created? Where was this created? Where did we
+  create?
+  Default.
+  The super very, very good. So the EC2 was created, not in just a custom VPC, but
+  it got created in the default one. Why I have shown you this at the very first
+  day when we did VPC, what is it? Every region has a default to BPC. Who created
+  this default VPC, AWS cloud, created, this default VPC. Why was this created?
+  This was created keeping under consideration that when beginners come to the
+  cloud, they need to set up EC2 and it would be easy for them. If they have a
+  default DPC, keeping this in mind, AWS has created. Default VPC in every
+  possible region, you will see this But today, are we going to use any default
+  VPC? No. We will create our architecture, will look something like this. What is
+  it? I create a VPC. so when I say vpc, what do what is needed for a VPC If you
+  want to create a VPC, what is needed?
+  Cider block.
+  Subnets.
+  Operation.
+  Meneem. What is needed for a VPC?
+  Internet.
+  I got this.
+  Internet Gateway.
+  IP, addresses range.
+  Are you guys speaking? I don't know. I can't hear. My name, did you speak? I see
+  that you are unmuted but I don't know. I'm not
+  Yeah, I was muted.
+  able to hear you. Why let me check once again? IP address. Right. So basically,
+  we need what? We need a cider block. Cite a block is very much needed for us.
+  Correct. Give me a second. What is the problem with my Headphones. Why am I not
+  able to hear anyone? Can anyone speak?
+  Yes, leave it off.
+  Okay, I see so many of you guys are speaking one moment. Hmm. Now, can anyone
+  speak?
+  Hello.
+  Hello, hello.
+  Don't you hear us?
+  Okay, I think I'm Everybody speaking now, cool.
+  Everybody speaking.
+  Okay. so, For a VPC. What is needed? A cider block is needed. Correct? Next. I
+  need to create what. A subnet. What is a subnet? Khadim, What Is a Subnet?
+  Subnative.
+  Why can't I hear? Let me rejoin, guys. Give me a second.
+  Okay, I'm back. So let me share my screen. Now it should be good. Let's see. I
+  had to quickly go and check on YouTube. What was the problem? if I was able to
+  hear some YouTube videos, Okay, I'm back. so, We were talking about your VPC,
+  right? So today we'll be creating a custom VPC Okay. And next inside the VPC, I
+  will be creating my subnet. The subnet need a cider block.
+  Yes.
+  Perfect. I can hear you guys. I'm so happy. Good. Yes. Even your subnet requires
+  a cider. Okay, so let us say it is a public subnet. If it is a public subnet,
+  what all do you need?
+  Gateway.
+  Internet Gateway, right. So you need an Internet gateway. So let us draw an
+  Internet gateway here. So I need an Internet gateway. What else? Just Internet
+  Gateway. I told I want a public subnet. It's right, public subnet.
+  Republic IP.
+  Public ip. Okay, public ip is given for what? It is given for the instance that
+  you create within this cider. You don't give public IP directly to the cider. Or
+  to the subnet.
+  The route.
+  Router.
+  Table.
+  Okay, very good. Very good. So, basically, I need a root table. Very nice.
+  Routing.
+  Okay. And what else do you need? Route table is given. Remember guys route table
+  is given for all the subnet? It's not only for the public subnet. even if you
+  have a private subnet, root table is given What else? Very important. Public
+  subnet. Sorry.
+  And it's here.
+  Knuckle knuckle is what? What is knuckle? Who can tell what is knuckle?
+  Virtual firewall.
+  For.
+  For the subnet. Now I don't want a firewall. I want to make my subnet public. In
+  order to make the subnet public, what is needed. What is needed?
+  Not get away.
+  Nat Gateway. When would you use an At Gateway? Nat Gateway is used. Only when
+  your private subnet wants to talk to the Internet.
+  Alright.
+  I have the. Destination, 0 0 ends up.
+  Yes, so does. That means what? That means what from public subnet I need to
+  create a route to Internet Gateway. Is this correct? Yes, or no. Is this clear
+  to everyone? So that means what I need to have a root in my root table, which
+  says, there should be a root in, the root table. See Let me write the route. We
+  can write a root in the root table which says If you want to go and talk to the
+  Internet gateway, the path should be via. Sorry if you want to communicate with
+  the Internet, then the part should go by your Internet gateway. This is how it
+  should be. Is this clear? Any doubt. Any questions? Yes. Let me share, my
+  screen. Give me a second.
