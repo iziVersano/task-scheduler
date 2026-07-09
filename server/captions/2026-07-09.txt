@@ -1,0 +1,77 @@
+
+[09:17]
+  --- logged in ---
+  placeholder.
+
+[09:25]
+  placeholder, I can put any value. I want here, any value I want. I just have an
+  empty space. I have a empty variable in this, I can put any value Doesn't
+  matter. What is the advantage if I have variables for ami? Anybody with any
+  requirement? If they want to set up a single EC2 instance, one single script
+  will be sufficient. Clear one single script is sufficient for different
+  purposes. When you want to set up one easy to instance of any Ami, any instance
+  type one script is sufficient. Is this clear? How to do that. Let's see. Now, I
+  need to Create variables. So in the same script, I will start creating
+  variables. So wherever I see my hard coded values, I will change them. For
+  example, I will change the value for ami. I would change the value for instance,
+  type and i will change the value for the tag. Is that clear? Okay, like how to
+  do that? I hope you guys have copied this. Okay. Now but I, after your provider
+  block, I want you guys to start with the term called as variable, This is a
+  keyword. Remember Variable has a keyword. Is this clear? Okay. And I told you
+  it's a placeholder. That means I need to give a name for the variable. So let me
+  say my first variable is AMI. Am I is my first variable. And second. Okay, now
+  when I talk about variable, there are a couple of things that I need to provide.
+  Moment, let me just discard this part. okay, so now you see this, I put to the
+  bottom We'll just focus on how to write a variable. Okay. So now, look at this
+  variable has couple of things. What are those couple of things? Please make a
+  note of this. Variable section will have. First thing. Is description. Okay.
+  Second thing. Type. Second thing is the type. Third thing is your default value.
+  What is it? The third thing is your default value. Please make a note, a
+  variable section can have three parts. Description, type and default. Your next
+  question is Are we supposed to write all the three? No. Not required. Okay. See
+  now please make a note of this which is mandatory here. Only the type field is
+  mandatory Rest to fields are optional. Your description is optional. Okay, your
+  default is optional. You might ask. What is this description? I'm not
+  understanding. That's totally fine. Just keep this in mind because right when I
+  create my very first variable and I execute it, you will see certain changes in
+  the output that is when you'll slowly start understanding what is happening. Is
+  that clear? Okay, so now you see variable blocks generally has three parts. What
+  are those three parts description? Part type part and default. And in these
+  three parts, your type is the only mandatory field rest to you can skip Those
+  are optional. Even if you don't write, that is totally fine. Okay, but
+  generally, it is recommended to include it. Okay? Now let us see. Let us write
+  our very first. Am I block AMI variable clear. As I said, What is the first
+  part? It's a description. Okay, I will say and The AMI value. Okay, now you see
+  just look at my screen and tell me you see your ami here? Can anybody tell me
+  what is the data type of this ami? Data type. I have numbers. I have alphabets.
+  What is the data type? Hexadecimal. String, perfect.
+  Double. No.
+  Oh oh, what is double? who said, Double What is double? You introduced a new
+  term? I want to know. What is double. Where have you heard this double? You
+  heard this double in Python? I know. But what is double? It's a float number.
+  Float when you have a decimal value. Decimal for example, like 70 to point point
+  six, six six six here. When you have values like this, where you have continuous
+  decimal values. That is when I write double. Is that clear? When you see my ami,
+  do you see any decimal value here? There is no decimal value. you have
+  alphabets, and you have Numbers. someone said, Hexadecimal. Who said that
+  hexadecimal? Why did you come to a conclusion that it's a hexadecimal? If it is
+  a hexadecimal, what is the last character that you see? You have 0 to 9, for
+  sure? Okay. And after 0 to 9 from a till what number what alphabet do you see in
+  hexadecimal F. Okay you see from A to f do you see here a M and I where did this
+  character come? In extra decimal, I don't say M. And I Correct. So this is not
+  hexadecimal. Then what is this? And one more important thing in Excel Decimal, I
+  will not see this hyphen. Do you see your hyphen here? So this is a group of
+  characters and random characters. So when when we say random characters, where I
+  see alphabets numbers and special characters, I generally call it as a string.
+  Correct. Is this clear? Any doubts? Any questions? No questions. So what is an
+  AMI? AMI data type is nothing but a string, so let me go back and I will include
+  a data type here. Type. Equals string. It's a keyword string is a keyword. Okay,
+  so let me give a space here. Type is String. Then what? Default value. I need to
+  include. So, default. Okay, as of now, I will not include default. Let us talk
+  about default later, so let I will skip the default. I will just write
+  description and type. Okay. Is this clear? Tell me. Did you guys include this?
+  Any doubts any questions? No.
+
+[09:26]
+  You did it here locally? We talking about visibility and you did it here in a
+  local file so you cannot use it outside. That's why I.
