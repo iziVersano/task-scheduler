@@ -1,0 +1,187 @@
+
+[09:02]
+  --- logged in ---
+
+[09:08]
+  Who.
+  Okay, so you created egress ingress validate and fmt, right? Yes, Khadim.
+  You please device on that day. I was a little bit sick here.
+  Yes, we will do that. Today I have certain topics that I want to cover and once
+  we are done, that we will go through the topics from Friday. If not today, I
+  will definitely do the revision of Friday on tomorrow, basically and tomorrow's
+  class. Okay, because I wanted to know what topics did he cover? So that I can be
+  also prepared with examples for that. Clear. So basically he did security groups
+  and your fmt and validate, right? So we will do that. Don't worry. Okay, any
+  other questions? Anything else that you want to know? If not let us start, I
+  will share my screen. I will start the recording. Okay, can everyone see the
+  screen? Perfect. So today we will learn about something called as data types.
+  Okay, so before we start data types, does anyone know what is a date? What is
+  data? Type mean. Why is it needed? One moment before we start. Do you guys see
+  the recording has begun. Do you see anything like that? Because on my end it is
+  showing continuous buffering.
+
+[09:10]
+  We can show him you.
+  Same. You are not able to see the recording, right?
+  Yes.
+  I can't even stop it and restart. Okay, one moment let me try okay. Now it has
+  begun. Correct. Perfect. Okay, so My question was, What do you mean by data
+  type? The type. Why is this data type needed?
+  Because we have different values.
+  We have different values, but how does this help? Why is this needed?
+  To community community. With each.
+
+[09:11]
+  To community community. With each other.
+  To communicate, what kind of communication are you doing here? If I don't
+  include data type, what is going to be the problem?
+  Different data types.
+  Yeah, so if I don't include this data type in my code, what will be the problem
+  for the user?
+  It doesn't know if he will write characters or numbers.
+
+[09:12]
+  Perfect. So basically he will not be able to know what kind of input to be
+  given. Correct. you don't know what kind of input to give whether you want to
+  give a string, which is nothing but characters, whether you want to give a
+  number Whether it is a list. Dictionary, There are so many data types, right? So
+  data types, play a vital role for us to identify how the input has to be
+  provided. Clear or what kind of input that you need to give? So now in your
+  terraform, there are separate different data types. We need to know Why? Because
+  you will get at least one question on your data types. They will give one
+  question on data type, okay? So they will give one entire code and they will
+  give also give you the data type. They will ask you how you can fetch it how you
+  can access a particular variable from your default or from your TF first. For us
+  to know that we need to understand the data types thoroughly. Is that?
+  Perfect. So basically he will not be able to know what kind of input to be
+  given. Correct. you don't know what kind of input to give whether you want to
+  give a string, which is nothing but characters, whether you want to give a
+  number Whether it is a list. Dictionary, There are so many data types, right? So
+  data types, play a vital role for us to identify how the input has to be
+  provided. Clear or what kind of input that you need to give? So now in your
+  terraform, there are separate different data types. We need to know Why? Because
+  you will get at least one question on your data types. They will give one
+  question on data type, okay? So they will give one entire code and they will
+  give also give you the data type. They will ask you how you can fetch it how you
+  can access a particular variable from your default or from your TF first. For us
+  to know that we need to understand the data types thoroughly. Is that clear?
+  Okay, so let us start. Did everyone open your VS code? Okay. I hope you guys can
+  see my screen. So let us start as usual by creating our day 6 because day 5 was
+  done by. Rohan. So I will go to a folder called as Day 6 folder. And inside this
+  folder. I will create a new file called, as Main.tf. Okay. So in the main dot
+  TF, first block is your provider block. I will go back and just copy my provider
+  block. Copy. And paste it here. This access key. And secret key is your personal
+  one.
+
+[09:14]
+  Can you copy that in the chat? Maybe.
+  So, you will not be using my Okay. so we will go ahead with a simple resource
+  which is nothing but easy to so for me to create an EC2, what are the important
+  Features or characteristics that I need to take care.
+  Fire. Okay.
+  If I want to create an EC2, what are the two things, or more than two things
+  that you consider? Yes, Mohammad.
+  Island instance type.
+  AMI and Instance type rest everything I can skip why because there are default
+  values assigned. So in automatically default will be selected but AMI and
+  instance types are the mandatory fields. Without AMI, you will not be able to
+  identify the operating system without your instance type. You don't know your
+  RAM and virtual CPU. Is that clear? okay, so now instead of writing the code
+  directly, what I'll do is if you go and see The Code of Day 4. I want you guys
+  to go and check the day for folder. I know. Rohan has also covered couple of
+  things but just go to day four, if you see in Day 4, What did I write? I had a
+  Main.tf and the Main.tf had the whole variable section here, right? And along
+  with the variable section, I also included a resource block. Correct. I will
+  follow the same structure here in today's class. Because anyways, I know the
+  first variable that I need is going to be my ami. Correct. Let's do. Variable.
+  Am I? Description. And I will not write the default here. Because by now we know
+  how to use TF verse file. How to give the value via your terminal, we know all
+  the details. So I don't want to give any value here as a default Okay. So now we
+  know AMI is of what type it is a string type, correct. Why? Because it has both
+  characters. Plus numbers. And along, with that, you also have special
+  characters. Correct. So all three together I can call it as a stringer. Yes,
+  Khadim.
+
+[09:16]
+  Channel, If you do not know the doctor type, we can skip this field or not.
+  If I don't know, the data type.
+  Good.
+
+[09:17]
+  Generally, you will always know the data type. Why? Because now, if I know,
+  because generally what happens, here I go back to my previous day, Four folder
+  and do you see this ami here? so, looking at this ami, you can clearly identify
+  what kind of data type it is going to be Okay, and now same thing applies for
+  your instance type as well. Just looking at this. I can identify, what is the
+  data type? So here also for your instant type, it is a string. Clear. So I'll go
+  back and now let us create another variable. That is going to be instance type.
+  So, see string here and now along with this, I will also include a default. So
+  now we are familiar with string, right? Okay, does anyone know what is bull?
+  Boolean. Any idea what is Boolean?
+
+[09:18]
+  0 and 1.
+  Zero and one. Okay, instead of telling zero and one, can you just represent it
+  in other format? So basically Boolean has two values zeros and one correct. In
+  another format. How do we represent?
+  True and false.
+  True or false.
+  To roof.
+  Perfect, true and false. True and false. So see, true stands for your one falls
+  is your zero. Clear. So true and false, we know this Boolean where it holds only
+  to values. Clear. Now let me quickly share my Okay. I hope you guys can see this
+  registry. Okay, so here, I'm already in AWS instance, for those who don't have
+  this, I will share the link here in the chat. Did you guys open this? Okay, so
+  what is needed here? I'll go to argument reference. I have already mentioned
+  here on the right side. You have all the indexes Okay, so from that, I will go
+  to argument reference. Okay. And here let us search for. Adiate. Public IP. Do
+  you see here? Do you see this? So, what does it mean? It's an optional field and
+  it is telling whether to associate a public IP address. Within an instance, with
+  an instance, in a VPC. So, basically, it is telling whether to make your EC2 a
+  public or private, Okay. So, if you want to make it public, then I will use this
+  associate public IP, and I will give a value for that. And I still don't know
+  how to use this. Okay, let me see. Is there any option? One moment. Okay. We
+  know this, we have a value called as associate. Public IP. And I will use that
+  particular associate public IP for my variable. Okay, as of as a variable in
+  your EC2 instance, So associate public IP. So this is a Boolean option. Clear,
+  so now what I do, I go back to my code. And here I will create another variable.
+  Variable. Enable IP public ip. I will call it as Enable. Underscore. Public
+  Underscore IP. Okay. And let's write the description for this. So now, if you
+  see Enable public IP value for the EC2 instance and the type is a Boolean type
+  whether it is true or false. Okay, now what I'll do, I will give default As
+  false. That means what kind of an EC2 is this? if the default is false, Private,
+  perfect. It's going to be a private instance. Is that clear? Any doubt. Okay,
+  now let us talk about something called as a list. Are you guys familiar with
+  list in Python? If you're familiar with list, please tell me what is a list What
+  is it?
+
+[09:23]
+  Collection of types. What kind of
+  It's a collection of. Types. Or or or items.
+  Of. some kind of type like,
+  Can you give me an example?
+  list of
+  sorry.
+  For example, like a collection of arrays. So list of arrays or strings, sorry.
+
+[09:25]
+  Okay, so this the second example, what you gave was correct? What is it list of
+  strings when I talk about list? The major important thing that we need to take
+  care here is it's a collection of similar data type or same data type. For
+  example, this A B. C. D. Now if you see this, what is this? This is a collection
+  of string, correct? It's a collection of string. so in between this, Can I
+  include one? Or can I include? Plus and there is no because they are going to be
+  a different data types. You'll not be able to include any other data types in
+  your collection. So list is a special kind of data type where all the collection
+  are supposed to be of the same type as if it is string, then it has to be
+  completely string. If it is number then it has to be completely numbers. Is that
+  clear a specific type? Okay, now I will click Create a Variable. And I will call
+  it as employee ID. Okay, we'll call it as an employee ID. And let me give a
+  description. Okay, so instead of type considering it as a string, the type I
+  will call it as list of string. So that means what it's a collection of similar
+  data type and that two specifically string data type only. Any doubts. And I
+  would like to use a default section here. So, let us use a default. My question.
+  How do you represent? A string. Sorry a list.
+
+[09:26]
+  Air bracket.
