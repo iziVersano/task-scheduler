@@ -1,0 +1,119 @@
+================================================================
+LAB: Introduction to Virtual Private Cloud (VPC)
+URL slug: introduction-virtual-private-cloud-vpc
+Captured: 2026-06-15T19:02:21.118Z
+================================================================
+
+### STEP: Creating a VPC Internet Gateway
+(captured 15.6.2026, 21:02:21)
+
+Introduction to Virtual Private Cloud (VPC)
+1
+Logging In to the Amazon Web Services Console
+2
+Creating a VPC
+1/1
+1 out of 1 validations checks passed
+3
+Creating a VPC subnet
+1/1
+1 out of 1 validations checks passed
+4
+Creating a VPC Internet Gateway
+0/1
+0 out of 1 validations checks passed
+Introduction
+
+An internet gateway is a horizontally scaled, redundant, and highly available VPC component that allows communication between instances in your VPC and the Internet. It imposes no availability risks or bandwidth constraints on your network traffic. An internet gateway serves two purposes: to provide a target in your VPC route tables for internet-routable traffic and to perform network address translation (NAT) for instances that have been assigned public IP addresses.
+
+You can create a new internet gateway for your previously created VPC using the AWS Management Console. 
+
+Instructions
+
+1. From the VPC dashboard, click the Internet gateways link in the sidebar menu:
+
+2. Click Create Internet Gateway to begin creating a new gateway:
+
+3. On the Create internet gateway form, enter 
+labs-gw
+ in the Name tag field and then click Create internet gateway:
+
+4. Click Actions -> Attach to VPC to attach to a VPC:
+
+5. In the Attach to VPC page, select the VPC 
+qa-labs
+ from the list, and then click Attach Internet gateway:
+
+Summary
+
+In this Lab Step, you created an internet gateway for your VPC.
+
+Validations
+Validations
+The Attached Internet Gateway validation check function's status has been set to:
+Attached Internet Gateway
+
+Attached the Internet Gateway to the non-default VPC
+
+Networking for AWS
+
+----------------------------------------------------------------
+
+### STEP: Creating a VPC subnet
+(captured 15.6.2026, 21:02:24)
+
+Introduction to Virtual Private Cloud (VPC)
+1
+Logging In to the Amazon Web Services Console
+2
+Creating a VPC
+1/1
+1 out of 1 validations checks passed
+3
+Creating a VPC subnet
+1/1
+1 out of 1 validations checks passed
+Introduction
+
+A VPC subnet is a range of IP addresses in your VPC. You can add one or more subnets in each Availability Zone, but each subnet must reside entirely within one Availability Zone and cannot span zones. Availability Zones are distinct locations that are engineered to be isolated from failures in other Availability Zones. By launching instances in separate Availability Zones, you can protect your applications from the failure of a single location.
+
+You can create a new subnet for your previously created VPC using the AWS Management Console.
+
+Instructions 
+
+1. From the VPC dashboard, click the Subnets link in the sidebar menu:
+
+The Subnets page lists all previously created subnets. At this point, there are four automatically created default subnets associated with the default VPC. When you have many subnets, you can use the Filter by VPC feature for listing only the subnets linked to a specific VPC:
+
+2. Click Create Subnet to begin creating a new subnet:
+
+3. In the Create Subnet form, specify the following Subnet details then click Create subnet:
+
+VPC ID: 
+qa-labs
+. 
+Subnet Name: 
+Public-A
+. This is the name for your subnet; doing so creates a tag with a key of Name and the value that you specify.
+Availability Zone: 
+us-west-2a
+.
+IPv4 VPC CIDR block: 10.0.0.0/16.
+IPv4 subnet CIDR block: 
+10.0.0.0/24
+.
+
+Summary
+
+In this Lab Step, you created a subnet for your AWS VPC.
+
+Validations
+Validations passed!
+The Created Subnet validation check function's status has been set to: passed
+Created Subnet
+
+Created a subnet in the non-default VPC
+
+Amazon VPC
+
+----------------------------------------------------------------

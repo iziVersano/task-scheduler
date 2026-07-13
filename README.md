@@ -4,6 +4,8 @@ A local web app to manage and run scheduled tasks using cron syntax. Includes a 
 
 ![Stack](https://img.shields.io/badge/Express-SQLite-blue) ![Stack](https://img.shields.io/badge/React-Vite-purple)
 
+See [COURSE-LINKS.md](COURSE-LINKS.md) for course materials and classroom links.
+
 ## Features
 
 - Create, edit, delete, and toggle scheduled jobs

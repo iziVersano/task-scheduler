@@ -59,6 +59,30 @@ const SCRIPTS = {
     logFile: '/tmp/aws-console.log',
     icon: '🟧',
   },
+  'aws-storage-lens': {
+    name: 'S3 Storage Lens',
+    description: 'Signs in to your AWS Console and opens S3 → Storage Lens → Dashboards (Free tier)',
+    script: path.join(__dirname, 'aws-console.js'),
+    scriptArgs: ['--destination=https://s3.console.aws.amazon.com/s3/storage-lens/dashboards?region=us-east-1'],
+    logFile: '/tmp/aws-storage-lens.log',
+    icon: '🔍',
+  },
+  'aws-console-student': {
+    name: 'AWS Console (Student)',
+    description: 'Opens the chosen QA lab, reads its live sandbox credentials, and signs into that AWS Console',
+    script: path.join(__dirname, 'aws-console.js'),
+    scriptArgs: ['--account=student'],
+    logFile: '/tmp/aws-console-student.log',
+    icon: '🎓',
+    hasTopicPicker: true,
+    topicLabel: 'Which lab?',
+    availableTopics: [
+      { value: '', label: '🤖 Current / in-progress lab' },
+      { value: '/lab/introduction-virtual-private-cloud-vpc/', label: '🌐 Introduction to VPC' },
+      { value: '/lab/create-your-first-amazon-ec2-instance/', label: '🐧 First EC2 Instance (Linux)' },
+      { value: '/lab/create-your-first-amazon-ec2-instance-windows/', label: '🪟 First EC2 Instance (Windows)' },
+    ],
+  },
   'aws-skillbuilder': {
     name: 'AWS Skill Builder',
     description: 'Opens AWS Skill Builder (training, cert prep, hands-on labs) with auto-login',
@@ -86,10 +110,32 @@ const SCRIPTS = {
   },
   'qa-platform': {
     name: 'QA Platform',
-    description: 'Opens your QA program page (signs in if needed)',
+    description: 'Opens QA (signs in). Pick a lab to also open it and sign into its AWS Console.',
     script: path.join(__dirname, 'qa-platform.js'),
     logFile: '/tmp/qa-platform.log',
     icon: '🟦',
+    hasTopicPicker: true,
+    topicLabel: 'Open a lab + AWS Console?',
+    availableTopics: [
+      { value: '', label: '🟦 Just open QA Platform' },
+      { value: '/lab/introduction-virtual-private-cloud-vpc/', label: '🌐 VPC lab → AWS Console' },
+      { value: '/lab/create-your-first-amazon-ec2-instance/', label: '🐧 EC2 Linux lab → AWS Console' },
+      { value: '/lab/create-your-first-amazon-ec2-instance-windows/', label: '🪟 EC2 Windows lab → AWS Console' },
+    ],
+  },
+  'save-lab': {
+    name: 'Save Lab Step',
+    description: 'Saves the open QA lab\'s CURRENT step instructions to server/lab-notes/<lab>.txt',
+    script: path.join(__dirname, 'save-lab.js'),
+    logFile: '/tmp/save-lab.log',
+    icon: '📝',
+  },
+  'watch-lab': {
+    name: 'Auto-Save Lab (watch)',
+    description: 'Watches the open QA lab and auto-saves each step as you reach it. Leave running while you do the lab; Stop when done.',
+    script: path.join(__dirname, 'watch-lab.js'),
+    logFile: '/tmp/save-lab.log',
+    icon: '🔄',
   },
   'qa-lab': {
     name: 'QA Lab of the Day',
@@ -169,6 +215,9 @@ router.post('/browser-scripts/:id/run', (req, res) => {
   try { fs.writeFileSync(script.logFile, ''); } catch {}
 
   const args = [script.script];
+  if (Array.isArray(script.scriptArgs)) {
+    args.push(...script.scriptArgs);
+  }
   if (script.requiresArg && req.body.arg) {
     args.push(req.body.arg);
   }

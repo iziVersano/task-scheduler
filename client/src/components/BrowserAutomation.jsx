@@ -101,6 +101,18 @@ export default function BrowserAutomation() {
 
   return (
     <div>
+      <div style={{ display: 'flex', justifyContent: 'flex-end', marginBottom: '1rem' }}>
+        <a
+          href="https://classroom.google.com/u/1/c/ODY1MDM0NDY1ODM3"
+          target="_blank"
+          rel="noreferrer"
+          className="btn btn-neutral"
+          title="Open Google Classroom"
+        >
+          🎓 Classroom
+        </a>
+      </div>
+
       <div className="stats-row" style={{ marginBottom: '1.5rem' }}>
         <div className="stat-card">
           <span className="stat-value">{scripts.length}</span>

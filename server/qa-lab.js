@@ -8,7 +8,7 @@ require('dotenv').config({ path: path.join(__dirname, '.env') });
 
 const CHROME_PATH = '/usr/bin/google-chrome';
 const CHROME_DATA_DIR = path.join(os.homedir(), '.config', 'google-chrome-aws');
-const DEBUG_PORT = 9410;
+const DEBUG_PORT = 9413;
 const LOG_FILE = '/tmp/qa-lab.log';
 const CAPTIONS_DIR = path.join(__dirname, 'captions');
 const URL = 'https://platform.qa.com/dashboard/';

@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "difficulty": "practitioner",
+    "question": "How many usable characteristics define a VPC, and what does the 'Private' aspect mean?",
+    "options": {
+      "A": "It means the VPC is only accessible from on-premises data centers via VPN",
+      "B": "It means the VPC is exclusive to the organization that creates it and is not public-facing by default",
+      "C": "It means all resources inside automatically get a public IP address",
+      "D": "It means the VPC cannot connect to the internet under any circumstances"
+    },
+    "correct": "B",
+    "explanation": "A VPC is 'Virtual' (software-defined, in the AWS cloud), 'Private' (isolated and exclusive to the account/organization that owns it, not shared publicly), and 'Cloud-based' (allocated within AWS infrastructure). Private does not mean it can never reach the internet — you can add an Internet Gateway — it means the network is logically isolated and owned by you."
+  },
+  {
+    "id": 2,
+    "difficulty": "practitioner",
+    "question": "How many default VPCs does AWS provide in each region?",
+    "options": {
+      "A": "One default VPC per region, pre-configured by AWS",
+      "B": "One default VPC per AWS account, shared across all regions",
+      "C": "No default VPC — you must always create one",
+      "D": "One default VPC per Availability Zone"
+    },
+    "correct": "A",
+    "explanation": "Every AWS region comes with exactly one pre-configured default VPC. It is region-scoped (not account-wide or AZ-scoped) and is intended mainly for quick starts and learning rather than production workloads."
+  },
+  {
+    "id": 3,
+    "difficulty": "practitioner",
+    "question": "Approximately how many IP addresses does a VPC CIDR block of /16 provide?",
+    "options": {
+      "A": "256",
+      "B": "1,024",
+      "C": "65,536",
+      "D": "16,777,216"
+    },
+    "correct": "C",
+    "explanation": "A /16 CIDR block reserves 16 bits for the network portion and leaves 16 bits for hosts, giving 2^16 = 65,536 addresses. (A /24 gives 256, a /8 gives ~16.7 million.) In AWS a few addresses per subnet are reserved, but the CIDR-based total is 65,536."
+  },
+  {
+    "id": 4,
+    "difficulty": "associate",
+    "question": "A startup is running a quick proof-of-concept and launches a single EC2 instance without building any networking. A senior engineer warns this approach is fine for testing but should not be used for the production launch. What is the BEST reason for this guidance?",
+    "options": {
+      "A": "Default VPCs cost more per hour than custom VPCs",
+      "B": "Default VPCs cannot run EC2 instances larger than t3.micro",
+      "C": "Default VPCs lack deliberate network segmentation and CIDR planning, which production workloads need for security and isolation",
+      "D": "Default VPCs are automatically deleted after 24 hours"
+    },
+    "correct": "C",
+    "explanation": "Default VPCs are pre-built for convenience (public subnets in every AZ, an attached Internet Gateway, auto-assigned public IPs). That convenience is exactly why they're discouraged for production: you get no intentional public/private tier separation and no custom CIDR planning. Default VPCs are not more expensive, are not size-limited, and are not auto-deleted."
+  },
+  {
+    "id": 5,
+    "difficulty": "associate",
+    "question": "An application team runs a high-traffic product catalog. EC2 instances repeatedly query the database for the same popular product details, causing latency spikes and network congestion. Which approach BEST addresses this?",
+    "options": {
+      "A": "Increase the database instance's storage volume size",
+      "B": "Cache frequently accessed data in the EC2 instance's RAM to avoid repeated database queries",
+      "C": "Move the database into the same subnet as the EC2 instances",
+      "D": "Assign an Elastic IP to the database server"
+    },
+    "correct": "B",
+    "explanation": "Caching frequently accessed, rarely changing data (like popular product details) in fast memory (RAM) means repeat requests are served without hitting the database each time. This cuts latency, reduces database load, and eases network congestion. Larger storage, co-locating subnets, or Elastic IPs don't reduce redundant query volume."
+  },
+  {
+    "id": 6,
+    "difficulty": "associate",
+    "question": "A data analytics company needs to run large-scale data-warehouse workloads with very high read/write throughput on huge datasets exceeding 100 TB. Which EC2 instance category is MOST appropriate?",
+    "options": {
+      "A": "Compute-optimized",
+      "B": "Memory-optimized",
+      "C": "Storage-optimized",
+      "D": "General purpose"
+    },
+    "correct": "C",
+    "explanation": "Storage-optimized instances (e.g. the D-family) are designed for workloads needing high sequential read/write throughput on very large local datasets — data warehousing, big-data analytics, and large customer databases. Compute-optimized targets CPU-bound work; memory-optimized targets in-memory/database caching workloads."
+  },
+  {
+    "id": 7,
+    "difficulty": "associate",
+    "question": "A team runs an in-memory database that keeps large working sets resident in RAM for fast access. Which EC2 instance category best fits this requirement, and which example family matches it?",
+    "options": {
+      "A": "Compute-optimized — C5 family",
+      "B": "Memory-optimized — R5 family",
+      "C": "Storage-optimized — D2 family",
+      "D": "General purpose — T3 family"
+    },
+    "correct": "B",
+    "explanation": "Memory-optimized instances (the R-family, e.g. R5, R5a, R5b) are built for workloads that manipulate large amounts of data in memory — in-memory databases, caching layers, and real-time processing. Compute-optimized (C-family) is for CPU-heavy work, and storage-optimized (D-family) is for large-dataset throughput."
+  },
+  {
+    "id": 8,
+    "difficulty": "practitioner",
+    "question": "Which statement about the relationship between a CIDR block and a VPC is TRUE?",
+    "options": {
+      "A": "The CIDR block determines which AWS region the VPC is created in",
+      "B": "The CIDR block defines the range and number of private IP addresses available to resources in the VPC",
+      "C": "The CIDR block sets the maximum number of EC2 instances the VPC can launch",
+      "D": "The CIDR block controls the internet bandwidth of the VPC"
+    },
+    "correct": "B",
+    "explanation": "A VPC's CIDR block (e.g. 10.0.0.0/16) defines the pool of private IP addresses available to resources launched in it, and its prefix length determines how many addresses that is. It does not select the region, cap instance counts, or set bandwidth."
+  }
+]

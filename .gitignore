@@ -1,6 +1,7 @@
 node_modules/
 client/node_modules/
 client/dist/
+dist/
 server/jobs.db
 server/jobs.db-shm
 server/jobs.db-wal
@@ -11,3 +12,12 @@ server/jobs.db-wal
 
 # Captured class slides (local only)
 server/slides/
+
+# Terraform — never commit state or filled-in variable values
+terraform/**/.terraform/
+terraform/**/*.tfstate
+terraform/**/*.tfstate.*
+terraform/**/terraform.tfvars
+terraform/**/*.auto.tfvars
+terraform/**/.terraform.lock.hcl
+terraform/**/crash.log

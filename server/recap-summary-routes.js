@@ -4,23 +4,32 @@ const Anthropic = require('@anthropic-ai/sdk').default || require('@anthropic-ai
 const router = express.Router();
 const client = new Anthropic();
 
-const SYSTEM_PROMPT = `You are summarising a daily class transcript for a Cloud Engineering student.
-Produce a concise, structured summary that is genuinely useful for revision.
+const SYSTEM_PROMPT = `You are summarising a daily class transcript for a Cloud Engineering student preparing for AWS exams.
+Produce a thorough yet concise structured summary — cover EVERY topic the instructor touched on, even briefly. Missing a topic is worse than being slightly longer.
 
-Format the response in Markdown with these sections:
+Format the response in Markdown. For EACH topic/section use this exact structure:
 
-## Topics covered
-A short bullet list of the AWS services or concepts the instructor focused on.
+## <Topic name>
+- Bullet points covering the core concept, how it works, and any specifics the instructor explained
+- Include exact numbers, thresholds, or comparisons the instructor mentioned (e.g. "greater than 5 GB → must use multi-part upload")
 
-## Key points
-3-7 bullets capturing the most important takeaways, instructions, or examples.
-Include specific commands, lab names, or URLs if they appear verbatim.
+> 🏢 **Real world:** A concrete named-company example (Netflix, Spotify, Airbnb, a bank, etc.) showing how this concept applies in production. Be specific — not "a company might…" but "Netflix does X because Y".
 
-## Action items for the student
-Anything the instructor explicitly told the student to do, watch, install, or finish.
+\`\`\`mermaid
+<a diagram visualising this concept — graph TD/LR, sequenceDiagram, or flowchart>
+\`\`\`
 
-Keep the whole summary under ~250 words. Skip filler, repetition, side chat, and
-auto-caption noise. If a piece of the transcript is unclear, say so rather than inventing.`;
+⚠️ **Exam tip:** (only include this block if the instructor said something like "remember this", "this will be on the exam", "notice", "important", "they ask this" — quote or closely paraphrase what the instructor flagged)
+
+---
+
+Rules:
+- Cover every topic from the transcript in its own ## section. Do not merge unrelated topics.
+- Under each ## section always include: bullets, real-world example, mermaid diagram, and exam tip (if instructor flagged it).
+- Exam tips must only appear when the instructor explicitly called something out as exam-relevant or important to remember.
+- Skip pure filler, off-topic chat, and auto-caption noise. If something is unclear, note it briefly.
+- Do not add a word-count limit — cover everything.`;
+
 
 router.post('/recap/summarize', async (req, res) => {
   const text = (req.body?.text || '').toString().trim();

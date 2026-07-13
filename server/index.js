@@ -11,6 +11,8 @@ const captionsRoutes = require('./captions-routes');
 const diagramsRoutes = require('./diagrams-routes');
 const recapSummaryRoutes = require('./recap-summary-routes');
 const slidesRoutes = require('./slides-routes');
+const liveSummaryRoutes = require('./live-summary-routes');
+const { router: mcqRoutes } = require('./mcq-routes');
 
 const app = express();
 const PORT = process.env.PORT || 3001;
@@ -27,6 +29,8 @@ app.use('/api', captionsRoutes);
 app.use('/api', diagramsRoutes);
 app.use('/api', recapSummaryRoutes);
 app.use('/api', slidesRoutes);
+app.use('/api', liveSummaryRoutes);
+app.use('/api', mcqRoutes);
 
 app.get('/health', (_req, res) =>
   res.json({ status: 'ok', uptime: Math.floor(process.uptime()) + 's' })

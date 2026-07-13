@@ -7,7 +7,7 @@ const CAPTIONS_DIR = path.join(__dirname, 'captions');
 const POLL_INTERVAL = 500;
 const SETTLE_TIME = 3000;
 const WATCH_NAMES = ['izi', 'versano', 'https'];
-const TRACK_SPEAKERS = ['kiro velkovski', 'sharanya prasad'];
+const TRACK_SPEAKERS = [];
 
 if (!fs.existsSync(CAPTIONS_DIR)) {
   fs.mkdirSync(CAPTIONS_DIR, { recursive: true });

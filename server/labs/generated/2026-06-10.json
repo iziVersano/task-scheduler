@@ -1,0 +1,72 @@
+{
+  "source": "2026-06-10",
+  "generatedAt": "2026-06-10T21:43:08.574Z",
+  "summary": {
+    "date": "2026-06-10",
+    "timeRange": "09:38 - 14:34",
+    "categories": [
+      "Cloud"
+    ],
+    "topicsCovered": [
+      "Cloud VM Setup Basics",
+      "Cloud Networking Concepts"
+    ],
+    "labCount": 2,
+    "difficultyRange": "Level 2 - 3"
+  },
+  "labs": [
+    {
+      "id": "cloud-vm-setup-basics-2026-06-10",
+      "title": "Cloud VM Setup Basics",
+      "category": "Cloud",
+      "concept": "Understand the steps to create a virtual machine in a cloud environment (Azure/Hetzner)",
+      "difficulty": 2,
+      "description": "Cloud VMs are accessed via SSH using the public IP. Always update packages first. Security groups control inbound/outbound traffic (port 22 for SSH must be open). The VM costs money while running.",
+      "instructions": [
+        "When creating a cloud VM, you need: a subscription, a resource group, and a virtual network",
+        "After creation, note the public IP address assigned to the VM",
+        "Connect via SSH: ssh user@<public-ip>",
+        "Check your user groups: id (look for group 27 = sudo)",
+        "First thing on any new VM: sudo apt update && sudo apt upgrade -y",
+        "If libc gets updated, reboot the machine: sudo reboot",
+        "Reconnect and verify the system is up to date"
+      ],
+      "commands": [
+        "ssh user@<public-ip>",
+        "sudo apt update && sudo apt upgrade -y",
+        "sudo reboot",
+        "id"
+      ],
+      "expectedOutput": "uid=1000(azureuser) gid=1000(azureuser) groups=...,27(sudo)",
+      "explanation": "Cloud VMs are accessed via SSH using the public IP. Always update packages first. Security groups control inbound/outbound traffic (port 22 for SSH must be open). The VM costs money while running.",
+      "sourceTranscript": "2026-06-10"
+    },
+    {
+      "id": "cloud-networking-concepts-2026-06-10",
+      "title": "Cloud Networking Concepts",
+      "category": "Cloud",
+      "concept": "Virtual networks, security groups, load balancers, and bastion hosts in cloud environments",
+      "difficulty": 3,
+      "description": "Cloud providers create virtual networks with private IPs. Public IPs are mapped via NAT. Never expose a web server directly — use a reverse proxy, load balancer, or bastion host in front.",
+      "instructions": [
+        "On a cloud VM, run: ip a — observe the private IP (e.g., 10.0.0.4)",
+        "Run: ip route — find the default gateway for the virtual network",
+        "The VM has a private IP internally but a public IP for external access",
+        "Security groups act as a firewall: inbound rules control what traffic reaches the VM",
+        "A bastion host is a gateway that accepts all incoming connections and forwards them securely inside",
+        "A load balancer distributes traffic across multiple VMs for high availability",
+        "Availability zones are separate fire compartments in a data center with independent power and cooling",
+        "Draw a diagram: Internet → Load Balancer → Bastion Host → Internal VMs"
+      ],
+      "commands": [
+        "ip a",
+        "ip route",
+        "ping -c 4 8.8.8.8",
+        "tracepath -m 15 8.8.8.8"
+      ],
+      "expectedOutput": "Private IP from virtual network, default route via cloud gateway",
+      "explanation": "Cloud providers create virtual networks with private IPs. Public IPs are mapped via NAT. Never expose a web server directly — use a reverse proxy, load balancer, or bastion host in front.",
+      "sourceTranscript": "2026-06-10"
+    }
+  ]
+}

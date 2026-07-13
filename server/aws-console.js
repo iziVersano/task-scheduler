@@ -359,13 +359,34 @@ async function typeIfFound(page, selectors, value, timeout = 10000) {
     log('Sign-in form found — filling credentials...');
 
     if (accountId) {
-      await page.$eval('input[name="account"]', el => { el.value = ''; el.focus(); }).catch(() => {});
-      await page.type('input[name="account"]', accountId, { delay: 30 }).catch(() => {});
+      const acctFilled = await typeIfFound(page, ['input[name="account"]'], accountId, 8000);
+      log(acctFilled ? `Account filled (${acctFilled})` : 'Account field not found — skipping');
+      // Some AWS sign-in pages reveal username/password only after submitting the account step
+      await new Promise(r => setTimeout(r, 800));
+      // If username is not yet visible, click Next/Submit to proceed to step 2
+      const userVisible = await page.evaluate(() => {
+        const el = document.querySelector('input[name="username"]');
+        if (!el) return false;
+        const r = el.getBoundingClientRect();
+        return r.width > 0 && r.height > 0;
+      }).catch(() => false);
+      if (!userVisible) {
+        log('Username not visible yet — clicking Next to proceed to step 2...');
+        await page.evaluate(() => {
+          const btn = [...document.querySelectorAll('button, input[type="submit"]')]
+            .find(b => /next|continue|sign in/i.test((b.innerText || b.value || '').trim()));
+          if (btn) btn.click();
+        }).catch(() => {});
+        await new Promise(r => setTimeout(r, 2000));
+      }
     }
-    await page.$eval('input[name="username"]', el => { el.value = ''; el.focus(); }).catch(() => {});
-    await page.type('input[name="username"]', username, { delay: 30 });
-    await page.$eval('input[name="password"]', el => { el.value = ''; el.focus(); }).catch(() => {});
-    await page.type('input[name="password"]', password, { delay: 30 });
+
+    const userFilled = await typeIfFound(page, ['input[name="username"]'], username, 10000);
+    log(userFilled ? `Username filled (${userFilled})` : 'Username field not found');
+
+    const pwFilled = await typeIfFound(page, ['input[name="password"]'], password, 8000);
+    log(pwFilled ? `Password filled (${pwFilled})` : 'Password field not found');
+
     await page.keyboard.press('Enter');
     log('Submitted sign-in form, waiting for redirect...');
 

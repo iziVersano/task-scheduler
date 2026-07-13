@@ -3,6 +3,13 @@ import { apiFetch } from '../apiClient.js';
 
 const API = '/api';
 
+// Saved Google Meet rooms to pick from. Add new ones here.
+const MEET_PRESETS = [
+  { label: 'Class — ifp-izxr-qxo', value: 'https://meet.google.com/ifp-izxr-qxo' },
+  { label: 'Class — rfa-mbwe-gyt', value: 'https://meet.google.com/rfa-mbwe-gyt' },
+  { label: 'Class — mqi-pvmr-xyw', value: 'https://meet.google.com/mqi-pvmr-xyw' },
+];
+
 const SCHEDULE_PRESETS = [
   { label: 'Every minute',        value: '* * * * *' },
   { label: 'Every 5 minutes',     value: '*/5 * * * *' },
@@ -149,6 +156,10 @@ export default function JobForm({ job, onSave, onClose }) {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    if (!serverDir) {
+      setSaving_error('Still loading server path — please wait a moment and try again.');
+      return;
+    }
     if (jobType === 'meet' && !meetLink.includes('meet.google.com/')) {
       setSaving_error('Please enter a valid Google Meet link');
       return;
@@ -221,13 +232,33 @@ export default function JobForm({ job, onSave, onClose }) {
 
           {jobType === 'meet' && (
             <div className="form-group">
-              <label>Google Meet Link</label>
-              <input
-                value={meetLink}
-                onChange={(e) => setMeetLink(e.target.value)}
-                placeholder="https://meet.google.com/abc-defg-hij"
-                required
-              />
+              <label>Google Meet</label>
+              <select
+                value={MEET_PRESETS.some(p => p.value === meetLink) ? meetLink : '__custom__'}
+                onChange={(e) => {
+                  if (e.target.value === '__custom__') {
+                    // Switch to custom: blank the field unless it's already custom.
+                    if (MEET_PRESETS.some(p => p.value === meetLink)) setMeetLink('');
+                  } else {
+                    setMeetLink(e.target.value);
+                  }
+                }}
+              >
+                {MEET_PRESETS.map((p) => (
+                  <option key={p.value} value={p.value}>{p.label}</option>
+                ))}
+                <option value="__custom__">Custom link…</option>
+              </select>
+
+              {!MEET_PRESETS.some(p => p.value === meetLink) && (
+                <input
+                  style={{ marginTop: '0.5rem' }}
+                  value={meetLink}
+                  onChange={(e) => setMeetLink(e.target.value)}
+                  placeholder="https://meet.google.com/abc-defg-hij"
+                  required
+                />
+              )}
             </div>
           )}
 
@@ -338,8 +369,8 @@ export default function JobForm({ job, onSave, onClose }) {
             <button type="button" className="btn btn-ghost" onClick={onClose}>
               Cancel
             </button>
-            <button type="submit" className="btn btn-primary" disabled={saving}>
-              {saving ? 'Saving…' : job ? 'Update Job' : 'Create Job'}
+            <button type="submit" className="btn btn-primary" disabled={saving || !serverDir}>
+              {saving ? 'Saving…' : !serverDir ? 'Loading…' : job ? 'Update Job' : 'Create Job'}
             </button>
           </div>
         </form>

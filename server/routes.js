@@ -109,7 +109,14 @@ router.post('/jobs/:id/run', (req, res) => {
   const job = db.prepare('SELECT * FROM jobs WHERE id = ?').get(id);
   if (!job) return res.status(404).json({ error: 'Job not found' });
   const { executeJob } = require('./scheduler');
-  executeJob(job);
+  // Manual "Run now" should always act — bypass meet-join's same-day skip by
+  // appending --force. Scheduled runs keep the skip (no --force) so the cron
+  // won't double-join a meeting you're already in.
+  const manual = { ...job };
+  if (/meet-join\.js/.test(manual.command) && !/--force/.test(manual.command)) {
+    manual.command = `${manual.command} --force`;
+  }
+  executeJob(manual);
   res.json({ success: true });
 });
 

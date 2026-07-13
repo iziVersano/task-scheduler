@@ -185,3 +185,197 @@
 
 [09:26]
   Air bracket.
+
+[10:09]
+  --- Meeting ended ---
+
+[10:21]
+  --- logged in ---
+  Here, descendants, especially. Okay, let's see. How does it change? Do you see
+  the structuring? What happened? How did this get to know which structure to
+  follow? So for yes. Default, one of what? no, it's for It is.
+
+[10:27]
+  Here, descendants, especially. Okay, let's see. How does it change? Do you see
+  the structuring? What happened? How did this get to know which structure to
+  follow? So for yes. Default, one of what? no, it's for It is trying to follow
+  the default version of your HCl formatting. The Programming Language. The
+  programming language that you're using here is nothing but your head SEAL has
+  she called configuration language? Okay, has your configuration language has
+  something specific. instead of formatting, there is also another term for that
+  it is nothing but indentation Have you guys heard of this term indentation?
+  Equal to default equal to. I can see something.
+  How do you indent from the margin from the margin? How much gap are you giving?
+  And how is it formatted within one block? Within one particular.
+  Before.
+  Variable Block, How are you? Formatting this code. How do you know the same
+  format works perfectly fine? This is nothing but the indentation policy of your
+  HCl language. Yes, Khadim. Adder. Okay, okay. One moment. okay, so now you see
+  here, Fmt is just checking for the indentation. Generally, what happens? There
+  are two type of indentation. First type of indentation is giving four spaces. In
+  a block. And the second type of indentation is giving two spaces in a block. Two
+  Spaces Versus Four Spaces. What does it mean? so now you see here, this
+  description Okay. So I can also write the same thing with the tab space, which
+  is four spaces. If not, I can also write the same thing with two spaces. Always
+  remember if you use Tab, Tab Key In your keyboard, it is equal to four spaces.
+  Okay, one tab is equal to 4 spaces. Clear. So it depends on your whether you
+  want to give four spaces or two spaces HCl can follow both. Okay, so generally
+  takes up two spaces. Sometimes, it can also take up four spaces, for example.
+  Now, you see here, the default is a block, correct, basically, you're writing a
+  block from here to here, all the values are, if you see from the default, you
+  are giving two space, From the default section, for example. Now, if you see
+  here, I will just remove one two here and I can also give two space, one, two,
+  It is giving two space indentation. So HCl, generally follows two space
+  Okay. Logical letter or simple. I ask you guys to do addition. And my code is
+  something like this. X. Minus Y, is equal to total. I'm asking you guys to do
+  addition, but what is my equation here? My equation is having a subtraction.
+  This is a logical error. The code, The expression that I'm writing the logic
+  that I'm writing itself is wrong. I'm expecting for an sum but I'm getting a
+  difference here. This is a logical error. Your implementation problem. You are
+  writing the wrong wrong code, wrong script. Clear. So your validate cannot check
+  for your implementation detail. Your validate will not tell that you want. You
+  need to include VPC. Your validate will not tell that you need to have security
+  groups these details. Your validate will not tell Those are your requirements.
+  How you want to set?
+  indentation, it can also follow four space indentation. How does this
+  indentation work? There is a specific indentation or structuring for HCl. So
+  when you run FMT, it is following the default structuring pattern of your HCl
+  language. Only Is that clear? Any doubts. Khadimir, Share your screen. ah,
+  default line, 45 bears, your line 45 Okay, who can tell what's the issue here?
+  Default equal to just give a space there. A type specification is either a
+  primitive keyword. One second. This is an object, correct. Okay. What is the
+  problem? The major problem is after the type, he did not close the bracket. That
+  is the problem. So can you go to line number 50? Line Number 50, Yes, remote.
+  Remove those two. Okay. Go to line number 44. End of the line 44. Go to a new
+  line. Okay, now you close the bracket. Flower bracket and Round bracket. Remove
+  that hash one. Okay, close the round brackets. Why down brackets? Because in
+  your line 42, you have a open. Yes. now, go to your terminal and run terraform
+  fmt and see Okay, terraform in it. Yeah. And terra four minute. It will work.
+  Don't worry.
+  No problem. So, what was the issue? The major issue was. After you write, when
+  you write the type, you have opened the bracket, you need to close the bracket
+  before you go to the default because type is a different blog. Default is a
+  different block. Is this clear? Okay, so now we understood about Fmt. The next
+  few questions that they would ask about fmt. Can your fmt do validation, check
+  can it check for errors? Question to you all. Answer is no. Fmt cannot do error
+  checking. It cannot find any errors in your code. So, your fmt is only to
+  beautify your code. Just it is the only used for beautification. To make it
+  structured, so that person who sees the code it will, it should be very easy for
+  them to read readable format. Okay. It can do nothing pertaining to the errors
+  or the logic. So even if you skip, the fmt doesn't matter. Okay, the next
+  command is Terraform validate. What is this command do? Terraform validate. Why
+  is it used? What does it do?
+  Check. If there are any syntax error.
+  Perfect. There are two types of error. Okay, one is syntax error. And what is
+  the second error? Sorry Mohammad. Can you repeat?
+  Good logical error.
+  Logical error. Perfect. There are two types of errors syntax error and logical
+  error. Your validate can only check syntax error. It has nothing to do with the
+  logical error. Make a note, One more question for your exam. Can your Styrofoam
+  validate? Check for logical errors. Answer is no. So what is the syntax error
+  versus logical error? Syntax means you have certain keywords, for example,
+  skipping the brackets, skipping the equals or your, you have written some wrong
+  keyword, instead of variable you have written as variables. So let's say some
+  Undefined keywords you're using. when such kind of keywords are using and there
+  is some Error, In terms of closing, the brackets or structuring, or skipping the
+  keywords, then you can use this validate. You can run this terraform validate
+  command. What does it do? It goes through your code in your main dot TF and
+  checks for syntax errors. Only What is logical error? Who can describe, what is
+  a logical error?
+  If I define that,
+  Unimplementation error.
+  Mmm, many what is it?
+  now about our implementing code, the code,
+  Implementation error. Okay.
+  Yeah. All right.
+  Yes, Khadim, anything you want to add?
+  Know by mistake I help us.
+  Okay, Mohammad anything you want to add to this logical error.
+  and if I define another type like a string, but I plus a value for polio
+  Okay. Logical letter or simple. I ask you guys to do addition. And my code is
+  something like this. X. Minus Y, is equal to total. I'm asking you guys to do
+  addition, but what is my equation here? My equation is having a subtraction.
+  This is a logical error. The code, The expression that I'm writing the logic
+  that I'm writing itself is wrong. I'm expecting for an sum but I'm getting a
+  difference here. This is a logical error. Your implementation problem. You are
+  writing the wrong wrong code, wrong script. Clear. So your validate cannot check
+  for your implementation detail. Your validate will not tell that you want. You
+  need to include VPC. Your validate will not tell that you need to have security
+  groups these details. Your validate will not tell Those are your requirements.
+  How you want to set up? What is the responsibility of validate? It can only
+  check for keyword issues, it can only check for incomplete code. It can only
+  check if you have skipped the flower brackets, Okay, and that is why we call it
+  as syntax error. Is this clear? So validate can only check for syntax error, any
+  doubts. Any questions? No doubt, it's no questions. Let's go. Anyways, we have
+  done terraform validate. Now, I will do Okay, before I go for Terraform apply.
+  I'm just looking at this and I see here. Ami value is not provided, right? There
+  is no default value when there is no default value. And if I do apply what
+  happens, There is no default value for the AMI. yes, Mohammad
+
+[10:29]
+  I will check the file data forms Dot dfrs. If not, he will take the default one
+  if not, you will ask in the terminal.
+  Perfectly basically here since there is no nothing called as terraform.tf us. Do
+  I see anything like that here? No, I don't see anything like that. So that means
+  there is only one possibility Since there is also, no default value, what will
+  it do? It will ask for the input in the terminal. if we ask for the input in the
+  terminal, Is that clear? So now let us try to do that but before I do that, I
+  want to go and copy my ami. This is the Ami. I will also share it with you here
+  in the chat. Okay. Let me run Tara form. Apply how to skip the intermediate
+  confirmation step.
+
+[10:32]
+  How to approve?
+  Auto proof. So, basically whenever I run terraform apply in the background,
+  there is a plan that is getting executed. So if I want to skip the intermediate
+  approval stage, I have to use this auto approve Enter, it will ask for my Ami.
+  So I will paste the AMI. And immediately, it will give me the plan and it will
+  start creating the instance, check everyone. Meanwhile, I will also open my
+  Cloud. Do you see your instance being created? Everyone? Any errors, feel free
+  to share your screen if there are any errors. Yes, Roger Error. Share your
+  screen.
+  Around 663.
+  I don't see your screen yet. Can other see his screen. No, right.
+  Okay, sorry.
+  Try to reshare, let's see if you can. By the time, I will also log into my
+  console. Perfect. This object doesn't have an attribute named environment ID.
+  Okay, where is it?
+  Line Number 63. Okay, can you show me tag minus E and variable? Where is your
+  tag? Minus E and B variable. Show me that variable. Okay, do you see here? Stop?
+  What is the problem? See this is a learning for every one of you. Just now I
+  said when we talk about object, object has a specific structure. structure is
+  defined but now you see here in Roger's type line number 44, Okay.
+
+[10:35]
+  Line Number 63. Okay, can you show me tag minus E and variable? Where is your
+  tag? Minus E and B variable. Show me that variable. Okay, do you see here? Stop?
+  What is the problem? See this is a learning for every one of you. Just now I
+  said when we talk about object, object has a specific structure. structure is
+  defined but now you see here in Roger's type line number 44, Okay, if you go to
+  line number 44, you have written, only E and v line, number 44, and 45. You are
+  telling type object and you have written only E and me. But when you go to the
+  same default, Look at the default line. Number 14, vine, you have written envy
+  id.
+  He?
+  And that is. Where is causing an issue? Because in the type, you are not fixing
+  the key. When you're not fixing the key in the type, you will not be able to use
+  the default value. Okay, go to line number 45 at the end. Create a new line.
+  Okay, and right here, Envid. Underscore ID. Equals number. So, is that clear
+  because he was supposed to specify the structure in the structure, which is
+  nothing, but the type, he skipped the envid, but when he tries to run, it is
+  throwing an error. Okay, now you do execute the command Terraform apply. Okay,
+  give you an ami. It's there in the chat.
+  Perfect. So see you. You could have included that auto approved stage then you
+  could have skipped this option. Anyways, so just say yes and continue. Type, yes
+  and proceed.
+  Yeah, thank you. No, it's working.
+  Perfect. I'm trying to log into my console. Give me a second. Okay, let's
+  refresh. I see only eight instances. Milan niyant.
+  Still, it gives her for me. I don't know.
+
+[10:36]
+  One is from Julian, and one is from blood, okay? So
+  You see?
+
+[11:24]
+  --- Meeting ended ---

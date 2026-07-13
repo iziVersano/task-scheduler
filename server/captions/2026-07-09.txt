@@ -75,3 +75,1388 @@
 [09:26]
   You did it here locally? We talking about visibility and you did it here in a
   local file so you cannot use it outside. That's why I.
+
+[10:00]
+  --- Meeting ended ---
+
+[11:26]
+  --- logged in ---
+  together. Okay, so now we saw a lot of things right here. Again, I will do no.
+  Okay, don't apply this. Let us see something else and then we can apply Fine.
+  Now before I proceed okay I will go to Terraform, apply help. When I don't,
+
+[11:28]
+  together. Okay, so now we saw a lot of things right here. Again, I will do no.
+  Okay, don't apply this. Let us see something else and then we can apply Fine.
+  Now before I proceed okay I will go to Terraform, apply help. When I don't
+  terraform apply Help, I hope you guys can see this. Very first option, what is
+  the very first option auto approve? Do you see this first option called as Auto
+  Pro? I want everyone to see this. Do you see this? Yes. No. Check. What does it
+  say? If I give the 10, it basically means skip interactive approval of plan
+  before applying. So that means there was an intermediate step. Whenever I did a
+  terraform apply it, stopped it basically, wanted a manual approval of typing.
+  Yes, Correct until and unless you gave yes it did not proceed. But most of the
+  time you will have an automatic system automated scripts will be running, how
+  can you expect some manual person to come and give this? Yes. It's not possible,
+  right? So to avoid that, you have this auto approved option. So what I can do,
+  Scroll down and now let us use Auto Approve option. So let us use this.
+  Terraform. Apply. Minus auto.
+  together. Okay, so now we saw a lot of things right here. Again, I will do no.
+  Okay, don't apply this. Let us see something else and then we can apply Fine.
+  Now before I proceed okay I will go to Terraform, apply help. When I don't
+  terraform apply Help, I hope you guys can see this. Very first option, what is
+  the very first option auto approve? Do you see this first option called as Auto
+  Pro? I want everyone to see this. Do you see this? Yes. No. Check. What does it
+  say? If I give the 10, it basically means skip interactive approval of plan
+  before applying. So that means there was an intermediate step. Whenever I did a
+  terraform apply it, stopped it basically, wanted a manual approval of typing.
+  Yes, Correct until and unless you gave yes it did not proceed. But most of the
+  time you will have an automatic system automated scripts will be running, how
+  can you expect some manual person to come and give this? Yes. It's not possible,
+  right? So to avoid that, you have this auto approved option. So what I can do,
+  Scroll down and now let us use Auto Approve option. So let us use this.
+  Terraform. Apply. Minus auto minus approve. Minus var. Let's see if it works
+  like this. Minus file equal. Tera form dot E-f-wars. Hey. Is the name. Correct.
+  Auto approve. Minus 1. Minus 5 equals terraform.tforce. Okay. Let's see if it
+  works. Look okay it is asking for the tag name because there is not tag name so
+  I will get the tag name as DCI and look right after you give the tag name it
+  will print your plan and straight away. It will create the instance without any
+  approval. Check See, Do you see? And the instance is creating right after the
+  plan. It did not wait for your approval, is this clear to everyone? Any doubts.
+  Any questions? No doubts. No questions. Yes. Mohammad
+
+[11:29]
+  If I run. The run. Apply two times, I will have to instances or only one.
+  We'll talk about that. Now, that is the thing that we will finish. Now before we
+  end, so, Now, let me just quickly, go and check how many instances are there.
+  And then we can do that. Okay, I see seven instances. What about others? Are you
+  guys creating it? Yes, Khadim error.
+
+[11:30]
+  Edge gives error. For me. I don't
+  Very good. Share share your screen. Okay, all of you guys are creating very
+  nice. Roger gave me a second, the problem. What is the problem? Look at that. Do
+  you see the very first term? What does it say? You have written Tera from. It is
+  not tera from it. Is terraform f o r m not f r o m. Okay, for example, one
+  moment, one moment, there is a lot of mistake here in the code. What is it? Do
+  not execute this, you will get an error. What is the error? Right after see,
+  there needs to be a space after apply. Take your cursor after apply. Give a
+  space. You your mouse will not work. Mouse will not work. Yes, you have to go
+  like this. Okay, after apply, give a space. Okay, after auto approved, give a
+  space. Mouse will not work. This is Terminal. Okay, and now you execute. Enter
+  just press Enter. So now you need to give a value for the, okay? You already
+  have it error. What is the error? The invalid. Am I id? Hmm, line. Number one,
+  you skipped a You have just written mi id. Okay, go back and run the code again.
+  Enter. Okay. Perfect. Yes. Roger
+
+[11:32]
+  Vanilla.
+  Share your screen. We'll talk about a very important concept before we end,
+  Okay, I see 12 instances are here, very nice. And that is the unique concept
+  pertaining to your terraform. Coated strings, line, number 30 and 40. Okay. One
+  second. Give one second, give me a second. Your screen is too tiny for me. Okay,
+  now I can see it. A coated string, may not be split over multiple lines. What is
+  the problem? The line is not, it is not pointing to line 20 or 30, scroll up.
+  Scroll up. Scroll up. First thing, can you do a favor to make? Can you close
+  this terraform.tfvs file on the right? Close it.
+
+[11:33]
+  This one.
+
+[11:34]
+  Yes. Okay. And can you minimize your terminal a bit? Perfect. Okay, scroll go to
+  the beginning and scroll from there. Because I see the error is coming from the
+  beginning. Okay, you have Okay, line number six. There is an empty court, which
+  is not closed. Remove that, that is where the problem arises. Now, it's
+  everything is fine. You can close that, AI suggestion. On the top. No, no. On
+  the top if you scroll a bit up Scroll scroll. And there was this option, find
+  attach fix the attached problem. On the right hand side, this this block. Yes,
+  yes you can close that. Okay. Now you scroll down and execute the command. Very
+  good. You can do once again space. In the minus auto minus approve. Let's say if
+  it works. Minus approve. So when in our case, what did we do? I had Auto approve
+  at the beginning and then I gave my file name, correct. I think all of you did
+  that here. He has changed the position. Let's see if it works enter. It is
+  working. Do you see this? It doesn't matter where in which order you give your
+  options or
+  Yeah.
+
+[11:35]
+  arguments, no matter in, whichever order you give it will start. Executing, is
+  this clear to everyone?
+  Thank you.
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now.
+
+[11:36]
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now, we need
+  to talk about a very, very important concept. What is that? Okay, so the main
+  concept name is called, as I dem potency. What is it? Please make a note of
+  this. I then pour 10. C. And this concept is very unique to your terraform.
+  Okay, or instead of item potency, they can also use this. I am for 10. This is
+  an important terminology that you've seen the exam. What does it mean? So now
+  before we need to understand about that, first, I need to go back to my code.
+  okay, so one second, let me quickly close this just for understanding What is
+  it? So your you have your AWS? You have your laptop here. you have your laptop
+  and from laptop you're connecting to AWS Yi or in it basically by your terraform
+  And obviously I have a state file for management. Is this clear? There is a
+  state file for management. Now, let us consider you've already done a terraform
+  apply once. Okay, what is it? Let me clear and rewrite, okay. so, You have done
+  Terraform apply once. So what happens the details about terraform apply is
+  written in the state file? Okay, now I will try to rerun the terraform apply
+  again. When you try to re-run, the terraform apply. First Terraform checks,
+  three things. Simultaneously. What is it terraform checks? Is there any change
+  in the code? Your answer is no, there is no change in the code. Okay then it
+  checks the state of your service in the AWS and the state of in your state
+  fight. Are they matching? If they are matching. Are they matching? If they are
+  matching then the second terraform apply what you do doesn't work. That means
+  there are from doesn't run the same code multiple times. It doesn't set up
+  duplicate services. Is this clear? If there is no change in the code then, In
+  spite of that if you keep doing terraform apply 100 times, it doesn't set up new
+  service for you. Why? Because about the first service detail is already there in
+  the state file? Which is already set up in the cloud. So, even if you keep
+  applying the same service multiple times, it, it already knows the details are
+  already there in the state file. Why should it create a new one? So running the
+  same code without any changes multiple times gives you only one output, there is
+  no change in the output. It doesn't create the same infrastructure multiple
+  times. There is no repetition. Or duplication, is this clear? And this whole
+  feature is called, as i M port, and C, or basically, this process is called as
+  item, potency and in your terraform is called as I them for tent software. Why?
+  Because it doesn't set up duplicate infrastructure. Is this clear? Any doubt.
+  Any question. So right now, I hope none of you guys have destroyed any services,
+  right? So let me go back and check one moment here. We have all 12 instances He
+  okay instances here, right? So now what I'll do, I will go And try to do
+  terraform apply again. Let's try to do that. Let's see what will be our output.
+  Fine. So now, anyways, I have my Main dot. TF here, just for our reference. I'm
+  opening it main Dot. TF is here. Okay, I'll go to my terminal and I will expand
+  my terminal. Okay. And remember guys, one important thing these are called a
+  shortcuts when we work with terminals or VS code. Don't write the command
+  multiple times. On your laptop. Do you see this upper arrow? Mark lower RMR
+  left, arrow mark, right arrow, mark There is this i4 arrow marks on your laptop.
+  Correct, always use this upper arrow mark or lower arrow mark to get back. Your
+  commands, these two are marks are super efficient. Don't write the command
+  again, and again. It's a bad practice. So now what I do, I go back to my
+  terminal and I do my upper arrow mark. Okay, see I got my code back. I don't
+  want to write it again. I will run this code. Let's see what I will get as the
+  output. Initially, it will ask me, I think for the value for your Tag name.
+  Let's see. Okay, it will definitely ask for tag name. What was my tag name? I
+  think it was DCI, right? What was the tag name, guys? I think it's DCI. Okay,
+  let's see. Do you see this? Did you guys get this output? I want all of you to
+  check. Did you guys get this output? You should get this output. Here, what is
+  it states? It states. No changes. Do you guys see this? Everyone. yes, Mohammad
+
+[11:43]
+  M.
+  I have changed the name value to another one, but I still have no changes.
+  You still have no changes. You have stayed changed. The name value, right? Wait.
+  Yes.
+  We will see what is the problem then. Okay, so now for others, do you see this
+  no changes? Do you see the same easy to ID here? Yes. Yes, Khadim.
+  Is called, I came potentially.
+
+[11:45]
+  Yes, this is called as an item potency feature. Look at the beauty here. Look at
+  this important statement. You are not creating destroying or changing any
+  service. There is no effect on the service here. It is kept as it is. Look at
+  this very important statement. See this statement is super important. See the
+  statement, What does it say? Terraform has compared your real infrastructure
+  against your configuration and found no difference. So no changes are needed. Is
+  this clear? so if I run this terraform, apply 10,000 times on the same file with
+  the state file here, In spite of having a state file with the same code, if I
+  run this, apply 10,000 times, the infrastructure is created only once. Is this
+  clear? No duplicate infrastructure on the AWS? Any doubts, that is why we call
+  terraform as one of the most powerful tool. Without your knowledge, if you keep
+  applying terraform apply three or four times and imagine it keeps creative new
+  instances, what will be your bill? Correct.
+  Okay.
+  So sharanya. That means that means our the request. What we are doing through
+  the Abs rest API, Let's say like this. It's not even going out of our PC. Let's
+  say that is, right? I mean as soon as he
+  Yes, you can consider.
+  Mm-hmm.
+  He find out, okay? There is really no change of what we want to do, so he will
+  not really send the request at all.
+  Adi, exactly.
+  Okay, okay.
+  Is this clear? Okay, so Mohammad said something else. So let's check what is the
+  the Mohammad system? So I will go to AWS, okay? Mohammad, what is your instance?
+  So it was the updated one minute ago. Check. First of all, let me refresh once
+  to be on a safer side. Okay, is refreshing. Meanwhile. Let's wait until this is
+  done. Okay, it is refreshed. Now I will open Mohammad's instance. Do you see? Is
+  there any change in the tag here? Mohammad.
+
+[11:46]
+  I have a change in the name, it's always supposed to have two instance but I
+  have only one But consider it like, no chances.
+
+[11:47]
+  Yeah. First thing. when will a new instance be created, if I change the ami or
+  your Instance type, it will create a new instance. But what did you change? You
+  changed to just the tag, so it updated the tag. Correct. With the new value.
+  They did create a new one. No, it did not create a new instance. For example, I
+  want all of you to see my screen. I don't want any of you to change anything.
+  Just observe my screen. What is it? I will go to instances. One moment. Where is
+  my instance? Cool. Okay, so I'm in the instances, right? So here I let us see.
+  My instance name, look at my instance name. My instance name is DCI. Do you see
+  this? Does everyone see this? The instance name is DCI. Correct. Now I want all
+  of you to observe. I will go and I will run again. Okay, I don't want any of you
+  to run this. Just see my screen. Okay, I will run. Before I run, I will also do
+  one important thing that is I will open my state file here. Okay, I will go to
+  the tags that is at the bottom. Huh. Okay. Do you see this tag here tag tag? I
+  have marked it. Okay, now what I do, I go to the terminal and I run this
+  command. Okay, I will run the command and I will give a different name for my
+  instance. Okay, the name was DCI. I am not changing the AMI. I'm not changing
+  the instance type. I'm just changing the existing tag of your instance. It will
+  ask me for my tag name. Okay, so now it's asking me for the value. So my value
+  is now Sharanya. DCI. Okay earlier it was DCI. Okay. I'm now on changing it to
+  Sharanya DCI Enter. So, let's see what will happen. Remember guys, it is not
+  telling. Do you see here, Mohammad, You might have seen this important
+  statement, which you forgot to tell. What is the thing? It did not tell whether
+  it is adding or destroying it is telling one to change. Do you see here? And
+  what is that change? Very, very important. So, see here. I will go back. I will
+  scroll a bit up. Here in the same thing rest, everything is maintained as it is.
+  But what is it update in place? TERRAFORM will update the following actions.
+  What is it? The idea is already there. Arn, your Arn, or your Amazon resource
+  number associated with your instance, It is already there. But what am I
+  changing? Look at this, do you see the change here? It was initially DCI. So it
+  is telling here it was DCI and now it has changed from DCI to Sharanya DCI. Does
+  everyone see this option? And now when I scroll down, I see. Look at this. There
+  are some 13 unchanged attributes unchanged. They are telling most of the
+  attributes are kept as it is, and only one element that you are updating,
+  clearly telling it's one to change. Okay? And now I see here, One instance mean,
+  basically, one feature of that instance, got updated. What is that feature? My
+  DCI student. So now basically not DC student DCI. Name of your instance. So
+  right now it is not yet updated. So let me quickly, refresh this So now you see,
+  I want you to observe, it is now changed from DCI to Sharanya DCI. Do you see
+  this? Is this clear? Any doubt this is called as I dempotency. Is this clear to
+  everyone? Any doubt. Any questions? Did you guys understand the whole thing?
+  Yes, Niyanta
+
+[11:52]
+  I thought question, for example, this is only one EC2 instance, in company we
+  have more than one easy, to instance, how we can manage our in one file. For
+  example, we need to tear up form dot tf. Verse only one file or we need to more
+  than one file. For variable.
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus?
+
+[11:56]
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus file to your apply and also you how to do AUTO
+  approve? Is this clear? Any doubts? Any questions? No questions. Then please
+  destroy your service. So again, even in destroy, you have auto approve simple
+  what I will do. I will get back. My remember, guys, both for apply and destroy.
+  You need to pass the file name. Both for apply and destroy TF words. File has to
+  be passed. Why both for apply and destroy in the background, it is using the
+  plan, which expects you to have the file name. So TF, Mars file needs to be done
+  both for apply and destroy remember. Okay. okay, so now I have destroy So, let
+  me go back here. To my terminal. Enter. So I need to provide the value. I have
+  to give the exact value. What I had provided earlier, share, and ya. Minus DCI.
+  So see here 0 to add 0, to change one to destroy. And it is destroying the
+  service. I want all of you to destroy the service, I will go back and refresh
+  here. I want all the 16 instances to be deleted from here immediately. Blood
+  Khadim. Please delete your service. Khadim, I'm pretty sure you created two
+  instances. You updated this without deleting the first one. I think you really
+  created a new one. Right.
+  I don't know. I have created two easy.
+  I see here too. In Yes, I see here to instance, one was at the beginning. Do you
+  see here? This is khadiman, There is one more else at the bottom. I see here.
+  One here and one here, that's why I asked you guys to not to run the command
+  multiple times.
+  Yeah.
+  So I will delete this. Don't worry. I will delete it here.
+  So I have to destroy the first one. Yeah.
+  Sharanya.
+  No you I'm deleting it here. Don't do it. Don't do anything there. Okay, is this
+  clear to everyone? Any doubts any questions so far? Let me stop recording.
+  Okay, don't apply this. Let us see something else and then we can apply Fine.
+  Now before I proceed okay I will go to Terraform, apply help. When I don't
+  terraform apply Help, I hope you guys can see this. Very first option, what is
+  the very first option auto approve? Do you see this first option called as Auto
+  Pro? I want everyone to see this. Do you see this? Yes. No. Check. What does it
+  say? If I give the 10, it basically means skip interactive approval of plan
+  before applying. So that means there was an intermediate step. Whenever I did a
+  terraform apply it, stopped it basically, wanted a manual approval of typing.
+  Yes, Correct until and unless you gave yes it did not proceed. But most of the
+  time you will have an automatic system automated scripts will be running, how
+  can you expect some manual person to come and give this? Yes. It's not possible,
+  right? So to avoid that, you have this auto approved option. So what I can do,
+  Scroll down and now let us use Auto Approve option. So let us use this.
+  Terraform. Apply. Minus auto minus approve. Minus var. Let's see if it works
+  like this. Minus file equal. Tera form dot E-f-wars. Hey. Is the name. Correct.
+  Auto approve. Minus 1. Minus 5 equals terraform.tforce. Okay. Let's see if it
+  works. Look okay it is asking for the tag name because there is not tag name so
+  I will get the tag name as DCI and look right after you give the tag name it
+  will print your plan and straight away. It will create the instance without any
+  approval. Check See, Do you see? And the instance is creating right after the
+  plan. It did not wait for your approval, is this clear to everyone? Any doubts.
+  Any questions? No doubts. No questions. Yes. Mohammad
+  Yes. Any questions got them.
+  But have you already deleted my instance?
+  Not yet. I will be doing it now.
+  I will destroy from the terminal.
+  You will did destroy from the terminal.
+
+[11:57]
+  yeah, I will do it but not
+  Okay, do it. It from the terminal.
+  Turn around.
+  Is that clear? Any doubts any questions?
+  Since. Yes.
+  I hope I have a question injured.
+  Yes. Okay. And can you minimize your terminal a bit? Perfect. Okay, scroll go to
+  the beginning and scroll from there. Because I see the error is coming from the
+  beginning. Okay, you have Okay, line number six. There is an empty court, which
+  is not closed. Remove that, that is where the problem arises. Now, it's
+  everything is fine. You can close that, AI suggestion. On the top. No, no. On
+  the top if you scroll a bit up Scroll scroll. And there was this option, find
+  attach fix the attached problem. On the right hand side, this this block. Yes,
+  yes you can close that. Okay. Now you scroll down and execute the command. Very
+  good. You can do once again space. In the minus auto minus approve. Let's say if
+  it works. Minus approve. So when in our case, what did we do? I had Auto approve
+  at the beginning and then I gave my file name, correct. I think all of you did
+  that here. He has changed the position. Let's see if it works enter. It is
+  working. Do you see this? It doesn't matter where in which order you give your
+  options or
+  Already I send it message. Yeah.
+  You sent a message to me.
+  Who sharing the screen. This is I think. Roger is presenting, okay? Okay, did
+  you send a message on Slack? Near.
+  But most of the time you will have an automatic system automated scripts will be
+  running, how can you expect some manual person to come and give this? Yes. It's
+  not possible, right? So to avoid that, you have this auto approved option. So
+  what I can do, Scroll down and now let us use Auto Approve option. So let us use
+  this. Terraform. Apply. Minus auto minus approve. Minus var. Let's see if it
+  works like this. Minus file equal. Tera form dot E-f-wars. Hey. Is the name.
+  Correct. Auto approve. Minus 1. Minus 5 equals terraform.tforce. Okay. Let's see
+  if it works. Look okay it is asking for the tag name because there is not tag
+  name so I will get the tag name as DCI and look right after you give the tag
+  name it will print your plan and straight away. It will create the instance
+  without any approval. Check See, Do you see? And the instance is creating right
+  after the plan. It did not wait for your approval, is this clear to everyone?
+  Any doubts. Any questions? No doubts. No questions. Yes. Mohammad
+
+[11:58]
+  and not select, but in class, I have been Already. You can see. Yes, yes. Not in
+  class in this class. You can't see. I send again. Yes, chat.
+  Spilled in the chat.
+  I send again.
+  Recall. Before the end, what is it? okay, about the exam topics, you mean
+  Yes, yes.
+  Okay. Let's see if it works. Look okay it is asking for the tag name because
+  there is not tag name so I will get the tag name as DCI and look right after you
+  give the tag name it will print your plan and straight away. It will create the
+  instance without any approval. Check See, Do you see? And the instance is
+  creating right after the plan. It did not wait for your approval, is this clear
+  to everyone? Any doubts. Any questions? No doubts. No questions. Yes. Mohammad
+  I have a meeting now, let me quickly do. One moment.
+
+[11:59]
+  We'll talk about that. Now, that is the thing that we will finish. Now before we
+  end, so, Now, let me just quickly, go and check how many instances are there.
+  And then we can do that. Okay, I see seven instances. What about others? Are you
+  guys creating it? Yes, Khadim error.
+  Edge gives error. For me. I don't
+  Very good. Share share your screen. Okay, all of you guys are creating very
+  nice. Roger gave me a second, the problem. What is the problem? Look at that. Do
+  you see the very first term? What does it say? You have written Tera from. It is
+  not tera from it. Is terraform f o r m not f r o m. Okay, for example, one
+  moment, one moment, there is a lot of mistake here in the code. What is it? Do
+  not execute this, you will get an error. What is the error? Right after see,
+  there needs to be a space after apply. Take your cursor after apply. Give a
+  space. You your mouse will not work. Mouse will not work. Yes, you have to go
+  like this. Okay, after apply, give a space. Okay, after auto approved, give a
+  space. Mouse will not work. This is Terminal. Okay, and now you execute. Enter
+  just press Enter. So now you need to give a value for the, okay? You already
+  have it error. What is the error? The invalid. Am I id? Hmm, line. Number one,
+  you skipped a You have just written mi id. Okay, go back and run the code again.
+  Enter. Okay. Perfect. Yes. Roger
+  Vanilla.
+  Share your screen. We'll talk about a very important concept before we end,
+  Okay, I see 12 instances are here, very nice. And that is the unique concept
+  pertaining to your terraform. Coated strings, line, number 30 and 40. Okay. One
+  second. Give one second, give me a second. Your screen is too tiny for me. Okay,
+  now I can see it. A coated string, may not be split over multiple lines. What is
+  the problem? The line is not, it is not pointing to line 20 or 30, scroll up.
+  Scroll up. Scroll up. First thing, can you do a favor to make? Can you close
+  this terraform.tfvs file on the right? Close it.
+  This one.
+  Yeah.
+  arguments, no matter in, whichever order you give it will start. Executing, is
+  this clear to everyone?
+  Thank you.
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now, we need
+  to talk about a very, very important concept. What is that? Okay, so the main
+  concept name is called, as I dem potency. What is it? Please make a note of
+  this. I then pour 10. C. And this concept is very unique to your terraform.
+  Okay, or instead of item potency, they can also use this. I am for 10. This is
+  an important terminology that you've seen the exam. What does it mean? So now
+  before we need to understand about that, first, I need to go back to my code.
+  okay, so one second, let me quickly close this just for understanding What is
+  it? So your you have your AWS? You have your laptop here. you have your laptop
+  and from laptop you're connecting to AWS Yi or in it basically by your terraform
+  And obviously I have a state file for management. Is this clear? There is a
+  state file for management. Now, let us consider you've already done a terraform
+  apply once. Okay, what is it? Let me clear and rewrite, okay. so, You have done
+  Terraform apply once. So what happens the details about terraform apply is
+  written in the state file? Okay, now I will try to rerun the terraform apply
+  again. When you try to re-run, the terraform apply. First Terraform checks,
+  three things. Simultaneously. What is it terraform checks? Is there any change
+  in the code? Your answer is no, there is no change in the code. Okay then it
+  checks the state of your service in the AWS and the state of in your state
+  fight. Are they matching? If they are matching. Are they matching? If they are
+  matching then the second terraform apply what you do doesn't work. That means
+  there are from doesn't run the same code multiple times. It doesn't set up
+  duplicate services. Is this clear? If there is no change in the code then, In
+  spite of that if you keep doing terraform apply 100 times, it doesn't set up new
+  service for you. Why? Because about the first service detail is already there in
+  the state file? Which is already set up in the cloud. So, even if you keep
+  applying the same service multiple times, it, it already knows the details are
+  already there in the state file. Why should it create a new one? So running the
+  same code without any changes multiple times gives you only one output, there is
+  no change in the output. It doesn't create the same infrastructure multiple
+  times. There is no repetition. Or duplication, is this clear? And this whole
+  feature is called, as i M port, and C, or basically, this process is called as
+  item, potency and in your terraform is called as I them for tent software. Why?
+  Because it doesn't set up duplicate infrastructure. Is this clear? Any doubt.
+  Any question. So right now, I hope none of you guys have destroyed any services,
+  right? So let me go back and check one moment here. We have all 12 instances He
+  okay instances here, right? So now what I'll do, I will go And try to do
+  terraform apply again. Let's try to do that. Let's see what will be our output.
+  Fine. So now, anyways, I have my Main dot. TF here, just for our reference. I'm
+  opening it main Dot. TF is here. Okay, I'll go to my terminal and I will expand
+  my terminal. Okay. And remember guys, one important thing these are called a
+  shortcuts when we work with terminals or VS code. Don't write the command
+  multiple times. On your laptop. Do you see this upper arrow? Mark lower RMR
+  left, arrow mark, right arrow, mark There is this i4 arrow marks on your laptop.
+  Correct, always use this upper arrow mark or lower arrow mark to get back. Your
+  commands, these two are marks are super efficient. Don't write the command
+  again, and again. It's a bad practice. So now what I do, I go back to my
+  terminal and I do my upper arrow mark. Okay, see I got my code back. I don't
+  want to write it again. I will run this code. Let's see what I will get as the
+  output. Initially, it will ask me, I think for the value for your Tag name.
+  Let's see. Okay, it will definitely ask for tag name. What was my tag name? I
+  think it was DCI, right? What was the tag name, guys? I think it's DCI. Okay,
+  let's see. Do you see this? Did you guys get this output? I want all of you to
+  check. Did you guys get this output? You should get this output. Here, what is
+  it states? It states. No changes. Do you guys see this? Everyone. yes, Mohammad
+  I have changed the name value to another one, but I still have no changes.
+  You still have no changes. You have stayed changed. The name value, right? Wait.
+  Yes.
+  We will see what is the problem then. Okay, so now for others, do you see this
+  no changes? Do you see the same easy to ID here? Yes. Yes, Khadim.
+  Is called, I came potentially.
+  Yes, this is called as an item potency feature. Look at the beauty here. Look at
+  this important statement. You are not creating destroying or changing any
+  service. There is no effect on the service here. It is kept as it is. Look at
+  this very important statement. See this statement is super important. See the
+  statement, What does it say? Terraform has compared your real infrastructure
+  against your configuration and found no difference. So no changes are needed. Is
+  this clear? so if I run this terraform, apply 10,000 times on the same file with
+  the state file here, In spite of having a state file with the same code, if I
+  run this, apply 10,000 times, the infrastructure is created only once. Is this
+  clear? No duplicate infrastructure on the AWS? Any doubts, that is why we call
+  terraform as one of the most powerful tool. Without your knowledge, if you keep
+  applying terraform apply three or four times and imagine it keeps creative new
+  instances, what will be your bill? Correct.
+  So sharanya. That means that means our the request. What we are doing through
+  Okay.
+  the Abs rest API, Let's say like this. It's not even going out of our PC. Let's
+  say that is, right? I mean as soon as he
+  Yes, you can consider.
+  He find out, okay? There is really no change of what we want to do, so he will
+  Mm-hmm.
+  not really send the request at all.
+  Adi, exactly.
+  Okay, okay.
+  Is this clear? Okay, so Mohammad said something else. So let's check what is the
+  the Mohammad system? So I will go to AWS, okay? Mohammad, what is your instance?
+  So it was the updated one minute ago. Check. First of all, let me refresh once
+  to be on a safer side. Okay, is refreshing. Meanwhile. Let's wait until this is
+  done. Okay, it is refreshed. Now I will open Mohammad's instance. Do you see? Is
+  there any change in the tag here? Mohammad.
+  I have a change in the name, it's always supposed to have two instance but I
+  have only one But consider it like, no chances.
+  Yeah. First thing. when will a new instance be created, if I change the ami or
+  your Instance type, it will create a new instance. But what did you change? You
+  changed to just the tag, so it updated the tag. Correct. With the new value.
+  They did create a new one. No, it did not create a new instance. For example, I
+  want all of you to see my screen. I don't want any of you to change anything.
+  Just observe my screen. What is it? I will go to instances. One moment. Where is
+  my instance? Cool. Okay, so I'm in the instances, right? So here I let us see.
+  My instance name, look at my instance name. My instance name is DCI. Do you see
+  this? Does everyone see this? The instance name is DCI. Correct. Now I want all
+  of you to observe. I will go and I will run again. Okay, I don't want any of you
+  to run this. Just see my screen. Okay, I will run. Before I run, I will also do
+  one important thing that is I will open my state file here. Okay, I will go to
+  the tags that is at the bottom. Huh. Okay. Do you see this tag here tag tag? I
+  have marked it. Okay, now what I do, I go to the terminal and I run this
+  command. Okay, I will run the command and I will give a different name for my
+  instance. Okay, the name was DCI. I am not changing the AMI. I'm not changing
+  the instance type. I'm just changing the existing tag of your instance. It will
+  ask me for my tag name. Okay, so now it's asking me for the value. So my value
+  is now Sharanya. DCI. Okay earlier it was DCI. Okay. I'm now on changing it to
+  Sharanya DCI Enter. So, let's see what will happen. Remember guys, it is not
+  telling. Do you see here, Mohammad, You might have seen this important
+  statement, which you forgot to tell. What is the thing? It did not tell whether
+  it is adding or destroying it is telling one to change. Do you see here? And
+  what is that change? Very, very important. So, see here. I will go back. I will
+  scroll a bit up. Here in the same thing rest, everything is maintained as it is.
+  But what is it update in place? TERRAFORM will update the following actions.
+  What is it? The idea is already there. Arn, your Arn, or your Amazon resource
+  number associated with your instance, It is already there. But what am I
+  changing? Look at this, do you see the change here? It was initially DCI. So it
+  is telling here it was DCI and now it has changed from DCI to Sharanya DCI. Does
+  everyone see this option? And now when I scroll down, I see. Look at this. There
+  are some 13 unchanged attributes unchanged. They are telling most of the
+  attributes are kept as it is, and only one element that you are updating,
+  clearly telling it's one to change. Okay? And now I see here, One instance mean,
+  basically, one feature of that instance, got updated. What is that feature? My
+  DCI student. So now basically not DC student DCI. Name of your instance. So
+  right now it is not yet updated. So let me quickly, refresh this So now you see,
+  I want you to observe, it is now changed from DCI to Sharanya DCI. Do you see
+  this? Is this clear? Any doubt this is called as I dempotency. Is this clear to
+  everyone? Any doubt. Any questions? Did you guys understand the whole thing?
+  Yes, Niyanta
+  I thought question, for example, this is only one EC2 instance, in company we
+  have more than one easy, to instance, how we can manage our in one file. For
+  example, we need to tear up form dot tf. Verse only one file or we need to more
+  than one file. For variable.
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus file to your apply and also you how to do AUTO
+  approve? Is this clear? Any doubts? Any questions? No questions. Then please
+  destroy your service. So again, even in destroy, you have auto approve simple
+  what I will do. I will get back. My remember, guys, both for apply and destroy.
+  You need to pass the file name. Both for apply and destroy TF words. File has to
+  be passed. Why both for apply and destroy in the background, it is using the
+  plan, which expects you to have the file name. So TF, Mars file needs to be done
+  both for apply and destroy remember. Okay. okay, so now I have destroy So, let
+  me go back here. To my terminal. Enter. So I need to provide the value. I have
+  to give the exact value. What I had provided earlier, share, and ya. Minus DCI.
+  So see here 0 to add 0, to change one to destroy. And it is destroying the
+  service. I want all of you to destroy the service, I will go back and refresh
+  here. I want all the 16 instances to be deleted from here immediately. Blood
+  Khadim. Please delete your service. Khadim, I'm pretty sure you created two
+  instances. You updated this without deleting the first one. I think you really
+  created a new one. Right.
+  I don't know. I have created two easy.
+  I see here too. In Yes, I see here to instance, one was at the beginning. Do you
+  see here? This is khadiman, There is one more else at the bottom. I see here.
+  One here and one here, that's why I asked you guys to not to run the command
+  multiple times.
+  Yeah.
+  So I will delete this. Don't worry. I will delete it here.
+  So I have to destroy the first one. Yeah.
+  No you I'm deleting it here. Don't do it. Don't do anything there. Okay, is this
+  clear to everyone? Any doubts any questions so far? Let me stop recording.
+  Sharanya.
+  Yes. Any questions got them.
+  But have you already deleted my instance?
+  Not yet. I will be doing it now.
+  I will destroy from the terminal.
+  You will did destroy from the terminal.
+  yeah, I will do it but not
+  Okay, do it. It from the terminal.
+  Turn around.
+  Is that clear? Any doubts any questions?
+  Since. Yes.
+  I hope I have a question injured.
+  You sent a message to me.
+  Already I send it message. Yeah.
+  Who sharing the screen. This is I think. Roger is presenting, okay? Okay, did
+  you send a message on Slack? Near.
+  and not select, but in class, I have been Already. You can see. Yes, yes. Not in
+  class in this class. You can't see. I send again. Yes, chat.
+  Spilled in the chat.
+  I send again.
+  Recall. Before the end, what is it? okay, about the exam topics, you mean
+  Yes, yes.
+  I have a meeting now, let me quickly do. One moment.
+
+[12:00]
+  Okay, I am here. Let me quickly check. Isn't it not going into the new page?
+  Question. Okay. One second.
+  What is the problem? Look at that. Do you see the very first term? What does it
+  say? You have written Tera from. It is not tera from it. Is terraform f o r m
+  not f r o m. Okay, for example, one moment, one moment, there is a lot of
+  mistake here in the code. What is it? Do not execute this, you will get an
+  error. What is the error? Right after see, there needs to be a space after
+  apply. Take your cursor after apply. Give a space. You your mouse will not work.
+  Mouse will not work. Yes, you have to go like this. Okay, after apply, give a
+  space. Okay, after auto approved, give a space. Mouse will not work. This is
+  Terminal. Okay, and now you execute. Enter just press Enter. So now you need to
+  give a value for the, okay? You already have it error. What is the error? The
+  invalid. Am I id? Hmm, line. Number one, you skipped a You have just written mi
+  id. Okay, go back and run the code again. Enter. Okay. Perfect. Yes. Roger
+  Vanilla.
+  Share your screen. We'll talk about a very important concept before we end,
+  Okay, I see 12 instances are here, very nice. And that is the unique concept
+  pertaining to your terraform. Coated strings, line, number 30 and 40. Okay. One
+  second. Give one second, give me a second. Your screen is too tiny for me. Okay,
+  now I can see it. A coated string, may not be split over multiple lines. What is
+  the problem? The line is not, it is not pointing to line 20 or 30, scroll up.
+  Scroll up. Scroll up. First thing, can you do a favor to make? Can you close
+  this terraform.tfvs file on the right? Close it.
+  This one.
+  Yes. Okay. And can you minimize your terminal a bit? Perfect. Okay, scroll go to
+  the beginning and scroll from there. Because I see the error is coming from the
+  beginning. Okay, you have Okay, line number six. There is an empty court, which
+  is not closed. Remove that, that is where the problem arises. Now, it's
+  everything is fine. You can close that, AI suggestion. On the top. No, no. On
+  the top if you scroll a bit up Scroll scroll. And there was this option, find
+  attach fix the attached problem. On the right hand side, this this block. Yes,
+  yes you can close that. Okay. Now you scroll down and execute the command. Very
+  good. You can do once again space. In the minus auto minus approve. Let's say if
+  it works. Minus approve. So when in our case, what did we do? I had Auto approve
+  at the beginning and then I gave my file name, correct. I think all of you did
+  that here. He has changed the position. Let's see if it works enter. It is
+  working. Do you see this? It doesn't matter where in which order you give your
+  options or
+  Yeah.
+  arguments, no matter in, whichever order you give it will start. Executing, is
+  this clear to everyone?
+  Thank you.
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now, we need
+  to talk about a very, very important concept. What is that? Okay, so the main
+  concept name is called, as I dem potency. What is it? Please make a note of
+  this. I then pour 10. C. And this concept is very unique to your terraform.
+  Okay, or instead of item potency, they can also use this. I am for 10. This is
+  an important terminology that you've seen the exam. What does it mean? So now
+  before we need to understand about that, first, I need to go back to my code.
+  okay, so one second, let me quickly close this just for understanding What is
+  it? So your you have your AWS? You have your laptop here. you have your laptop
+  and from laptop you're connecting to AWS Yi or in it basically by your terraform
+  And obviously I have a state file for management. Is this clear? There is a
+  state file for management. Now, let us consider you've already done a terraform
+  apply once. Okay, what is it? Let me clear and rewrite, okay. so, You have done
+  Terraform apply once. So what happens the details about terraform apply is
+  written in the state file? Okay, now I will try to rerun the terraform apply
+  again. When you try to re-run, the terraform apply. First Terraform checks,
+  three things. Simultaneously. What is it terraform checks? Is there any change
+  in the code? Your answer is no, there is no change in the code. Okay then it
+  checks the state of your service in the AWS and the state of in your state
+  fight. Are they matching? If they are matching. Are they matching? If they are
+  matching then the second terraform apply what you do doesn't work. That means
+  there are from doesn't run the same code multiple times. It doesn't set up
+  duplicate services. Is this clear? If there is no change in the code then, In
+  spite of that if you keep doing terraform apply 100 times, it doesn't set up new
+  service for you. Why? Because about the first service detail is already there in
+  the state file? Which is already set up in the cloud. So, even if you keep
+  applying the same service multiple times, it, it already knows the details are
+  already there in the state file. Why should it create a new one? So running the
+  same code without any changes multiple times gives you only one output, there is
+  no change in the output. It doesn't create the same infrastructure multiple
+  times. There is no repetition. Or duplication, is this clear? And this whole
+  feature is called, as i M port, and C, or basically, this process is called as
+  item, potency and in your terraform is called as I them for tent software. Why?
+  Because it doesn't set up duplicate infrastructure. Is this clear? Any doubt.
+  Any question. So right now, I hope none of you guys have destroyed any services,
+  right? So let me go back and check one moment here. We have all 12 instances He
+  okay instances here, right? So now what I'll do, I will go And try to do
+  terraform apply again. Let's try to do that. Let's see what will be our output.
+  Fine. So now, anyways, I have my Main dot. TF here, just for our reference. I'm
+  opening it main Dot. TF is here. Okay, I'll go to my terminal and I will expand
+  my terminal. Okay. And remember guys, one important thing these are called a
+  shortcuts when we work with terminals or VS code. Don't write the command
+  multiple times. On your laptop. Do you see this upper arrow? Mark lower RMR
+  left, arrow mark, right arrow, mark There is this i4 arrow marks on your laptop.
+  Correct, always use this upper arrow mark or lower arrow mark to get back. Your
+  commands, these two are marks are super efficient. Don't write the command
+  again, and again. It's a bad practice. So now what I do, I go back to my
+  terminal and I do my upper arrow mark. Okay, see I got my code back. I don't
+  want to write it again. I will run this code. Let's see what I will get as the
+  output. Initially, it will ask me, I think for the value for your Tag name.
+  Let's see. Okay, it will definitely ask for tag name. What was my tag name? I
+  think it was DCI, right? What was the tag name, guys? I think it's DCI. Okay,
+  let's see. Do you see this? Did you guys get this output? I want all of you to
+  check. Did you guys get this output? You should get this output. Here, what is
+  it states? It states. No changes. Do you guys see this? Everyone. yes, Mohammad
+  I have changed the name value to another one, but I still have no changes.
+  You still have no changes. You have stayed changed. The name value, right? Wait.
+  Yes.
+  We will see what is the problem then. Okay, so now for others, do you see this
+  no changes? Do you see the same easy to ID here? Yes. Yes, Khadim.
+  Is called, I came potentially.
+  Yes, this is called as an item potency feature. Look at the beauty here. Look at
+  this important statement. You are not creating destroying or changing any
+  service. There is no effect on the service here. It is kept as it is. Look at
+  this very important statement. See this statement is super important. See the
+  statement, What does it say? Terraform has compared your real infrastructure
+  against your configuration and found no difference. So no changes are needed. Is
+  this clear? so if I run this terraform, apply 10,000 times on the same file with
+  the state file here, In spite of having a state file with the same code, if I
+  run this, apply 10,000 times, the infrastructure is created only once. Is this
+  clear? No duplicate infrastructure on the AWS? Any doubts, that is why we call
+  terraform as one of the most powerful tool. Without your knowledge, if you keep
+  applying terraform apply three or four times and imagine it keeps creative new
+  instances, what will be your bill? Correct.
+  So sharanya. That means that means our the request. What we are doing through
+  Okay.
+  the Abs rest API, Let's say like this. It's not even going out of our PC. Let's
+  say that is, right? I mean as soon as he
+  Yes, you can consider.
+  He find out, okay? There is really no change of what we want to do, so he will
+  Mm-hmm.
+  not really send the request at all.
+  Adi, exactly.
+  Okay, okay.
+  Is this clear? Okay, so Mohammad said something else. So let's check what is the
+  the Mohammad system? So I will go to AWS, okay? Mohammad, what is your instance?
+  So it was the updated one minute ago. Check. First of all, let me refresh once
+  to be on a safer side. Okay, is refreshing. Meanwhile. Let's wait until this is
+  done. Okay, it is refreshed. Now I will open Mohammad's instance. Do you see? Is
+  there any change in the tag here? Mohammad.
+  I have a change in the name, it's always supposed to have two instance but I
+  have only one But consider it like, no chances.
+  Yeah. First thing. when will a new instance be created, if I change the ami or
+  your Instance type, it will create a new instance. But what did you change? You
+  changed to just the tag, so it updated the tag. Correct. With the new value.
+  They did create a new one. No, it did not create a new instance. For example, I
+  want all of you to see my screen. I don't want any of you to change anything.
+  Just observe my screen. What is it? I will go to instances. One moment. Where is
+  my instance? Cool. Okay, so I'm in the instances, right? So here I let us see.
+  My instance name, look at my instance name. My instance name is DCI. Do you see
+  this? Does everyone see this? The instance name is DCI. Correct. Now I want all
+  of you to observe. I will go and I will run again. Okay, I don't want any of you
+  to run this. Just see my screen. Okay, I will run. Before I run, I will also do
+  one important thing that is I will open my state file here. Okay, I will go to
+  the tags that is at the bottom. Huh. Okay. Do you see this tag here tag tag? I
+  have marked it. Okay, now what I do, I go to the terminal and I run this
+  command. Okay, I will run the command and I will give a different name for my
+  instance. Okay, the name was DCI. I am not changing the AMI. I'm not changing
+  the instance type. I'm just changing the existing tag of your instance. It will
+  ask me for my tag name. Okay, so now it's asking me for the value. So my value
+  is now Sharanya. DCI. Okay earlier it was DCI. Okay. I'm now on changing it to
+  Sharanya DCI Enter. So, let's see what will happen. Remember guys, it is not
+  telling. Do you see here, Mohammad, You might have seen this important
+  statement, which you forgot to tell. What is the thing? It did not tell whether
+  it is adding or destroying it is telling one to change. Do you see here? And
+  what is that change? Very, very important. So, see here. I will go back. I will
+  scroll a bit up. Here in the same thing rest, everything is maintained as it is.
+  But what is it update in place? TERRAFORM will update the following actions.
+  What is it? The idea is already there. Arn, your Arn, or your Amazon resource
+  number associated with your instance, It is already there. But what am I
+  changing? Look at this, do you see the change here? It was initially DCI. So it
+  is telling here it was DCI and now it has changed from DCI to Sharanya DCI. Does
+  everyone see this option? And now when I scroll down, I see. Look at this. There
+  are some 13 unchanged attributes unchanged. They are telling most of the
+  attributes are kept as it is, and only one element that you are updating,
+  clearly telling it's one to change. Okay? And now I see here, One instance mean,
+  basically, one feature of that instance, got updated. What is that feature? My
+  DCI student. So now basically not DC student DCI. Name of your instance. So
+  right now it is not yet updated. So let me quickly, refresh this So now you see,
+  I want you to observe, it is now changed from DCI to Sharanya DCI. Do you see
+  this? Is this clear? Any doubt this is called as I dempotency. Is this clear to
+  everyone? Any doubt. Any questions? Did you guys understand the whole thing?
+  Yes, Niyanta
+  I thought question, for example, this is only one EC2 instance, in company we
+  have more than one easy, to instance, how we can manage our in one file. For
+  example, we need to tear up form dot tf. Verse only one file or we need to more
+  than one file. For variable.
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus file to your apply and also you how to do AUTO
+  approve? Is this clear? Any doubts? Any questions? No questions. Then please
+  destroy your service. So again, even in destroy, you have auto approve simple
+  what I will do. I will get back. My remember, guys, both for apply and destroy.
+  You need to pass the file name. Both for apply and destroy TF words. File has to
+  be passed. Why both for apply and destroy in the background, it is using the
+  plan, which expects you to have the file name. So TF, Mars file needs to be done
+  both for apply and destroy remember. Okay. okay, so now I have destroy So, let
+  me go back here. To my terminal. Enter. So I need to provide the value. I have
+  to give the exact value. What I had provided earlier, share, and ya. Minus DCI.
+  So see here 0 to add 0, to change one to destroy. And it is destroying the
+  service. I want all of you to destroy the service, I will go back and refresh
+  here. I want all the 16 instances to be deleted from here immediately. Blood
+  Khadim. Please delete your service. Khadim, I'm pretty sure you created two
+  instances. You updated this without deleting the first one. I think you really
+  created a new one. Right.
+  I don't know. I have created two easy.
+  I see here too. In Yes, I see here to instance, one was at the beginning. Do you
+  see here? This is khadiman, There is one more else at the bottom. I see here.
+  One here and one here, that's why I asked you guys to not to run the command
+  multiple times.
+  Yeah.
+  So I will delete this. Don't worry. I will delete it here.
+  So I have to destroy the first one. Yeah.
+  No you I'm deleting it here. Don't do it. Don't do anything there. Okay, is this
+  clear to everyone? Any doubts any questions so far? Let me stop recording.
+  Sharanya.
+  Yes. Any questions got them.
+  But have you already deleted my instance?
+  Not yet. I will be doing it now.
+  I will destroy from the terminal.
+  You will did destroy from the terminal.
+  yeah, I will do it but not
+  Okay, do it. It from the terminal.
+  Turn around.
+  Is that clear? Any doubts any questions?
+  Since. Yes.
+  I hope I have a question injured.
+  You sent a message to me.
+  Already I send it message. Yeah.
+  Who sharing the screen. This is I think. Roger is presenting, okay? Okay, did
+  you send a message on Slack? Near.
+  and not select, but in class, I have been Already. You can see. Yes, yes. Not in
+  class in this class. You can't see. I send again. Yes, chat.
+  Spilled in the chat.
+  I send again.
+  Recall. Before the end, what is it? okay, about the exam topics, you mean
+  Yes, yes.
+  I have a meeting now, let me quickly do. One moment.
+  Okay, I am here. Let me quickly check. Isn't it not going into the new page?
+  Question. Okay. One second. Once again, guys. I'm checking because earlier, we
+  had an option to directly access the Page. So, but now it's still giving me an
+  money that we need to pay for example, if you see now okay, so the first page,
+  if you see, This is called as API accessing. Okay earlier, I could directly
+  access the API, for example, right after view I could press two which will go
+  into the second page. Now, it's throwing an error, they have changed the API
+  access. So, let's see. How do you see this? I was able to log into the second
+  page. So what did I do? I went to the URL and now I'm changing the URL. Do you
+  see it is view / 2 from u, slash 2. I'm going to view / 3, enter. So it will
+  throw you this. Scroll down now, it's not giving you an option. Let's see if I
+  can refresh. It's only giving me till page to So page 2, you can access easily.
+  So see you need to give a captcha here GP. Nkc enter. Okay. Page 2, you can
+  easily access like this but let's see if I can go to page 3.
+
+[12:01]
+  Okay, and now you execute. Enter just press Enter. So now you need to give a
+  value for the, okay? You already have it error. What is the error? The invalid.
+  Am I id? Hmm, line. Number one, you skipped a You have just written mi id. Okay,
+  go back and run the code again. Enter. Okay. Perfect. Yes. Roger
+
+[12:02]
+  And that is the unique concept pertaining to your terraform. Coated strings,
+  line, number 30 and 40. Okay. One second. Give one second, give me a second.
+  Your screen is too tiny for me. Okay, now I can see it. A coated string, may not
+  be split over multiple lines. What is the problem? The line is not, it is not
+  pointing to line 20 or 30, scroll up. Scroll up. Scroll up. First thing, can you
+  do a favor to make? Can you close this terraform.tfvs file on the right? Close
+  it.
+  This one.
+  Yes. Okay. And can you minimize your terminal a bit? Perfect. Okay, scroll go to
+  the beginning and scroll from there. Because I see the error is coming from the
+  beginning. Okay, you have Okay, line number six. There is an empty court, which
+  is not closed. Remove that, that is where the problem arises. Now, it's
+  everything is fine. You can close that, AI suggestion. On the top. No, no. On
+  the top if you scroll a bit up Scroll scroll. And there was this option, find
+  attach fix the attached problem. On the right hand side, this this block. Yes,
+  yes you can close that. Okay. Now you scroll down and execute the command. Very
+  good. You can do once again space. In the minus auto minus approve. Let's say if
+  it works. Minus approve. So when in our case, what did we do? I had Auto approve
+  at the beginning and then I gave my file name, correct. I think all of you did
+  that here. He has changed the position. Let's see if it works enter. It is
+  working. Do you see this? It doesn't matter where in which order you give your
+  options or
+  Yeah.
+  arguments, no matter in, whichever order you give it will start. Executing, is
+  this clear to everyone?
+  Thank you.
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now, we need
+  to talk about a very, very important concept. What is that? Okay, so the main
+  concept name is called, as I dem potency. What is it? Please make a note of
+  this. I then pour 10. C. And this concept is very unique to your terraform.
+  Okay, or instead of item potency, they can also use this. I am for 10. This is
+  an important terminology that you've seen the exam. What does it mean? So now
+  before we need to understand about that, first, I need to go back to my code.
+  okay, so one second, let me quickly close this just for understanding What is
+  it? So your you have your AWS? You have your laptop here. you have your laptop
+  and from laptop you're connecting to AWS Yi or in it basically by your terraform
+  And obviously I have a state file for management. Is this clear? There is a
+  state file for management. Now, let us consider you've already done a terraform
+  apply once. Okay, what is it? Let me clear and rewrite, okay. so, You have done
+  Terraform apply once. So what happens the details about terraform apply is
+  written in the state file? Okay, now I will try to rerun the terraform apply
+  again. When you try to re-run, the terraform apply. First Terraform checks,
+  three things. Simultaneously. What is it terraform checks? Is there any change
+  in the code? Your answer is no, there is no change in the code. Okay then it
+  checks the state of your service in the AWS and the state of in your state
+  fight. Are they matching? If they are matching. Are they matching? If they are
+  matching then the second terraform apply what you do doesn't work. That means
+  there are from doesn't run the same code multiple times. It doesn't set up
+  duplicate services. Is this clear? If there is no change in the code then, In
+  spite of that if you keep doing terraform apply 100 times, it doesn't set up new
+  service for you. Why? Because about the first service detail is already there in
+  the state file? Which is already set up in the cloud. So, even if you keep
+  applying the same service multiple times, it, it already knows the details are
+  already there in the state file. Why should it create a new one? So running the
+  same code without any changes multiple times gives you only one output, there is
+  no change in the output. It doesn't create the same infrastructure multiple
+  times. There is no repetition. Or duplication, is this clear? And this whole
+  feature is called, as i M port, and C, or basically, this process is called as
+  item, potency and in your terraform is called as I them for tent software. Why?
+  Because it doesn't set up duplicate infrastructure. Is this clear? Any doubt.
+  Any question. So right now, I hope none of you guys have destroyed any services,
+  right? So let me go back and check one moment here. We have all 12 instances He
+  okay instances here, right? So now what I'll do, I will go And try to do
+  terraform apply again. Let's try to do that. Let's see what will be our output.
+  Fine. So now, anyways, I have my Main dot. TF here, just for our reference. I'm
+  opening it main Dot. TF is here. Okay, I'll go to my terminal and I will expand
+  my terminal. Okay. And remember guys, one important thing these are called a
+  shortcuts when we work with terminals or VS code. Don't write the command
+  multiple times. On your laptop. Do you see this upper arrow? Mark lower RMR
+  left, arrow mark, right arrow, mark There is this i4 arrow marks on your laptop.
+  Correct, always use this upper arrow mark or lower arrow mark to get back. Your
+  commands, these two are marks are super efficient. Don't write the command
+  again, and again. It's a bad practice. So now what I do, I go back to my
+  terminal and I do my upper arrow mark. Okay, see I got my code back. I don't
+  want to write it again. I will run this code. Let's see what I will get as the
+  output. Initially, it will ask me, I think for the value for your Tag name.
+  Let's see. Okay, it will definitely ask for tag name. What was my tag name? I
+  think it was DCI, right? What was the tag name, guys? I think it's DCI. Okay,
+  let's see. Do you see this? Did you guys get this output? I want all of you to
+  check. Did you guys get this output? You should get this output. Here, what is
+  it states? It states. No changes. Do you guys see this? Everyone. yes, Mohammad
+  I have changed the name value to another one, but I still have no changes.
+  You still have no changes. You have stayed changed. The name value, right? Wait.
+  Yes.
+  We will see what is the problem then. Okay, so now for others, do you see this
+  no changes? Do you see the same easy to ID here? Yes. Yes, Khadim.
+  Is called, I came potentially.
+  Yes, this is called as an item potency feature. Look at the beauty here. Look at
+  this important statement. You are not creating destroying or changing any
+  service. There is no effect on the service here. It is kept as it is. Look at
+  this very important statement. See this statement is super important. See the
+  statement, What does it say? Terraform has compared your real infrastructure
+  against your configuration and found no difference. So no changes are needed. Is
+  this clear? so if I run this terraform, apply 10,000 times on the same file with
+  the state file here, In spite of having a state file with the same code, if I
+  run this, apply 10,000 times, the infrastructure is created only once. Is this
+  clear? No duplicate infrastructure on the AWS? Any doubts, that is why we call
+  terraform as one of the most powerful tool. Without your knowledge, if you keep
+  applying terraform apply three or four times and imagine it keeps creative new
+  instances, what will be your bill? Correct.
+  So sharanya. That means that means our the request. What we are doing through
+  Okay.
+  the Abs rest API, Let's say like this. It's not even going out of our PC. Let's
+  say that is, right? I mean as soon as he
+  Yes, you can consider.
+  He find out, okay? There is really no change of what we want to do, so he will
+  Mm-hmm.
+  not really send the request at all.
+  Adi, exactly.
+  Okay, okay.
+  Is this clear? Okay, so Mohammad said something else. So let's check what is the
+  the Mohammad system? So I will go to AWS, okay? Mohammad, what is your instance?
+  So it was the updated one minute ago. Check. First of all, let me refresh once
+  to be on a safer side. Okay, is refreshing. Meanwhile. Let's wait until this is
+  done. Okay, it is refreshed. Now I will open Mohammad's instance. Do you see? Is
+  there any change in the tag here? Mohammad.
+  I have a change in the name, it's always supposed to have two instance but I
+  have only one But consider it like, no chances.
+  Yeah. First thing. when will a new instance be created, if I change the ami or
+  your Instance type, it will create a new instance. But what did you change? You
+  changed to just the tag, so it updated the tag. Correct. With the new value.
+  They did create a new one. No, it did not create a new instance. For example, I
+  want all of you to see my screen. I don't want any of you to change anything.
+  Just observe my screen. What is it? I will go to instances. One moment. Where is
+  my instance? Cool. Okay, so I'm in the instances, right? So here I let us see.
+  My instance name, look at my instance name. My instance name is DCI. Do you see
+  this? Does everyone see this? The instance name is DCI. Correct. Now I want all
+  of you to observe. I will go and I will run again. Okay, I don't want any of you
+  to run this. Just see my screen. Okay, I will run. Before I run, I will also do
+  one important thing that is I will open my state file here. Okay, I will go to
+  the tags that is at the bottom. Huh. Okay. Do you see this tag here tag tag? I
+  have marked it. Okay, now what I do, I go to the terminal and I run this
+  command. Okay, I will run the command and I will give a different name for my
+  instance. Okay, the name was DCI. I am not changing the AMI. I'm not changing
+  the instance type. I'm just changing the existing tag of your instance. It will
+  ask me for my tag name. Okay, so now it's asking me for the value. So my value
+  is now Sharanya. DCI. Okay earlier it was DCI. Okay. I'm now on changing it to
+  Sharanya DCI Enter. So, let's see what will happen. Remember guys, it is not
+  telling. Do you see here, Mohammad, You might have seen this important
+  statement, which you forgot to tell. What is the thing? It did not tell whether
+  it is adding or destroying it is telling one to change. Do you see here? And
+  what is that change? Very, very important. So, see here. I will go back. I will
+  scroll a bit up. Here in the same thing rest, everything is maintained as it is.
+  But what is it update in place? TERRAFORM will update the following actions.
+  What is it? The idea is already there. Arn, your Arn, or your Amazon resource
+  number associated with your instance, It is already there. But what am I
+  changing? Look at this, do you see the change here? It was initially DCI. So it
+  is telling here it was DCI and now it has changed from DCI to Sharanya DCI. Does
+  everyone see this option? And now when I scroll down, I see. Look at this. There
+  are some 13 unchanged attributes unchanged. They are telling most of the
+  attributes are kept as it is, and only one element that you are updating,
+  clearly telling it's one to change. Okay? And now I see here, One instance mean,
+  basically, one feature of that instance, got updated. What is that feature? My
+  DCI student. So now basically not DC student DCI. Name of your instance. So
+  right now it is not yet updated. So let me quickly, refresh this So now you see,
+  I want you to observe, it is now changed from DCI to Sharanya DCI. Do you see
+  this? Is this clear? Any doubt this is called as I dempotency. Is this clear to
+  everyone? Any doubt. Any questions? Did you guys understand the whole thing?
+  Yes, Niyanta
+  I thought question, for example, this is only one EC2 instance, in company we
+  have more than one easy, to instance, how we can manage our in one file. For
+  example, we need to tear up form dot tf. Verse only one file or we need to more
+  than one file. For variable.
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus file to your apply and also you how to do AUTO
+  approve? Is this clear? Any doubts? Any questions? No questions. Then please
+  destroy your service. So again, even in destroy, you have auto approve simple
+  what I will do. I will get back. My remember, guys, both for apply and destroy.
+  You need to pass the file name. Both for apply and destroy TF words. File has to
+  be passed. Why both for apply and destroy in the background, it is using the
+  plan, which expects you to have the file name. So TF, Mars file needs to be done
+  both for apply and destroy remember. Okay. okay, so now I have destroy So, let
+  me go back here. To my terminal. Enter. So I need to provide the value. I have
+  to give the exact value. What I had provided earlier, share, and ya. Minus DCI.
+  So see here 0 to add 0, to change one to destroy. And it is destroying the
+  service. I want all of you to destroy the service, I will go back and refresh
+  here. I want all the 16 instances to be deleted from here immediately. Blood
+  Khadim. Please delete your service. Khadim, I'm pretty sure you created two
+  instances. You updated this without deleting the first one. I think you really
+  created a new one. Right.
+  I don't know. I have created two easy.
+  I see here too. In Yes, I see here to instance, one was at the beginning. Do you
+  see here? This is khadiman, There is one more else at the bottom. I see here.
+  One here and one here, that's why I asked you guys to not to run the command
+  multiple times.
+  Yeah.
+  So I will delete this. Don't worry. I will delete it here.
+  So I have to destroy the first one. Yeah.
+  No you I'm deleting it here. Don't do it. Don't do anything there. Okay, is this
+  clear to everyone? Any doubts any questions so far? Let me stop recording.
+  Sharanya.
+  Yes. Any questions got them.
+  But have you already deleted my instance?
+  Not yet. I will be doing it now.
+  I will destroy from the terminal.
+  You will did destroy from the terminal.
+  yeah, I will do it but not
+  Okay, do it. It from the terminal.
+  Turn around.
+  Is that clear? Any doubts any questions?
+  Since. Yes.
+  I hope I have a question injured.
+  You sent a message to me.
+  Already I send it message. Yeah.
+  Who sharing the screen. This is I think. Roger is presenting, okay? Okay, did
+  you send a message on Slack? Near.
+  and not select, but in class, I have been Already. You can see. Yes, yes. Not in
+  class in this class. You can't see. I send again. Yes, chat.
+  Spilled in the chat.
+  I send again.
+  Recall. Before the end, what is it? okay, about the exam topics, you mean
+  Yes, yes.
+  I have a meeting now, let me quickly do. One moment.
+
+[12:03]
+  Okay, I am here. Let me quickly check. Isn't it not going into the new page?
+  Question. Okay. One second. Once again, guys. I'm checking because earlier, we
+  had an option to directly access the Page. So, but now it's still giving me an
+  money that we need to pay for example, if you see now okay, so the first page,
+  if you see, This is called as API accessing. Okay earlier, I could directly
+  access the API, for example, right after view I could press two which will go
+  into the second page. Now, it's throwing an error, they have changed the API
+  access. So, let's see. How do you see this? I was able to log into the second
+  page. So what did I do? I went to the URL and now I'm changing the URL. Do you
+  see it is view / 2 from u, slash 2. I'm going to view / 3, enter. So it will
+  throw you this. Scroll down now, it's not giving you an option. Let's see if I
+  can refresh. It's only giving me till page to So page 2, you can access easily.
+  So see you need to give a captcha here GP. Nkc enter. Okay. Page 2, you can
+  easily access like this but let's see if I can go to page 3. No, it's not giving
+  the page, three guys, page, two, you can clearly access. But from page, 3
+  onwards. It's not a loving me. Let's see for page four. No, if you get a capture
+  here you can easily skip from there but it is directly giving me this price.
+  I'll see if I can find another way to access this directly why are the APIs
+  Okay, if I find it I'll just send you a message on slack. Clear. Till page two,
+  for sure. You can access. Okay. Okay, then, so enjoy your lunch. Multide. Go to
+  napatate. And remember, for your ILP task, you will be going through the
+  documentation of the variables and the TF wars file. It is very, very important
+  for your exam. Whatever we did today is super important and tomorrow, I am on
+  leave, so Rohan will be coming to your class. Is that clear? I will ask him to
+  come the data types. But the class will be in the afternoon.
+  Yeah. Okay.
+  Okay. Okay, and don't worry, whatever, class mean, whatever topic he does, maybe
+  we can do a quick recap on Monday.
+  Hello.
+  Okay, line number six. There is an empty court, which is not closed. Remove
+  that, that is where the problem arises. Now, it's everything is fine. You can
+  close that, AI suggestion. On the top. No, no. On the top if you scroll a bit up
+  Scroll scroll. And there was this option, find attach fix the attached problem.
+  On the right hand side, this this block. Yes, yes you can close that. Okay. Now
+  you scroll down and execute the command. Very good. You can do once again space.
+  In the minus auto minus approve. Let's say if it works. Minus approve. So when
+  in our case, what did we do? I had Auto approve at the beginning and then I gave
+  my file name, correct. I think all of you did that here. He has changed the
+  position. Let's see if it works enter. It is working. Do you see this? It
+  doesn't matter where in which order you give your options or
+  Yeah.
+  arguments, no matter in, whichever order you give it will start. Executing, is
+  this clear to everyone?
+  Thank you.
+  Any doubts? No, problem. Any doubt. Any questions? Let me refresh here. Is this
+  clear to everyone? Did you guys understand the whole concept of variables? Yes,
+  so I see here. 12 Instances are there. Probably Roger's instance will also come.
+  Yeah. His instance is already here. Okay. There are 12 instances. Now, we need
+  to talk about a very, very important concept. What is that? Okay, so the main
+  concept name is called, as I dem potency. What is it? Please make a note of
+  this. I then pour 10. C. And this concept is very unique to your terraform.
+  Okay, or instead of item potency, they can also use this. I am for 10. This is
+  an important terminology that you've seen the exam. What does it mean? So now
+  before we need to understand about that, first, I need to go back to my code.
+  okay, so one second, let me quickly close this just for understanding What is
+  it? So your you have your AWS? You have your laptop here. you have your laptop
+  and from laptop you're connecting to AWS Yi or in it basically by your terraform
+  And obviously I have a state file for management. Is this clear? There is a
+  state file for management. Now, let us consider you've already done a terraform
+  apply once. Okay, what is it? Let me clear and rewrite, okay. so, You have done
+  Terraform apply once. So what happens the details about terraform apply is
+  written in the state file? Okay, now I will try to rerun the terraform apply
+  again. When you try to re-run, the terraform apply. First Terraform checks,
+  three things. Simultaneously. What is it terraform checks? Is there any change
+  in the code? Your answer is no, there is no change in the code. Okay then it
+  checks the state of your service in the AWS and the state of in your state
+  fight. Are they matching? If they are matching. Are they matching? If they are
+  matching then the second terraform apply what you do doesn't work. That means
+  there are from doesn't run the same code multiple times. It doesn't set up
+  duplicate services. Is this clear? If there is no change in the code then, In
+  spite of that if you keep doing terraform apply 100 times, it doesn't set up new
+  service for you. Why? Because about the first service detail is already there in
+  the state file? Which is already set up in the cloud. So, even if you keep
+  applying the same service multiple times, it, it already knows the details are
+  already there in the state file. Why should it create a new one? So running the
+  same code without any changes multiple times gives you only one output, there is
+  no change in the output. It doesn't create the same infrastructure multiple
+  times. There is no repetition. Or duplication, is this clear? And this whole
+  feature is called, as i M port, and C, or basically, this process is called as
+  item, potency and in your terraform is called as I them for tent software. Why?
+  Because it doesn't set up duplicate infrastructure. Is this clear? Any doubt.
+  Any question. So right now, I hope none of you guys have destroyed any services,
+  right? So let me go back and check one moment here. We have all 12 instances He
+  okay instances here, right? So now what I'll do, I will go And try to do
+  terraform apply again. Let's try to do that. Let's see what will be our output.
+  Fine. So now, anyways, I have my Main dot. TF here, just for our reference. I'm
+  opening it main Dot. TF is here. Okay, I'll go to my terminal and I will expand
+  my terminal. Okay. And remember guys, one important thing these are called a
+  shortcuts when we work with terminals or VS code. Don't write the command
+  multiple times. On your laptop. Do you see this upper arrow? Mark lower RMR
+  left, arrow mark, right arrow, mark There is this i4 arrow marks on your laptop.
+  Correct, always use this upper arrow mark or lower arrow mark to get back. Your
+  commands, these two are marks are super efficient. Don't write the command
+  again, and again. It's a bad practice. So now what I do, I go back to my
+  terminal and I do my upper arrow mark. Okay, see I got my code back. I don't
+  want to write it again. I will run this code. Let's see what I will get as the
+  output. Initially, it will ask me, I think for the value for your Tag name.
+  Let's see. Okay, it will definitely ask for tag name. What was my tag name? I
+  think it was DCI, right? What was the tag name, guys? I think it's DCI. Okay,
+  let's see. Do you see this? Did you guys get this output? I want all of you to
+  check. Did you guys get this output? You should get this output. Here, what is
+  it states? It states. No changes. Do you guys see this? Everyone. yes, Mohammad
+  I have changed the name value to another one, but I still have no changes.
+  You still have no changes. You have stayed changed. The name value, right? Wait.
+  Yes.
+  We will see what is the problem then. Okay, so now for others, do you see this
+  no changes? Do you see the same easy to ID here? Yes. Yes, Khadim.
+  Is called, I came potentially.
+  Yes, this is called as an item potency feature. Look at the beauty here. Look at
+  this important statement. You are not creating destroying or changing any
+  service. There is no effect on the service here. It is kept as it is. Look at
+  this very important statement. See this statement is super important. See the
+  statement, What does it say? Terraform has compared your real infrastructure
+  against your configuration and found no difference. So no changes are needed. Is
+  this clear? so if I run this terraform, apply 10,000 times on the same file with
+  the state file here, In spite of having a state file with the same code, if I
+  run this, apply 10,000 times, the infrastructure is created only once. Is this
+  clear? No duplicate infrastructure on the AWS? Any doubts, that is why we call
+  terraform as one of the most powerful tool. Without your knowledge, if you keep
+  applying terraform apply three or four times and imagine it keeps creative new
+  instances, what will be your bill? Correct.
+  So sharanya. That means that means our the request. What we are doing through
+  Okay.
+  the Abs rest API, Let's say like this. It's not even going out of our PC. Let's
+  say that is, right? I mean as soon as he
+  Yes, you can consider.
+  He find out, okay? There is really no change of what we want to do, so he will
+  Mm-hmm.
+  not really send the request at all.
+  Adi, exactly.
+  Okay, okay.
+  Is this clear? Okay, so Mohammad said something else. So let's check what is the
+  the Mohammad system? So I will go to AWS, okay? Mohammad, what is your instance?
+  So it was the updated one minute ago. Check. First of all, let me refresh once
+  to be on a safer side. Okay, is refreshing. Meanwhile. Let's wait until this is
+  done. Okay, it is refreshed. Now I will open Mohammad's instance. Do you see? Is
+  there any change in the tag here? Mohammad.
+  I have a change in the name, it's always supposed to have two instance but I
+  have only one But consider it like, no chances.
+  Yeah. First thing. when will a new instance be created, if I change the ami or
+  your Instance type, it will create a new instance. But what did you change? You
+  changed to just the tag, so it updated the tag. Correct. With the new value.
+  They did create a new one. No, it did not create a new instance. For example, I
+  want all of you to see my screen. I don't want any of you to change anything.
+  Just observe my screen. What is it? I will go to instances. One moment. Where is
+  my instance? Cool. Okay, so I'm in the instances, right? So here I let us see.
+  My instance name, look at my instance name. My instance name is DCI. Do you see
+  this? Does everyone see this? The instance name is DCI. Correct. Now I want all
+  of you to observe. I will go and I will run again. Okay, I don't want any of you
+  to run this. Just see my screen. Okay, I will run. Before I run, I will also do
+  one important thing that is I will open my state file here. Okay, I will go to
+  the tags that is at the bottom. Huh. Okay. Do you see this tag here tag tag? I
+  have marked it. Okay, now what I do, I go to the terminal and I run this
+  command. Okay, I will run the command and I will give a different name for my
+  instance. Okay, the name was DCI. I am not changing the AMI. I'm not changing
+  the instance type. I'm just changing the existing tag of your instance. It will
+  ask me for my tag name. Okay, so now it's asking me for the value. So my value
+  is now Sharanya. DCI. Okay earlier it was DCI. Okay. I'm now on changing it to
+  Sharanya DCI Enter. So, let's see what will happen. Remember guys, it is not
+  telling. Do you see here, Mohammad, You might have seen this important
+  statement, which you forgot to tell. What is the thing? It did not tell whether
+  it is adding or destroying it is telling one to change. Do you see here? And
+  what is that change? Very, very important. So, see here. I will go back. I will
+  scroll a bit up. Here in the same thing rest, everything is maintained as it is.
+  But what is it update in place? TERRAFORM will update the following actions.
+  What is it? The idea is already there. Arn, your Arn, or your Amazon resource
+  number associated with your instance, It is already there. But what am I
+  changing? Look at this, do you see the change here? It was initially DCI. So it
+  is telling here it was DCI and now it has changed from DCI to Sharanya DCI. Does
+  everyone see this option? And now when I scroll down, I see. Look at this. There
+  are some 13 unchanged attributes unchanged. They are telling most of the
+  attributes are kept as it is, and only one element that you are updating,
+  clearly telling it's one to change. Okay? And now I see here, One instance mean,
+  basically, one feature of that instance, got updated. What is that feature? My
+  DCI student. So now basically not DC student DCI. Name of your instance. So
+  right now it is not yet updated. So let me quickly, refresh this So now you see,
+  I want you to observe, it is now changed from DCI to Sharanya DCI. Do you see
+  this? Is this clear? Any doubt this is called as I dempotency. Is this clear to
+  everyone? Any doubt. Any questions? Did you guys understand the whole thing?
+  Yes, Niyanta
+  I thought question, for example, this is only one EC2 instance, in company we
+  have more than one easy, to instance, how we can manage our in one file. For
+  example, we need to tear up form dot tf. Verse only one file or we need to more
+  than one file. For variable.
+  About how to, how to create multiple easy, to instance, that is earn something
+  called as a keyword, we will work on that keyword next week. How to create
+  multiple instances together. Okay. Now, is this clear to everyone? Did you guys
+  understand how to work with the variables? Any Doubts, How to Have Default
+  Variable. What happens if you don't have, default variables. What happens if you
+  have TF Wars file, what happens in the combination of all the three Tfvs, plus,
+  default, plus terminal. We saw that and we also saw how to work with your apply.
+  How to pass minus wire minus file to your apply and also you how to do AUTO
+  approve? Is this clear? Any doubts? Any questions? No questions. Then please
+  destroy your service. So again, even in destroy, you have auto approve simple
+  what I will do. I will get back. My remember, guys, both for apply and destroy.
+  You need to pass the file name. Both for apply and destroy TF words. File has to
+  be passed. Why both for apply and destroy in the background, it is using the
+  plan, which expects you to have the file name. So TF, Mars file needs to be done
+  both for apply and destroy remember. Okay. okay, so now I have destroy So, let
+  me go back here. To my terminal. Enter. So I need to provide the value. I have
+  to give the exact value. What I had provided earlier, share, and ya. Minus DCI.
+  So see here 0 to add 0, to change one to destroy. And it is destroying the
+  service. I want all of you to destroy the service, I will go back and refresh
+  here. I want all the 16 instances to be deleted from here immediately. Blood
+  Khadim. Please delete your service. Khadim, I'm pretty sure you created two
+  instances. You updated this without deleting the first one. I think you really
+  created a new one. Right.
+  I don't know. I have created two easy.
+  I see here too. In Yes, I see here to instance, one was at the beginning. Do you
+  see here? This is khadiman, There is one more else at the bottom. I see here.
+  One here and one here, that's why I asked you guys to not to run the command
+  multiple times.
+  Yeah.
+  So I will delete this. Don't worry. I will delete it here.
+  So I have to destroy the first one. Yeah.
+  No you I'm deleting it here. Don't do it. Don't do anything there. Okay, is this
+  clear to everyone? Any doubts any questions so far? Let me stop recording.
+  Sharanya.
+  Yes. Any questions got them.
+  But have you already deleted my instance?
+  Not yet. I will be doing it now.
+  I will destroy from the terminal.
+  You will did destroy from the terminal.
+  yeah, I will do it but not
+  Okay, do it. It from the terminal.
+  Turn around.
+  Is that clear? Any doubts any questions?
+  Since. Yes.
+  I hope I have a question injured.
+  You sent a message to me.
+  Already I send it message. Yeah.
+  Who sharing the screen. This is I think. Roger is presenting, okay? Okay, did
+  you send a message on Slack? Near.
+  and not select, but in class, I have been Already. You can see. Yes, yes. Not in
+  class in this class. You can't see. I send again. Yes, chat.
+  Spilled in the chat.
+  I send again.
+  Recall. Before the end, what is it? okay, about the exam topics, you mean
+  Yes, yes.
+  I have a meeting now, let me quickly do. One moment.
+  Okay, I am here. Let me quickly check. Isn't it not going into the new page?
+  Question. Okay. One second. Once again, guys. I'm checking because earlier, we
+  had an option to directly access the Page. So, but now it's still giving me an
+  money that we need to pay for example, if you see now okay, so the first page,
+  if you see, This is called as API accessing. Okay earlier, I could directly
+  access the API, for example, right after view I could press two which will go
+  into the second page. Now, it's throwing an error, they have changed the API
+  access. So, let's see. How do you see this? I was able to log into the second
+  page. So what did I do? I went to the URL and now I'm changing the URL. Do you
+  see it is view / 2 from u, slash 2. I'm going to view / 3, enter. So it will
+  throw you this. Scroll down now, it's not giving you an option. Let's see if I
+  can refresh. It's only giving me till page to So page 2, you can access easily.
+  So see you need to give a captcha here GP. Nkc enter. Okay. Page 2, you can
+  easily access like this but let's see if I can go to page 3. No, it's not giving
+  the page, three guys, page, two, you can clearly access. But from page, 3
+  onwards. It's not a loving me. Let's see for page four. No, if you get a capture
+  here you can easily skip from there but it is directly giving me this price.
+  I'll see if I can find another way to access this directly why are the APIs
+  Okay, if I find it I'll just send you a message on slack. Clear. Till page two,
+  for sure. You can access. Okay. Okay, then, so enjoy your lunch. Multide. Go to
+  napatate. And remember, for your ILP task, you will be going through the
+  documentation of the variables and the TF wars file. It is very, very important
+  for your exam. Whatever we did today is super important and tomorrow, I am on
+  leave, so Rohan will be coming to your class. Is that clear? I will ask him to
+  come the data types. But the class will be in the afternoon.
+  Yeah. Okay.
+  Okay. Okay, and don't worry, whatever, class mean, whatever topic he does, maybe
+  we can do a quick recap on Monday.
+  Hello.
+  Khadim. Your unmuted. okay, then
+  I'm very sorry.
+  Nope, no problem, no problem. Enjoy your lunch Miles. I'd gooden appetit and see
+  you all on Monday. No. See you all at one o'clock during a help. Bye.
+  but, Yeah.
+
+[16:32]
+  --- Meeting ended ---

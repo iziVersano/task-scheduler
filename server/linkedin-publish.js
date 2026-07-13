@@ -8,10 +8,12 @@ const Anthropic = require('@anthropic-ai/sdk');
 const db = require('./db');
 
 const CAPTIONS_DIR = path.join(__dirname, 'captions');
+const SUMMARY_FILE = path.join(__dirname, 'live-summary', 'today.md');
 const CHROME_PATH = '/usr/bin/google-chrome';
 const USER_DATA_DIR = path.join(require('os').homedir(), '.config', 'google-chrome');
 const DEBUG_PORT = 9400; // separate port from meet-join (9399)
 const DRY_RUN = process.env.DRY_RUN === '1';
+const TODAY_SUMMARY = process.argv.includes('--today-summary');
 
 function log(msg) {
   const line = `[${new Date().toLocaleTimeString('de-DE')}] ${msg}`;
@@ -55,6 +57,45 @@ function cleanTranscript(raw) {
   }
 
   return out.join('\n');
+}
+
+// Convert today.md summary into LinkedIn post text (strip markdown/mermaid)
+function summaryToPost(raw) {
+  const lines = raw
+    .replace(/^<!-- updated:[^>]*-->\n?/m, '')   // strip timestamp comment
+    .replace(/```mermaid[\s\S]*?```/gm, '')       // strip mermaid blocks
+    .replace(/^>\s*🏢\s*/gm, '🏢 ')             // unquote real-world examples
+    .split('\n');
+
+  const out = [];
+  let firstHeading = true;
+  for (const line of lines) {
+    const l = line.trim();
+    if (!l || l === '---') continue;
+    // Headings → plain label; skip the H1 (it becomes the post title)
+    if (/^#{1,3}\s+/.test(l)) {
+      if (firstHeading) { firstHeading = false; continue; }
+      const heading = l.replace(/^#{1,3}\s+/, '').replace(/\*\*/g, '');
+      const prefix = heading.startsWith('📌') ? '' : '📌 ';
+      out.push('', `${prefix}${heading}`, '');
+      continue;
+    }
+    // Strip inline markdown: **bold**, `code`, _italic_
+    const clean = l
+      .replace(/\*\*([^*]+)\*\*/g, '$1')
+      .replace(/`([^`]+)`/g, '$1')
+      .replace(/^_(.+)_$/, '$1')
+      .replace(/_([^_]+)_/g, '$1');
+    out.push(clean);
+  }
+
+  return out.join('\n').replace(/\n{3,}/g, '\n\n').trim();
+}
+
+// Extract title from today.md (the H1 line)
+function summaryTitle(raw) {
+  const m = raw.match(/^#\s+(.+)$/m);
+  return m ? m[1].replace(/\*\*/g, '').replace(/·.*/, '').trim() : 'Today\'s Class Summary';
 }
 
 // Summarize transcript into a LinkedIn article via Claude
@@ -222,23 +263,40 @@ async function postToLinkedIn(title, body) {
   try {
     log('=== LinkedIn Publisher starting ===');
 
-    const filename = pickNextFile();
-    if (!filename) {
-      log('No unpublished caption files found. Nothing to do.');
-      process.exit(0);
+    let title, body, filename;
+
+    if (TODAY_SUMMARY) {
+      // ── Post today's live summary directly (no Claude needed) ────────────
+      if (!fs.existsSync(SUMMARY_FILE)) {
+        log('No live summary found at server/live-summary/today.md. Run the class summary loop first.');
+        process.exit(1);
+      }
+      const raw = fs.readFileSync(SUMMARY_FILE, 'utf8');
+      title = summaryTitle(raw);
+      body = summaryToPost(raw);
+      filename = `summary-${new Date().toISOString().slice(0, 10)}.md`;
+      log(`Using today's summary: "${title}"`);
+    } else {
+      // ── Original flow: pick oldest unpublished transcript ────────────────
+      filename = pickNextFile();
+      if (!filename) {
+        log('No unpublished caption files found. Nothing to do.');
+        process.exit(0);
+      }
+      log(`Selected file: ${filename}`);
+
+      const raw = fs.readFileSync(path.join(CAPTIONS_DIR, filename), 'utf8');
+      const transcript = cleanTranscript(raw);
+      log(`Transcript cleaned: ${transcript.split('\n').length} lines`);
+
+      if (!process.env.ANTHROPIC_API_KEY) {
+        throw new Error('ANTHROPIC_API_KEY not set in server/.env');
+      }
+
+      log('Summarizing with Claude...');
+      ({ title, body } = await summarize(transcript, filename));
     }
-    log(`Selected file: ${filename}`);
 
-    const raw = fs.readFileSync(path.join(CAPTIONS_DIR, filename), 'utf8');
-    const transcript = cleanTranscript(raw);
-    log(`Transcript cleaned: ${transcript.split('\n').length} lines`);
-
-    if (!process.env.ANTHROPIC_API_KEY) {
-      throw new Error('ANTHROPIC_API_KEY not set in server/.env');
-    }
-
-    log('Summarizing with Claude...');
-    const { title, body } = await summarize(transcript, filename);
     log(`Title: ${title}`);
     log(`Body preview: ${body.slice(0, 120)}...`);
 

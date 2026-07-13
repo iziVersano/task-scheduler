@@ -344,7 +344,36 @@ function SummaryModal({ text, date, range, onClose }) {
         )}
 
         {state === 'done' && (
-          <div style={{ display: 'flex', justifyContent: 'flex-end', marginTop: '0.75rem' }}>
+          <div style={{ display: 'flex', justifyContent: 'flex-end', gap: '0.5rem', marginTop: '0.75rem' }}>
+            <button
+              className="btn btn-ghost"
+              style={{ fontSize: '0.82rem' }}
+              onClick={() => {
+                const win = window.open('', '_blank');
+                if (!win) return;
+                const html = summary
+                  .replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;')
+                  .replace(/\n/g, '<br>');
+                win.document.write(`<!DOCTYPE html><html><head><meta charset="utf-8">
+<title>AI Summary – ${date} ${range.from}–${range.to}</title>
+<style>
+  body { font-family: system-ui, sans-serif; max-width: 800px; margin: 2rem auto; padding: 0 1.5rem; color: #1e293b; line-height: 1.7; }
+  h1 { font-size: 1.3rem; border-bottom: 2px solid #3b82f6; padding-bottom: .4rem; margin-bottom: .5rem; }
+  .meta { color: #64748b; font-size: .8rem; margin-bottom: 1.75rem; }
+  .body { font-size: .95rem; white-space: pre-wrap; }
+  @media print { body { margin: 0; } }
+</style></head><body>
+<h1>AI Summary</h1>
+<div class="meta">${date} · ${range.from} → ${range.to}</div>
+<div class="body">${html}</div>
+</body></html>`);
+                win.document.close();
+                win.focus();
+                setTimeout(() => win.print(), 400);
+              }}
+            >
+              ⬇ Export PDF
+            </button>
             <CopyButton text={summary} />
           </div>
         )}

@@ -541,22 +541,24 @@ export default function ClassSummary() {
         <p style={{ color: '#888' }}>Loading…</p>
       ) : text ? (() => {
         const { summary, labs } = splitTabs(text);
-        const tabs = [{ id: 'summary', label: '📖 Summary' }, ...(labs ? [{ id: 'labs', label: '🧪 Labs' }] : [])];
+        const tabs = [
+          { id: 'summary', label: '📖 Summary' },
+          ...(labs ? [{ id: 'labs', label: '🧪 Labs' }] : []),
+          { id: 'quiz', label: '🧠 Quiz' },
+        ];
         return (
           <>
-            {/* Tab bar — only shown if labs exist */}
-            {labs && (
-              <div style={{ display: 'flex', gap: 6, marginBottom: '1rem' }}>
-                {tabs.map(t => (
-                  <button key={t.id} onClick={() => setActiveTab(t.id)} style={{
-                    padding: '0.4rem 1rem', borderRadius: 8, cursor: 'pointer', fontSize: '0.85rem', fontWeight: activeTab === t.id ? 700 : 400,
-                    background: activeTab === t.id ? '#1e3a5f' : '#0f172a',
-                    color: activeTab === t.id ? '#dbeafe' : '#64748b',
-                    border: `1px solid ${activeTab === t.id ? '#3b82f6' : '#1e293b'}`,
-                  }}>{t.label}</button>
-                ))}
-              </div>
-            )}
+            {/* Tab bar */}
+            <div style={{ display: 'flex', gap: 6, marginBottom: '1rem' }}>
+              {tabs.map(t => (
+                <button key={t.id} onClick={() => setActiveTab(t.id)} style={{
+                  padding: '0.4rem 1rem', borderRadius: 8, cursor: 'pointer', fontSize: '0.85rem', fontWeight: activeTab === t.id ? 700 : 400,
+                  background: activeTab === t.id ? '#1e3a5f' : '#0f172a',
+                  color: activeTab === t.id ? '#dbeafe' : '#64748b',
+                  border: `1px solid ${activeTab === t.id ? '#3b82f6' : '#1e293b'}`,
+                }}>{t.label}</button>
+              ))}
+            </div>
 
             {activeTab === 'summary' && (
               <div style={{ background: '#0b1120', border: '1px solid #1e293b', borderRadius: 12, padding: '1.5rem 1.75rem', color: '#e2e8f0', fontSize: '0.93rem' }}>
@@ -574,7 +576,7 @@ export default function ClassSummary() {
               </div>
             )}
 
-            <MCQSection date={selectedDate} />
+            {activeTab === 'quiz' && <MCQSection date={selectedDate} />}
           </>
         );
       })() : (
