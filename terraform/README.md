@@ -12,7 +12,8 @@ terraform/
 ├── day1/       providers, resources, variables, outputs, state
 ├── day2/       first EC2 instance (aws_instance basics)
 ├── day3/       EC2, S3, IAM roles/instance profiles
-└── day4/       combined stack + remote state (S3 backend)
+├── day4/       combined stack + remote state (S3 backend)
+└── day6/       data types (string, bool, list, object), fmt vs validate
 ```
 
 Each day folder is a **self-contained root module** — its own provider block, its own state, runnable independently:

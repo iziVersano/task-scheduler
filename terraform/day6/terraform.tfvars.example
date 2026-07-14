@@ -1,0 +1,5 @@
+# Copy this file to terraform.tfvars and fill in your own value.
+# terraform.tfvars is gitignored — never commit real values.
+# (ami has no default, so terraform will prompt for it if you skip this file.)
+
+ami = "ami-0000000000000000"
