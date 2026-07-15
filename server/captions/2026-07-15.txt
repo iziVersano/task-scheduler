@@ -1,0 +1,458 @@
+
+[09:02]
+  --- logged in ---
+
+[09:13]
+  Okay, can anybody speak now?
+
+[09:14]
+  Hello Sarany.
+  Perfect. Super. Oh, okay.
+  What?
+  I have three screens here. So I've connected all of them to my laptop and
+  sometimes I have to change the settings of my output device to the headset. So,
+  that's when I, I won't be able to hear your voice. Okay. Anyways, have a good
+  day and any questions. Before we start. No. Shall I share my screen? Can you
+  guys see my screen? Yes. Okay. Today, my plan is to teach you three important
+  concepts. One is locals. The second one is count. okay, if time permits, I would
+  go for for each Okay, so these three I would like to cover it today. So if not
+  for each at least locals and count we will be doing today. Probably we can also
+  keep the forage for tomorrow. Fine. So what is have locals. So we need to
+  understand the whole concept of locals here. One moment. So when does locals
+  come into picture locals? Do you guys know what a constant is? Constant.
+
+[09:15]
+  We can change value.
+
+[09:17]
+  The value values won't change, right? So the value is persisting throughout,
+  that is what we call it as constant. Correct. So the value is same. When do we
+  see such kind of constants or stagnant values? For example, when I want to talk
+  about tags And under tax, I have department. Okay, for example, let's say
+  department is AWS. And then I also have an environment. Environment, Let's say
+  it's a development environment. Okay, these are the tags that I want to take
+  care of. What is the problem here? There is a major problem. What is it? This
+  tags is easy. If I have only few services, So imagine I assign the stack to my
+  VPC initially. We pc and then I assign the same tact to my subnet. okay, then
+  you assign the same, tacto your EC2 Okay, so now I have so many services, not
+  just these. Imagine you have 50 EC2 instances. Okay. 20 subnets. Okay. And 10
+  Vpcs. And you had this constant tag included in all the service. So that means
+  what 50 plus 20 plus 10 that means around 80 times. You are including the same
+  tag, okay? But mostly it is redundant values that is fine. But still, you want
+  to include this identification information, for all the service, that is nothing
+  but 80 service. Now, there is a problem. What is the problem? the problem is,
+  You're sharing this code with someone else. Or you're sharing this with a
+  another department. Where they want to change the department from AWS to
+  probably HR. And they want to change the environment from Dev to probably
+  production. What is the problem? The major problem here is you have to go
+  through all 80 services in order to change the tag. Is this clear? You must
+  change in 80 different places under tax? What is the problem? This is called as
+  code duplication. Okay. And repeat it task. Same task, you're doing it multiple
+  times. So to avoid such kind of errors or to avoid such kind of task. We
+  introduce something called as locals. Okay, so what is locals locals? Is
+  something like create your value once. Create a value or constant? You can also
+  call it as constant. Once. And then the main logic is use it everywhere multiple
+  times. Use it everywhere. Multiple times. Is this clear? This is the main logic
+  of your locals. It is like a constant. It is like a shortcut. Value is declared
+  once, but you will be reusing the same value multiple times. For example, now
+  you see, we will we will create a simple code snippet and we see how it works
+  but generally how it looks like I have Locals block. And here, I would say,
+  Department equals AWS and environment equals. Let's say. Development
+  environment. Clear. So this is my Department and Environment. Now, what I do, I
+  go create my VPC. While creating VPC what I do. I have tags. and here under the
+  tags, I would specify as Local Dot Department Dept. Let's say this is in
+  lowercase, t ept. And then you have local dot E and V. And the same thing you
+  have ec2 EC2 tags. You have you use the same code here as well? What is the
+  advantage now? Know where I am writing the value. The value is only written here
+  in the locals block where, you know, what is the exact value of your department
+  and for your environment, in case you want to change the environment and
+  department? No worries. What is the advantage? I don't need to go through the
+  entire 80 Different services. See, I don't need to go through the all 80
+  services advantage. I have a locals block, I come here. How many have a
+  constants are variables that I've declared Here, local variables, I'll go and
+  change the value here. So now, I can say the department is HR and environment is
+  production. Simple what happens wherever you are, using this local for examp?
+
+[09:21]
+  The value values won't change, right? So the value is persisting throughout,
+  that is what we call it as constant. Correct. So the value is same. When do we
+  see such kind of constants or stagnant values? For example, when I want to talk
+  about tags And under tax, I have department. Okay, for example, let's say
+  department is AWS. And then I also have an environment. Environment, Let's say
+  it's a development environment. Okay, these are the tags that I want to take
+  care of. What is the problem here? There is a major problem. What is it? This
+  tags is easy. If I have only few services, So imagine I assign the stack to my
+  VPC initially. We pc and then I assign the same tact to my subnet. okay, then
+  you assign the same, tacto your EC2 Okay, so now I have so many services, not
+  just these. Imagine you have 50 EC2 instances. Okay. 20 subnets. Okay. And 10
+  Vpcs. And you had this constant tag included in all the service. So that means
+  what 50 plus 20 plus 10 that means around 80 times. You are including the same
+  tag, okay? But mostly it is redundant values that is fine. But still, you want
+  to include this identification information, for all the service, that is nothing
+  but 80 service. Now, there is a problem. What is the problem? the problem is,
+  You're sharing this code with someone else. Or you're sharing this with a
+  another department. Where they want to change the department from AWS to
+  probably HR. And they want to change the environment from Dev to probably
+  production. What is the problem? The major problem here is you have to go
+  through all 80 services in order to change the tag. Is this clear? You must
+  change in 80 different places under tax? What is the problem? This is called as
+  code duplication. Okay. And repeat it task. Same task, you're doing it multiple
+  times. So to avoid such kind of errors or to avoid such kind of task. We
+  introduce something called as locals. Okay, so what is locals locals? Is
+  something like create your value once. Create a value or constant? You can also
+  call it as constant. Once. And then the main logic is use it everywhere multiple
+  times. Use it everywhere. Multiple times. Is this clear? This is the main logic
+  of your locals. It is like a constant. It is like a shortcut. Value is declared
+  once, but you will be reusing the same value multiple times. For example, now
+  you see, we will we will create a simple code snippet and we see how it works
+  but generally how it looks like I have Locals block. And here, I would say,
+  Department equals AWS and environment equals. Let's say. Development
+  environment. Clear. So this is my Department and Environment. Now, what I do, I
+  go create my VPC. While creating VPC what I do. I have tags. and here under the
+  tags, I would specify as Local Dot Department Dept. Let's say this is in
+  lowercase, t ept. And then you have local dot E and V. And the same thing you
+  have ec2 EC2 tags. You have you use the same code here as well? What is the
+  advantage now? Know where I am writing the value. The value is only written here
+  in the locals block where, you know, what is the exact value of your department
+  and for your environment, in case you want to change the environment and
+  department? No worries. What is the advantage? I don't need to go through the
+  entire 80 Different services. See, I don't need to go through the all 80
+  services advantage. I have a locals block, I come here. How many have a
+  constants are variables that I've declared Here, local variables, I'll go and
+  change the value here. So now, I can say the department is HR and environment is
+  production. Simple? What happens wherever you are using this, local, for
+  example, here, for example, for your EC2 immediately. It reflects Is this clear?
+  You have a block called as locals where your writing all the constants. And you
+  use this locals wherever you need. Advantage, when you have multiple. Services,
+  which needs the same tag. Imagine you're sharing the code with some other
+  department, or some other branch and they want to reuse the code. Is it feasible
+  for them to go and change the code at 80 different places? No, Instead of that.
+  What do we do? We come up with a concept called as locals. What is it? I have at
+  the beginning, the all the constants and I use it wherever I need in the tax.
+  Advantage. If I want to change, I can just go to this locals block and update it
+  here. I don't need to do anything pertaining to other tax section. Is this
+  clear? Any doubt. okay, let us try to yes, Mohammad
+
+[09:22]
+  It's look like variables to me. What's the difference from them?
+  Okay. What is a variable?
+  Value holder.
+  Well placeholder.
+
+[09:29]
+  Well placeholder okay. Where? I give the value here. See The locals. Is it
+  taking the value from the customer? No, they are fixed value. There is no
+  chance. It doesn't take anything called as terraform.tfvars or you don't take
+  any values from the terminal, nothing. It is a fixed value that is used
+  throughout your script. Okay, variables are user provider value locals. The
+  values are defined inside the code. It is about like a default constant values.
+  Okay, and variables you can keep changing. I can give value by a TFR so I can
+  give value by a terminal here. What is happening? You have to include the value
+  right inside the code in your Main.tf or you can also create your local store,
+  TF file and include that. But when do we use locals? It is good for repeated.
+  Internal values. Whenever you have same internal values repeated, for all your
+  services, only during that time, you will be using locals. Okay. Next thing
+  variables, can it be changed by the user? Yes. Variables user can change the
+  value, every time, your executing but locals, we don't change user. Don't get an
+  option to change the value. There is only one option to change that is nothing
+  but updating the code. If you update the code only, then the local value gets
+  updated. There is no other way through which you can pass a value to the locals.
+  Is this clear? Now again, what is the difference between hard coding and locals
+  then? Hard coding. And buses locals. So, if I try to do this comparison, Hard
+  coding. Again means what I told you if I use the same tags in 80 different
+  services, then you need to do the same update 80 times. Multiple repeated tasks
+  code duplication That means am term you're using throughout your script multiple
+  times. Okay, but, but what about your locals? There is only one place where you
+  are, putting the value and rest everywhere you are doing a referencing to the
+  local section. Implicit referencing to the locals. Is that clear? How does it
+  work? We will. Take an example and we will look into it. Okay. So as usual, let
+  us go through. Let's go to our folder. And here, I will create a new folder and
+  I would call it as Day 8. Inside this create one more folder and call it as a
+  locals. Okay and inside locals, create a new file and call it as Main.tf. See,
+  Make sure it is in the right path like this. Once you've created the file, let
+  me know. Then I can proceed. Is it done? If it is done, just go back to your
+  previous day and copy your provided block. I will teach you how to skip this
+  provider block tomorrow. Okay. Include the provider block.
+  Output.
+  Is it done? Yes. Okay, so far we've learned about few blocks. What are those
+  blocks? I know Provider block. I know resource block. I know variable block.
+  Output block, very good. Correct. Any other blocks do, you know? Is there any
+  other block apart from these four?
+  Data.
+  That has been covered. It. Oh yeah, perfect. So but yesterday, we learned about
+  Data Block. So these are the five blocks that we know today we are, including,
+  or introducing a new one. That is nothing but locals Block, please make a note
+  of this. What is it? I am introducing a new block called as locals. It is plural
+  Please note it is plural. Okay? Because you get a question, whether it is local
+  or locals, it is locals. okay, so now Let us start writing locals. Okay, see
+  this is the only block which doesn't take any logical name. For example, in
+  every other blocks you have a logical name. Even if you write a data block,
+  there is a logical name. When you write a variable, there is a logical name for
+  referencing, but locals is the only block where you don't see a logical name.
+  Instead, you just have locals block. And inside this, I will define all my
+  Constants, that I want. So every constant should have a name. For example, I
+  have environment deaf And then I have department. Department, which is nothing
+  but aws. Then I have department ID. Which is. It01, let's say it is 0 0 7. Okay,
+  then name of the employee employee. And let's say, Shadow. And then project.
+  Terraform. There are five constants that I need. Or these five will be used as
+  tags in every resource that I set up. Is that clear? Did you guys write this?
+  Remember, this has to be plural. Plural. No logical name here for the locals
+  block. You are directly giving a name for your constant, so these are the
+  constants. Okay, so for each constant, you are giving one name Clear. So now Let
+  us create a resource block. Okay. So here is my resource. I will also share the
+  AMI with you. Amis. Is that in the chat? Clear. Okay, so now we have created
+  this to this. I will include a tag section, very simple. So what do I need? I
+  need name. Okay. See, how do I reference to it? I would reference with A, I
+  mean, Singular Local. It's not plurals here while creating this block. It has to
+  be locals, which is in plural section. But when you're using it, when you're
+  referencing or calling to this particular constant you have to use local. It's
+  not low. Is that clear? See this is where most of the time. We do a mistake. And
+  this is where you will get a question in your exam. They what they would say is
+  they would give you a locals block and they would say I want to use this locals
+  employee in the tax section. How would you reference generally? What we do we
+  directly write Locals Dot employee Answer is incorrect. It is not locals. It is
+  a local only so you don't get s here. Is that clear? While declaring the blog,
+  it is plural. But while referring to the block, it has to be a singular. so just
+  like this, I would
+
+[09:38]
+  That has been covered. It. Oh yeah, perfect. So but yesterday, we learned about
+  Data Block. So these are the five blocks that we know today we are, including,
+  or introducing a new one. That is nothing but locals Block, please make a note
+  of this. What is it? I am introducing a new block called as locals. It is plural
+  Please note it is plural. Okay? Because you get a question, whether it is local
+  or locals, it is locals. okay, so now Let us start writing locals. Okay, see
+  this is the only block which doesn't take any logical name. For example, in
+  every other blocks you have a logical name. Even if you write a data block,
+  there is a logical name. When you write a variable, there is a logical name for
+  referencing, but locals is the only block where you don't see a logical name.
+  Instead, you just have locals block. And inside this, I will define all my
+  Constants, that I want. So every constant should have a name. For example, I
+  have environment deaf And then I have department. Department, which is nothing
+  but aws. Then I have department ID. Which is. It01, let's say it is 0 0 7. Okay,
+  then name of the employee employee. And let's say, Shadow. And then project.
+  Terraform. There are five constants that I need. Or these five will be used as
+  tags in every resource that I set up. Is that clear? Did you guys write this?
+  Remember, this has to be plural. Plural. No logical name here for the locals
+  block. You are directly giving a name for your constant, so these are the
+  constants. Okay, so for each constant, you are giving one name Clear. So now Let
+  us create a resource block. Okay. So here is my resource. I will also share the
+  AMI with you. Amis. Is that in the chat? Clear. Okay, so now we have created
+  this to this. I will include a tag section, very simple. So what do I need? I
+  need name. Okay. See, how do I reference to it? I would reference with A, I
+  mean, Singular Local. It's not plurals here while creating this block. It has to
+  be locals, which is in plural section. But when you're using it, when you're
+  referencing or calling to this particular constant you have to use local. It's
+  not low. Is that clear? See this is where most of the time. We do a mistake. And
+  this is where you will get a question in your exam. They what they would say is
+  they would give you a locals block and they would say I want to use this locals
+  employee in the tax section. How would you reference generally? What we do we
+  directly write Locals Dot employee Answer is incorrect. It is not locals. It is
+  a local only so you don't get s here. Is that clear? While declaring the blog,
+  it is plural. But while referring to the block, it has to be a singular. So,
+  just like this, I would go and create all the other department. Local Dot
+  department. ID project. What else? Environment. Okay. Any doubt. See, you might
+  feel if I have a single resource. Remember guys. There could also be one law.
+  Logical question. What is it? Does it make sense to use locals if you just have
+  a single resource once it is? No. Why do you want a locals blog? If you just
+  have one resource. If there is only one resource, I will put these value
+  directly here. Correct. One resource means. Anyways, I have to update these
+  value. I update directly here only but locals play a vital role when you have
+  multi resource Is that clear multi resource with same constants in the tax
+  section? When you want to use the same constants in the tax section for multiple
+  resources, only then locals player. Vital role locals is not useful if you just
+  have one single resource, is that clear? Is that clear? Any doubts. No doubts.
+  Okay. I would also create. One VPC here. See basically I won't be creating I'll
+  just do a terraform plan, I won't apply, but in the plan itself we will be able
+  to see the change in the tax. That is what I want to show. Okay, resource I
+  would want is a W s underscore vpc. It is shadow VPC. Cider is 10 dot, 0.0.0 /
+  24. Okay, simple. I don't need to worry about the tags. What? I do. I go to my
+  previous EC2, instance, copy, all the text control C. Copy paste. It here. Okay.
+  Sharanya, could you please scroll up once?
+  Here, you want to local section. Okay, so now we have your EC2 and VPC. Yes,
+  niyanta.
+  We have defined the local. In constants. And for example, we have it's Two
+  resources, for example, we have 20 resources, then we need a every time add this
+  local, text same in.
+  Ben's an architecture. Okay? For example, you have EC2 database. S3, etc. So you
+  form an architecture. Generally an architecture is One part of your project. Or
+  it is one part of your department. So what they do is they want to maintain this
+  department name and project name on the entire architecture. So that means all
+  the project name department name should reflect all the 20 instant mean 20
+  services. So it doesn't make sense for me to go and write the value for all the
+  Tax. Instead, what I'm doing, I have written one tag block and I keep using this
+  tag block every time. Okay. What is the advantage? See, the moment I come to the
+  resource AC2. I am writing this tag, but where is it pointing? It is pointing to
+  this The same thing applies for the next service as well. So I have here your
+  project The project is pointing to this. What is the advantage? Now, imagine
+  instead of Terraform project they want to write it as Python Project, I don't
+  need to go into individual resources, to change it. Instead I'll go to my locals
+  instead of terraform. I will change it to Python project. See, only one place,
+  one update will reflect the entire architecture. In terms of constants. Okay.
+  Yes. Niyanta
+  For example, in Python project we need A for example not 20.
+  Okay. What is a variable?
+  But 10 in resources, but we have here are 20 resources, then this affected, all
+  others and resources.
+
+[09:39]
+  First thing if you your script has 20 resource but your Python new project, once
+  10 resource, can you use the same script in the new project? No. Why Python
+  project probably once some different in resources, Python want something random,
+  10 resource, we don't know which resources are those, but your terraform project
+  wants 20 resources. Can I use this terraform code to reuse in Python Project?
+  No. Why there is a discrepancy in the number of resources? the major thing why
+  we are using this terraform is because for reusability only, if it is a similar
+  kind of project with similar requirement only
+
+[09:49]
+  Use it everywhere. Multiple times. Is this clear? This is the main logic of your
+  locals. It is like a constant. It is like a shortcut. Value is declared once,
+  but you will be reusing the same value multiple times. For example, now you see,
+  we will we will create a simple code snippet and we see how it works but
+  generally how it looks like I have Locals block. And here, I would say,
+  Department equals AWS and environment equals. Let's say. Development
+  environment. Clear. So this is my Department and Environment. Now, what I do, I
+  go create my VPC. While creating VPC what I do. I have tags. and here under the
+  tags, I would specify as Local Dot Department Dept. Let's say this is in
+  lowercase, t ept. And then you have local dot E and V. And the same thing you
+  have ec2 EC2 tags. You have you use the same code here as well? What is the
+  advantage now? Know where I am writing the value. The value is only written here
+  in the locals block where, you know, what is the exact value of your department
+  and for your environment, in case you want to change the environment and
+  department? No worries. What is the advantage? I don't need to go through the
+  entire 80 Different services. See, I don't need to go through the all 80
+  services advantage. I have a locals block, I come here. How many have a
+  constants are variables that I've declared Here, local variables, I'll go and
+  change the value here. So now, I can say the department is HR and environment is
+  production. Simple? What happens wherever you are using this, local, for
+  example, here, for example, for your EC2 immediately. It reflects Is this clear?
+  You have a block called as locals where your writing all the constants. And you
+  use this locals wherever you need. Advantage, when you have multiple. Services,
+  which needs the same tag. Imagine you're sharing the code with some other
+  department, or some other branch and they want to reuse the code. Is it feasible
+  for them to go and change the code at 80 different places? No, Instead of that.
+  What do we do? We come up with a concept called as locals. What is it? I have at
+  the beginning, the all the constants and I use it wherever I need in the tax.
+  Advantage. If I want to change, I can just go to this locals block and update it
+  here. I don't need to do anything pertaining to other tax section. Is this
+  clear? Any doubt. okay, let us try to yes, Mohammad
+  Okay.
+  First thing if you your script has 20 resource but your Python new project, once
+  10 resource, can you use the same script in the new project? No. Why Python
+  project probably once some different in resources, Python want something random,
+  10 resource, we don't know which resources are those, but your terraform project
+  wants 20 resources. Can I use this terraform code to reuse in Python Project?
+  No. Why there is a discrepancy in the number of resources? The major thing why
+  we are using this terraform is because for reusability only, if it is a similar
+  kind of project with similar requirement only, then I will be reusing this code.
+  If there is no similar requirement, I will not reuse this code. Okay, and next,
+  we will talk something about count variable, okay? And when I talk about count
+  again, I will come to the same example, which is nothing but terraform and
+  Python, maybe we can then discuss this a bit more clear. Okay, now you see here,
+  I have vpc. I have What is it easy to instance? I will also create one more,
+  which is a A Internet gateway. Resource. Ighw. Internet Gateway. See here. I'm
+  including my Internet gateway. In this particular vpc, you see here implicit
+  referencing? And then I have the same tax used. Did you guys include this? There
+  are three services now. Yes. Is there any errors? Any questions any doubts?
+  Meanwhile, I'll open my terminal.
+  To create obvious. Internet Gateway. We should write the full name or only the
+  symbols Egw because We have written the complete name in the
+  yes, Mohammad I D W. How do I know it is Igw? Because that's the thing that you
+  see in your registry. Let me show you. Oh, is it? So let me check then. Thanks
+  for informing. Let's see the exact resource I thought it was ijw. Let's check.
+  Documentation Internet. See. Do you see it? My bad guys. It has to be Internet
+  Gateway. Okay, so where is it? It is not igw. I will replace this with Internet
+  Gateway.
+  On your could you please scroll up to the webcam?
+  Vpc. Yes.
+  Am so yeah.
+  Question. Sharanya, can we create now this resources with the VPC? You have a
+  kind of limit, right? If we create
+  If we will not be, we will not be, create will not be creating only its plan.
+  We're not able. Okay. Okay.
+  So that's the reason why I'm a bit relaxed. I don't care. Which side are you,
+  right? Okay, any questions? Thanks Mohammad. It is actually AWS Internet Gate
+  but not IGW. Any other questions? If not, I will go to my terminal. And let us
+  change the folder directory. CD Day 8. And I will also execute LS, just to make
+  sure I have my locals folder. Okay, let us go into locals. LS to check. If you
+  have your main dot TF please execute this and tell me change your directory. You
+  should be inside Day eight and under Locals folder. Yes. Okay. Now We will
+  execute our very first command. So first I would like to do terraform FMD. Okay
+  to organized my main.tf so it was not proper. Remember guys, when you do
+  terraform fmd I was checking yesterday right? I told you one thing. It has two
+  types of indentation. One is two space indentation. And one is four space
+  indentation, right? There are two ways. Okay. And which is the default. One, two
+  space indentation is the default, one. And that is the normal structure that we
+  see in HCl. What does two space indentation mean? So now, if you see here, Under
+  your locals. Block I am including couple of values, which is Environment
+  Department, ID cents, etc. So, how is it? Look at this, the space. It is like
+  two spaces from your margin, one, two. The same thing here at 1 2. 1 2. So it is
+  two space. Indentation is what we see in Terraform Fmt, which a default one.
+  even if you put four spaces, for example, Instead of two spaces. Now, I have
+  given four spaces here. See This also will work. it doesn't matter, even if you
+  have a four space in your HCl, It will work. But the default structuring is two
+  space structuring. So I will also execute Fmt once again. So you see this, it's
+  updated. Okay, can I do Terraform validate?
+  No.
+  No, why? Because there is no terraform in it. So, without terra for a minute,
+  how can you validate? So first, let us install the plugin. Pertaining to this.
+  Provider. And then, We will do Terraform validate. Okay. I have my. Plugin
+  Installed Now. Let us doterraform validate. Okay, you should get this message as
+  success. Any errors. Any doubts. Share your screen. Shall I proceed? I will not
+  do Terraform apply. I will just do terraform plan because the only thing that I
+  am concerned about is the locals block, so let's do just terraform plan. Okay.
+  It is telling three to add. Okay and look at this. Tax section. I'll start from
+  the beginning. You have terraform plan and it is giving you execution plan and
+  all the three services that we are creating is create. Basically, we are
+  creating these, which is plus in sign. And here, I have AWS instance and I don't
+  need all of this. What do I need? Do you see your tax value? Department
+  Department, ID Env project, and name. Check. Do you see this tax value? When you
+  do your terraform plan and I will scroll down and the same tax details. I can
+  also see it in your Internet gateway. And I will go to vpc the same tags. You
+  can also see it in your Vpc. Is this correct? Do you get the same output?
+  sharanya Why we Getting Two Time, Text and Text All
+  While creating VPC what I do. I have tags. and here under the tags, I would
+  specify as Local Dot Department Dept. Let's say this is in lowercase, t ept. And
+  then you have local dot E and V. And the same thing you have ec2 EC2 tags. You
+  have you use the same code here as well? What is the advantage now? Know where I
+  am writing the value. The value is only written here in the locals block where,
+  you know, what is the exact value of your department and for your environment,
+  in case you want to change the environment and department? No worries. What is
+  the advantage? I don't need to go through the entire 80 Different services. See,
+  I don't need to go through the all 80 services advantage. I have a locals block,
+  I come here. How many have a constants are variables that I've declared Here,
+  local variables, I'll go and change the value here. So now, I can say the
+  department is HR and environment is production. Simple? What happens wherever
+  you are using this, local, for example, here, for example, for your EC2
+  immediately. It reflects Is this clear? You have a block called as locals where
+  your writing all the constants. And you use this locals wherever you need.
+  Advantage, when you have multiple. Services, which needs the same tag. Imagine
+  you're sharing the code with some other department, or some other branch and
+  they want to reuse the code. Is it feasible for them to go and change the code
+  at 80 different places? No, Instead of that. What do we do? We come up with a
+  concept called as locals. What is it? I have at the beginning, the all the
+  constants and I use it wherever I need in the tax. Advantage. If I want to
+  change, I can just go to this locals block and update it here. I don't need to
+  do anything pertaining to other tax section. Is this clear? Any doubt. okay, let
+  us try to yes, Mohammad
+
+[09:50]
+  There are two different things. Okay, tags. You can include multiple tax
+  sections. Okay. I can include tag like this. Okay, and there is one more you can
+  include tag again. So what happens? Tags all will collect all the tax section
+  and it will put here. It's nothing different. You can have multiple tags block
+  in your service. Okay, and you might have already seen this from day one.
+  Whenever you you include tag you see this tags and tags all. Clear. Okay, did
+  you guys see this in your plan? Yes, or no. Yes. Shall we make some changes? To
+  the code. Any doubts any errors? Nothing. Okay, if there are no doubts, no
+  errors. Well and good. I want to share this code with my colleagues of a
+  different department. So what does he do? There are three services. Do you think
+  he will be changing the tags for each and every service? No. So what does it
+  this? This instead of Dev, he will write testing Okay, instead of department,
+  instead of your AWS department, he is into testing department, test department.
+  Okay, this is department is 005. The employee is not sure the employee is. Abc.
+  Okay, what is the project? The project is not, there are form. The project is
+  some devops terraform on which you are testing. Update this. Locals. our whole
+  motive is to make sure whether this reflects All your resource even after you
+  updated the value.
