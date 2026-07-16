@@ -1,0 +1,2694 @@
+
+[09:02]
+  --- logged in ---
+
+[09:07]
+  Good morning, everyone, um? I was really waiting for sharanya to be. Oh, there
+  you are.
+  Hello, hi, good morning.
+  Good morning, I.
+  Hi, sorry, Annika, my sis. My system went in to restart mode, so I just had to
+  Okay, hi, good to see you, um, yeah.
+  wait until I get back from my system. Yes. Likewise.
+  Yeah.
+
+[09:08]
+  Uh, just gonna say to the class I'm Matthias colleague. He is on holiday this
+  week. This is why you see my face right now, I am here to drop Kiyagi off. He's
+  Uh, just gonna say to the class I'm Matthias colleague. He is on holiday this
+  week. This is why you see my face right now, I am here to drop Ki Augie off.
+  Uh, just, uh, gonna say to the class I'm Matthias colleague. He is on holiday
+  this week. This is why you're seeing my face right now. I am here to, uh, drop
+  kiyagi off. He's already in the classroom with us. I had a quick onboarding with
+  him. He was like a super quick startup, so he did sign with us yesterday, but
+  he's onboarded and ready, and uh yeah, there he is, and I would just, um, yeah,
+  hand them over to you right now. And, um, you know, write me a slack, if, like
+  any, anything comes up. But otherwise, I think you should be good to go.
+  All right.
+  Perfect, sure.
+  That would be great.
+  So, hi georgiuki, and welcome to the class.
+  And anything pertaining to the class. Feel free to send me a message on slack.
+  I'll be able to send you the materials as well. Fine. And I think you're muted.
+  I will also add you on to our slack channel so that you get updates frequently
+  about what is happening clear.
+
+[09:09]
+  Okay, thank you for the welcoming. Hi, everyone again. Um, yeah, and in this
+  General slack Channel AWS one. So, um? Yeah, if I'm missing something, uh, yeah,
+  please.
+  Did they add you already? Yes, I see that, uh, you've been added yesterday, and
+  there's also one more Channel I will include you there. So, where you can find
+  all the materials pertaining to a regular class? And I will share you the
+  curriculum and the materials that has already been. Shared with the entire
+  students fine.
+
+[09:11]
+  Okay, perfect. Thank you very much.
+  No problem. Hello, everyone! Good morning once again. So, let me share my
+  screen. Can you guys see my screen? Yes. Okay, any questions so far before we
+  start?
+  Can you make a big character in your screen because?
+  Yes. I will zoom in a bit.
+  Okay, thank you.
+  Okay, this should be good, right? Okay, I can also try to zoom in a bit more.
+  Perfect! Any of the questions? So yesterday, if you guys remember, we did three
+  concepts we did locals. Okay. We did. Count. And we also did for each. Correct?
+  So, basically, these two are what these two are special arguments or meta
+  arguments, and the locals is a block. Clear. Locals is a block and count, and
+  for each are meta arguments which we can use. Just to increase the number of
+  instances that you are setting up in count. What is it? It will be mostly
+  identical. Um. Services that you're going to set up. But when you go for for
+  each, here you have key value pair. So whenever you set up your infrastructure
+  or Services multiple infrastructure. You can customize it with the helper for
+  each. Is this clear? Any doubt so far. Okay. Today, we will start with. My plan
+  is to do two things one is. Provider block. Okay, and the other one is. Life
+  cycle. I want to do two things one is provider block and.
+
+[09:12]
+  Okay, this should be good, right? Okay, I can also try to zoom in a bit more.
+  Perfect! Any of the questions? So yesterday, if you guys remember, we did three
+  concepts we did locals. Okay. We did. Count. And we also did for each. Correct?
+  So, basically, these two are what these two are special arguments or meta
+  arguments, and the locals is a block. Clear. Locals is a block and count, and
+  for each are meta arguments which we can use. Just to increase the number of
+  instances that you are setting up in count. What is it? It will be mostly
+  identical. Um. Services that you're going to set up. But when you go for for
+  each, here you have key value pair. So whenever you set up your infrastructure
+  or Services multiple infrastructure. You can customize it with the helper for
+  each. Is this clear? Any doubt so far. Okay. Today, we will start with. My plan
+  is to do two things one is. Provider block. Okay, and the other one is. Life
+  cycle. I want to do two things one is provider block, and the second one is life
+  cycle. Clear. Okay. First of all. What is the provider block because so far
+  from? For the past eight days, we've been learning about terraform. Can you tell
+  me why is this provider block needed? What does it do? Why is this needed?
+  Select particular. Cloud.
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your?
+
+[09:13]
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your respective cloud plugin gets installed into
+  your system? Okay, and this provider block allows your terraform to talk to the
+  cloud. Basically a platform. Because of this provider block. Why? Because you
+  include here keys? Your authorization authentication is done because of your
+  involvement of key.
+
+[09:14]
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your respective cloud plugin gets installed into
+  your system? Okay, and this provider block allows your terraform to talk to the
+  cloud. Basically a platform. Because of this provider block. Why? Because you
+  include here keys? Your authorization authentication is done because of your
+  involvement of keys. Is this clear? Any doubt? There are different provider
+  blocks like AWS Azure Docker provider. There is also kubernetes provider VMware
+  Oracle Alibaba. Many Cloud providers are there. And not just that one more
+  Advantage about your terraform is. You can use the same terraform for your
+  on-premise as well. On your on-premise data center, I can use the same
+  terraform. So, now I know the use of provider block. Clear, but when is this
+  useful whenever I execute my terraform init command? Whenever I execute my
+  terraform init command during that time, terraform goes to the provider block
+  and fetches all the information. Okay, and not just that. Terraform also mean
+  your init will also try to do some kind of syntax checking. Basic syntax
+  checking. Clear. Okay, so now we know the need of provider block. Okay, let us
+  create. A new folder today. Day. And as usual inside this, create a subfolder
+  and call it as providers. Georgi. Are you familiar with vs code?
+
+[09:15]
+  Um, yes, and I actually haven't already installed and.
+  Perfect!
+  Yes.
+  Um, I just would open a folder name it day nine, or I need to install some
+  plugin for terraforms.
+  Okay. Perfect! Thank you very much.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+
+[09:16]
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+
+[09:18]
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+
+[09:19]
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+
+[09:20]
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um.
+
+[09:21]
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that to belonging to
+  a particular.
+
+[09:22]
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. So? Yes, so that's what we are going to do now. So, now if you say, I
+  already
+  them in a web maybe?
+
+[09:23]
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+
+[09:24]
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+
+[09:28]
+  Sharanya.
+  Yes.
+
+[09:29]
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+
+[09:30]
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya and
+  here under the tag, it is sharing your us.
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+
+[09:31]
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tags. I don't.
+
+[09:32]
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Pende.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second.
+
+[09:37]
+  I was really waiting for sharanya to be. Oh, there you are.
+
+[09:38]
+  That would be great.
+  And anything pertaining to the class. Feel free to send me a message on slack.
+  I'll be able to send you the materials as well. Fine. And I think you're muted.
+  I will also add you on to our slack channel so that you get updates frequently
+  about what is happening clear.
+  Okay, thank you for the welcoming. Hi, everyone again. Um, yeah, and in this
+  General slack Channel AWS one. So, um? Yeah, if I'm missing something, uh, yeah,
+  please.
+  Did they add you already? Yes, I see that, uh, you've been added yesterday, and
+  there's also one more Channel I will include you there. So, where you can find
+  all the materials pertaining to a regular class? And I will share you the
+  curriculum and the materials that has already been. Shared with the entire
+  students fine.
+  Okay, perfect. Thank you very much.
+  No problem. Hello, everyone! Good morning once again. So, let me share my
+  screen. Can you guys see my screen? Yes. Okay, any questions so far before we
+  start?
+  Can you make a big character in your screen because?
+  Yes. I will zoom in a bit.
+  Okay, thank you. Yeah.
+  Okay, this should be good, right? Okay, I can also try to zoom in a bit more.
+  Perfect! Any of the questions? So yesterday, if you guys remember, we did three
+  concepts we did locals. Okay. We did. Count. And we also did for each. Correct?
+  So, basically, these two are what these two are special arguments or meta
+  arguments, and the locals is a block. Clear. Locals is a block and count, and
+  for each are meta arguments which we can use. Just to increase the number of
+  instances that you are setting up in count. What is it? It will be mostly
+  identical. Um. Services that you're going to set up. But when you go for for
+  each, here you have key value pair. So whenever you set up your infrastructure
+  or Services multiple infrastructure. You can customize it with the helper for
+  each. Is this clear? Any doubt so far. Okay. Today, we will start with. My plan
+  is to do two things one is. Provider block. Okay, and the other one is. Life
+  cycle. I want to do two things one is provider block, and the second one is life
+  cycle. Clear. Okay. First of all. What is the provider block because so far
+  from? For the past eight days, we've been learning about terraform. Can you tell
+  me why is this provider block needed? What does it do? Why is this needed?
+  Select particular. Cloud.
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your respective cloud plugin gets installed into
+  your system? Okay, and this provider block allows your terraform to talk to the
+  cloud. Basically a platform. Because of this provider block. Why? Because you
+  include here keys? Your authorization authentication is done because of your
+  involvement of keys. Is this clear? Any doubt? There are different provider
+  blocks like AWS Azure Docker provider. There is also kubernetes provider VMware
+  Oracle Alibaba. Many Cloud providers are there. And not just that one more
+  Advantage about your terraform is. You can use the same terraform for your
+  on-premise as well. On your on-premise data center, I can use the same
+  terraform. So, now I know the use of provider block. Clear, but when is this
+  useful whenever I execute my terraform init command? Whenever I execute my
+  terraform init command during that time, terraform goes to the provider block
+  and fetches all the information. Okay, and not just that. Terraform also mean
+  your init will also try to do some kind of syntax checking. Basic syntax
+  checking. Clear. Okay, so now we know the need of provider block. Okay, let us
+  create. A new folder today. Day. And as usual inside this, create a subfolder
+  and call it as providers. Georgi. Are you familiar with vs code?
+  Um, yes, and I actually haven't already installed and.
+  Perfect!
+  Um, I just would open a folder name it day nine, or I need to install some
+  Yes.
+  plugin for terraforms.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Okay. Perfect! Thank you very much.
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes. I will zoom in a bit.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now.
+
+[09:39]
+  So, let me share my screen. Can you guys see my screen? Yes. Okay, any questions
+  so far before we start?
+  Can you make a big character in your screen because?
+  Okay, thank you. Yeah.
+  Okay, this should be good, right? Okay, I can also try to zoom in a bit more.
+  Perfect! Any of the questions? So yesterday, if you guys remember, we did three
+  concepts we did locals. Okay. We did. Count. And we also did for each. Correct?
+  So, basically, these two are what these two are special arguments or meta
+  arguments, and the locals is a block. Clear. Locals is a block and count, and
+  for each are meta arguments which we can use. Just to increase the number of
+  instances that you are setting up in count. What is it? It will be mostly
+  identical. Um. Services that you're going to set up. But when you go for for
+  each, here you have key value pair. So whenever you set up your infrastructure
+  or Services multiple infrastructure. You can customize it with the helper for
+  each. Is this clear? Any doubt so far. Okay. Today, we will start with. My plan
+  is to do two things one is. Provider block. Okay, and the other one is. Life
+  cycle. I want to do two things one is provider block, and the second one is life
+  cycle. Clear. Okay. First of all. What is the provider block because so far
+  from? For the past eight days, we've been learning about terraform. Can you tell
+  me why is this provider block needed? What does it do? Why is this needed?
+  Select particular. Cloud.
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your respective cloud plugin gets installed into
+  your system? Okay, and this provider block allows your terraform to talk to the
+  cloud. Basically a platform. Because of this provider block. Why? Because you
+  include here keys? Your authorization authentication is done because of your
+  involvement of keys. Is this clear? Any doubt? There are different provider
+  blocks like AWS Azure Docker provider. There is also kubernetes provider VMware
+  Oracle Alibaba. Many Cloud providers are there. And not just that one more
+  Advantage about your terraform is. You can use the same terraform for your
+  on-premise as well. On your on-premise data center, I can use the same
+  terraform. So, now I know the use of provider block. Clear, but when is this
+  useful whenever I execute my terraform init command? Whenever I execute my
+  terraform init command during that time, terraform goes to the provider block
+  and fetches all the information. Okay, and not just that. Terraform also mean
+  your init will also try to do some kind of syntax checking. Basic syntax
+  checking. Clear. Okay, so now we know the need of provider block. Okay, let us
+  create. A new folder today. Day. And as usual inside this, create a subfolder
+  and call it as providers. Georgi. Are you familiar with vs code?
+  Um, yes, and I actually haven't already installed and.
+  Perfect!
+  Um, I just would open a folder name it day nine, or I need to install some
+  Yes.
+  plugin for terraforms.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Okay. Perfect! Thank you very much.
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output.
+
+[09:40]
+  Okay. We did. Count. And we also did for each. Correct? So, basically, these two
+  are what these two are special arguments or meta arguments, and the locals is a
+  block. Clear. Locals is a block and count, and for each are meta arguments which
+  we can use. Just to increase the number of instances that you are setting up in
+  count. What is it? It will be mostly identical. Um. Services that you're going
+  to set up. But when you go for for each, here you have key value pair. So
+  whenever you set up your infrastructure or Services multiple infrastructure. You
+  can customize it with the helper for each. Is this clear? Any doubt so far.
+  Okay. Today, we will start with. My plan is to do two things one is. Provider
+  block. Okay, and the other one is. Life cycle. I want to do two things one is
+  provider block, and the second one is life cycle. Clear. Okay. First of all.
+  What is the provider block because so far from? For the past eight days, we've
+  been learning about terraform. Can you tell me why is this provider block
+  needed? What does it do? Why is this needed?
+  Select particular. Cloud.
+  For cloud provider plugin. What else? Case. You can also include your case. To
+  access the account perfect, so provider is. Block, which helps us to download
+  our Cloud plugin. Okay, while mentioning the provider block. I always include
+  your cloud provider name here, whether it is AWS, Azure, or gcp. The moment I
+  run the script, what happens your respective cloud plugin gets installed into
+  your system? Okay, and this provider block allows your terraform to talk to the
+  cloud. Basically a platform. Because of this provider block. Why? Because you
+  include here keys? Your authorization authentication is done because of your
+  involvement of keys. Is this clear? Any doubt? There are different provider
+  blocks like AWS Azure Docker provider. There is also kubernetes provider VMware
+  Oracle Alibaba. Many Cloud providers are there. And not just that one more
+  Advantage about your terraform is. You can use the same terraform for your
+  on-premise as well. On your on-premise data center, I can use the same
+  terraform. So, now I know the use of provider block. Clear, but when is this
+  useful whenever I execute my terraform init command? Whenever I execute my
+  terraform init command during that time, terraform goes to the provider block
+  and fetches all the information. Okay, and not just that. Terraform also mean
+  your init will also try to do some kind of syntax checking. Basic syntax
+  checking. Clear. Okay, so now we know the need of provider block. Okay, let us
+  create. A new folder today. Day. And as usual inside this, create a subfolder
+  and call it as providers. Georgi. Are you familiar with vs code?
+  Um, yes, and I actually haven't already installed and.
+  Perfect!
+  Um, I just would open a folder name it day nine, or I need to install some
+  plugin for terraforms.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Okay. Perfect! Thank you very much.
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Okay.
+
+[09:41]
+  Is this clear? Any doubt so far. Okay. Today, we will start with. My plan is to
+  do two things one is. Provider block. Okay, and the other one is. Life cycle. I
+  want to do two things one is provider block, and the second one is life cycle.
+  Clear. Okay. First of all. What is the provider block because so far from? For
+  the past eight days, we've been learning about terraform. Can you tell me why is
+  this provider block needed? What does it do? Why is this needed?
+
+[09:42]
+  Why is this needed?
+
+[09:43]
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Because of this provider block. Why? Because you include here keys? Your
+  authorization authentication is done because of your involvement of keys. Is
+  this clear? Any doubt? There are different provider blocks like AWS Azure Docker
+  provider. There is also kubernetes provider VMware Oracle Alibaba. Many Cloud
+  providers are there. And not just that one more Advantage about your terraform
+  is. You can use the same terraform for your on-premise as well. On your
+  on-premise data center, I can use the same terraform. So, now I know the use of
+  provider block. Clear, but when is this useful whenever I execute my terraform
+  init command? Whenever I execute my terraform init command during that time,
+  terraform goes to the provider block and fetches all the information. Okay, and
+  not just that. Terraform also mean your init will also try to do some kind of
+  syntax checking. Basic syntax checking. Clear. Okay, so now we know the need of
+  provider block. Okay, let us create. A new folder today. Day. And as usual
+  inside this, create a subfolder and call it as providers. Georgi. Are you
+  familiar with vs code?
+  Um, yes, and I actually haven't already installed and.
+  Perfect!
+  Um, I just would open a folder name it day nine, or I need to install some
+  Yes.
+  plugin for terraforms.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Okay. Perfect! Thank you very much.
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+
+[09:44]
+  Okay, and not just that. Terraform also mean your init will also try to do some
+  kind of syntax checking. Basic syntax checking. Clear. Okay, so now we know the
+  need of provider block. Okay, let us create. A new folder today. Day. And as
+  usual inside this, create a subfolder and call it as providers. Georgi. Are you
+  familiar with vs code?
+
+[09:45]
+  You have to write value or values.
+  Its value only.
+  Uh, basically, you need to install how terraform works. There's a terraform
+  installation, but my suggestion is just start writing with the code. Whatever we
+  are doing installation, maybe I can help you during, uh, the afternoon session?
+  Okay. Perfect! Thank you very much.
+  Or, I can also share you some links, which will help you to install terraform by
+  yourself. Okay.
+  Yeah, you can hear me later. Thank you.
+  Yeah, you can start writing the code. What we are doing now. So already, nine
+  days of terraform has already been completed, so the basics are already there. I
+  will share all the files that we have done so far. Maybe you can go through them
+  during your afternoon session and also during your summer break.
+  That sounds great. Thank you.
+  Perfect, so provide us folder and inside this. Let us create our first file as
+  usual. Call it as main.tf. Any questions? No questions. Okay, so in the main.tf,
+  I hope you guys have created this. I will go to my. Provide a previous day, and
+  I will copy my. Provide a block from here. Copy this. Paste. So, you have your
+  access key. You have your secret key, and I'm copying my provider block. Once
+  this is done, let me know. Yes, everyone. Perfect. So now we have created the
+  provider block as usual. I will proceed further by creating your resource, so
+  the resource same thing. What we did on day one? Which is nothing but including
+  a provider block and the basic resource ec2 instance. We are doing that here.
+  Okay, AWS underscore instance, and you have your instance. Give a name. Include
+  this code. Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+  You have to write value or values.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? Okay.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y.
+
+[09:46]
+  Any questions? No questions. Okay, so in the main.tf, I hope you guys have
+  created this. I will go to my. Provide a previous day, and I will copy my.
+  Provide a block from here. Copy this. Paste. So, you have your access key. You
+  have your secret key, and I'm copying my provider block. Once this is done, let
+  me know. Yes, everyone. Perfect. So now we have created the provider block as
+  usual. I will proceed further by creating your resource, so the resource same
+  thing. What we did on day one? Which is nothing but including a provider block
+  and the basic resource ec2 instance. We are doing that here. Okay, AWS
+  underscore instance, and you have your instance. Give a name. Include this code.
+  Yes.
+  Um, do we, um, do we have somewhere to copy it from or?
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+  You have to write value or values.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh.
+
+[09:47]
+  day one? Which is nothing but including a provider block and the basic resource
+  ec2 instance. We are doing that here. Okay, AWS underscore instance, and you
+  have your instance. Give a name. Include this code. Yes.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh, Auto minus approved. There is no space. After
+  Auto, you have given a space remove that space, yes. Enter. Okay. Do you see
+  this? Two instances are getting created, so meanwhile, I will also open the
+  cloud just to check if it actually created in two different regions. Let's see.
+  Error. What is that error? Ni.
+
+[09:48]
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh, Auto minus approved. There is no space. After
+  Auto, you have given a space remove that space, yes. Enter. Okay. Do you see
+  this? Two instances are getting created, so meanwhile, I will also open the
+  cloud just to check if it actually created in two different regions. Let's see.
+  Error. What is that error? Okay. Um. Imagite yes. Who can identify what is the
+  problem? Look at this error and tell me what is the problem?
+  I think AMI.
+  Uh, yes, maybe I can share this with you?
+  Yeah.
+  Ctrl C here. I won't be able to share the provider block. Why? Because we have
+  access keys and secret key. Those are like passwords for each user, I will
+  create your IM credentials on AWS, and I will share them with you.
+  Okay, thank you. Yeah.
+  Okay. Okay, but just to include this, and you can just specify access key here
+  and give an empty string.
+  Okay.
+  Okay, did others write this code? Now, I have a question. So, we have a resource
+  block. So, can you tell me if in which particular region is this instance being
+  created? Where is this creating?
+  Enter one.
+  Eu Central one. How do I know because this is AWS instance? So it is depending
+  on the provider plugin, which is AWS plugin. And here I have specified the reg.
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+  You have to write value or values.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh, Auto minus approved. There is no space. After
+  Auto, you have given a space remove that space, yes. Enter. Okay. Do you see
+  this? Two instances are getting created, so meanwhile, I will also open the
+  cloud just to check if it actually created in two different regions. Let's see.
+  Error. What is that error? Okay. Um. Imagite yes. Who can identify what is the
+  problem? Look at this error and tell me what is the problem?
+  I think AMI.
+  Ami is the problem perfect. I told you one thing about Ami, what is it? Amis are
+  region specific. The Ami that you wrote in U.S is not available at all. Is that
+  clear? The Ami that you wrote in us is the Ami that is actually available only
+  in EU region. Let me share my screen. So, I will give you a different Ami. We
+  can check that together. Okay, I hope you guys can see my control.
+
+[09:49]
+  Here I have. Here. I've specified the region to be EU Central 1. Is that clear?
+  So the instance that we are setting up is created in your EO Central one. Now,
+  there is a requirement from your senior manager. What is it? They want you to
+  create. Too easy. Two instances. One should be created in EU Central one. And
+  one should be created in U.S east. See. I want you to write a script. The
+  requirement is something very simple. I want you to write a script. In that
+  script. I want one ec2 instance to be created in EU Central and the other
+  instance to be created in U.S east. So, now what I can do? Okay. Um, let us
+  consider. There is also one more requirement. What is it? The requirement is in
+  such a way that. You are a Solutions architect associate, or you are working as
+  a ISA code developer. And your requirement is. You are supposed to create. Two
+  Services ec2 S3. Ec to S3. Okay, let us. I will also include one more service,
+  for example, VPC. Okay, but how? This first AC to S3, they are asking you to
+  create this. Developers, department, or developers project in EU Central one.
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  We will.
+  We have a different set of access keys. So I would say x is K1 is here. X is Q2
+  is here. Basically, you need to connect to your console using two different
+  credentials. So, the first set of services that you're going to set up will have
+  access K1 credential. The second set of infrastructure that you will be setting
+  up for testing department should use access key to setup. How do we do this? So,
+  for this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+  You have to write value or values.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh, Auto minus approved. There is no space. After
+  Auto, you have given a space remove that space, yes. Enter. Okay. Do you see
+  this? Two instances are getting created, so meanwhile, I will also open the
+  cloud just to check if it actually created in two different regions. Let's see.
+  Error. What is that error? Okay. Um. Imagite yes. Who can identify what is the
+  problem? Look at this error and tell me what is the problem?
+  I think AMI.
+  Ami is the problem perfect. I told you one thing about Ami, what is it? Amis are
+  region specific. The Ami that you wrote in U.S is not available at all. Is that
+  clear? The Ami that you wrote in us is the Ami that is actually available only
+  in EU region. Let me share my screen. So, I will give you a different Ami. We
+  can check that together. Okay, I hope you guys can see my control. Okay. I will
+  go to ec2. And here, on the left hand side, you see Amis, right? And remember,
+  Amis are region specific. Okay, so here it is. I'm just filtering owned by me.
+  Let us go for public images. There are so many images that I can choose. From
+  which region from us? Oregon region. So, now, what I'll do, uh, let me choose.
+  It was U.S east one. Which is Virginia? Okay, North Virginia. Now, I'll go to
+  instances. Let me try to launch an instance. You can also find an Ami directly
+  from the Ami section, but I would feel comfortable doing it here inside the ec2.
+  Because I clearly can know which is coming under free tier. Option, because this
+  option is very important for me. I only want to choose the free tier ones clear.
+  So, now, if I see the free tier one, here I have. X86, do you see my first Ami?
+  This Ami is completely different than the Ami that you have written in your.
+  Second instance. Please paste this nianta.
+
+[09:50]
+  So, now what I can do? Okay. Um, let us consider. There is also one more
+  requirement. What is it? The requirement is in such a way that. You are a
+  Solutions architect associate, or you are working as a ISA code developer. And
+  your requirement is. You are supposed to create. Two Services ec2 S3. Ec to S3.
+  Okay, let us. I will also include one more service, for example, VPC. Okay, but
+  how? This first AC to S3, they are asking you to create this. Developers,
+  department, or developers project in EU Central one. Okay, next. There is
+  another set of service. Which you are creating it for testing purpose. And
+  you're creating this in U.S east. A US East one. Basically, you are creating
+  some services in a particular region. And that too belonging to a particular
+  department or environment. See here. One is development environment, and one is
+  testing environment. How do I set it up? And not just that, there is also. There
+  is also one more thing.
+
+[09:51]
+  Okay, next. There is another set of service. Which you are creating it for
+  testing purpose. And you're creating this in U.S east. A US East one. Basically,
+  you are creating some services in a particular region. And that too belonging to
+  a particular department or environment. See here. One is development
+  environment, and one is testing environment. How do I set it up? And not just
+  that, there is also. There is also one more thing.
+  Okay, I pressed it.
+  Okay, do you want to share your screen? Okay, give me a second. Okay. Uh, now
+  can you do terraform? Apply Auto proof. Yes. Where did you paste? In the second.
+
+[09:52]
+  testing department should use access key to setup. How do we do this? So, for
+  this itself, yes, Mini.
+  Maybe I'm thinking now to Define multiple provider as objective and then put
+  Yes. Yes, so that's what we are going to do now. So, now if you say, I already
+  have a
+  them in a web maybe?
+  main.pf with a provider block and a resource. So, this provider block is what it
+  is called as a default provider block. It is a default provider block. Okay, why
+  is it called a default? I will show you next. Now, what I do? I told you, we
+  will keep the resource or the infrastructure very simple for this. Example, what
+  I want to do is I want one ec2 in U.S east. And I want one ec2. Uh, EU Central.
+  Okay, now you might ask, can I have multiple access keys? Yes, you can have
+  multiple access keys. That's not a problem you can create like five to six axis
+  keys, depending on the projects that you're working on. But right now, do we
+  have multiple access keys. No, I just have a single access key correct. There is
+  only one access key. So what I'll do? I will use the Sam access key here, axis
+  key 1 and x is Q L. I am using the same access K, but what I'm doing I am
+  changing the region only. Okay, so how do I do it? So look at this. I have this
+  provider block. I will copy the same provider block control. Control. V I am
+  copying the same provider, but here, instead of this region, I will write us
+  East. Did you guys write the second provider block? The first provider is
+  pointing to ueu Central, the second provider is pointing to US East one. I'm
+  using the same credential same access case. Any doubt? Okay, but now there is a
+  problem. What is the problem when I look at the provider block? Let us think in
+  terms of terraform. How do I distinguish between this provider block and this
+  provider block? There has to be some identification correct. How do I identify
+  two provided blocks so in during that time we use? Our argument here, called as
+  Alias argument. So what I do? Here, I will write Alias. Elias is basically used
+  to give a name for representation. So I would call it as new, simple. New
+  provider block. So, this is a default one. So whenever you want default setting,
+  automatic one provider block, which doesn't have Alias, will be considered as
+  default. And what is this provider block? This provider block is identified with
+  the Alias name. What is the Alias name new? Is my Alias name. You can have any
+  name here. You can also have sharanya. You can have DCI anything you want, or
+  you can most of the time. What they do is in companies. They would give the
+  region name itself as the Alias. Is that clear? Did you guys write this? Okay,
+  now what I'll do, I'll scroll down. I'll create the same copy the same resource.
+  Ctrl, C. Ctrl B I copied the same resource, but what I want I want my first
+  instance to be created in default. Provider, and I want my second instance to be
+  created in the new provider or Us region. Clear. So? So far, we've been using
+  provider as a block, right? This is like a block of code. So provider was
+  supposed to be used as a block of code. Today, we will use provider as a meta
+  argument. What is meta argument? Just like your count? Depends on. For. So, for
+  all of these, what am I doing? I am including these keywords here inside the
+  code. If I include these keywords, why are they used for? They are called as
+  meta arguments, which give special property to your services. For example, count
+  increases the number of identical service depends on your creating explicit
+  referencing for each your basically using key value pair. To set up multiple
+  instances. Exactly like this. Now we have one more. Meta argument that is
+  provider as the meta argument. So, here, what I do in a second resource, please
+  make a note. In my second resource, you can place it anywhere. The code doesn't
+  matter. So, in my second resource, I would say provider equals AWS dot new. Why
+  is it AWS? Because if I go back, this is AWS. You're identifying the provider
+  block with AWS. The cloud provider is AWS itself, but I have two Cloud providers
+  with the same name. How do I distinguish with the help of Alias? So, now if you
+  see, this is my new meta argument. Any doubt?
+  Sharanya.
+  Yes.
+  Is that we have two instances with the same type and the same name.
+  You mean the tags?
+  That's okay as.
+  And the tags. Okay, let.
+  Resources, I mean, yeah.
+  Uh, you mean the logical name? Yeah, obviously, it'll it won't work. It won't
+  work for sure. Okay, so now we will change couple of things. What is it if I
+  look into my service here? I have two logical names, which are identical. Does
+  it work? No, it will throw an error or sometimes see. There are two
+  possibilities terraform. If you are using the older version of terraform, what
+  does it do? It converts. This is test his instance 0, and this converts into
+  test instance 1. In the new form. It generally throws an error. It asks you to
+  change your logical name. You cannot have two identical logical names. So, now,
+  what I do instead of test instance. I will call it as us instance. Us instance,
+  and this is EU instant. Okay, and here under the tag, I will write sharanya EU
+  and here under the tag, it is sharanya us see. Update this. Three and four, yes.
+  Or why we need to change because we have a different reason. Then we can create
+  a with same name C2 because.
+  Okay, so first question, where do we use this logical name? Where do you use
+  this logical name? Where is it useful? Can I use this logical name anywhere
+  outside the code? Logical names are used for what it is used for implicit
+  referencing correct. Implicit referencing means where is it happening? It is
+  happening only within the code where only terraform can understand this logical
+  name. So, this logical name is not known anywhere outside your terraform. So, if
+  I have two names in the same script, how can your terraform distinguish between
+  them? If this was, for example? I can give if it was in terms of tax. I don't
+  mind. I can also, for example, give here. See, I can retain the same EU here and
+  here. Doesn't matter why, because these are the tags that you are applying only
+  after creating the resource on the cloud. Even if you retain the same name, it
+  doesn't make much of a difference. But what is this? This is a logical name
+  given to your resource only for referencing inside your code. Inside your
+  terraform code. You cannot have same names. Every resource should have unique
+  logical name. Is this clear? So now. Up here, I will change it. Any other
+  questions? Any doubt? Is this clear to everyone? So, what do I have? I have a
+  provider block I have the second provider block, but here. The major thing is
+  Alias for identification. Just to identify this provider block. I'm having
+  Alias. And then I have. The resource one and a resource 2, but I want my
+  research to to be created in this specific provider block. What is it AWS dot
+  new? Is this clear? Any doubt?
+  So, that means if we need to create in, I don't know 10 regions. We need to
+  create those 10 areas, for example.
+  Yes, yes, no, not just 10 region. There's also one more, uh, Advantage. In case,
+  Pende.
+  imagine you. Um. And your company is working on two different Cloud providers.
+  See some blah blah access key. Is there inside your Roger? That's fine. You can
+  have one provider block for your AWS. You can have one provide a block for your
+  brochure, and you can have resources pertaining to AWS and also resources
+  pertaining to Azure. Everything can be included in one script. Is this clear? It
+  need not be only pertaining to a single cloud provider. You can include
+  different Cloud providers and in those Cloud providers. Again, you can include
+  different access keys, different regions. It gives you a lot of flexibility
+  here. Is this clear? Any doubt? So I, what I'll do is, I'll just comment this.
+  There's also a possibility to include a different Cloud providers clear. Okay, I
+  hope you guys have written this fine. So, now, what I'll do. I'll go to my
+  terminal. Okay, I'll kill this extra terminal that I have. Let's go into day 9
+  CD J 9. Okay, now I'm into day nine. Let me do LS. And I see all the files here.
+  So I have provider. So let me go into providers. Unless okay, do you see this?
+  Did you guys change your current working directory to day nine and slash
+  providers? Yes. Okay, so now. Uh, I'll go to my terminal. Let us start with the
+  very first command I want to do fmt just to format my code. Okay, it formatted
+  my code completely with two space. Indentation. Next, I will go for init. Okay,
+  my unit is getting initialized. Let's wait. Okay, I thought, so give me a second
+  guys. It's telling there is not enough space on my system. I just have 20 223
+  MB, give me a second. Let me delete some of them. Um, see all the other
+  directories have this dot terraform folder. Anyways, I know how the terraform
+  works, right? So generally, what I do? I delete this dot terraform folder. And
+  also the state files. I only keep this TF files. I delete everything else.
+  Clear, so that's what I will be doing now. One moment. Give me a second. Okay,
+  let's try now. Oh, it's telling, you know? Let me try now. Okay. I have cleared
+  around 4 GB, but still, it's telling no space. Does anyone want to share your
+  screen? So that we can run the commands from your screen only. Others can see
+  that. Okay, so you have terraform validate. It is success perfect. Now, can you
+  run terraform plan? I want all of you to check this output. We will not execute,
+  but look at this last line. The last line is telling you that you are creating
+  two instances. Do you see this plan? 2 to add. Okay, um? So, scroll up. Scroll
+  to the very first line of the command. Okay. So now, here I have done terraform
+  plan and the first resource that I'm creating is a EU instance. Scroll a bit
+  down. Little more. Okay, one stop here. Do you see that region? The first
+  instance is getting EU instance is getting created in EU Central one. Clear,
+  scroll down. And the second instance is getting created in US East region. Any
+  doubt? Is this clear to everyone? Were you guys able to see this? So
+  individually, I was able to set up. For two different regions, so in tags are
+  anyway. Same tags will reflect directly, but what is important for us we were
+  supposed to use that provider block for us to change the region, which worked
+  eventually correct. Okay, now, let me quickly share my screen. So here. There is
+  also an option to include provide output blocks. Okay, so how do we include
+  output blocks? So, let's say I want to depict the. Region of the instance, for
+  example, out. So, I would say instant regions. Okay, and we know you can also
+  write description, but I will not write. Description I will directly go for
+  Value and in value. I will. I want two different values that I want to. Um,
+  sure, one is. For EU instance. Aws.instance. Okay, EU instance dot. There is a
+  provider. Let's see if this code works provider dot region. So? What did I do? I
+  told go to AWS EU instance, and in that there is a meta argument called as a
+  provider argument, and from that provider argument fetch the region field. I'm
+  fetching a specific region field. Is this clear? Did you guys write this code?
+  Yes, so basically, how does it work? So, see, go to base. I'm telling, go to
+  this AWS us instance. Go to this us instance, and in this us instance, there is
+  a provided block, and in this provider block, where is this provider block
+  pointing to this provider block point to your provider here? And here there is a
+  region, so I want you to fetch this particular thing and give me the value. This
+  is my requirement. Clear. So now, um? Let's see if this works. Okay, I don't
+  want any of you to apply this. Please, remember, I don't want any of you to
+  apply because it will be creating an instance in a different region. You can
+  just see here. Ah, only I will. I have given permission to. So, it's throwing an
+  error here provider. I thought so. Once again, let me check in my case. Is it
+  throwing an error for everyone when you do this validate?
+  You have to write value or values.
+  Its value only. Here, you mean right inside your output block, this one value.
+  It has to be value only. Okay, so let me try to do a tariff. Okay. Without in
+  it. It doesn't work on my end. Clear, so no problem. What I want you to do is,
+  can you comment the entire output block? There is also an option instead of
+  provider.reach and can you remove that provider.region? In line number 35, yes,
+  remove that and include availability Zone. Availability Zone. B, a, b, i, l, i,
+  t, y. L, i, l, i. Availability underscore Zone. Okay, copy this and paste it
+  into the next line as well. Let's see if this works. Okay, I wanted to check if
+  I can directly access this provider meta argument, but it said it is not working
+  at least the availability Zone. I'll be able to fetch. Clear. Okay, so none. I
+  don't want any of you to run any code, uh, nyantha, please execute terraform.
+  Apply Auto approve. Enter. Uh, Auto minus approved. There is no space. After
+  Auto, you have given a space remove that space, yes. Enter. Okay. Do you see
+  this? Two instances are getting created, so meanwhile, I will also open the
+  cloud just to check if it actually created in two different regions. Let's see.
+  Error. What is that error? Okay. Um. Imagite yes. Who can identify what is the
+  problem? Look at this error and tell me what is the problem?
+  I think AMI.
+  Ami is the problem perfect. I told you one thing about Ami, what is it? Amis are
+  region specific. The Ami that you wrote in U.S is not available at all. Is that
+  clear? The Ami that you wrote in us is the Ami that is actually available only
+  in EU region. Let me share my screen. So, I will give you a different Ami. We
+  can check that together. Okay, I hope you guys can see my control. Okay. I will
+  go to ec2. And here, on the left hand side, you see Amis, right? And remember,
+  Amis are region specific. Okay, so here it is. I'm just filtering owned by me.
+  Let us go for public images. There are so many images that I can choose. From
+  which region from us? Oregon region. So, now, what I'll do, uh, let me choose.
+  It was U.S east one. Which is Virginia? Okay, North Virginia. Now, I'll go to
+  instances. Let me try to launch an instance. You can also find an Ami directly
+  from the Ami section, but I would feel comfortable doing it here inside the ec2.
+  Because I clearly can know which is coming under free tier. Option, because this
+  option is very important for me. I only want to choose the free tier ones clear.
+  So, now, if I see the free tier one, here I have. X86, do you see my first Ami?
+  This Ami is completely different than the Ami that you have written in your.
+  Second instance. Please paste this nianta.
+  Okay, I pressed it.
+  Okay, do you want to share your screen? Okay, give me a second. Okay. Uh, now
+  can you do terraform? Apply Auto proof. Yes. Where did you paste? In the second
+  us instance, correct the 60. Okay, what is the error? Can you show me the error
+  again? Is it saved first thing? Do you have Auto Save? Okay. Okay, show me the
+  edit. Okay, no default VPC for this user group. Okay, why? I don't. It's telling
+  that there is no default VPC, VPC, ID not specified. Let me quickly check if
+  there is a VPC here. In US East one.
