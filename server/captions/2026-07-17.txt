@@ -1,0 +1,273 @@
+
+[09:14]
+  --- logged in ---
+  wrote the provider block, you can include multiple providers in one script with
+  the help of Alias. Providers. You can also. Why, Why is it providers? I just
+  showed you. When I Okay, so there is a possibility that you can write multiple
+  required providers here. Clear. And now, my first provider is AWS provider.
+  Here, let us write. From where you downloading. This, I am downloading this from
+  Hashikarp and let the version be. We were downloading 6.55 version, right? Okay.
+  You can specify which version of plugin you want to download. If I don't specify
+  gently in provide a block, what happens? It takes up the default. Version. What
+  is the default version? Generally, the default version is the most recent one.
+  Whatever is the new launch, that particular one will be considered as the
+  default and that is when we down when we execute this terraform in it. It goes
+  to the provider block and it downloads, the default one. Is this clear? so, Now
+  you see what am I telling? I'm telling
+
+[09:17]
+  wrote the provider block, you can include multiple providers in one script with
+  the help of Alias. Providers. You can also. Why, Why is it providers? I just
+  showed you. When I Okay, so there is a possibility that you can write multiple
+  required providers here. Clear. And now, my first provider is AWS provider.
+  Here, let us write. From where you downloading. This, I am downloading this from
+  Hashikarp and let the version be. We were downloading 6.55 version, right? Okay.
+  You can specify which version of plugin you want to download. If I don't specify
+  gently in provide a block, what happens? It takes up the default. Version. What
+  is the default version? Generally, the default version is the most recent one.
+  Whatever is the new launch, that particular one will be considered as the
+  default and that is when we down when we execute this terraform in it. It goes
+  to the provider block and it downloads, the default one. Is this clear? so, Now,
+  you see what am I telling? I'm telling this is
+
+[09:18]
+  I'm back, guys. Let me share my screen. Okay. Can you see my screen? So, this is
+  where I left and we were talking about the need of this block. Here you are
+  putting a condition on your terraform tool. And your specifying in case your
+  downloading the plugin, the plugin only has to be of 6.55 or more than that
+  somewhere, approximately 6.55 version. This is a condition that you are putting.
+  Is that clear? The same thing? Exactly like this? I can also create one more
+  block for Azure. It is also possible next. And I can create one more block for
+  sure. see in one terraform block, I can keep including All the plugin details.
+  What is the specific version that you want to? Use here for this entire
+  template. Is this clear? So now let us see. Okay. I have nothing here, so let me
+  there is no resource. Let's see if I execute Terra for minute what happens.
+  Okay. So, see, I changed my Working Directory. And I see that in the day 10 in
+  your terraform block, you're able to see your file. Fine and I will execute.
+  Let's see if I can execute Terraform unit. Edit.
+
+[09:21]
+  And he will bring the credentials and details from. The folder that obvious.
+  Yes. Because I'm not passing any keep access key secret key. Anything here. In
+  the entire you getting error.
+  Yes.
+  What is the addition screen? Let's see. Fail to query available. Provider
+  packages. Could not retrieve the list of available probs versions for provider.
+  Okay. And provide a named Registry Dot Terraform. Okay. What have you given
+  there? Okay. Spelling line. Number four. It's not Harshi Corp. You have written
+  H. A R Remove R from there.
+
+[09:22]
+  Yeah.
+  It is just how she called. And little work. okay, so downloaded a particular
+  version, I can check here. Yes, Khadim error.
+  Corona, I do not have any area. I have a question regarding this, terrible.
+  Mm-hmm.
+  Look. It is only used then we are have been very using, for example, multiple
+  platforms here.
+
+[09:23]
+  Not really but Jen. See, the provider block that we are using in all the cases
+  still yesterday. That is only for learning purpose, okay? But if you're creating
+  a script at a company level, which is generally shared across different
+  departments or different branches, they want to specify. What is the blog that
+  must be used for this entire script? They want to tell you the versions. Why?
+  Because this most of the time we know every week there is a new version that is
+  getting released probably you are using a script which is like years old. Okay,
+  or probably, let's say, six months old script, you are using the version might
+  have updated in the plug.
+
+[09:24]
+  Not really but Jen. See, the provider block that we are using in all the cases
+  still yesterday. That is only for learning purpose, okay? But if you're creating
+  a script at a company level, which is generally shared across different
+  departments or different branches, they want to specify. What is the blog that
+  must be used for this entire script? They want to tell you the versions. Why?
+  Because this most of the time we know every week there is a new version that is
+  getting released probably you are using a script which is like years old. Okay,
+  or probably, let's say, six months old script, you are using the version might
+  have updated in the plugins. So always this pet, they want to specify the
+  versions in the script. It is a required thing. Okay, and next, I will show you
+  one more option that you can do with terraform that is you can fix the terraform
+  version itself. We have certain version on my laptop that we installed. Okay, I
+  can also write that in the code and I can specify whoever is running this code
+  should have a fixed version of Terraform if they don't have a required version,
+  then the script will not run.
+  What?
+  Basically, you're trying to make sure the software that you installed is in the
+  same phase as what your template is expecting. So that we need to include this
+  terraform block. This is like a very important blog when it comes to your
+  production level scripts. But for learning purpose, we just write Provider
+  Block. Is this clear any doubt?
+  Any questions? No questions. Okay, now I have this required provider. Okay, now
+  I go to the terminal. And in the terminal, I will check. I would want to check,
+  what is the version of my terraform? There are form minus V. Let's see. I have
+  one point nine point eight. Windows, AMD, 64 version. And every provider that is
+  getting installed. Is 6.55 version. What is the version that you are having? I
+  think it's 1.15 and after that, what? What's the third? Okay, one point one,
+  five point eight. Okay. Some of you have one point one. Five point seven. That's
+  okay. But look at mine is a very old one. I'm using this. I think from past two
+  years, I did not reinstall terraform. So this is a two year old era form that's
+  there on my system, which is one point nine point eight. So I want to change
+  certain settings. Imagine you have written a script You are script is written
+  with the version somewhere above above 1.15.7 version. okay, because most of you
+  are there either it is 0.7 or 0.8 Clear. So you have The version which is above
+  this. So imagine you are going to give me the template at the beginning itself.
+  I want to check In your template, you will write a code snippet, which checks
+  what is the installed version of my system? so, what I will do here instead of
+  required providers, I will remove this block Now, I will specify required
+  version. Required Version. So I need to give a value. What is the required
+  version? Let us say, Greater than or equal to one point. One five point zero
+  Okay, look at this. I am telling if you want to run a script. My. Terraform
+  should be greater than 1.15.0. Okay, so let us see. I will go to my terraform
+  and I will run Tera for a minute. I want to see if I get any error. Do you see
+  here? look at the error, you guys can also try Just change the version. I
+  basically want to see if there is an error. Error has to work. If you have any
+  version so my you can guy you guys can check like this. For example, one point
+  one six point zero because you guys already have this 1.15.7, right? So just
+  increase the version. Basically, it has to go to your current terraform tool and
+  it checks the version there. Is this clear? Did everyone get error? You should
+  get the specific error unsupported. Terraform core version. Is this clear, shall
+  we proceed? So in the Terraform blog, I can talk about provider version.
+  Provider version. I can talk about Terraform version. Okay? And the third thing
+  that I can talk about is the backend, what is backend? We haven't done backend.
+  So I will do this, the particular terraform backend along with when we do
+  backend next week. Okay, because it makes more sense. So, basically, what is
+  happening, I'll just talk about the center syntax and not talk about how it
+  works. We'll do that next week. Okay, so be here, instead of this required.
+  Version, I will replace this with backend backend block. Most latest. Okay,
+  there is a backend block that you include here. Why is it needed? What is the
+  need for it? First, we need to know about all the information about your state
+  file. Then only we will go about your packet. Clear. Any doubts. So we can
+  include. So I have so far told you about individual options that you can do on
+  terraform, I can club all of them together, for example, required version, and
+  then require. Sorry required provider, required version. I can also put for
+  example, 1.9.0, I have 1.9.8, so I'm just telling required version. Okay, and
+  this is 6.55. Okay. And in case you have set up a back end, You can also include
+  a backend details. Okay, so see all of them can be included together. Any
+  doubts. So now let me show you the whole code. You have required providers
+  version and backend details. So this is basically your setting up how your
+  terraform has to work, which is the particular provider. It has to download.
+  This is clear. It controls terraform behavior. Remember they would ask, What is
+  the need of terraform block? It controls the configuration or settings, or the
+  behavior of your terraform tool? Okay. And mostly you're fixing the versions of
+  your plugin. And so your tool. Along with your back end. Okay, but there is a
+  slight disadvantage. What is it? You need to write the whole block here. Okay,
+  sometimes by mistake, If there is a problem with the version, then it will not
+  work. You have to be very specific about if the version exists I can't just
+  generally go and write 1.18.0. Required version because there is no such version
+  released yet. I think the maximum one that we see is 1.15, there is no 1 8. So
+  if I right click this then the script will not run in any one system. Because
+  the required version is not yet released. So we have to be a very careful about
+  specifying, these version details. Is this clear? Any doubt. Okay, so now we are
+  clear about how Tera form works. And I will skip this backend block back and
+  block. I don't need List, everything is still fine. Now, we will learn about one
+  more concept called as null resource. So far, we have learned about AWS resource
+  or just the resource, which can be set.
+
+[09:34]
+  Any questions? No questions. Okay, now I have this required provider. Okay, now
+  I go to the terminal. And in the terminal, I will check. I would want to check,
+  what is the version of my terraform? There are form minus V. Let's see. I have
+  one point nine point eight. Windows, AMD, 64 version. And every provider that is
+  getting installed. Is 6.55 version. What is the version that you are having? I
+  think it's 1.15 and after that, what? What's the third? Okay, one point one,
+  five point eight. Okay. Some of you have one point one. Five point seven. That's
+  okay. But look at mine is a very old one. I'm using this. I think from past two
+  years, I did not reinstall terraform. So this is a two year old era form that's
+  there on my system, which is one point nine point eight. So I want to change
+  certain settings. Imagine you have written a script You are script is written
+  with the version somewhere above above 1.15.7 version. okay, because most of you
+  are there either it is 0.7 or 0.8 Clear. So you have The version which is above
+  this. So imagine you are going to give me the template at the beginning itself.
+  I want to check In your template, you will write a code snippet, which checks
+  what is the installed version of my system? so, what I will do here instead of
+  required providers, I will remove this block Now, I will specify required
+  version. Required Version. So I need to give a value. What is the required
+  version? Let us say, Greater than or equal to one point. One five point zero
+  Okay, look at this. I am telling if you want to run a script. My. Terraform
+  should be greater than 1.15.0. Okay, so let us see. I will go to my terraform
+  and I will run Tera for a minute. I want to see if I get any error. Do you see
+  here? look at the error, you guys can also try Just change the version. I
+  basically want to see if there is an error. Error has to work. If you have any
+  version so my you can guy you guys can check like this. For example, one point
+  one six point zero because you guys already have this 1.15.7, right? So just
+  increase the version. Basically, it has to go to your current terraform tool and
+  it checks the version there. Is this clear? Did everyone get error? You should
+  get the specific error unsupported. Terraform core version. Is this clear, shall
+  we proceed? So in the Terraform blog, I can talk about provider version.
+  Provider version. I can talk about Terraform version. Okay? And the third thing
+  that I can talk about is the backend, what is backend? We haven't done backend.
+  So I will do this, the particular terraform backend along with when we do
+  backend next week. Okay, because it makes more sense. So, basically, what is
+  happening, I'll just talk about the center syntax and not talk about how it
+  works. We'll do that next week. Okay, so be here, instead of this required.
+  Version, I will replace this with backend backend block. Most latest. Okay,
+  there is a backend block that you include here. Why is it needed? What is the
+  need for it? First, we need to know about all the information about your state
+  file. Then only we will go about your packet. Clear. Any doubts. So we can
+  include. So I have so far told you about individual options that you can do on
+  terraform, I can club all of them together, for example, required version, and
+  then require. Sorry required provider, required version. I can also put for
+  example, 1.9.0, I have 1.9.8, so I'm just telling required version. Okay, and
+  this is 6.55. Okay. And in case you have set up a back end, You can also include
+  a backend details. Okay, so see all of them can be included together. Any
+  doubts. So now let me show you the whole code. You have required providers
+  version and backend details. So this is basically your setting up how your
+  terraform has to work, which is the particular provider. It has to download.
+  This is clear. It controls terraform behavior. Remember they would ask, What is
+  the need of terraform block? It controls the configuration or settings, or the
+  behavior of your terraform tool? Okay. And mostly you're fixing the versions of
+  your plugin. And so your tool. Along with your back end. Okay, but there is a
+  slight disadvantage. What is it? You need to write the whole block here. Okay,
+  sometimes by mistake, If there is a problem with the version, then it will not
+  work. You have to be very specific about if the version exists I can't just
+  generally go and write 1.18.0. Required version because there is no such version
+  released yet. I think the maximum one that we see is 1.15, there is no 1 8. So
+  if I right click this then the script will not run in any one system. Because
+  the required version is not yet released. So we have to be a very careful about
+  specifying, these version details. Is this clear? Any doubt. Okay, so now we are
+  clear about how Tera form works. And I will skip this backend block back and
+  block. I don't need List, everything is still fine. Now, we will learn about one
+  more concept called as null resource. So far, we have learned about AWS resource
+  or just the resource which can be set up in Azure or GCP anywhere. You are
+  setting up. An infrastructure is basically called as a resource. So we know
+  about resource so far, What is this null resource? How does it create? I'll show
+  you a syntax today. and after the break, we will be doing one more concept
+  called as provisioners Okay, so when we do this provisioners, that is when I
+  will use this null resource in order to make some changes in my local directory.
+  Fine. Okay, so we have this null resource. What does it do? It doesn't create
+  anything. It creates nothing. No resource. Okay. You can create this null
+  resource in any cloud provider, doesn't matter. Okay. Null resource is a special
+  terraform resource block that does not create any real infrastructure. Instead,
+  you use this for certain requirements, what are those requirements? Whenever you
+  want to execute some shell commands? okay, when you want to execute some small
+  scripts, Inline script. Or you need to give some delay. Waiting period. You want
+  to increase the waiting period? Some, send some notification, some message to
+  another process. Okay, so whenever you need to do such kind of task, we would
+  always use null resource. Okay, and now I have mentioned about null resource. It
+  doesn't create any infrastructure. So the next question that should come to your
+  mind is Does it affect the state file? Yes. In the state file, it exists only in
+  the state file when I do terraform apply. And I do terraform apply, there is no
+  infrastructure that is getting created in your cloud platform. Okay, it is
+  trying to do some of these intermediate tasks. What I've mentioned here. Couple
+  of intermediate tasks can be executed because of null resource. Clear. And what
+  are those? Sending notifications shell. Command scripts and introducing waiting
+  periods. So no effect on the cloud provider, but there is an effect in your
+  state file. There is an effect on your state file. You can see what is happening
+  in the state file. This resource is getting only created in the state file. Why
+  Terraform takes complete care of creating the state file and it looks into the
+  state file to get the status of your infrastructure? So in the state file, it is
+  trying to say you are executing this null resource for some intermediate task.
+  Is this clear? Any doubt. so now you might ask Can I create if I go back to my
+  current file main dot TF? Can I create another source here? Yes, you can create
+  an order source here, shouldn't be a problem. How do I create very simple
+  resource? Okay, and so far we've been writing something like this correct, What
+  is it? We specify the cloud followed by the resource whether it is BPC or AWS
+  underscore subnet. AWS underscore instance. Correct. There was a cloud provider
+  and the infrastructure that you are setting up. Clear cloud provider and
+  infrastructure. And that was your second parameter that you gave in your
+  resource block. First is the keyword and then you gave this cloud provider and
+  the resource name. Now, what we are doing, we are replacing that with another
+  resource. Okay. So see, I will change the name of this. Null resource. I'll
+  change the name. Okay.
