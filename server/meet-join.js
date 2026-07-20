@@ -11,9 +11,9 @@ const CHROME_PATH = os.platform() === 'win32'
 const USER_DATA_DIR = os.platform() === 'win32'
   ? path.join(process.env.LOCALAPPDATA || os.homedir(), 'Google', 'Chrome', 'User Data')
   : path.join(os.homedir(), '.config', 'google-chrome-meet');
-const PROFILE_DIR = 'Default';
+const PROFILE_DIR = 'Profile 1';
 const DEBUG_PORT = 9399;
-const LOG_FILE = '/tmp/meet-join.log';
+const LOG_FILE = path.join(os.tmpdir(), 'meet-join.log');
 const DESKTOP_ENV_FILE = path.join(os.homedir(), '.config', 'task-scheduler', 'desktop-env');
 
 // How long to keep waiting in the "host hasn't admitted you / meeting hasn't
@@ -78,11 +78,11 @@ function cleanStaleLocks() {
 function killChromeOnProfile() {
   const { execSync } = require('child_process');
   try {
-    // Match the main browser process for our dedicated meet profile only.
-    execSync(
-      `pkill -f "user-data-dir=${USER_DATA_DIR}" 2>/dev/null || true`,
-      { stdio: 'ignore' }
-    );
+    if (os.platform() === 'win32') {
+      execSync('taskkill /f /im chrome.exe', { stdio: 'ignore' });
+    } else {
+      execSync(`pkill -f "user-data-dir=${USER_DATA_DIR}" 2>/dev/null || true`, { stdio: 'ignore' });
+    }
     log('Killed lingering Chrome on the meet profile');
   } catch {}
   // Remove all singleton locks unconditionally now that the process is gone.
@@ -147,7 +147,7 @@ function waitForDebugPort(maxWait = 30000) {
   });
 }
 
-const SUCCESS_STAMP = '/tmp/meet-join.last-success';
+const SUCCESS_STAMP = path.join(os.tmpdir(), 'meet-join.last-success');
 
 // Normalise a Meet URL to its room code, e.g. "abc-defg-hij".
 function meetId(url) {
@@ -322,7 +322,7 @@ function markSuccessToday(url) {
     ).catch(() => log('Selector wait timed out, continuing anyway'));
 
     // Take debug screenshot
-    await page.screenshot({ path: '/tmp/meet-prejoin.png' });
+    await page.screenshot({ path: path.join(os.tmpdir(), 'meet-prejoin.png') });
     log('Screenshot saved to /tmp/meet-prejoin.png');
 
     // Detect if we are already inside the meeting (in-call toolbar has "Leave call" / "Anruf beenden")
@@ -734,7 +734,7 @@ function markSuccessToday(url) {
           const mins = Math.round((deadline - Date.now()) / 60_000);
           log(`Still waiting for host... (~${mins} min left)`);
           lastLog = Date.now();
-          await page.screenshot({ path: '/tmp/meet-waiting.png' }).catch(() => {});
+          await page.screenshot({ path: path.join(os.tmpdir(), 'meet-waiting.png') }).catch(() => {});
         }
         await new Promise(r => setTimeout(r, 5000));
       }
@@ -742,7 +742,7 @@ function markSuccessToday(url) {
       if (!admitted) {
         log(`Host never admitted us within ${WAIT_ROOM_MINUTES} min — meeting likely late or postponed.`);
         log('Leaving the tab open in the lobby so you can be admitted manually. Not marking success.');
-        await page.screenshot({ path: '/tmp/meet-waiting.png' }).catch(() => {});
+        await page.screenshot({ path: path.join(os.tmpdir(), 'meet-waiting.png') }).catch(() => {});
         browser.disconnect();
         process.exit(2);
       }
@@ -811,7 +811,11 @@ function markSuccessToday(url) {
     // Kill any existing caption tracker before starting a fresh one
     const { execSync } = require('child_process');
     try {
-      execSync('pkill -f meet-captions.js', { stdio: 'ignore' });
+      if (os.platform() === 'win32') {
+        execSync('taskkill /f /fi "CommandLine eq *meet-captions*"', { stdio: 'ignore' });
+      } else {
+        execSync('pkill -f meet-captions.js', { stdio: 'ignore' });
+      }
       log('Killed existing caption tracker');
     } catch {}
     await new Promise(r => setTimeout(r, 500));
@@ -835,14 +839,17 @@ function markSuccessToday(url) {
 
     // Start caption tracker with same env (needs DISPLAY for Chrome connection)
     const captionScript = path.join(__dirname, 'meet-captions.js');
-    const captionLog = fs.openSync('/tmp/meet-captions.log', 'a');
+    const captionLogPath = path.join(os.tmpdir(), 'meet-captions.log');
+    const captionLog = fs.openSync(captionLogPath, 'a');
+    const captionEnv = { ...process.env, ...DESKTOP_ENV };
+    if (os.platform() !== 'win32' && !captionEnv.DISPLAY) captionEnv.DISPLAY = ':0';
     const captionProc = spawn('node', [captionScript], {
       detached: true,
       stdio: ['ignore', captionLog, captionLog],
-      env: { ...process.env, DISPLAY: process.env.DISPLAY || ':0' },
+      env: captionEnv,
     });
     captionProc.unref();
-    log('Started caption tracker (background, logging to /tmp/meet-captions.log)');
+    log(`Started caption tracker (background, logging to ${captionLogPath})`);
 
     log('--- meet-join complete ---');
     browser.disconnect();
@@ -853,7 +860,7 @@ function markSuccessToday(url) {
       if (browser) {
         const pages = await browser.pages();
         const meet = pages.find(p => p.url().includes('meet.google.com'));
-        if (meet) await meet.screenshot({ path: '/tmp/meet-error.png' }).catch(() => {});
+        if (meet) await meet.screenshot({ path: path.join(os.tmpdir(), 'meet-error.png') }).catch(() => {});
       }
     } catch {}
     try { if (browser) browser.disconnect(); } catch {}
