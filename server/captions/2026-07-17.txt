@@ -271,3 +271,364 @@
   the resource name. Now, what we are doing, we are replacing that with another
   resource. Okay. So see, I will change the name of this. Null resource. I'll
   change the name. Okay.
+
+[10:19]
+  --- Meeting ended ---
+
+[10:27]
+  --- logged in ---
+  thing, I would like to go to my state file and I had updated. What subnet, do
+  you see the subnet information here? File here and I will do TERRAFORM refresh
+  before I do terraform refresh. First Tax. This is what I updated, correct. I
+  have updated this part and I want you guys to observe this before, I do that, I
+  would also want to zoom out a bit, okay? Here. Please keep a note in this part.
+  Okay, Terraform refresh. Let's see if it updates. It has to connect to AWS and
+  it has to fetch the data from there. Is it taking forever? Okay. Now, do you see
+  this? Do you see the change in my state file? Very, very important. What
+  happened earlier, I had only one key value pair. Now, it went to the cloud, it
+  fetched all the new tags, and it gave it to me who is giving it to me. Your
+  terraform refresh is giving. What is the need for refresh? Refresh, is a command
+  that synchronize. In important thing, it's synchronizes what it's synchronizes
+  your AWS with the state file. So when we say synchronize, which is the, which is
+  given as highest prominence here, the highest prominence is given to your
+  infrastructure on the console, so it's mostly downwards. So whatever, is there
+  in your infrastructure from there? You are updating your state file. Is this
+  clear any doubt? yes, Mohammad
+
+[10:29]
+  Not only refresh those saccharization, maybe apply or plan, do it.
+
+[10:30]
+  Yeah, what does it do? See, that's the major difference between your apply and
+  plan AWS. You have apply, you have destroy. You have plan, everything you have,
+  okay? But what is it? The major difference is, all these applied destroying plan
+  is considering a state file as the most prominent one state file plus your
+  terraform template. These two are given highest prominence. So, whatever you
+  change is that you make in the template, it reflects the state file, and from
+  state file, you're updating your AWS. This is opposite. This is completely
+  opposite. But when I talk about refresh, what does it do? Who will use refresh
+  generally? If your project is shared with multiple departments, who are staying
+  in different cities, Where they also have access to the console. Let's say they
+  have made some update in the AWS new update. Has already been done. Now, it has
+  to reflect in your script in your state file. This is opposite and during that
+  time you would use this refresh command. Is this clear? Plan, applied destroy is
+  from state file from your template. To AWS refresh is from AWS to your template.
+  Basically, not template your state. But now you see. What is the thing? I would
+  go back. It updated my state file, right? You state file has been updated with
+  the new tags but has it updated my Main.tf. Look at my main.tf, they did update
+  my main.tf. No. So now you see again there is a discrepancy from AWS you brought
+  the details to your state file. From State file, did you push the details to
+  your terraform template? no, this is Where we are still missing. This has not
+  been done, this was successful. So, your state file has, all the details
+  infrastructure also has all the details, but what about your template? Your
+  template is still having the old information. What is the problem? Now, the
+  problem is, if I do the apply, It will override everything. What does
+  overwriting mean? In your template. You just have one tag. That will update the
+  state file and from state file. It will update your AWS. Again, you will go back
+  to this tag. So whenever you do refresh, very important, if I do a refresh of my
+  state, then I also need to update its respective code in your main dot TF, for
+  example. Now you see Look at the look at my screen, just look into my screen
+  because I will do a terraform plan. Now, There is going to be a discrepancy, you
+  can see it. okay, I have here, I will do Terraform. Plan. My state file is
+  showing something else. My script is having something else. Why? My script here
+  is talking about a single tag, but my state file has multiple information, Okay,
+  so I will go to the tags here. Okay, look at this. This is where the discrepancy
+  arises. So these this difference, I should be able to see here in the plan. Do
+  you see what is it telling? It is telling one to change. And that to what to
+  change in the terminal C, what are you planning to change? I am planning to Do
+  you see here? It is only talking about when I do this plan. It is only talking
+  about one feature of your subnet. What is that feature tax feature and under the
+  tags? Do you see here? There are four lines. Very important. Four lines are as
+  in four tags are included here but only for three tag. You see this minus sign
+  What are those date department and teacher name. You're keeping it as it is name
+  is a common line that you see between the state file and your template, the
+  rest, Everything date department and teacher. It is telling Now these three
+  lines has to be removed. Is this clear? Did you guys understand? So, whenever
+  you do a refresh, it is only updating the state file and not the template. Now
+  what is it? Because I need to maintain the standard. I would come here and paste
+  it. So I will make some changes for sure. Okay. okay, so now I have updated,
+  both my template With whatever is there in the state file. Both of them are
+  almost same so when I do my terraform plan so let's see what happens. Plan. Oh,
+  my bad error. Or from state file to template? From state file to template is
+  what we call it as apply. Whenever I do terraform apply, it is creating a state
+  file. It is storing all the infrastructure in the state file. Meanwhile, it is
+  also creating the infrastructure in your cloud platform. So whenever I do apply
+  it is maintaining two things. It first creates a state file and from state file,
+  it will go to AWS.
+
+[10:36]
+  No, no, I was meaning the other way around. If we have a refresh and it updates,
+  the state file,
+  Is there some automation to update the template from this? Because, you know,
+  you have to copy from the state file and paste it, okay?
+  No, no, this exactly template why template is maintained by the developer, so
+
+[10:37]
+  this is not, there is nothing called as automatic update of code. Terraform has
+  no control over your Main.tf Terraform has only control of the file that has
+  this extension TF state. If the file has this extension TF state and generally,
+  the file name will be terraform.df state. Look see this file, it finds this file
+  and it create or it basically creates this file and it rides all the
+  configuration details in this file. So whenever we do refresh, it finds this
+  file and it updates only in this file, anything related to dot TF files which is
+  main dot TF. TF files cannot be modified by your terraform tool. It can only
+  read it. There is no modification, automatic modification. Cannot be done on
+  your main.tf, you have to do it. Okay, so now I see here. Look at this. What
+  happened? There is some discrepancy. What is this? Okay. So here, if you see, I
+  have the same tags here and here, both of them are same tags. Okay, but now when
+  I do my terraform plan, it is telling update in place. And if you see here, name
+  and department are correct, it is talking something about teacher. Did I apply
+  it twice? Is there any discrepancy between this and this? Please check.
+
+[10:38]
+  To equal to here, right? Teacher equal to because we have colon.
+  oh, Yes. Yes, my bad. I have colons here. It has to be equal to perfect. Thank
+  you. Let's see. I'll go to Terminal Teacher, Sharanya every written. The same
+  thing. So when I do terraform plan, now it has to say nothing to change. Because
+  the values that is there in your configuration file and the state file are
+  almost up to date. So let us wait for that. Okay, why is it still showing one to
+  change? What is it? Gate is always pointing to this teacher. Why is it? Is there
+  any spelling mistake?
+
+[10:39]
+  I sold it. There is a teacher. And the blank space on the Terraformed state
+  file. And
+
+[10:40]
+  Here here. Exactly exactly. And here, do you see this? You know, what's the
+  issue here in the state file? There is an extra space and the same space. I can
+  also see it here. Do you see here right in the first teacher, your quotes right
+  in? Right. After our. And here, there is a codes after a space Thanks Georgi. So
+  let's go back and update. I'll give a space. Not sure if it works. Let's see.
+  I'll try to give a quotes here. Okay. It's not identified. Let's see if it works
+  now. See here. The problem is because I cannot give codes in the keys. I will
+  not be able to fix it. The only way is I have given an extra space here so let's
+  see if it works. If it doesn't work, even if it is pointing out to the same
+  mirror, then I have to update here in the state file, which is actually strictly
+  prohibited never ever update a state file. Okay, no, it's against still showing
+  the same thing. So I will update here,
+
+[10:41]
+  In the console.
+  I will update in the console. Yes. And I will do refresh from there. Is there a
+  chance to refresh this? No. Sharanya. Okay, there is no space. Okay, safe. How
+  many tags do I have? Okay, the same thing. I'll go back to my terminal.
+  Doterraform refresh. So, let's see if this gets updated here. Generally refresh
+  takes couple of seconds. It has to go to your AWS, fetch the details from there.
+  And then it has to refresh your state. Okay, now, yes, it's updated. Do you see
+  here? It's updated perfect. Now, let me do Terraform plan. And it has to tell a
+  nothing. To update, it has to say everything is in place. Here. No changes. Your
+  infrastructure matches, the configuration. So everything seems perfect here is
+  that clear? So whenever I do a refresh, I need to update the code in my Main.tf.
+  So I hope you guys understood how to work with Refresh, right? Okay, so let's
+  have a quick break for 15 minutes. Yes, Khadim
+
+[10:44]
+  so the main purpose of using refreshes only when we are changing the code or
+  maybe we are changing through the cancel
+  Yes. If that is any changes done to the infrastructure on the console and you
+  want that to reflect to your state file. Why so any changes that I do on?
+  Console Terraform has no access to it? Somehow it has to be bought under
+  terraforms control. How why are the state file? Okay, so if you want to bring it
+  from there to here, we use a refresh.
+  Any changes we have to use to perform this common. Otherwise, the state file is
+  not matching the
+  Yes.
+
+[10:45]
+  Real.
+  It's not matching the real infrastructure in the AWS. So when I do refresh, it
+  only updates, the state file. It doesn't update your MAIN.TF. Again, you have to
+  update your Main.tf. You have to update the code in the file, that's what we did
+  just now.
+  Sharanya. It gives error for me. I don't know.
+  Yeah.
+  Error for You. Okay, others, you can just have a quick break for 15 minutes and
+  then we can continue khadimir, share your screen. Creating Okay, BBC limit
+  exceeded. Everybody is having this issue. Only few people can create only. Five
+  accounts can create VPC already 5, APCs are running in the Console. So you'll
+  not be able to create any more VPC Khadim, everybody has the same error.
+
+[10:46]
+  Okay. Okay. So those who have already uploaded, please created your
+  infrastructure. Please do terraform destroy and then go for a break. No problem.
+  Okay, thank you, sir.
+
+[10:51]
+  --- logged in ---
+  thing, I would like to go to my state file and I had updated. What subnet, do
+  you see the subnet information here? File here and I will do TERRAFORM refresh
+  before I do terraform refresh. First Tax. This is what I updated, correct. I
+  have updated this part and I want you guys to observe this before, I do that, I
+  would also want to zoom out a bit, okay? Here. Please keep a note in this part.
+  Okay, Terraform refresh. Let's see if it updates. It has to connect to AWS and
+  it has to fetch the data from there. Is it taking forever? Okay. Now, do you see
+  this? Do you see the change in my state file? Very, very important. What
+  happened earlier, I had only one key value pair. Now, it went to the cloud, it
+  fetched all the new tags, and it gave it to me who is giving it to me. Your
+  terraform refresh is giving. What is the need for refresh? Refresh, is a command
+  that synchronize. In important thing, it's synchronizes what it's synchronizes
+  your AWS with the state file. So when we say synchronize, which is the, which is
+  given as highest prominence here, the highest prominence is given to your
+  infrastructure on the console, so it's mostly downwards. So whatever, is there
+  in your infrastructure from there? You are updating your state file. Is this
+  clear any doubt? yes, Mohammad
+  Not only refresh those saccharization, maybe apply or plan, do it.
+  Yeah, what does it do? See, that's the major difference between your apply and
+  plan AWS. You have apply, you have destroy. You have plan, everything you have,
+  okay? But what is it? The major difference is, all these applied destroying plan
+  is considering a state file as the most prominent one state file plus your
+  terraform template. These two are given highest prominence. So, whatever you
+  change is that you make in the template, it reflects the state file, and from
+  state file, you're updating your AWS. This is opposite. This is completely
+  opposite. But when I talk about refresh, what does it do? Who will use refresh
+  generally? If your project is shared with multiple departments, who are staying
+  in different cities, Where they also have access to the console. Let's say they
+  have made some update in the AWS new update. Has already been done. Now, it has
+  to reflect in your script in your state file. This is opposite and during that
+  time you would use this refresh command. Is this clear? Plan, applied destroy is
+  from state file from your template. To AWS refresh is from AWS to your template.
+  Basically, not template your state. But now you see. What is the thing? I would
+  go back. It updated my state file, right? You state file has been updated with
+  the new tags but has it updated my Main.tf. Look at my main.tf, they did update
+  my main.tf. No. So now you see again there is a discrepancy from AWS you brought
+  the details to your state file. From State file, did you push the details to
+  your terraform template? no, this is Where we are still missing. This has not
+  been done, this was successful. So, your state file has, all the details
+  infrastructure also has all the details, but what about your template? Your
+  template is still having the old information. What is the problem? Now, the
+  problem is, if I do the apply, It will override everything. What does
+  overwriting mean? In your template. You just have one tag. That will update the
+  state file and from state file. It will update your AWS. Again, you will go back
+  to this tag. So whenever you do refresh, very important, if I do a refresh of my
+  state, then I also need to update its respective code in your main dot TF, for
+  example. Now you see Look at the look at my screen, just look into my screen
+  because I will do a terraform plan. Now, There is going to be a discrepancy, you
+  can see it. okay, I have here, I will do Terraform. Plan. My state file is
+  showing something else. My script is having something else. Why? My script here
+  is talking about a single tag, but my state file has multiple information, Okay,
+  so I will go to the tags here. Okay, look at this. This is where the discrepancy
+  arises. So these this difference, I should be able to see here in the plan. Do
+  you see what is it telling? It is telling one to change. And that to what to
+  change in the terminal C, what are you planning to change? I am planning to Do
+  you see here? It is only talking about when I do this plan. It is only talking
+  about one feature of your subnet. What is that feature tax feature and under the
+  tags? Do you see here? There are four lines. Very important. Four lines are as
+  in four tags are included here but only for three tag. You see this minus sign
+  What are those date department and teacher name. You're keeping it as it is name
+  is a common line that you see between the state file and your template, the
+  rest, Everything date department and teacher. It is telling Now these three
+  lines has to be removed. Is this clear? Did you guys understand? So, whenever
+  you do a refresh, it is only updating the state file and not the template. Now
+  what is it? Because I need to maintain the standard. I would come here and paste
+  it. So I will make some changes for sure. Okay. okay, so now I have updated,
+  both my template With whatever is there in the state file. Both of them are
+  almost same so when I do my terraform plan so let's see what happens. Plan. Oh,
+  my bad error. Or from state file to template? From state file to template is
+  what we call it as apply. Whenever I do terraform apply, it is creating a state
+  file. It is storing all the infrastructure in the state file. Meanwhile, it is
+  also creating the infrastructure in your cloud platform. So whenever I do apply
+  it is maintaining two things. It first creates a state file and from state file,
+  it will go to AWS.
+  No, no, I was meaning the other way around. If we have a refresh and it updates,
+  the state file,
+  No, no, this exactly template why template is maintained by the developer, so
+  Is there some automation to update the template from this? Because, you know,
+  you have to copy from the state file and paste it, okay?
+  this is not, there is nothing called as automatic update of code. Terraform has
+  no control over your Main.tf Terraform has only control of the file that has
+  this extension TF state. If the file has this extension TF state and generally,
+  the file name will be terraform.df state. Look see this file, it finds this file
+  and it create or it basically creates this file and it rides all the
+  configuration details in this file. So whenever we do refresh, it finds this
+  file and it updates only in this file, anything related to dot TF files which is
+  main dot TF. TF files cannot be modified by your terraform tool. It can only
+  read it. There is no modification, automatic modification. Cannot be done on
+  your main.tf, you have to do it. Okay, so now I see here. Look at this. What
+  happened? There is some discrepancy. What is this? Okay. So here, if you see, I
+  have the same tags here and here, both of them are same tags. Okay, but now when
+  I do my terraform plan, it is telling update in place. And if you see here, name
+  and department are correct, it is talking something about teacher. Did I apply
+  it twice? Is there any discrepancy between this and this? Please check.
+  To equal to here, right? Teacher equal to because we have colon.
+  oh, Yes. Yes, my bad. I have colons here. It has to be equal to perfect. Thank
+  you. Let's see. I'll go to Terminal Teacher, Sharanya every written. The same
+  thing. So when I do terraform plan, now it has to say nothing to change. Because
+  the values that is there in your configuration file and the state file are
+  almost up to date. So let us wait for that. Okay, why is it still showing one to
+  change? What is it? Gate is always pointing to this teacher. Why is it? Is there
+  any spelling mistake?
+  I sold it. There is a teacher. And the blank space on the Terraformed state
+  file. And
+  Here here. Exactly exactly. And here, do you see this? You know, what's the
+  issue here in the state file? There is an extra space and the same space. I can
+  also see it here. Do you see here right in the first teacher, your quotes right
+  in? Right. After our. And here, there is a codes after a space Thanks Georgi. So
+  let's go back and update. I'll give a space. Not sure if it works. Let's see.
+  I'll try to give a quotes here. Okay. It's not identified. Let's see if it works
+  now. See here. The problem is because I cannot give codes in the keys. I will
+  not be able to fix it. The only way is I have given an extra space here so let's
+  see if it works. If it doesn't work, even if it is pointing out to the same
+  mirror, then I have to update here in the state file, which is actually strictly
+  prohibited never ever update a state file. Okay, no, it's against still showing
+  the same thing. So I will update here,
+  In the console.
+  I will update in the console. Yes. And I will do refresh from there. Is there a
+  chance to refresh this? No. Sharanya. Okay, there is no space. Okay, safe. How
+  many tags do I have? Okay, the same thing. I'll go back to my terminal.
+  Doterraform refresh. So, let's see if this gets updated here. Generally refresh
+  takes couple of seconds. It has to go to your AWS, fetch the details from there.
+  And then it has to refresh your state. Okay, now, yes, it's updated. Do you see
+  here? It's updated perfect. Now, let me do Terraform plan. And it has to tell a
+  nothing. To update, it has to say everything is in place. Here. No changes. Your
+  infrastructure matches, the configuration. So everything seems perfect here is
+  that clear? So whenever I do a refresh, I need to update the code in my Main.tf.
+  So I hope you guys understood how to work with Refresh, right? Okay, so let's
+  have a quick break for 15 minutes. Yes, Khadim
+  so the main purpose of using refreshes only when we are changing the code or
+  maybe we are changing through the cancel
+  Yes. If that is any changes done to the infrastructure on the console and you
+  want that to reflect to your state file. Why so any changes that I do on?
+  Console Terraform has no access to it? Somehow it has to be bought under
+  terraforms control. How why are the state file? Okay, so if you want to bring it
+  from there to here, we use a refresh.
+  Any changes we have to use to perform this common. Otherwise, the state file is
+  not matching the
+  Yes.
+  Real.
+  It's not matching the real infrastructure in the AWS. So when I do refresh, it
+  only updates, the state file. It doesn't update your MAIN.TF. Again, you have to
+  update your Main.tf. You have to update the code in the file, that's what we did
+  just now.
+  Sharanya. It gives error for me. I don't know.
+  Error for You. Okay, others, you can just have a quick break for 15 minutes and
+  Yeah.
+  then we can continue khadimir, share your screen. Creating Okay, BBC limit
+  exceeded. Everybody is having this issue. Only few people can create only. Five
+  accounts can create VPC already 5, APCs are running in the Console. So you'll
+  not be able to create any more VPC Khadim, everybody has the same error.
+  Okay, thank you, sir.
+  Okay. Okay. So those who have already uploaded, please created your
+  infrastructure. Please do terraform destroy and then go for a break. No problem.
+
+[11:08]
+  --- Meeting ended ---
+
+[11:10]
+  --- logged in ---
+  so you see a state file being created and you see this output The plan. Okay,
+  it's telling one to add. And if you go through the plan, please check. Know
+  where you will be able to see about the life cycle. Life cycle information is
+  not included in the plan, Check. See, nowhere in the plan will be able to see
+  prevent destroy. Okay, so, life cycle information is not included. In the plan,
+  is that clear? Okay, where you guys able to add? One resource successfully? Yes,
+  Khadim
+
+[11:11]
+  Only, if you use this life cycle.
+  Mhm.
+  Even the root user cannot let instead or resources.
+  No. So base, you can go and delete it from the console, but
+
+[11:32]
+  --- Meeting ended ---

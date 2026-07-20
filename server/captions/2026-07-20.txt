@@ -1,0 +1,79 @@
+
+[09:03]
+  --- logged in ---
+
+[09:07]
+  Okay, so it shouldn't be as your voucher will not be a problem. Let me share my
+  screen. One moment. Okay, can you guys see my vs code? I will also turn on the
+  recording. So, let's start by creating day 11. Is everyone here? I presume.
+  Okay, so I'll take the latent attendance during the break time. So, let's start
+  creating. Our folder folder is day 11. Okay, inside this, I would create another
+  folder and I would call it as state management. State Management. And create
+  your main.tf file. Inside the state Management. Please check your path here in
+  the editor to know where you have created the file. Keep a look at that. Okay,
+  shall we proceed with the code? Okay. Before I start my code last week, uh, on
+  Friday, we learned about terraform block. Correct? Terraform block. Can you tell
+  me what is the need of this block?
+
+[09:10]
+  Its control, the behavior of the tool.
+  How, yes, it maintains the configuration details. But how? There are three
+  important things that your terraform block can do. What are those?
+  Rules. Okay, what kind of rules three rules tell me those rules rules? Yes. What
+  kind of rules can I see here if I want to implement a new rule? What kind of
+  rule can I put into terraform block? Think.
+
+[09:11]
+  Rules. Okay, what kind of rules three rules tell me those rules rules? Yes. What
+  kind of rules can I see here if I want to implement a new rule? What kind of
+  rule can I put into terraform block? Izzy, do you know what kind of rule can I
+  put here? In the terraform block.
+  Required providers on version.
+  Yes, menu. Okay, a required providers perfect, so not mostly generally. It is
+  required provider versions, so I will write it as provider version. Okay. Next.
+  Terraform version itself to fix. The terraform version. And what is the third
+  one?
+
+[09:12]
+  Back end.
+  Back end super? Very, very important backend. So, we studied about this backend,
+  as in at least I mentioned this term back end when I was explaining terraform
+  block, and now we will learn about this back end thoroughly. Okay, so when we
+  talk about backend? What is this back end? Why is it used? This mostly talks
+  about where your state file should be present. Okay, where you want to keep your
+  state file generally. There are two types of backends one is local backend, and
+  the second one is a remote backend. Okay, so what are the two types? First one
+  is local backend. And the second one is remote backend. Is this clear? There are
+  two types any doubts? So far, okay, in local backend. What happens? Whenever I
+  run terraform, apply the state file gets created in my working directory. For
+  example, let's see if I have any state file. Not sure, but let's check. Okay,
+  um, no, I have deleted almost all the state files. Okay, if I go to Day 2, okay,
+  at least here. Do you see a state file here? So, wherever I do, terraform apply
+  in that working directory. I will see my state file being created. So when does
+  that happen automatically in the background, you have set backend equal to
+  local. This is a default setting. Is this clear? We did not see this term
+  earlier. We just observed that a state file got created by terraform. Basically,
+  terraform is creating the state file. Upon executing this, apply command. But in
+  the back end. What is happening in in inside your terraform tool? Basically, you
+  are setting this back end equals to local value. Okay, so you're getting a file
+  here in the local machine? Today, we will learn about how to set backend equal
+  to remote. Okay, why is it used? What is it used? Where can I store this packet?
+  All of that we will learn today. Before I go into that, let's start writing our.
+  Um, data form blog inside main.tf. Terraform. I will write a required providers.
+  See the spelling. Aws and I would also write the version here. Let this be 6.
+  Five and above. Okay, and after this, I will set a back end. Equals. Local, see.
+  I'm setting a back end equal to local. Clear. And here I can set any path I want
+  where I want my state file to be created. I can set any path that I want. Okay,
+  generally. What we do, we create. Um, the state file in the working directory
+  itself. So, now, what I'll do, I will just change the path. But part is where I
+  give the location of my state file. So generally, what happens your current
+  working directly, which is nothing but State Management here. This working
+  directory will consider will be considered as your path to create your file, but
+  now I will change the path. What I will say? I will. Um. Test slash terraform
+  dot. I will also change. Dot TF State. So, what I'm doing instead of getting
+  created your state file in the working directory. I am also creating another
+  subfolder in the current working directory call desk test and I want my state
+  file to reside within this test folder. Is this clear? Any doubt? Any questions
+  here? Check this and tell me if you guys understood this code. This is clear to
+  everyone, right? Okay, now I will start writing a very simple surface, which is
+  nothing but.
