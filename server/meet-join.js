@@ -41,8 +41,8 @@ function loadDesktopEnv() {
 const DESKTOP_ENV = loadDesktopEnv();
 
 const meetUrl = process.argv[2];
-// --force bypasses the same-day skip (used by manual "Run now" clicks).
-const FORCE_JOIN = process.argv.includes('--force');
+// --force is accepted and ignored: joining is now unconditional, so the flag is
+// a no-op. Kept tolerated so existing saved job commands that pass it still run.
 if (!meetUrl || !meetUrl.includes('meet.google.com')) {
   console.error('Usage: node meet-join.js <google-meet-url>');
   process.exit(1);
@@ -147,11 +147,6 @@ function waitForDebugPort(maxWait = 30000) {
   });
 }
 
-// Skip this run only if **this same meeting** was already joined today. The
-// stamp stores `YYYY-MM-DD <meetingId>` so a *different* meeting still opens and
-// gets the full standard settings (mic muted, camera off, captions on, +1).
-// This way every meeting that opens keeps the original meeting's settings,
-// while we still avoid re-joining the exact same room we're already in.
 const SUCCESS_STAMP = '/tmp/meet-join.last-success';
 
 // Normalise a Meet URL to its room code, e.g. "abc-defg-hij".
@@ -160,22 +155,8 @@ function meetId(url) {
   return m ? m[1].toLowerCase() : (url || '').trim();
 }
 
-function alreadyJoinedToday(url) {
-  try {
-    const stamp = fs.readFileSync(SUCCESS_STAMP, 'utf8').trim();
-    const today = new Date().toISOString().slice(0, 10);
-    const [stampDate, stampId] = stamp.split(/\s+/);
-    if (stampDate !== today) return false;
-    // Old stamps stored only a date (no meeting id) — treat those as "joined
-    // today" for safety so we don't re-open a meeting on upgrade.
-    if (!stampId) return true;
-    // Skip only when it's the same meeting room.
-    return stampId === meetId(url);
-  } catch {
-    return false;
-  }
-}
-
+// Kept purely as a record of the last successful join (handy when reading the
+// log). It is NOT used to skip runs — see below.
 function markSuccessToday(url) {
   const today = new Date().toISOString().slice(0, 10);
   try { fs.writeFileSync(SUCCESS_STAMP, `${today} ${meetId(url)}`); } catch {}
@@ -184,11 +165,12 @@ function markSuccessToday(url) {
 (async () => {
   let browser;
   try {
-    if (!FORCE_JOIN && alreadyJoinedToday(meetUrl)) {
-      log(`--- meet-join SKIPPED: already joined THIS meeting (${meetId(meetUrl)}) today (use Run to force) ---`);
-      process.exit(0);
-    }
-
+    // NEVER skip. This used to bail out when the same room had already been
+    // joined earlier the same day, which silently no-op'd every scheduled job
+    // after the first one on the usual one-room-several-times-a-day setup.
+    // Re-joining a room we are already in is harmless — the script detects the
+    // in-call state further down and just re-applies settings. Being silently
+    // skipped is not harmless: the meeting simply never opens.
     log(`--- meet-join started for ${meetUrl} ---`);
 
     const cleanUrl = meetUrl.replace(/[?&]authuser=\d+/, '');
